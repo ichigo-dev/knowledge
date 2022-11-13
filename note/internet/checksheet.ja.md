@@ -71,3 +71,19 @@
 	- [ ] [NSFnet](/note/internet/chapters/02_history_of_the_internet.ja.md#unixの普及とインターネットの拡大)
 - [ ] [商用インターネット](/note/internet/chapters/02_history_of_the_internet.ja.md#商用インターネットサービスの開始)
 	- [ ] [ISP](/note/internet/chapters/02_history_of_the_internet.ja.md#商用インターネットサービスの開始)
+
+
+## TCP/IPの標準
+
+- [ ] [ISO](/note/internet/chapters/03_standardization_of_tcpip.jp.md#isoとietf)
+- [ ] [OSI](/note/internet/chapters/03_standardization_of_tcpip.jp.md#isoとietf)
+- [ ] [TCP/IP](/note/internet/chapters/03_standardization_of_tcpip.jp.md#isoとietf)
+- [ ] [IETF](/note/internet/chapters/03_standardization_of_tcpip.jp.md#isoとietf)
+- [ ] [インターネットプロトコルスイート](/note/internet/chapters/03_standardization_of_tcpip.jp.md#インターネットプロトコルスイート)
+- [ ] [RFC](/note/internet/chapters/03_standardization_of_tcpip.jp.md#rfc)
+	- [ ] [STD](/note/internet/chapters/03_standardization_of_tcpip.jp.md#rfc)
+	- [ ] [FYI](/note/internet/chapters/03_standardization_of_tcpip.jp.md#rfc)
+- [ ] [インターネットドラフト](/note/internet/chapters/03_standardization_of_tcpip.jp.md#標準化の流れ)
+	- [ ] [提案標準](/note/internet/chapters/03_standardization_of_tcpip.jp.md#標準化の流れ)
+	- [ ] [ドラフト標準](/note/internet/chapters/03_standardization_of_tcpip.jp.md#標準化の流れ)
+	- [ ] [標準](/note/internet/chapters/03_standardization_of_tcpip.jp.md#標準化の流れ)
