@@ -22,7 +22,7 @@
 
 **コンピューティングサービス**は、アプリケーションを稼働させるインフラストラクチャサービスで、システムアーキテクチャの中核を担う。
 
-**EC2**は、仮想サーバを提供するコンピューティングサービスで、いわゆる[IaaS](../internet/01_basic_knowledge_of_network.md#クラウドの利用)（Infrastructure as a Service）型のサービス。**Elastic Load Balancing**（ELB）や**Auto Scaling**と組み合わせることで、負荷分散を動的に行うことができる。
+**EC2**は、仮想サーバを提供するコンピューティングサービスで、いわゆる[IaaS](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)（Infrastructure as a Service）型のサービス。**Elastic Load Balancing**（ELB）や**Auto Scaling**と組み合わせることで、負荷分散を動的に行うことができる。
 
 **ECS**は、Dockerコンテナの実行環境を提供するサービスである。
 
@@ -110,7 +110,7 @@ AWSアカウントはルートユーザとも呼ばれ、AWSの全サービス�
 
 ## アプリケーションサービス
 
-AWSは、EC2やRDS、VPCといった[IaaS](../internet/01_basic_knowledge_of_network.md#クラウドの利用)や[PaaS](../internet/01_basic_knowledge_of_network.md#クラウドの利用)のみならず、[SaaS](../internet/01_basic_knowledge_of_network.md#クラウドの利用)と呼ばれるようなアプリケーションサービスも展開している。AWSのアプリケーションサービスは、AWSが提供するサーバリソースの上に構築されており、サーバとアプリケーションのメンテナンスはAWSが行う。
+AWSは、EC2やRDS、VPCといった[IaaS](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)や[PaaS](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)のみならず、[SaaS](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)と呼ばれるようなアプリケーションサービスも展開している。AWSのアプリケーションサービスは、AWSが提供するサーバリソースの上に構築されており、サーバとアプリケーションのメンテナンスはAWSが行う。
 
 
 ## デバロッパツール
