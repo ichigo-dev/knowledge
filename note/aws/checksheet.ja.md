@@ -440,3 +440,28 @@
 		- [ ] [FindMap関数](/note/aws/chapters/11_provisioning.ja.md#cloudformationテンプレート)
 		- [ ] [Select関数](/note/aws/chapters/11_provisioning.ja.md#cloudformationテンプレート)
 		- [ ] [ImportValue関数](/note/aws/chapters/11_provisioning.ja.md#cloudformationテンプレート)
+
+
+## 分析サービス
+
+- [ ] [EMR](/note/aws/chapters/12_analytics.ja.md#emr)
+	- [ ] [マスタノード](/note/aws/chapters/12_analytics.ja.md#emr)
+	- [ ] [コアノード](/note/aws/chapters/12_analytics.ja.md#emr)
+		- [ ] [HDFS](/note/aws/chapters/12_analytics.ja.md#emr)
+	- [ ] [タスクノード](/note/aws/chapters/12_analytics.ja.md#emr)
+	- [ ] [分散処理基盤](/note/aws/chapters/12_analytics.ja.md#分散処理基盤としてのemr)
+	- [ ] [サポートアプリケーション](/note/aws/chapters/12_analytics.ja.md#分散処理アプリケーション基盤としてのemr)
+	- [ ] [カスタムアプリケーション](/note/aws/chapters/12_analytics.ja.md#分散処理アプリケーション基盤としてのemr)
+- [ ] [ETLツール](/note/aws/chapters/12_analytics.ja.md#etlツール)
+	- [ ] [Kinesis](/note/aws/chapters/12_analytics.ja.md#kinesis)
+		- [ ] [Data Stream](/note/aws/chapters/12_analytics.ja.md#kinesis)
+		- [ ] [Data Firehose](/note/aws/chapters/12_analytics.ja.md#kinesis)
+		- [ ] [Video Streams](/note/aws/chapters/12_analytics.ja.md#kinesis)
+		- [ ] [Data Analytics](/note/aws/chapters/12_analytics.ja.md#kinesis)
+	- [ ] [Data Pipeline](/note/aws/chapters/12_analytics.ja.md#data-pipeline)
+	- [ ] [Glue](/note/aws/chapters/12_analytics.ja.md#glue)
+		- [ ] [クローラ機能](/note/aws/chapters/12_analytics.ja.md#glue)
+		- [ ] [データカタログ機能](/note/aws/chapters/12_analytics.ja.md#glue)
+		- [ ] [ジョブ](/note/aws/chapters/12_analytics.ja.md#glue)
+- [ ] [Amazon Athena](/note/aws/chapters/12_analytics.ja.md#amazon-athena)
+- [ ] [Amazon QuickSight](/note/aws/chapters/12_analytics.ja.md#amazon-quicksight)

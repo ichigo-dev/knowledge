@@ -17,3 +17,4 @@
 1. [アプリケーションサービス](/note/aws/chapters/09_application_integration.ja.md)
 1. [デバロッパツール](/note/aws/chapters/10_developer_tools.ja.md)
 1. [プロビジョニングサービス](/note/aws/chapters/11_provisioning.ja.md)
+1. [分析サービス](/note/aws/chapters/12_analytics.ja.md)
