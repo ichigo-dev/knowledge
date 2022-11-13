@@ -15,3 +15,4 @@
 1. [データベース](/note/aws/chapters/07_database.ja.md)
 1. [セキュリティとアイデンティティ](/note/aws/chapters/08_security_and_identity.ja.md)
 1. [アプリケーションサービス](/note/aws/chapters/09_application_integration.ja.md)
+1. [デバロッパツール](/note/aws/chapters/10_developer_tools.ja.md)

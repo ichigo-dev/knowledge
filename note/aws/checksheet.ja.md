@@ -396,3 +396,15 @@
 - [ ] [SES](/note/aws/chapters/09_application_integration.ja.md#ses)
 	- [ ] [SPF](/note/aws/chapters/09_application_integration.ja.md#ses)
 	- [ ] [DKIM](/note/aws/chapters/09_application_integration.ja.md#ses)
+
+
+## デバロッパツール
+
+- [ ] [CodeCommit](/note/aws/chapters/10_developer_tools.ja.md#codecommit)
+	- [ ] [Git](/note/aws/chapters/10_developer_tools.ja.md#codecommit)
+	- [ ] [プルリクエスト](/note/aws/chapters/10_developer_tools.ja.md#codecommit)
+- [ ] [CodeBuild](/note/aws/chapters/10_developer_tools.ja.md#codebuild)
+	- [ ] [buildspec.yml](/note/aws/chapters/10_developer_tools.ja.md#codebuild)
+- [ ] [CodeDeploy](/note/aws/chapters/10_developer_tools.ja.md#codedeploy)
+	- [ ] [appspec.yml](/note/aws/chapters/10_developer_tools.ja.md#codedeploy)
+- [ ] [Code Pipeline](/note/aws/chapters/10_developer_tools.ja.md#codedeploy)
