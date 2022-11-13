@@ -10,3 +10,4 @@
 1. [サービス概要](/note/aws/chapters/02_overview_of_services.ja.md)
 1. [ネットワーキングとコンテンツ配信](/note/aws/chapters/03_networking_and_content_delivery.ja.md)
 1. [コンピューティング](/note/aws/chapters/04_computing.ja.md)
+1. [マネジメントとガバナンス](/note/aws/chapters/05_management_and_governance.ja.md)

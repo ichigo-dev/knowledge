@@ -171,3 +171,21 @@
 	- [ ] [サーバレスアーキテクチャ](/note/aws/chapters/04_computing.ja.md#lambda)
 	- [ ] [Lambda関数](/note/aws/chapters/04_computing.ja.md#lambda)
 	- [ ] [キック](/note/aws/chapters/04_computing.ja.md#lambda)
+
+
+## マネジメントとガバナンス
+
+- [ ] [CloudWatch](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)
+	- [ ] [メトリクス](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)
+		- [ ] [標準メトリクス](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)
+		- [ ] [カスタムメトリクス](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)
+	- [ ] [CloudWatch Logs](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-logs)
+	- [ ] [CloudWatch Events](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+		- [ ] [イベントソース](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+			- [ ] [スケジュール](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+			- [ ] [イベント](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+		- [ ] [ターゲット](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+		- [ ] [EventBridge](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch-events)
+- [ ] [AWS CloudTrail](/note/aws/chapters/05_management_and_governance.ja.md#cloudtrail)
+	- [ ] [管理イベント](/note/aws/chapters/05_management_and_governance.ja.md#イベントの種類)
+	- [ ] [データイベント](/note/aws/chapters/05_management_and_governance.ja.md#イベントの種類)
