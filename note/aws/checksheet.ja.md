@@ -372,3 +372,27 @@
 	- [ ] [ドメイン証明](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
 	- [ ] [組織認証](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
 	- [ ] [拡張認証](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+
+
+## アプリケーションサービス
+
+- [ ] [SQS](/note/aws/chapters/09_application_integration.ja.md#sqs)
+	- [ ] [キュー](/note/aws/chapters/09_application_integration.ja.md#sqs)
+	- [ ] [Standardキュー](/note/aws/chapters/09_application_integration.ja.md#standardキューとfifoキュー)
+	- [ ] [FIFOキュー](/note/aws/chapters/09_application_integration.ja.md#standardキューとfifoキュー)
+	- [ ] [ロングポーリング](/note/aws/chapters/09_application_integration.ja.md#ロングポーリングとショートポーリング)
+	- [ ] [ショートポーリング](/note/aws/chapters/09_application_integration.ja.md#ロングポーリングとショートポーリング)
+	- [ ] [可視性タイムアウト](/note/aws/chapters/09_application_integration.ja.md#可視性タイムアウト)
+	- [ ] [遅延キュー](/note/aws/chapters/09_application_integration.ja.md#遅延キューとメッセージタイマー)
+	- [ ] [メッセージタイマー](/note/aws/chapters/09_application_integration.ja.md#遅延キューとメッセージタイマー)
+	- [ ] [デッドレターキュー](/note/aws/chapters/09_application_integration.ja.md#デッドレターキュー)
+- [ ] [SWF](/note/aws/chapters/09_application_integration.ja.md#awsのワークフローサービス)
+- [ ] [Amazon Step Functions](/note/aws/chapters/09_application_integration.ja.md#awsのワークフローサービス)
+- [ ] [SNS](/note/aws/chapters/09_application_integration.ja.md#sns)
+	- [ ] [トピック](/note/aws/chapters/09_application_integration.ja.md#トピックと購読)
+	- [ ] [購読](/note/aws/chapters/09_application_integration.ja.md#トピックと購読)
+		- [ ] [Publisher](/note/aws/chapters/09_application_integration.ja.md#トピックと購読)
+		- [ ] [Subscriber](/note/aws/chapters/09_application_integration.ja.md#トピックと購読)
+- [ ] [SES](/note/aws/chapters/09_application_integration.ja.md#ses)
+	- [ ] [SPF](/note/aws/chapters/09_application_integration.ja.md#ses)
+	- [ ] [DKIM](/note/aws/chapters/09_application_integration.ja.md#ses)
