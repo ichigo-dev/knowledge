@@ -90,7 +90,7 @@ S3やDynamoDBと接続する際には、ルーティングを利用した**ゲ�
 
 ## CloudFront
 
-![AWS CloudFront](/note/aws/images/cloudfront_route53.jpg)
+![AWS CloudFront and Route53](/note/aws/images/cloudfront_route53.jpg)
 
 **Amazon CloudFront**は、HTMLファイルやCSS、画像、動画といった静的コンテンツをキャッシュし、**バックエンドサーバ**（**オリジンサーバ**）の代わりに配信する**CDN**（Contents Delivery Network）サービスである。オリジンサーバとしては、EC2やELB、S3の静的ホスティング、オンプレミスサーバを利用することができる。
 
