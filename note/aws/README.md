@@ -7,3 +7,4 @@
 ### Chapters
 
 1. [AWSの基礎知識](/note/aws/chapters/01_basic_knowledge_of_aws.ja.md)
+1. [サービス概要](/note/aws/chapters/02_overview_of_services.ja.md)
