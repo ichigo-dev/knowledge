@@ -1,5 +1,7 @@
 # Technical knowledge
 
+![thumbnail](/images/thumbnail_knowledge.jpg)
+
 ## Knowledge notes
 
 - [note](/note/README.md)
