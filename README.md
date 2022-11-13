@@ -1,6 +1,6 @@
 # Technical knowledge
 
-![thumbnail](/assets/images/thumbnail.jpg)
+![thumbnail](/assets/images/thumbnail.png)
 
 ## Knowledge notes
 
