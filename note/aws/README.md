@@ -12,3 +12,4 @@
 1. [コンピューティング](/note/aws/chapters/04_computing.ja.md)
 1. [マネジメントとガバナンス](/note/aws/chapters/05_management_and_governance.ja.md)
 1. [ストレージ](/note/aws/chapters/06_storage.ja.md)
+1. [データベース](/note/aws/chapters/07_database.ja.md)
