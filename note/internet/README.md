@@ -1,4 +1,4 @@
-# AWS knowledge notes
+# The Internet knowledge notes
 
 ## Japanese
 
