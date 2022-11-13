@@ -1,6 +1,5 @@
 # Technical knowledge
 
-
 ## Knowledge notes
 
 - [note](/note/README.md)
@@ -17,3 +16,8 @@ This is the progress of knowledge creation.
 ### In progress
 
 - note/internet
+
+
+## Acknowledgments
+
+In order to accumulate this technical knowledge notes, I referred to many books. My sincere thanks to all the great authors.
