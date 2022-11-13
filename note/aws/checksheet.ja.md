@@ -351,3 +351,24 @@
 	- [ ] [時系列データ](/note/aws/chapters/07_database.ja.md#amazon-timestream)
 - [ ] [Amazon QLDB](/note/aws/chapters/07_database.ja.md#amazon-qldb)
 	- [ ] [台帳データベース](/note/aws/chapters/07_database.ja.md#amazon-qldb)
+
+
+## セキュリティとアイデンティティ
+
+- [ ] [KMS](/note/aws/chapters/08_security_and_identity.ja.md#kmsとcloudhsm)
+	- [ ] [Encrypt](/note/aws/chapters/08_security_and_identity.ja.md#kmsの機能)
+	- [ ] [Decrypt](/note/aws/chapters/08_security_and_identity.ja.md#kmsの機能)
+	- [ ] [GenerateDataKey](/note/aws/chapters/08_security_and_identity.ja.md#kmsの機能)
+	- [ ] [マスタキー（CMK）](/note/aws/chapters/08_security_and_identity.ja.md#マスタキーとデータキー)
+	- [ ] [データキー（CDK）](/note/aws/chapters/08_security_and_identity.ja.md#マスタキーとデータキー)
+	- [ ] [エンベロープ暗号化](/note/aws/chapters/08_security_and_identity.ja.md#マスタキーとデータキー)
+- [ ] [CloudHSM](/note/aws/chapters/08_security_and_identity.ja.md#kmsとcloudhsm)
+- [ ] [ACM](/note/aws/chapters/08_security_and_identity.ja.md#acm)
+	- [ ] [サーバ証明書](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [SSL/TLS](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+		- [ ] [SSL証明書](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [認証局（CA）](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [自己証明書](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [ドメイン証明](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [組織認証](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)
+	- [ ] [拡張認証](/note/aws/chapters/08_security_and_identity.ja.md#証明書の役割と実体)

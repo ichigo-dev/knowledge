@@ -13,3 +13,4 @@
 1. [マネジメントとガバナンス](/note/aws/chapters/05_management_and_governance.ja.md)
 1. [ストレージ](/note/aws/chapters/06_storage.ja.md)
 1. [データベース](/note/aws/chapters/07_database.ja.md)
+1. [セキュリティとアイデンティティ](/note/aws/chapters/08_security_and_identity.ja.md)
