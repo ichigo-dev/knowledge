@@ -73,7 +73,7 @@
 	- [ ] [ISP](/note/internet/chapters/02_history_of_the_internet.ja.md#商用インターネットサービスの開始)
 
 
-## TCP/IPの標準
+## TCP/IPの標準化
 
 - [ ] [ISO](/note/internet/chapters/03_standardization_of_tcpip.ja.md#isoとietf)
 - [ ] [OSI](/note/internet/chapters/03_standardization_of_tcpip.ja.md#isoとietf)
@@ -87,3 +87,18 @@
 	- [ ] [提案標準](/note/internet/chapters/03_standardization_of_tcpip.ja.md#標準化の流れ)
 	- [ ] [ドラフト標準](/note/internet/chapters/03_standardization_of_tcpip.ja.md#標準化の流れ)
 	- [ ] [標準](/note/internet/chapters/03_standardization_of_tcpip.ja.md#標準化の流れ)
+
+
+## OSI参照モデル
+
+- [ ] [OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md#osi参照モデルの概要)
+	- [ ] [インタフェースとプロトコル](/note/internet/chapters/04_osi_reference_model.ja.md#osi参照モデルの概要)
+	- [ ] [アプリケーション層](/note/internet/chapters/04_osi_reference_model.ja.md#アプリケーション層)
+	- [ ] [プレゼンテーション層](/note/internet/chapters/04_osi_reference_model.ja.md#プレゼンテーション層)
+		- [ ] [ビッグエンディアン方式とリトルエンディアン方式](/note/internet/chapters/04_osi_reference_model.ja.md#プレゼンテーション層)
+		- [ ] [UTF-8、Shift-JIS、EUP-JP](/note/internet/chapters/04_osi_reference_model.ja.md#プレゼンテーション層)
+	- [ ] [セッション層](/note/internet/chapters/04_osi_reference_model.ja.md#セッション層)
+	- [ ] [トランスポート層](/note/internet/chapters/04_osi_reference_model.ja.md#トランスポート層)
+	- [ ] [ネットワーク層](/note/internet/chapters/04_osi_reference_model.ja.md#ネットワーク層)
+	- [ ] [データリンク層](/note/internet/chapters/04_osi_reference_model.ja.md#データリンク層)
+	- [ ] [物理層](/note/internet/chapters/04_osi_reference_model.ja.md#物理層)

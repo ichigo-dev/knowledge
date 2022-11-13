@@ -9,6 +9,7 @@
 1. [ネットワークの基礎知識](/note/internet/chapters/01_basic_knowledge_of_network.ja.md)
 1. [インターネットの歴史](/note/internet/chapters/02_history_of_the_internet.ja.md)
 1. [TCP/IPの標準化](/note/internet/chapters/03_standardization_of_tcpip.ja.md)
+1. [OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)
 
 
 ## Reference
