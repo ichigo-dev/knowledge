@@ -10,6 +10,7 @@
 1. [Webの歴史](/note/web/chapters/02_history_of_web.ja.md)
 1. [REST](/note/web/chapters/03_rest.ja.md)
 1. [URI](/note/web/chapters/04_uri.ja.md)
+1. [HTTP](/note/web/chapters/05_http.ja.md)
 
 
 ## Reference
