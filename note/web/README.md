@@ -9,6 +9,7 @@
 1. [Webの基礎知識](/note/web/chapters/01_basic_knowledge_of_web.ja.md)
 1. [Webの歴史](/note/web/chapters/02_history_of_web.ja.md)
 1. [REST](/note/web/chapters/03_rest.ja.md)
+1. [URI](/note/web/chapters/04_uri.ja.md)
 
 
 ## Reference
