@@ -14,11 +14,11 @@ This is the progress of knowledge creation.
 ### Completed
 
 - note/aws (Japanese version)
+- note/internet (Japanese version)
 
 ### In progress
 
-- note/internet
-
+- note/web
 
 ## Acknowledgments
 
