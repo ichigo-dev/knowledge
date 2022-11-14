@@ -13,6 +13,7 @@
 1. [TCP/IPの階層モデル](/note/internet/chapters/05_hierarchical_model_of_tcpip.ja.md)
 1. [データリンク層](/note/internet/chapters/06_datalink_layer.ja.md)
 1. [インターネット層](/note/internet/chapters/07_internet_layer.ja.md)
+1. [トランスポート層](/note/internet/chapters/08_transport_layer.ja.md)
 
 
 ## Reference
