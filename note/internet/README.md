@@ -12,6 +12,7 @@
 1. [OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)
 1. [TCP/IPの階層モデル](/note/internet/chapters/05_hierarchical_model_of_tcpip.ja.md)
 1. [データリンク層](/note/internet/chapters/06_datalink_layer.ja.md)
+1. [インターネット層](/note/internet/chapters/07_internet_layer.ja.md)
 
 
 ## Reference
