@@ -15,10 +15,11 @@ This is the progress of knowledge creation.
 
 - note/aws (Japanese version)
 - note/internet (Japanese version)
+- note/web (Japanese version)
 
 ### In progress
 
-- note/web
+- note/rust
 
 ## Acknowledgments
 
