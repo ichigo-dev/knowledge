@@ -11,6 +11,7 @@
 1. [REST](/note/web/chapters/03_rest.ja.md)
 1. [URI](/note/web/chapters/04_uri.ja.md)
 1. [HTTP](/note/web/chapters/05_http.ja.md)
+1. [ハイパーメディアフォーマット](/note/web/chapters/06_hypermedia_format.ja.md)
 
 
 ## Reference
