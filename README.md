@@ -7,6 +7,15 @@
 - [note](/note/README.md)
 
 
+## To be added
+
+- OS(CPU) knowledge notes
+- Computer knowledge notes
+- Git knowledge notes
+- HTML/CSS knowledge notes
+- JavaScript knowledge notes
+
+
 ## Progress
 
 This is the progress of knowledge creation.
