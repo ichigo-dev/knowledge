@@ -12,4 +12,5 @@
 
 ## Reference
 
+- [Rust](https://www.rust-lang.org/)
 - [Jim Blandy/Jason Orendorff/Leonora F. S. Tindall/中田 秀基. プログラミングRust 第2版. オライリージャパン, 2022, 680p](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0Rust-%E7%AC%AC2%E7%89%88-Jim-Blandy/dp/4873119782)
