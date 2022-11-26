@@ -10,6 +10,7 @@
 1. [Rustの基本的なデータ型](/note/rust/chapters/02_data_type.ja.md)
 1. [所有権と移動](/note/rust/chapters/03_ownership_and_move.ja.md)
 1. [参照とライフタイム](/note/rust/chapters/04_reference_and_lifetime.ja.md)
+1. [式](/note/rust/chapters/05_expression.ja.md)
 
 ## Reference
 
