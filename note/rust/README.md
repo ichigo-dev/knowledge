@@ -21,6 +21,7 @@
 1. [クロージャ](/note/rust/chapters/13_closure.ja.md)
 1. [イテレータ](/note/rust/chapters/14_iterator.ja.md)
 1. [コレクション](/note/rust/chapters/15_collection.ja.md)
+1. [文字列とテキスト](/note/rust/chapters/16_string_and_text.ja.md)
 
 ## Reference
 
