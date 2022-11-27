@@ -19,6 +19,7 @@
 1. [演算子オーバーロード](/note/rust/chapters/11_operator_overloading.ja.md)
 1. [ユーティリティトレイト](/note/rust/chapters/12_utility_trait.ja.md)
 1. [クロージャ](/note/rust/chapters/13_closure.ja.md)
+1. [イテレータ](/note/rust/chapters/14_iterator.ja.md)
 
 ## Reference
 
