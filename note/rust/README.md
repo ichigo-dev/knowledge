@@ -22,6 +22,7 @@
 1. [イテレータ](/note/rust/chapters/14_iterator.ja.md)
 1. [コレクション](/note/rust/chapters/15_collection.ja.md)
 1. [文字列とテキスト](/note/rust/chapters/16_string_and_text.ja.md)
+1. [並列性](/note/rust/chapters/17_parallelism.ja.md)
 
 ## Reference
 
