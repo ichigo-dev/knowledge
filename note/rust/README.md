@@ -14,6 +14,7 @@
 1. [エラー処理](/note/rust/chapters/06_error_handling.ja.md)
 1. [クレートとモジュール](/note/rust/chapters/07_crate_and_module.ja.md)
 1. [構造体](/note/rust/chapters/08_struct.ja.md)
+1. [列挙型とパターン](/note/rust/chapters/09_enum_and_pattern.ja.md)
 
 ## Reference
 
