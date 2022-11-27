@@ -12,8 +12,9 @@
 1. [参照とライフタイム](/note/rust/chapters/04_reference_and_lifetime.ja.md)
 1. [式](/note/rust/chapters/05_expression.ja.md)
 1. [エラー処理](/note/rust/chapters/06_error_handling.ja.md)
+1. [クレートとモジュール](/note/rust/chapters/07_crate_and_module.ja.md)
 
 ## Reference
 
-- [Rust](https://www.rust-lang.org/)
+- ["Rust Programming Language". Rust Team (2022/11/27)](https://www.rust-lang.org/)
 - [Jim Blandy/Jason Orendorff/Leonora F. S. Tindall/中田 秀基. プログラミングRust 第2版. オライリージャパン, 2022, 680p](https://www.amazon.co.jp/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0Rust-%E7%AC%AC2%E7%89%88-Jim-Blandy/dp/4873119782)
