@@ -17,6 +17,7 @@
 1. [列挙型とパターン](/note/rust/chapters/09_enum_and_pattern.ja.md)
 1. [トレイトとジェネリクス](/note/rust/chapters/10_trait_and_generics.ja.md)
 1. [演算子オーバーロード](/note/rust/chapters/11_operator_overloading.ja.md)
+1. [ユーティリティトレイト](/note/rust/chapters/12_utility_trait.ja.md)
 
 ## Reference
 
