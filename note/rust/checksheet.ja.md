@@ -80,6 +80,25 @@
 
 ## 所有権と移動
 
+- [メモリ管理](/note/rust/chapters/03_ownership_and_move.ja.md#メモリ管理)
+	- [ガベージコレクション](/note/rust/chapters/03_ownership_and_move.ja.md#メモリ管理)
+- [所有権](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [スタックフレーム](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [ヒープ](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [ツリー構造](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [生存期間](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [プリミティブ型](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [参照カウント](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+	- [参照の借用](/note/rust/chapters/03_ownership_and_move.ja.md#所有権)
+- [移動](/note/rust/chapters/03_ownership_and_move.ja.md#移動)
+	- [移動](/note/rust/chapters/03_ownership_and_move.ja.md#移動)
+	- [未初期化状態](/note/rust/chapters/03_ownership_and_move.ja.md#移動)
+	- [ディープコピー](/note/rust/chapters/03_ownership_and_move.ja.md#移動)
+- [コピー型](/note/rust/chapters/03_ownership_and_move.ja.md#コピー型)
+- [参照カウント](/note/rust/chapters/03_ownership_and_move.ja.md#rcとarc)
+	- [Rc](/note/rust/chapters/03_ownership_and_move.ja.md#rcとarc)
+	- [Arc（アトミックな参照カウント）](/note/rust/chapters/03_ownership_and_move.ja.md#rcとarc)
+
 
 ## 参照とライフタイム
 
