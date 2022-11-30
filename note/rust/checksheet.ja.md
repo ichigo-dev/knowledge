@@ -102,6 +102,18 @@
 
 ## 参照とライフタイム
 
+- [参照](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [借用](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [値渡し](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [参照渡し](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [共有参照](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [可変参照](/note/rust/chapters/04_reference_and_lifetime.ja.md#参照と借用)
+	- [ファットポインタ](/note/rust/chapters/04_reference_and_lifetime.ja.md#ファットポインタ)
+	- [トレイトオブジェクト](/note/rust/chapters/04_reference_and_lifetime.ja.md#ファットポインタ)
+- [生存期間（ライフタイム）](/note/rust/chapters/04_reference_and_lifetime.ja.md#ライフタイム)
+	- [ボローチェッカー](/note/rust/chapters/04_reference_and_lifetime.ja.md#ライフタイムのルール)
+	- [生存期間パラメータ](/note/rust/chapters/04_reference_and_lifetime.ja.md#staticな生存期間)
+	- ['static生存期間](/note/rust/chapters/04_reference_and_lifetime.ja.md#staticな生存期間)
 
 ## 式
 
