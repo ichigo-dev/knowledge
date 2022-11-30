@@ -29,6 +29,8 @@ This is the progress of knowledge creation.
 ### In progress
 
 - note/rust
+- note/programming
+
 
 ## Acknowledgments
 
