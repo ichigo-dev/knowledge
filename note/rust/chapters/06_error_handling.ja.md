@@ -59,8 +59,8 @@ Rustには例外がない代わりに、失敗する可能性のある関数は�
 ```rust
 match get_weather(hometown)
 {
-	Ok(report) => { display_weather(hometown, &report); },
-	Err(err) => { println!("error get_weather(): {}", err); },
+    Ok(report) => { display_weather(hometown, &report); },
+    Err(err) => { println!("error get_weather(): {}", err); },
 }
 ```
 
@@ -99,15 +99,15 @@ use std::error::Error;
 
 fn print_error( mut err: &dyn Error )
 {
-	//	発生したエラーを表示
-	let _ = writeln!(stderr(), "error: {}", err);
+    // 発生したエラーを表示
+    let _ = writeln!(stderr(), "error: {}", err);
 
-	//	原因となったエラーを再帰的に表示
-	while let Some(source) = err.source()
-	{
-		let _ = writeln!(stderr(), "caused by: {}", source);
-		err = source;
-	}
+    // 原因となったエラーを再帰的に表示
+    while let Some(source) = err.source()
+    {
+        let _ = writeln!(stderr(), "caused by: {}", source);
+        err = source;
+    }
 }
 ```
 
@@ -147,19 +147,20 @@ type GenericResult<T> = Result<T, GenericError>;
 #[derive(Debug, Clone)]
 pub struct MyError
 {
-	pub message: String,
-	pub line: usize,
-	pub column: usize,
+    pub message: String,
+    pub line: usize,
+    pub column: usize,
 }
 ```
 
 このエラーを利用したいときは、以下のように記述する。
 
 ```rust
-return Err(MyError {
-	message: "my error message",
-	line: current_line,
-	column: current_column,
+return Err(MyError
+{
+    message: "my error message",
+    line: current_line,
+    column: current_column,
 });
 ```
 
@@ -172,9 +173,9 @@ impl std::error::Error for MyError {}
 
 impl fmt::Display for MyError
 {
-	fn fmt( &self, f: &mut fmt::Formatter ) -> Result<(), fmt::Error>
-	{
-		write!(f, "{} ({}:{})", self.message, self.line, self.column);
-	}
+    fn fmt( &self, f: &mut fmt::Formatter ) -> Result<(), fmt::Error>
+    {
+        write!(f, "{} ({}:{})", self.message, self.line, self.column);
+    }
 }
 ```

@@ -32,7 +32,7 @@ Rustでは所有者がいなくなった値は**ドロップ**される。ドロ
 ```rust
 trait Drop
 {
-	fn drop( &mut self );
+    fn drop( &mut self );
 }
 ```
 
@@ -43,11 +43,11 @@ trait Drop
 ```rust
 trait Clone: Sized
 {
-	fn clone( &self ) -> Self;
-	fn clone_from( &mut self, source: &Self )
-	{
-		*self = source.clone()
-	}
+    fn clone( &self ) -> Self;
+    fn clone_from( &mut self, source: &Self )
+    {
+        *self = source.clone()
+    }
 }
 ```
 
@@ -79,12 +79,12 @@ TargetはSelfが所有しているか参照している
 ```rust
 trait Into<T>: Sized
 {
-	fn into( self ) -> T;
+    fn into( self ) -> T;
 }
 
 trait From<T>: Sized
 {
-	fn from( other: T ) -> Self;
+    fn from( other: T ) -> Self;
 }
 ```
 
@@ -117,7 +117,7 @@ Copyは浅いバイト単位のコピーだけでコピーが可能な型にの�
 ```rust
 tarit Default
 {
-	fn default() -> Self;
+    fn default() -> Self;
 }
 ```
 
@@ -130,12 +130,12 @@ tarit Default
 ```rust
 trait AsRef<T: ?Sized>
 {
-	fn as_ref( &self ) -> &T;
+    fn as_ref( &self ) -> &T;
 }
 
 trait AsMut<T: ?Sized>
 {
-	fn as_mut( &mut self ) -> &mut T;
+    fn as_mut( &mut self ) -> &mut T;
 }
 ```
 
@@ -146,12 +146,12 @@ trait AsMut<T: ?Sized>
 ```rust
 trait Borrow<Borrowed: ?Size>
 {
-	fn borrow( &self ) -> &Borrowed;
+    fn borrow( &self ) -> &Borrowed;
 }
 
 trait BorrowMut<Borrowed: ?Sized>: Borrow<Borrowed>
 {
-	fn borrow_mut( &mut self ) -> &mut Borrowed;
+    fn borrow_mut( &mut self ) -> &mut Borrowed;
 }
 ```
 
@@ -162,14 +162,14 @@ trait BorrowMut<Borrowed: ?Sized>: Borrow<Borrowed>
 ```rust
 trait TryFrom<T>: Sized
 {
-	type Error;
-	fn try_from( value: T ) -> Result<Self, Self::Error>;
+    type Error;
+    fn try_from( value: T ) -> Result<Self, Self::Error>;
 }
 
 trait TryInto<T>: Sized
 {
-	type Error;
-	fn try_into( self ) -> Result<T, Self::Error>;
+    type Error;
+    fn try_into( self ) -> Result<T, Self::Error>;
 }
 ```
 
@@ -180,7 +180,7 @@ trait TryInto<T>: Sized
 ```rust
 trait ToOwned
 {
-	type Owned: Borrow<Self>;
-	fn to_owned( &self ) -> Self::Owned;
+    type Owned: Borrow<Self>;
+    fn to_owned( &self ) -> Self::Owned;
 }
 ```

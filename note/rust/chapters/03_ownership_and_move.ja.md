@@ -60,17 +60,17 @@ Rustのコンパイラはこれらの移動を推測するのが上手く、機�
 let mut v = Vec::new();
 for i in 1..100
 {
-	v.push(i.to_string());
+    v.push(i.to_string());
 }
 
-//	1. ベクタの最後の要素をポップして取り出す
+// 1. ベクタの最後の要素をポップして取り出す
 let x = v.pop().expect("vector empty");
 
-//	2. ベクタの指定したインデックスの場所から要素を取り出し、代わりに最後の要素をそこに入れる
+// 2. ベクタの指定したインデックスの場所から要素を取り出し、代わりに最後の要素をそこに入れる
 let index = 8;
 let y = v.swap_remove(index);
 
-//	3. 取り出した値の代わりに別の値を入れる。
+// 3. 取り出した値の代わりに別の値を入れる。
 let index = 10;
 let z = std::mem::replace(&mut v[index], "substitute".to_string());
 ```
@@ -84,8 +84,8 @@ let v = vec!["hello".to_string(), "world".to_string(), "rust".to_string()];
 
 for mut s in v
 {
-	s.push('!');
-	println("{}", s);
+    s.push('!');
+    println("{}", s);
 }
 ```
 
@@ -101,8 +101,8 @@ for mut s in v
 #[derive(Copy, Clone)]
 struct Size
 {
-	height: usize,
-	width: usize,
+    height: usize,
+    width: usize,
 }
 ```
 

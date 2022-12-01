@@ -22,7 +22,7 @@
 ```rust
 fn sort_by_statistic( cities: &mut Vec<City>, stat: Statistic )
 {
-	cities.sort_by_key(|city| -city.get_statistic(stat));
+    cities.sort_by_key(|city| -city.get_statistic(stat));
 }
 ```
 
@@ -38,15 +38,15 @@ fn sort_by_statistic( cities: &mut Vec<City>, stat: Statistic )
 use std::thread;
 
 fn start_sorting_thread( mut cities: Vec<City>, stat: Statistic )
-	-> thread::JoinHandle<Vec<City>>
+    -> thread::JoinHandle<Vec<City>>
 {
-	let key_fn = move |city: &City| -> i64 { -city.get_statistic(stat) };
+    let key_fn = move |city: &City| -> i64 { -city.get_statistic(stat) };
 
-	thread::spawn(move ||
-	{
-		cities.sort_by_key(key_fn);
-		cities
-	});
+    thread::spawn(move ||
+    {
+        cities.sort_by_key(key_fn);
+        cities
+    });
 }
 ```
 
@@ -57,13 +57,13 @@ fn start_sorting_thread( mut cities: Vec<City>, stat: Statistic )
 
 ```rust
 let my_key_fn: fn( &City ) -> i64 = if user.prefs.by_population
-	{
-		city_population_descending
-	}
-	else
-	{
-		city_monster_attack_risk_descending
-	};
+    {
+        city_population_descending
+    }
+    else
+    {
+        city_monster_attack_risk_descending
+    };
 ```
 
 関数はfn型であり、その値は関数の機械語コードのアドレスを表している。一方でクロージャは、Fn、FnMut、FnOnceトレイトのいずれかのインスタンスであり、fn型とは異なる。
@@ -92,12 +92,12 @@ let f = || drop(my_str);
 ```rust
 trait Fn() -> R
 {
-	fn call( &self ) -> R;
+    fn call( &self ) -> R;
 }
 
 trait FnOnce() -> R
 {
-	fn call_once( self ) -> R;
+    fn call_once( self ) -> R;
 }
 ```
 
@@ -108,12 +108,12 @@ mut参照を持つクロージャは**FnMut**トレイトを実装している�
 ```rust
 trait Fn -> rust
 {
-	fn call( &self ) -> R;
+    fn call( &self ) -> R;
 }
 
 trait FnMut -> rust
 {
-	fn call_mut( &mut self ) -> R;
+    fn call_mut( &mut self ) -> R;
 }
 ```
 

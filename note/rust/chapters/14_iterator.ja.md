@@ -25,11 +25,11 @@ use std::iter::Iterator
 
 trait Iterator
 {
-	type Item;
+    type Item;
 
-	fn next( &mut self ) -> Option<Self::Item>;
+    fn next( &mut self ) -> Option<Self::Item>;
 
-	/* ... */
+    /* ... */
 }
 ```
 
@@ -38,10 +38,10 @@ IntoIteratorを実装した型は**イテレート可能**と呼ばれ、 `into_
 ```rust
 trait IntoIterator where Self::IntoIter: Iterator<Item=Self::Item>
 {
-	type Item;
-	type IntoIter: Iterator;
+    type Item;
+    type IntoIter: Iterator;
 
-	fn into_iter( self ) -> Self::Iterator;
+    fn into_iter( self ) -> Self::Iterator;
 }
 ```
 
@@ -76,9 +76,9 @@ IntoIteratorを実装した型は、 `into_iter()` を呼び出すことがで�
 
 ```rust
 let lengths: Vec<f64> =
-	from_fn(|| Some((random::<f64>() - random::<f64>).abs()))
-	.take(1000)
-	.collect();
+    from_fn(|| Some((random::<f64>() - random::<f64>).abs()))
+    .take(1000)
+    .collect();
 ```
 
 ```rust
@@ -87,12 +87,12 @@ use std::iter::successors;
 
 fn escape_time( c: Complex<f64>, limit: usize ) -> Option<usize>
 {
-	let zero = Complex { re: 0.0, im: 0.0 };
-	successors(Some(zero), |&z| { Some(z * z + c) })
-		.take(limit)
-		.enumerate()
-		.find(|(_i, z)| z.norm_sqr() > 4.0)
-		.map(|(_i, z)| i)
+    let zero = Complex { re: 0.0, im: 0.0 };
+    successors(Some(zero), |&z| { Some(z * z + c) })
+        .take(limit)
+        .enumerate()
+        .find(|(_i, z)| z.norm_sqr() > 4.0)
+        .map(|(_i, z)| i)
 }
 ```
 
@@ -120,9 +120,9 @@ assert_eq!(inner, "art"
 ```rust
 let text = "  ponies  \n    giraffes\niguanas   \nsquid".to_string();
 let v: Vec<&str> = text.lines()
-	.map(str::trim)
-	.filter(|s| *s != "iguanas")
-	.collect();
+    .map(str::trim)
+    .filter(|s| *s != "iguanas")
+    .collect();
 assert_eq!(v, ["ponies", "giraffes", "squid"]);
 ```
 
@@ -135,23 +135,23 @@ use std::str::FromStr;
 
 let text = "1\nfrond  .25  189\n3.1415 estuary\n";
 for number in text
-	.split_whitespace()
-	.filter_map(|w| f64::from_str(w).ok())
+    .split_whitespace()
+    .filter_map(|w| f64::from_str(w).ok())
 {
-	println!("{:4.2}", number.sqrt());
+    println!("{:4.2}", number.sqrt());
 }
 
 /*
-	filterとmapで同じことをしようとすると以下のようになる
+    filterとmapで同じことをしようとすると以下のようになる
 
-	for number in text
-		.split_whitespace()
-		.map(|w| f64::from_str(w))
-		.filter(|r| r.is_ok())
-		.map(|r| r.unwrap())
-	{
-		println!("{:4.2}", number.sqrt());
-	}
+    for number in text
+        .split_whitespace()
+        .map(|w| f64::from_str(w))
+        .filter(|r| r.is_ok())
+        .map(|r| r.unwrap())
+    {
+        println!("{:4.2}", number.sqrt());
+    }
 */
 ```
 
@@ -160,8 +160,8 @@ for number in text
 ```rust
 let vec = vec!["Amusement"," ", "Creators"];
 let amusement_creators = vec.iter()
-	.flat_map(|s| s.chars())
-	.collect::<String>();
+    .flat_map(|s| s.chars())
+    .collect::<String>();
 
 assert_eq!(&amusement_creators, "Amusement Creators");
 ```
@@ -171,9 +171,11 @@ assert_eq!(&amusement_creators, "Amusement Creators");
 **flattenアダプタ**は、イテレータの生成するアイテムがそれぞれイテレータであることを仮定して、それらをつなぎ合わせる。
 
 ```rust
-assert_eq!(vec![None, Some("day"), None, Some("one")]
-	.into_iter()
-	.flatten()
-	.collect::<Vec<_>>(),
-	vec!["day", "one"]);
+assert_eq!(
+	vec![None, Some("day"), None, Some("one")]
+    .into_iter()
+    .flatten()
+    .collect::<Vec<_>>(),
+    vec!["day", "one"]
+);
 ```

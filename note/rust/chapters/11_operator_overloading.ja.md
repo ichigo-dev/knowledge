@@ -52,19 +52,19 @@ Rustでは、独自の方に対して組み込みトレイトを実装するこ�
 use std::ops::Add;
 
 impl Add for Complex<T>
-	where
-		T: Add<Output = T>,
+    where
+        T: Add<Output = T>,
 {
-	type Output = Self;
+    type Output = Self;
 
-	fn add( self, rhs: Self ) -> Self
-	{
-		Complex
-		{
-			re: self.re + rhs.re,
-			im: self.im + rhs.im,
-		}
-	}
+    fn add( self, rhs: Self ) -> Self
+    {
+        Complex
+        {
+            re: self.re + rhs.re,
+            im: self.im + rhs.im,
+        }
+    }
 }
 ```
 
@@ -74,18 +74,18 @@ impl Add for Complex<T>
 use std::ops::Add;
 
 impl<L, R> Add for Complex<L>
-	where
-		L: Add<R>,
+    where
+        L: Add<R>,
 {
-	type Output = Complex<L::Output>;
+    type Output = Complex<L::Output>;
 
-	fn add( self, rhs: Complex<R> ) -> Self::Output
-	{
-		Complex
-		{
-			re: self.re + rhs.re,
-			im: self.im + rhs.im,
-		}
-	}
+    fn add( self, rhs: Complex<R> ) -> Self::Output
+    {
+        Complex
+        {
+            re: self.re + rhs.re,
+            im: self.im + rhs.im,
+        }
+    }
 }
 ```

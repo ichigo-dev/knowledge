@@ -58,13 +58,13 @@ use std::sync::Arc;
 
 struct App
 {
-	waiting_list: Mutex<WaitingList>,
-	/* ... */
+    waiting_list: Mutex<WaitingList>,
+    /* ... */
 }
 
 let app = Arc::new(App
 {
-	wating_list: Mutex::new(vec![]),
+    wating_list: Mutex::new(vec![]),
 });
 ```
 
@@ -74,5 +74,5 @@ let app = Arc::new(App
 
 ```rust
 let mut guard1 = self.waiting_list.lock().unwrap();
-let mut guard2 = self.waiting_list.lock().unwrap();   //	デッドロック
+let mut guard2 = self.waiting_list.lock().unwrap();   // デッドロック
 ```

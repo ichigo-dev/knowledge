@@ -22,17 +22,18 @@
 ```rust
 struct Author
 {
-	name: String,
-	books: Vec<String>,
+    name: String,
+    books: Vec<String>,
 }
 ```
 
 定義した構造体の型の値を生成するには、次のような**構造体式**を用いる。
 
 ```rust
-let author = Author {
-	name: "".to_string(),
-	books: Vec::new(),
+let author = Author
+{
+    name: "".to_string(),
+    books: Vec::new(),
 };
 ```
 
@@ -74,34 +75,34 @@ struct Onesuch;
 ```rust
 struct Queue
 {
-	older: Vec<char>,
-	younger: Vec<char>,
+    older: Vec<char>,
+    younger: Vec<char>,
 }
 
 impl Queue
 {
-	pub fn push( &mut self, c: char )
-	{
-		self.younger.push(c);
-	}
+    pub fn push( &mut self, c: char )
+    {
+        self.younger.push(c);
+    }
 
-	//	この関数の返り値としてSelfを用いることもできる
-	pub fn pop( &mut self ) -> Option<char>
-	{
-		if self.older.is_empty()
-		{
-			if self.younger.is_empty()
-			{
-				return None;
-			}
+    // この関数の返り値としてSelfを用いることもできる
+    pub fn pop( &mut self ) -> Option<char>
+    {
+        if self.older.is_empty()
+        {
+            if self.younger.is_empty()
+            {
+                return None;
+            }
 
-			use std::mem::swap;
-			swap(&mut self.older, &mut self.younger);
-			self.older.reverse();
-		}
+            use std::mem::swap;
+            swap(&mut self.older, &mut self.younger);
+            self.older.reverse();
+        }
 
-		self.older.pop()
-	}
+        self.older.pop()
+    }
 }
 ```
 
@@ -116,10 +117,10 @@ impl Queue
 ```rust
 impl Queue
 {
-	pub fn new() -> Queue
-	{
-		Queue { older: Vec::new(), younger: Vec::new() }
-	}
+    pub fn new() -> Queue
+    {
+        Queue { older: Vec::new(), younger: Vec::new() }
+    }
 }
 
 let mut q = Queue::new();
@@ -134,16 +135,16 @@ q.push('*');
 ```rust
 pub struct Position
 {
-	x: f32,
-	y: f32,
+    x: f32,
+    y: f32,
 }
 
 impl Position
 {
-	const ZERO: Position = Position { x: 0.0, y: 0.0 };
-	const UNIT: Position = Position { x: 1.0, y: 0.0 };
-	const NAME: &'static str = "Position";
-	const ID: u32 = 1;
+    const ZERO: Position = Position { x: 0.0, y: 0.0 };
+    const UNIT: Position = Position { x: 1.0, y: 0.0 };
+    const NAME: &'static str = "Position";
+    const ID: u32 = 1;
 }
 ```
 
@@ -155,16 +156,16 @@ Rustの構造体は**ジェネリック**にすることで、構造体の定義
 ```rust
 struct Queue<T>
 {
-	older: Vec<T>,
-	younger: Vec<T>,
+    older: Vec<T>,
+    younger: Vec<T>,
 }
 
 impl<T> Queue<T>
 {
-	pub fn new() -> Queue<T>
-	{
-		Queue { older: Vec::new(), younger: Vec::new() }
-	}
+    pub fn new() -> Queue<T>
+    {
+        Queue { older: Vec::new(), younger: Vec::new() }
+    }
 }
 ```
 
@@ -173,10 +174,10 @@ impl<T> Queue<T>
 ```rust
 impl Queue<f64>
 {
-	fn sum( &self ) -> f64
-	{
-		/* ... */
-	}
+    fn sum( &self ) -> f64
+    {
+        /* ... */
+    }
 }
 ```
 
@@ -187,15 +188,15 @@ impl Queue<f64>
 ```rust
 struct Polynomial<const N: usize>
 {
-	coefficients: [f64; N],
+    coefficients: [f64; N],
 }
 
 impl<const N: usize> Polynomial<N>
 {
-	fn new( coefficients: [f64; N] ) -> Polynomial<N>
-	{
-		Polynomial { coefficients }
-	}
+    fn new( coefficients: [f64; N] ) -> Polynomial<N>
+    {
+        Polynomial { coefficients }
+    }
 }
 ```
 
@@ -208,8 +209,8 @@ impl<const N: usize> Polynomial<N>
 #[derive(Copy, Clone, Debug, PartialEq)]
 struct Point
 {
-	x: f64,
-	y: f64,
+    x: f64,
+    y: f64,
 }
 ```
 
@@ -223,16 +224,16 @@ use std::cell::Cell;
 
 pub struct Robot
 {
-	hardware_error_count: Cell<u32>,
+    hardware_error_count: Cell<u32>,
 }
 
 impl Robot
 {
-	pub fn add_hardware_error( &self )
-	{
-		let n = self.hardware_error_count.get();
-		self.hardware_error_count.set(n + 1);
-	}
+    pub fn add_hardware_error( &self )
+    {
+        let n = self.hardware_error_count.get();
+        self.hardware_error_count.set(n + 1);
+    }
 }
 ```
 
@@ -243,12 +244,12 @@ use std::cell::RefCell;
 
 let ref_cell: RefCell<String> = RefCell::new("hello".to_string());
 
-//	共有参照を取得
+// 共有参照を取得
 let r = ref_cell.borrow();
 let count = r.len();
 assert_eq!(count, 5);
 
-//	すでに借用されているため、パニックを起こす
+// すでに借用されているため、パニックを起こす
 let mut w = ref_cell.borrow_mut();
 w.push_str(" world");
 ```

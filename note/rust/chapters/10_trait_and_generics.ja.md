@@ -56,13 +56,13 @@ use std::io::Write;
 
 fn say_hello( file: &mut dyn Write )
 {
-	/* ... */
+    /* ... */
 }
 
-//	FileはWriteトレイトを実装している
+// FileはWriteトレイトを実装している
 let mut local_file = File::create("hello.txt")?;
 
-//	say_hello()の引数は&mut dyn Writeとする
+// say_hello()の引数は&mut dyn Writeとする
 say_hello(&mut local_file);
 ```
 
@@ -86,7 +86,7 @@ fn say_hell<W: Write>( file: &mut W ) { /* ... */ }
 多くの場合は引数から実際に与えられた型パラメータを推論することができるが、引数を持たない関数の場合は明示的に呼び出したい型パラメータを指定する必要がある。
 
 ```rust
-let v = (0 .. 1000).collect::<Vec<i32>>();    //	ターボフィッシュで型パラメータを指定
+let v = (0 .. 1000).collect::<Vec<i32>>();    // ターボフィッシュで型パラメータを指定
 ```
 
 型パラメータとして複数のトレイトを実装していることを要求したい場合は次のように書く。
@@ -94,11 +94,11 @@ let v = (0 .. 1000).collect::<Vec<i32>>();    //	ターボフィッシュで型�
 ```rust
 fn func<T: Debug + Hash + Eq>( val: T ) { /* ... */ }
 
-//	型に対する制約が長くなってしまい可読性が損なわれることを防ぐための書き方
+// 型に対する制約が長くなってしまい可読性が損なわれることを防ぐための書き方
 fn func<M, R>( x: M, y: R )
-	where
-		M: Mapper + Seralize,
-		R: Reducer + Serialize,
+    where
+        M: Mapper + Seralize,
+        R: Reducer + Serialize,
 { /* ... */ }
 ```
 
@@ -110,16 +110,16 @@ fn func<M, R>( x: M, y: R )
 ```rust
 trait Visible
 {
-	fn display( &self, index: u8 );
-	fn is_active( &self ) -> bool;
+    fn display( &self, index: u8 );
+    fn is_active( &self ) -> bool;
 
-	fn display_all( &self )
-	{
-		for i in (0 .. self.value.len())
-		{
-			self.display(i);
-		}
-	}
+    fn display_all( &self )
+    {
+        for i in (0 .. self.value.len())
+        {
+            self.display(i);
+        }
+    }
 }
 ```
 
@@ -128,15 +128,15 @@ trait Visible
 ```rust
 impl Visible for Board
 {
-	fn display( &self, index: u8 )
-	{
-		println!("{}", self.value[index]);
-	}
+    fn display( &self, index: u8 )
+    {
+        println!("{}", self.value[index]);
+    }
 
-	fn is_active( &self ) -> bool
-	{
-		self.active
-	}
+    fn is_active( &self ) -> bool
+    {
+        self.active
+    }
 }
 ```
 
@@ -151,16 +151,16 @@ use std::io::{ self, Write };
 
 trait WriteHtml
 {
-	fn write_html( &mut self, html: &HtmlDocument ) -> io::Result<()>;
+    fn write_html( &mut self, html: &HtmlDocument ) -> io::Result<()>;
 }
 
-//	Writeトレイトを実装した型にWriteHtmlを実装
+// Writeトレイトを実装した型にWriteHtmlを実装
 impl<W: Write> WriteHtml for W
 {
-	fn write_html( &mut self, html: &HtmlDocument ) -> io::Result<()>
-	{
-		/* ... */
-	}
+    fn write_html( &mut self, html: &HtmlDocument ) -> io::Result<()>
+    {
+        /* ... */
+    }
 }
 ```
 
@@ -181,12 +181,12 @@ C++でも**単一定義の原則**（ODR: One Definition Rule）という同様�
 ```rust
 trait Super
 {
-	fn super_method( &self );
+    fn super_method( &self );
 }
 
 trait Sub: Super
 {
-	fn sub_method( &self );
+    fn sub_method( &self );
 }
 ```
 
@@ -213,12 +213,12 @@ ToString::to_string("hello");
 ```rust
 pub trait Iterator
 {
-	type Item;
+    type Item;
 
-	fn next( &mut self ) -> Option<Self::Item>
-	{
-		/* ... */
-	}
+    fn next( &mut self ) -> Option<Self::Item>
+    {
+        /* ... */
+    }
 }
 ```
 
@@ -229,10 +229,10 @@ pub trait Iterator
 ```rust
 pub trait Iterator<Item>
 {
-	fn next( &mut self ) -> Option<Item>
-	{
-		/* ... */
-	}
+    fn next( &mut self ) -> Option<Item>
+    {
+        /* ... */
+    }
 }
 ```
 

@@ -19,9 +19,9 @@
 ```rust
 enum Ordering
 {
-	Less,
-	Equal,
-	Greater,
+    Less,
+    Equal,
+    Greater,
 }
 ```
 
@@ -30,9 +30,9 @@ enum Ordering
 ```rust
 enum HttpStatus
 {
-	Ok = 200,
-	NotModified = 304,
-	NotFound = 404,
+    Ok = 200,
+    NotModified = 304,
+    NotFound = 404,
 }
 ```
 
@@ -41,48 +41,48 @@ enum HttpStatus
 列挙型のヴァリアントには、**タプル型ヴァリアント**や**構造体型ヴァリアント**を用いることができる。
 
 ```rust
-//	普通の列挙型
+// 普通の列挙型
 enum TimeUnit
 {
-	Years,
-	Months,
-	Days,
-	Hours,
-	Minutes,
-	Seconds,
+    Years,
+    Months,
+    Days,
+    Hours,
+    Minutes,
+    Seconds,
 }
 
 
-//	タプル型ヴァリアントを持つ列挙型
+// タプル型ヴァリアントを持つ列挙型
 enum RoughTime
 {
-	InThePast(TimeUnit, u32),
-	JustNow,
-	InTheFuture(TimeUnit, u32),
+    InThePast(TimeUnit, u32),
+    JustNow,
+    InTheFuture(TimeUnit, u32),
 }
 
 let rt1 = RoughTime::InThePast(TimeUnit::Years, 4);
 let rt2 = RoughTime::InThePast(TimeUnit::Hours, 3);
 
 
-//	構造体型ヴァリアントを持つ列挙型
+// 構造体型ヴァリアントを持つ列挙型
 struct Position2d
 {
-	x: u32,
-	y: u32,
+    x: u32,
+    y: u32,
 }
 
 struct Position3d
 {
-	x: u32,
-	y: u32,
-	z: u32,
+    x: u32,
+    y: u32,
+    z: u32,
 }
 
 enum Position
 {
-	Position2d { x: u32, y: u32 },
-	Position3d { x: u32, y: u32, z: u32 },
+    Position2d { x: u32, y: u32 },
+    Position3d { x: u32, y: u32, z: u32 },
 }
 
 let p2d = Position::Position2d { x: 1, y: 30 };
@@ -95,14 +95,14 @@ let p2d = Position::Position2d { x: 1, y: 30 };
 ```rust
 enum Option<T>
 {
-	None,
-	Some(T),
+    None,
+    Some(T),
 }
 
 enum Reuslt<T, E>
 {
-	Ok(T),
-	Err(E),
+    Ok(T),
+    Err(E),
 }
 ```
 
@@ -114,25 +114,25 @@ match式は**パターンマッチ**を行う。パターンに、次の例の `
 ```rust
 enum RoughTime
 {
-	InThePast(TimeUnit, u32),
-	JustNow,
-	InTheFuture(TimeUnit, u32),
+    InThePast(TimeUnit, u32),
+    JustNow,
+    InTheFuture(TimeUnit, u32),
 }
 
 fn rough_time_to_english( rt: RoughTime ) -> String
 {
-	match rt
-	{
-		RoughTime::InThePast(units, count) =>
-		{
-			format!("{} {} ago", count, units.plural())
-		},
-		RoughTime::JustNow => format!("just now"),
-		RoughTime::InTheFuture(units, count) =>
-		{
-			format!("{} {} from now", count, units.plural())
-		},
-	}
+    match rt
+    {
+        RoughTime::InThePast(units, count) =>
+        {
+            format!("{} {} ago", count, units.plural())
+        },
+        RoughTime::JustNow => format!("just now"),
+        RoughTime::InTheFuture(units, count) =>
+        {
+            format!("{} {} from now", count, units.plural())
+        },
+    }
 }
 ```
 
@@ -143,9 +143,9 @@ fn rough_time_to_english( rt: RoughTime ) -> String
 ```rust
 match meadow.count_rabbits()
 {
-	0 => {},
-	1 => println!("A rabbit is nosing around in the clover"),
-	n => println!("There are {} rabbits hopping about in the meadow", n),
+    0 => {},
+    1 => println!("A rabbit is nosing around in the clover"),
+    n => println!("There are {} rabbits hopping about in the meadow", n),
 }
 ```
 
@@ -154,9 +154,9 @@ match meadow.count_rabbits()
 ```rust
 let caption = match photo.tagged_pet()
 {
-	Pet::Tyrannosaur => "RRRAAAAHHHHH",
-	Pet::Samoyed => "*dog thoughts",
-	_ => "I'm cute, love me",
+    Pet::Tyrannosaur => "RRRAAAAHHHHH",
+    Pet::Samoyed => "*dog thoughts",
+    _ => "I'm cute, love me",
 }
 ```
 
@@ -167,13 +167,13 @@ matchの対象となる値はパターンにmoveされる。一方、matchの対
 ```rust
 match account
 {
-	Account { name, language } =>
-	{
-		ui.greet(&name, &language);
-
-		//	accountはmoveされているのでエラー
-		ui.show_settings(&account);
-	},
+    Account { name, language } =>
+    {
+        ui.greet(&name, &language);
+    
+        // accountはmoveされているのでエラー
+        ui.show_settings(&account);
+    },
 }
 ```
 
@@ -182,11 +182,11 @@ match account
 ```rust
 match account
 {
-	Account { ref name, ref language } =>
-	{
-		ui.greet(name, language);
-		ui.show_settings(&account);
-	}
+    Account { ref name, ref language } =>
+    {
+        ui.greet(name, language);
+        ui.show_settings(&account);
+    }
 }
 ```
 
@@ -195,12 +195,12 @@ match account
 ```rust
 match line_result
 {
-	Err(ref err) => log_error(err),
-	Ok(ref mut line) =>
-	{
-		trim_comments(line);
-		handle(line);
-	},
+    Err(ref err) => log_error(err),
+    Ok(ref mut line) =>
+    {
+        trim_comments(line);
+        handle(line);
+    },
 }
 ```
 
@@ -211,8 +211,8 @@ matchの分岐には、**マッチガード**を用いることで条件を追�
 ```rust
 match point_to_hex(click)
 {
-	None => { /* ... */ },
-	Some(hex) if hex == current_hex => { /* ... */ },
-	Some(hex) => { /* ... */ },
+    None => { /* ... */ },
+    Some(hex) if hex == current_hex => { /* ... */ },
+    Some(hex) => { /* ... */ },
 }
 ```

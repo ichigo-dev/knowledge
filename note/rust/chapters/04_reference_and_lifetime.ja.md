@@ -30,29 +30,29 @@ Rustでは、値の所有者であるポインタがドロップされると参�
 - **可変参照**を用いると、参照先の値を読んだり書き換えたりすることができる。ある値に対する可変参照と他の参照（共有参照も可変参照も）を同時に使用することはできない。
 
 ```rust
-//	show()は値を読んでいるだけなので、共有参照を取るようにすれば十分
+// show()は値を読んでいるだけなので、共有参照を取るようにすれば十分
 fn show( table: &Table )
 {
-	//	コレクション型に対して繰り返し実行すると、普通は所有権が移動されて値が消費されてしまう
-	//	共有参照に対して繰り返し実行すると、個々のエントリのキーと値に対する共有参照が作られる
-	for (key, values) in table
-	{
-		println!("key = {}:", key);
+    //  コレクション型に対して繰り返し実行すると、普通は所有権が移動されて値が消費されてしまう
+    //  共有参照に対して繰り返し実行すると、個々のエントリのキーと値に対する共有参照が作られる
+    for (key, values) in table
+    {
+        println!("key = {}:", key);
 
-		for value in values
-		{
-			println(" {}", value);
-		}
-	}
+        for value in values
+        {
+            println(" {}", value);
+        }
+    }
 }
 
-//	sort()は値を書き換えるので、可変参照を取る必要がある
+// sort()は値を書き換えるので、可変参照を取る必要がある
 fn sort( table: &mut Table )
 {
-	for(_key, values) in table
-	{
-		values.sort();
-	}
+    for(_key, values) in table
+    {
+        values.sort();
+    }
 }
 ```
 
@@ -64,19 +64,19 @@ fn sort( table: &mut Table )
 Rustでは、 `&` 演算子によって参照を明示的に作り、 `*` 演算子で参照解決を行う。また、 `.` 演算子が必要に応じて暗黙に左側のオペランドを参照解決する。さらに `.` 演算子は、必要であれば暗黙に左オペランドへの参照を借用する。
 
 ```rust
-//	.演算子による暗黙的な参照解決
+// .演算子による暗黙的な参照解決
 struct Book
 {
-	name: &'static str,
-	published: bool,
+    name: &'static str,
+    published: bool,
 }
 let book = Book { name: "my book", published: false };
 let book_ref = &book;
-assert_eq!(book_ref.name, "my book");      //assert_eq!((*book_ref).name, "my book");
+assert_eq!(book_ref.name, "my book");    // assert_eq!((*book_ref).name, "my book");
 
-//	.演算子による暗黙的な参照の借用
+// .演算子による暗黙的な参照の借用
 let mut v = vec![5, 1, 4, 2, 3];
-v.sort();     // (&mut v).sort();
+v.sort();                                // (&mut v).sort();
 ```
 
 ### 参照の代入
@@ -97,8 +97,8 @@ Rustは参照への参照を許しており、 `.` 演算子は型をチェッ�
 ```rust
 struct Position
 {
-	x: usize,
-	y: usize,
+    x: usize,
+    y: usize,
 }
 let position = Position { x: 100, y: 200 };
 let r = &position;
@@ -121,12 +121,12 @@ Rustには2種類の**ファットポインタ**がある。ひとつはスラ�
 
 ```rust
 {
-	let r;
-	{
-		let x = 1;
-		r = &x;
-	}
-	assert_eq!(*r, 1);     //	スコープの外ではxにアクセスできない
+    let r;
+    {
+        let x = 1;
+        r = &x;
+    }
+    assert_eq!(*r, 1);       // スコープの外ではxにアクセスできない
 }
 ```
 
@@ -152,10 +152,10 @@ static mut STASH: &i32 = &128;
 
 fn update( p: &i32 )
 {
-	unsafe
-	{
-		STASH = p;
-	}
+    unsafe
+    {
+        STASH = p;
+    }
 }
 ```
 
@@ -180,8 +180,8 @@ fn update( p: &'static i32 ) { /* ... */ }
 ```rust
 let v = vec![1, 2, 3, 4, 5];
 let r = &v;
-let aside = v;    //	ここで移動が発生する（vのライフタイムの終わり）
-r[0];             //	未初期化状態となったvを使用しようとしている（rのライフタイムの終わり）
+let aside = v;    // ここで移動が発生する（vのライフタイムの終わり）
+r[0];             // 未初期化状態となったvを使用しようとしている（rのライフタイムの終わり）
 ```
 
 Rustではこのようなプログラムはエラーとなる。 `v` の参照である `r` の生存期間が、 `v` の生存期間よりも長くなってはいけないというルールに反しているためである。
@@ -191,13 +191,13 @@ Rustではこのようなプログラムはエラーとなる。 `v` の参照�
 ベクタにおいて、その変数のもともとの容量を超える要素が加えられようとするとき、ベクタはより容量の大きいバッファを再確保しようとする。このバッファの再確保によりダングリングポインタが発生する例が次のプログラムだ。
 
 ```rust
-//	他のスライスによってベクタを拡張する関数
+// 他のスライスによってベクタを拡張する関数
 fn extend( vec: &mut Vec<f32>, slice: &[f32] )
 {
-	for elem in slice
-	{
-		vec.push(*elem);
-	}
+    for elem in slice
+    {
+        vec.push(*elem);
+    }
 }
 
 let mut wave = Vec::new();
@@ -207,7 +207,7 @@ let tail = [0.0, -1.0];
 extend(&mut wave, &head);
 extend(&mut wave, &tail);
 
-//	ここでバッファの再確保が起きるとする
+// ここでバッファの再確保が起きるとする
 extend(&mut wave, &wave);
 ```
 
@@ -220,20 +220,20 @@ extend(&mut wave, &wave);
 ```rust
 struct Extrema<'elt>
 {
-	greatest: &'elt i32,
-	least: &'elt i32,
+    greatest: &'elt i32,
+    least: &'elt i32,
 }
 
 fn find_extrema<'s>( slice: &'s [i32] ) -> Extrema<'s>
 {
-	let mut greatest = &slice[0];
-	let mut least = &slice[0];
+    let mut greatest = &slice[0];
+    let mut least = &slice[0];
 
-	for i in 1..slice.len()
-	{
-		if slice[i] > *greatest { greatest = &slice[i]; }
-		if slice[i] < *least { least = &slice[i]; }
-	}
-	Extrema { greatest, least }
+    for i in 1..slice.len()
+    {
+        if slice[i] > *greatest { greatest = &slice[i]; }
+        if slice[i] < *least { least = &slice[i]; }
+    }
+    Extrema { greatest, least }
 }
 ```

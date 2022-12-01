@@ -231,10 +231,10 @@ let even_slice: &[i32] = &even;
 ```rust
 fn print_num( n: &[i32] )
 {
-	for elem in n
-	{
-		println!("{}", elem);
-	}
+    for elem in n
+    {
+        println!("{}", elem);
+    }
 }
 ```
 

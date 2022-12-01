@@ -46,7 +46,7 @@ Rustの変数はデフォルトでイミュータブルなため、他の言語�
 Rustでは**複合代入**はサポートされているが、インクリメント演算子とデクリメント演算子はサポートされていない。
 
 ```rust
-let total += item.price;   //	複合代入
+let total += item.price;   // 複合代入
 ```
 
 
@@ -65,9 +65,9 @@ match式は、C言語などのswitch文と似ているが、より柔軟であ�
 ```rust
 match value
 {
-	pattern1 => expr,
-	pattern2 => expr,
-	_ => epxr,
+    pattern1 => expr,
+    pattern2 => expr,
+    _ => epxr,
 }
 ```
 
@@ -110,7 +110,7 @@ break式を用いると、そのループブロックを抜けることができ
 ```rust
 loop
 {
-	break value;
+    break value;
 }
 ```
 
@@ -122,10 +122,10 @@ continue式を用いると、そのループの次の回に飛ぶことができ
 'outer
 for author in authors
 {
-	for book in author.books
-	{
-		break 'outer;
-	}
+    for book in author.books
+    {
+        break 'outer;
+    }
 }
 ```
 
@@ -140,16 +140,16 @@ return式は現在の関数から脱出し、呼び出し元に値を返す。
 Rustで関数やメソッドを呼び出す方法は他の多くの言語と同様である。
 
 ```rust
-let x = func();                 //	関数呼び出し
-let room = player.location();   //	メソッド呼び出し
-let mut v = Vec::new();         //	型関連関数呼び出し（staticメソッドのようなもの）
+let x = func();                 // 関数呼び出し
+let room = player.location();   // メソッド呼び出し
+let mut v = Vec::new();         // 型関連関数呼び出し（staticメソッドのようなもの）
 ```
 
 Rustの関数呼び出しやメソッド呼び出しにおいては、 `Vec<T>` のような通常のジェネリック型の構文は使えない。これは、 `<` が比較演算子として解釈されてしまうからである。そこで、次のような**ターボフィッシュ**と呼ばれる記法を用いてジェネリック型であることをコンパイラに推論させる必要がある。
 
 ```rust
-Vec<i32>::with_capacity(1000);      //	間違い
-Vec::<i32>::with_capacity(1000);    //	ターボフィッシュを用いる
+Vec<i32>::with_capacity(1000);      // 間違い
+Vec::<i32>::with_capacity(1000);    // ターボフィッシュを用いる
 ```
 
 また、コンパイラが型を推論できるような場合にはこれらを省略するほうが良い。
@@ -160,9 +160,9 @@ Vec::<i32>::with_capacity(1000);    //	ターボフィッシュを用いる
 構造体のフィールドや、配列・スライス・ベクタの要素へのアクセスは、一般的な構文で行うことができる。.演算子や `[]` の左側の値は暗黙的に参照解決される。
 
 ```rust
-company.fundation  //	 構造体のフィールドへのアクセス
-goods.1            //	タプルのフィールドへのアクセス
-pieces[i]          //	配列・スライス・ベクタの要素へのアクセス
+company.fundation  // 構造体のフィールドへのアクセス
+goods.1            // タプルのフィールドへのアクセス
+pieces[i]          // 配列・スライス・ベクタの要素へのアクセス
 ```
 
 これら3つの値は代入文の左辺に現れることができるので、**左辺値**と呼ばれる。
@@ -183,8 +183,8 @@ Rustの二項演算子（算術演算子、ビット演算子、比較演算子�
 Rustでは通常、暗黙的な型変換が行われないので、明示的にキャストする必要がある。キャストにはasキーワードを用いる。
 
 ```rust
-let x = 10;                //	xはi32型
-let index = x as usize;    //	usizeに変換
+let x = 10;                // xはi32型
+let index = x as usize;    // usizeに変換
 ```
 
 基本的なキャストのルールは次の通り。
@@ -204,6 +204,6 @@ let index = x as usize;    //	usizeに変換
 Rustには、軽量の関数のような値、**クロージャ**がある。
 
 ```rust
-let is_even = | x | x % 2 == 0;               //	返り値の型を推論させた場合
-let is_even = | x | -> bool { x % 2 == 0 };   //	返り値の型を明示的に書いた場合
+let is_even = | x | x % 2 == 0;               // 返り値の型を推論させた場合
+let is_even = | x | -> bool { x % 2 == 0 };   // 返り値の型を明示的に書いた場合
 ```
