@@ -10,3 +10,4 @@
 1. [変数](/note/programming/chapters/02_variable.ja.md)
 1. [データ型](/note/programming/chapters/03_data_type.ja.md)
 1. [演算](/note/programming/chapters/04_operation.ja.md)
+1. [制御構文](/note/programming/chapters/05_control_flow.ja.md)
