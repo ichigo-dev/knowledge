@@ -15,6 +15,7 @@
 - HTML/CSS knowledge notes
 - JavaScript knowledge notes
 - Machine Learning knowledge notes
+- Linux knowledge notes
 
 
 ## Progress
