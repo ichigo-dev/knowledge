@@ -45,11 +45,13 @@ int add( int a_, int b_ )
 
 ```php
 <?php
-    function add( $a_, $b_ )
-    {
-        $result = $a_ + $b_;
-        return $result;
-    }
+
+function add( $a_, $b_ )
+{
+    $result = $a_ + $b_;
+    return $result;
+}
+
 ?>
 ```
 
@@ -93,19 +95,21 @@ int add( int a_, int b_ )
 
 ```php
 <?php
-    // 関数定義
-    function add( $a_, $b_ )
-    {
-        $result = $a_ + $b_;
-        return $result;
-    }
 
-    $a = 5;
-    $b = 10;
+// 関数定義
+function add( $a_, $b_ )
+{
+    $result = $a_ + $b_;
+    return $result;
+}
 
-    // 関数呼び出し
-    $result = add($a, $b);
-    echo("Result: " . $result);
+$a = 5;
+$b = 10;
+
+// 関数呼び出し
+$result = add($a, $b);
+echo("Result: " . $result);
+
 ?>
 ```
 

@@ -49,12 +49,14 @@ int main()
 
 ```php
 <?php
-    $input_num = $_POST["input_num"];
 
-    if( $input_num > 100 )
-    {
-        echo("Input number is greater than 100.\n");
-    }
+$input_num = $_POST["input_num"];
+
+if( $input_num > 100 )
+{
+    echo("Input number is greater than 100.\n");
+}
+
 ?>
 ```
 
@@ -107,37 +109,39 @@ int main()
 
 ```php
 <?php
-    // if else文の例
-    $input_num = $_POST["input_num"];
 
-    if( $input_num > 100 )
-    {
-        echo("Input number is greater than 100.\n");
-    }
-    else
-    {
-        echo("Input number is less than or equal to 100.\n");
-    }
+// if else文の例
+$input_num = $_POST["input_num"];
 
-    // 多段の条件分岐の例
-    $favorite_month = $_POST["favorite_month"];
+if( $input_num > 100 )
+{
+    echo("Input number is greater than 100.\n");
+}
+else
+{
+    echo("Input number is less than or equal to 100.\n");
+}
 
-    if( 3 <= $favorite_month && $favorite_month < 6 )
-    {
-        echo("Your favorite season is spring.");
-    }
-    else if( 6 <= $favorite_month && $favorite_month < 9 )
-    {
-        echo("Your favorite season is summer.");
-    }
-    else if( 9 <= $favorite_month && $favorite_month < 12 )
-    {
-        echo("Your favorite season is autumn.\n");
-    }
-    else if( $favorite_month == 12 && 1 <= $favorite_month && $favorite_month < 3 )
-    {
-        echo("Your favorite season is winter.\n");
-    }
+// 多段の条件分岐の例
+$favorite_month = $_POST["favorite_month"];
+
+if( 3 <= $favorite_month && $favorite_month < 6 )
+{
+    echo("Your favorite season is spring.");
+}
+else if( 6 <= $favorite_month && $favorite_month < 9 )
+{
+    echo("Your favorite season is summer.");
+}
+else if( 9 <= $favorite_month && $favorite_month < 12 )
+{
+    echo("Your favorite season is autumn.\n");
+}
+else if( $favorite_month == 12 && 1 <= $favorite_month && $favorite_month < 3 )
+{
+    echo("Your favorite season is winter.\n");
+}
+
 ?>
 ```
 
@@ -183,30 +187,32 @@ int main()
 
 ```php
 <?php
-    $input_num = $_POST["input_num"];
 
-    switch( $input_num )
+$input_num = $_POST["input_num"];
+
+switch( $input_num )
+{
+    case 1:
     {
-        case 1:
-        {
-            echo("Input number is 1.\n");
-            break;
-        }
-        case 2:
-        {
-            echo("Input number is 2.\n");
-            break;
-        }
-        case 3:
-        {
-            echo("Input number is 3.\n");
-            break;
-        }
-        default:
-        {
-            echo("Input number is some other value.\n");
-        }
+        echo("Input number is 1.\n");
+        break;
     }
+    case 2:
+    {
+        echo("Input number is 2.\n");
+        break;
+    }
+    case 3:
+    {
+        echo("Input number is 3.\n");
+        break;
+    }
+    default:
+    {
+        echo("Input number is some other value.\n");
+    }
+}
+
 ?>
 ```
 
@@ -250,13 +256,15 @@ int main()
 
 ```php
 <?php
-    $input_num = $_POST["input_num"];
 
-    while( $input_num > 0 )
-    {
-        echo($input_num);
-        $input_num--;
-    }
+$input_num = $_POST["input_num"];
+
+while( $input_num > 0 )
+{
+    echo($input_num);
+    $input_num--;
+}
+
 ?>
 ```
 
@@ -289,10 +297,12 @@ int main()
 
 ```php
 <?php
-    for( $i=0; $i<20; $i++ )
-    {
-        echo($i);
-    }
+
+for( $i=0; $i<20; $i++ )
+{
+    echo($i);
+}
+
 ?>
 ```
 
@@ -304,17 +314,19 @@ int main()
 nums = [10, 20, 30]
 
 for num in nums;
-    print("num: {0}".format(num))
+    print("Number: {0}".format(num))
 ```
 
 ```php
 <?php
-    $nums = [10, 20, 30];
 
-    foreach( $nums as $num )
-    {
-        echo("num: " . $num);
-    }
+$nums = [10, 20, 30];
+
+foreach( $nums as $num )
+{
+    echo("Number: " . $num);
+}
+
 ?>
 ```
 
@@ -323,7 +335,7 @@ let nums = [10, 20, 30];
 
 for( let num of nums )
 {
-    console.log("num: " + num);
+    console.log("Number: " + num);
 }
 ```
 
@@ -331,16 +343,18 @@ for( let num of nums )
 
 ```php
 <?php
-    $profile = [
-        "name" => "ichigo",
-        "email" => "dev.honda.ichigo@gmail.com",
-        "gender" => "male",
-    ];
 
-    foreach( $profile as $key => $val )
-    {
-        echo($key . ": " . $val);
-    }
+$profile = [
+    "name" => "ichigo",
+    "email" => "dev.honda.ichigo@gmail.com",
+    "gender" => "male",
+];
+
+foreach( $profile as $key => $val )
+{
+    echo($key . ": " . $val);
+}
+
 ?>
 ```
 

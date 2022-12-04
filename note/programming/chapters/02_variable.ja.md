@@ -35,10 +35,14 @@ print("%d\n", x);   // 参照
 ```
 
 ```php
+<?php
+
 // PHPにおける変数の操作
 
 $x = 5;             // 初期化、代入
 echo($x);           // 参照
+
+?>
 ```
 
 ```javascript
@@ -116,8 +120,12 @@ const pi = 3.14159;
 ```
 
 ```php
+<?php
+
 // PHPではdefine関数を用いて値を定義する
 
 define("MAX_CNT", 1000);
 define("PI", 3.14159);
+
+?>
 ```

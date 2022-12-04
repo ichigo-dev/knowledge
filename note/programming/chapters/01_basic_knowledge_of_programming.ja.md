@@ -412,16 +412,18 @@ else:
 
 ```php
 <?php
-    $input_num = $_POST["input_num"];
 
-    if( $input_num % 2 === 0 )
-    {
-        echo("It is an even number : " . $input_num);
-    }
-    else
-    {
-        echo("It is an odd number : " . $input_num);
-    }
+$input_num = $_POST["input_num"];
+
+if( $input_num % 2 === 0 )
+{
+    echo("It is an even number : " . $input_num);
+}
+else
+{
+    echo("It is an odd number : " . $input_num);
+}
+
 ?>
 ```
 
