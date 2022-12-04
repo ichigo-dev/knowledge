@@ -12,3 +12,4 @@
 1. [演算](/note/programming/chapters/04_operation.ja.md)
 1. [制御構文](/note/programming/chapters/05_control_flow.ja.md)
 1. [関数](/note/programming/chapters/06_function.ja.md)
+1. [クラス](/note/programming/chapters/07_class.ja.md)
