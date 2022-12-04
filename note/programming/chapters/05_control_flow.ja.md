@@ -289,7 +289,7 @@ int main()
 
 ```php
 <?php
-    for( $i=0; $i<20; $++ )
+    for( $i=0; $i<20; $i++ )
     {
         echo($i);
     }
@@ -324,6 +324,36 @@ let nums = [10, 20, 30];
 for( let num of nums )
 {
     console.log("num: " + num);
+}
+```
+
+また、オブジェクトをイテレートする場合の制御構文を用意しているプログラミング言語もある。
+
+```php
+<?php
+    $profile = [
+        "name" => "ichigo",
+        "email" => "dev.honda.ichigo@gmail.com",
+        "gender" => "male",
+    ];
+
+    foreach( $profile as $key => $val )
+    {
+        echo($key . ": " . $val);
+    }
+?>
+```
+
+```javascript
+let profile = [
+    name : "ichigo",
+    email : "dev.honda.ichigo@gmail.com",
+    gender : "male",
+];
+
+for( let key in profile )
+{
+    console.log(key + ": " + profile[key]);
 }
 ```
 
