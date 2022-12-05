@@ -404,7 +404,7 @@ public class Oddeven
 **Python**はインタプリタ方式の汎用プログラミング言語。動的型付け言語に分類され、メモリの管理にはガベージコレクションを用いる。可読性が高く、記述が容易であるためプログラミングの入門にも適しており、スピード感のある開発に用いられることが多い。機械学習分野のライブラリが充実いるほか、Web開発にも用いられる。
 
 ```python
-// Python
+# Python
 
 input_num = int(input("> "))
 
@@ -442,7 +442,7 @@ else
 **JavaScript**は一般的なWebブラウザ上で実行されるプログラミング言語。インタプリタ言語・動的型付け言語に分類される。Webページ上のコンテンツに動きを与える目的でよく用いられており、近年ではサーバサイドにおける実行環境の登場や**SPA**(Single Page Application)の普及により使用機会が増えている。習得難易度は比較的低く、ブラウザさえあれば実行環境が整うという手軽さもメリットのひとつである。
 
 ```javascript
-//	JavaScript
+// JavaScript
 
 let input_num = document.getElementById('#input_num').value;
 
