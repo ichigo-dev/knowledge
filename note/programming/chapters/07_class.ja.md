@@ -12,6 +12,9 @@
 1. [this](#this)
 1. [コンストラクタとデストラクタ](#コンストラクタとデストラクタ)
 1. [静的メソッドと静的プロパティ](#静的メソッドと静的プロパティ)
+1. [アクセス指定子](#アクセス指定子)
+1. [抽象クラスと具象クラス](#抽象クラスと具象クラス)
+1. [インタフェース](#インタフェース)
 
 
 ## オブジェクト指向
@@ -93,7 +96,7 @@ echo("Level: " . $level);
 
 ### カプセル化
 
-**カプセル化**とはオブジェクトが持つ情報を隠蔽することによって、不正な操作ができないようにするための仕組みのこと。オブジェクトが持つメソッドやプロパティは**アクセス指定子**によってアクセスできる範囲を制限できる。
+**カプセル化**とはオブジェクトが持つ情報を隠蔽することによって、不正な操作ができないようにするための仕組みのこと。オブジェクトが持つメソッドやプロパティはアクセス指定子によってアクセスできる範囲を制限できる。
 
 オブジェクトの外部からのアクセスを制限することで、オブジェクト内部のデータを保護して直接書き換えられないようにする目的。代わりに、オブジェクト内部の保護されたデータを間接的に変更できるようにインタフェースとなるメソッドを用意しておくという使い方がよくされる。
 
@@ -278,7 +281,7 @@ empower_monster($dragon, 3);
 
 ### 継承
 
-**継承**（**インヘリタンス**）とは継承元（親）となるクラスの持つプロパティやメソッドを引き継いだ別のクラスを定義できるような仕組みのこと。これにより、複数の類似したクラスにおいて共通部分をまとめた**親クラス**（**スーパークラス**）を定義することができるようになる。親クラスの性質を受け継いだクラスのことを**子クラス**（**サブクラス**）という。継承の仕組みによりコードの再利用性が高まり、プログラムが変更に強くなるという利点がある。
+**継承**（**インヘリタンス**）とは継承元（親）となるクラスの持つプロパティやメソッドを引き継いだ別のクラスを定義できるような仕組みのこと。これにより、複数の類似したクラスにおいて共通部分をまとめた**親クラス**（**スーパークラス**、**基底クラス**）を定義することができるようになる。親クラスの性質を受け継いだクラスのことを**子クラス**（**サブクラス**、**派生クラス**）という。継承の仕組みによりコードの再利用性が高まり、プログラムが変更に強くなるという利点がある。
 
 親クラスが持つメソッドを別の処理に変更したい場合、同じ識別子でメソッドを定義することで**オーバライド**（上書き）できる。
 
@@ -598,6 +601,242 @@ echo("Last index: " . Monster::g_last_index);
 ```
 
 
-アクセス指定子
-抽象型オブジェクト
-インタフェース
+## アクセス指定子
+
+**アクセス指定子**はオブジェクトが持つプロパティやメソッドの公開範囲を設定するための機能。
+
+`public` キーワードを指定した場合、オブジェクトのスコープ範囲であれば内部からでも外部からでもプロパティやメソッドにアクセスすることができる。
+
+`private` キーワードを指定した場合、オブジェクトの外部からのプロパティやメソッドへのアクセスを制限できる。子クラスからもアクセスできなくなる。
+
+`protected` キーワードを指定した場合、オブジェクトの外部からのプロパティやメソッドへのアクセスを制限できる。子クラスからはアクセスできる。
+
+```cpp
+class Monster
+{
+    // 外部にも公開されるメンバ
+    public:
+
+        int level_up( int diff_ )
+        {
+            return this->level_up_inner(diff_);
+        }
+
+    // 外部からは見えないが、子クラスからは見えるメンバ
+    protected:
+
+        int level_up_inner( int idff_ )
+        {
+            this->m_level += diff_;
+            return this->m_level;
+        }
+
+        int m_level = 1;
+
+    // 外部からも子クラスからも見えないメンバ
+    private:
+
+        int m_index = 0;
+};
+
+class Goblin : public Monster
+{
+    public:
+
+        void power_up()
+        {
+            // level_up_innerは子クラスからもアクセス可能
+            this->level_up_inner(1);
+        }
+};
+
+int main()
+{
+    Goblin goblin;
+
+    // level_upは外部からもアクセス可能
+    int level = goblin.level_up(10);
+
+    return 0;
+}
+```
+
+
+## 抽象クラスと具象クラス
+
+**抽象クラス**は具体的な実装を持たない、継承されることを前提としたクラス。具象クラスからは直接インスタンスを生成することはできない。オーバライドされることが前提となるメソッドを**仮想関数**といい、**シグニチャ**のみが記述される。
+
+**具象クラス**は抽象クラスを継承してメソッドをオーバライドし、具体的な実装を行ったクラス。
+
+```cpp
+#include <string>
+
+// 抽象クラス（仮想関数を持つ）
+class Monster
+{
+    public:
+
+        // 仮想関数
+        virtual int level_up( int diff_ ) = 0;
+
+    private:
+
+        int m_index = 0;
+        std::string m_name = "";
+};
+
+// 具象クラス
+class Goblin : public Monster
+{
+    public:
+
+        // 仮想関数をオーバライド
+        int level_up( int diff_ )
+        {
+            this->m_level += diff_;
+            return this->m_level;
+        }
+
+    private:
+
+        int m_index = 1;
+        std::string m_name = "goblin";
+        int m_level = 1;
+};
+```
+
+```php
+<?php
+
+// 抽象クラス
+abstruct class Monster
+{
+    abstruct public function level_up( $diff_ );
+
+    private $m_index = 0;
+    private $m_name = "";
+}
+
+// 具象クラス
+class Goblin extends Monster
+{
+    // オーバライド
+    public function level_up( $diff_ )
+    {
+        $this->m_level += $diff_;
+        return $this->m_level;
+    }
+
+    private $m_index = 1;
+    private $m_name = "goblin";
+    private $m_level = 1;
+}
+
+?>
+```
+
+
+## インタフェース
+
+**インタフェース**はクラスのメソッドのシグニチャを定義したもので、具体的な実装は持たない。インタフェースを実装するクラスは、インタフェースに定義されているメソッドを全てオーバライドして具体的な実装を記述する必要がある（ `default` キーワードによりデフォルトの実装を定義することができるプログラミング言語もある）。継承では1つの親クラスからしか性質を引き継げないが、インタフェースを複数実装することは可能。
+
+```java
+// インタフェース
+interface RaceBase
+{
+    public int level_up( int diff_ );
+}
+
+interface RaceDragon
+{
+    public void powerup();
+
+    default public void bark()
+    {
+        System.out.println("Growl!!");
+    }
+}
+ 
+// インタフェースを実装したクラス
+class Goblin implements RaceBase
+{
+    public void level_up( int diff_ )
+    {
+        System.out.println("Level up!");
+        this.m_level += diff_;
+        return this.m_level;
+    }
+
+    private int m_level = 1;
+}
+
+// 複数のインタフェースを実装したクラス
+class Dragon implements RaceBase, RaceDragon
+{
+    public void level_up( int diff_ )
+    {
+        System.out.println("Level up!");
+        this.m_level += diff_;
+        return this.m_level;
+    }
+
+    public void powerup()
+    {
+        System.out.println("Power up!");
+        this.m_power += 100;
+    }
+
+    private int m_level = 1;
+    private int m_power = 100;
+}
+```
+
+```php
+<?php
+
+// インタフェース
+interface RaceBase
+{
+    public function level_up( $diff_ );
+}
+
+interface RaceDragon
+{
+    public function powerup();
+}
+
+// インタフェースを実装したクラス
+class Goblin implements RaceBase
+{
+    public function level_up( $diff_ )
+    {
+        echo("Level up!");
+        $this->m_level += $diff_;
+        return $this->m_level;
+    }
+
+    private $m_level = 1;
+}
+
+// 複数のインタフェースを実装したクラス
+class Dragon implements RaceBase, RaceDragon
+{
+    public function level_up( $diff_ )
+    {
+        echo("Level up!");
+        $this->m_level += $diff_;
+        return $this->m_level;
+    }
+
+    public function powerup()
+    {
+        echo("Power up!");
+        $this->m_power += 100;
+    }
+
+    private $m_level = 1;
+    private $m_power = 100;
+}
+
+?>
+```
