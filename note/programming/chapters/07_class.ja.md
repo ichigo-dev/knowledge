@@ -31,6 +31,8 @@
 クラスという概念からオブジェクトという実体を生成することを**インスタンス化**と呼び、オブジェクトのことを**インスタンス**ともいう。クラスは単なる概念であるため、そのままではプロパティやメソッドは使用することができず、インスタンスを生成する必要がある。
 
 ```cpp
+// C++
+
 #include <string>
 
 // クラス宣言
@@ -67,6 +69,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 // クラス宣言
 class Goblin
 {
@@ -101,6 +105,8 @@ echo("Level: " . $level);
 オブジェクトの外部からのアクセスを制限することで、オブジェクト内部のデータを保護して直接書き換えられないようにする目的。代わりに、オブジェクト内部の保護されたデータを間接的に変更できるようにインタフェースとなるメソッドを用意しておくという使い方がよくされる。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Goblin
@@ -137,6 +143,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 class Goblin
 {
     // オブジェクト外部からもアクセス可能
@@ -170,6 +178,8 @@ echo("Level: " . $level);
 特定のプロパティやメソッドを持つ全てのオブジェクトを引数として受け取って関数やメソッドを実行できるという性質を**ダックタイピング**といい、これもポリモーフィズムの恩恵の1つである。関数（メソッド）側は渡されたオブジェクトがどのクラスのオブジェクトであるかを意識する必要がなくなり、オブジェクトに対する依存性を減らすことができる。このようにオブジェクトに対する依存性を引数として外部から指定するような考え方を**DI**（Dipendency Injection、依存性の注入）という。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Goblin
@@ -234,6 +244,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 class Goblin
 {
     public function level_up( $diff_ )
@@ -286,6 +298,8 @@ empower_monster($dragon, 3);
 親クラスが持つメソッドを別の処理に変更したい場合、同じ識別子でメソッドを定義することで**オーバライド**（上書き）できる。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Monster
@@ -355,6 +369,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 class Monster
 {
     public function level_up( $diff_ )
@@ -407,6 +423,8 @@ $dragon_level = $dragon->get_level();
 `this` はクラスのメソッド内で用いることができるキーワードで、クラスのインスタンス自身を指す。インスタンス内のプロパティやメソッドにアクセスするときに使用する。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Monster
@@ -430,6 +448,8 @@ class Monster
 ```php
 <?php
 
+// PHP
+
 class Monster
 {
     public function get_level()
@@ -452,6 +472,8 @@ class Monster
 **デストラクタ**はクラスの終了処理を行うための特別なメソッドで、インスタンスが破棄されるときに自動的に実行される。ガベージコレクションを用いるプログラミング言語ではデストラクタが実行されるタイミングが予測できないため、複雑な処理を行おうとするとバグの発生原因となってしまう場合がある。一方で、C++のようにプログラマが変数の生存期間を管理する言語においては、インスタンスの後処理を行う上で重要な役割を果たす。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Monster
@@ -496,6 +518,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 class Monster
 {
     // コンストラクタ
@@ -524,6 +548,8 @@ $goblin = new Monster("goblin");
 **静的プロパティ**（**staticプロパティ**）も静的メソッドと同様、オブジェクトに依存せずに独立した変数のように扱えるプロパティ。クラスに属するグローバル変数のようなものといえる。
 
 ```cpp
+// C++
+
 #include <string>
 
 class Monster
@@ -570,6 +596,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 class Monster
 {
     public function get_index()
@@ -612,6 +640,8 @@ echo("Last index: " . Monster::g_last_index);
 `protected` キーワードを指定した場合、オブジェクトの外部からのプロパティやメソッドへのアクセスを制限できる。子クラスからはアクセスできる。
 
 ```cpp
+// C++
+
 class Monster
 {
     // 外部にも公開されるメンバ
@@ -669,6 +699,8 @@ int main()
 **具象クラス**は抽象クラスを継承してメソッドをオーバライドし、具体的な実装を行ったクラス。
 
 ```cpp
+// C++
+
 #include <string>
 
 // 抽象クラス（仮想関数を持つ）
@@ -708,6 +740,8 @@ class Goblin : public Monster
 ```php
 <?php
 
+// PHP
+
 // 抽象クラス
 abstruct class Monster
 {
@@ -741,6 +775,8 @@ class Goblin extends Monster
 **インタフェース**はクラスのメソッドのシグニチャを定義したもので、具体的な実装は持たない。インタフェースを実装するクラスは、インタフェースに定義されているメソッドを全てオーバライドして具体的な実装を記述する必要がある（ `default` キーワードによりデフォルトの実装を定義することができるプログラミング言語もある）。継承では1つの親クラスからしか性質を引き継げないが、インタフェースを複数実装することは可能。
 
 ```java
+// Java
+
 // インタフェース
 interface RaceBase
 {
@@ -793,6 +829,8 @@ class Dragon implements RaceBase, RaceDragon
 
 ```php
 <?php
+
+// PHP
 
 // インタフェース
 interface RaceBase

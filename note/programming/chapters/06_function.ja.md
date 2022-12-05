@@ -35,7 +35,9 @@
 **関数定義**では関数の識別子、処理内容、仮引数リスト、戻り値を記述する。
 
 ```c
-// 関数
+// C言語
+
+// 関数定義
 int add( int a_, int b_ )
 {
     int result = a_ + b_;
@@ -46,6 +48,9 @@ int add( int a_, int b_ )
 ```php
 <?php
 
+// PHP
+
+// 関数定義
 function add( $a_, $b_ )
 {
     $result = $a_ + $b_;
@@ -56,6 +61,8 @@ function add( $a_, $b_ )
 ```
 
 ```javascript
+// JavaScript
+
 function add( a_, b_ )
 {
     let result = a_ + b_;
@@ -69,6 +76,8 @@ function add( a_, b_ )
 **関数呼び出し**では関数の識別子と仮引数リストに対応した実引数を記述する。
 
 ```c
+// C言語
+
 // 関数プロトタイプ宣言
 int add( int, int );
 
@@ -96,6 +105,8 @@ int add( int a_, int b_ )
 ```php
 <?php
 
+// PHP
+
 // 関数定義
 function add( $a_, $b_ )
 {
@@ -114,6 +125,8 @@ echo("Result: " . $result);
 ```
 
 ```javascript
+// JavaScript
+
 // 関数定義
 function add( a_, b_ )
 {

@@ -30,6 +30,8 @@
 `if` 文では与えられた条件式を評価して、それが `true` （言語によっては `true` に類するもの（数値型の0以外、文字列型で1文字以上の場合など）を含める場合もある）であれば処理ブロックを実行する。
 
 ```c
+// C言語
+
 #include <stdio.h>
 
 int main()
@@ -50,6 +52,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 $input_num = $_POST["input_num"];
 
 if( $input_num > 100 )
@@ -63,6 +67,8 @@ if( $input_num > 100 )
 `if else` 文では与えられた条件式を評価して、それが `true` であれば `if` の処理ブロックを、 `true` 出なければ `else` の処理ブロックを実行する。また、 `else if` 文を用いることで多段の条件分岐を行うことも可能である。 `else` 文を省略した場合、条件に当てはまらないデータに対しては何も処理が実行されない。
 
 ```c
+// C言語
+
 #include <stdio.h>
 
 int main()
@@ -110,6 +116,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 // if else文の例
 $input_num = $_POST["input_num"];
 
@@ -152,6 +160,8 @@ else if( $favorite_month == 12 && 1 <= $favorite_month && $favorite_month < 3 )
 `case` の処理ブロックの最後に `break` 文を記述した場合は、その処理ブロックの実行後に即座に `switch` 文を抜ける。一方で `break` 文を省略した場合には、条件に合致した処理ブロックを実行した後に次に条件に合致するものがあればその処理ブロックを続けて実行する。 `default` 節がある `switch` 文などにおいて意図しない処理ブロックが実行されてしまわないように注意する必要がある。
 
 ```c
+// C言語
+
 #include <stdio.h>
 
 int main()
@@ -187,6 +197,8 @@ int main()
 
 ```php
 <?php
+
+// PHP
 
 $input_num = $_POST["input_num"];
 
@@ -236,6 +248,8 @@ switch( $input_num )
 `while` 文は与えられた条件式を評価して、それが `true` （言語によっては `true` に類するもの（数値型の0以外、文字列型で1文字以上の場合など）を含める場合もある）である、間処理ブロックを反復実行する。
 
 ```c
+// C言語
+
 #include <stdio.h>
 
 int main()
@@ -256,6 +270,8 @@ int main()
 
 ```php
 <?php
+
+// PHP
 
 $input_num = $_POST["input_num"];
 
@@ -284,6 +300,8 @@ for( 初期化処理; 条件式; 更新処理 )
 カウンタ変数の識別子として、 `i, j, k` などを用いることが慣習となっている場合が多い。
 
 ```c
+// C言語
+
 int main()
 {
     for( int i=0; i<20; i++ )
@@ -298,6 +316,8 @@ int main()
 ```php
 <?php
 
+// PHP
+
 for( $i=0; $i<20; $i++ )
 {
     echo($i);
@@ -311,6 +331,8 @@ for( $i=0; $i<20; $i++ )
 `for in` 文はイテレート可能な値に対して使用できる反復処理であり、コンテナ型のデータの中身を順に取り出したい場合などに用いられる。プログラミング言語によってはサポートしていないものや、別のキーワードで実装されている場合もある。イテレータはコンテナ内での要素のポインタを表し、反復処理のループが進むにつれて順に次の要素のポインタを返す。
 
 ```python
+// Python
+
 nums = [10, 20, 30]
 
 for num in nums;
@@ -319,6 +341,8 @@ for num in nums;
 
 ```php
 <?php
+
+// PHP
 
 $nums = [10, 20, 30];
 
@@ -331,6 +355,8 @@ foreach( $nums as $num )
 ```
 
 ```javascript
+// JavaScript
+
 let nums = [10, 20, 30];
 
 for( let num of nums )
@@ -343,6 +369,8 @@ for( let num of nums )
 
 ```php
 <?php
+
+// PHP
 
 $profile = [
     "name" => "ichigo",
@@ -359,6 +387,8 @@ foreach( $profile as $key => $val )
 ```
 
 ```javascript
+// JavaScript
+
 let profile = [
     name : "ichigo",
     email : "dev.honda.ichigo@gmail.com",
