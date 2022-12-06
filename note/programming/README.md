@@ -13,3 +13,4 @@
 1. [制御構文](/note/programming/chapters/05_control_flow.ja.md)
 1. [関数](/note/programming/chapters/06_function.ja.md)
 1. [クラス](/note/programming/chapters/07_class.ja.md)
+1. [ライブラリ](/note/programming/chapters/08_library.ja.md)
