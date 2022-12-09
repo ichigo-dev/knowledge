@@ -119,6 +119,8 @@
 
 ## 変数
 
+- [変数](/note/programming/chapters/02_variable.ja.md#プログラミングにおける変数)
+
 
 ## データ型
 

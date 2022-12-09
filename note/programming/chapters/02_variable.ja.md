@@ -12,14 +12,14 @@
 
 ## プログラミングにおける変数
 
-**変数**はプログラム中で用いるデータの記憶域のことで、固有の名前によって識別される。物理的にはデータはメモリに格納されており、メモリ上のデータにはアドレスを使ってアクセスすることができる。しかし、メモリアドレスは意味を持たない数値の羅列であるため、プログラム中では格納しているデータを表す名前をつけた変数を用いる。
+**変数**は[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いるデータの記憶域のことで、固有の名前によって識別される。物理的にはデータは[メモリ](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#記憶装置)に格納されており、[メモリ](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#記憶装置)上のデータには[アドレス](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#メモリとアドレス)を使ってアクセスすることができる。しかし、[メモリアドレス](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#メモリとアドレス)は意味を持たない数値の羅列であるため、[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中では格納しているデータを表す名前をつけた変数を用いる。
 
 
 ## 変数の操作
 
-変数に対する操作には、宣言、代入、参照がある。
+[変数](#プログラミングにおける変数)に対する操作には、宣言、代入、参照がある。
 
-**宣言**ではプログラム中で用いる変数の名前を明示する。静的型付け言語の多くは、宣言時に変数の型を指定する必要がある。プログラミング言語によっては、同じ識別子の変数を複数回宣言しようとするとエラーとなる。一方で、新しい変数で前の変数を上書きする（**シャドーイング**）仕様のプログラミング言語もある。
+**宣言**では[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いる[変数](#プログラミングにおける変数)の名前を明示する。[静的型付け言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#静的型付け言語)の多くは、宣言時に[変数](#プログラミングにおける変数)の[型](/note/programming/chapters/03_data_type.ja.md#型)を指定する必要がある。[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては、同じ[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回宣言しようとすると[エラー](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#エラー)となる。一方で、新しい[変数](#プログラミングにおける変数)で前の[変数](#プログラミングにおける変数)を上書きする（**シャドーイング**）仕様の[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。
 
 **代入**では宣言された変数に対してデータを関連付ける。多くのプログラミング言語では変数の宣言と同時に代入を行うことができ、これを**初期化**という。既にデータが紐づけられている変数に対して新しいデータを紐づける（**再代入**）することもできる。また、後から変数に紐づくデータを変更することを許可しないような関連付けのことを**束縛**と呼ぶこともある。代入を表現するために用いられる演算子としては `=` が用いられる場合が多く、数学的な意味である「等価」と意味が異なるので注意が必要である。プログラミングにおいて「等価」であることを表す演算子には `==` が利用されることが多い。
 
