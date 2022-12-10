@@ -22,18 +22,23 @@
 
 **宣言**では[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いる[変数](#プログラミングにおける変数)の名前を明示する。[静的型付け言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#静的型付け言語)の多くは、宣言時に[変数](#プログラミングにおける変数)の[型](/note/programming/chapters/03_data_type.ja.md#型)を指定する必要がある。[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては、同じ[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回宣言しようとすると[エラー](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#エラー)となる。一方で、新しい[変数](#プログラミングにおける変数)で前の[変数](#プログラミングにおける変数)を上書きする（**シャドーイング**）仕様の[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。
 
-**代入**では宣言された[変数](#プログラミングにおける変数)に対してデータを関連付ける。多くの[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では[変数](#プログラミングにおける変数)の宣言と同時に代入を行うことができ、これを**初期化**という。既にデータが紐づけられている[変数](#プログラミングにおける変数)に対して新しいデータを紐づける（**再代入**）することもできる。また、後から[変数](#プログラミングにおける変数)に紐づくデータを変更することを許可しないような関連付けのことを**束縛**と呼ぶこともある。代入を表現するために用いられる[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)としては `=` が用いられる場合が多く、数学的な意味である「等価」と意味が異なるので注意が必要である。[プログラミング](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)において「等価」であることを表す[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)には `==` が利用されることが多い。
+**代入**では宣言された[変数](#プログラミングにおける変数)に対してデータを関連付ける。多くの[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では[変数](#プログラミングにおける変数)の宣言と同時に代入を行うことができ、これを**初期化**という。既にデータが紐づけられている[変数](#プログラミングにおける変数)に対して新しいデータを紐づける（**再代入**）することもできる。また、後から[変数](#プログラミングにおける変数)に紐づくデータを変更することを許可しないような関連付けのことを**束縛**と呼ぶこともある。代入を表現するために用いられる[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)としては `=` が用いられる場合が多く、数学的な意味である「等価」と意味が異なるので注意が必要である（[プログラミング](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)において「等価」であることを表す[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)には `==` が利用されることが多い）。
 
-**参照**では[変数](#プログラミングにおける変数)に紐づくデータの中身を利用する。データが代入されていない[変数](#プログラミングにおける変数)（**未初期化状態**の変数）を参照することは不正な操作であり、[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては**未定義動作**となる。また、言語によってはこのような事態を防ぐために宣言時に仮の初期値を関連付けるものもある。
+**参照**では[変数](#プログラミングにおける変数)に紐づくデータの中身を利用する。データが代入されていない[変数](#プログラミングにおける変数)（**未初期化状態**の[変数](#プログラミングにおける変数)）を参照することは不正な操作であり、[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては**未定義動作**となる。また、言語によってはこのような事態を防ぐために宣言時に仮の初期値を関連付けるものもある。
 
 
 ```c
 // C言語
 
-int x;              // 宣言
-int y = 5;          // 初期化
-x = 3;              // 代入
-print("%d\n", x);   // 参照
+int main()
+{
+    int x;              // 宣言
+    int y = 5;          // 初期化
+    x = 3;              // 代入
+    printf("%d\n", x);   // 参照
+
+    return 0;
+}
 ```
 
 ```php
@@ -59,16 +64,17 @@ console.log(x);     // 参照
 
 ## ブロックとスコープ
 
-[変数](#プログラミングにおける変数)や[関数](/note/programming/chapters/06_function.ja.md#プログラミングにおける関数)など[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)で表現される[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中のリソースは、[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の特定の範囲内からしか[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で `{}` で囲まれた範囲を**ブロック**といい、ブロックの内側で定義した[変数](#プログラミングにおける変数)はブロックの外側からは[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)中で[変数](#プログラミングにおける変数)を[参照](#変数の操作)できる範囲のことを**スコープ**という。
+[変数](#プログラミングにおける変数)や[関数](/note/programming/chapters/06_function.ja.md#プログラミングにおける関数)などの[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)で表現されるものは、[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の特定の範囲内からしか[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で `{}` で囲まれた範囲を**ブロック**といい、ブロックの内側で定義した[変数](#プログラミングにおける変数)はブロックの外側からは[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)中で[変数](#プログラミングにおける変数)を[参照](#変数の操作)できる範囲のことを**スコープ**という。
 
 ```javascript
 // JavaScript
 
 {
+    // 変数xを初期化
     let x = 1;
 
     {
-        // 変数を初期化
+        // 変数yを初期化
         let y = 3;
 
         // 変数x、yのスコープ内なので、問題ない
