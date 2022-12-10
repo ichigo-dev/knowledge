@@ -1,3 +1,6 @@
+local fern = require('plugins.fern')
+local fzf = require('plugins.fzf')
+
 --------------------------------------------------------------------------------
 -- Plugin
 --------------------------------------------------------------------------------
@@ -27,18 +30,14 @@ vim.cmd('packadd vim-jetpack') require('jetpack.paq')
 
 	-- autocomplete
 	'hrsh7th/nvim-cmp',
+	'hrsh7th/vim-vsnip',
 	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-vsnip',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
 	'hrsh7th/cmp-cmdline',
-	'onsails/lspkind-nvim',
 
 	-- Git
 	'tpope/vim-fugitive',
 	'lewis6991/gitsigns.nvim',
 }
-
-local fern = require('plugins.fern')
-local fzf = require('plugins.fzf')
-local lsp = require('plugins.lsp')
