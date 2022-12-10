@@ -120,6 +120,22 @@
 ## 変数
 
 - [変数](/note/programming/chapters/02_variable.ja.md#プログラミングにおける変数)
+- [宣言](/note/programming/chapters/02_variable.ja.md#変数の操作)
+	- [シャドーイング](/note/programming/chapters/02_variable.ja.md#変数の操作)
+- [代入](/note/programming/chapters/02_variable.ja.md#変数の操作)
+	- [再代入](/note/programming/chapters/02_variable.ja.md#変数の操作)
+	- [束縛](/note/programming/chapters/02_variable.ja.md#変数の操作)
+- [参照](/note/programming/chapters/02_variable.ja.md#変数の操作)
+	- [未初期化状態](/note/programming/chapters/02_variable.ja.md#変数の操作)
+	- [未定義動作](/note/programming/chapters/02_variable.ja.md#変数の操作)
+- [ブロック](/note/programming/chapters/02_variable.ja.md#ブロックとスコープ)
+- [スコープ](/note/programming/chapters/02_variable.ja.md#ブロックとスコープ)
+- [グローバルスコープ（ファイルスコープ）](/note/programming/chapters/02_variable.ja.md#グローバル変数とローカル変数)
+	- [グローバル変数](/note/programming/chapters/02_variable.ja.md#グローバル変数とローカル変数)
+- [ローカルスコープ](/note/programming/chapters/02_variable.ja.md#グローバル変数とローカル変数)
+	- [ローカル変数（自動変数）](/note/programming/chapters/02_variable.ja.md#グローバル変数とローカル変数)
+- [生存期間（ライフタイム、寿命）](/note/programming/chapters/02_variable.ja.md#生存期間)
+- [定数](/note/programming/chapters/02_variable.ja.md#経数と定数)
 
 
 ## データ型
