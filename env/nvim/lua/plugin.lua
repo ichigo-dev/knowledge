@@ -1,9 +1,3 @@
-local fern = require('plugins.fern')
-local fzf = require('plugins.fzf')
-
-vim.cmd('let g:previm_open_cmd = "firefox"');
-
-
 --------------------------------------------------------------------------------
 -- Plugin
 --------------------------------------------------------------------------------
@@ -28,10 +22,12 @@ vim.cmd('packadd vim-jetpack') require('jetpack.paq')
 
 	-- LSP
 	'neovim/nvim-lspconfig',
-	'williamboman/nvim-lsp-installer',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
 
 	-- autocomplete
 	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
 	'hrsh7th/cmp-vsnip',
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
@@ -41,7 +37,8 @@ vim.cmd('packadd vim-jetpack') require('jetpack.paq')
 	-- Git
 	'tpope/vim-fugitive',
 	'lewis6991/gitsigns.nvim',
-
-	-- Markdown
-	'previm/previm',
 }
+
+local fern = require('plugins.fern')
+local fzf = require('plugins.fzf')
+local lsp = require('plugins.lsp')
