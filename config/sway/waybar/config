@@ -1,0 +1,133 @@
+//==============================================================================
+// Waybar config
+//==============================================================================
+{
+	"layer": "top",
+	"position": "bottom",
+
+	//==========================================================================
+	// Layout
+	//==========================================================================
+
+	// Left
+	"modules-left": [
+		"custom/sway",
+		"sway/workspaces"
+	],
+
+	// Center
+	"modules-center": [
+		"wlr/taskbar"
+	],
+
+	//	Right
+	"modules-right": [
+		"pulseaudio",
+		"network",
+		"battery",
+		"clock#date",
+		"clock#time",
+		"custom/poweroff"
+	],
+
+
+	//==========================================================================
+	//	Modules
+	//==========================================================================
+
+	//	Sway
+	"sway/workspaces": {
+		"format": "{name}",
+		"on-click": "activate"
+	},
+
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 22,
+		"tooltip-format": "{name}",
+		"on-click": "activate",
+		"on-click-right": "close",
+		"ignore-list": [
+		   "Alacritty"
+		]
+	},
+
+	//	Battery
+	"battery": {
+		"bat": "BAT0",
+		"interval": 60,
+		"states": {
+			"good": 80,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip-format": "{capacity}% ({timeTo})"
+	},
+
+	//	Clock
+	"clock#time": {
+		"timezone": "Asia/Tokyo",
+		"interval": 60,
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%H:%M:%S}"
+	},
+
+	//	Calendar
+	"clock#date": {
+		"timezone": "Asia/Tokyo",
+		"interval": 18000,
+		"format": " {:%Y/%m/%d}",
+		"tooltip-format": "<big>{:%Y %B \t week: %V }</big>\n<tt>{calendar}</tt>",
+	},
+
+	//	Network
+	"network": {
+		"itnerval": 60,
+		"format": "{ifname}",
+		"format-wifi": "",
+		"format-ethernet": "",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname} fia {gwaddr}",
+		"tooltip-format-wifi": " {essid} ({signalStrength}%)",
+		"tooltip-format-ethernet": " {ifname}",
+		"tooltip-format-disconnected": " Disconnected"
+	},
+
+	//	Pulseaudio
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-bluetooth": "{icon}",
+		"format-muted": "",
+		"format-icons": [
+			"",
+			"",
+			""
+		],
+		"tooltip-format": "{volume}% ({desc})",
+		"on-click": "pavucontrol"
+	},
+
+
+	//==========================================================================
+	// Custom
+	//==========================================================================
+	"custom/poweroff": {
+		"format": "",
+		"on-click": "systemctl poweroff",
+		"tooltip": false
+	},
+
+	"custom/sway": {
+		"format": "",
+		"on-click": "wofi --show drun --style $HOME/.config/wofi/style.css --hide-scroll --location top --lines 5",
+		"tooltip": false
+	}
+}

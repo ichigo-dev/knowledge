@@ -1,0 +1,27 @@
+window
+{
+	opacity: 0.9;
+	background-color: #202020;
+	color: #AAA;
+	border: 1px solid #444;
+	border-radius: 0 0 8px 8px;
+	font-family: monospace;
+	font-size: 18px;
+}
+
+#outer-box
+{
+	padding: 10px 6px;
+}
+
+#inner-box
+{
+	padding: 10px;
+}
+
+#input
+{
+	padding: 5px;
+	border-radius: 8px;
+	margin-bottom: 3px;
+}
