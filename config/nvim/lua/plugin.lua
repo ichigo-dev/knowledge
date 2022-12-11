@@ -1,5 +1,4 @@
 local fern = require('plugins.fern')
-local fzf = require('plugins.fzf')
 
 --------------------------------------------------------------------------------
 -- Plugin

@@ -39,3 +39,4 @@ vim.keymap.set('n', '<Space>+', '<C-w>+')
 -- plugin
 vim.keymap.set('n', '<Space>n', ':Fern . -drawer -toggle<CR>')
 vim.keymap.set('n', '<Space>f', ':FzfLua files<CR>')
+vim.keymap.set('n', '<Space>g', ':FzfLua grep<CR>')
