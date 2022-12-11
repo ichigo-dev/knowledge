@@ -2,12 +2,13 @@
 
 ![thumbnail](/assets/images/thumbnail.png)
 
+- [note](/note/README.md)
+- [config](/config/README.md)
+
+
 ## Knowledge notes
 
-- [note](/note/README.md)
-
-
-## To be added
+### To be added
 
 - OS(CPU) knowledge notes
 - Computer knowledge notes
@@ -18,17 +19,17 @@
 - Linux knowledge notes
 
 
-## Progress
+### Progress
 
 This is the progress of knowledge creation.
 
-### Completed
+#### Completed
 
 - note/aws (Japanese version)
 - note/internet (Japanese version)
 - note/web (Japanese version)
 
-### In progress
+#### In progress
 
 - note/rust
 - note/programming
