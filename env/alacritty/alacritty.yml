@@ -1,0 +1,31 @@
+################################################################################
+# Alacritty config
+################################################################################
+
+
+# Font
+font:
+  family: SauceCodePro Nerd Font
+  size: 16
+
+
+# Window
+window:
+  padding:
+    x: 6
+    y: 4
+  opacity: 0.95
+
+
+# Shell
+shell:
+  program: /bin/zsh
+
+
+# Cursor
+cursor:
+  style:
+    shape: Underline
+    blinking: Always
+  unfocused_hollow: false
+  blink_interval: 470
