@@ -211,6 +211,43 @@
 
 ## 演算
 
+- [演算](./chapters/04_operation.ja.md#プログラミングにおける演算)
+	- [演算子（オペレータ）](./chapters/04_operation.ja.md#プログラミングにおける演算)
+	- [被演算子（オペランド）](./chapters/04_operation.ja.md#プログラミングにおける演算)
+- [誤差](./chapters/04_operation.ja.md#誤差)
+	- [桁落ち](./chapters/04_operation.ja.md#桁落ち)
+	- [情報落ち](./chapters/04_operation.ja.md#情報落ち)
+	- [丸め誤差](./chapters/04_operation.ja.md#丸め誤差)
+	- [打ち切り誤差](./chapters/04_operation.ja.md#打ち切り誤差)
+	- [オーバフロー](./chapters/04_operation.ja.md#オーバフロー)
+	- [アンダーフロー](./chapters/04_operation.ja.md#アンダーフロー)
+- [算術演算子](./chapters/04_operation.ja.md#算術演算子)
+	- [加算](./chapters/04_operation.ja.md#算術演算子)
+	- [減算](./chapters/04_operation.ja.md#算術演算子)
+	- [乗算](./chapters/04_operation.ja.md#算術演算子)
+	- [除算](./chapters/04_operation.ja.md#算術演算子)
+	- [剰余（モジュロ演算）](./chapters/04_operation.ja.md#算術演算子)
+- [比較演算子（関係演算子）](./chapters/04_operation.ja.md#比較演算子)
+- [代入演算子](./chapters/04_operation.ja.md#代入演算子)
+	- [複合代入演算子](./chapters/04_operation.ja.md#代入演算子)
+- [論理演算子](./chapters/04_operation.ja.md#論理演算子)
+	- [論理積](./chapters/04_operation.ja.md#論理演算子)
+	- [論理和](./chapters/04_operation.ja.md#論理演算子)
+	- [否定](./chapters/04_operation.ja.md#論理演算子)
+- [ビット演算子](./chapters/04_operation.ja.md#ビット演算子)
+	- [ビットAND](./chapters/04_operation.ja.md#ビット演算子)
+	- [ビットOR](./chapters/04_operation.ja.md#ビット演算子)
+	- [ビットXOR](./chapters/04_operation.ja.md#ビット演算子)
+	- [ビットNOT](./chapters/04_operation.ja.md#ビット演算子)
+	- [右ビットシフト](./chapters/04_operation.ja.md#ビット演算子)
+	- [左ビットシフト](./chapters/04_operation.ja.md#ビット演算子)
+	- [論理ビットシフト](./chapters/04_operation.ja.md#ビット演算子)
+	- [算術ビットシフト](./chapters/04_operation.ja.md#ビット演算子)
+- [インクリメント演算子](./chapters/04_operation.ja.md#インクリメントとデクリメント)
+- [デクリメント演算子](./chapters/04_operation.ja.md#インクリメントとデクリメント)
+- [前置、後置（インクリメント/デクリメント）](./chapters/04_operation.ja.md#インクリメントとデクリメント)
+- [三項演算子（条件演算子）](./chapters/04_operation.ja.md#三項演算子)
+
 
 ## 制御構文
 
