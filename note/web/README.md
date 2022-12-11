@@ -2,7 +2,7 @@
 
 ## Japanese
 
-- [チェックシート](/note/web/checksheet.ja.md)
+- [チェックシート](./checksheet.ja.md)
 
 ### Chapters
 

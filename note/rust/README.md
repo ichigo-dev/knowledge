@@ -2,7 +2,7 @@
 
 ## Japanese
 
-- [チェックシート](/note/rust/checksheet.ja.md)
+- [チェックシート](./checksheet.ja.md)
 
 ### Chapters
 
