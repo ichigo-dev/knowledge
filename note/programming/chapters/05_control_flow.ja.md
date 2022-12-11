@@ -11,6 +11,7 @@
 	1. [break文](#break文)
 	1. [continue文](#continue文)
 	1. [while文](#while文)
+	1. [do while文](#do-while文)
 	1. [for文](#for文)
 	1. [for in文](#for-in文)
 	1. [loop文](#loop文)
@@ -280,6 +281,47 @@ while( $input_num > 0 )
     echo($input_num);
     $input_num--;
 }
+
+?>
+```
+
+### do while文
+
+`do while` 文は `while` 文と似ているが、処理ブロックの最初ではなく最後に条件式の評価を行う。そのため、最初のループが必ず実行される（ `while` 文では条件式が偽である場合は1回も実行されない）。
+
+```c
+// C言語
+
+#include <stdio.h>
+
+int main()
+{
+    int input_num;
+    printf("> ");
+    scanf("%d", &input_num);
+
+    do
+    {
+        printf("%d\n", input_num);
+        input_num--;
+    } while( input_num > 0 )
+
+    return 0;
+}
+```
+
+```php
+<?php
+
+// PHP
+
+$input_num = $_POST["input_num"];
+
+do
+{
+    echo($input_num);
+    $input_num--;
+} while( $input_num > 0 )
 
 ?>
 ```

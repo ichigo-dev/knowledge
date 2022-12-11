@@ -251,6 +251,24 @@
 
 ## 制御構文
 
+- [制御フロー](./chapters/05_control_flow.ja.md#制御フロー)
+- [制御構文](./chapters/05_control_flow.ja.md#制御フロー)
+- [条件分岐](./chapters/05_control_flow.ja.md#条件分岐)
+	- [条件式](./chapters/05_control_flow.ja.md#条件分岐)
+	- [if文](./chapters/05_control_flow.ja.md#if文)
+	- [switch文](./chapters/05_control_flow.ja.md#switch文)
+- [反復（ループ）](./chapters/05_control_flow.ja.md#反復)
+	- [break文](./chapters/05_control_flow.ja.md#break文)
+	- [continue文](./chapters/05_control_flow.ja.md#continue文)
+	- [while文](./chapters/05_control_flow.ja.md#while文)
+	- [do while文](./chapters/05_control_flow.ja.md#do-while文)
+	- [for文](./chapters/05_control_flow.ja.md#for文)
+		- [カウンタ変数](./chapters/05_control_flow.ja.md#for文)
+		- [初期化処理](./chapters/05_control_flow.ja.md#for文)
+		- [更新処理](./chapters/05_control_flow.ja.md#for文)
+	- [for in文](./chapters/05_control_flow.ja.md#for-in文)
+	- [loop文](./chapters/05_control_flow.ja.md#loop文)
+
 
 ## 関数
 
