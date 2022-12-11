@@ -2,16 +2,17 @@
 
 
 ## 目次
-- [IteratorとIntoIterator](#iteratorとintoiterator)
-- [イテレータの作成](#イテレータの作成)
-	- [IntoIteratorの実装](#IntoIteratorの実装)
-	- [クロージャからのイテレータの生成](#クロージャからのイテレータの生成)
-	- [drain](#drain)
-	- [その他のイテレータの生成方法](#その他のイテレータの生成方法)
-- [イテレータアダプタ](#イテレータアダプタ)
-	- [mapとfilter](#mapとfilter)
-	- [filter_mapとflat_map](#filter_mapとflat_map)
-	- [flatten](#flatten)
+
+1. [IteratorとIntoIterator](#iteratorとintoiterator)
+1. [イテレータの作成](#イテレータの作成)
+	1. [IntoIteratorの実装](#IntoIteratorの実装)
+	1. [クロージャからのイテレータの生成](#クロージャからのイテレータの生成)
+	1. [drain](#drain)
+	1. [その他のイテレータの生成方法](#その他のイテレータの生成方法)
+1. [イテレータアダプタ](#イテレータアダプタ)
+	1. [mapとfilter](#mapとfilter)
+	1. [filter_mapとflat_map](#filter_mapとflat_map)
+	1. [flatten](#flatten)
 
 
 ## IteratorとIntoIterator

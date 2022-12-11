@@ -3,11 +3,11 @@
 
 ## 目次
 
-- [Unicode](#unicode)
-	- [ASCII](#ascii)
-	- [UTF-8](#utf-8)
-- [文字](#文字)
-- [Stringとstr](#文字)
+1. [Unicode](#unicode)
+	1. [ASCII](#ascii)
+	1. [UTF-8](#utf-8)
+1. [文字](#文字)
+1. [Stringとstr](#文字)
 
 
 ## Unicode

@@ -3,20 +3,20 @@
 
 ## 目次
 
-- [言語拡張トレイト](#言語拡張トレイト)
-	- [Drop](#drop)
-	- [Clone](#clone)
-	- [DerefとDerefMut](#derefとderefmut)
-	- [FromとInto](#fromとinto)
-- [マーカトレイト](#マーカトレイト)
-	- [Sized](#sized)
-	- [Copy](#copy)
-- [共有語彙としてのトレイト](#共有語彙としてのトレイト)
-	- [Default](#defalt)
-	- [AsRefとAsMut](#asrefとasmut)
-	- [BorrowとBorrowMut](#borrowとborrowmut)
-	- [TryFromとTryInto](#tryfromとtryinto)
-	- [ToOwned](#toowned)
+1. [言語拡張トレイト](#言語拡張トレイト)
+	1. [Drop](#drop)
+	1. [Clone](#clone)
+	1. [DerefとDerefMut](#derefとderefmut)
+	1. [FromとInto](#fromとinto)
+1. [マーカトレイト](#マーカトレイト)
+	1. [Sized](#sized)
+	1. [Copy](#copy)
+1. [共有語彙としてのトレイト](#共有語彙としてのトレイト)
+	1. [Default](#defalt)
+	1. [AsRefとAsMut](#asrefとasmut)
+	1. [BorrowとBorrowMut](#borrowとborrowmut)
+	1. [TryFromとTryInto](#tryfromとtryinto)
+	1. [ToOwned](#toowned)
 
 
 ## 言語拡張トレイト
