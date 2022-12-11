@@ -34,13 +34,13 @@
 
 ### Memex
 
-[ハイパーメディア](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ハイパーメディア)の起源は、1945年にアメリカの研究者Vannevar Bushが発表した**Memex**という情報検索システムについての論文である。
+[ハイパーメディア](./01_basic_knowledge_of_web.ja.md#ハイパーメディア)の起源は、1945年にアメリカの研究者Vannevar Bushが発表した**Memex**という情報検索システムについての論文である。
 
 Memexは実在するシステムではなく構想であるが、電気的に接続した本やフィルムなどを相互にリンクし、リンクをたどって情報を探索するという、現在のWebを予感させるシステムであった。
 
 ### Xanadu
 
-Memexの構想に影響を受けたTed Nelsonは、1965年にハイパーテキストと[ハイパーメディア](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ハイパーメディア)という言葉を考案した。**ハイパーテキスト**は文字情報中心の文書を相互にリンクさせた概念で、**ハイパーメディア**はその考え方を拡張し、音声や動画など多様なメディアを相互にリンクさせた概念である。
+Memexの構想に影響を受けたTed Nelsonは、1965年にハイパーテキストと[ハイパーメディア](./01_basic_knowledge_of_web.ja.md#ハイパーメディア)という言葉を考案した。**ハイパーテキスト**は文字情報中心の文書を相互にリンクさせた概念で、**ハイパーメディア**はその考え方を拡張し、音声や動画など多様なメディアを相互にリンクさせた概念である。
 
 Nelsonは現在のWebよりもさらに高機能な理想のハイパーメディアである**Xanadu**を構想し、開発を始めた。しかしXanaduは、あまりの複雑さから計画が頓挫し、失敗に終わった（Webに敗北した）。
 
@@ -48,7 +48,7 @@ Nelsonは現在のWebよりもさらに高機能な理想のハイパーメデ�
 
 ### HyperCard
 
-Web以前に成功を収めた[ハイパーメディア](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ハイパーメディア)としては、Bill Atkinsonが1987年にAppleで開発した**HyperCard**がある。**カード**と呼ばれる文書を単位に相互リンクを張り、スクリプト言語である**HyperTalk**によるプログラムを実行できる。
+Web以前に成功を収めた[ハイパーメディア](./01_basic_knowledge_of_web.ja.md#ハイパーメディア)としては、Bill Atkinsonが1987年にAppleで開発した**HyperCard**がある。**カード**と呼ばれる文書を単位に相互リンクを張り、スクリプト言語である**HyperTalk**によるプログラムを実行できる。
 
 HyperCardにはネットワークを通じてデータをやり取りする機能はなく、スタンドアロンのWebのようなものであった。
 
@@ -71,7 +71,7 @@ Webは単方向リンクしかサポートしておらず、リンクが切れ�
 
 ### RPC
 
-**RPC**（Remote Procedure Call）は[分散システム](/note/web/chapters/01_basic_knowledge_of_web.ja.md#分散システム)を実現するための技術のひとつで、リモートのサーバで実行しているプログラムをクライアント側から呼び出すことができる。
+**RPC**（Remote Procedure Call）は[分散システム](./01_basic_knowledge_of_web.ja.md#分散システム)を実現するための技術のひとつで、リモートのサーバで実行しているプログラムをクライアント側から呼び出すことができる。
 
 有名なRPCシステムには、Sun Microsystemsの**SunRPC**（ONC RPC）や**アポロ**、IBMとDECが共同開発した**DCE**（Distributed Computing Environment）がある。これらのシステムが開発されていた1980年代後半は**UNIX戦争**とも呼ばれる、UNIXベンダーによる標準化競争が激化していた時代で、各社が自社の分散システム技術を標準にしようとしていた。
 
@@ -101,11 +101,11 @@ RPCは現在でも**NFS**（Network File System）などの実装に使われて
 
 ### Webの誕生
 
-1980年代までにハイパーメディア構想が生まれ、インターネットが登場し、分散システムが構築された。1990年11月12日、スイスの**CERN**（European Organization for Nuclear Research、欧州原子核研究機構）のTim Berners-Leeが、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)ベースの分散情報管理システムとして、**Web**の提案書を書いた。Berners-Leeは翌日から実装を開始し、その年の年末には最初のバージョンの[ブラウザ](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ブラウザ)と[サーバ](/note/web/chapters/01_basic_knowledge_of_web.ja.md#クライアントとサーバ)を完成させた。
+1980年代までにハイパーメディア構想が生まれ、インターネットが登場し、分散システムが構築された。1990年11月12日、スイスの**CERN**（European Organization for Nuclear Research、欧州原子核研究機構）のTim Berners-Leeが、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)ベースの分散情報管理システムとして、**Web**の提案書を書いた。Berners-Leeは翌日から実装を開始し、その年の年末には最初のバージョンの[ブラウザ](./01_basic_knowledge_of_web.ja.md#ブラウザ)と[サーバ](./01_basic_knowledge_of_web.ja.md#クライアントとサーバ)を完成させた。
 
 ### Webの普及
 
-Webの普及を推し進めたのは、1993年にイリノイ大学の**NCSA**（National Center for Supercomputing Application、米国立スーパーコンピュータ応用研究所）が公開した[ブラウザ](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ブラウザ)**Mosaic**である。それまでの[ブラウザ](/note/web/chapters/01_basic_knowledge_of_web.ja.md#ブラウザ)ではテキストのみを扱っていたが、Mosaicは本文中にインラインで画像を混在させることができた。
+Webの普及を推し進めたのは、1993年にイリノイ大学の**NCSA**（National Center for Supercomputing Application、米国立スーパーコンピュータ応用研究所）が公開した[ブラウザ](./01_basic_knowledge_of_web.ja.md#ブラウザ)**Mosaic**である。それまでの[ブラウザ](./01_basic_knowledge_of_web.ja.md#ブラウザ)ではテキストのみを扱っていたが、Mosaicは本文中にインラインで画像を混在させることができた。
 
 ### Webの標準化
 
@@ -113,34 +113,34 @@ Web以前のインターネット標準はすべて[IETF](/note/internet/chapter
 
 しかし、Webがあまりにも急速に普及してしまったため、[IETF](/note/internet/chapters/03_standarization_of_tcpip.ja.md#isoとietf)での仕様策定が追いつかず、各社の実装がバラバラで相互運用性に欠ける状態が発生した。**Netscape Navigator**と**Internet Explorer**が独自拡張を繰り返した結果、HTMLとCSSのレンダリング結果が大きく異なった。当時の状況を**ブラウザ戦争**と呼ぶこともある。
 
-そこで、Webの標準化を行う団体として、1994年にBerners-Leeが中心となって**W3C**（World Wide Web Consortium）が設立された。W3Cでは、HTML、XML、[HTTP](/note/web/chapters/05_http.ja.md#httpの基本)、[URI](/note/web/chapters/04_uri.ja.md#uriの仕様)、CSSなどの標準化作業が行われた。
+そこで、Webの標準化を行う団体として、1994年にBerners-Leeが中心となって**W3C**（World Wide Web Consortium）が設立された。W3Cでは、HTML、XML、[HTTP](./05_http.ja.md#httpの基本)、[URI](./04_uri.ja.md#uriの仕様)、CSSなどの標準化作業が行われた。
 
 ### RESTの誕生
 
 カリフォルニア大学アーバイン校の大学院生だったRoy Fieldingは、Web創成期から各種ソフトウェア（Apache httpd、libwww-perl、www-statなど）の実装に携わってきた。さらにFieldingは、Berners-LeeらとともにHTTP1.0とHTTP1.1の仕様策定にも関わった。
 
-彼はWebをソフトウェアアーキテクチャの観点から分析し、1つの[アーキテクチャスタイル](/note/web/chapters/03_rest.ja.md#アーキテクチャスタイル)としてまとめた。これを[REST](/note/web/chapters/03_rest.ja.md#restアーキテクチャスタイル)（Representational State Transfer）という。
+彼はWebをソフトウェアアーキテクチャの観点から分析し、1つの[アーキテクチャスタイル](./03_rest.ja.md#アーキテクチャスタイル)としてまとめた。これを[REST](./03_rest.ja.md#restアーキテクチャスタイル)（Representational State Transfer）という。
 
-[HTTP](/note/web/chapters/05_http.ja.md#httpの基本)はもともと、ハイパーテキストを転送するための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)であったが、Fieldingの主張では[HTTP](/note/web/chapters/05_http.ja.md#httpの基本)は**リソースの状態**（Resource State）の**表現**（Representation）を運んでいる。
+[HTTP](./05_http.ja.md#httpの基本)はもともと、ハイパーテキストを転送するための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)であったが、Fieldingの主張では[HTTP](./05_http.ja.md#httpの基本)は**リソースの状態**（Resource State）の**表現**（Representation）を運んでいる。
 
 ### 様々なハイパーメディアフォーマットの誕生
 
 HTMLの構造はそのままに、HTMLに様々な意味を持たせることのできる技術として、**microformats**が登場した。
 
-また、Webページの新着情報をサーバで配信して、専用のプログラムでそれをチェックするための用途として、**RSS**（RDF Site Summary、Rich Site Summary、Really Simple Syndication）が提案された。しかしRSSは複数のバージョンが乱立して混乱したため、最終的には[IETF](/note/internet/chapters/03_standarization_of_tcpip.ja.md#isoとietf)で[Atom](/note/web/chapters/06_hypermedia_format.ja.md#atom)が標準化された。
+また、Webページの新着情報をサーバで配信して、専用のプログラムでそれをチェックするための用途として、**RSS**（RDF Site Summary、Rich Site Summary、Really Simple Syndication）が提案された。しかしRSSは複数のバージョンが乱立して混乱したため、最終的には[IETF](/note/internet/chapters/03_standarization_of_tcpip.ja.md#isoとietf)で[Atom](./06_hypermedia_format.ja.md#atom)が標準化された。
 
 さらに、データを記述する目的としては冗長であったHTMLやAtomに代わり、**JSON**がデファクトスタンダードとなった。
 
 ### SOAP対REST
 
-Web APIの標準化にあたって大きな勢力を持っていたのが[RPC/分散オブジェクト](#rpc)のグループであった。[RPC/分散オブジェクト](#rpc)グループの提唱した[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)は、[HTTP](/note/web/chapters/05_http.ja.md#httpの基本)をアプリケーション[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)ではなくトランスポートプロトコルとして扱い、[HTTP](/note/web/chapters/05_http.ja.md#httpの基本)上で独自のメッセージを転送することができる**SOAP**である。
+Web APIの標準化にあたって大きな勢力を持っていたのが[RPC/分散オブジェクト](#rpc)のグループであった。[RPC/分散オブジェクト](#rpc)グループの提唱した[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)は、[HTTP](./05_http.ja.md#httpの基本)をアプリケーション[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)ではなくトランスポートプロトコルとして扱い、[HTTP](./05_http.ja.md#httpの基本)上で独自のメッセージを転送することができる**SOAP**である。
 
 SOAPはメッセージ転送の方法だけを定めた仕様であり、実際のサービスとしては**WS-\*** と呼ばれる周辺仕様群が、[W3C](#webの標準化)や**OASIS**（Organization for the Advancement of Structured Information Standards）によって次々と提案された。WS-\*には**WS-Security**や、**WS-Transaction**、**WS-ReliableMessaging**などがある。
 
-これに対してFieldingは、SOAPベースの技術を否定し、WebがWebらしくあるためのアーキテクチャスタイルとして[REST](/note/web/chapters/03_rest.ja.md#restアーキテクチャスタイル)を推奨した。
+これに対してFieldingは、SOAPベースの技術を否定し、WebがWebらしくあるためのアーキテクチャスタイルとして[REST](./03_rest.ja.md#restアーキテクチャスタイル)を推奨した。
 
 Web以前から[分散オブジェクト](#分散オブジェクト)技術に関わってきた[分散オブジェクト](#分散オブジェクト)の技術者であるMark Baker（ハンドルネームdistobj）や、**SGML**（Standard Generalized Markup Language）の流れをくむXML/構造化文書技術者であるPaul Prescodは、Fieldingの強力な賛同者であった。
 
-SOAPと[REST](/note/web/chapters/03_rest.ja.md#restアーキテクチャスタイル)に関する論争は2000年前後から始まり、2004年からスタートしたWeb2.0の流れの中でGoogleやAmazonといった企業が[REST](/note/web/chapters/03_rest.ja.md#restアーキテクチャスタイル)形式のWeb APIを提供し始めたことで決着がついた。Web2.0では、**マッシュアップ**（いろいろなWeb APIが提供する情報を組み合わせて1つのアプリケーションを実現する手法）が重要な要素であったため、手軽に操作できる[REST](/note/web/chapters/03_rest.ja.md#アーキテクチャスタイル)のスタイルが受け入れられた結果となった。
+SOAPと[REST](./03_rest.ja.md#restアーキテクチャスタイル)に関する論争は2000年前後から始まり、2004年からスタートしたWeb2.0の流れの中でGoogleやAmazonといった企業が[REST](./03_rest.ja.md#restアーキテクチャスタイル)形式のWeb APIを提供し始めたことで決着がついた。Web2.0では、**マッシュアップ**（いろいろなWeb APIが提供する情報を組み合わせて1つのアプリケーションを実現する手法）が重要な要素であったため、手軽に操作できる[REST](./03_rest.ja.md#アーキテクチャスタイル)のスタイルが受け入れられた結果となった。
 
 SOAPは多くのベンダーがドラフトを持ち寄って標準化を進めていたため、各社の実装が食い違い、相互運用性に欠けてしまった点も敗因といえる。

@@ -22,7 +22,7 @@
 
 ### URIの役割
 
-**URI**（Uniform Resource Identifier）は**統一リソース識別子**と呼ばれ、Web上に存在するすべての[リソース](/note/web/chapters/03_rest.ja.md#リソース)を一意に示すことができる。
+**URI**（Uniform Resource Identifier）は**統一リソース識別子**と呼ばれ、Web上に存在するすべての[リソース](./03_rest.ja.md#リソース)を一意に示すことができる。
 
 ### URIの構文
 
@@ -32,7 +32,7 @@
 
 ホスト名の後には階層を表すパスが続く。
 
-![シンプルなURL](/note/web/images/url_simple.ja.jpg)
+![シンプルなURL](../images/url_simple.ja.jpg)
 
 次の例では、URIスキームの次にユーザ名とパスワードからなるユーザ情報がくる。ユーザ情報とホスト名の区切り文字には、 `@` が使われる。
 
@@ -42,7 +42,7 @@
 
 最後の `#` で始まる部分は**URIフラグメント**（URI Fragment）といい、その前までの文字列で表現するURIが指し示すリソースの内部の、さらに細かい部分を特定するときに使用する。
 
-![シンプルなURL](/note/web/images/url_complicated.ja.jpg)
+![シンプルなURL](../images/url_complicated.ja.jpg)
 
 ### ベースURI
 

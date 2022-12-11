@@ -57,13 +57,13 @@
 
 ### IPとOSI参照モデル
 
-**IP**（Internet Protocol）は[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[ネットワーク層](/note/internet/chapters/04_osi_reference_model.ja.md#ネットワーク層)に相当する。**終点ノード**（**エンドノード**）（通信を行う目的でネットワークの末端に接続される装置）間の通信（**エンドツーエンド（end-to-end）の通信**）を実現する役割を果たす。
+**IP**（Internet Protocol）は[OSI参照モデル](./04_osi_reference_model.ja.md)の[ネットワーク層](./04_osi_reference_model.ja.md#ネットワーク層)に相当する。**終点ノード**（**エンドノード**）（通信を行う目的でネットワークの末端に接続される装置）間の通信（**エンドツーエンド（end-to-end）の通信**）を実現する役割を果たす。
 
-[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの役割)が1区間のノードを結ぶ[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)をもっているのに対して、IPは最終目的地までの通信を実現するための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)をもつ。
+[データリンク](./06_datalink_layer.ja.md#データリンクの役割)が1区間のノードを結ぶ[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)をもっているのに対して、IPは最終目的地までの通信を実現するための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)をもつ。
 
 ### ホストとルーターとノード
 
-[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)の世界において、[IPアドレス](#ipアドレス)が付けられた機器や装置のうち、[経路制御（ルーティング）](#ルーティング)を行わないもののことを**ホスト**と呼ぶ。一方で、[IPアドレス](#ipアドレス)が付けられていて、[経路制御](#ルーティング)を行う機器を**ルーター**と呼ぶ。ホストとルーターを合わせて、**ノード**と呼ぶ。
+[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)の世界において、[IPアドレス](#ipアドレス)が付けられた機器や装置のうち、[経路制御（ルーティング）](#ルーティング)を行わないもののことを**ホスト**と呼ぶ。一方で、[IPアドレス](#ipアドレス)が付けられていて、[経路制御](#ルーティング)を行う機器を**ルーター**と呼ぶ。ホストとルーターを合わせて、**ノード**と呼ぶ。
 
 
 ## IPの基礎知識
@@ -72,7 +72,7 @@
 
 IPの役割は、[IPアドレス](#ipアドレス)、終点[ホスト](#ホストとルーターとノード)までのパケット配送（[ルーティング](#ルーティング)）、IPパケットの分割処理と再構築処理の3つである。
 
-IPは[コネクションレス](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)型の通信で、パケットを送信する前にコネクションの確立を行わない。パケットを宛先まで送り届けるために最大限努力を行うことから、**最善努力型（ベストエフォート）のサービス**と呼ばれている。接続の信頼性を高める役目を担うのはIPの上位層である[TCP](/note/internet/chapters/10_routing_protocol.ja.md#tcp)で、これは[コネクション型](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)である。
+IPは[コネクションレス](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)型の通信で、パケットを送信する前にコネクションの確立を行わない。パケットを宛先まで送り届けるために最大限努力を行うことから、**最善努力型（ベストエフォート）のサービス**と呼ばれている。接続の信頼性を高める役目を担うのはIPの上位層である[TCP](./10_routing_protocol.ja.md#tcp)で、これは[コネクション型](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)である。
 
 ### 経路制御
 
@@ -90,7 +90,7 @@ IPの経路制御は、**ホップバイホップルーティング**という�
 
 **IPアドレス**は個々の[ホスト](#ホストとルーターとノード)を特定するための識別子で、32ビットの整数値で表される。これを、人間がわかりやすいように8ビットずつに区切り、境目にドットを入れた表記を**ドット・デシマル・ノーテーション**と呼ぶ。
 
-IPアドレスは**ネットワーク部**と**ホスト部**から構成されている。ネットワーク部は、[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの役割)のセグメントごとに異なる値が設定されている（[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの役割)の属する地域を特定する部分）。ホスト部は、[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの役割)が属するセグメント内で重複しないように値が設定されている（[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの役割)のセグメント内の[ホスト](#ホストとルーターとノード)を特定する部分）。
+IPアドレスは**ネットワーク部**と**ホスト部**から構成されている。ネットワーク部は、[データリンク](./06_datalink_layer.ja.md#データリンクの役割)のセグメントごとに異なる値が設定されている（[データリンク](./06_datalink_layer.ja.md#データリンクの役割)の属する地域を特定する部分）。ホスト部は、[データリンク](./06_datalink_layer.ja.md#データリンクの役割)が属するセグメント内で重複しないように値が設定されている（[データリンク](./06_datalink_layer.ja.md#データリンクの役割)のセグメント内の[ホスト](#ホストとルーターとノード)を特定する部分）。
 
 ---
 
@@ -120,7 +120,7 @@ $ ip a
 
 **ネットワークアドレス**は[ホスト部](#ipアドレス)がすべて0で、そのネットワーク自体を指すアドレス。
 
-**ブロードキャストアドレス**は[ホスト部](#ipアドレス)がすべて1で、そのネットワークに属しているすべての[ホスト](#ホストとルーターとノード)にパケットを送信するためのアドレス。そのコンピュータ自身が属しているリンク内の[ブロードキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を**ローカルブロードキャスト**、異なるIPネットワークへの[ブロードキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を**ダイレクトブロードキャスト**という。
+**ブロードキャストアドレス**は[ホスト部](#ipアドレス)がすべて1で、そのネットワークに属しているすべての[ホスト](#ホストとルーターとノード)にパケットを送信するためのアドレス。そのコンピュータ自身が属しているリンク内の[ブロードキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を**ローカルブロードキャスト**、異なるIPネットワークへの[ブロードキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を**ダイレクトブロードキャスト**という。
 
 ### IPマルチキャスト
 
@@ -142,17 +142,17 @@ CIDRやVLSMの登場により、グローバルIPv4アドレスの不足は一�
 
 ### グローバルアドレスとプライベートアドレス
 
-本来[IPアドレス](#ipアドレス)は、世界中の[ホスト](#ホストとルーターとノード)の中からひとつのコンピュータを特定できるように一意に定められた識別子であった。しかし、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)に接続しない独立したネットワーク上では、[ホスト](#ホストとルーターとノード)は世界で一意のアドレスを持つ必要はなく、そのネットワーク中でユニークなアドレスを持てばよい。
+本来[IPアドレス](#ipアドレス)は、世界中の[ホスト](#ホストとルーターとノード)の中からひとつのコンピュータを特定できるように一意に定められた識別子であった。しかし、[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)に接続しない独立したネットワーク上では、[ホスト](#ホストとルーターとノード)は世界で一意のアドレスを持つ必要はなく、そのネットワーク中でユニークなアドレスを持てばよい。
 
 そのため、私的なネットワークで利用できる**プライベートIPアドレス**が誕生した。また、プライベートIPアドレスとグローバルIPアドレスの間でアドレス変換をする**NAT技術**も登場している。
 
-組織内ではプライベートアドレスを設定し、インターネットに接続する[ルーター](#ホストとルーターとノード)（**ブロードバンドルーター**）や、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)に公開しているサーバーにだけ[IPアドレス](#ipアドレス)を設定するのが一般的となった。
+組織内ではプライベートアドレスを設定し、インターネットに接続する[ルーター](#ホストとルーターとノード)（**ブロードバンドルーター**）や、[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)に公開しているサーバーにだけ[IPアドレス](#ipアドレス)を設定するのが一般的となった。
 
 グローバルIPアドレスは全世界で**ICANN**（Internet Corporation for Assigned Names and Numbers）で一元管理されている。日本国内では**JPNIC**（Japan Network Information Center）がグローバルIPアドレスの割り当てを行っている。
 
 ### WHOIS
 
-[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)において通信経路の途中で問題があった場合、ネットワーク技術者たちは[ICMP](#icmp)パケットを見たり、[traceroute](https://ja.wikipedia.org/wiki/Traceroute)などのツールを活用して、異常が発生している装置を突き止める。この際に、その[IPアドレス](#ipアドレス)を管理している組織や管理者の連絡先を知るために用いられているのが**WHOIS**である。
+[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)において通信経路の途中で問題があった場合、ネットワーク技術者たちは[ICMP](#icmp)パケットを見たり、[traceroute](https://ja.wikipedia.org/wiki/Traceroute)などのツールを活用して、異常が発生している装置を突き止める。この際に、その[IPアドレス](#ipアドレス)を管理している組織や管理者の連絡先を知るために用いられているのが**WHOIS**である。
 
 
 ## ルーティング
@@ -192,7 +192,7 @@ CIDRやVLSMの登場により、グローバルIPv4アドレスの不足は一�
 
 ### IPv6の特徴
 
-**IPv6**は、IPv4アドレスの枯渇問題を解決するために標準化された[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。 IPv4の4倍の16オクテットの長さを持ち、IPv4との互換性を保つ努力が行われている。 IPv6の特徴・目的は以下の通りである。
+**IPv6**は、IPv4アドレスの枯渇問題を解決するために標準化された[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。 IPv4の4倍の16オクテットの長さを持ち、IPv4との互換性を保つ努力が行われている。 IPv6の特徴・目的は以下の通りである。
 
 - [IPアドレス](#ipアドレス)の拡大と[経路制御表](#ルーティング)の集約
 - パフォーマンスの向上
@@ -203,7 +203,7 @@ CIDRやVLSMの登場により、グローバルIPv4アドレスの不足は一�
 
 ## IPv4のフレームフォーマット
 
-![IPv4 フレームフォーマット](/note/internet/images/frame_format_ipv4.ja.jpg)
+![IPv4 フレームフォーマット](../images/frame_format_ipv4.ja.jpg)
 
 ### DSCPフィールドとECNフィールド
 
@@ -214,7 +214,7 @@ CIDRやVLSMの登場により、グローバルIPv4アドレスの不足は一�
 
 ## IPv6のヘッダフォーマット
 
-![IPv6 フレームフォーマット](/note/internet/images/frame_format_ipv6.ja.jpg)
+![IPv6 フレームフォーマット](../images/frame_format_ipv6.ja.jpg)
 
 
 ## DNS
@@ -240,19 +240,19 @@ DNSに問い合わせを行うソフトウェアを**リゾルバ**という。�
 
 ## ARP
 
-**ARP**（Address Resolution Protocol）はアドレス解決のための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。宛先[IPアドレス](#ipアドレス)を手掛かりにして、次にパケットを受け取るべき機器の[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)を知りたいときに利用する。次のホップの[ルーター](#ホストとルーターとノード)の[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)を調べるために使用される。
+**ARP**（Address Resolution Protocol）はアドレス解決のための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。宛先[IPアドレス](#ipアドレス)を手掛かりにして、次にパケットを受け取るべき機器の[MACアドレス](./06_datalink_layer.ja.md#macアドレス)を知りたいときに利用する。次のホップの[ルーター](#ホストとルーターとノード)の[MACアドレス](./06_datalink_layer.ja.md#macアドレス)を調べるために使用される。
 
-ARPでは、最初にARP要求パケットをネットワークに[ブロードキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)する。このパケットには知りたい[ホスト](#ホストとルーターとノード)の[IPアドレス](#ipアドレス)が含まれており、該当する[ホスト](#ホストとルーターとノード)はARP応答パケットを返信する。
+ARPでは、最初にARP要求パケットをネットワークに[ブロードキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)する。このパケットには知りたい[ホスト](#ホストとルーターとノード)の[IPアドレス](#ipアドレス)が含まれており、該当する[ホスト](#ホストとルーターとノード)はARP応答パケットを返信する。
 
 [IPv6](#ipv6)では、ARPの代わりにICMPv6の**近接探索メッセージ**が利用されている。
 
 ### RARP
 
-**RARP**（Reverse ARP）は[ARP](#arp)の逆で、[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)から[IPアドレス](#ipアドレス)を知りたい場合に使われる。RARPを使うにはRARPサーバーを用意する必要がある。
+**RARP**（Reverse ARP）は[ARP](#arp)の逆で、[MACアドレス](./06_datalink_layer.ja.md#macアドレス)から[IPアドレス](#ipアドレス)を知りたい場合に使われる。RARPを使うにはRARPサーバーを用意する必要がある。
 
 ### GARP
 
-**GARP**（Gratuitous ARP）は、自分の[IPアドレス](#ipアドレス)に対する[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)を知りたい場合に使われる。[IPアドレス](#ipアドレス)の重複を確認したり、スイッチングハブなどのMACアドレス学習テーブルを更新させる働きがある。
+**GARP**（Gratuitous ARP）は、自分の[IPアドレス](#ipアドレス)に対する[MACアドレス](./06_datalink_layer.ja.md#macアドレス)を知りたい場合に使われる。[IPアドレス](#ipアドレス)の重複を確認したり、スイッチングハブなどのMACアドレス学習テーブルを更新させる働きがある。
 
 ### 代理ARP
 
@@ -272,9 +272,9 @@ ARPでは、最初にARP要求パケットをネットワークに[ブロード�
 
 ### ICMPv6
 
-**ICMPv6**は[IPv6](#ipv6)の通信を行う上でなくてはならない[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。ICMPはIPv4においては補助的な役割でしかなかったが、ICMPv6はその役割がより重要なものとなっている。
+**ICMPv6**は[IPv6](#ipv6)の通信を行う上でなくてはならない[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。ICMPはIPv4においては補助的な役割でしかなかったが、ICMPv6はその役割がより重要なものとなっている。
 
-特に**近隣探索**では、近隣探索メッセージを[ブロードキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)に対して送信し、近隣告知メッセージで[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)を通知する。
+特に**近隣探索**では、近隣探索メッセージを[ブロードキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)に対して送信し、近隣告知メッセージで[MACアドレス](./06_datalink_layer.ja.md#macアドレス)を通知する。
 
 
 ## DHCP
@@ -297,7 +297,7 @@ ARPでは、最初にARP要求パケットをネットワークに[ブロード�
 
 **NAT**（Network Address Translator）は、ローカルなネットワークで[プライベートIPアドレス](#グローバルアドレスとプライベートアドレス)を使用している機器がインターネットへ接続するときに、[プライベートIPアドレス](#グローバルアドレスとプライベートアドレス)を[グローバルIPアドレス](#グローバルアドレスとプライベートアドレス)に変換する技術。
 
-[IPアドレス](#ipアドレス)だけではなく、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)や[UDP](/note/internet/chapters/08_transport_layer.ja.md#udp)で用いる[ポート番号](/note/internet/chapters/08_transport_layer.ja.md#ポート番号)も付け替える**NAPT**（Network Address Ports Translator）もある。 モバイルルーターやスマートフォンのテザリングは、NAPTを利用している。
+[IPアドレス](#ipアドレス)だけではなく、[TCP](./08_transport_layer.ja.md#tcp)や[UDP](./08_transport_layer.ja.md#udp)で用いる[ポート番号](./08_transport_layer.ja.md#ポート番号)も付け替える**NAPT**（Network Address Ports Translator）もある。 モバイルルーターやスマートフォンのテザリングは、NAPTを利用している。
 
 現在では、NAPTのことを単にNAT、NATのことをベーシックNATと呼ぶことが多い。
 
@@ -307,7 +307,7 @@ ARPでは、最初にARP要求パケットをネットワークに[ブロード�
 
 ### CGN
 
-**CGN**（Carrier Grade NAT）は[ISP](/note/internet/chapters/02_history_of_the_internet.ja.md#商用インターネットサービスの開始)レベルで[NAT](#nat)を行う技術。**LSN**（Large Scale NAT）と呼ばれることもある。
+**CGN**（Carrier Grade NAT）は[ISP](./02_history_of_the_internet.ja.md#商用インターネットサービスの開始)レベルで[NAT](#nat)を行う技術。**LSN**（Large Scale NAT）と呼ばれることもある。
 
 ### NATの問題点とNAT越え
 
@@ -315,7 +315,7 @@ ARPでは、最初にARP要求パケットをネットワークに[ブロード�
 
 - [NAT](#nat)の外側から内側のサーバーに接続することはできない
 - 変換テーブルの作成や変換処理にオーバヘッドが生じる
-- 通信中に[NAT](#nat)が異常動作して再起動した場合、すべての[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)コネクションがリセットされる
+- 通信中に[NAT](#nat)が異常動作して再起動した場合、すべての[TCP](./08_transport_layer.ja.md#tcp)コネクションがリセットされる
 
 [IPv6](#ipv6)を使用する、[NAT](#nat)環境を前提としたアプリケーションを利用する、といった方法によって[NAT](#nat)があっても[NAT](#nat)の外側と内側が通信できるようになる。これを**NAT越え**（NAT traversal）という。
 
@@ -324,20 +324,20 @@ ARPでは、最初にARP要求パケットをネットワークに[ブロード�
 
 IPv4環境同士の通信の間に[IPv6](#ipv6)環境のネットワークが介在する場合、そのままでは通信はできない。**IPトンネリング**では、IPv4パケット全体を1つのデータとして扱い、その前にIPv6ヘッダをつける。
 
-トンネリングを使用すると、追加されるヘッダの分だけ[MTU](#データリンクの抽象化)が小さくなるため、**ジャンボフレーム**（1500バイト以上のペイロードを持つ[Ethernetフレーム](/note/internet/chapters/06_datalink_layer.ja.md#イーサネットのフレームフォーマット)）の利用などの工夫が行われている。
+トンネリングを使用すると、追加されるヘッダの分だけ[MTU](#データリンクの抽象化)が小さくなるため、**ジャンボフレーム**（1500バイト以上のペイロードを持つ[Ethernetフレーム](./06_datalink_layer.ja.md#イーサネットのフレームフォーマット)）の利用などの工夫が行われている。
 
 
 ## その他のIP関連技術
 
 ### VRRP
 
-スマートフォンやコンピュータは、デフォルトルーター（デフォルトゲートウェイ）を経由して社内[LAN](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#lanとwan)や[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)を利用する環境が一般的。デフォルトルーターの故障やメンテナンス時にもネットワークが利用できるように、複数の[ルーター](#ホストとルーターとノード)による冗長化を行う仕組みを**VRRP**（Virtual Router Redundancy Protocol）という。
+スマートフォンやコンピュータは、デフォルトルーター（デフォルトゲートウェイ）を経由して社内[LAN](./01_basic_knowledge_of_network.ja.md#lanとwan)や[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)を利用する環境が一般的。デフォルトルーターの故障やメンテナンス時にもネットワークが利用できるように、複数の[ルーター](#ホストとルーターとノード)による冗長化を行う仕組みを**VRRP**（Virtual Router Redundancy Protocol）という。
 
-VRRPでは複数の[ルーター](#ホストとルーターとノード)をまとめて運用し、その中の1つをマスタールーター、別の[ルーター](#ホストとルーターとノード)をバックアップルーターとして扱う。マスタールーターは定期的にVRRPパケットを[マルチキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を使って送信する。バックアップルーターがこのVRRPパケットを3回連続で受け取れなかったとき、マスタールーターが故障したと判断してマスタールーターを切り替える。
+VRRPでは複数の[ルーター](#ホストとルーターとノード)をまとめて運用し、その中の1つをマスタールーター、別の[ルーター](#ホストとルーターとノード)をバックアップルーターとして扱う。マスタールーターは定期的にVRRPパケットを[マルチキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を使って送信する。バックアップルーターがこのVRRPパケットを3回連続で受け取れなかったとき、マスタールーターが故障したと判断してマスタールーターを切り替える。
 
 ### IPマルチキャスト関連技術
 
-[マルチキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)の通信は主に[コネクションレス](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)の[UDP](/note/internet/chapters/08_transport_layer.ja.md#udp)を使って行われる。通信相手を特定せずにパケットを送信し、受信者がいなくてもそのネットワークを使用し続けるため、ムダが多い。
+[マルチキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)の通信は主に[コネクションレス](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)の[UDP](./08_transport_layer.ja.md#udp)を使って行われる。通信相手を特定せずにパケットを送信し、受信者がいなくてもそのネットワークを使用し続けるため、ムダが多い。
 
 受信者がいるかどうかの通知には、IPv4では**IGMP**（Internet Group Management Protocol）、[IPv6](#ipv6)では[ICMPv6](#icmpv6)の機能の1つである**MLD**（Multicast Listener Discovery）が用いられる。
 
@@ -347,7 +347,7 @@ VRRPでは複数の[ルーター](#ホストとルーターとノード)をま�
 
 **IPエニーキャスト**は、同じサービスを提供するサーバーに同じ[IPアドレス](#ipアドレス)を付け、クライアントの最寄りのサーバーと通信できるようにする方法。 代表例として、[DNS](#dns)ルートサーバーが挙げられる。
 
-IPエニーキャストでは、1つ目のパケットと2つ目のパケットが同じ[ホスト](#ホストとルーターとノード)に届くという保証がない。そのため、最初の1パケットのみ[エニーキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を用いて、それ以降は[ユニキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を使うといった処理が行われる。
+IPエニーキャストでは、1つ目のパケットと2つ目のパケットが同じ[ホスト](#ホストとルーターとノード)に届くという保証がない。そのため、最初の1パケットのみ[エニーキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を用いて、それ以降は[ユニキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)を使うといった処理が行われる。
 
 ### 通信品質の制御
 

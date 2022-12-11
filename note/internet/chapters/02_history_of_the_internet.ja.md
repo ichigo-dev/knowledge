@@ -44,11 +44,11 @@
 
 ### コンピュータネットワーク
 
-1970年代～1980年代にかけて、[パケット交換](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#パケット交換)技術によるコンピュータネットワークの実験が行われた。また、この頃に登場した**ウィンドウシステム**（コンピュータの画面上で複数のウィンドウを開くことができるシステム）は、ネットワークの利便性を劇的に向上させた。
+1970年代～1980年代にかけて、[パケット交換](./01_basic_knowledge_of_network.ja.md#パケット交換)技術によるコンピュータネットワークの実験が行われた。また、この頃に登場した**ウィンドウシステム**（コンピュータの画面上で複数のウィンドウを開くことができるシステム）は、ネットワークの利便性を劇的に向上させた。
 
 ### インターネットの普及
 
-1990年代はじめには、コンピュータの利用がより一般的になり、**ダウンサイジング**や**マルチベンダ接続**（異機種間接続）といった言葉が流行した。このマルチベンダ接続に用いられたのが[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)通信技術であった。
+1990年代はじめには、コンピュータの利用がより一般的になり、**ダウンサイジング**や**マルチベンダ接続**（異機種間接続）といった言葉が流行した。このマルチベンダ接続に用いられたのが[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)通信技術であった。
 
 以前は**閉域網**（**クローズドネットワーク**）の制御ネットワークが利用されることが多かったが、現在はインターネットに接続することが一般的になっている。その代表例として、**サプライチェーンマネジメント**（取引先との間で需要や在庫量の情報を共有して、効率の良い物流を目指すこと）などが挙げられる。
 
@@ -63,19 +63,19 @@
 
 ### ARPANETの誕生
 
-1969年に[パケット交換](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#パケット交換)の実用性を確認するための実験が行われた。この時に構築されたネットワークは、アメリカの大学と研究機関4つのノードを結んだもので、**ARPANET**（Advanced Research Projects Agency Network）と呼ばれた。ARPANETの開発には、**アメリカ国防総省高等研究計画局**（**DARPA**: Defense Advanced Research Projects Agency）が資金援助していた。
+1969年に[パケット交換](./01_basic_knowledge_of_network.ja.md#パケット交換)の実用性を確認するための実験が行われた。この時に構築されたネットワークは、アメリカの大学と研究機関4つのノードを結んだもので、**ARPANET**（Advanced Research Projects Agency Network）と呼ばれた。ARPANETの開発には、**アメリカ国防総省高等研究計画局**（**DARPA**: Defense Advanced Research Projects Agency）が資金援助していた。
 
-この実験により[パケット交換](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#パケット交換)技術が実用に耐えられることが証明された。
+この実験により[パケット交換](./01_basic_knowledge_of_network.ja.md#パケット交換)技術が実用に耐えられることが証明された。
 
 ### TCP/IPの誕生
 
-ARPANET内の研究グループによって、ARPANETの[パケット交換](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#パケット交換)の技術に加えて、相手のコンピュータとの間で信頼性の高い通信手段を提供する[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)の開発が行われた。こうして1970年代前半に開発されたのが、**TCP/IP**である。
+ARPANET内の研究グループによって、ARPANETの[パケット交換](./01_basic_knowledge_of_network.ja.md#パケット交換)の技術に加えて、相手のコンピュータとの間で信頼性の高い通信手段を提供する[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)の開発が行われた。こうして1970年代前半に開発されたのが、**TCP/IP**である。
 
 ### UNIXの普及とインターネットの拡大
 
 1980年代前後の大学や研究所では、コンピュータのOSとして**BSD UNIX**が広く使用されていた。このOSの内部にはTCP/IPが実装されていた。
 
-また、[LAN](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#lanとwan)の発達により、大学や企業の研究所などが徐々にARPANETやその後継である**NSFnet**に接続するようになった。この頃から、TCP/IPによる世界的なネットワークを**インターネット**と呼ぶようになった。
+また、[LAN](./01_basic_knowledge_of_network.ja.md#lanとwan)の発達により、大学や企業の研究所などが徐々にARPANETやその後継である**NSFnet**に接続するようになった。この頃から、TCP/IPによる世界的なネットワークを**インターネット**と呼ぶようになった。
 
 ### 商用インターネットサービスの開始
 

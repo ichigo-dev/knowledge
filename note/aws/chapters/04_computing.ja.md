@@ -23,7 +23,7 @@
 	1. [その他のコンテナサービス](#その他のコンテナサービス)
 1. [Lambda](#Lambda)
 
-![AWS EC2 and Lambda](/note/aws/images/computing.jpg)
+![AWS EC2 and Lambda](../images/computing.jpg)
 
 
 ## EC2

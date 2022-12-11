@@ -69,11 +69,11 @@
 
 **ユニキャスト**は、1対1の通信のことを指す。1を意味する「Uni」と、投げるを意味する「Cast」を組み合わせた言葉。従来の電話が代表例。
 
-**ブロードキャスト**は、すべての[ホスト](/note/internet/chapters/07_internet_layer.ja.md#ホストとルーターとノード)を対象としてデータを送信する。不特定多数に向かって一斉配信を行うテレビ放送が代表例。
+**ブロードキャスト**は、すべての[ホスト](./07_internet_layer.ja.md#ホストとルーターとノード)を対象としてデータを送信する。不特定多数に向かって一斉配信を行うテレビ放送が代表例。
 
-**マルチキャスト**は、特定のグループ内での通信を指す。限定された複数の[ホスト](/note/internet/chapters/07_internet_layer.ja.md#ホストとルーターとノード)が接続するビデオ会議が代表例。
+**マルチキャスト**は、特定のグループ内での通信を指す。限定された複数の[ホスト](./07_internet_layer.ja.md#ホストとルーターとノード)が接続するビデオ会議が代表例。
 
-**エニーキャスト**は、特定のグループ内のいずれか1つのコンピュータとの通信を指す。ネットワーク上で、条件を満たした[ホスト](/note/internet/chapters/07_internet_layer.ja.md#ホストとルーターとノード)の中からどれか1つと通信を行う。
+**エニーキャスト**は、特定のグループ内のいずれか1つのコンピュータとの通信を指す。ネットワーク上で、条件を満たした[ホスト](./07_internet_layer.ja.md#ホストとルーターとノード)の中からどれか1つと通信を行う。
 
 
 ## アドレス
@@ -98,11 +98,11 @@
 
 ### リピーター
 
-**リピーター**は、[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[物理層](/note/internet/chapters/04_osi_reference_model.ja.md#物理層)でネットワークを延長する機器。ケーブル上を流れてきた電気信号の増幅や整形などを行う。
+**リピーター**は、[OSI参照モデル](./04_osi_reference_model.ja.md)の[物理層](./04_osi_reference_model.ja.md#物理層)でネットワークを延長する機器。ケーブル上を流れてきた電気信号の増幅や整形などを行う。
 
 ### ブリッジ
 
-**ブリッジ**は、[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[データリンク層](/note/internet/chapters/04_osi_reference_model.ja.md#データリンク層)でネットワークを延長する装置。データリンクのフレームを認識してブリッジ内部のメモリにいったん蓄積し、接続された相手のセグメントにフレームを送出する（**ストア&フォワード方式**）。
+**ブリッジ**は、[OSI参照モデル](./04_osi_reference_model.ja.md)の[データリンク層](./04_osi_reference_model.ja.md#データリンク層)でネットワークを延長する装置。データリンクのフレームを認識してブリッジ内部のメモリにいったん蓄積し、接続された相手のセグメントにフレームを送出する（**ストア&フォワード方式**）。
 
 データリンクのフレームには、フレームが正しく届いたかどうかをチェックするための**FCS**（Frame Check Sequence）と呼ばれるフィールドがある。ブリッジではFCSをチェックして、壊れたフレームを別のセグメントに送信しないようにする働きがある。FCSは**CRC**（Cyclic Redundancy Check）と呼ばれる方式によってチェックされる。
 
@@ -110,17 +110,17 @@
 
 ### ルーター
 
-**ルーター**は、[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[ネットワーク層](/note/internet/chapters/04_osi_reference_model.ja.md#ネットワーク層)でパケットを中継する装置。[イーサネット](/note/internet/chapters/06_datalink_layer.ja.md#イーサネット)と[イーサネット](/note/internet/chapters/06_datalink_layer.ja.md#イーサネット)や、[イーサネット](/note/internet/chapters/06_datalink_layer.ja.md#イーサネット)と[無線LAN](/note/internet/chapters/06_datalink_layer.ja.md#無線LAN)といった、異なる[データリンク](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの概要)を相互に接続できる。ネットワークの負荷を仕切る役割りや、セキュリティ機能を備えたものもある。
+**ルーター**は、[OSI参照モデル](./04_osi_reference_model.ja.md)の[ネットワーク層](./04_osi_reference_model.ja.md#ネットワーク層)でパケットを中継する装置。[イーサネット](./06_datalink_layer.ja.md#イーサネット)と[イーサネット](./06_datalink_layer.ja.md#イーサネット)や、[イーサネット](./06_datalink_layer.ja.md#イーサネット)と[無線LAN](./06_datalink_layer.ja.md#無線LAN)といった、異なる[データリンク](./06_datalink_layer.ja.md#データリンクの概要)を相互に接続できる。ネットワークの負荷を仕切る役割りや、セキュリティ機能を備えたものもある。
 
 ### レイヤ4-7スイッチ
 
-[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[トランスポート層](/note/internet/chapters/04_osi_reference_model.ja.md#トランスポート層)から[アプリケーション層](/note/internet/chapters/04_osi_reference_model.ja.md#アプリケーション層)の情報に基づいた配送処理を行う装置のことを**レイヤ4-7スイッチ**という。負荷分散のために複数のサーバを設置してリクエストを捌いているシステムでは、レイヤ4-7スイッチの一種である**ロードバランサー**が使用される。
+[OSI参照モデル](./04_osi_reference_model.ja.md)の[トランスポート層](./04_osi_reference_model.ja.md#トランスポート層)から[アプリケーション層](./04_osi_reference_model.ja.md#アプリケーション層)の情報に基づいた配送処理を行う装置のことを**レイヤ4-7スイッチ**という。負荷分散のために複数のサーバを設置してリクエストを捌いているシステムでは、レイヤ4-7スイッチの一種である**ロードバランサー**が使用される。
 
 また、インターネットを経由した外部からの不正なアクセスを防止するための**ファイアウォール**もレイヤ4-7スイッチ。
 
 ### ゲートウェイ
 
-**ゲートウェイ**は、[OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)の[トランスポート層](/note/internet/chapters/04_osi_reference_model.ja.md#トランスポート層)から[アプリケーション層](/note/internet/chapters/04_osi_reference_model.ja.md#アプリケーション層)までの階層で、データを変換して中継する装置。2つの異なる[プロトコル](#プロトコル)間での翻訳作業を行う。
+**ゲートウェイ**は、[OSI参照モデル](./04_osi_reference_model.ja.md)の[トランスポート層](./04_osi_reference_model.ja.md#トランスポート層)から[アプリケーション層](./04_osi_reference_model.ja.md#アプリケーション層)までの階層で、データを変換して中継する装置。2つの異なる[プロトコル](#プロトコル)間での翻訳作業を行う。
 
 また、ネットワークトラフィックの軽減やセキュリティ強化のために利用される**代理サーバー**（Proxy Server）は、**アプリケーションゲートウェイ**とも呼ばれる。
 
@@ -154,7 +154,7 @@ SNSサイトなどにおいては世界中の大量のトラフィックを瞬�
 
 ### インターネットの意味
 
-**インターネット**（Internet）は、[ARPANET](/note/internet/chapters/02_history_of_the_internet.ja.md#ARPANETの誕生)から発展した、全世界を接続しているコンピュータネットワークを指す言葉。インターネットの対比として、会社などの組織内部の閉じた通信サービスのためのネットワークを**イントラネット**（Intranet）と呼ぶ。
+**インターネット**（Internet）は、[ARPANET](./02_history_of_the_internet.ja.md#ARPANETの誕生)から発展した、全世界を接続しているコンピュータネットワークを指す言葉。インターネットの対比として、会社などの組織内部の閉じた通信サービスのためのネットワークを**イントラネット**（Intranet）と呼ぶ。
 
 ### インターネットの構造
 
@@ -162,7 +162,7 @@ SNSサイトなどにおいては世界中の大量のトラフィックを瞬�
 
 ネットワークとネットワークは、**NOC**（Network Operation Center）で接続される。また、ネットワークの運用者や運用方針、利用方針などが異なるネットワークを対等に接続するポイントは**IX**（Internet Exchange）と呼ばれる。インターネットは異なる組織のネットワークがIXによって相互に接続された巨大なネットワークといえる。
 
-![NOC IX](/note/internet/images/noc_and_ix.jpg)
+![NOC IX](../images/noc_and_ix.jpg)
 
 
 ## クラウド

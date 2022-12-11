@@ -6,16 +6,16 @@
 
 ### Chapters
 
-1. [ネットワークの基礎知識](/note/internet/chapters/01_basic_knowledge_of_network.ja.md)
-1. [インターネットの歴史](/note/internet/chapters/02_history_of_the_internet.ja.md)
-1. [TCP/IPの標準化](/note/internet/chapters/03_standardization_of_tcpip.ja.md)
-1. [OSI参照モデル](/note/internet/chapters/04_osi_reference_model.ja.md)
-1. [TCP/IPの階層モデル](/note/internet/chapters/05_hierarchical_model_of_tcpip.ja.md)
-1. [データリンク層](/note/internet/chapters/06_datalink_layer.ja.md)
-1. [インターネット層](/note/internet/chapters/07_internet_layer.ja.md)
-1. [トランスポート層](/note/internet/chapters/08_transport_layer.ja.md)
-1. [アプリケーション層](/note/internet/chapters/09_application_layer.ja.md)
-1. [ルーティングプロトコル](/note/internet/chapters/10_routing_protocol.ja.md)
+1. [ネットワークの基礎知識](./chapters/01_basic_knowledge_of_network.ja.md)
+1. [インターネットの歴史](./chapters/02_history_of_the_internet.ja.md)
+1. [TCP/IPの標準化](./chapters/03_standardization_of_tcpip.ja.md)
+1. [OSI参照モデル](./chapters/04_osi_reference_model.ja.md)
+1. [TCP/IPの階層モデル](./chapters/05_hierarchical_model_of_tcpip.ja.md)
+1. [データリンク層](./chapters/06_datalink_layer.ja.md)
+1. [インターネット層](./chapters/07_internet_layer.ja.md)
+1. [トランスポート層](./chapters/08_transport_layer.ja.md)
+1. [アプリケーション層](./chapters/09_application_layer.ja.md)
+1. [ルーティングプロトコル](./chapters/10_routing_protocol.ja.md)
 
 
 ## Reference

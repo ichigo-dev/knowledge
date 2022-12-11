@@ -16,7 +16,7 @@
 
 機密性の高いデータを運用するには、暗号化の施策が必要となる。**AWS KMS**（Key Management Service）や**AWS CloudHSM**は、暗号化鍵の作成と管理のためのサービスである。
 
-**KMS**は、AWSが管理するマネージドサービスで、多くの場合はこちらが用いられる。**CloudHSM**は、[VPC](/note/aws/chapters/03_networking_and_content_delivery.ja.md#vpc)内で専有のハードウェアを利用して鍵を管理するサービスで、大規模なシステムに用いる。
+**KMS**は、AWSが管理するマネージドサービスで、多くの場合はこちらが用いられる。**CloudHSM**は、[VPC](./03_networking_and_content_delivery.ja.md#vpc)内で専有のハードウェアを利用して鍵を管理するサービスで、大規模なシステムに用いる。
 
 ### KMSの機能
 

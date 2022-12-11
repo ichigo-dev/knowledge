@@ -21,7 +21,7 @@
 
 **マスタノード**はコアノード、タスクノードにジョブを振り分ける役割のノードである。
 
-**コアノード**と**タスクノード**はどちらも実際のジョブを実行するノードで、コアノードはデータを保存する領域である**HDFS**（Hadoop Distributed File System）を持つ（構成が[Redshift](/note/aws/chapters/07_database.ja.md#redshift)と類似している）。
+**コアノード**と**タスクノード**はどちらも実際のジョブを実行するノードで、コアノードはデータを保存する領域である**HDFS**（Hadoop Distributed File System）を持つ（構成が[Redshift](./07_database.ja.md#redshift)と類似している）。
 
 ### 分散処理基盤としてのEMR
 
@@ -46,11 +46,11 @@ EMRでは**分散処理アプリケーション**として、**Hadoop**（大規
 
 ### Data Pipeline
 
-**AWS Data Pipeline**は、データ処理やデータ移動を支援するサービス。パイプラインを設定すると、オンプレミスやAWS上の特定の場所に定期的にアクセスし、必要に応じてデータを変換して[S3](/note/aws/chapters/06_storage.ja.md#s3)、[RDS](/note/aws/chapters/07_database.ja.md#rds)、[DynamoDB](/note/aws/chapters/07_database.ja.md#dynamodb)などのAWSの各種サービスに転送することができる。
+**AWS Data Pipeline**は、データ処理やデータ移動を支援するサービス。パイプラインを設定すると、オンプレミスやAWS上の特定の場所に定期的にアクセスし、必要に応じてデータを変換して[S3](./06_storage.ja.md#s3)、[RDS](./07_database.ja.md#rds)、[DynamoDB](./07_database.ja.md#dynamodb)などのAWSの各種サービスに転送することができる。
 
 ### Glue
 
-**AWS Glue**は、データレイクやデータウェアハウスとセットで使われることが多い、サーバレス型のELTツール。ビッグデータの解析などに使われることが多く、[S3](/note/aws/chapters/06_storage.ja.md#s3)のデータを管理して[Redshift](/note/aws/chapters/07_database.ja.md#redshift)などに変換して格納するといった用途によく利用される。
+**AWS Glue**は、データレイクやデータウェアハウスとセットで使われることが多い、サーバレス型のELTツール。ビッグデータの解析などに使われることが多く、[S3](./06_storage.ja.md#s3)のデータを管理して[Redshift](./07_database.ja.md#redshift)などに変換して格納するといった用途によく利用される。
 
 データソースのデータを探索する**クローラ機能**と、それをメタデータとして管理する**データカタログ機能**がある。また、データの変換は**ジョブ**という単位で管理され、変換処理はPythonやSparkによって自分で実装することができる。
 
@@ -59,7 +59,7 @@ EMRでは**分散処理アプリケーション**として、**Hadoop**（大規
 
 ### Amazon Athena
 
-**Amazon Athena**は[S3](/note/aws/chapters/06_storage.ja.md#s3)内のデータを直接分類できるようにする対話型のクエリサービス。S3のデータに対して、標準SQLでデータの操作ができる。
+**Amazon Athena**は[S3](./06_storage.ja.md#s3)内のデータを直接分類できるようにする対話型のクエリサービス。S3のデータに対して、標準SQLでデータの操作ができる。
 
 ### Amazon QuickSight
 

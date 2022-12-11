@@ -26,7 +26,7 @@
 
 ## AWSのコアサービス
 
-![AWSの構成サンプル](/note/aws/images/sample_architecture.jpg)
+![AWSの構成サンプル](../images/sample_architecture.jpg)
 
 ### 最重要サービス
 
@@ -57,7 +57,7 @@ AWSで提供される数あるサービスの中でも、最も基本的で重�
 
 ## リージョンとAZ
 
-**リージョン**は、AWSがサービスを提供している拠点を指し、世界の各地に存在する。リージョン内には複数のアベイラビリティゾーン (**AZ**) が含まれ、1つのAZは複数の[データセンター](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#データセンター)から構成されている。
+**リージョン**は、AWSがサービスを提供している拠点を指し、世界の各地に存在する。リージョン内には複数のアベイラビリティゾーン (**AZ**) が含まれ、1つのAZは複数の[データセンター](../../internet/chapters/01_basic_knowledge_of_network.ja.md#データセンター)から構成されている。
 
 
 ## マルチAZ

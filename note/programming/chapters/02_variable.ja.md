@@ -13,18 +13,18 @@
 
 ## プログラミングにおける変数
 
-**変数**は[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いるデータの記憶域のことで、固有の名前によって識別される。物理的にはデータは[メモリ](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#記憶装置)に格納されており、[メモリ](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#記憶装置)上のデータには[アドレス](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#メモリとアドレス)を使ってアクセスすることができる。しかし、[メモリアドレス](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#メモリとアドレス)は意味を持たない数値の羅列であるため、[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中では格納しているデータを表す名前をつけた変数を用いる。
+**変数**は[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いるデータの記憶域のことで、固有の名前によって識別される。物理的にはデータは[メモリ](./01_basic_knowledge_of_programming.ja.md#記憶装置)に格納されており、[メモリ](./01_basic_knowledge_of_programming.ja.md#記憶装置)上のデータには[アドレス](./01_basic_knowledge_of_programming.ja.md#メモリとアドレス)を使ってアクセスすることができる。しかし、[メモリアドレス](./01_basic_knowledge_of_programming.ja.md#メモリとアドレス)は意味を持たない数値の羅列であるため、[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中では格納しているデータを表す名前をつけた変数を用いる。
 
 
 ## 変数の操作
 
 [変数](#プログラミングにおける変数)に対する操作には、宣言、代入、参照がある。
 
-**宣言**では[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いる[変数](#プログラミングにおける変数)の名前を明示する。[静的型付け言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#静的型付け言語)の多くは、宣言時に[変数](#プログラミングにおける変数)の[型](/note/programming/chapters/03_data_type.ja.md#型)を指定する必要がある。[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては、同じ[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回宣言しようとすると[エラー](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#エラー)となる。一方で、新しい[変数](#プログラミングにおける変数)で前の[変数](#プログラミングにおける変数)を上書きする（**シャドーイング**）仕様の[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。
+**宣言**では[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で用いる[変数](#プログラミングにおける変数)の名前を明示する。[静的型付け言語](./01_basic_knowledge_of_programming.ja.md#静的型付け言語)の多くは、宣言時に[変数](#プログラミングにおける変数)の[型](./03_data_type.ja.md#型)を指定する必要がある。[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては、同じ[識別子](./01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回宣言しようとすると[エラー](./01_basic_knowledge_of_programming.ja.md#エラー)となる。一方で、新しい[変数](#プログラミングにおける変数)で前の[変数](#プログラミングにおける変数)を上書きする（**シャドーイング**）仕様の[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。
 
-**代入**では宣言された[変数](#プログラミングにおける変数)に対してデータを関連付ける。多くの[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では[変数](#プログラミングにおける変数)の宣言と同時に代入を行うことができ、これを**初期化**という。既にデータが紐づけられている[変数](#プログラミングにおける変数)に対して新しいデータを紐づける（**再代入**）することもできる。また、後から[変数](#プログラミングにおける変数)に紐づくデータを変更することを許可しないような関連付けのことを**束縛**と呼ぶこともある。代入を表現するために用いられる[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)としては `=` が用いられる場合が多く、数学的な意味である「等価」と意味が異なるので注意が必要である（[プログラミング](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)において「等価」であることを表す[演算子](/note/programming/chapters/04_operation.ja.md#プログラミングにおける演算)には `==` が利用されることが多い）。
+**代入**では宣言された[変数](#プログラミングにおける変数)に対してデータを関連付ける。多くの[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では[変数](#プログラミングにおける変数)の宣言と同時に代入を行うことができ、これを**初期化**という。既にデータが紐づけられている[変数](#プログラミングにおける変数)に対して新しいデータを紐づける（**再代入**）することもできる。また、後から[変数](#プログラミングにおける変数)に紐づくデータを変更することを許可しないような関連付けのことを**束縛**と呼ぶこともある。代入を表現するために用いられる[演算子](./04_operation.ja.md#プログラミングにおける演算)としては `=` が用いられる場合が多く、数学的な意味である「等価」と意味が異なるので注意が必要である（[プログラミング](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)において「等価」であることを表す[演算子](./04_operation.ja.md#プログラミングにおける演算)には `==` が利用されることが多い）。
 
-**参照**では[変数](#プログラミングにおける変数)に紐づくデータの中身を利用する。データが代入されていない[変数](#プログラミングにおける変数)（**未初期化状態**の[変数](#プログラミングにおける変数)）を参照することは不正な操作であり、[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては**未定義動作**となる。また、言語によってはこのような事態を防ぐために宣言時に仮の初期値を関連付けるものもある。
+**参照**では[変数](#プログラミングにおける変数)に紐づくデータの中身を利用する。データが代入されていない[変数](#プログラミングにおける変数)（**未初期化状態**の[変数](#プログラミングにおける変数)）を参照することは不正な操作であり、[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)によっては**未定義動作**となる。また、言語によってはこのような事態を防ぐために宣言時に仮の初期値を関連付けるものもある。
 
 
 ```c
@@ -32,9 +32,9 @@
 
 int main()
 {
-    int x;              // 宣言
-    int y = 5;          // 初期化
-    x = 3;              // 代入
+    int x;               // 宣言
+    int y = 5;           // 初期化
+    x = 3;               // 代入
     printf("%d\n", x);   // 参照
 
     return 0;
@@ -64,7 +64,7 @@ console.log(x);     // 参照
 
 ## ブロックとスコープ
 
-[変数](#プログラミングにおける変数)や[関数](/note/programming/chapters/06_function.ja.md#プログラミングにおける関数)などの[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)で表現されるものは、[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の特定の範囲内からしか[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で `{}` で囲まれた範囲を**ブロック**といい、ブロックの内側で定義した[変数](#プログラミングにおける変数)はブロックの外側からは[参照](#変数の操作)できない。[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)中で[変数](#プログラミングにおける変数)を[参照](#変数の操作)できる範囲のことを**スコープ**という。
+[変数](#プログラミングにおける変数)や[関数](./06_function.ja.md#プログラミングにおける関数)などの[識別子](./01_basic_knowledge_of_programming.ja.md#識別子)で表現されるものは、[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の特定の範囲内からしか[参照](#変数の操作)できない。[ソースコード](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で `{}` で囲まれた範囲を**ブロック**といい、ブロックの内側で定義した[変数](#プログラミングにおける変数)はブロックの外側からは[参照](#変数の操作)できない。[ソースコード](./01_basic_knowledge_of_programming.ja.md#識別子)中で[変数](#プログラミングにおける変数)を[参照](#変数の操作)できる範囲のことを**スコープ**という。
 
 ```javascript
 // JavaScript
@@ -94,18 +94,18 @@ console.log(x);     // 参照
 
 ### グローバル変数とローカル変数
 
-[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)全体を指す[スコープ](#ブロックとスコープ)を**グローバルスコープ**（**ファイルスコープ**）、特定の[ブロック](#ブロックとスコープ)内を指す[スコープ](#ブロックとスコープ)を**ローカルスコープ**という。また、グローバルスコープに[宣言](#変数の操作)された[変数](#プログラミングにおける変数)を**グローバル変数**、ローカルスコープに[宣言](#変数の操作)された[変数](#プログラミングにおける変数)を**ローカル変数**（**自動変数**）という。
+[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)全体を指す[スコープ](#ブロックとスコープ)を**グローバルスコープ**（**ファイルスコープ**）、特定の[ブロック](#ブロックとスコープ)内を指す[スコープ](#ブロックとスコープ)を**ローカルスコープ**という。また、グローバルスコープに[宣言](#変数の操作)された[変数](#プログラミングにおける変数)を**グローバル変数**、ローカルスコープに[宣言](#変数の操作)された[変数](#プログラミングにおける変数)を**ローカル変数**（**自動変数**）という。
 
-また、同じ[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回[宣言](#変数の操作)できない[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)においても、[スコープ](#ブロックとスコープ)が異なれば同じ[識別子](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#識別子)を用いることができる。
+また、同じ[識別子](./01_basic_knowledge_of_programming.ja.md#識別子)の[変数](#プログラミングにおける変数)を複数回[宣言](#変数の操作)できない[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)においても、[スコープ](#ブロックとスコープ)が異なれば同じ[識別子](./01_basic_knowledge_of_programming.ja.md#識別子)を用いることができる。
 
 ### 生存期間
 
-[変数](#プログラミングにおける変数)に紐づくデータには**生存期間**（**ライフタイム**、**寿命**）があり、[グローバル変数](#グローバル変数とローカル変数)の生存期間は[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の実行開始から終了まで、[ローカル変数](#グローバル変数とローカル変数)の生存期間は[スコープ](#ブロックとスコープ)内となっていることが一般的である。
+[変数](#プログラミングにおける変数)に紐づくデータには**生存期間**（**ライフタイム**、**寿命**）があり、[グローバル変数](#グローバル変数とローカル変数)の生存期間は[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)の実行開始から終了まで、[ローカル変数](#グローバル変数とローカル変数)の生存期間は[スコープ](#ブロックとスコープ)内となっていることが一般的である。
 
 
 ## 変数と定数
 
-ほとんどの[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では、[変数](#プログラミングにおける変数)だけではなく**定数**が利用できる。[変数](#プログラミングにおける変数)は[宣言](#変数の操作)後に紐付けるデータを変更することができるが、定数は[初期化](#変数の操作)したあとに紐付けるデータを変更することができない。また、[変数](#プログラミングにおける変数)は[初期化](#変数の操作)しなくてもあとからデータを紐付けて使用することができるが、定数は必ず[初期化](#変数の操作)する必要がある。定数の[初期化](#変数の操作)には `const` キーワードが用いられる場合が多い。[プログラム](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で変更されてはいけないデータや、数学的・物理的な定数は、定数として定義するのが一般的。
+ほとんどの[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)では、[変数](#プログラミングにおける変数)だけではなく**定数**が利用できる。[変数](#プログラミングにおける変数)は[宣言](#変数の操作)後に紐付けるデータを変更することができるが、定数は[初期化](#変数の操作)したあとに紐付けるデータを変更することができない。また、[変数](#プログラミングにおける変数)は[初期化](#変数の操作)しなくてもあとからデータを紐付けて使用することができるが、定数は必ず[初期化](#変数の操作)する必要がある。定数の[初期化](#変数の操作)には `const` キーワードが用いられる場合が多い。[プログラム](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中で変更されてはいけないデータや、数学的・物理的な定数は、定数として定義するのが一般的。
 
 ```c
 // C言語
@@ -123,9 +123,9 @@ const max_cnt = 1000;
 const pi = 3.14159;
 ```
 
-定数は紐づくデータは変わらないが、[ポインタ](/note/programming/chapters/03_data_type.ja.md#ポインタ型)経由などでデータ自体を書き換えることができてしまうため、必ずしも[参照](#変数の操作)した中身が一定であるとは限らない点には注意が必要である。
+定数は紐づくデータは変わらないが、[ポインタ](./03_data_type.ja.md#ポインタ型)経由などでデータ自体を書き換えることができてしまうため、必ずしも[参照](#変数の操作)した中身が一定であるとは限らない点には注意が必要である。
 
-また `const` 定数と似たような使われ方をする機能として `define` を利用できる[プログラミング言語](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。これは一般的には[ソースコード](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中の文字列を[コンパイル](/note/programming/chapters/01_basic_knowledge_of_programming.ja.md#高水準言語)時に別の値に置き換える機能のことを指す。
+また `const` 定数と似たような使われ方をする機能として `define` を利用できる[プログラミング言語](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)もある。これは一般的には[ソースコード](./01_basic_knowledge_of_programming.ja.md#プログラミングの概要)中の文字列を[コンパイル](./01_basic_knowledge_of_programming.ja.md#高水準言語)時に別の値に置き換える機能のことを指す。
 
 ```c
 // C言語

@@ -39,7 +39,7 @@
 	1. [FSx for Windowsファイルサーバ](#fsx-for-windowsファイルサーバ)
 	1. [FSx for Lustre](#fsx-for-lustre)
 
-![AWS storage](/note/aws/images/storage.jpg)
+![AWS storage](../images/storage.jpg)
 
 
 ## EBS
@@ -50,7 +50,7 @@ EBSはEC2と1対1で対応するサービスである。複数のEC2にアタッ
 
 ### ボリュームタイプ
 
-SSDとHDDそれぞれにボリュームタイプの種類があり、それに加えて旧世代のHDDストレージタイプとして**マグネティックタイプ**がある。各タイプの性能を最大限発揮するためには、[EBS最適化インスタンスオプション](/note/aws/chapters/04_computing.ja.md#ec2における性能)のついたEC2を利用することが推奨される。
+SSDとHDDそれぞれにボリュームタイプの種類があり、それに加えて旧世代のHDDストレージタイプとして**マグネティックタイプ**がある。各タイプの性能を最大限発揮するためには、[EBS最適化インスタンスオプション](./04_computing.ja.md#ec2における性能)のついたEC2を利用することが推奨される。
 
 **汎用SSD**（gp2、gp3）は、EBSの中で最も一般的なボリュームタイプ。性能の指標として**IOPS**（1秒あたりに処理できるI/Oアクセス数）を用い、容量に応じた**ベースライン性能**がある。容量が少ないボリュームには、一時的なIOPSの上昇に対応できるように**バースト機能**が用意されている。
 
@@ -95,7 +95,7 @@ EFSはファイルが作成されると3か所以上のAZに保存される**分
 
 EFSには、**汎用パフォーマンスモード**と**最大I/Oパフォーマンスモード**がある。通常は汎用パフォーマンスモード、数百～数千台といったクライアントから同時にEFSにアクセスするようなユースケースでは最大I/Oパフォーマンスモードを用いる。
 
-どちらのモードを用いるかの指標として、[CloudWatch](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)の**PercentIOLimit**というメトリクスが参考になる。汎用パフォーマンスモードでPercentIOLimitが長時間高い状態であれば、最大I/Oパフォーマンスモードに変更することを検討するとよい。
+どちらのモードを用いるかの指標として、[CloudWatch](./05_management_and_governance.ja.md#cloudwatch)の**PercentIOLimit**というメトリクスが参考になる。汎用パフォーマンスモードでPercentIOLimitが長時間高い状態であれば、最大I/Oパフォーマンスモードに変更することを検討するとよい。
 
 パフォーマンスモードは後から変更できないので注意する。
 
@@ -107,7 +107,7 @@ EFSには、バーストスループットモードとプロビジョニング�
 
 **プロビジョニングスループットモード**は、バーストスループットモードで設定されているベースラインスループットやバースト時の最大スループットでは性能が足りない場合に、任意のスループット値を指定することができるモード。Web配信コンテンツやアプリケーションデータなどの頻繁なアクセスが見込まれる場合に有用。
 
-どちらのモードを用いるかの指標として、[CloudWatch](/note/aws/chapters/05_management_and_governance.ja.md#cloudwatch)の**BurstCreditBalance**というメトリクスが参考になる。クレジットバランスをすべて使い切ってしまったり、常に減少傾向である場合にはプロビジョニングスループットモードを選択する。
+どちらのモードを用いるかの指標として、[CloudWatch](./05_management_and_governance.ja.md#cloudwatch)の**BurstCreditBalance**というメトリクスが参考になる。クレジットバランスをすべて使い切ってしまったり、常に減少傾向である場合にはプロビジョニングスループットモードを選択する。
 
 スループットモードはあとから変更できる。
 
@@ -118,7 +118,7 @@ EFSには、バーストスループットモードとプロビジョニング�
 
 - データバックアップ
 - ビックデータ解析用のデータレイク
-- [ETL](/note/aws/chapters/12_analytics.ja.md#etlツール)（Extract/Transform/Load）の中間ファイル保存
+- [ETL](./12_analytics.ja.md#etlツール)（Extract/Transform/Load）の中間ファイル保存
 - Auto Scaling構成されたEC2インスタンスやコンテナからのログ転送先
 - 静的コンテンツのホスティング
 - Key-Value型のデータベース
@@ -273,7 +273,7 @@ Storage Gatewayには、**ファイルゲートウェイ**、**ボリューム�
 
 **CHAP認証**（Challenge-Handshake Authentication Protocol）は、クライアントからStorage Gatewayに**iSCSI**（Internet Small Computer System Interface）で接続する際に設定することで、不正なクライアントからのなりすましを防止でき、通信の盗聴といった脅威に対するリスクを軽減できる。
 
-データは、[AWS KMS](/note/aws/chapters/08_security_and_identity.ja.md#kmsとcloudhsm)を使ってS3に保存されるタイミングで暗号化される。
+データは、[AWS KMS](./08_security_and_identity.ja.md#kmsとcloudhsm)を使ってS3に保存されるタイミングで暗号化される。
 
 また、オンプレミス環境からStorage Gatewayを経由してS3にデータを転送する際にHTTPSが使用されるため、**通信の暗号化**も行われる。
 

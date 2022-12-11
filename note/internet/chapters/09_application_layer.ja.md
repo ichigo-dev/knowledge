@@ -54,13 +54,13 @@
 
 ### TELNET
 
-**TELNET**は、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)の[コネクション](/note/internet/chapters/08_transport_layer.ja.md#コネクション)を1つ利用して、この通信路を通して相手のコンピュータにコマンドを文字列として送信し実行する[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。相手のコンピュータ内部で動作している**シェル**に接続しているようなイメージ。シェルとは、OSが提供する機能をユーザーが利用しやすいように包み込んだユーザインタフェースのこと。
+**TELNET**は、[TCP](./08_transport_layer.ja.md#tcp)の[コネクション](./08_transport_layer.ja.md#コネクション)を1つ利用して、この通信路を通して相手のコンピュータにコマンドを文字列として送信し実行する[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。相手のコンピュータ内部で動作している**シェル**に接続しているようなイメージ。シェルとは、OSが提供する機能をユーザーが利用しやすいように包み込んだユーザインタフェースのこと。
 
 TELNETではユーザが入力した文字以外にもオプションをやり取りすることができる。**NVT**（Network Virtual Terminal）を実現するための画面制御情報はこのオプションの機能を利用して送信される。
 
 またTELNETには、改行キーが入力されるごとに1行分のデータをまとめて送る**行モード**と、入力された文字を1文字ごとに送る**透過モード**がある。
 
-TELNET[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)を利用するクライアントプログラムを**TELNETクライアント**といい、TELNETクライアントは基本的に**23番**ポートに接続することでtelnetdとやり取りをする。しかし、それ以外のポートに接続することで、キーボードから各[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)のコマンドを直接入力することもできる。これを利用して、TCP/IPアプリケーション開発時のデバッグに利用されることもある。
+TELNET[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)を利用するクライアントプログラムを**TELNETクライアント**といい、TELNETクライアントは基本的に**23番**ポートに接続することでtelnetdとやり取りをする。しかし、それ以外のポートに接続することで、キーボードから各[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)のコマンドを直接入力することもできる。これを利用して、TCP/IPアプリケーション開発時のデバッグに利用されることもある。
 
 ### SSH
 
@@ -70,7 +70,7 @@ TELNET[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja
 - ファイルの転送
 - ポートフォワード機能
 
-ポートフォワード機能とは、特定のポートに届けられたメッセージ、特定の[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)、[ポート番号](/note/internet/chapters/08_transport_layer.ja.md#ポート番号)に転送する仕組み。
+ポートフォワード機能とは、特定のポートに届けられたメッセージ、特定の[IPアドレス](./07_internet_layer.ja.md#ipアドレス)、[ポート番号](./08_transport_layer.ja.md#ポート番号)に転送する仕組み。
 
 SSHの認証には、パスワード認証のほかにも**公開鍵認証**や**ワンタイムパスワード認証**が利用できる。
 
@@ -79,20 +79,20 @@ SSHの認証には、パスワード認証のほかにも**公開鍵認証**や*
 
 ### FTP
 
-**FTP**（File Transfer Protocol）は、異なるコンピュータ間でファイルを転送するときに使われる[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。インターネット上には、誰でもログインできる**anonymous FTPサーバー**があり、これらはanonymousかftpというログイン名でログインできる。anonymous FTPサーバは不特定多数へのソフトウェアの公開などのために用いられる。
+**FTP**（File Transfer Protocol）は、異なるコンピュータ間でファイルを転送するときに使われる[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。インターネット上には、誰でもログインできる**anonymous FTPサーバー**があり、これらはanonymousかftpというログイン名でログインできる。anonymous FTPサーバは不特定多数へのソフトウェアの公開などのために用いられる。
 
-FTPでは2つの[TCPコネクション](/note/internet/chapters/08_transport_layer.ja.md#コネクション)が利用され、1つは制御用（**21番**ポート）で、もう1つはデータ（ファイル）の転送用（**20番**ポート）である。データ転送には一般的に20番ポートを用いるが、セキュリティ向上のためにポート番号を乱数的に割り当てるのが一般的。
+FTPでは2つの[TCPコネクション](./08_transport_layer.ja.md#コネクション)が利用され、1つは制御用（**21番**ポート）で、もう1つはデータ（ファイル）の転送用（**20番**ポート）である。データ転送には一般的に20番ポートを用いるが、セキュリティ向上のためにポート番号を乱数的に割り当てるのが一般的。
 
 
 ## 電子メール
 
 ### 電子メールの仕組み
 
-電子メールサービスを提供するための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)は**SMTP**（Simple Mail Transfer Protocol）で、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)を利用している。通常のユーザーが利用するコンピュータは電源が常に入っているとは限らないので、電源を切らない**メールサーバー**を経由してメッセージの送受信を行う。受信者がメールサーバーから電子メールを受け取るための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)は**POP**（Post Office Protocol）である。
+電子メールサービスを提供するための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)は**SMTP**（Simple Mail Transfer Protocol）で、[TCP](./08_transport_layer.ja.md#tcp)を利用している。通常のユーザーが利用するコンピュータは電源が常に入っているとは限らないので、電源を切らない**メールサーバー**を経由してメッセージの送受信を行う。受信者がメールサーバーから電子メールを受け取るための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)は**POP**（Post Office Protocol）である。
 
 ### メールアドレス
 
-メールアドレスは、電子メールのやり取りを行う際に必要となる識別子。現在この電子メールの配送先の管理は[DNS](/note/internet/chapters/07_internet_layer.ja.md#dns)によって行われる。[DNS](/note/internet/chapters/07_internet_layer.ja.md#dns)には、メールアドレスと、そのメールアドレス宛てのメールを送信すべきメールサーバーの[ドメイン名](/note/internet/chapters/07_internet_layer.ja.md#dnsの役割)を登録しておく。 これを[MXレコード](/note/internet/chapters/07_internet_layer.ja.md#ネームサーバー)という。
+メールアドレスは、電子メールのやり取りを行う際に必要となる識別子。現在この電子メールの配送先の管理は[DNS](./07_internet_layer.ja.md#dns)によって行われる。[DNS](./07_internet_layer.ja.md#dns)には、メールアドレスと、そのメールアドレス宛てのメールを送信すべきメールサーバーの[ドメイン名](./07_internet_layer.ja.md#dnsの役割)を登録しておく。 これを[MXレコード](./07_internet_layer.ja.md#ネームサーバー)という。
 
 ### MIME
 
@@ -100,54 +100,54 @@ FTPでは2つの[TCPコネクション](/note/internet/chapters/08_transport_lay
 
 ### SMTP
 
-**SMTP**（Simple Mail Trnasfer Protocol）は電子メールを配送するアプリケーション[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)で、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)の**25番**ポートを用いる。SMTPには認証の仕組みがないため、**迷惑メール**（スパムメール）を送り付けるような悪用が簡単にできてしまう。この迷惑メールに対しては、様々な対策が行われている。
+**SMTP**（Simple Mail Trnasfer Protocol）は電子メールを配送するアプリケーション[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)で、[TCP](./08_transport_layer.ja.md#tcp)の**25番**ポートを用いる。SMTPには認証の仕組みがないため、**迷惑メール**（スパムメール）を送り付けるような悪用が簡単にできてしまう。この迷惑メールに対しては、様々な対策が行われている。
 
-**POP before SMTP**は、[POP](#pop)によるユーザー認証を行い、認証が正しければ一定期間クライアント[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)からのSMTP通信を受け入れる仕組み。
+**POP before SMTP**は、[POP](#pop)によるユーザー認証を行い、認証が正しければ一定期間クライアント[IPアドレス](./07_internet_layer.ja.md#ipアドレス)からのSMTP通信を受け入れる仕組み。
 
 **SMTP認証**（SMTP Authentication）は、メール送信時にSMTPサーバーでユーザー認証を行うようにした仕組み。
 
-**SPF**（Sender Policy Framework）は、送信元メールサーバーの[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)を[DNS](/note/internet/chapters/07_internet_layer.ja.md#dns)サーバーに登録しておき、受信側で受信したメールの[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)と送信元メールサーバーの[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)を確認してドメイン認証し、なりすましを防止する仕組み。
+**SPF**（Sender Policy Framework）は、送信元メールサーバーの[IPアドレス](./07_internet_layer.ja.md#ipアドレス)を[DNS](./07_internet_layer.ja.md#dns)サーバーに登録しておき、受信側で受信したメールの[IPアドレス](./07_internet_layer.ja.md#ipアドレス)と送信元メールサーバーの[IPアドレス](./07_internet_layer.ja.md#ipアドレス)を確認してドメイン認証し、なりすましを防止する仕組み。
 
-**DKIM**（DomainKeys Identified Mail）は、送信元メールサーバーで電子署名を付与し、受信側では電子署名を認証することで、なりすましを防止する仕組み。 送信元は公開鍵を[DNS](/note/internet/chapters/07_internet_layer.ja.md#dns)サーバーに登録しておく。
+**DKIM**（DomainKeys Identified Mail）は、送信元メールサーバーで電子署名を付与し、受信側では電子署名を認証することで、なりすましを防止する仕組み。 送信元は公開鍵を[DNS](./07_internet_layer.ja.md#dns)サーバーに登録しておく。
 
-**DMARC**（Domain-based Message Authentication, Reporting and Conformance）は、SPFやDKIMなど送信元ドメインを認証する仕組みにおいて、認証が失敗した場合のメールの取り扱いポリシーを送信者が[DNS](/note/internet/chapters/07_internet_layer.ja.md#dns)に登録しておく仕組み。
+**DMARC**（Domain-based Message Authentication, Reporting and Conformance）は、SPFやDKIMなど送信元ドメインを認証する仕組みにおいて、認証が失敗した場合のメールの取り扱いポリシーを送信者が[DNS](./07_internet_layer.ja.md#dns)に登録しておく仕組み。
 
-**OP25B**（Outbound Port 25 Blocking）は、[ISP](/note/internet/chapters/02_history_of_the_internet.ja.md#商用インターネットサービスの開始)などで迷惑メールやウィルスメールを直接送信できないように25番のSMTP通信をブロックする対策。
+**OP25B**（Outbound Port 25 Blocking）は、[ISP](./02_history_of_the_internet.ja.md#商用インターネットサービスの開始)などで迷惑メールやウィルスメールを直接送信できないように25番のSMTP通信をブロックする対策。
 
 ### POP
 
-**POP**（Post Office Protocol）は、電子メールの受信ホストがメールサーバーからメールを受け取るための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。現在は主に**POP3**（POP version 3.0）が使われている。
+**POP**（Post Office Protocol）は、電子メールの受信ホストがメールサーバーからメールを受け取るための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。現在は主に**POP3**（POP version 3.0）が使われている。
 
 ### IMAP
 
-**IMAP**（Internet Message Access Protocol）は、[POP](#pop)と同様に電子メールなどのメッセージを受信するための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。IMAPでは、サーバー上の電子メールをすべてダウンロードすることなく電子メールを読むことができる。
+**IMAP**（Internet Message Access Protocol）は、[POP](#pop)と同様に電子メールなどのメッセージを受信するための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。IMAPでは、サーバー上の電子メールをすべてダウンロードすることなく電子メールを読むことができる。
 
 IMAPを使用することにより、サーバー上に保管されているメールを、あたかも自分の使うクライアントの記憶媒体のように使うことができる。
 
 
 ## WWW
 
-**WWW**（World Wide Web）は、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)上の情報をハイパーテキスト形式で参照できる情報提供システム。単に**Web**と呼ばれることも多い。
+**WWW**（World Wide Web）は、[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)上の情報をハイパーテキスト形式で参照できる情報提供システム。単に**Web**と呼ばれることも多い。
 
 Webの情報を画面に表示するクライアントソフトウェアを、**Webブラウザ**と呼ぶ。代表的なWebブラウザとしては、Microsoft社のMicrosoft EdgeやMozila FoundationのFirefox、Google社のGoogle Chrome、Opera Software社のOpera、Apple社のSafariなどがある。
 
-また、**検索エンジン**を使うことで広大な[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)上の情報に容易にアクセスすることができる。
+また、**検索エンジン**を使うことで広大な[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)上の情報に容易にアクセスすることができる。
 
 Webブラウザの画面に表示されるイメージ全体は、**Webページ**と呼ばれる。会社や学校などの組織や、個人のWebページの見出しとなるページを**ホームページ**と呼ぶこともある。
 
 ### URI
 
-**URI**（Uniform Resource Identifier）は[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)上の資源（リソース）を表す識別子として利用される。
+**URI**（Uniform Resource Identifier）は[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)上の資源（リソース）を表す識別子として利用される。
 
 一般的にWebではこの識別子のことを、ホームページのアドレスや**URL**（Uniform Resource Locator）と呼ぶ。URIはURLよりも広義の概念として用いられる。
 
-URIが表す枠組みを**スキーム**といい、Webではhttpやhttpsといったスキームが使われる。**ホスト名**は、[ドメイン名](/note/internet/chapters/07_internet_layer.ja.md#dnsの役割)や[IPアドレス](/note/internet/chapters/07_internet_layer.ja.md#ipアドレス)を表す。
+URIが表す枠組みを**スキーム**といい、Webではhttpやhttpsといったスキームが使われる。**ホスト名**は、[ドメイン名](./07_internet_layer.ja.md#dnsの役割)や[IPアドレス](./07_internet_layer.ja.md#ipアドレス)を表す。
 
 ### HTML
 
 **HTML**（HyperText Markup Language）は、Webページを記述するための言語あるいはデータ形式のこと。HTMLには画面に表示する文字や画像に**リンク**をはって別の情報と紐づける、**ハイパーテキスト**という機能がある。
 
-HTMLは[WWW](#www)の[プレゼンテーション層](/note/internet/chapters/04_osi_reference_model.ja.md#プレゼンテーション層)の機能であるといえる。しかし、この[プレゼンテーション層](/note/internet/chapters/04_osi_reference_model.ja.md#プレゼンテーション層)は完全には整備されていないため、OSや[ブラウザ](#www)が違うと表示の細かい部分が異なる場合がある。
+HTMLは[WWW](#www)の[プレゼンテーション層](./04_osi_reference_model.ja.md#プレゼンテーション層)の機能であるといえる。しかし、この[プレゼンテーション層](./04_osi_reference_model.ja.md#プレゼンテーション層)は完全には整備されていないため、OSや[ブラウザ](#www)が違うと表示の細かい部分が異なる場合がある。
 
 [WWW](#www)においてデータをファイルに保存したり、アプリケーション間でやり取りしたりする形式としては**XML**（Extensible Markup Language）が多く利用されている。XMLは**SGML**（Standard Generalized Markup Language）から派生した言語で、HTMLに似た記法を用いる。Java（Oracle社（旧 Sun Microsystems）が開発している、プラットフォームに依存しないプログラミング言語・実行環境）とXMLを組み合わせたアプリケーションも多い。
 
@@ -159,11 +159,11 @@ HTML5とCSS3の組み合わせにより、パソコンやスマートフォン�
 
 ### HTTP
 
-**HTTP**（HyperText Transfer Protocol）は、[HTML](#html)文書や画像、音声、動画などのコンテンツの送受信に用いられる[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)で、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)の**80番**ポートを用いる。
+**HTTP**（HyperText Transfer Protocol）は、[HTML](#html)文書や画像、音声、動画などのコンテンツの送受信に用いられる[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)で、[TCP](./08_transport_layer.ja.md#tcp)の**80番**ポートを用いる。
 
 HTTPでは、クライアントがHTTPサーバー（Webサーバー）に情報を要求（**リクエスト**）し、この要求に対してHTTPサーバーがクライアントに情報を送信（**レスポンス**）する。HTTPサーバーはクライアントの情報を保持しない、**ステートレスサーバー**である。
 
-HTTP1.0では1つのリクエスト・レスポンスをやり取りするたびに[TCPコネクション](/note/internet/chapters/08_transport_layer.ja.md#コネクション)を確立・切断していた。HTTP1.1では、1つの[TCPコネクション](/note/internet/chapters/08_transport_layer.ja.md#コネクション)で複数のリクエスト・レスポンスができるようになる、**キープアライブ**（keep-alive）が実装された。
+HTTP1.0では1つのリクエスト・レスポンスをやり取りするたびに[TCPコネクション](./08_transport_layer.ja.md#コネクション)を確立・切断していた。HTTP1.1では、1つの[TCPコネクション](./08_transport_layer.ja.md#コネクション)で複数のリクエスト・レスポンスができるようになる、**キープアライブ**（keep-alive）が実装された。
 
 ### HTTPにおける認証
 
@@ -175,7 +175,7 @@ HTTP1.0では1つのリクエスト・レスポンスをやり取りするたび
 
 **HTTP/2**では1つの接続での並列処理や、バイナリデータの使用による送受信のデータ量の削減、ヘッダ圧縮、サーバープッシュなどの技術が導入され、ネットワークリソースの効率化を実現している。
 
-**HTTP/3**は、[TCP](/note/internet/chapters/08_transport_layer.ja.md#tcp)の[スリーウェイハンドシェイク](/note/internet/chapters/08_transport_layer.ja.md#コネクション管理)のない[UDP](/note/internet/chapters/08_transport_layer.ja.md#udp)を使う、[HTTP over QUIC](/note/internet/chapters/08_transport_layer.ja.md#quic)が用いられる。
+**HTTP/3**は、[TCP](./08_transport_layer.ja.md#tcp)の[スリーウェイハンドシェイク](./08_transport_layer.ja.md#コネクション管理)のない[UDP](./08_transport_layer.ja.md#udp)を使う、[HTTP over QUIC](./08_transport_layer.ja.md#quic)が用いられる。
 
 ### JavaScript
 
@@ -193,7 +193,7 @@ Webアプリケーションでユーザーの情報を識別する**クッキー
 
 ### WebSocket
 
-チャットアプリやゲームアプリなど、クライアントとサーバー間の双方向通信を[HTTP](#http)上で実現する[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)として**WebSocket**が開発された。
+チャットアプリやゲームアプリなど、クライアントとサーバー間の双方向通信を[HTTP](#http)上で実現する[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)として**WebSocket**が開発された。
 
 WebSocketでは、まずクライアントとサーバー間で[HTTP](#http)通信を行い、[HTTP](#http)のupgradeリクエスト/レスポンスでWebSocket用の通信路を確立する。
 
@@ -202,7 +202,7 @@ WebSocketでは、まずクライアントとサーバー間で[HTTP](#http)通�
 
 ### SNMP
 
-**SNMP**（Simple Network Management Protocol）はネットワーク管理に用いられる[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)で、UDP/IP上で動作する。
+**SNMP**（Simple Network Management Protocol）はネットワーク管理に用いられる[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)で、UDP/IP上で動作する。
 
 SNMPでは、管理する側を**マネージャ**（ネットワーク監視端末）、管理される側を**エージェント**（ルーター、スイッチなど）と呼ぶ。
 
@@ -216,30 +216,30 @@ SNMPでの処理は機器へのデータの書き込みと読み込みに集約�
 
 **RMON**（Remote Monitoring MIB）は、通常のMIBがネットワーク機器のインタフェース（点）を監視するのに対し、接続されるネットワークの回線（線）を監視する。
 
-ある特定の[ホスト](/note/internet/chapters/07_internet_layer.ja.md#ホストとルーターとノード)がどこの誰と、どのような[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)で通信しているかという統計情報を知ることができる。
+ある特定の[ホスト](./07_internet_layer.ja.md#ホストとルーターとノード)がどこの誰と、どのような[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)で通信しているかという統計情報を知ることができる。
 
 
 ## その他のアプリケーションプロトコル
 
 ### マルチメディア通信を実現する技術
 
-**H.323**は[IP](/note/internet/chapters/07_internet_layer.ja.md#ip)ネットワーク上で音声や映像をやり取りするための[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)体系。
+**H.323**は[IP](./07_internet_layer.ja.md#ip)ネットワーク上で音声や映像をやり取りするための[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)体系。
 
-**SIP**はH.323より後に開発されて、[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)での利用によりマッチしている[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。
+**SIP**はH.323より後に開発されて、[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)での利用によりマッチしている[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。
 
 ### RTP
 
-[UDP](/note/internet/chapters/08_transport_layer.ja.md#udp)でリアルタイムなマルチメディア通信を実現するには、アプリケーション層でシーケンス番号やパケット送信時刻の管理をする必要がある。これを行うのが**RTP**（Real-Time Transport Protocol）である。
+[UDP](./08_transport_layer.ja.md#udp)でリアルタイムなマルチメディア通信を実現するには、アプリケーション層でシーケンス番号やパケット送信時刻の管理をする必要がある。これを行うのが**RTP**（Real-Time Transport Protocol）である。
 
 また、**RTCP**（RTP Control Protocol）はパケット喪失率など通信回線の品質を管理することで、RTPによる通信を補助する。
 
 ### デジタル圧縮技術
 
-[インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)上では、限られたネットワーク資源でマルチメディアデータを送受信するために圧縮技術が必須となっている。**MPEG**（Moving Picture Experts Group）はデジタル圧縮の規格を決めるグループで、音楽圧縮で利用される**MP3**もMPEG規格のひとつ。
+[インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)上では、限られたネットワーク資源でマルチメディアデータを送受信するために圧縮技術が必須となっている。**MPEG**（Moving Picture Experts Group）はデジタル圧縮の規格を決めるグループで、音楽圧縮で利用される**MP3**もMPEG規格のひとつ。
 
 ### P2P
 
-ネットワーク上に展開する各端末や[ホスト](/note/internet/chapters/07_internet_layer.ja.md#ホストとルーターとノード)がサーバーなどを介さずに1対1で直接接続して通信する形態を**P2P**（Peer To Peer）という。
+ネットワーク上に展開する各端末や[ホスト](./07_internet_layer.ja.md#ホストとルーターとノード)がサーバーなどを介さずに1対1で直接接続して通信する形態を**P2P**（Peer To Peer）という。
 
 ### LDAP
 
@@ -247,7 +247,7 @@ SNMPでの処理は機器へのデータの書き込みと読み込みに集約�
 
 ### NTP
 
-**NTP**（Network Time Protocol）は、ネットワークに接続される機器の時刻を同期するためのアプリケーション[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。
+**NTP**（Network Time Protocol）は、ネットワークに接続される機器の時刻を同期するためのアプリケーション[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。
 
 ### 制御システムのプロトコル
 

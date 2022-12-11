@@ -27,7 +27,7 @@
 
 ## VPC
 
-![AWS VPC](/note/aws/images/vpc.jpg)
+![AWS VPC](../images/vpc.jpg)
 
 **VPC**（Amazon Virtual Private Cloud）はAWSのネットワークサービスの中心であり、利用者ごとのプライベートなネットワークをAWS内に作成する。VPCからインターネットへの出口を**インターネットゲートウェイ**（IGW）、VPCからオンプレミスの各拠点への出口を**仮想プライベートゲートウェイ**（VGW）という。
 
@@ -90,7 +90,7 @@ S3やDynamoDBと接続する際には、ルーティングを利用した**ゲ�
 
 ## CloudFront
 
-![AWS CloudFront and Route53](/note/aws/images/cloudfront_route53.jpg)
+![AWS CloudFront and Route53](../images/cloudfront_route53.jpg)
 
 **Amazon CloudFront**は、HTMLファイルやCSS、画像、動画といった静的コンテンツをキャッシュし、**バックエンドサーバ**（**オリジンサーバ**）の代わりに配信する**CDN**（Contents Delivery Network）サービスである。オリジンサーバとしては、EC2やELB、S3の静的ホスティング、オンプレミスサーバを利用することができる。
 

@@ -30,13 +30,13 @@
 
 ## トランスポート層の役割
 
-トランスポート層は、通信するプログラムを指定する役割を持つ。この役割を実現するのに用いられるのが、**ポート番号**である。[ポート番号](#ポート番号)により、トランスポート層の上位層の[アプリケーション層](/note/internet/chapters/09_application_layer.ja.md)で処理を行うプログラムを識別する。
+トランスポート層は、通信するプログラムを指定する役割を持つ。この役割を実現するのに用いられるのが、**ポート番号**である。[ポート番号](#ポート番号)により、トランスポート層の上位層の[アプリケーション層](./09_application_layer.ja.md)で処理を行うプログラムを識別する。
 
 ### TCPとUDP
 
-**TCP**（Transmission Control Protocol）は[コネクション型](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で、信頼性のあるストリーム型のプロトコル。**ストリーム**とは、切れ目のないデータ構造のこと。
+**TCP**（Transmission Control Protocol）は[コネクション型](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で、信頼性のあるストリーム型のプロトコル。**ストリーム**とは、切れ目のないデータ構造のこと。
 
-**UDP**（User Datagram Protocol）は[コネクションレス型](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で、信頼性のないデータグラム型の[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。
+**UDP**（User Datagram Protocol）は[コネクションレス型](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で、信頼性のないデータグラム型の[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。
 
 [TCP](#tcp)と[UDP](#udp)には優劣があるわけではなく、[TCP](#tcp)は信頼性のある通信が必要である場合に、[UDP](#udp)は高速性やリアルタイム性を重視する通信や同報通信を行いたい場合に利用する。
 
@@ -44,34 +44,34 @@
 
 アプリケーションから[TCP](#tcp)や[UDP](#udp)を利用するときには、プログラミングの開発環境やOSが用意しているライブラリを利用することになる。このようなライブラリを一般に**API**（Application Programming Interface）と呼ぶ。
 
-TCPやUDPを利用して通信するときには、**ソケット**と呼ばれるAPIが広く使われている。アプリケーションはソケットを利用して、通信相手の[IPアドレス](/note/internet/chapters/07_ineternet_layer.ja.md#ipアドレス)や[ポート番号](#ポート番号)の設定、データの送受信の要求を行う。
+TCPやUDPを利用して通信するときには、**ソケット**と呼ばれるAPIが広く使われている。アプリケーションはソケットを利用して、通信相手の[IPアドレス](./07_ineternet_layer.ja.md#ipアドレス)や[ポート番号](#ポート番号)の設定、データの送受信の要求を行う。
 
 
 ## ポート番号
 
 **ポート番号**は、同一のコンピュータ内で通信を行っているプログラムを識別するときに利用される識別子。
 
-ポート番号には、標準で決められている**ウェルノウンポート番号**（Well-known Port Number）があり、これは0～1023の番号が割り当てられている。例として、[HTTP](/note/internet/chapters/09_application_layer.ja.md#http)では80番、[SMTP](/note/internet/chapters/09_application_layer.ja.md#smtp)は25番を利用するのが一般的である。ウェルノウンポート番号以外にも、1024～49151は正式に登録されているポート番号となっている。
+ポート番号には、標準で決められている**ウェルノウンポート番号**（Well-known Port Number）があり、これは0～1023の番号が割り当てられている。例として、[HTTP](./09_application_layer.ja.md#http)では80番、[SMTP](./09_application_layer.ja.md#smtp)は25番を利用するのが一般的である。ウェルノウンポート番号以外にも、1024～49151は正式に登録されているポート番号となっている。
 
 サーバーはポート番号が決まっている必要があるが、サービスを受ける側のポート番号は必ずしも決まっている必要はない。OSが動的に管理するポート番号は49152～65535となっている。
 
 また、1024～65535のポートを**エフェメラルポート**（動的ポート）という。
 
-[TCP](#tcp)と[UDP](#udp)では同じポート番号を別の目的で使用することができる（[物理層](/note/internet/chapters/06_datalink_layer.ja.md#データリンクの概要)の[MACアドレス](/note/internet/chapters/06_datalink_layer.ja.md#macアドレス)、[ネットワーク層](/note/internet/chapters/07_ineternet_layer.ja.md)の[IPアドレス](/note/internet/chapters/07_ineternet_layer.ja.md#ipアドレス)、トランスポート層の[ポート番号](#ポート番号)などの識別子すべてを合わせてひとつの識別子として扱われるため）。
+[TCP](#tcp)と[UDP](#udp)では同じポート番号を別の目的で使用することができる（[物理層](./06_datalink_layer.ja.md#データリンクの概要)の[MACアドレス](./06_datalink_layer.ja.md#macアドレス)、[ネットワーク層](./07_ineternet_layer.ja.md)の[IPアドレス](./07_ineternet_layer.ja.md#ipアドレス)、トランスポート層の[ポート番号](#ポート番号)などの識別子すべてを合わせてひとつの識別子として扱われるため）。
 
 
 ## UDP
 
-**UDP**は複雑な制御は提供せず、[IP](/note/internet/chapters/07_ineternet_layer.ja.md#ip)を用いて[コネクションレス](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)の通信サービスを提供する。UDPは次のような用途に向いている。
+**UDP**は複雑な制御は提供せず、[IP](./07_ineternet_layer.ja.md#ip)を用いて[コネクションレス](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)の通信サービスを提供する。UDPは次のような用途に向いている。
 
-- 総パケット数が少ない通信（[DNS](/note/internet/chapters/07_ineternet_layer.ja.md#dns)、[SNMP](/note/internet/chapters/09_application_layer.ja.md#snmp)など）
+- 総パケット数が少ない通信（[DNS](./07_ineternet_layer.ja.md#dns)、[SNMP](./09_application_layer.ja.md#snmp)など）
 - 動画や音声などのマルチメディア通信（即時性が必要な通信）
-- [LAN](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#lanとwan)などの特定のネットワークに限定したアプリケーションの通信
-- 同報性が必要な通信（[ブロードキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)、[マルチキャスト](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)）
+- [LAN](./01_basic_knowledge_of_network.ja.md#lanとwan)などの特定のネットワークに限定したアプリケーションの通信
+- 同報性が必要な通信（[ブロードキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)、[マルチキャスト](./01_basic_knowledge_of_network.ja.md#通信相手の数による通信方式の分類)）
 
 ### UDPのフレームフォーマット
 
-![UDP フレームフォーマット](/note/internet/images/frame_format_udp.ja.jpg)
+![UDP フレームフォーマット](../images/frame_format_udp.ja.jpg)
 
 
 ## TCP
@@ -79,14 +79,14 @@ TCPやUDPを利用して通信するときには、**ソケット**と呼ばれ�
 **TCP**は高信頼性の通信を提供する。ネットワークの途中でパケットが喪失した場合の再送制御や、順序が入れ替わった場合の順序制御などを行う。TCPは次のような用途に向いている。
 
 - 信頼性が必要な通信
-- [インターネット](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)を介して大量のデータを転送する場合
+- [インターネット](./01_basic_knowledge_of_network.ja.md#インターネット)を介して大量のデータを転送する場合
 - ビデオオンデマンドやライブ配信といった、即時性がそれほど必要ない動画や音声の再生（**ストリーミング**）
 
 ※ストリーミング： 動画や音声のデータをダウンロードしながら再生する仕組み。再生するデータを数秒～数十秒分バッファに格納しながら再生を行うことで、パケット喪失時でも映像を止めることなく再生できる。
 
 ### TCPのフレームフォーマット
 
-![TCP フレームフォーマット](/note/internet/images/frame_format_tcp.ja.jpg)
+![TCP フレームフォーマット](../images/frame_format_tcp.ja.jpg)
 
 ### コネクション
 
@@ -108,13 +108,13 @@ TCPやUDPを利用して通信するときには、**ソケット**と呼ばれ�
 
 また、[コネクション](#コネクション)の切断処理には**FINパケット**を用いる。
 
-![TCP コネクション](/note/internet/images/tcp_connection.ja.jpg)
+![TCP コネクション](../images/tcp_connection.ja.jpg)
 
 ### TCPのデータ送信単位
 
 [TCP](#tcp)は[コネクション](#コネクション)の確立時に、通信を行うデータ単位を決定する。これを**最大セグメント長**（**MSS**: Maximum Segment Size）と呼ぶ。
 
-[MTU](/note/internet/chapters/07_ineternet_layer.ja.md#データリンクの抽象化)はIPヘッダを含めた転送最大サイズを表すが、MSSはTCPを含めない（ペイロードの）最大サイズを表す。
+[MTU](./07_ineternet_layer.ja.md#データリンクの抽象化)はIPヘッダを含めた転送最大サイズを表すが、MSSはTCPを含めない（ペイロードの）最大サイズを表す。
 
 ### ウィンドウ制御
 
@@ -132,7 +132,7 @@ TCPやUDPを利用して通信するときには、**ソケット**と呼ばれ�
 
 ### ふくそう制御
 
-最初からネットワークに大量のデータを送信すると、ネットワークが混雑して[ふくそう](/note/internet/chapters/07_ineternet_layer.ja.md#通信品質の制御)状態に陥る可能性がある。
+最初からネットワークに大量のデータを送信すると、ネットワークが混雑して[ふくそう](./07_ineternet_layer.ja.md#通信品質の制御)状態に陥る可能性がある。
 
 これを防ぐため、TCPでは通信開始時に**スロースタート**と呼ばれるアルゴリズムを用いて送信量の制御を行う。
 
@@ -154,14 +154,14 @@ TCPやUDPを利用して通信するときには、**ソケット**と呼ばれ�
 
 ### ピギーバック
 
-[アプリケーションプロトコル](/note/internet/chapters/09_application_layer.ja.md)によっては、送信したメッセージに対して相手が処理をして返事を返す場合がある。このような通信の場合に、[確認応答](#シーケンスと確認応答)と返事のデータパケットを1つのパケットとして送る、**ピギーバック**を用いることができる。
+[アプリケーションプロトコル](./09_application_layer.ja.md)によっては、送信したメッセージに対して相手が処理をして返事を返す場合がある。このような通信の場合に、[確認応答](#シーケンスと確認応答)と返事のデータパケットを1つのパケットとして送る、**ピギーバック**を用いることができる。
 
 
 ## その他のトランスポートプロトコル
 
 ### QUIC
 
-**QUIC**（Quick UDP Internet Connection）はGoogleによって提案され、標準化が進められている[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。[TCP](#tcp)には暗号化の機能はないが、QUICはそれ自体で暗号化通信を可能にする。
+**QUIC**（Quick UDP Internet Connection）はGoogleによって提案され、標準化が進められている[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。[TCP](#tcp)には暗号化の機能はないが、QUICはそれ自体で暗号化通信を可能にする。
 
 QUICは[UDP](#udp)を使用するため、[UDP](#udp)とQUICを合わせてトランスポートプロトコルの役割を果たす。QUICの特徴は以下の通り。
 
@@ -169,23 +169,23 @@ QUICは[UDP](#udp)を使用するため、[UDP](#udp)とQUICを合わせてト�
 - 低遅延の[コネクション](#コネクション)管理
 - 多重化（1コネクションで複数の[ストリーム](#tcpとudp)を同時に扱う）
 - 高精度な再送処理
-- [コネクション](#コネクション)のマイグレーション（[IPアドレス](/note/internet/chapters/07_ineternet_layer.ja.md#ipアドレス)が変わっても[コネクション](#コネクション)を維持する）
+- [コネクション](#コネクション)のマイグレーション（[IPアドレス](./07_ineternet_layer.ja.md#ipアドレス)が変わっても[コネクション](#コネクション)を維持する）
 
 [TCP](#tcp)では[コネクション](#コネクション)の確立だけで3回、TLSによる通信の暗号化を行う場合は7回のパケットのやり取りが必要であったが、QUICでは1回のパケットのやり取りで実現できる。
 
-![QUIC](/note/internet/images/quic.ja.jpg)
+![QUIC](../images/quic.ja.jpg)
 
 ### SCTP
 
-**SCTP**（Stream Control Transmission Protocol）は[TCP](#tcp)と同様、データの到達に関する信頼性を提供する[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)。
+**SCTP**（Stream Control Transmission Protocol）は[TCP](#tcp)と同様、データの到達に関する信頼性を提供する[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)。
 
-**マルチホーミング機能**（複数の[NIC](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#アドレスとnic)が付いている[ホスト](/note/internet/chapters/07_ineternet_layer.ja.md#ホストとルーターとノード)で、[NIC](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#アドレスとnic)が変わっても通信が継続できる）が特徴的。
+**マルチホーミング機能**（複数の[NIC](./01_basic_knowledge_of_network.ja.md#アドレスとnic)が付いている[ホスト](./07_ineternet_layer.ja.md#ホストとルーターとノード)で、[NIC](./01_basic_knowledge_of_network.ja.md#アドレスとnic)が変わっても通信が継続できる）が特徴的。
 
 ### DCCP
 
-**DCCP**（Datagram Congestion Control Protocol）は、[UDP](#udp)を補う[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)として登場した。
+**DCCP**（Datagram Congestion Control Protocol）は、[UDP](#udp)を補う[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)として登場した。
 
-[UDP](#udp)と同様にデータの到達性に関する信頼性はないが、[コネクション型](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で[コネクション](#コネクション)の確立と切断に関する信頼性を持つ。
+[UDP](#udp)と同様にデータの到達性に関する信頼性はないが、[コネクション型](./01_basic_knowledge_of_network.ja.md#コネクション型とコネクションレス型)で[コネクション](#コネクション)の確立と切断に関する信頼性を持つ。
 
 ### UDP-Lite
 

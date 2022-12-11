@@ -15,11 +15,11 @@
 
 ## OSI参照モデルの概要
 
-**OSI参照モデル**は[ISO](/note/internet/chapters/03_standardization_of_tcpip.ja.md#isoとietf)が提唱した、通信[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)を設計するときの指標となるモデル。通信に必要な機能を7つのレイヤに分けて役割を分担することで、ネットワーク[プロトコル](/note/internet/chapters/01_basic_knowledge_of_network.ja.md#プロトコル)の単純化を目的としている。
+**OSI参照モデル**は[ISO](./03_standardization_of_tcpip.ja.md#isoとietf)が提唱した、通信[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)を設計するときの指標となるモデル。通信に必要な機能を7つのレイヤに分けて役割を分担することで、ネットワーク[プロトコル](./01_basic_knowledge_of_network.ja.md#プロトコル)の単純化を目的としている。
 
 上位層と下位層の間でやり取りする際の決まりを**インタフェース**、通信相手の同じ階層とやり取りする際の決まり事を**プロトコル**という。
 
-![OSI参照モデル](/note/internet/images/osi_reference_model.ja.jpg)
+![OSI参照モデル](../images/osi_reference_model.ja.jpg)
 
 ### アプリケーション層
 
