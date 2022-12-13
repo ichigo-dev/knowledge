@@ -33,6 +33,7 @@ This is the progress of knowledge creation.
 
 - note/rust
 - note/programming
+- note/git
 
 
 ## Acknowledgments

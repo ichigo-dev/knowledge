@@ -261,12 +261,12 @@
 	- [ ] [break文](./chapters/05_control_flow.ja.md#break文)
 	- [ ] [continue文](./chapters/05_control_flow.ja.md#continue文)
 	- [ ] [while文](./chapters/05_control_flow.ja.md#while文)
-	- [ ] [do while文](./chapters/05_control_flow.ja.md#do- [ ]while文)
+	- [ ] [do while文](./chapters/05_control_flow.ja.md#do-while文)
 	- [ ] [for文](./chapters/05_control_flow.ja.md#for文)
 		- [ ] [カウンタ変数](./chapters/05_control_flow.ja.md#for文)
 		- [ ] [初期化処理](./chapters/05_control_flow.ja.md#for文)
 		- [ ] [更新処理](./chapters/05_control_flow.ja.md#for文)
-	- [ ] [for in文](./chapters/05_control_flow.ja.md#for- [ ]in文)
+	- [ ] [for in文](./chapters/05_control_flow.ja.md#for-in文)
 	- [ ] [loop文](./chapters/05_control_flow.ja.md#loop文)
 
 
