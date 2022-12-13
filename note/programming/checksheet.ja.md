@@ -272,6 +272,18 @@
 
 ## 関数
 
+- [ ] [関数（サブルーチン）](./chapters/06_function.ja.md#関数)
+- [ ] [引数](./chapters/06_function.ja.md#引数)
+	- [ ] [仮引数](./chapters/06_function.ja.md#引数)
+	- [ ] [実引数](./chapters/06_function.ja.md#引数)
+	- [ ] [オプション引数（任意引数）](./chapters/06_function.ja.md#引数)
+	- [ ] [可変長引数](./chapters/06_function.ja.md#引数)
+- [ ] [戻り値](./chapters/06_function.ja.md#戻り値)
+- [ ] [ダングリングポインタ](./chapters/06_function.ja.md#戻り値)
+- [ ] [関数定義](./chapters/06_function.ja.md#関数定義)
+- [ ] [関数呼び出し](./chapters/06_function.ja.md#関数呼び出し)
+- [ ] [標準関数](./chapters/06_function.ja.md#関数呼び出し)
+
 
 ## クラス
 
