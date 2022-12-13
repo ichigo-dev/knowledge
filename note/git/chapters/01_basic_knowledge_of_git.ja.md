@@ -60,8 +60,8 @@ Gitのバージョン情報が表示されればGitは既に使用できる状�
 Gitではファイルに対して誰が変更を加えたかを追跡する。そのため、最初に自身の名前とメールアドレスを設定しておく必要がある。ターミナルソフトウェアを開き、次のコマンドを実行する。
 
 ```bash
-$ git config --global user.name "[your name]"
-$ git config --global user.email "[your email address]"
+$ git config --global user.name <name>
+$ git config --global user.email <email>
 ```
 
 正しく設定できているかは、それぞれ次のコマンドにより確認できる。
