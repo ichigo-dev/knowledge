@@ -322,3 +322,15 @@
 
 
 ## ライブラリ
+
+- [ ] [コンポーネント](./chpaters/08_library.ja.md#コンポーネント)
+- [ ] [モジュール](./chpaters/08_library.ja.md#モジュール)
+- [ ] [ライブラリ](./chpaters/08_library.ja.md#ライブラリ)
+	- [ ] [標準ライブラリ](./chpaters/08_library.ja.md#標準ライブラリ)
+	- [ ] [サードパーティライブラリ](./chpaters/08_library.ja.md#サードパーティライブラリ)
+- [ ] [フレームワーク](./chpaters/08_library.ja.md#フレームワーク)
+- [ ] [パッケージ](./chpaters/08_library.ja.md#パッケージ)
+- [ ] [スイート](./chpaters/08_library.ja.md#パッケージ)
+- [ ] [バージョン](./chpaters/08_library.ja.md#バージョン)
+- [ ] [依存関係](./chpaters/08_library.ja.md#パッケージマネージャ)
+
