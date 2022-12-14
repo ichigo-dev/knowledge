@@ -28,11 +28,11 @@ This is the progress of knowledge creation.
 - note/aws (Japanese version)
 - note/internet (Japanese version)
 - note/web (Japanese version)
+- note/programming (Japanese version)
 
 #### In progress
 
 - note/rust
-- note/programming
 - note/git
 
 
