@@ -14,3 +14,4 @@
 1. [関数](./chapters/06_function.ja.md)
 1. [クラス](./chapters/07_class.ja.md)
 1. [ソフトウェアとライブラリ](./chapters/08_software_and_library.ja.md)
+1. [開発とチーム](./chapters/09_development_and_team.ja.md)

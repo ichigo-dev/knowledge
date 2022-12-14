@@ -378,3 +378,6 @@
 		- [ ] [Dispatcher](./chpaters/08_software_and_library.ja.md#flux)
 		- [ ] [Stor](./chpaters/08_software_and_library.ja.md#flux)
 		- [ ] [View](./chpaters/08_software_and_library.ja.md#flux)
+
+
+## 開発とチーム
