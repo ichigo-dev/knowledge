@@ -145,7 +145,7 @@
 	- [ ] [文字型](./chapters/03_data_type.ja.md#文字型)
 		- [ ] [ASCII文字](./chapters/03_data_type.ja.md#文字型)
 		- [ ] [マルチバイト文字](./chapters/03_data_type.ja.md#文字型)
-		- [ ] [UTF- [ ]8](./chapters/03_data_type.ja.md#文字型)
+		- [ ] [UTF-8](./chapters/03_data_type.ja.md#文字型)
 		- [ ] [Unicode](./chapters/03_data_type.ja.md#文字型)
 		- [ ] [文字列型](./chapters/03_data_type.ja.md#文字型)
 		- [ ] [文字リテラル](./chapters/03_data_type.ja.md#文字型)
