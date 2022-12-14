@@ -283,6 +283,9 @@
 - [ ] [関数定義](./chapters/06_function.ja.md#関数定義)
 - [ ] [関数呼び出し](./chapters/06_function.ja.md#関数呼び出し)
 - [ ] [標準関数](./chapters/06_function.ja.md#関数呼び出し)
+- [ ] [無名関数（クロージャ）](./chapters/06_function.ja.md#無名関数)
+	- [ ] [ラムダ式](./chapters/06_function.ja.md#無名関数)
+- [ ] [コールバック関数](./chapters/06_function.ja.md#コールバック関数)
 
 
 ## クラス
