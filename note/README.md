@@ -8,3 +8,4 @@
 - [Rust](./rust/README.md)
 - [Programming](./programming/README.md)
 - [Git](./git/README.md)
+- [Linux](./linux/README.md)

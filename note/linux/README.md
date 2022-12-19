@@ -1,0 +1,7 @@
+# Linux knowledge notes
+
+## Japanese
+
+- [チェックシート](./checksheet.ja.md)
+
+### Chapters

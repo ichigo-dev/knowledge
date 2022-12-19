@@ -15,7 +15,6 @@
 - HTML/CSS knowledge notes
 - JavaScript knowledge notes
 - Machine Learning knowledge notes
-- Linux knowledge notes
 
 
 ### Progress
@@ -33,6 +32,7 @@ This is the progress of knowledge creation.
 
 - note/rust
 - note/git
+- note/linux
 
 
 ## Acknowledgments
