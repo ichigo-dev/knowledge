@@ -304,6 +304,9 @@ $ git branch -m <old-name> <new-name>
 
 # ブランチの削除
 $ git branch -d <name>
+
+# リモートリポジトリのブランチを削除
+$ git push <remote> --delete <branch>
 ```
 
 ### ブランチの切り替え
