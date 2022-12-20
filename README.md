@@ -8,6 +8,10 @@
 
 ## Knowledge notes
 
+### TODO
+
+- Write update date for each article
+
 ### To be added
 
 - OS(CPU) knowledge notes
