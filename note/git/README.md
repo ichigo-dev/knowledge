@@ -7,8 +7,7 @@
 ### Chapters
 
 1. [Gitの基礎知識](./chapters/01_basic_knowledge_of_git.ja.md)
-1. [チュートリアル](./chapters/02_tutorial.ja.md)
-1. [基本コマンド](./chapters/03_basic.ja.md)
+1. [基本コマンド](./chapters/02_commands.ja.md)
 
 
 ## References
