@@ -1,4 +1,4 @@
-# Install of Arch Linux
+# Installation of Arch Linux
 
 
 ## Table of contents

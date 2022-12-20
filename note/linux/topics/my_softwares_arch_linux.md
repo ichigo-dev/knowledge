@@ -1,4 +1,4 @@
-# My software list
+# My softwares list for Arch Linux
 
 
 ## Table of contents
