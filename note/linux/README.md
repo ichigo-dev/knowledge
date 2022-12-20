@@ -6,7 +6,7 @@
 
 ### Chapters
 
-- [Linuxの基礎知識](./chapters/01_basic_knowledge_of_linux.ja.md)
+1. [Linuxの基礎知識](./chapters/01_basic_knowledge_of_linux.ja.md)
 
 
 ## Reference
