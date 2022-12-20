@@ -8,6 +8,7 @@
 
 1. [Gitの基礎知識](./chapters/01_basic_knowledge_of_git.ja.md)
 1. [基本コマンド](./chapters/02_commands.ja.md)
+1. [マージとコンフリクト](./chapters/03_merge_and_conflict.ja.md)
 
 
 ## References
