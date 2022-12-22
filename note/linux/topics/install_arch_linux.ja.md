@@ -135,20 +135,20 @@
 	```
 	# gdisk /dev/sda
 	
-	//	EFI
-	First sector	: (return)
-	Last sector	 : 512M
-	Type			: ef00
+	// EFI
+	First sector    : (return)
+	Last sector     : 512M
+	Type            : ef00
 	
-	//	archroot
-	First sector	: (return)
-	Last sector	 : -3G
-	Type			: 8300
+	// archroot
+	First sector    : (return)
+	Last sector     : -3G
+	Type            : 8300
 	
-	//	swap
-	First sector	: (return)
-	Last sector	 : (return)
-	Type			: 8200
+	// swap
+	First sector    : (return)
+	Last sector     : (return)
+	Type            : 8200
 	```
 
 1. それぞれのパーティションを以下のようにフォーマットする。
@@ -279,9 +279,9 @@
 	```
 
 	```
-	127.0.0.1	 localhost
-	::1		   localhost
-	127.0.0.1	 myhostname.localdomain myhostname
+	127.0.0.1  localhost
+	::1        localhost
+	127.0.0.1  myhostname.localdomain myhostname
 	```
 
 
@@ -482,5 +482,5 @@
 
 ## 参考リンク
 
-- [https://blog.livewing.net/install-arch-linux-2021](#https://blog.livewing.net/install-arch-linux-2021)
-- [https://neko-mac.blogspot.com/2021/O5/arch-linux.html](#https://neko-mac.blogspot.com/2021/O5/arch-linux.html)
+- [https://blog.livewing.net/install-arch-linux-2021](https://blog.livewing.net/install-arch-linux-2021)
+- [https://neko-mac.blogspot.com/2021/O5/arch-linux.html](https://neko-mac.blogspot.com/2021/O5/arch-linux.html)
