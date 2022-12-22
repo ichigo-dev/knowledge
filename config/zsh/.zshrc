@@ -2,45 +2,46 @@
 # Keybind
 ################################################################################
 
-alias n="nvim"
-alias ls="ls -F --color=auto"
-alias la="ls -lAFhX --color=auto"
+alias n='nvim'
+alias ls='ls -F --color=auto'
+alias la='ls -lAFhX --color=auto'
 
 # git
-alias g="git"
-alias gs="git status"
-alias ga="git add"
-alias gaa="git add ."
-alias gc="git commit"
-alias gp="git push"
-alias gpu="git pull"
-alias gb="git branch"
-alias gch="git checkout"
-alias gl="git log"
-alias glgg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gf="git fetch"
-alias gm="git merge"
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gp='git push'
+alias gpu='git pull'
+alias gb='git branch'
+alias gch='git checkout'
+alias gl='git log'
+alias glgg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+alias gf='git fetch'
+alias gm='git merge'
 
 # docker
-alias dc="sudo docker-compose"
-alias dcb="sudo docker-compose build"
-alias dcu="sudo docker-compose up"
-alias dcud="sudo docker-compose up -d"
-alias dcd="sudo docker-compose down"
-alias dce="sudo docker-compose exec"
-alias dcp="sudo docker-compose ps"
+alias dc='sudo docker-compose'
+alias dcb='sudo docker-compose build'
+alias dcu='sudo docker-compose up'
+alias dcud='sudo docker-compose up -d'
+alias dcd='sudo docker-compose down'
+alias dce='sudo docker-compose exec'
+alias dcp='sudo docker-compose ps'
 
 # tmux
-alias ta="tmux attach -t"
-alias td="tmux detach"
-alias tk="tmux kill-server"
-alias tls="tmux list-sessions"
-alias tns="tmux new-session -s"
-alias trs="tmux rename-session"
-alias tks="tmux kill-session -t"
-alias tlw="tmux list-window"
-alias tnw="tmux new-window"
-alias trw="tmux rename-window"
+alias ta='tmux attach -t'
+alias td='tmux detach'
+alias tk='tmux kill-server'
+alias tls='tmux list-sessions'
+alias tns='tmux new-session -s'
+alias trs='tmux rename-session'
+alias tks='tmux kill-session -t'
+alias tlw='tmux list-window'
+alias tnw='tmux new-window'
+alias trw='tmux rename-window'
+alias tsw='(){tmux swap-window -s $1 -t $2}'
 
 
 ################################################################################
