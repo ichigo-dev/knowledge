@@ -16,6 +16,7 @@
 ### Chapters
 
 1. [Linuxの基礎知識](./chapters/01_basic_knowledge_of_linux.ja.md)
+1. [ファイルとディレクトリ](./chapters/02_file_and_directory.ja.md)
 
 
 ### Topics
