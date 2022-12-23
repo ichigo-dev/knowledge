@@ -3,6 +3,8 @@
 
 ## AWSの基礎知識
 
+- [ ] [クラウドコンピューティングサービス](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
+- [ ] [オンプレミス](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
 - [ ] [AWS](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
 	- [ ] [可用性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [スケーラビリティ](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
