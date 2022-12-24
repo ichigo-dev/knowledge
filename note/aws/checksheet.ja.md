@@ -6,6 +6,7 @@
 - [ ] [クラウドコンピューティングサービス](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
 - [ ] [オンプレミス](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
 - [ ] [AWS](./chapters/01_basic_knowledge_of_aws.ja.md#aws)
+	- [ ] [信頼性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [可用性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [スケーラビリティ](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [パフォーマンス](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
