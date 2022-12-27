@@ -10,6 +10,7 @@
 	- [ ] [可用性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [耐久性・永続性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [耐障害性](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
+	- [ ] [障害回避](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [スケーラビリティ](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [パフォーマンス](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
 	- [ ] [コスト効率](./chapters/01_basic_knowledge_of_aws.ja.md#クラウド設計のポイント)
