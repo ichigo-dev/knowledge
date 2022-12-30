@@ -24,6 +24,7 @@
 		- [ ] [独立性・隔離性(Isolation)](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 		- [ ] [永続性・持続性(Durability)](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 		- [ ] [AFR（年間故障率）](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
+		- [ ] [強整合性](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 		- [ ] [結果整合性](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 	- [ ] [冗長性(Redundancy)、多重性](./chapters/01_basic_knowledge_of_aws.ja.md#冗長化)
 	- [ ] [冗長化](./chapters/01_basic_knowledge_of_aws.ja.md#冗長化)
@@ -41,6 +42,7 @@
 - [ ] [リージョン](./chapters/01_basic_knowledge_of_aws.ja.md#リージョンとaz)
 - [ ] [アベイラビリティゾーン(AZ)](./chapters/01_basic_knowledge_of_aws.ja.md#リージョンとaz)
 - [ ] [マルチAZ](./chapters/01_basic_knowledge_of_aws.ja.md#マルチaz)
+- [ ] [アーキテクチャ図](./chapters/01_basic_knowledge_of_aws.ja.md#アーキテクチャ図)
 
 
 ## サービス概要
