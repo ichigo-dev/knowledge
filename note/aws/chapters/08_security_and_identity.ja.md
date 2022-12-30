@@ -3,6 +3,7 @@
 
 ## 目次
 
+1. [IAM](#iam)
 1. [KMSとCloudHSM](#kmsとcloudhsm)
 	1. [KMSの機能](#kmsの機能)
 	1. [マスタキーとデータキー](#マスタキーとデータキー)
@@ -10,6 +11,11 @@
 1. [ACM](#acm)
 	1. [証明書の役割と実体](#証明書の役割と実体)
 	1. [ACMについて](#acmについて)
+
+
+## IAM
+
+**IAM**(AWS Identity and Access Management)は、ぽりしーの作成やユーザに対する権限の付与などといった権限管理のサービス。
 
 
 ## KMSとCloudHSM

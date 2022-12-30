@@ -109,28 +109,27 @@
 
 [AWS](#aws)で提供される数あるサービスの中でも、最も基本的で重要なサービスをいくつか示す。
 
-**IAM**（AWS Identity and Access Management）は、ポリシーの作成やユーザに対する権限の付与などといった、権限管理のサービス。
+[IAM](./08_security_and_identity.ja.md#iam)は、ポリシーの作成やユーザに対する権限の付与などといった、権限管理のサービス。
 
-**VPC**（Amazon Virtual Private Cloud）は、仮想ネットワーク環境におけるリソースの配置、接続性、[
-セキュリティ](#rasとrasis)などを制御するためのサービス。
+[VPC](./03_networking_and_content_delivery.ja.md#vpc)は、仮想ネットワーク環境におけるリソースの配置、接続性、[セキュリティ](#rasとrasis)などを制御するためのサービス。
 
-**EC2**（Amazon Elastic Computing Cloud）は、Webサーバやバッチサーバなど様々な役割を持ったサーバを構築できるサービス。ディスク領域として**EBS**（Amazon Elastic Block Store）を使用するので、併せて理解を深めるとよい。**ECS**（Amazon Elastic Container Service）や**Lambda**との違いを意識して使い分けることがポイント。
+[EC2](./04_computing.ja.md#ec2)は、Webサーバやバッチサーバなど様々な役割を持ったサーバを構築できるサービス。ディスク領域として[EBS](./06_storage.ja.md#ebs)を使用するので、併せて理解を深めるとよい。[ECS](./04_computing.ja.md#ecs)や[Lambda](./04_computing.ja.md#lambda)との違いを意識して使い分けることがポイント。
 
-**ELB**（Elastic Load balancing）は、EC2をWebサーバとして使用する際に、負荷分散の役割を果たすロードバランサのサービス。EC2のインスタンスを複数台配置してサーバの停止に備えるなど、[可用性](#rasとrasis)の高い設計を目指したときに必須となる。また、動的にサーバの数を増減させる**Auto Scaling**も、コスト最適化や[可用性](#rasとrasis)向上といった目的で重要なサービスとなる。
+[ELB](./04_computing.ja.md#elb)は、[EC2](./04_computing.ja.md#ec2)をWebサーバとして使用する際に、負荷分散の役割を果たすロードバランサのサービス。[EC2](./04_computing.ja.md#ec2)のインスタンスを複数台配置してサーバの停止に備えるなど、[可用性](#rasとrasis)の高い設計を目指したときに必須となる。また、動的にサーバの数を増減させる[Auto Scaling](./04_computing.ja.md#auto-scaling)も、コスト最適化や[可用性](#rasとrasis)向上といった目的で重要なサービスとなる。
 
-**RDS**（Amazon Relational Database Service）は、リレーショナルデータベースマネージドサービス（RDBMS）。中でも[AWS](#aws)が独自に開発したデータベースエンジンである**Aurora**は重要なので押さえておく。
+[RDS](./07_database.ja.md#rds)は、リレーショナルデータベースマネージドサービス（RDBMS）。中でも[AWS](#aws)が独自に開発したデータベースエンジンである[Aurora](./07_database.ja.md#aurora)は重要なので押さえておく。
 
-**S3**（Amazon Simple Storage Service）は、オブジェクトストレージサービスである。ファイルが置かれたことをトリガーに後続の処理が動いたり、他のシステムとのファイル連携に利用したり、サーバログの定期的な退避先に使われたりと、広いユースケースのあるサービスである。
+[S3](./06_storage.ja.md#s3)は、オブジェクトストレージサービスである。ファイルが置かれたことをトリガーに後続の処理が動いたり、他のシステムとのファイル連携に利用したり、サーバログの定期的な退避先に使われたりと、広いユースケースのあるサービスである。
 
 ### 重要なサービス
 
 続いて重要度が比較的高いサービスについて見ていく。
 
-**Route53**は、[AWS](#aws)のDNSサービスである。新旧のシステムを入れ替えるブルーグリーンデプロイメントとの相性も良い。
+[Route53](./03_networking_and_content_delivery.ja.md#route-53)は、[AWS](#aws)のDNSサービスである。新旧のシステムを入れ替えるブルーグリーンデプロイメントとの相性も良い。
 
-**CloudWatch**は、[AWS](#aws)のリソースの状態や各種ログの監視を行うサービス。
+[CloudWatch](./05_management_and_governance.ja.md#cloudwatch)は、[AWS](#aws)のリソースの状態や各種ログの監視を行うサービス。
 
-**CloudFormation**は、インフラを自動構築するサービス。また、自動構築を支援するサービスとしては**Elastic Beanstalk**や**OpsWorks**といったサービスもある。
+[CloudFormation](./11_provisioning.ja.md#cloudformation)は、インフラを自動構築するサービス。また、自動構築を支援するサービスとしては[Elastic Beanstalk](./11_provisioning.ja.md#elastic-beanstalk)や[OpsWorks](./11_provisioning.ja.md#opsworks)といったサービスもある。
 
 ### AWSのアーキテクチャ図
 
