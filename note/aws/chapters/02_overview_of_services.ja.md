@@ -33,11 +33,11 @@
 
 ## 運用支援サービス
 
-コンピューティングサービスはAWS上にシステムを構築する上で中核となるサービスであったが、AWSにはシステムが世の中に公開されてからの運用フェーズを支援するサービスも存在する。
+[コンピューティングサービス](#コンピューティングサービス)は[AWS](./01_basic_knowledge_of_aws.ja.md#aws)上にシステムを構築する上で中核となるサービスだが、[AWS](./01_basic_knowledge_of_aws.ja.md#aws)にはシステムが世の中に公開されてからの運用フェーズを支援するサービスも存在する。
 
-**Amazon CloudWatch**は、AWSリソースの状態を定期的に取得し、問題があればそれを通知するサービスである。また、独自のトリガーが発生した場合の処理を行う機能も提供されている。
+[Amazon CloudWatch](./05_management_and_governance.ja.md#cloudwatch)は[AWS](./01_basic_knowledge_of_aws.ja.md#aws)リソースの状態を定期的に取得し、問題があればそれを通知するサービスである。また、独自のトリガーが発生した場合の処理を行う機能も提供されている。
 
-**AWS CloudTrail**は、AWSリソースの作成や、マネジメントコンソールへのログインなどの操作を記録するサービスである。
+[AWS CloudTrail](./05_management_and_governance.ja.md#cloudtrail)は[AWS](./01_basic_knowledge_of_aws.ja.md#aws)リソースの作成や、マネジメントコンソールへのログインなどの操作を記録するサービスである。
 
 
 ## ストレージサービス
