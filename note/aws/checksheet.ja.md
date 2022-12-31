@@ -26,6 +26,8 @@
 		- [ ] [AFR（年間故障率）](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 		- [ ] [強整合性](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
 		- [ ] [結果整合性](./chapters/01_basic_knowledge_of_aws.ja.md#acid特性)
+	- [ ] [負荷分散](./chapters/01_basic_knowledge_of_aws.ja.md#負荷分散)
+	- [ ] [ロードバランサ](./chapters/01_basic_knowledge_of_aws.ja.md#負荷分散)
 	- [ ] [冗長性(Redundancy)、多重性](./chapters/01_basic_knowledge_of_aws.ja.md#冗長化)
 	- [ ] [冗長化](./chapters/01_basic_knowledge_of_aws.ja.md#冗長化)
 		- [ ] [ホットスタンバイ](./chapters/01_basic_knowledge_of_aws.ja.md#ホットスタンバイとウォームスタンバイとコールドスタンバイ)
