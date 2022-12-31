@@ -1,6 +1,6 @@
 # サービス概要
 
-（最終更新： 2022/12/30）
+（最終更新： 2022/12/31）
 
 
 ## 目次
@@ -24,11 +24,11 @@
 
 **コンピューティングサービス**は、アプリケーションを稼働させるインフラストラクチャサービスで、システムアーキテクチャの中核を担う。
 
-**EC2**は、仮想サーバを提供するコンピューティングサービスで、いわゆる[IaaS](../../internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)（Infrastructure as a Service）型のサービス。**Elastic Load Balancing**（ELB）や**Auto Scaling**と組み合わせることで、負荷分散を動的に行うことができる。
+[EC2](./04_computing.ja.md#ec2)は、仮想サーバを提供するコンピューティングサービスで、いわゆる[IaaS（Infrastructure as a Service）](../../internet/chapters/01_basic_knowledge_of_network.ja.md#クラウドの利用)型のサービス。[Elastic Load Balancing（ELB）](./04_computing.ja.md#elb)や[Auto Scaling](./04_computing.ja.md#auto-scaling)と組み合わせることで、[負荷分散](./01_basic_knowledge_of_aws.ja.md#負荷分散)を動的に行うことができる。
 
-**ECS**は、Dockerコンテナの実行環境を提供するサービスである。
+[ECS](./04_computing.ja.md#ecs)は、Dockerコンテナの実行環境を提供するサービスである。
 
-**Lambda**は、サーバを用意しなくてもプログラムを実行できる環境を提供するサービスである。**サーバレスアーキテクチャ**の中心ともいえるサービスで、拡張性やコスト効率の面でメリットがある。サーバのセットアップやメンテナンスの必要がないため、アプリケーションの開発に集中できる。
+[Lambda](./04_computing.ja.md#lambda)は、サーバを用意しなくてもプログラムを実行できる環境を提供するサービスである。**サーバレスアーキテクチャ**の中心ともいえるサービスで、拡張性やコスト効率の面でメリットがある。サーバのセットアップやメンテナンスの必要がないため、アプリケーションの開発に集中できる。
 
 
 ## 運用支援サービス
