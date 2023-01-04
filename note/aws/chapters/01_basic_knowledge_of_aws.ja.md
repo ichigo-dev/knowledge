@@ -156,7 +156,7 @@
 
 [EC2](./04_computing.ja.md#ec2)は、Webサーバやバッチサーバなど様々な役割を持ったサーバを構築できるサービス。ディスク領域として[EBS](./06_storage.ja.md#ebs)を使用するので、併せて理解を深めるとよい。[ECS](./04_computing.ja.md#ecs)や[Lambda](./04_computing.ja.md#lambda)との違いを意識して使い分けることがポイント。
 
-[ELB](./04_computing.ja.md#elb)は、[EC2](./04_computing.ja.md#ec2)をWebサーバとして使用する際に、負荷分散の役割を果たすロードバランサのサービス。[EC2](./04_computing.ja.md#ec2)のインスタンスを複数台配置してサーバの停止に備えるなど、[可用性](#rasとrasis)の高い設計を目指したときに必須となる。また、動的にサーバの数を増減させる[Auto Scaling](./04_computing.ja.md#auto-scaling)も、コスト最適化や[可用性](#rasとrasis)向上といった目的で重要なサービスとなる。
+[ELB](./04_computing.ja.md#elb)は、[EC2](./04_computing.ja.md#ec2)をWebサーバとして使用する際に、負荷分散の役割を果たすロードバランサのサービス。[EC2](./04_computing.ja.md#ec2)の[インスタンス](./04_computing.ja.md#ec2)を複数台配置してサーバの停止に備えるなど、[可用性](#rasとrasis)の高い設計を目指したときに必須となる。また、動的にサーバの数を増減させる[Auto Scaling](./04_computing.ja.md#auto-scaling)も、コスト最適化や[可用性](#rasとrasis)向上といった目的で重要なサービスとなる。
 
 [RDS](./07_database.ja.md#rds)は、リレーショナルデータベースマネージドサービス（RDBMS）。中でも[AWS](#aws)が独自に開発したデータベースエンジンである[Aurora](./07_database.ja.md#aurora)は重要なので押さえておく。
 

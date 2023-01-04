@@ -67,7 +67,7 @@
 
 [パブリックサブネット](#サブネット)は[ルーティング](../../internet/chapters/10_routing_protocol.ja.md#経路制御)でインターネットゲートウェイを向いているもの、[プライベートサブネット](#サブネット)は[ルーティング](../../internet/chapters/10_routing_protocol.ja.md#経路制御)で直接インターネットゲートウェイに向いていないものとなる。
 
-[EC2](./04_computing.ja.md#ec2)インスタンスが[インターネット](../../internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)と通信するには、パブリックIPを持っているか、**NATゲートウェイ**を経由する必要がある。
+[EC2インスタンス](./04_computing.ja.md#ec2)が[インターネット](../../internet/chapters/01_basic_knowledge_of_network.ja.md#インターネット)と通信するには、パブリックIPを持っているか、**NATゲートウェイ**を経由する必要がある。
 
 **仮想プライベートゲートウェイ**（VPG）は[VPC](#vpc)が[VPN](../../internet/chapters/06_datalink_layer.ja.md#vpn)や[Direct Connect](#direct-connect)と接続するための[ゲートウェイ](../../internet/chapters/01_basic_knowledge_of_network.ja.md#ゲートウェイ)。
 
@@ -81,7 +81,7 @@
 
 ### ピアリング接続
 
-**VPCピアリング**は2つの[VPC](#vpc)間でプライベートな接続をするための機能。[EC2](./04_computing.ja.md#ec2)インスタンスなどとは通信できるが、[IGW](#ゲートウェイ)や[VGW](#ゲートウェイ)には**トランジット**（接続）できない。
+**VPCピアリング**は2つの[VPC](#vpc)間でプライベートな接続をするための機能。[EC2インスタンス](./04_computing.ja.md#ec2)などとは通信できるが、[IGW](#ゲートウェイ)や[VGW](#ゲートウェイ)には**トランジット**（接続）できない。
 
 ### VPCフローログ
 

@@ -102,12 +102,12 @@
 
 **IAMロール**は永続的な権限を保持するユーザとは異なり、一時的に[AWS](./01_basic_knowledge_of_aws.ja.md#aws)リソースへのアクセス権限を付与する場合に使用する。
 
-- [EC2](./04_computing.ja.md#ec2)インスタンス上で稼働するアプリケーションに一時的に[AWS](./01_basic_knowledge_of_aws.ja.md#aws)のリソースへアクセスする権限を与えたい場合
+- [EC2インスタンス](./04_computing.ja.md#ec2)上で稼働するアプリケーションに一時的に[AWS](./01_basic_knowledge_of_aws.ja.md#aws)のリソースへアクセスする権限を与えたい場合
 - 複数の[AWSアカウント](#awsアカウントの種類)間のリソースを1つの[IAMユーザ](#iamユーザとiamグループ)で操作したい場合（**クロスアカウントアクセス**）
 - 社内のAD（Active Directory）サーバに登録されているアカウントを使用して[AWS](./01_basic_knowledge_of_aws.ja.md#aws)リソースにアクセスしたい場合（**IDフェデレーション**）
 - FacebookやGoogleアカウントを使用して[AWS](./01_basic_knowledge_of_aws.ja.md#aws)リソースにアクセスしたい場合（**Web ID フェデレーション**）
 
-「アプリケーションに対して[SES](./09_application_integration.ja.md#ses)への一時的なアクセス権限を[EC2](./04_computing.ja.md#ec2)インスタンスから取得し、[SES](./09_application_integration.ja.md#ses)からメールを送信する」といったパターンがよく用いられている。
+「アプリケーションに対して[SES](./09_application_integration.ja.md#ses)への一時的なアクセス権限を[EC2インスタンス](./04_computing.ja.md#ec2)から取得し、[SES](./09_application_integration.ja.md#ses)からメールを送信する」といったパターンがよく用いられている。
 
 
 ## アプリケーションサービス
