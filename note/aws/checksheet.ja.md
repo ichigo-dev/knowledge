@@ -1,6 +1,6 @@
 # 『AWS』チェックシート
 
-（最終更新： 2022/12/30）
+（最終更新： 2023/1/5）
 
 
 ## AWSの基礎知識
@@ -158,16 +158,16 @@
 - [ ] [EC2](./chapters/04_computing.ja.md#ec2)
 	- [ ] [イメージ](./chapters/04_computing.ja.md#ec2)
 		- [ ] [AMI](./chapters/04_computing.ja.md#ec2)
-	- [ ] [インスタンスタイプ](./chapters/04_computing.ja.md#ec2における性能)
-		- [ ] [インスタンスファミリー](./chapters/04_computing.ja.md#ec2における性能)
-		- [ ] [世代](./chapters/04_computing.ja.md#ec2における性能)
-		- [ ] [インスタンスサイズ](./chapters/04_computing.ja.md#ec2における性能)
-		- [ ] [EBS最適化インスタンス](./chapters/04_computing.ja.md#ec2における性能)
+	- [ ] [インスタンスタイプ](./chapters/04_computing.ja.md#ec2の性能)
+		- [ ] [インスタンスファミリー](./chapters/04_computing.ja.md#ec2の性能)
+		- [ ] [世代](./chapters/04_computing.ja.md#ec2の性能)
+		- [ ] [インスタンスサイズ](./chapters/04_computing.ja.md#ec2の性能)
+		- [ ] [EBS最適化インスタンス](./chapters/04_computing.ja.md#ec2の性能)
 	- [ ] [オンデマンドインスタンス](./chapters/04_computing.ja.md#スポットインスタンスとリザーブドインスタンス)
-		- [ ] [従量課金型](./chapters/04_computing.ja.md#ec2における費用)
-		- [ ] [Running](./chapters/04_computing.ja.md#ec2における費用)
-		- [ ] [Stopped](./chapters/04_computing.ja.md#ec2における費用)
-		- [ ] [Terminated](./chapters/04_computing.ja.md#ec2における費用)
+		- [ ] [従量課金型](./chapters/04_computing.ja.md#ec2の費用)
+		- [ ] [Running](./chapters/04_computing.ja.md#ec2の費用)
+		- [ ] [Stopped](./chapters/04_computing.ja.md#ec2の費用)
+		- [ ] [Terminated](./chapters/04_computing.ja.md#ec2の費用)
 	- [ ] [スポットインスタンス](./chapters/04_computing.ja.md#スポットインスタンスとリザーブドインスタンス)
 	- [ ] [リザーブドインスタンス](./chapters/04_computing.ja.md#スポットインスタンスとリザーブドインスタンス)
 	- [ ] [スケジュールされたリザーブドインスタンス](./chapters/04_computing.ja.md#スポットインスタンスとリザーブドインスタンス)

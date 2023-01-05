@@ -15,7 +15,7 @@
 ### To be added
 
 - OS(CPU) knowledge notes
-- Computer knowledge notes
+- Computer knowledge notes(CPU, memory, GPU...)
 - HTML/CSS knowledge notes
 - JavaScript knowledge notes
 - Machine Learning knowledge notes
