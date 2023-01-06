@@ -10,7 +10,7 @@
 
 ### TODO
 
-- Write update date for each article
+- Update "note" to "note2"
 
 ### To be added
 
