@@ -4,6 +4,7 @@
 ## 目次
 
 1. [コンピュータの基礎知識](./chapters/01_basic_knowledge_of_computer.md)
+1. [コンピュータ内部のデータ表現](./chapters/02_data_representation.md)
 
 
 ## 参考文献
