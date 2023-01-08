@@ -4,7 +4,7 @@
 ## 目次
 
 1. [コンピュータの基礎知識](./chapters/01_basic_knowledge_of_computer.md)
-1. [コンピュータとデータ](./chapters/02_data.md)
+1. [コンピュータが扱うデータ](./chapters/02_data.md)
 
 
 ## 参考文献
