@@ -3,7 +3,8 @@
 
 ## 目次
 
-1. [コンピュータと数学](./chapters/01_computer_and_mathematics.md)
+1. [コンピュータと離散数学](./chapters/01_discrete_mathematics.md)
+1. [コンピュータと応用数学](./chapters/02_applied_mathematics.md)
 
 
 ## 参考文献
