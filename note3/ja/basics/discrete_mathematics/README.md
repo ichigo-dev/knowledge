@@ -10,3 +10,4 @@
 
 1. [コンピュータと数](./_/chapters/computer_and_number.md)
 1. [基数](./_/chapters/radix.md)
+1. [2進数による数値の表現](./_/chapters/numeric_representation.md)
