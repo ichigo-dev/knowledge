@@ -3,7 +3,7 @@
 
 ## 学習ステップ
 
-1. [1章](./_/chapters/01_xxx.md)
+1. [1章](./_/chapters/xxx.md)
 
 
 ## カテゴリ

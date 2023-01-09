@@ -1,9 +1,9 @@
-# 基礎理論
+# 『基礎理論』
 
 
 ## 学習ステップ
 
-1. [コンピュータと数学](./_/chapters/01_computer_and_mathematics.md)
+1. [コンピュータと数学](./_/chapters/computer_and_mathematics.md)
 
 
 ## カテゴリ
