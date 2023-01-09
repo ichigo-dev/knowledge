@@ -74,3 +74,8 @@ $$
 \overline{A \cup B} = \overline{A} \cap \overline{B} \\
 \overline{A \cap B} = \overline{A} \cup \overline{B}
 $$
+
+
+## 参考文献
+
+- [山本真基. 離散数学 テキスト. 成蹊大学, 2022, 91](https://www.ci.seikei.ac.jp/yamamoto/lecture/dm/text.pdf)
