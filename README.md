@@ -3,8 +3,8 @@
 ![thumbnail](./assets/images/thumbnail.png)
 
 - [note](./note/README.md)
-- [note2](./note/README.md)
-- [note3](./note/README.md)
+- [note2](./note2/README.md)
+- [note3](./note3/README.md)
 - [config](./config/README.md)
 
 
