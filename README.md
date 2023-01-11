@@ -3,6 +3,8 @@
 ![thumbnail](./assets/images/thumbnail.png)
 
 - [note](./note/README.md)
+- [note2](./note/README.md)
+- [note3](./note/README.md)
 - [config](./config/README.md)
 
 
@@ -10,7 +12,7 @@
 
 ### TODO
 
-- Update "note" to "note2"
+- Update "note" and "note2" to "note3"
 
 ### To be added
 
