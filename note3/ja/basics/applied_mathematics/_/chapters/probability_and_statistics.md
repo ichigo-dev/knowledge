@@ -211,7 +211,7 @@ P(X = k) = {}_n C_k p^k (1 - p)^{n-k} & (k = 0, 1, 2, \cdots, n)
 
 ```math
 \begin{array}{cc}
-P(X = k) = \frac{\labmda^k e^{-\labmda}}{k!} & (k = 0, 1, 2, \cdots)
+P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} & (k = 0, 1, 2, \cdots)
 \end{array}
 ```
 
@@ -222,7 +222,7 @@ P(X = k) = \frac{\labmda^k e^{-\labmda}}{k!} & (k = 0, 1, 2, \cdots)
 [平均値](#平均値)を $\mu$ 、[分散](#分散)を $s^2$ とおく。このとき、[確率変数](#確率変数と確率分布) $X$ 配下の式で表され、$X$ が正規分布に従うとき $X \sim N(\mu, s^2)$ と表す。
 
 ```math
-f(x) = \farc{1}{\sqrt{2 \pi s^2}} \exp(-\farc{(x - \mu)^2}{2 s^2})
+f(x) = \frac{1}{\sqrt{2 \pi s^2}} \exp(-\frac{(x - \mu)^2}{2 s^2})
 ```
 
 
