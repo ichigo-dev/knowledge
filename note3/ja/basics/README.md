@@ -7,3 +7,4 @@
 1. [応用数学](./applied_mathematics/README.md)
 1. [情報理論](./information_theory/README.md)
 1. [通信理論](./communication_theory/README.md)
+1. [計測と制御](./measurement_and_control/README.md)

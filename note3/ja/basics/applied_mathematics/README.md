@@ -1,11 +1,6 @@
 # 『応用数学』
 
 
-## 概要
-
-コンテンツ準備中
-
-
 ## 学習ステップ
 
 1. [確率と統計](./_/chapters/probability_and_statistics.md)
