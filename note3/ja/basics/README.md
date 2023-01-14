@@ -1,6 +1,11 @@
 # 『基礎理論』
 
 
+## 学習ステップ
+
+1. [コンピュータと数](./_/chapters/computer_and_number.md)
+
+
 ## カテゴリ
 
 1. [離散数学](./discrete_mathematics/README.md)
