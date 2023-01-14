@@ -21,23 +21,23 @@
 
 **シフト演算**は、桁を移動することでべき乗を計算する方法。[n進法](./radix.md#基数)において桁を左へシフトすると数は元のn倍に、右へシフトすると数は元の1/n倍になる。
 
-[2進数](../radix.md#2進数)で表された数は左にk[ビット](./computer_and_number.md#データの単位)シフトすることで元の数の $2^k$ 倍に、右にk[ビット](./computer_and_number.md#データの単位)シフトすることで元の数の $2^{-k}$ 倍になる。ただしあふれた[ビット](./computer_and_number.md#データの単位)は捨てられるため、必ず正しい結果になるとは限らない。
+[2進数](../radix.md#2進数)で表された数は左にk[ビット](../../../_/chapters/computer_and_number.md#データの単位)シフトすることで元の数の $2^k$ 倍に、右にk[ビット](../../../_/chapters/computer_and_number.md#データの単位)シフトすることで元の数の $2^{-k}$ 倍になる。ただしあふれた[ビット](../../../_/chapters/computer_and_number.md#データの単位)は捨てられるため、必ず正しい結果になるとは限らない。
 
 ### 論理シフト
 
-**論理シフト**は、[最上位ビット](./computer_and_number.md#msbとlsb)を[符号ビット](./numeric_representation.md#符号ビット)として扱わずに[シフト演算](#シフト演算)を行う。[符号ビット](./numeric_representation.md#符号ビット)が存在しないため、負の数を扱うことはできない。
+**論理シフト**は、[最上位ビット](../../../_/chapters/computer_and_number.md#msbとlsb)を[符号ビット](./numeric_representation.md#符号ビット)として扱わずに[シフト演算](#シフト演算)を行う。[符号ビット](./numeric_representation.md#符号ビット)が存在しないため、負の数を扱うことはできない。
 
-**論理右シフト**は、[2進数](./radix.md#2進数)の数字列の全ての[ビット](./computer_and_number.md#データの単位)をそのまま右へ移動し、空いた左端の[ビット](./computer_and_number.md#データの単位)には0を埋める。
+**論理右シフト**は、[2進数](./radix.md#2進数)の数字列の全ての[ビット](../../../_/chapters/computer_and_number.md#データの単位)をそのまま右へ移動し、空いた左端の[ビット](../../../_/chapters/computer_and_number.md#データの単位)には0を埋める。
 
-**論理左シフト**は、[2進数](./radix.md#2進数)の数字列の全ての[ビット](./computer_and_number.md#データの単位)をそのまま左へ移動し、空いた右端の[ビット](./computer_and_number.md#データの単位)には0を埋める。
+**論理左シフト**は、[2進数](./radix.md#2進数)の数字列の全ての[ビット](../../../_/chapters/computer_and_number.md#データの単位)をそのまま左へ移動し、空いた右端の[ビット](../../../_/chapters/computer_and_number.md#データの単位)には0を埋める。
 
 ### 算術演算
 
-**算術演算**は、[最上位ビット](./computer_and_number.md#msbとlsb)を[符号ビット](./numeric_representation.md#符号ビット)として固定して[シフト演算](#シフト演算)を行う。
+**算術演算**は、[最上位ビット](../../../_/chapters/computer_and_number.md#msbとlsb)を[符号ビット](./numeric_representation.md#符号ビット)として固定して[シフト演算](#シフト演算)を行う。
 
-**算術右シフト**は、符号付き[2進数](./radix.md#2進数)の[符号ビット](./numeric_representation.md#符号ビット)以外の全ての[ビット](./computer_and_number.md#データの単位)をそのまま右へ移動し、空いた左端の[ビット](./computer_and_number.md#データの単位)には[符号ビット](./numeric_representation.md#符号ビット)と同じ値を埋める。
+**算術右シフト**は、符号付き[2進数](./radix.md#2進数)の[符号ビット](./numeric_representation.md#符号ビット)以外の全ての[ビット](../../../_/chapters/computer_and_number.md#データの単位)をそのまま右へ移動し、空いた左端の[ビット](../../../_/chapters/computer_and_number.md#データの単位)には[符号ビット](./numeric_representation.md#符号ビット)と同じ値を埋める。
 
-**算術左シフト**は、符号付き[2進数](./radix.md#2進数)の[符号ビット](./numeric_representation.md#符号ビット)以外の全ての[ビット](./computer_and_number.md#データの単位)をそのまま左へ移動し、空いた右端の[ビット](./computer_and_number.md#データの単位)には0を埋める。
+**算術左シフト**は、符号付き[2進数](./radix.md#2進数)の[符号ビット](./numeric_representation.md#符号ビット)以外の全ての[ビット](../../../_/chapters/computer_and_number.md#データの単位)をそのまま左へ移動し、空いた右端の[ビット](../../../_/chapters/computer_and_number.md#データの単位)には0を埋める。
 
 
 ## 誤差
@@ -74,7 +74,7 @@
 
 ### オーバフロー
 
-**オーバフロー**（**桁あふれ**）は、演算の結果が決められた桁数の中で表すことができる数値の範囲を超えることで発生する[誤差](#誤差)。例えば、1[バイト](./computer_and_number.md#データの単位)の整数データであれば、表現できる範囲は $-128 \sim 127$ であるが、上限である127を超える結果となるような演算を行うと発生する。
+**オーバフロー**（**桁あふれ**）は、演算の結果が決められた桁数の中で表すことができる数値の範囲を超えることで発生する[誤差](#誤差)。例えば、1[バイト](../../../_/chapters/computer_and_number.md#データの単位)の整数データであれば、表現できる範囲は $-128 \sim 127$ であるが、上限である127を超える結果となるような演算を行うと発生する。
 
 ### アンダーフロー
 
