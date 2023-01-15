@@ -16,3 +16,4 @@
 	1. [ソフトウェア](./computer/software/README.md)
 	1. [ハードウェア](./computer/hardware/README.md)
 1. [ネットワーク](./network/README.md)
+1. [人工知能](./artifical_intelligence/README.md)
