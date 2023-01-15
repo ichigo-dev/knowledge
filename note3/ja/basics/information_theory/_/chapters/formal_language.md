@@ -1,6 +1,6 @@
 # 『形式言語』
 
-（最終更新： 2023-01-14）
+（最終更新： 2023-01-15）
 
 
 ## 目次
@@ -20,6 +20,8 @@
 **逆ポーランド記法**（**後置記法**）とは、数式を表現するための記法で、演算子を被演算子の後ろに記述する[形式言語](#形式言語)。括弧を使わずに記述することができる。
 
 例えば、 $A - (B + (C \tiems D))$ を逆ポーランド記法で表すと、 $ABCD \times +-$ となる。
+
+逆ポーランド記法は、計算式の演算子と非演算子を[木](../../../applied_mathematics/_/chapters/graph_theory.md#木)の各[ノード](../../../applied_mathematics/_/chapters/graph_theory.md#グラフ)としたものを[後行順](../../../applied_mathematics/_/chapters/graph_theory.md#走査)で[走査](../../../applied_mathematics/_/chapters/graph_theory.md#走査)したものとなる。
 
 
 ## BNF
@@ -59,3 +61,4 @@
 ## 参考文献
 
 - [角谷一成.令和05年 基本情報技術者合格教本.株式会社技術評論社, 2022, 575](https://gihyo.jp/book/2022/978-4-297-13164-7)
+- [瀬戸美月.徹底攻略 応用情報技術者教科書 令和4年度.株式会社インプレス, 2021, 814](https://book.impress.co.jp/books/1121101057)
