@@ -11,4 +11,3 @@
 1. [オートマトン](./_/chapters/automaton.md)
 1. [計算量](./_/chapters/computational_complexity.md)
 1. [コンパイラ理論](./_/chapters/compiler_theory.md)
-1. [プログラミング言語論](./_/chapters/programming_language_theory.md)
