@@ -7,3 +7,4 @@
 1. [プロセッサ](./_/chapters/processor.md)
 1. [メモリ](./_/chapters/memory.md)
 1. [バス](./_/chapters/bus.md)
+1. [入出力装置](./_/chapters/io_unit.md)
