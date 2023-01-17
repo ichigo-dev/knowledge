@@ -121,3 +121,9 @@ setopt print_eight_bit
 setopt ignore_eof
 setopt interactive_comments
 setopt extended_glob
+
+# Set default editor
+export EDITOR="nvim"
+
+# Shell bindkey mode
+setopt vi
