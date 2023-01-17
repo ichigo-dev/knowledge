@@ -8,3 +8,4 @@
 1. [メモリ](./_/chapters/memory.md)
 1. [バス](./_/chapters/bus.md)
 1. [入出力装置](./_/chapters/io_unit.md)
+1. [補助記憶装置](./_/chapters/auxiliary_memory_unit.md)
