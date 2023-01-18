@@ -10,4 +10,3 @@
 
 1. [ハードウェア](./hardware/README.md)
 1. [ソフトウェア](./software/README.md)
-1. [システム](./system/README.md)
