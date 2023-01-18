@@ -9,6 +9,7 @@
 	1. [応用数学](./basics/applied_mathematics/README.md)
 	1. [情報理論](./basics/information_theory/README.md)
 	1. [通信理論](./basics/communication_theory/README.md)
+	1. [計測と制御](./basics/measurement_and_control/README.md)
 1. [アルゴリズム](./algorithm/README.md)
 1. [プログラミング](./programming/README.md)
 1. [コンピュータ](./computer/README.md)
