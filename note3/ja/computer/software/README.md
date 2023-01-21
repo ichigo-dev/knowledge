@@ -7,5 +7,4 @@
 1. [オペレーティングシステム](./_/chapters/operationg_system.md)
 1. [ミドルウェア](./_/chapters/middleware.md)
 1. [ファイルシステム](./_/chapters/file_system.md)
-1. [開発ツール](./_/chapters/development_tool.md)
 1. [オープンソースソフトウェア](./_/chapters/open_source_software.md)
