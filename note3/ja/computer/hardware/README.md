@@ -9,3 +9,6 @@
 1. [バス](./_/chapters/bus.md)
 1. [入出力装置](./_/chapters/io_unit.md)
 1. [補助記憶装置](./_/chapters/auxiliary_memory_unit.md)
+1. [論理回路](./_/chapters/logic_circuit.md)
+1. [機械電子制御](./_/chapters/mechanical_electronic_control.md)
+1. [IC](./_/chapters/ic.md)
