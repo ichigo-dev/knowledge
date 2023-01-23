@@ -4,6 +4,7 @@
 ## 学習ステップ
 
 1. [プログラミングの基礎知識](./_/chapters/basic_knowledge_of_programming.md)
+1. [コーディングルール](./_/chapters/coding_rule.md)
 1. [変数](./_/chapters/variable.md)
 1. [データ型](./_/chapters/data_type.md)
 1. [演算](./_/chapters/operation.md)
