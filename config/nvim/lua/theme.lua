@@ -2,5 +2,4 @@
 -- Theme
 --------------------------------------------------------------------------------
 
-vim.o.background='dark'
-vim.cmd 'colorscheme onehalfdark'
+vim.cmd "colorscheme iceberg"
