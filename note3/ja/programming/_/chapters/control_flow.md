@@ -1,6 +1,6 @@
 # 『制御フロー』
 
-（最終更新： 2023-01-27）
+（最終更新： 2023-01-28）
 
 
 ## 目次
@@ -16,6 +16,11 @@
 1. [反復](#反復)
 	1. [break文](#break文)
 	1. [continue文](#continue文)
+	1. [while文](#while文)
+	1. [do while文](#do-while文)
+	1. [for文](#for文)
+	1. [for in文](#for-in文)
+	1. [loop文](#loop文)
 
 
 ## 制御フロー
@@ -290,3 +295,204 @@ switch( $input_num )
 ### continue文
 
 `continue` 文は、現在実行中のループ処理ブロックを中断して、次のループを実行する（ループ処理ブロックの先頭に戻る）ための制御構文。ループ文をネストした多重ループにおいては、 `continue` 文から見て最も内側の（近い）ループの処理を継続する。
+
+### while文
+
+`while` 文は、与えられた条件式を評価して、それが `true` （言語によっては `true` に類するもの（整数型の0以外や文字列型で空文字でない場合等）が含まれる場合もある）である間、直後の処理ブロックを実行する。
+
+```c
+// C言語
+
+#include <stdio.h>
+
+int main()
+{
+    int input_num;
+    printf("> ");
+    scanf("%d", &input_num);
+
+    while( input_num > 0 )
+    {
+        printf("%d\n", input_num);
+        input_num--;
+    }
+
+    return 0;
+}
+```
+
+```php
+<?php
+
+// PHP
+
+$input_num = $_POST["input_num"];
+
+while( $input_num > 0 )
+{
+    echo($input_num);
+    $input_num--;
+}
+
+?>
+```
+
+### do while文
+
+`do while` 文は、 `while` 文と似ているが、処理ブロックの最初ではなく最後に条件式の評価を行う。そのため、最初のループが必ず実行される（ `while` 文では、最初から条件式が `false` であった場合には一度も実行されない）。
+
+```c
+// C言語
+
+#include <stdio.h>
+
+int main()
+{
+    int input_num;
+    printf("> ");
+    scanf("%d", &input_num);
+
+    do
+    {
+        printf("%d\n", input_num);
+        input_num--;
+    } while( input_num > 0 )
+
+    return 0;
+}
+```
+
+```php
+<?php
+
+// PHP
+
+$input_num = $_POST["input_num"];
+
+do
+{
+    echo($input_num);
+    $input_num--;
+} while( $input_num > 0 )
+
+?>
+```
+
+### for文
+
+`for` 文は、ループの回数を数える**カウンタ変数**を用いて、カウンタ変数に関する条件式を評価しながら反復処理を行う。ループ開始前のカウンタ変数の初期化式、カウンタ変数に関する条件式、1回のループ終了時のカウンタ変数の更新式を与えることで、ループの回数が決定される。 `while` 文を用いても同様の処理は実現できるが、 `for` 文を用いるとより簡潔に記述することができる。一般的な `for` 文の書式は以下の通り。
+
+```
+for( 初期化式; 条件式; 更新式 )
+{
+    // 実行する処理ブロック
+}
+```
+
+**初期化式**には、カウンタ変数の初期化を行う処理を記述する。**条件式**には、 ループを反復する条件を記述し、結果が `true` となる間処理を繰り返す。**更新式**には、ループが1回終わったときの更新処理を記述する。
+
+```c
+// C言語
+
+int main()
+{
+    for( int i=0; i<20; i++ )
+    {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+```
+
+```php
+<?php
+
+// PHP
+
+for( $i=0; $i<20; $i++ )
+{
+    echo($i);
+}
+
+?>
+```
+
+### for in文
+
+`for in` 文は、イテレート可能な値に対して使用できる反復処理であり、コンテナ型のデータの中身を順に取り出したい場合などに用いられる。プログラミング言語によってはサポートしていないものや、別のキーワードで実装されている場合もある（JavaScriptなど）。
+
+```python
+# Python
+
+nums = [10, 20, 30]
+
+for num in nums;
+    print("Number: {0}".format(num))
+```
+
+```php
+<?php
+
+// PHP
+
+$nums = [10, 20, 30];
+
+foreach( $nums as $num )
+{
+    echo("Number: " . $num);
+}
+
+?>
+```
+
+```javascript
+// JavaScript
+
+let nums = [10, 20, 30];
+
+for( let num of nums )
+{
+    console.log("Number: " + num);
+}
+```
+
+また、オブジェクトをイテレートする場合の制御構文を用意しているプログラミング言語もある。
+
+```php
+<?php
+
+// PHP
+
+$profile = [
+    "name" => "ichigo",
+    "email" => "dev.honda.ichigo@gmail.com",
+    "gender" => "male",
+];
+
+foreach( $profile as $key => $val )
+{
+    echo($key . ": " . $val);
+}
+
+?>
+```
+
+```javascript
+// JavaScript
+
+let profile = [
+    name : "ichigo",
+    email : "dev.honda.ichigo@gmail.com",
+    gender : "male",
+];
+
+for( let key in profile )
+{
+    console.log(key + ": " + profile[key]);
+}
+```
+
+### loop文
+
+`loop` 文は、処理ブロックを**無限ループ**で実行する。一般的には、ループ内である条件において `break` 文を実行するように制御することで、途中でループを離脱するような実装とする場合が多い。処理を空回ししたい特殊な場合（OSのhaltなど）にも用いられる。通常のアプリケーションにおいて無限ループが発生することはバグである場合が多いため、注意して使用する。
