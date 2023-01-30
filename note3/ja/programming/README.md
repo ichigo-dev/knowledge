@@ -12,4 +12,3 @@
 1. [クラス](./_/chapters/class.md)
 1. [コーディングルール](./_/chapters/coding_rule.md)
 1. [プログラミング言語の種類](./_/chapters/programming_language.md)
-1. [プログラミングパラダイム](./_/chapters/programming_paradigm.md)
