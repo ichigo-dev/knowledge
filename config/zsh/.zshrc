@@ -78,7 +78,8 @@ setopt hist_reduce_blanks
 # Prompt
 ################################################################################
 
-function rprompt-git-current-branch {
+function prompt-git-current-branch
+{
 	local branch_name st branch_status
  
 	if [ ! -e  ".git" ]; then
@@ -89,27 +90,33 @@ function rprompt-git-current-branch {
 	st=`git status 2> /dev/null`
 
 	if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-		branch_status="%F{green}"
+		prompt_color="%F{green}"
+		branch_status=""
 	elif [[ -n `echo "$st" | grep "^Untracked files"` ]]; then
-		branch_status="%F{red}?"
+		prompt_color="%F{red}"
+		branch_status="*"
 	elif [[ -n `echo "$st" | grep "^Changes not staged for commit"` ]]; then
-		branch_status="%F{red}+"
+		prompt_color="%F{red}"
+		branch_status="+"
 	elif [[ -n `echo "$st" | grep "^Changes to be committed"` ]]; then
-		branch_status="%F{yellow}!"
+		prompt_color="%F{yellow}"
+		branch_status="!"
 	elif [[ -n `echo "$st" | grep "^rebase in progress"` ]]; then
 		echo "%F{red}!(no branch)"
 		return
 	else
-		branch_status="%F{blue}"
+		prompt_color="%F{blue}"
+		branch_status=""
 	fi
 
-	echo "${branch_status}[$branch_name]"
+	echo "${prompt_color}[$branch_name]${branch_status}%f"
 }
  
 setopt prompt_subst
 
-PROMPT='%F{green}[%D %T]%f %n%F{magenta}@%f%~ $ '
-RPROMPT='`rprompt-git-current-branch`'
+PROMPT='
+%F{green}[%D %T]%f %F{cyan}%n%f@%m %F{blue}[%d]%f`prompt-git-current-branch` 
+$ '
 
 
 ################################################################################
@@ -121,6 +128,8 @@ setopt print_eight_bit
 setopt ignore_eof
 setopt interactive_comments
 setopt extended_glob
+
+autoload -U compinit && compinit -u
 
 # Set default editor
 export EDITOR="nvim"
