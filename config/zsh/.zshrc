@@ -43,6 +43,10 @@ alias tnw='tmux new-window'
 alias trw='tmux rename-window'
 alias tsw='(){tmux swap-window -s $1 -t $2}'
 
+# rm
+alias rm='trash-put'
+alias rmf='rm'
+
 
 ################################################################################
 # Zsh Config
