@@ -36,7 +36,7 @@ vim.cmd("packadd vim-jetpack") require("jetpack.paq")
 
 	-- noice
 	"MunifTanjim/nui.nvim",
-	"rcarriga/nvim-notify",
+	--"rcarriga/nvim-notify",
 	"folke/noice.nvim",
 
 	-- Git
