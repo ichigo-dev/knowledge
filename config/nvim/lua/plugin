@@ -26,6 +26,12 @@ require("noice").setup(
 		view_search = false,
 	},
 
+	cmdline =
+	{
+		enabled = true,
+		view = "cmdline"
+	},
+
 	views =
 	{
 		cmdline_popup =
