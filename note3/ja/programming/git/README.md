@@ -7,4 +7,7 @@
 1. [Gitの設定](./_/chapters/git_config.md)
 1. [リポジトリの作成](./_/chapters/create_repository.md)
 1. [リモートリポジトリ](./_/chapters/remote_repository.md)
+1. [履歴の記録](./_/chapters/record_history.md)
+1. [リポジトリの同期](./_/chapters/repository_sync.md)
+1. [コミット履歴](./_/chapters/commit_history.md)
 1. [ハンズオン](./_/chapters/hands_on.md)
