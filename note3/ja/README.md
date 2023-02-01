@@ -20,3 +20,6 @@
 1. [システム](./system/README.md)
 1. [ネットワーク](./network/README.md)
 1. [人工知能](./artificial_intelligence/README.md)
+1. [開発](./basics/development/README.md)
+	1. [デザインパターン](./basics/development/design_pattern/README.md)
+	1. [ソフトウェアアーキテクチャ](./basics/development/software_architecture/README.md)
