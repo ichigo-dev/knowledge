@@ -16,5 +16,4 @@
 
 ## カテゴリ
 
-1. [Git](./git/README.md)
 1. [Rust](./rust/README.md)
