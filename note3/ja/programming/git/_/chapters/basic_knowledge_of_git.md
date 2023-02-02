@@ -1,6 +1,6 @@
 # 『Gitの基礎知識』
 
-（最終更新： 2023-02-01）
+（最終更新： 2023-02-02）
 
 
 ## 目次
@@ -12,6 +12,8 @@
 	1. [作業の流れ](#作業の流れ)
 1. [Gitのインストール](#gitのインストール)
 	1. [初期設定](#初期設定)
+	1. [GUIソフトウェア](#guiソフトウェア)
+1. [Gitホスティングサービス](#gitホスティングサービス)
 
 
 ## バージョン管理システム
@@ -53,7 +55,18 @@ Gitを用いたバージョン管理の一般的な流れは次の通り。
 
 ## Gitのインストール
 
+Gitが既に自身の環境にインストールされているかを確認するには、ターミナルソフトウェア（Macのターミナル、Windowsのコマンドプロンプト等）を起動し、次のコマンドを実行する。
+
+```sh
+$ git --version
+git version 2.39.1
+```
+
+上の例のように、Gitのバージョン情報が表示されれば、Gitは既に使用できる状態となっている。コマンドが存在しない旨のエラーが表示される場合は、Gitをインストールする必要がある。
+
 - [Gitのインストール](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+上記サイトより、自身の環境のOSに応じたインストール手順を実施し、改めて `git --version` を実行してバージョン情報が出力されることを確認する。
 
 ### 初期設定
 
@@ -84,3 +97,24 @@ $ git config --global init.defaultBranch <name>
 ```sh
 $ git config --list
 ```
+
+### GUIソフトウェア
+
+Gitコマンドは、ターミナルソフトウェア上でCLIとして利用できる。コマンドによる操作が苦手な場合は、Git用のGUIソフトウェアをインストールすることで直感的な操作が可能となる。
+
+代表的なGitのGUIクライアントソフトウェアは以下の通り。
+
+- [SourceTree](https://www.sourcetreeapp.com/)
+- [Git Fork](https://git-fork.com/)
+- [GitKraken](https://www.gitkraken.com/)
+
+
+## Gitホスティングサービス
+
+**Gitホスティングサービス**は、クラウド上でGitの環境が整えられたサーバをサービスとして提供したもの。Gitホスティングサービスを利用することで、自身でサーバを用意することなく手軽にソースコードを共有するためのリモートリポジトリを用意することができる。
+
+代表的なGitホスティングサービスとしては**GitHub**や**GitLab**、**BitBucket**などがある。
+
+- [GitHub](https://github.co.jp/)
+- [GitLab](https://about.gitlab.com/)
+- [BitBucket](https://bitbucket.org/)

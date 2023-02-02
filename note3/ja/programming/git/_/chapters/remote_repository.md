@@ -1,6 +1,6 @@
 # 『リモートリポジトリ』
 
-（最終更新： 2023-02-01）
+（最終更新： 2023-02-02）
 
 
 ## 目次
@@ -64,9 +64,10 @@ $ git remote rm <alias>
 
 ## リモートリポジトリとの接続を編集
 
-リモートリポジトリのエントリのエイリアスを変更するには、 `git remote rename` コマンドを用いる。
+リモートリポジトリのエントリのエイリアスを変更するには、 `git remote rename` コマンドを用いる。また、リモートリポジトリのURLを変更するには、 `git remote set-url` コマンドを用いる。
 
 ```git
 # リモートリポジトリとの接続を編集
 $ git remote rename <old-alias> <new-alias>
+$ git remote set-url <alias> <new-url>
 ```
