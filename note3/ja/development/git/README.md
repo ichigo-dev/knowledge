@@ -12,5 +12,8 @@
 1. [コミット履歴](./_/chapters/commit_history.md)
 1. [差分比較](./_/chapters/difference_comparison.md)
 1. [ブランチ](./_/chapters/branch.md)
+<<<<<<< Updated upstream
 1. [その他の機能](./_/chapters/others.md)
 1. [ハンズオン](./_/chapters/hands_on.md)
+=======
+>>>>>>> Stashed changes

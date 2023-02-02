@@ -13,6 +13,7 @@
 1. [アルゴリズム](./algorithm/README.md)
 1. [プログラミング](./programming/README.md)
 	1. [Rust](./programming/rust/README.md)
+	1. [並行プログラミング](./programming/parallel_programming/README.md)
 1. [コンピュータ](./computer/README.md)
 	1. [ハードウェア](./computer/hardware/README.md)
 	1. [ソフトウェア](./computer/software/README.md)
