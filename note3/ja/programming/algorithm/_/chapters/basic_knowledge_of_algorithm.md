@@ -27,9 +27,9 @@
 ```rust
 use std::io::Write;
 
-pub(crate) fn input<T: std::str::FromStr>( name_: &str ) -> T
+pub(crate) fn input<T: std::str::FromStr>( hint_: &str ) -> T
 {
-    print!("Input `{}` >> ", name_);
+    print!("Input `{}` >> ", hint_);
     std::io::stdout().flush().unwrap();
 
     let mut input = String::new();
@@ -45,9 +45,9 @@ pub(crate) fn input<T: std::str::FromStr>( name_: &str ) -> T
 ```rust
 use std::io::Write;
 
-pub(crate) fn input_vec<T: std::str::FromStr>( name_: &str ) -> Vec<T>
+pub(crate) fn input_vec<T: std::str::FromStr>( hint_: &str ) -> Vec<T>
 {
-    print!("Input `{}` >> ", name_);
+    print!("Input `{}` >> ", hint_);
     std::io::stdout().flush().unwrap();
 
     let mut input = String::new();
