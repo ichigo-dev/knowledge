@@ -45,7 +45,7 @@ pub(crate) fn input<T: std::str::FromStr>( name_: &str ) -> T
 ```rust
 use std::io::Write;
 
-pub(crate) fn input<T: std::str::FromStr>( name_: &str ) -> Vec<T>
+pub(crate) fn input_vec<T: std::str::FromStr>( name_: &str ) -> Vec<T>
 {
     print!("Input `{}` >> ", name_);
     std::io::stdout().flush().unwrap();
