@@ -16,4 +16,6 @@
 
 ## カテゴリ
 
+1. [アルゴリズム](./algorithm/README.md)
 1. [Rust](./rust/README.md)
+1. [並行プログラミング](./parallel_programming/README.md)
