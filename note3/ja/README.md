@@ -20,5 +20,6 @@
 1. [人工知能](./artificial_intelligence/README.md)
 1. [開発](./development/README.md)
 	1. [Git](./development/git/README.md)
+	1. [データベース](./development/database/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
