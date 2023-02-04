@@ -3,7 +3,6 @@
 
 ## 目次
 
-
 1. [基礎理論](./basics/README.md)
 	1. [離散数学](./basics/discrete_mathematics/README.md)
 	1. [応用数学](./basics/applied_mathematics/README.md)
