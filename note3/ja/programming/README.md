@@ -12,10 +12,10 @@
 1. [クラス](./_/chapters/class.md)
 1. [コーディングルール](./_/chapters/coding_rule.md)
 1. [プログラミング言語の種類](./_/chapters/programming_language.md)
+1. [アルゴリズム](./_/chapters/algorithm.md)
 
 
 ## カテゴリ
 
-1. [アルゴリズム](./algorithm/README.md)
 1. [Rust](./rust/README.md)
 1. [並行プログラミング](./parallel_programming/README.md)
