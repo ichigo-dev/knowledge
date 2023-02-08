@@ -47,6 +47,92 @@ alias tsw='(){tmux swap-window -s $1 -t $2}'
 alias rm='trash-put'
 alias rmf='rm'
 
+# pacman
+alias pclean='sudo pacman -Rs $(pacman -Qdtq)'
+alias pup='sudo pacman -Syu'
+alias pi='sudo pacman -S'
+alias pr='sudo pacman -Rs'
+alias pls='sudo pacman -Qe'
+alias pfind='sudo pacman -Qi'
+
+
+################################################################################
+# fzf
+################################################################################
+
+function fzf-cd()
+{
+	local dir
+	dir=$(find ${1:-.} -path '*/\.*' -prune \
+		-o -type d -print 2> /dev/null | fzf-tmux +m) &&
+	cd "$dir"
+}
+zle -N fzf-cd
+bindkey '^F' fzf-cd
+
+function fzf-history()
+{
+	BUFFER=$(history -n -r 1 | fzf --no-sort +m --query "$LBUFFER" --prompt="History > ")
+	CURSOR=$#BUFFER
+}
+zle -N fzf-history
+bindkey '^R' fzf-history
+
+function fzf-git-switch()
+{
+	local branches branch
+
+	branches=$(git branch --all | grep -v HEAD) &&
+	branch=$(echo "$branches" |
+		fzf -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+	git switch $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+function fzf-git-show()
+{
+	git log --graph --color=always \
+		--format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+	fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+		--bind "ctrl-m:execute:
+			(grep -o '[a-f0-9]\{7\}' | head -1 |
+			xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+			{}
+			FZF-EOF"
+}
+
+function fzf-git-add()
+{
+	local out q n addfiles
+	while out=$(
+		git status --short |
+		awk '{if (substr($0,2,1) !~ / /) print $2}' |
+		fzf --multi --exit-0 --expect=ctrl-d); do
+
+		q=$(head -1 <<< "$out")
+
+		n=$[$(wc -l <<< "$out") - 1]
+		addfiles=(`echo $(tail "-$n" <<< "$out")`)
+
+		[[ -z "$addfiles" ]] && continue
+		if [ "$q" = ctrl-d ]; then
+			git diff --color=always $addfiles | less -R
+		else
+			git add $addfiles
+		fi
+	done
+}
+
+function fzf-kill()
+{
+	local pid
+	pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+	if [ "x$pid" != "x" ]
+	then
+		echo $pid | xargs kill -${1:-9}
+	fi
+}
+
 
 ################################################################################
 # Zsh Config
@@ -140,7 +226,6 @@ export EDITOR="nvim"
 
 # Shell bindkey mode
 setopt vi
-bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
 bindkey "^P" history-beginning-search-backward
 bindkey "^N" history-beginning-search-forward
