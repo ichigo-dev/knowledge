@@ -2,58 +2,58 @@
 # Keybind
 ################################################################################
 
-alias n='nvim'
-alias ls='ls -F --color=auto'
-alias la='ls -lAFhX --color=auto'
+alias n="nvim"
+alias ls="ls -F --color=auto"
+alias la="ls -lAFhX --color=auto"
 
 # git
-alias g='git'
-alias gs='git status'
-alias ga='git add'
-alias gaa='git add .'
-alias gc='git commit'
-alias gp='git push'
-alias gpu='git pull'
-alias gb='git branch'
-alias gch='git checkout'
-alias gl='git log'
-alias glgg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-alias gf='git fetch'
-alias gm='git merge'
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit"
+alias gp="git push"
+alias gpu="git pull"
+alias gb="git branch"
+alias gch="git checkout"
+alias gl="git log"
+alias glgg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gf="git fetch"
+alias gm="git merge"
 
 # docker
-alias dc='sudo docker-compose'
-alias dcb='sudo docker-compose build'
-alias dcu='sudo docker-compose up'
-alias dcud='sudo docker-compose up -d'
-alias dcd='sudo docker-compose down'
-alias dce='sudo docker-compose exec'
-alias dcp='sudo docker-compose ps'
+alias dc="sudo docker-compose"
+alias dcb="sudo docker-compose build"
+alias dcu="sudo docker-compose up"
+alias dcud="sudo docker-compose up -d"
+alias dcd="sudo docker-compose down"
+alias dce="sudo docker-compose exec"
+alias dcp="sudo docker-compose ps"
 
 # tmux
-alias ta='tmux attach -t'
-alias td='tmux detach'
-alias tk='tmux kill-server'
-alias tls='tmux list-sessions'
-alias tns='tmux new-session -s'
-alias trs='tmux rename-session'
-alias tks='tmux kill-session -t'
-alias tlw='tmux list-window'
-alias tnw='tmux new-window'
-alias trw='tmux rename-window'
-alias tsw='(){tmux swap-window -s $1 -t $2}'
+alias ta="tmux attach -t"
+alias td="tmux detach"
+alias tk="tmux kill-server"
+alias tls="tmux list-sessions"
+alias tns="tmux new-session -s"
+alias trs="tmux rename-session"
+alias tks="tmux kill-session -t"
+alias tlw="tmux list-window"
+alias tnw="tmux new-window"
+alias trw="tmux rename-window"
+alias tsw="(){tmux swap-window -s $1 -t $2}"
 
 # rm
-alias rm='trash-put'
-alias rmf='rm'
+alias rm="trash-put"
+alias rmf="rm"
 
 # pacman
-alias pclean='sudo pacman -Rs $(pacman -Qdtq)'
-alias pup='sudo pacman -Syu'
-alias pi='sudo pacman -S'
-alias pr='sudo pacman -Rs'
-alias pls='sudo pacman -Qe'
-alias pfind='sudo pacman -Qi'
+alias pclean="sudo pacman -Rs $(pacman -Qdtq)"
+alias pup="sudo pacman -Syu"
+alias pi="sudo pacman -S"
+alias pr="sudo pacman -Rs"
+alias pls="sudo pacman -Qe"
+alias pfind="sudo pacman -Qi"
 
 
 ################################################################################
@@ -63,12 +63,12 @@ alias pfind='sudo pacman -Qi'
 function fzf-cd()
 {
 	local dir
-	dir=$(find ${1:-.} -path '*/\.*' -prune \
+	dir=$(find ${1:-.} -path "*/\.*" -prune \
 		-o -type d -print 2> /dev/null | fzf-tmux +m) &&
 	cd "$dir"
 }
 zle -N fzf-cd
-bindkey '^F' fzf-cd
+bindkey "^F" fzf-cd
 
 function fzf-history()
 {
@@ -76,7 +76,7 @@ function fzf-history()
 	CURSOR=$#BUFFER
 }
 zle -N fzf-history
-bindkey '^R' fzf-history
+bindkey "^R" fzf-history
 
 function fzf-git-switch()
 {
@@ -94,8 +94,8 @@ function fzf-git-show()
 		--format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
 	fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
 		--bind "ctrl-m:execute:
-			(grep -o '[a-f0-9]\{7\}' | head -1 |
-			xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+			(grep -o "[a-f0-9]\{7\}" | head -1 |
+			xargs -I % sh -c "git show --color=always % | less -R") << "FZF-EOF"
 			{}
 			FZF-EOF"
 }
@@ -105,7 +105,7 @@ function fzf-git-add()
 	local out q n addfiles
 	while out=$(
 		git status --short |
-		awk '{if (substr($0,2,1) !~ / /) print $2}' |
+		awk "{if (substr($0,2,1) !~ / /) print $2}" |
 		fzf --multi --exit-0 --expect=ctrl-d); do
 
 		q=$(head -1 <<< "$out")
@@ -125,7 +125,7 @@ function fzf-git-add()
 function fzf-kill()
 {
 	local pid
-	pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+	pid=$(ps -ef | sed 1d | fzf -m | awk "{print $2}")
 
 	if [ "x$pid" != "x" ]
 	then
@@ -204,9 +204,9 @@ function prompt-git-current-branch
  
 setopt prompt_subst
 
-PROMPT='
+PROMPT="
 %F{green}[%D %T]%f %F{cyan}%n%f@%m %F{blue}[%d]%f`prompt-git-current-branch` 
-$ '
+$ "
 
 
 ################################################################################
