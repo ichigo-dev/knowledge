@@ -32,7 +32,7 @@ echo " 4. Install paru packages"
 echo "================================================================================"
 echo -e "\n\n"
 paru -S --needed \
-	neomutt
+	neomutt \
 	trash-cli
 
 sudo systemctl enable cronie
