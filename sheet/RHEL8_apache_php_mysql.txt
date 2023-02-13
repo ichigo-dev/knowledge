@@ -1,0 +1,776 @@
+--------------------------------------------------------------------------------
+Apache設定
+--------------------------------------------------------------------------------
+●存在確認
+# httpd -v
+ないことを確認
+
+●インストール
+# yum -y install httpd
+
+# httpd -v
+Server version: Apache/2.4.37 (Red Hat Enterprise Linux)
+Server built:   Jun 15 2020 11:51:05
+
+●httpd.confを修正
+# vi /etc/httpd/conf/httpd.conf
+
+・Listen追加
+```
+Listen 80	# 元々あるやつ
+Listen 443
+
+# .htaccessを有効にする
+AllowOverride All
+```
+
+●ファイル一覧を表示させない
+```
+Options FollowSymLinks
+```
+
+●タイル接続用にAliasを作成
+●タイルのディレクトリは外に出す
+/var/www/tile
+```
+<IfModule alias_module>
+	Alias /tile/ "/var/www/tile/"
+	<Directory "/var/www/tile/">
+		AllowOverride None
+		Require all granted
+	</Directory>
+</IfModule>
+```
+
+
+●SSL設定
+# vi /etc/httpd/conf.d/ssl.conf
+``````
+# SSL作成用の追加設定
+AddType application/x-x509-ca-cert .crt
+AddType application/x-pkcs7-crl .crl
+SSLPassPhraseDialog exec:/etc/httpd/conf/extends/server_pps.sh
+SSLSessionCache shmcb:/var/cache/mod_ssl/scache(512000)
+SSLSessionCacheTimeout 300
+SSLRandomSeed startup file:/dev/urandom 256
+SSLRandomSeed connect builtin
+SSLCryptoDevice builtin
+
+<VirtualHost _default_:443>
+    ErrorLog /var/log/httpd/ssl_error_log
+    TransferLog /var/log/httpd/ssl_access_log
+    LogLevel warn
+    SSLEngine on
+    SSLProtocol all -SSLv2
+    SSLCIpherSUite ALL:!ADH:!EXPORT:!SSLv2:RC4+RSA:+HIGH:+MEDIUM:+LOW
+    SSLCertificateFile /usr/local/ssl/neostip_web1_server.crt
+    SSLCertificateKeyFile /usr/local/ssl/neostip_web1_private.key
+    <Files ~ "\.(cgi|shtm|phtml|php3?)$">
+        SSLOptions +StdEnvVars
+    </Files>
+    <Directory "/var/www/cgi-bin">
+        SSLOptions +StdEnvVars
+    </Directory>
+    CustomLog /var/log/httpd/ssl_request_log \
+        "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+</VirtualHost>
+``````
+
+●http -> httpsにリダイレクト設定
+ Setting VertualHost
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/
+    ErrorLog /var/log/httpd/error_log
+    CustomLog /var/log/httpd/access_log common
+</VirtualHost>
+
+# Directory Setting
+IncludeOptional /etc/httpd/extends/dir.conf
+
+
+●dir.conf
+```
+<Directory />
+    AllowOverride none
+    Require all denied
+</Directory>
+
+DocumentRoot "/var/www/html"
+
+<Directory "/var/www">
+    AllowOverride None
+    Require all granted
+</Directory>
+
+<Directory "/var/www/html">
+    Options FollowSymLinks
+
+    AllowOverride All
+</Directory>
+
+<Directory "/var/www/html/authorization">
+    <IfModule mod_auth_gssapi.c>
+        AuthType GSSAPI
+        AuthName "Require Authorization"
+        BrowserMatch Windows gssapi-no-negotiate
+        GssapiAllowedMech krb5
+        GssapiBasicAuthMech krb5
+        GssapiUseSessions On
+        GssapiNegotiateOnce On
+        GssapiBasicAuth On
+        GssapiCredStore keytab:/etc/httpd/conf.d/krb5.keytab
+        GssapiPublishErrors On
+        Require valid-user
+    </IfModule>
+    AllowOverride None
+</Directory>
+```
+
+
+●有効にする
+# systemctl enable httpd
+
+●httpd開始
+# systemctl start httpd
+Enter TLS private key passphrase for localhost:443 (RSA) : 秘密鍵生成時のパスワード
+
+
+--------------------------------------------------------------------------------
+CSR - 証明書作成
+--------------------------------------------------------------------------------
+
+●ディレクトリ指定
+# mkdir /usr/local/ssl
+# cd /usr/local/ssl
+
+●秘密鍵作成
+・web1
+# openssl genrsa -aes256 -out neostip_server1_private.key 2048
+PH: C55XJsNZqrLK
+
+・web2
+# openssl genrsa -aes256 -out neostip_server2_private.key 2048
+PH: 62cSYZKwM76w
+
+・埼玉DCweb1
+# openssl genrsa -aes256 -out nswsv1_private.pem 2048
+PH: 2GSt9mA6TJsq
+
+・埼玉DCweb2
+# openssl genrsa -aes256 -out nswsv2_private.pem 2048
+PH: ymGnjhQZh66y
+
+・埼玉DCweb
+# openssl genrsa -aes256 -out nsweb_private.pem 2048
+PH: JFeKsHdCCw3V
+
+・mgr
+# openssl genrsa -aes256 -out nsmgr_web_prvt.pem 2048
+PH: psgvDPr6eqER
+
+・mgr1
+# openssl genrsa -aes256 -out nsmgr_web1_prvt.pem 2048
+PH: jrEp8U8BeVij
+
+・mgr2
+# openssl genrsa -aes256 -out nsmgr_web2_prvt.pem 2048
+PH: ViBwQk4T7tTJ
+
+●CSR作成
+・web1
+# openssl req -new -key neostip_server1_private.key -sha256 -out neostip_web1_server.csr
+Country Name[XX]: JP
+State or Province Name (full name): 
+Locality Name (eg, city) [Default City]: 
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-web1.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・web2
+# openssl req -new -key neostip_server2_private.key -sha256 -out neostip_web2_server.csr
+Country Name[XX]: JP
+State or Province Name (full name): 
+Locality Name (eg, city) [Default City]: 
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-web2.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・埼玉DCweb1
+# openssl req -new -key nswsv1_private.key -sha256 -out nswsv1.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-wsv1.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・埼玉DCweb2
+# openssl req -new -key nswsv2_private.key -sha256 -out nswsv2.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-wsv2.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・埼玉DCweb
+# openssl req -new -key nsweb_private.key -sha256 -out nsweb.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-web.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・mgr
+# openssl req -new -key nsmgr_web_prvt.pem -sha256 -out nsmgr.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-webmgr.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・mgr1
+# openssl req -new -key nsmgr_web1_prvt.pem -sha256 -out nsmgr1.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-webmgr1.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+・mgr2
+# openssl req -new -key nsmgr_web2_prvt.pem -sha256 -out nsmgr2.csr
+Country Name[XX]: JP
+State or Province Name (full name):
+Locality Name (eg, city) [Default City]:
+Organization Name (eg, company) [Default Company Ltd]: TEPCO
+Organizational Unit Name (eg, section) []: SERVER
+Common Name (eg, your name or your server's hostname) []: ns-webmgr2.int.tepco.co.jp
+Email Address []:
+A challenge password []: 
+An optional company name []: 
+
+
+〇Apache起動時用のプライベートキーパスフレーズ自動出力
+```
+#!/bin/sh
+case $1 in
+    ns-web1.int.tepco.co.jp:443)
+        echo 'C55XJsNZqrLK';;
+    ns-wsv1.int.tepco.co.jp:443)
+        echo '2GSt9mA6TJsq';;
+    ns-web.int.tepco.co.jp:443)
+        echo 'JFeKsHdCCw3V';;
+esac
+exit 0
+```
+〇SNI (同IPで複数ドメイン使用すること)
+apache現在のバージョンでデフォルトで機能してるので特に考慮することなし
+
+
+
+※本番証明書来るまでの仮で自己証明
+[
+	●仮の秘密鍵作成
+	# openssl genrsa -aes256 -out tmp_private.key 2048
+	PH: neostip#tmp2021
+
+	●仮のCSRを作成
+	# openssl req -new -key tmp_private.key -sha256 -out tmp_server.csr
+	Country Name[XX]: JP
+	State or Province Name (full name): 
+	Locality Name (eg, city) [Default City]: 
+	Organization Name (eg, company) [Default Company Ltd]: TEPCO
+	Organizational Unit Name (eg, section) []: SERVER
+	Common Name (eg, your name or your server's hostname) []: ns-web1.int.tepco.co.jp
+	Email Address []: neoSTIP@ml.tepco.co.jp
+	A challenge password []: 
+	An optional company name []: 
+
+	●自己証明作成
+	# openssl x509 -in tmp_server.csr -days 365 -req -signkey tmp_private.key -sha256 -out tmp_server.crt
+
+	●Apache読み込み用にmod_sslインストール
+	# yum -y install mod_ssl
+]
+
+--------------------------------------------------------------------------------
+PHP設定
+--------------------------------------------------------------------------------
+●存在確認
+# php -v
+ないことを確認
+
+●対応したバージョンをインストールするためにepal-releaseとremiをインストール
+# yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+# yum -y install http://rpms.famillecollet.com/enterprise/remi-release-8.rpm
+
+●phpをインストール
+# yum -y module install php:remi-7.4
+# yum install php-mbstring php-xml php-xmlrpc php-gd php-pdo php-pecl-mcrypt php-fpm php-mysqlnd php-pecl-mysql php-ldap
+
+●内容確認
+# php -v
+PHP 7.4.14 (cli) (built: Jan  5 2021 10:45:06) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+
+●8系なのでphp-fpmを利用してapacheの設定値を入力
+```
+StartServer 2
+MinSpareThreads 25
+MaxSpareThreads 50
+ThreadsPerChild 50
+MaxRequestWorkers 50
+MaxConnectionsPerChild 0
+```
+
+●php.iniの設定値変更
+```
+max_input_vars = 5000
+memory_limit = 1024M
+```
+
+# systemctl start php-fpm
+# systemctl enable php-fpm
+
+●起動して確認
+# systemctl start httpd
+
+--------------------------------------------------------------------------------
+Firewall設定
+--------------------------------------------------------------------------------
+●現在の設定
+# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eno2
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports:
+  protocols:
+  masquerade: yes
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+●リッチルールで自分のプライベートIPだけ許可(xxは自分のIP)
+# firewall-cmd --permanent --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.0.xx" port port="80" protocol="tcp" accept'
+
+※削除用
+# firewall-cmd --permanent --zone=public --remove-rich-rule='rule family="ipv4" source address="192.168.0.xx" port port="80" protocol="tcp" accept'
+
+●設定されてなかったのでhttp, httpsを空ける
+# firewall-cmd --permanent --add-service='http'
+# firewall-cmd --permanent --add-service='https'
+
+●ICMPのtimestamp-reply timestamp-requestをblockにする
+# firewall-cmd --add-icmp-block={timestamp-reply,timestamp-request} --permanent
+
+●IPマスカレードをONにする
+# firewall-cmd --zone=public --add-masquerade --permanent
+
+●諸々修正後
+# firewall-cmd --reload
+# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eno2
+  sources:
+  services: cockpit dhcpv6-client http https ssh
+  ports: 8080/tcp 80/tcp 443/tcp 88/tcp 464/tcp 389/tcp
+  protocols:
+  masquerade: yes
+  forward-ports:
+  source-ports:
+  icmp-blocks: timestamp-request timestamp-reply
+  rich rules:
+
+●埼玉DCサーバの設定
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: T_Public1 eno1 ens1f3
+  sources:
+  services: cockpit dhcpv6-client high-availability http https mysql
+  ports: 80/tcp 88/tcp 443/tcp 464/tcp 8080/tcp 10050/tcp 10051/tcp
+  protocols:
+  forward: no
+  masquerade: yes
+  forward-ports:
+  source-ports:
+  icmp-blocks: timestamp-reply timestamp-request
+  rich rules:
+
+--------------------------------------------------------------------------------
+MySQLの設定
+--------------------------------------------------------------------------------
+●リポジトリ追加
+# yum localinstall http://dev.mysql.com/get/mysql57-community-release-el6-7.noarch.rpm
+
+●5.7を有効化して8.0を無効化
+# yum-config-manager --enable mysql57-community
+# yum-config-manager --disable mysql80-community
+
+●既存のmysqlとmariadbが生きてるので無効化
+# yum install mysql-community-server
+※この時点では存在しなくなっている
+
+# yum module list mysql mariadb
+Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs)
+Name                                   Stream                                 Profiles                                                 Summary
+mariadb                                10.3 [d]                               client, galera, server [d]                               MariaDB Module
+mysql                                  8.0 [d]                                client, server [d]                                       MySQL Module
+
+# yum module disable mysql mariadb
+
+●利用するもののシンボリックリンクを変更する
+# cd /lib64
+# ln -s libsasl2.so.3.0.0 libsasl2.so.2
+
+●インストール
+# yum install mysql-community-server
+
+●確認
+# mysql -V
+mysql  Ver 14.14 Distrib 5.7.32, for Linux (x86_64) using  EditLine wrapper
+
+
+●mysql起動
+# systemctl start mysqld
+# systemctl enable mysqld
+
+
+●rootのパスワード確認
+# vi /var/log/mysqld.log
+2021-01-13T07:44:17.662571Z 1 [Note] A temporary password is generated for root@localhost: fMDq.QKQb4>F
+
+●rootパスワードリセット
+# mysql -u root -p'fMDq.QKQb4>F'
+mysql> alter user 'root'@'localhost' identified by 'Sn7*#ZB4';
+
+ID: root
+PW: Sn7*#ZB4
+
+●DB作成
+# mysql -u root -pSn7*#ZB4
+mysql> create user neostip identified by 'P3gQVB#Ux';
+mysql> create database neostip character set utf8;
+mysql> grant all on neostip.* to neostip@'%';
+mysql> flush privileges;
+
+ID: neostip
+PW: P3gQVB#Ux
+
+●charset_server変更
+# vi /etc/my.cnf
+```
+[client]
+default-character-set=utf8
+
+[mysqld]
+character-set-server=utf8
+```
+
+●レプリケーション設定
+※ほぼ別会社が設定してたのでこちらで設定・修正したもののみ
+1号機と2号機のバイナリログをそれぞれ下記に設定
+・log_bin=/var/log/mysql/web1_binlog
+・log_bin=/var/log/mysql/web2_binlog
+
+・マスタとスレーブで各チェックする
+mysql> show master status;
++--------------------+----------+--------------+------------------+-------------------+
+| File               | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++--------------------+----------+--------------+------------------+-------------------+
+| web1_binlog.000006 |     6180 |              |                  |                   |
++--------------------+----------+--------------+------------------+-------------------+
+
+mysql> show slave status\G
+*************************** 1. row ***************************
+               Slave_IO_State: Waiting for master to send event
+                  Master_Host: 145.41.20.73
+                  Master_User: repl
+                  Master_Port: 3306
+                Connect_Retry: 60
+              Master_Log_File: web1_binlog.000006
+          Read_Master_Log_Pos: 6180
+               Relay_Log_File: h3n41074-relay-bin.000010
+                Relay_Log_Pos: 6397
+        Relay_Master_Log_File: web1_binlog.000006
+~~~~
+
+・クエリのレプリケーションが止まって場合の対処
+mysql> set global sql_slave_skip_counter=1;
+mysql> start slave;
+mysql> show slave status\G
+
+Slave_SQL_Running: Yes		←こうなってればok
+
+
+--------------------------------------------------------------------------------
+ケルベロス認証の設定
+--------------------------------------------------------------------------------
+■ADサーバ側（ABの環境なので情報はテスト情報）
+●windows server立ててActive Directoryの設定とユーザの登録までしておく
+
+●keytabファイルを作成する
+コマンドプロンプトに管理者で入って下記実行
+# ktpass -princ HTTP/asian-test-winserver.asian.win.test.local@ASIAN.WIN.TEST.LOCAL -mapuser Administrator@ASIAN.WIN.TEST.LOCAL -pass Asian0322 -crypto RC4-HMAC-NT -ptype KRB5_NT_PRINCIPAL -out C:\Users\Administrator\test\krb5.keytabTargeting domain controller: asian-test-winserver.asian.win.test.local
+Using legacy password setting method
+Successfully mapped HTTP/asian-test-winserver.asian.win.test.local to abdev.
+Key created.
+Output keytab to C:\Users\Administrator\test\krb5_test.keytab:
+Keytab version: 0x502
+keysize 100 HTTP/asian-test-winserver.asian.win.test.local@AB.WIN.TEST.LOCAL ptype 1 (KRB5_NT_PRINCIPAL) vno 4 etype 0x17 (RC4-HMAC) keylength 16 (0x877937db52e67f1a3e90b6a2864e4448)
+
+これで成功
+
+
+■クライアント側
+●kerberos認証用モジュールをインストール
+# yum install -y mod_auth_gssapi	//	redhat8ではmod_auth_kerbからmod_auth_gssapiに移行したらしい
+# yum install -y mod_session
+# yum install -y krb5-workstation.x86_64
+
+●keytabファイルをwebサーバ側に設置する
+/etc/httpd/conf.d/krb5.keytab
+
+●apacheが読み込めるようにパーミッションを変更
+# chown apache:apache krb5.keytab
+# chmod 400 krb5.keytab
+
+●Kerberos認証の設定ファイルを編集する
+# cp krb5.conf krb5.conf.bk //	編集前にバックアップ
+# vi krb5.conf
+```
+# To opt out of the system crypto-policies configuration of krb5, remove the
+# symlink at /etc/krb5.conf.d/crypto-policies which will not be recreated.
+includedir /etc/krb5.conf.d/
+
+[logging]
+    default = FILE:/var/log/krb5libs.log
+    kdc = FILE:/var/log/krb5kdc.log
+    admin_server = FILE:/var/log/kadmind.log
+
+[libdefaults]
+    default_realm = NS.LOCAL
+    dns_lookup_realm = false
+    dns_lookup_kdc = false
+    ticket_lifetime = 24h
+    renew_lifetime = 7d
+    forwardable = true
+
+[realms]
+ NS.LOCAL = {
+     kdc = h2p00158.ns.local
+     admin_server = h2p00158.ns.local
+ }
+
+[domain_realm]
+ .ns.local = NS.LOCAL
+ ns.local = NS.LOCAL
+```
+
+●設定ファイルのDCを解決できるようにhostsを編集する
+# vi hosts
+```
+127.0.0.1		localhost localhost.localdomain localhost4 localhost4.localdomain4 ns-web1.int.tepco.co.jp
+::1				localhost localhost.localdomain localhost6 localhost6.localdomain6 ns-web1.int.tepco.co.jp
+192.168.2.59	h2p00158.ns.local
+```
+
+●ケルベロス認証が通ってるか確認
+# kinit -k -t /etc/httpd/conf.d/krb5.keytab HTTP/h2p00158.ns.local
+何も出ないことを確認。ケルベロス認証用のチケットがキャッシュされる
+
+# kvno HTTP/h2p00158.ns.local
+HTTP/h2p00158.ns.local@NS.LOCAL: kvno = 10
+
+# klist -kte /etc/httpd/conf.d/krb5.keytab
+先程のkvnoと同様なのを確認
+KVNO Timestamp           Principal                      
+--------------------------------------------------------
+10   1970-01-01T09:00:00 HTTP/h2p00158.ns.local@NS.LOCAL
+
+●Apacheにケルベロス認証を設置
+※RHEL8系なのでmod_auth_kerbではなくmod_auth_gssapiを利用する
+phpからcurlで認証を行うため、それ専用のURLを用意する
+
+```
+<Directory "/var/www/html/authorization">
+    # Kerberos Authorization
+    <IfModule mod_auth_gssapi.c>
+        AuthType GSSAPI								//	KerberosはRHEL7系以下で利用でRHEL8系はGSSAPI
+        AuthName "Require Authorization"
+        BrowserMatch Windows gssapi-no-negotiate	//	Negotiateがwindows効かないので指定
+        GssapiAllowedMech krb5		//	認証タイプ(krb5はKerberos5指定)
+        GssapiBasicAuthMech krb5	//	認証タイプ(krb5はKerberos5指定)
+        GssapiUseSessions On		//	セッションを利用する
+        GssapiNegotiateOnce On		//	Negotiateを一回きりにする
+        GssapiBasicAuth On			//	Basic認証みたく認証入力フォームを用意する
+        GssapiCredStore keytab:/etc/httpd/conf.d/krb5.keytab	//	keytabのパス
+        GssapiPublishErrors On
+        Require valid-user
+    </IfModule>
+    AllowOverride None
+</Directory>
+```
+
+●Apacheを再起動して該当のページでADサーバで作成したユーザで認証が通るか確認
+
+
+--------------------------------------------------------------------------------
+ネットワークの修正
+--------------------------------------------------------------------------------
+●ネットワークの設定に不備があったので修正
+（192.168.200.148へSSHもwebもつながらない状況であった）
+
+●既存のeno2を削除
+# nmcli con del eno2
+
+●eno2のデバイスにコネクションeno2を再作成（前は「有線接続 1」となっていた。デフォルト？）
+# nmcli con add type ethernet ifname eno2 con-name eno2
+
+●eno2にIP割り当て
+# nmcli con mod eno2 ipv4.method manual ipv4.addresses "192.168.200.148/16"
+
+●ゲートウェイ
+# nmcli con mod eno2 ipv4.gateway "192.168.200.1"
+
+●最終形
+# vi /etc/sysconfig/network-scripts/ifcfg-eno2
+```
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=none
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=eno2
+UUID=806611fa-c6b4-473f-870e-96d86a209f9d
+DEVICE=eno2
+ONBOOT=yes
+IPADDR=192.168.200.148
+PREFIX=16
+GATEWAY=192.168.200.1
+```
+
+●コマンドで確認
+# nmcli con
+NAME             UUID                                  TYPE      DEVICE
+eno1             96648d5f-0490-4bb1-bc5d-2147fac03e54  ethernet  eno1
+br-3963d03019dc  7b2baa2c-8066-4bbc-83e4-1ed9cbf9629e  bridge    br-3963d03019dc
+eno2             806611fa-c6b4-473f-870e-96d86a209f9d  ethernet  eno2
+
+# nmcli dev
+eno1             ethernet  接続済み  eno1
+br-3963d03019dc  bridge    接続済み  br-3963d03019dc
+eno2             ethernet  接続済み  eno2
+
+
+●ifconfigからゲートウェイ等変更
+# ifconfig eno2 netmask 255.255.0.0 broadcast 192.168.255.255
+
+
+--------------------------------------------------------------------------------
+各ログのローテート設定
+--------------------------------------------------------------------------------
+設定項目の簡単に説明
+・daily: 日ごとローテート
+・complress: 圧縮, nocompress: 非圧縮
+・rotate 数: 数分だけローテートして、超えたら削除、0の場合即時削除
+・ifempty: ログファイルが空でもローテートする（notがつけばその逆）
+・dateext: サフィックスにdateformatで指定した内容で日付をつける
+・dateformat: strftime(3)の表記法で日付を指定する（%Y%m%d みたいな）
+・missingok: ログファイル無くてもエラー出さない
+・copytruncate: ローテート後元のファイル空にする
+
+
+■Apache
+/var/log/httpd/*log {
+    notifempty
+    sharedscripts
+    daily
+    dateext
+    dateformat _%Y%m%d
+
+    # 5years
+    rotate 1827
+    missingok
+    compress
+    delaycompress
+
+    # Pacemakerでクラスタ化しててサービスは止まっているのでconf直読み込み&pid直キック
+    postrotate
+       #  /bin/systemctl reload httpd.service > /dev/null 2>/dev/null || true
+       /usr/bin/test -f /run/httpd.pid >/dev/null 2>/dev/null &&
+       /usr/bin/ps -q $(/usr/bin/cat /run/httpd.pid) >/dev/null 2>/dev/null &&
+       /usr/sbin/httpd -f /etc/httpd/conf/httpd.conf -c "PidFile /run/httpd.pid" -k graceful > /dev/null 2>/dev/null || true
+    endscript
+}
+
+
+■MySQL
+/var/log/mysql/*.log {
+    create 640 mysql mysql
+    ifempty
+    daily
+    dateext
+    dateformat _%Y%m%d
+
+    # 5years
+    rotate 1827
+    missingok
+    copytruncate
+    compress
+    delaycompress
+
+    postrotate
+
+        # just if mysqld is really running
+        if test -x /usr/bin/mysqladmin && \
+           /usr/bin/mysqladmin ping &>/dev/null
+        then
+           /usr/bin/mysqladmin flush-logs
+        fi
+    endscript
+}
+
+〇確認と再起動
+# logrotate -vdf /etc/logroate.d/[Service Name]
+※"v"つけると詳細を表示(verbose)、"d"をつけるとデバッグで(debug)、"f"をつけると強制実行(force)
+
+# systemctl restart rsyslog
+
