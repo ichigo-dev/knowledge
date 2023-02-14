@@ -204,9 +204,9 @@ function prompt-git-current-branch
  
 setopt prompt_subst
 
-PROMPT="
+PROMPT='
 %F{green}[%D %T]%f %F{cyan}%n%f@%m %F{blue}[%d]%f `prompt-git-current-branch` 
-$ "
+$ '
 
 
 ################################################################################
