@@ -1,9 +1,9 @@
 # Technical knowledge
 
-![thumbnail](./assets/images/thumbnail.png)
-
 - [note](./note/README.md)
 - [config](./config/README.md)
+
+![thumbnail](./assets/images/thumbnail.png)
 
 
 ## Acknowledgments
