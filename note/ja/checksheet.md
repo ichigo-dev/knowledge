@@ -62,7 +62,7 @@
 	- [ ] [命題](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#命題)
 	- [ ] [真偽値（ブール値）](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#真偽値)
 1. [基礎理論/離散数学/論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md)
-	- [ ] [論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算)
+	- [ ] [論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算-1)
 	- [ ] [真理値表](./basics/discrete_mathematics/_/chapters/logical_operation.md#真理値表)
 	- [ ] [OR演算（論理和）](./basics/discrete_mathematics/_/chapters/logical_operation.md#or演算)
 	- [ ] [AND演算（論理積）](./basics/discrete_mathematics/_/chapters/logical_operation.md#and演算)
@@ -73,4 +73,3 @@
 	- [ ] [ド・モルガンの法則](./basics/discrete_mathematics/_/chapters/logical_operation.md#ドモルガンの法則)
 	- [ ] [マスクビット](./basics/discrete_mathematics/_/chapters/logical_operation.md#マスクビット)
 	- [ ] [ビットマスク演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#ビットマスク演算)
-	- [ ] [ビットの反転](./basics/discrete_mathematics/_/chapters/logical_operation.md#ビットの反転)
