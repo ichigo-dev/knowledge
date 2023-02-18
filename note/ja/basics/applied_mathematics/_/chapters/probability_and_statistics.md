@@ -252,7 +252,7 @@ P(X = k) = {}_n C_k p^k (1 - p)^{n-k} & (k = 0, 1, 2, \cdots, n)
 \end{array}
 ```
 
-![二項分布のグラフ](../assets/binomial_distribution.svg)
+![二項分布のグラフ](../assets/binomial_distribution.png)
 
 ### 指数分布
 
@@ -270,7 +270,7 @@ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} & (k = 0, 1, 2, \cdots)
 \end{array}
 ```
 
-![ポアソン分布のグラフ](../assets/poisson_distribution.svg)
+![ポアソン分布のグラフ](../assets/poisson_distribution.png)
 
 ### 正規分布
 
@@ -282,7 +282,8 @@ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} & (k = 0, 1, 2, \cdots)
 f(x) = \frac{1}{\sqrt{2 \pi s^2}} \exp(-\frac{(x - \mu)^2}{2 s^2})
 ```
 
-![正規分布のグラフ](../assets/normal_distribution.svg)
+![正規分布のグラフ](../assets/normal_distribution_1.png)
+![正規分布のグラフ](../assets/normal_distribution_2.png)
 
 ### 標準正規分布
 
