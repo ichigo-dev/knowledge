@@ -47,7 +47,7 @@
 
 下のような[木](#木)をそれぞれの方法で走査した場合、結果は次のようになる。
 
-![ソート済み二分木](../assets/sorted_binary_tree.png)
+![ソート済み二分木](../assets/sorted_binary_tree.jpg)
 
 - 先行順 : F, B, A, D, C, E, G, I, H
 - 中間順 : A, B, C, D, E, F, G, H, I
@@ -59,7 +59,7 @@
 
 下のような[木](#木)を幅優先探索で走査した場合、結果は次のようになる。
 
-![ソート済み二分木](../assets/sorted_binary_tree.png)
+![ソート済み二分木](../assets/sorted_binary_tree.jpg)
 
 - 幅優先探索 : F, B, G, A, D, I, C, E, H
 
