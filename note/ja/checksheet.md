@@ -204,3 +204,6 @@
 	- [ ] [サービス時間分布](./basics/applied_mathematics/_/chapters/waiting_queue_theory.md#ケンドール記法)
 	- [ ] [窓口数](./basics/applied_mathematics/_/chapters/waiting_queue_theory.md#ケンドール記法)
 	- [ ] [M/M/1モデル](./basics/applied_mathematics/_/chapters/waiting_queue_theory.md#mm1モデル)
+1. [基礎理論/応用数学/最適化問題](./basics/applied_mathematics/_/chapters/optimization_problem.md)
+	- [ ] [最短経路問題](./basics/applied_mathematics/_/chapters/optimization_problem.md#最短経路問題)
+	- [ ] [動的計画法](./basics/applied_mathematics/_/chapters/optimization_problem.md#動的計画法)
