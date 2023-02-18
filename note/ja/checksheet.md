@@ -86,7 +86,7 @@
 	- [ ] [加法定理](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#加法定理)
 	- [ ] [乗法定理](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#乗法定理)
 	- [ ] [条件付き確率](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#条件付き確率)
-	- [ ] [ベイズの定理](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#ベイズの定理)
+	- [ ] [ベイズの定理（原因の確率）](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#ベイズの定理)
 	- [ ] [代表値](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#代表値)
 	- [ ] [散布値](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#散布値)
 	- [ ] [平均値（算術平均）](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#平均値)
