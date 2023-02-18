@@ -152,17 +152,17 @@ $123.625_{10}$ を2進数に変換する場合、整数部は、
 
 ```math
 \begin{array}{rrr}
-2\large{)} & 123 & ... 1
+2\large{)} & 123 & ... 1 \
 \hline
-2\large{)} &  61 & ... 1
+2\large{)} &  61 & ... 1 \
 \hline
-2\large{)} &  30 & ... 0
+2\large{)} &  30 & ... 0 \
 \hline
-2\large{)} &  15 & ... 0
+2\large{)} &  15 & ... 0 \
 \hline
-2\large{)} &   7 & ... 1
+2\large{)} &   7 & ... 1 \
 \hline
-2\large{)} &   3 & ... 1
+2\large{)} &   3 & ... 1 \
 \hline
            &   1 &
 \end{array}
@@ -172,8 +172,8 @@ $123.625_{10}$ を2進数に変換する場合、整数部は、
 
 ```math
 \begin{array}{rrr}
-       & 0.625 &
-\times &     2 &
+       & 0.625 & \
+\times &     2 & \
 \hline
        & 1.250 & ... 1
 \end{array}
@@ -181,8 +181,8 @@ $123.625_{10}$ を2進数に変換する場合、整数部は、
 
 ```math
 \begin{array}{rrr}
-       & 0.25 &
-\times &    2 &
+       & 0.25 & \
+\times &    2 & \
 \hline
        & 0.50 & ... 0
 \end{array}
@@ -190,8 +190,8 @@ $123.625_{10}$ を2進数に変換する場合、整数部は、
 
 ```math
 \begin{array}{rrr}
-       & 0.5 &
-\times &   2 &
+       & 0.5 & \
+\times &   2 & \
 \hline
        & 1.0 & ... 1
 \end{array}
