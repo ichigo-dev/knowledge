@@ -6,6 +6,7 @@
 ## 目次
 
 1. [コンピュータとデータ](#コンピュータとデータ)
+	1. [バイナリ](#バイナリ)
 	1. [ビット](#ビット)
 	1. [バイト](#バイト)
 	1. [ワード](#ワード)
@@ -18,6 +19,10 @@
 コンピュータは多くの電子回路から構成されており、スイッチのON/OFFや電圧の高低により信号を伝達している。これらの信号を0と1に対応させる（ONなら1でOFFなら0、5V（電圧高）なら1で0V（電圧低）なら0など）ことで、コンピュータ内部では情報を[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)として扱っている。コンピュータが扱う情報は、数字であろうと文字であろうと命令であろうと、全て[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の羅列で表現される。
 
 [2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で様々な情報を表現しようとすると桁数が大きくなってしまうため、1桁でより多くの情報を表せるように[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)や[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)を使用することもコンピュータの世界では一般的である。これらの[基数](../../discrete_mathematics/_/chapters/radix.md#基数-1)が用いられることが多いのは、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)との[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)が容易なためである。また、一般的に数は[10進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で扱われるため、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)や[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)、[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)と[10進数](../../discrete_mathematics/_/chapters/radix.md#10進数)の[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)もよく行われる。
+
+### バイナリ
+
+**バイナリ**は、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現されたデータのことで、コンピュータが直接解釈できるデータ。
 
 ### ビット
 
