@@ -8,6 +8,7 @@
 1. [MQ](#mq)
 1. [SQS](#sqs)
 1. [SNS](#sns)
+1. [SES](#ses)
 
 
 ## MQ
@@ -23,3 +24,8 @@
 ## SNS
 
 **SNS**(**Amazon Simple Notification Service**)は、サーバレスな通知システムの構築を可能にするサービス。ユーザやアプリケーションの何らかのアクションをトリガーに、Lambdaの起動やメッセージ通知、SMSなどによるモバイル通知が行える。
+
+
+## SES
+
+**SES**(**Amazon Simple Email Service**)は、独自ドメインも利用可能な、AWSのメール配信サービス。他のAWSサービスとの連携も容易。
