@@ -11,3 +11,4 @@
 1. [デバロッパツール](./_/chapters/developer_tool.md)
 1. [マネジメントとガバナンス](./_/chapters/management_and_governance.md)
 1. [ネットワーキングとコンテンツ配信](./_/chapters/networking_and_content_delivery.md)
+1. [セキュリティとアイデンティティ](./_/chapters/security_and_identity.md)
