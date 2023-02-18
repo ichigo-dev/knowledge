@@ -25,3 +25,5 @@
 	1. [データベース](./development/database/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
+
+- [チェックシート](./checksheet.md)
