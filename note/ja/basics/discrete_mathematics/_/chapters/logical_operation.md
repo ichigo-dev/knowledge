@@ -133,8 +133,8 @@
 
 ```math
 \begin{array}{c}
-\bar{A \cdot B} = \bar{A} + \bar{B} \\
-\bar{A + B} = \bar{A} \cdot \bar{B}
+\overline{A \cdot B} = \bar{A} + \bar{B} \\
+\overline{A + B} = \bar{A} \cdot \bar{B}
 \end{array}
 ```
 
