@@ -10,6 +10,6 @@
 
 1. [基数](./_/chapters/radix.md)
 1. [2進数による数値の表現](./_/chapters/numeric_representation.md)
-1. [算術演算と精度](./_/chapters/arthmetic_operation_and_precision.md)
+1. [算術演算と精度](./_/chapters/arithmetic_operation_and_precision.md)
 1. [集合と命題](./_/chapters/set_and_proposition.md)
 1. [論理演算](./_/chapters/logical_operation.md)
