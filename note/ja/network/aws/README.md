@@ -8,4 +8,5 @@
 1. [アプリケーション統合](./_/chapters/application_integration.md)
 1. [ビジネスアプリケーション](./_/chapters/business_application.md)
 1. [コンピューティング](./_/chapters/computing.md)
+1. [データベース](./_/chapters/database.md)
 1. [ネットワーキングとコンテンツ配信](./_/chapters/networking_and_content_delivery.md)
