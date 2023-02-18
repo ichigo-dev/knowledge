@@ -28,7 +28,7 @@
 
 ## 隣接行列
 
-**隣接行列**は、[グラフ](#グラフ)を表現するために用いられる[行列](./numerical_calculation.md#行列)。[行列](./numerical_calculation.md#行列)の各[行](./numerical_calculation.md#行列)と[列](./numerical_calculation.md#行列)はそれぞれ[グラフ](#グラフ)の[ノード](#グラフ)に対応しており、[ノード](#グラフ)同士が[エッジ](#グラフ)で接続されている部分を1に、それ以外を0にしたものとなっている。また、[エッジ](#グラフ)が重みを持つような[グラフ](#グラフ)の場合は、1の代わりに重みを入れた[行列](./numerical_calculation.md#行列)とする。
+**隣接行列**は、[グラフ](#グラフ)を表現するために用いられる[行列](./numerical_calculation.md#行列)。[行列](./numerical_calculation.md#行列)の各[行](./numerical_calculation.md#行列)と[列](./numerical_calculation.md#行列)はそれぞれ[グラフ](#グラフ)の[ノード](#グラフ)に対応しており、[ノード](#グラフ)同士が[エッジ](#グラフ)で接続されている部分を $1$ に、それ以外を $0$ にしたものとなっている。また、[エッジ](#グラフ)が重みを持つような[グラフ](#グラフ)の場合は、 $1$ の代わりに重みを入れた[行列](./numerical_calculation.md#行列)とする。
 
 
 ## 木
@@ -47,7 +47,7 @@
 
 下のような[木](#木)をそれぞれの方法で走査した場合、結果は次のようになる。
 
-![ソート済み二分木](../assets/depth_first_search.png)
+![深さ優先探索](../assets/depth_first_search.png)
 
 - 先行順 : F, B, A, D, C, E, G, I, H
 - 中間順 : A, B, C, D, E, F, G, H, I
@@ -59,7 +59,7 @@
 
 下のような[木](#木)を幅優先探索で走査した場合、結果は次のようになる。
 
-![ソート済み二分木](../assets/breadth_first_search.png)
+![幅優先探索](../assets/breadth_first_search.png)
 
 - 幅優先探索 : F, B, G, A, D, I, C, E, H
 
