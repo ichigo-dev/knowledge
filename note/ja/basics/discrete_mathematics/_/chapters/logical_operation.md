@@ -52,7 +52,7 @@
 | $1$ | $0$ | $1$ |
 | $1$ | $1$ | $1$ |
 
-![OR演算のベン図](../assets/venn_diagram_or.png)
+![OR演算のベン図](../assets/images/venn_diagram_or.png)
 
 ### AND演算
 
@@ -67,7 +67,7 @@
 | $1$ | $0$ | $0$ |
 | $1$ | $1$ | $1$ |
 
-![AND演算のベン図](../assets/venn_diagram_and.png)
+![AND演算のベン図](../assets/images/venn_diagram_and.png)
 
 ### NOT演算
 
@@ -80,7 +80,7 @@
 | $0$ | $1$ |
 | $1$ | $0$ |
 
-![NOT演算のベン図](../assets/venn_diagram_not.png)
+![NOT演算のベン図](../assets/images/venn_diagram_not.png)
 
 ### NOR演算
 
@@ -95,7 +95,7 @@
 | $1$ | $0$ | $0$ |
 | $1$ | $1$ | $0$ |
 
-![NOR演算のベン図](../assets/venn_diagram_nor.png)
+![NOR演算のベン図](../assets/images/venn_diagram_nor.png)
 
 ### NAND演算
 
@@ -110,7 +110,7 @@
 | $1$ | $0$ | $1$ |
 | $1$ | $1$ | $0$ |
 
-![NAND演算のベン図](../assets/venn_diagram_nand.png)
+![NAND演算のベン図](../assets/images/venn_diagram_nand.png)
 
 ### XOR演算
 
@@ -125,7 +125,7 @@
 | $1$ | $0$ | $1$ |
 | $1$ | $1$ | $0$ |
 
-![XOR演算のベン図](../assets/venn_diagram_xor.png)
+![XOR演算のベン図](../assets/images/venn_diagram_xor.png)
 
 
 ## ド・モルガンの法則
