@@ -16,6 +16,7 @@
 	1. [ランレングス符号化](#ランレングス符号化)
 1. [伝送路符号](#伝送路符号)
 1. [アナログとデジタル](#アナログとデジタル)
+1. [エンディアン](#エンディアン)
 
 
 ## 圧縮
@@ -73,6 +74,19 @@
 自然界に存在するほとんどの情報は、人間が観測するスケールにおいてはアナログであるが、アナログデータはコンピュータでは扱いにくいのでデジタルデータへの変換（[A/D変換](../../../measurement_and_control/_/chapters/signal_processing.md#ad変換)）がよく行われる。
 
 ![アナログとデジタル](../assets/images/analog_and_digital.jpg)
+
+
+## エンディアン
+
+**エンディアン**（**バイトオーダ**）は、複数の[バイト](../../../_/chapters/computer_and_number.md#バイト)などを並べる際の方式。エンディアンは[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)によって決まっており、異なる機器間でデータをやり取りする際はエンディアンに留意する必要がある。
+
+### ビッグエンディアン
+
+**ビッグエンディアン**は、複数の[バイト](../../../_/chapters/computer_and_number.md#バイト)で構成されるデータを上位[バイト](../../../_/chapters/computer_and_number.md#バイト)から下位[バイト](../../../_/chapters/computer_and_number.md#バイト)の順に取り扱う手法。
+
+### リトルエンディアン
+
+**リトルエンディアン**は、複数の[バイト](../../../_/chapters/computer_and_number.md#バイト)で構成されるデータを下位[バイト](../../../_/chapters/computer_and_number.md#バイト)から上位[バイト](../../../_/chapters/computer_and_number.md#バイト)の順に取り扱う手法。
 
 
 ## 参考文献
