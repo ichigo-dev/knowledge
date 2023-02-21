@@ -1,7 +1,7 @@
 # 『伝送理論』
 
 
-（最終更新： 2023-02-20）
+（最終更新： 2023-02-21）
 
 
 ## 目次
@@ -51,17 +51,107 @@
 
 **ハミング符号**は、データにいくつかの冗長[ビット](../../../_/chapters/computer_and_number.md#ビット)を付加することで、1[ビット](../../../_/chapters/computer_and_number.md#ビット)の誤りを検出し、それを訂正する方法。
 
-**情報ビット**を $x_1, x_2, x_3, x_4$ とすると、**検査ビット**は、
+ハミング符号では、ある整数 $m$ に対して、符号化するデータの[ビット](../../../_/chapters/computer_and_number.md#ビット)数 $k$ と、**符号語**の長さ $n$ は次のようになる。
 
 ```math
 \begin{array}
-& c_1 = & x_1 &       & + x_3 & + x_4 \
-  c_2 = & x_1 & + x_2 & + x_3 &       \
-  c_3 = &     & x_2   & + x_3 & + x_4
+k = n - m \
+n = 2^m - 1
 \end{array}
 ```
 
-となり、**符号語**は $w = (x_1, x_2, x_3, x_4, c_1, c_2, c_3)$ となる。このとき、**受信語** $y = (y_1, y_2, y_3, y_4, y_5, y_6, y_7)$ に対する**シンドローム**は、
+ハミング符号では最初に、 $m$ [行](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列) $n$ [列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)の**検査行列** $H$ を求める。 $m = 3$ （ $n = 7$ ）の場合、 次のような検査行列となる。
+
+```math
+H =
+\left[
+\begin{array}{ccccccc}
+1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 1 & 0 & 0 & 1
+\end{array}
+\right]
+```
+
+検査行列は、全ての[列要素](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)がゼロではなく、それぞれが相違となるような[ビット](../../../_/chapters/computer_and_number.md#ビット)列を並べたものとなる。[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)の並べ方は任意で、上記の例に限らない。
+
+次に、 $HG^{T} = GH^{T} = 0$ を満たすような**生成行列** $G$ を求める。前述の検査行列に対する生成行列は次のようになる。
+
+```math
+G =
+\left[
+\begin{array}{ccccccc}
+1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+\end{array}
+\right]
+```
+
+そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを $[1 0 1 1]$ とすると、符号語は次のようになる。
+
+```math
+[1 0 1 1]
+
+\cdot
+
+\left[
+\begin{array}{ccccccc}
+1 & 0 & 0 & 0 & 1 & 1 & 0 \\
+0 & 1 & 0 & 0 & 0 & 1 & 1 \\
+0 & 0 & 1 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 1 & 1 & 1 & 1 \\
+\end{array}
+\right]
+
+=
+
+[1 0 1 1 1 0 0]
+```
+
+受信側では、**受信語** $Y$ に対して次のような関係が成り立つ。ここで、 $x$ は複合後のデータとし、送信時の誤りは発生していないものとする。
+
+```math
+\begin{array}
+Y    & = & xG \
+YH^T & = & xGH^T \
+YH^T & = & 0
+\end{array}
+```
+
+送信時の誤りが発生していた場合、次のような関係が成り立つ。ここで、 $e_i$ は**誤りベクトル**とする。
+
+```math
+\begin{array}
+Y    & = & xG \oplus e_i \
+YH^T & = & (xG \oplus e_i)H^T \
+YH^T & = & xGH^T \oplus e_i H^T \
+YH^T & = & e_i H^T
+\end{array}
+```
+
+これらの関係より、受信語 $Y$ と検査行列の[転置行列](../../../applied_mathematics/_/chapters/numerical_calculation.md#転置行列)の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)が $0$ であった場合には誤りはなく、非 $0$ であった場合には、 $e_i^T$ に対応する検査行列の[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)が誤っているということがわかる。例えば、受信語が `1111100` であった場合は次のような誤りベクトルが得られる。
+
+```math
+[1 1 1 1 1 0 0]
+
+\cdot
+
+\left[
+\begin{array}{ccccccc}
+1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+0 & 1 & 1 & 1 & 0 & 0 & 1
+\end{array}
+\right]^T
+
+=
+
+[0 1 1]
+```
+
+この場合、誤りベクトルの[転置行列](../../../applied_mathematics/_/chapters/numerical_calculation.md#転置行列)は検査行列の2[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)目と一致するので、受信語の2[ビット](../../../_/chapters/computer_and_number.md#ビット)目が誤っている、すなわち正しい受信語は `1011100` であることがわかる。
 
 ### CRC
 
