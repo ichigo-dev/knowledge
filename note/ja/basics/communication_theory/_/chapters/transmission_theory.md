@@ -54,7 +54,7 @@
 ハミング符号では、ある整数 $m$ に対して、符号化するデータの[ビット](../../../_/chapters/computer_and_number.md#ビット)数 $k$ と、**符号語**の長さ $n$ は次のようになる。
 
 ```math
-\begin{array}{ccc}
+\begin{array}{rcl}
 k & = & n - m \
 n & = & 2^m - 1
 \end{array}
@@ -89,7 +89,7 @@ G =
 \right]
 ```
 
-そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを $\left[ \begin{array}{cccc} 1 & 0 & 1 & 1 \right]$ とすると、符号語は次のようになる。
+そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを `1011` とすると、符号語は次のようになる。
 
 ```math
 \left[
@@ -121,7 +121,7 @@ G =
 受信側では、**受信語** $Y$ に対して次のような関係が成り立つ。ここで、 $x$ は複合後のデータとし、送信時の誤りは発生していないものとする。
 
 ```math
-\begin{array}{ccc}
+\begin{array}{rcl}
 Y    & = & xG \
 YH^T & = & xGH^T \
 YH^T & = & 0
@@ -131,7 +131,7 @@ YH^T & = & 0
 送信時の誤りが発生していた場合、次のような関係が成り立つ。ここで、 $e_i$ は**誤りベクトル**とする。
 
 ```math
-\begin{array}{ccc}
+\begin{array}{rcl}
 Y    & = & xG \oplus e_i \
 YH^T & = & (xG \oplus e_i)H^T \
 YH^T & = & xGH^T \oplus e_i H^T \
