@@ -279,7 +279,7 @@ P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!} & (k = 0, 1, 2, \cdots)
 [平均値](#平均値)を $\mu$ 、[分散](#分散)を $s^2$ とおく。このとき、[確率変数](#確率変数) $X$ は以下の式で表され、 $X$ が正規分布に従うとき $X \sim N(\mu, s^2)$ と表す。
 
 ```math
-f(x) = \frac{1}{\sqrt{2 \pi s^2}} \exp(-\frac{(x - \mu)^2}{2 s^2})
+f(x) = \frac{1}{\sqrt{2 \pi s^2}} \exp \left( -\frac{(x - \mu)^2}{2 s^2} \right)
 ```
 
 ![正規分布のグラフ](../assets/images/normal_distribution_1.png)
