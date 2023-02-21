@@ -1,6 +1,5 @@
 # 『伝送理論』
 
-
 （最終更新： 2023-02-21）
 
 
@@ -54,10 +53,10 @@
 ハミング符号では、ある整数 $m$ に対して、符号化するデータの[ビット](../../../_/chapters/computer_and_number.md#ビット)数 $k$ と、**符号語**の長さ $n$ は次のようになる。
 
 ```math
-\begin{array}{rcl}
+\begin{eqnarray}
 k & = & n - m \
 n & = & 2^m - 1
-\end{array}
+\end{eqnarray}
 ```
 
 ハミング符号では最初に、 $m$ [行](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列) $n$ [列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)の**検査行列** $H$ を求める。 $m = 3$ （ $n = 7$ ）の場合、 次のような検査行列となる。
@@ -121,22 +120,22 @@ G =
 受信側では、**受信語** $Y$ に対して次のような関係が成り立つ。ここで、 $x$ は複合後のデータとし、送信時の誤りは発生していないものとする。
 
 ```math
-\begin{array}{rcl}
+\begin{eqnarray}
 Y    & = & xG \
 YH^T & = & xGH^T \
 YH^T & = & 0
-\end{array}
+\end{eqnarray}
 ```
 
 送信時の誤りが発生していた場合、次のような関係が成り立つ。ここで、 $e_i$ は**誤りベクトル**とする。
 
 ```math
-\begin{array}{rcl}
+\begin{eqnarray}
 Y    & = & xG \oplus e_i \
 YH^T & = & (xG \oplus e_i)H^T \
 YH^T & = & xGH^T \oplus e_i H^T \
 YH^T & = & e_i H^T
-\end{array}
+\end{eqnarray}
 ```
 
 これらの関係より、受信語 $Y$ と検査行列の[転置行列](../../../applied_mathematics/_/chapters/numerical_calculation.md#転置行列)の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)が $0$ であった場合には誤りはなく、非 $0$ であった場合には、 $e_i^T$ に対応する検査行列の[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)が誤っているということがわかる。例えば、受信語が `1111100` であった場合は次のような誤りベクトルが得られる。

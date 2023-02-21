@@ -133,10 +133,10 @@
 **ド・モルガンの法則**は、[否定論理和](#nor演算)および[否定論理積](#nand演算)をそれぞれ[論理和](#or演算)と[論理積](#and演算)に変換するもので、以下のように表される。
 
 ```math
-\begin{array}{ccc}
+\begin{eqnarray}
 \overline{A \cdot B} & = & \bar{A} + \bar{B} \\
 \overline{A + B}     & = & \bar{A} \cdot \bar{B}
-\end{array}
+\end{eqnarray}
 ```
 
 
