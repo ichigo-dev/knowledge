@@ -89,7 +89,7 @@ G =
 \right]
 ```
 
-そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを $[1 0 1 1]$ とすると、符号語は次のようになる。
+そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを $\left[ \begin{array}{cccc} 1 & 0 & 1 & 1 \right]$ とすると、符号語は次のようになる。
 
 ```math
 [1 0 1 1]
@@ -107,7 +107,11 @@ G =
 
 =
 
-[1 0 1 1 1 0 0]
+\left[
+\begin{array}{ccccccc}
+1 & 0 & 1 & 1 & 1 & 0 & 0
+\end{array}
+\right]
 ```
 
 受信側では、**受信語** $Y$ に対して次のような関係が成り立つ。ここで、 $x$ は複合後のデータとし、送信時の誤りは発生していないものとする。
@@ -134,7 +138,11 @@ YH^T & = & e_i H^T
 これらの関係より、受信語 $Y$ と検査行列の[転置行列](../../../applied_mathematics/_/chapters/numerical_calculation.md#転置行列)の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)が $0$ であった場合には誤りはなく、非 $0$ であった場合には、 $e_i^T$ に対応する検査行列の[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)が誤っているということがわかる。例えば、受信語が `1111100` であった場合は次のような誤りベクトルが得られる。
 
 ```math
-[1 1 1 1 1 0 0]
+\left[
+\begin{array}{ccccccc}
+1 & 1 & 1 & 1 & 1 & 0 & 0
+\end{array}
+\right]
 
 \cdot
 
@@ -148,7 +156,11 @@ YH^T & = & e_i H^T
 
 =
 
-[0 1 1]
+\left[
+\begin{array}{ccc}
+0 & 1 & 1
+\end{array}
+\right]
 ```
 
 この場合、誤りベクトルの[転置行列](../../../applied_mathematics/_/chapters/numerical_calculation.md#転置行列)は検査行列の2[列](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列)目と一致するので、受信語の2[ビット](../../../_/chapters/computer_and_number.md#ビット)目が誤っている、すなわち正しい受信語は `1011100` であることがわかる。
