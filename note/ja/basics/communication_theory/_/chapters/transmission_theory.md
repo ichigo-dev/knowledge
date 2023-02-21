@@ -92,7 +92,11 @@ G =
 そして、送信したい情報と生成行列の[積](../../../applied_mathematics/_/chapters/numerical_calculation.md#行列の積)をとった結果得られる答えが、ハミング符号化後の符号語となる。送信したいデータを $\left[ \begin{array}{cccc} 1 & 0 & 1 & 1 \right]$ とすると、符号語は次のようになる。
 
 ```math
-[1 0 1 1]
+\left[
+\begin{array}{cccc}
+1 & 0 & 1 & 1
+\end{array}
+\right]
 
 \cdot
 
