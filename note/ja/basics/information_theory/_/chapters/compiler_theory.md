@@ -60,19 +60,19 @@
 
 ### 最適化
 
-**最適化**は、[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)の高速化やサイズの縮小のための処理。
+**最適化**は、[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)の高速化やサイズの縮小のための処理。
 
 
 ## リンカ
 
-**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)。
+**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)。
 
 リンカによって[オブジェクトコード](#コンパイラ)をつなぎ合わせる処理を**リンク**という。
 
 
 ## インタプリタ
 
-**インタプリタ**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を部分的に解釈しながら並行して実行するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)。
+**インタプリタ**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を部分的に解釈しながら並行して実行するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)。
 
 
 ## 参考文献
