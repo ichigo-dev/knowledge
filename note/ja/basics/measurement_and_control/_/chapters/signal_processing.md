@@ -1,6 +1,6 @@
 # 『信号処理』
 
-（最終更新： 2023-01-15）
+（最終更新： 2023-02-22）
 
 
 ## 目次
@@ -16,36 +16,36 @@
 
 ## A/D変換
 
-**A/D変換**とは、[アナログ](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)情報を[デジタル](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)データに変換すること。
+**A/D変換**は、[アナログ](../../../information_theory/_/chapters/coding_theory.md#アナログ)情報を[デジタル](../../../information_theory/_/chapters/coding_theory.md#デジタル)データに変換する処理。
 
 ### 標本化
 
-**標本化**とは、連続する[アナログ](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)情報を一定の間隔でサンプリングすること。
+**標本化**は、連続する[アナログ](../../../information_theory/_/chapters/coding_theory.md#アナログ)情報を一定の間隔でサンプリングする処理。
 
 ### 量子化
 
-**量子化**とは、[標本化](#標本化)したデータを[デジタル](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)値に変換すること。
+**量子化**は、[標本化](#標本化)したデータを[デジタル](../../../information_theory/_/chapters/coding_theory.md#デジタル)値に変換する処理。
 
 ### 符号化
 
-**符号化**とは、[量子化](#量子化)したデータを[2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)に変換すること。
+**符号化**は、[量子化](#量子化)したデータを[2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)に変換する処理。
 
 
 ## D/A変換
 
-**D/A変換**とは、[デジタル](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)データを[アナログ](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)情報に変換すること。
+**D/A変換**は、[デジタル](../../../information_theory/_/chapters/coding_theory.md#デジタル)データを[アナログ](../../../information_theory/_/chapters/coding_theory.md#アナログ)情報に変換する処理。
 
 
 ## サンプリング定理
 
-**サンプリング定理**（**標本化定理**）とは、ある周波数の[アナログ](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)信号を[デジタル](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)データに変換するときに、それを[アナログ](../../../information_theory/_/chapters/compiler_theory.md#アナログとデジタル)信号に復元するためには、その周波数の2倍のサンプリング周波数が必要であるという定理。
+**サンプリング定理**（**標本化定理**）は、ある周波数の[アナログ](../../../information_theory/_/chapters/coding_theory.md#アナログ)信号を[デジタル](../../../information_theory/_/chapters/coding_theory.md#デジタル)データに変換するときに、それを[アナログ](../../../information_theory/_/chapters/coding_theory.md#アナログ)信号に復元するためには、その周波数の2倍のサンプリング周波数が必要であるという定理。
 
 
 ## PCM
 
-**PCM**(Pulse Code Modulation)とは、音を[標本化](#標本化)し、[量子化](#量子化)、[符号化](#符号化)したデータを格納するために用いられている方式のこと。
+**PCM**(Pulse Code Modulation)は、音を[標本化](#標本化)し、[量子化](#量子化)、[符号化](#符号化)したデータを格納するために用いられている方式。
 
-単純なPCMでは、[標本化](#標本化)ごとのデータの変化が小さいことが多いので、データの差分を用いて動的にデータを作成することで圧縮を行う**ADPCM**(Adaptive Differential PCM)という方式もある。
+単純なPCMでは、[標本化](#標本化)ごとのデータの変化が小さいことが多いので、データの差分を用いて動的にデータを作成することで[圧縮](../../../information_theory/_/chapters/coding_theory.md#圧縮)を行う**ADPCM**(Adaptive Differential PCM)という方式もある。
 
 
 ## 参考文献
