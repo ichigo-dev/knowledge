@@ -374,3 +374,7 @@
 	- [ ] [ダブルフリー（多重フリー）](./programming/_/chapters/basic_knowledge_of_programming.md#ダブルフリー)
 	- [ ] [ダングリングポインタ](./programming/_/chapters/basic_knowledge_of_programming.md#ダングリングポインタ)
 	- [ ] [ガベージコレクション(GC)](./programming/_/chapters/basic_knowledge_of_programming.md#ガベージコレクション)
+	- [ ] [アロケート（アロケーション）](./programming/_/chapters/basic_knowledge_of_programming.md#アロケート)
+	- [ ] [実行環境](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
+	- [ ] [テキストエディタ](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
+	- [ ] [統合開発環境](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
