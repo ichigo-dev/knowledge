@@ -378,3 +378,5 @@
 	- [ ] [実行環境](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
 	- [ ] [テキストエディタ](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
 	- [ ] [統合開発環境](./programming/_/chapters/basic_knowledge_of_programming.md#プログラミングを始める)
+1. [プログラミング/変数](./programming/_/chapters/variable.md)
+	- [ ] [プログラミング/変数](./programming/_/chapters/variable.md#変数-1)
