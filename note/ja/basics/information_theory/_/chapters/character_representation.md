@@ -1,11 +1,12 @@
 # 『文字の表現』
 
-（最終更新： 2023-02-23）
+（最終更新： 2023-02-26）
 
 
 ## 目次
 
 1. [文字コード](#文字コード)
+	1. [マルチバイト文字](#マルチバイト文字)
 	1. [ASCIIコード](#asciiコード)
 	1. [EUCコード](#eucコード)
 	1. [JISコード](#jisコード)
@@ -16,6 +17,10 @@
 ## 文字コード
 
 **文字コード**は、[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)内部で文字を[2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)の[ビット](../../../_/chapters/computer_and_number.md#ビット)パターンに割り当てたもの。文字コードには複数の体系が存在しており、情報をやり取りするためにはコード体系が合致している必要がある。
+
+### マルチバイト文字
+
+**マルチバイト文字**は、[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)上で1文字を複数[バイト](../../../_/chapters/computer_and_number.md#バイト)で表現するような体系。アルファベットや数字、一部の記号は、[ASCIIコード](#asciiコード)により1[バイト](../../../_/chapters/computer_and_number.md#バイト)で表現することができるが、全角カナや漢字などは1[バイト](../../../_/chapters/computer_and_number.md#バイト)では表現しきれないためマルチバイト文字を用いる。
 
 ### ASCIIコード
 
