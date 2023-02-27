@@ -18,12 +18,32 @@
 1. [システム](./system/README.md)
 1. [ネットワーク](./network/README.md)
 	1. [AWS](./network/aws/README.md)
-	1. [Docker](./network/docker/README.md)
 1. [人工知能](./artificial_intelligence/README.md)
 1. [開発](./development/README.md)
 	1. [Git](./development/git/README.md)
 	1. [データベース](./development/database/README.md)
+	1. [Docker](./development/docker/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
+	1. [マネジメント](./development/management/README.md)
 
 - [チェックシート](./checksheet.md)
+
+
+## 進捗
+
+### チェックシート
+
+- プログラミング途中
+
+### 途中
+
+- Rust
+- Docker
+
+### 未着手
+
+- 並行プログラミング
+- デザインパターン
+- ソフトウェアアーキテクチャ
+- マネジメント
