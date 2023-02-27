@@ -572,3 +572,7 @@
 	- [ ] [for in文](./programming/_/chapters/control_flow.md#for-in文)
 	- [ ] [loop文](./programming/_/chapters/control_flow.md#for-in文)
 		- [ ] [無限ループ](./programming/_/chapters/control_flow.md#for-in文)
+
+### 関数
+
+- [ ] [関数（サブルーチン、手続き、プロシージャ）](./programming/_/chapters/function.md#関数-1)
