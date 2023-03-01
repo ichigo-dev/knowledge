@@ -1,6 +1,6 @@
 # 『Dockerの基礎知識』
 
-（最終更新： 2023-03-01）
+（最終更新： 2023-03-02）
 
 
 ## 目次
@@ -21,6 +21,7 @@
 	1. [MCR](#mcr)
 	1. [Docker Desktop](#docker-desktop)
 1. [Dockerのインストール](#dockerのインストール)
+	1. [Dockerエンジンの起動](#dockerエンジンの起動)
 	1. [Docker Hubへのログイン](#docker-hubへのログイン)
 
 
@@ -115,6 +116,17 @@ Docker version 23.0.1, build a5ee5b1dfc
 - [Dockerのインストール](https://docs.docker.com/engine/install)
 
 上記サイトより、自身の環境のOSに応じたインストール手順を実施し、改めて `docker --version` を実行してバージョン情報が出力されることを確認する。
+
+### Dockerエンジンの起動
+
+Dockerエンジンを `systemd` 経由で起動する。
+
+```sh
+$ systemctl start docker
+$ systemctl enable docker
+$ systemctl is-active docker
+active
+```
 
 ### Docker Hubへのログイン
 

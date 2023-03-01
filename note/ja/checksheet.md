@@ -607,3 +607,8 @@
 	- [ ] [プロパティ（属性、メンバ変数、フィールド変数）](./programming/_/chapters/class.md#プロパティ)
 	- [ ] [メソッド（操作、メンバ関数）](./programming/_/chapters/class.md#メソッド)
 	- [ ] [クラス](./programming/_/chapters/class.md#クラス-1)
+	- [ ] [インスタンス](./programming/_/chapters/class.md#インスタンス)
+	- [ ] [インスタンス化](./programming/_/chapters/class.md#インスタンス)
+	- [ ] [プロトタイプ](./programming/_/chapters/class.md#プロトタイプ)
+	- [ ] [プロトタイプオブジェクト](./programming/_/chapters/class.md#プロトタイプ)
+	- [ ] [プロトタイプチェーン](./programming/_/chapters/class.md#プロトタイプ)
