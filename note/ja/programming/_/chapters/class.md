@@ -39,16 +39,15 @@
 
 ## オブジェクト指向
 
-**オブジェクト指向**はプログラミングパラダイムのひとつで、非常に多くのプログラミング言語に取り入れられている概念である。相互に作用するオブジェクトを組み合わせることでプログラムを設計する手法で、クラスベースのオブジェクト指向に則ったプログラミング言語が多い（JavaScriptのように、プロトタイプベースのオブジェクト指向もある）。
+**オブジェクト指向**は、[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)のひとつで、非常に多くの[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)に取り入れられている概念である。相互に作用する[オブジェクト](#オブジェクト)を組み合わせることで[プログラム](./basic_knowledge_of_programming.md#プログラム)を設計する手法で、[クラス](#クラス-1)ベースのオブジェクト指向に則った[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)が多い（[JavaScript](./programming_language.md#javascript)のように、[プロトタイプ](#プロトタイプ#プロトタイプ#プロトタイプ)ベースのオブジェクト指向もある）。
 
 ```cpp
 // C++
 
-
 #include <string>
 
 // クラス宣言
-class Goblin
+class Dragon
 {
     public:
 
@@ -63,7 +62,7 @@ class Goblin
 
         // プロパティ
         int m_index = 1;
-        std::string m_name = "goblin";
+        std::string m_name = "dragon";
         int m_level = 1;
 };
 
@@ -71,8 +70,8 @@ class Goblin
 int main()
 {
     // インスタンス生成
-    Goblin goblin;
-    int level = goblin.level_up(10);
+    Dragon dragon;
+    int level = dragon.level_up(10);
     printf("Level: %d\n", level);
 
     return 0;
@@ -85,7 +84,7 @@ int main()
 // PHP
 
 // クラス宣言
-class Goblin
+class Dragon
 {
     // メソッド
     public function level_up( $diff_ )
@@ -96,13 +95,13 @@ class Goblin
 
     // プロパティ
     private $m_index = 1;
-    private $m_name = "goblin";
+    private $m_name = "dragon";
     private $m_level = 1;
 }
 
 // インスタンス生成
-$goblin = new Goblin();
-$level = $goblin->level_up(10);
+$dragon= new Dragon();
+$level = $dragon->level_up(10);
 echo("Level: " . $level);
 
 ?>
@@ -112,45 +111,45 @@ echo("Level: " . $level);
 // JavaScript
 
 // プロトタイプの初期化用
-function Goblin()
+function Dragon()
 {
     // プロパティ
     this.m =
     {
         index : 1,
-        name : "goblin",
+        name : "dragon",
         level : 1,
     };
 }
 
 // メソッド
-Goblin.prototytpe.level_up = function(diff_)
+Dragon.prototytpe.level_up = function(diff_)
 {
     this.m.level += diff_;
     return this.m.level;
 };
 
 // オブジェクト生成
-let goblin = Goblin();
-let level = goblin.level_up(10);
+let dragon = Dragon();
+let level = dragon.level_up(10);
 console.log("Level: " + level);
 ```
 
 ### オブジェクト
 
-**オブジェクト**は、あらゆるものをコンピュータが扱うデータとして抽象化したもの。オブジェクトはプロパティやメソッドを持っており、他のオブジェクトとの相互に作用しあって成り立っている。
+**オブジェクト**は、あらゆるものを[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が扱うデータとして抽象化したもの。オブジェクトは[プロパティ](#プロパティ)や[メソッド](#メソッド)を持っており、他のオブジェクトとの相互に作用しあって成り立っている。
 
 ### プロパティ
 
-**プロパティ**（**属性**、**メンバ変数**、**フィールド変数**）は、オブジェクトが持つデータや情報。
+**プロパティ**（**属性**、**メンバ変数**、**フィールド変数**）は、[オブジェクト](#オブジェクト)が持つデータや情報。
 
 ### メソッド
 
-**メソッド**（**操作**、**メンバ関数**）は、オブジェクトの機能や振る舞い。
+**メソッド**（**操作**、**メンバ関数**）は、[オブジェクト](#オブジェクト)の機能や振る舞い。
 
 ### クラス
 
-**クラス**は、オブジェクトを生成するための設計図のようなもの。オブジェクトの実体はクラスを元にして生成される。同じクラスから生成されたオブジェクトは、共通のプロパティとメソッドを持つ（ただし、それぞれのオブジェクトが持つプロパティは独立しており、オブジェクトごとに固有）。クラスは実体を持たない設計図であるため、そのままではプロパティやメソッドを利用することはできない。
+**クラス**は、[オブジェクト](#オブジェクト)を生成するための設計図のようなもの。[オブジェクト](#オブジェクト)の実体はクラスを元にして生成される。同じクラスから生成された[オブジェクト](#オブジェクト)は、共通の[プロパティ](#プロパティ)と[メソッド](#メソッド)を持つ（ただし、それぞれの[オブジェクト](#オブジェクト)が持つ[プロパティ](#プロパティ)は独立しており、[オブジェクト](#オブジェクト)ごとに固有）。クラスは実体を持たない設計図であるため、そのままでは[プロパティ](#プロパティ)や[メソッド](#メソッド)を利用することはできない。
 
 ### インスタンス
 

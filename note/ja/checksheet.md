@@ -599,3 +599,11 @@
 	- [ ] [再帰呼び出し](./programming/_/chapters/function.md#再帰関数)
 	- [ ] [ベースケース](./programming/_/chapters/function.md#再帰関数)
 - [ ] [カリー化](./programming/_/chapters/function.md#カリー化)
+
+### クラス
+
+- [ ] [オブジェクト指向](./programming/_/chapters/class.md#オブジェクト指向)
+	- [ ] [オブジェクト](./programming/_/chapters/class.md#オブジェクト)
+	- [ ] [プロパティ（属性、メンバ変数、フィールド変数）](./programming/_/chapters/class.md#プロパティ)
+	- [ ] [メソッド（操作、メンバ関数）](./programming/_/chapters/class.md#メソッド)
+	- [ ] [クラス](./programming/_/chapters/class.md#クラス-1)
