@@ -15,6 +15,7 @@
 1. [コンピュータ](./computer/README.md)
 	1. [ハードウェア](./computer/hardware/README.md)
 	1. [ソフトウェア](./computer/software/README.md)
+	1. [Linux](./computer/linux/README.md)
 1. [システム](./system/README.md)
 1. [ネットワーク](./network/README.md)
 	1. [AWS](./network/aws/README.md)
@@ -43,6 +44,7 @@
 
 ### 未着手
 
+- Linux
 - 並行プログラミング
 - デザインパターン
 - ソフトウェアアーキテクチャ
