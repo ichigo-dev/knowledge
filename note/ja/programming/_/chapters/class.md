@@ -7,6 +7,7 @@
 
 1. [オブジェクト指向](#オブジェクト指向)
 	1. [オブジェクト](#オブジェクト)
+	1. [メンバ](#メンバ)
 	1. [プロパティ](#プロパティ)
 	1. [メソッド](#メソッド)
 	1. [クラス](#クラス-1)
@@ -139,6 +140,10 @@ console.log("Level: " + level);
 
 **オブジェクト**は、あらゆるものを[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が扱うデータとして抽象化したもの。オブジェクトは[プロパティ](#プロパティ)や[メソッド](#メソッド)を持っており、他のオブジェクトとの相互に作用しあって成り立っている。
 
+### メンバ
+
+**メンバ**は、[オブジェクト](#オブジェクト)が持つ[プロパティ](#プロパティ)や[メソッド](#メソッド)。
+
 ### プロパティ
 
 **プロパティ**（**属性**、**メンバ変数**、**フィールド変数**）は、[オブジェクト](#オブジェクト)が持つデータや情報。
@@ -164,16 +169,16 @@ console.log("Level: " + level);
 
 ## カプセル化
 
-**カプセル化**は、オブジェクトが持つ情報を隠蔽することによって、不正な操作ができないようにする仕組みのこと。オブジェクトが持つメソッドやプロパティは、アクセス指定子によってアクセスできる範囲を制限できる。
+**カプセル化**は、[オブジェクト](#オブジェクト)が持つ情報を隠蔽することによって、不正な操作ができないようにする仕組み。[オブジェクト](#オブジェクト)が持つ[メソッド](#メソッド)や[プロパティ](#プロパティ)は、[アクセス指定子](#アクセス指定子)によってアクセスできる範囲を制限できる。
 
-カプセル化には、オブジェクトの外部からのアクセスを制限することで、オブジェクト内部のデータをを保護して、直接書き換えられないようにする目的がある。オブジェクト内部のデータに直接アクセスできないようにする代わりに、保護されたデータを間接的に操作できるインタフェースとなるようなメソッドを用意しておくという使い方が多い。
+カプセル化には、[オブジェクト](#オブジェクト)の外部からのアクセスを制限することで、[オブジェクト](#オブジェクト)内部のデータを保護して、直接書き換えられないようにする目的がある。[オブジェクト](#オブジェクト)内部のデータに直接アクセスできないようにする代わりに、保護されたデータを間接的に操作できるインタフェースとなるような[メソッド](#メソッド)を用意しておくという使い方が多い。
 
 ```cpp
 // C++
 
 #include <string>
 
-class Goblin
+class Dragon
 {
     // オブジェクト外部からもアクセス可能
     public:
@@ -188,17 +193,17 @@ class Goblin
     private:
 
         int m_index = 1;
-        std::string m_name = "goblin";
+        std::string m_name = "dragon";
         int m_level = 1;
 };
 
 
 int main()
 {
-    Goblin goblin;
+    Dragon dragon;
 
     // 公開されたメソッドを通してカプセル化されたプロパティを更新
-    int level = goblin.level_up(10);
+    int level = dragon.level_up(10);
     printf("Level: %d\n", level);
 
     return 0;
@@ -210,7 +215,7 @@ int main()
 
 // PHP
 
-class Goblin
+class Dragon
 {
     // オブジェクト外部からもアクセス可能
     public function level_up( $diff_ )
@@ -221,14 +226,14 @@ class Goblin
 
     // オブジェクト内部からのみアクセス可能（カプセル化されている）
     private $m_index = 1;
-    private $m_name = "goblin";
+    private $m_name = "dragon";
     private $m_level = 1;
 }
 
-$goblin = new Goblin();
+$dragon = new Dragon();
 
 // 公開されたメソッドを通してカプセル化されたプロパティを更新
-$level = $goblin->level_up(10);
+$level = $dragon->level_up(10);
 echo("Level: " . $level);
 
 ?>
@@ -236,7 +241,7 @@ echo("Level: " . $level);
 
 ### アクセス指定子
 
-**アクセス指定子**は、オブジェクトが持つプロパティやメソッドの公開範囲を指定するためのキーワード。これにより、オブジェクトの内部からしかアクセスできないデータと、オブジェクトの外側からでもアクセスできるデータを切り分けることができる。
+**アクセス指定子**は、[オブジェクト](#オブジェクト)が持つ[プロパティ](#プロパティ)や[メソッド](#メソッド)の公開範囲を指定するためのキーワード。これにより、[オブジェクト](#オブジェクト)の内部からしかアクセスできないデータと、[オブジェクト](#オブジェクト)の外側からでもアクセスできるデータを切り分けることができる。
 
 ```cpp
 // C++
@@ -268,7 +273,7 @@ class Monster
         int m_index = 0;
 };
 
-class Goblin : public Monster
+class Dragon : public Monster
 {
     public:
 
@@ -281,10 +286,10 @@ class Goblin : public Monster
 
 int main()
 {
-    Goblin goblin;
+    Dragon dragon;
 
     // level_upは外部からもアクセス可能
-    int level = goblin.level_up(10);
+    int level = dragon.level_up(10);
 
     return 0;
 }
@@ -292,20 +297,20 @@ int main()
 
 ### public
 
-`public` はアクセス指定子のひとつで、オブジェクトのスコープ範囲であれば、内部からでも外部からでもアクセスすることができるメンバとなる。
+`public` は、[アクセス指定子](#アクセス指定子)のひとつで、[オブジェクト](#オブジェクト)の[スコープ](./control_flow.md#スコープ)範囲であれば、内部からでも外部からでもアクセスすることができる[メンバ](#メンバ)となる。
 
 ### private
 
-`private` はアクセス指定子のひとつで、オブジェクトの外部からのメンバへのアクセスを制限することができる。子クラスから親クラスのメンバへアクセスすることもできない。
+`private` は、[アクセス指定子](#アクセス指定子)のひとつで、[オブジェクト](#オブジェクト)の外部からの[メンバ](#メンバ)へのアクセスを制限することができる。[子クラス](子クラス)から[親クラス](#親クラス)の[メンバ](#メンバ)へアクセスすることもできない。
 
 ### protected
 
-`protected` はアクセス指定子のひとつで、オブジェクトの外部からのメンバへのアクセスを制限することができる。子クラスから親クラスのメンバへアクセスすることはできる。
+`protected` は、[アクセス指定子](#アクセス指定子)のひとつで、[オブジェクト](#オブジェクト)の外部からの[メンバ](#メンバ)へのアクセスを制限することができる。[子クラス](#子クラス)から[親クラス](#親クラス)の[メンバ](#メンバ)へアクセスすることはできる。
 
 
 ## 継承
 
-**継承**（**インヘリタンス**）は、継承元（親）となるクラスの持つプロパティやメソッドを引き継いだ、別のクラスを定義できるような仕組みのこと。複数の類似したクラスにおいて、共通部分をまとめた親クラスを定義することで、コードの再利用が高まる。
+**継承**（**インヘリタンス**）は、継承元（親）となる[クラス](#クラス-1)の持つ[プロパティ](#プロパティ)や[メソッド](#メソッド)を引き継いだ、別の[クラス](#クラス-1)を定義できる仕組み。複数の類似した[クラス](#クラス-1)において、共通部分をまとめた[親クラス](#親クラス)を定義することで、コードの再利用が高まる。
 
 ```cpp
 // C++
@@ -336,12 +341,12 @@ class Monster
 
 
 // Monsterクラスを継承
-class Goblin : public Monster
+class Slime : public Monster
 {
     private:
 
         int m_index = 1;
-        std::string m_name = "goblin";
+        std::string m_name = "slime";
 };
 
 // Monsterクラスを継承
@@ -366,11 +371,11 @@ class Dragon : public Monster
 
 int main()
 {
-    Goblin goblin;
+    Slime slime;
     Dragon dragon;
 
     // メソッドを継承しているのでget_levelが呼び出せる
-    int goblin_level = goblin.get_level();
+    int slime_level = slime.get_level();
     int dragon_level = dragon.get_level();
 
     return 0;
@@ -396,10 +401,10 @@ class Monster
 }
 
 // Monsterクラスを継承
-class Goblin extends Monster
+class Slime extends Monster
 {
     private $m_index = 1;
-    private $m_name = "goblin";
+    private $m_name = "slime";
 }
 
 // Monsterクラスを継承
@@ -418,11 +423,11 @@ class Dragon extends Monster
     private $m_power = 10;
 }
 
-$goblin = new Goblin();
+$slime = new Slime();
 $dragon = new Dragon();
 
 // メソッドを継承しているのでget_levelが呼び出せる
-$goblin_level = $goblin->get_level();
+$slime_level = $slime->get_level();
 $dragon_level = $dragon->get_level();
 
 ?>
@@ -430,29 +435,29 @@ $dragon_level = $dragon->get_level();
 
 ### 親クラス
 
-**親クラス**（**スーパークラス**、**基底クラス**）は、あるクラスの継承元となったクラス。
+**親クラス**（**スーパークラス**、**基底クラス**）は、ある[クラス](#クラス-1)の[継承](#継承)元となった[クラス](#クラス-1)。
 
 ### 子クラス
 
-**子クラス**（**サブクラス**、**派生クラス**）は、別のクラスを継承したクラス。
+**子クラス**（**サブクラス**、**派生クラス**）は、別の[クラス](#クラス-1)を[継承](#継承)した[クラス](#クラス-1)。
 
 ### メソッドオーバライド
 
-**メソッドオーバライド**とは、親クラスで定義されたメソッドと同じ識別子を持つメソッドを子クラス側でも定義することで、動作を上書きすること。
+**メソッドオーバライド**は、[親クラス](#親クラス)で定義された[メソッド](#メソッド)と同じ[識別子](./basic_knowledge_of_programming.md#識別子)を持つ[メソッド](#メソッド)を[子クラス](#子クラス)側でも定義することで、動作が上書きできる機能。
 
 
 ## ポリモーフィズム
 
-**ポリモーフィズム**（**ポリモルフィズム**、**多相性**）は、同じ識別子のメソッドで複数の異なる振る舞いを定義することができる性質。
+**ポリモーフィズム**（**ポリモルフィズム**、**多相性**）は、同じ[識別子](./basic_knowledge_of_programming.md#識別子)の[メソッド](#メソッド)で複数の異なる振る舞いを定義することができる性質。
 
-例えば、異なるクラスが同じ名前のメソッドを共通して持つことによって、そのメソッドを通して、暗黙的に複数のオブジェクトを切り替えることができる。この性質を利用することで、オブジェクトを利用している側のソースコードを変更することなくクラスを切り替えることが可能となり、メンテナンス性の向上に繋がる。インタフェースや仮想関数の機能を用いることで、クラスのメソッドのシグネチャを共通化することができ、ポリモーフィズムの性質を利用しやすくなる。
+例えば、異なる[クラス](#クラス-1)が同じ名前の[メソッド](#メソッド)を共通して持つことによって、その[メソッド](#メソッド)を通して、暗黙的に複数の[オブジェクト](#オブジェクト)を切り替えることができる。この性質を利用することで、[オブジェクト](#オブジェクト)を利用している側の[ソースコード](./basic_knowledge_of_programming.md#ソースコード)を変更することなく[クラス](#クラス-1)を切り替えることが可能となり、メンテナンス性の向上に繋がる。[インタフェース](#インタフェース)や[仮想関数](#抽象クラス)の機能を用いることで、[クラス](#クラス-1)の[メソッド](#メソッド)の[シグネチャ](./function.md#シグネチャ)を共通化することができ、ポリモーフィズムの性質を利用しやすくなる。
 
 ```cpp
 // C++
 
 #include <string>
 
-class Goblin
+class Slime
 {
     public:
 
@@ -465,7 +470,7 @@ class Goblin
     private:
 
         int m_index = 1;
-        std::string m_name = "goblin";
+        std::string m_name = "slime";
         int m_level = 1;
 };
 
@@ -498,12 +503,12 @@ class Dragon
 
 int main()
 {
-    Goblin goblin;
+    Slime slime;
     Dragon dragon;
 
     // ポリモーフィズムの例
     // 違うクラスだが、同じメソッドを利用できる
-    int goblin_level = goblin.level_up(10);
+    int slime_level = slime.level_up(10);
 
     int dragon_level = dragon.level_up(3);
     dragon_level = dragon.level_up(3, 10);
@@ -517,7 +522,7 @@ int main()
 
 // PHP
 
-class Goblin
+class Slime
 {
     public function level_up( $diff_ )
     {
@@ -526,7 +531,7 @@ class Goblin
     }
 
     private $m_index = 1;
-    private $m_name = "goblin";
+    private $m_name = "slime";
     private $m_level = 1;
 }
 
@@ -554,7 +559,7 @@ function empower_monster( $monster_, $diff_ )
     return $level;
 }
 
-$goblin = new Goblin();
+$slime= new Slime();
 $dragon = new Dragon();
 empower_monster($goblin, 10);
 empower_monster($dragon, 3);
