@@ -638,3 +638,8 @@
 	- [ ] [インデント](./programming/_/chapters/coding_rule.md#インデント)
 	- [ ] [オールマン](./programming/_/chapters/coding_rule.md#中括弧)
 	- [ ] [K&R](./programming/_/chapters/coding_rule.md#中括弧)
+
+### プログラミング言語の種類
+
+- [ ] [C言語](./programming/_/chapters/programming_language.md#c言語)
+	- [ ] [C++](./programming/_/chapters/programming_language.md#c)

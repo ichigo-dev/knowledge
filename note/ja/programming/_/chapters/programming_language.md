@@ -1,6 +1,6 @@
 # 『プログラミング言語の種類』
 
-（最終更新： 2023-01-24）
+（最終更新： 2023-03-03）
 
 
 ## 目次
@@ -22,9 +22,9 @@
 
 ## C言語
 
-**C言語**は、1972年に開発された汎用プログラミング言語で、高水準言語ではあるがハードウェア寄りの記述が可能な低水準言語のような特徴も持っている。コンパイラ言語・静的型付け言語に分類される。OSやデバイスドライバなど、低レイヤを中心にあらゆる分野で利用されており、プログラミング言語野中でも実行速度は最速の部類となる。また、習得難易度はスクリプト言語に比べて高く、限られたハードウェア資産で効率的に実行できるプログラムを要するケースに適している。
+**C言語**は、1972年に開発された[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、[高水準言語](./basic_knowledge_of_programming.md#高水準言語)ではあるが[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)寄りの記述が可能な[低水準言語](./basic_knowledge_of_programming.md#低水準言語)のような特徴も持っている。[コンパイラ言語](./basic_knowledge_of_programming.md#コンパイラ言語)・[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)に分類される。[OS](../../../computer/software/_/chapters/operation_system.md#オペレーティングシステム-1)や[デバイスドライバ](../../../computer/hardware/_/chapters/io_unit.md#デバイスドライバ)など、低レイヤを中心にあらゆる分野で利用されており、[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)の中でも実行速度は最速の部類となる。また、習得難易度は[スクリプト言語](./basic_knowledge_of_programming.md#スクリプト言語)に比べて高く、限られた[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資産で効率的に実行できる[プログラム](./basic_knowledge_of_programming.md#プログラム)を要するケースに適している。
 
-メモリ管理にガベージコレクションを用いず、プログラマがメモリ管理の責務を負うため、メモリに関する様々なエラーを回避してプログラムを記述する必要がある。
+[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)に[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いず、[プログラマ](./basic_knowledge_of_programming.md#プログラマ)が[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)の責務を負うため、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)に関する様々な[エラー](./basic_knowledge_of_programming.md#エラー)を回避して[プログラム](./basic_knowledge_of_programming.md#プログラム)を記述する必要がある。
 
 ```c
 #include <stdio.h>
@@ -50,9 +50,9 @@ int main()
 
 ### C++
 
-**C++** は、C言語の機能や特徴を継承しつつ表現力を向上させた汎用プログラミング言語で、複数のプログラミングパラダイムが組み合わされている。オブジェクト指向やテンプレートといったC言語にはない機能を有しており、柔軟性に優れている。C言語のようにハードウェアを直接扱うような低レイヤ向けの言語としても、複雑なアプリケーションソフトウェアを開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合やハードウェア資源を効率的に利用したい場合に適している。
+**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./class.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
 
-C言語と同様、メモリ管理にガベージコレクションを用いず、プログラマがメモリ管理の責務を負う。
+[C言語](#c言語)と同様、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)に[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いず、[プログラマ](./basic_knowledge_of_programming.md#プログラマ)が[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)の責務を負う。
 
 ### C#
 
