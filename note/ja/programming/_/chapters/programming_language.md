@@ -50,24 +50,24 @@ int main()
 
 ### C++
 
-**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./class.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
+**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./class.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
 
 [C言語](#c言語)と同様、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)に[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いず、[プログラマ](./basic_knowledge_of_programming.md#プログラマ)が[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)の責務を負う。
 
 ### C#
 
-**C#** は、C言語やC++に影響を受け、Microsoftが開発した汎用プログラミング言語。Windowsとの相性がよく、**.NET Framework**を用いたWindowsアプリケーション開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
+**C#** は、[C言語](#c言語)や[C++](#c-1)に影響を受けMicrosoftが開発した、[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)。[Windows](../../../computer/software/_/chapters/operation_system.md#windows)との相性がよく、**.NET Framework**を用いた[Windows](../../../computer/software/_/chapters/operation_system.md#windows)[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
 
-C言語やC++とは異なり、ガベージコレクションによりメモリを管理できるため、習得難易度は比較的低い。
+[C言語](#c言語)や[C++](#c-1)とは異なり、[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)により[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)を管理できるため、習得難易度は比較的低い。
 
 ### Objective-C
 
-**Objective-C**は、C言語をベースにして**Smalltalk**（オブジェクト指向の起源ともいえるプログラミング言語）の機能を取り込んだプログラミング言語。Appple社のmacOSやiOS向けのソフトウェア開発における標準言語。近年ではiOSアプリの開発用言語はSwiftに置き換えられつつある。
+**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./class.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
 
 
 ## Java
 
-**Java**はC言語に影響を受けた汎用プログラミング言語で、静的型付け言語に分類され、メモリ管理にはガベージコレクションを用いる。様々なプラットフォームで実行できるようにJITコンパイラ方式を用いており、Javaプログラムを実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、オブジェクト指向を取り入れた言語でもある。非常に人気が高く、世界で最も使用されているプログラミング言語のひとつとなっている。
+**Java**は、[C言語](#c言語)に影響を受けた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)に分類され、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)には[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いる。様々な[プラットフォーム](../../../computer/software/_/chapters/basic_knowledge_of_software.md#プラットフォーム)で実行できるように[JITコンパイラ](./basic_knowledge_of_programming.md#jitコンパイラ)方式を用いており、Java[プログラム](./basic_knowledge_of_programming.md#プログラム)を実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、[オブジェクト指向](./class.md#オブジェクト指向)を取り入れた言語でもある。非常に人気が高く、世界で最も使用されている[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)のひとつとなっている。
 
 ```java
 import java.util.Scanner;
@@ -75,12 +75,10 @@ import java.util.Scanner;
 public class Oddeven
 {
     public static void main( String[] args )
-
     {
         Scanner scanner = new Scanner(System.in);
         System.out.print("> ");
         int input_num = scanner.nextInt();
-
 
         if( input_num % 2 == 0 )
         {
@@ -89,9 +87,7 @@ public class Oddeven
         else
         {
             System.out.println("It is an odd number : " + input_num);
-
         }
-
 
         scanner.close();
     }
@@ -100,17 +96,17 @@ public class Oddeven
 
 ### Kotlin
 
-**Kotlin**は、Androidアプリを開発するための比較的新しいプログラミング言語。Javaを簡潔に安全に記述できるように改良されており、JVM上で動作する。
+**Kotlin**は、[Android](../../../computer/software/_/chapters/operation_system.md#android)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するための比較的新しい[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。[Java](#java)を簡潔に安全に記述できるように改良されており、[JVM](#java)上で動作する。
 
 
 ## Swift
 
-**Swift**は、Apple製品のアプリケーションを開発するためにつくられたプログラミング言語。Objective-Cに代わる新たな言語として設計されており、シンプルで直感的にプログラミングができるとして人気が高い。
+**Swift**は、Apple製品の[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するためにつくられた[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。[Objective-C](#objective-c)に代わる新たな言語として設計されており、シンプルで直感的に[プログラミング](./basic_knowledge_of_programming.md#プログラミング)ができるとして人気が高い。
 
 
 ## Python
 
-**Python**は、インタプリタ方式の汎用プログラミング言語。動的型付け言語に分類され、メモリの管理にはガベージコレクションを用いる。可読性が高く記述が用意であるため、プログラミングの入門やスピード感のある開発に適している。機械学習分野のライブラリが充実しているほか、Web開発にも用いられる。
+**Python**は、[インタプリタ](./basic_knowledge_of_programming.md#インタプリタ言語)方式の[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)。[動的型付け言語](./basic_knowledge_of_programming.md#動的型付け言語)に分類され、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)の管理には[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いる。可読性が高く記述が用意であるため、[プログラミング](./basic_knowledge_of_programming.md#プログラミング)の入門やスピード感のある開発に適している。[機械学習](../../../artificial_intelligence/_/chapters/machine_learning.md#機械学習-1)分野の[ライブラリ](../../../computer/software/_/chapters/package.md#ライブラリ)が充実しているほか、[Web](../../../network/_/chapters/web.md#web-1)開発にも用いられる。
 
 ```python
 input_num = int(input("> "))
@@ -124,7 +120,7 @@ else:
 
 ## PHP
 
-**PHP**は、動的なWebサイトを作成するためのツールから派生したスクリプト言語。Web開発に特化しており、HTMLに埋め込むような記法を用いることができるという特徴がある。そのほかにも、学習コストが低い点やデータベースアクセスを容易に行えるという強みもある。
+**PHP**は、動的な[Web](../../../network/_/chapters/web.md#web-1)サイトを作成するためのツールから派生した[スクリプト言語](./basic_knowledge_of_programming.md#スクリプト言語)。[Web](../../../network/_/chapters/web.md#web-1)開発に特化しており、HTMLに埋め込むような記法を用いることができるという特徴がある。そのほかにも、学習コストが低い点や[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)アクセスを容易に行えるという強みもある。
 
 ```php
 <?php
@@ -146,7 +142,7 @@ else
 
 ## JavaScript
 
-**JavaScript**は、一般的なWebブラウザ上で実行されるプログラミング言語。インタプリタ言語・動的型付け言語に分類される。Webページ上のコンテンツに動きを与える目的でよく用いられており、近年ではサーバサイドにおける実行環境の登場や、**SPA**(Single Page Application)の普及により活躍の幅が広がっている。習得難易度は比較的低く、ブラウザさえあれば実行環境が整うという手軽さもメリットのひとつである。
+**JavaScript**は、一般的な[Webブラウザ](../../../network/_/chapters/web.md#webブラウザ)上で実行される[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。[インタプリタ言語](./basic_knowledge_of_programming.md#インタプリタ言語)・[動的型付け言語](./basic_knowledge_of_programming.md#動的型付け言語)に分類される。[Web](../../../network/_/chapters/web.md#web-1)ページ上のコンテンツに動きを与える目的でよく用いられており、近年では[サーバ](../../../network/_/chapters/web.md#webサーバ)サイドにおける実行環境の登場や、**SPA**(Single Page Application)の普及により活躍の幅が広がっている。習得難易度は比較的低く、[ブラウザ](../../../network/_/chapters/web.md#webブラウザ)さえあれば実行環境が整うという手軽さもメリットのひとつである。
 
 ```javascript
 let input_num = document.getElementById('#input_num').value;
