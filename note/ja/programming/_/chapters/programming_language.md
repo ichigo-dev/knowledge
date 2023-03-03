@@ -159,14 +159,14 @@ else
 
 ### TypeScript
 
-**TypeScript**は、Microsoftによって開発されたJavaScriptのスーパーセット。大規模アプリケーション開発のために設計されており、静的型付け言語のような型宣言などの機能が搭載されている。実行時は、JavaScriptにトランスコンパイルしたものをブラウザ上で動作させる。
+**TypeScript**は、Microsoftによって開発された[JavaScript](#javascript)のスーパーセット。大規模[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)開発のために設計されており、[静的型付け言語](./programming.md#静的型付け言語)のような[型](./data_type.md#型)宣言などの機能が搭載されている。実行時は、[JavaScript](#javascript)に[トランスコンパイル](./programming.md#トランスコンパイル)したものを[ブラウザ](../../../network/_/chapters/web.md#webブラウザ)上で動作させる。
 
 
 ## Rust
 
-**Rust**は、C言語やC++に代わるシステムプログラミング言語を目指すプログラミング言語。静的型付け言語・コンパイラ言語に分類される。また、ガベージコレクションを用いない独特のメモリ管理（**ボローチェッカー**による参照の有効性の検証）によって、メモリ安全性を確保している。パフォーマンスや信頼性の高さからLinuxのカーネルプログラムにも採用されたり、GoogleやFacebookといった企業でも一部取り入れられたりと、注目の集まる言語となっている。開発者に最も愛されているプログラミング言語としても知られるが、習得難易度はC言語やC++と同程度かそれ以上に高い。
+**Rust**は、[C言語](#c言語)や[C++](#c)に代わるシステム[プログラミング言語](./programming.md#プログラミング言語)を目指す[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類される。また、[ガベージコレクション](./programming.md#ガベージコレクション)を用いない独特の[メモリ管理](./programming.md#プログラムのメモリ管理)（**ボローチェッカー**による[参照](./data_type.md#参照型)の有効性の検証）によって、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)安全性を確保している。パフォーマンスや信頼性の高さから[Linux](../../../computer/software/_/chapters/operation_system.md#linux)の[カーネル](../../../computer/software/_/chapters/operation_system.md#カーネル)[プログラム](./programming.md#プログラム)にも採用されたり、GoogleやFacebookといった企業でも一部取り入れられたりと、注目の集まる言語となっている。開発者に最も愛されている[プログラミング言語](./programming.md#プログラミング言語)としても知られるが、習得難易度は[C言語](#c言語)や[C++](#c)と同程度かそれ以上に高い。
 
 
 ## Go
 
-**Go**は、高負荷がかかるシステムなどには必須の並行プログラミングがシンプルに記述できるように、Googleが開発したプログラミング言語。静的型付け言語・コンパイラ言語に分類され、メモリ管理にはガベージコレクションを用いる。Webアプリケーションやモバイルアプリなどの開発に適しており、標準ライブラリが豊富であるという特徴がある。実行速度はC言語やRustには劣るものの、同じ分野で活躍するPHPなどの言語に比べると圧倒的に高速である。
+**Go**は、高負荷がかかるシステムなどには必須の並行プログラミングがシンプルに記述できるように、Googleが開発した[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類され、[メモリ管理](./programming.md#プログラムのメモリ管理)には[ガベージコレクション](./programming.md#ガベージコレクション)を用いる。[Web](../../../network/_/chapters/web.md#web)[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)やモバイル[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)などの開発に適しており、[標準ライブラリ](../../../computer/software/_/chapters/package.md#標準ライブラリ)が豊富であるという特徴がある。実行速度は[C言語](#c言語)や[Rust](#rust)には劣るものの、同じ分野で活躍する[PHP](#php)などの言語に比べると圧倒的に高速である。

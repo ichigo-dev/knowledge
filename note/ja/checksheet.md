@@ -411,6 +411,7 @@
 	- [ ] [動的付け言語](./programming/_/chapters/programming.md#動的型付け言語)
 	- [ ] [汎用プログラミング言語](./programming/_/chapters/programming.md#汎用プログラミング言語)
 	- [ ] [専用プログラミング言語](./programming/_/chapters/programming.md#専用プログラミング言語)
+	- [ ] [トランスコンパイル](./programming/_/chapters/programming.md#トランスコンパイル)
 - [ ] [プログラミングパラダイム](./programming/_/chapters/programming.md#プログラミングパラダイム)
 	- [ ] [命令型プログラミング（手続き型プログラミング）](./programming/_/chapters/programming.md#命令型プログラミング)
 	- [ ] [命令型プログラミング（手続き型プログラミング）](./programming/_/chapters/programming.md#命令型プログラミング)
@@ -669,6 +670,10 @@
 - [ ] [PHP](./programming/_/chapters/programming_language.md#php)
 - [ ] [JavaScript](./programming/_/chapters/programming_language.md#javascript)
 	- [ ] [SPA(Single Page Application)](./programming/_/chapters/programming_language.md#javascript)
+	- [ ] [TypeScript](./programming/_/chapters/programming_language.md#typescript)
+- [ ] [Rust](./programming/_/chapters/programming_language.md#rust)
+	- [ ] [ボローチェッカー](./programming/_/chapters/programming_language.md#rust)
+- [ ] [Go](./programming/_/chapters/programming_language.md#go)
 
 ### アルゴリズム
 
