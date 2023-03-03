@@ -623,6 +623,19 @@
 	- [ ] [子クラス（サブクラス、派生クラス）](./programming/_/chapters/class.md#子クラス)
 	- [ ] [メソッドオーバライド](./programming/_/chapters/class.md#メソッドオーバライド)
 - [ ] [ポリモーフィズム（ポリモルフィズム、多相性）](./programming/_/chapters/class.md#ポリモーフィズム)
+	- [ ] [ダックタイピング](./programming/_/chapters/class.md#ダックタイピング)
+	- [ ] [DI（依存性の注入）](./programming/_/chapters/class.md#di)
+	- [ ] [抽象クラス](./programming/_/chapters/class.md#抽象クラス)
+		- [ ] [抽象メソッド](./programming/_/chapters/class.md#抽象クラス)
+		- [ ] [仮想関数](./programming/_/chapters/class.md#抽象クラス)
+	- [ ] [具象クラス](./programming/_/chapters/class.md#具象クラス)
+	- [ ] [インタフェース](./programming/_/chapters/class.md#インタフェース)
+- [ ] [this](./programming/_/chapters/class.md#this)
+- [ ] [コンストラクタ](./programming/_/chapters/class.md#コンストラクタ)
+- [ ] [デストラクタ](./programming/_/chapters/class.md#デストラクタ)
+- [ ] [静的メンバ](./programming/_/chapters/class.md#静的メンバ)
+	- [ ] [staticプロパティ（静的プロパティ）](./programming/_/chapters/class.md#staticプロパティ)
+	- [ ] [staticメソッド（静的メソッド）](./programming/_/chapters/class.md#staticメソッド)
 
 ### コーディングルール
 
