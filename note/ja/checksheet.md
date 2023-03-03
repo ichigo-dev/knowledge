@@ -79,7 +79,7 @@
 
 #### 論理演算
 
-- [ ] [論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算-1)
+- [ ] [論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算)
 	- [ ] [OR演算（論理和）](./basics/discrete_mathematics/_/chapters/logical_operation.md#or演算)
 	- [ ] [AND演算（論理積）](./basics/discrete_mathematics/_/chapters/logical_operation.md#and演算)
 	- [ ] [NOT演算（論理否定）](./basics/discrete_mathematics/_/chapters/logical_operation.md#not演算)
@@ -284,7 +284,7 @@
 
 #### 形式言語
 
-- [ ] [形式言語](./basics/information_theory/_/chapters/formal_language.md#形式言語-1)
+- [ ] [形式言語](./basics/information_theory/_/chapters/formal_language.md#形式言語)
 	- [ ] [逆ポーランド記法（後置記法）](./basics/information_theory/_/chapters/formal_language.md#逆ポーランド記法)
 - [ ] [BNF（バッカス・ナウア記法）](./basics/information_theory/_/chapters/formal_language.md#bnf)
 	- [ ] [順次](./basics/information_theory/_/chapters/formal_language.md#bnf)
@@ -295,16 +295,16 @@
 
 #### オートマトン
 
-- [ ] [オートマオン](./basics/information_theory/_/chapters/automaton.md#オートマトン-1)
-	- [ ] [初期状態](./basics/information_theory/_/chapters/automaton.md#オートマトン-1)
-	- [ ] [受理状態](./basics/information_theory/_/chapters/automaton.md#オートマトン-1)
-	- [ ] [有限オートマトン](./basics/information_theory/_/chapters/automaton.md#オートマトン-1)
+- [ ] [オートマオン](./basics/information_theory/_/chapters/automaton.md#オートマトン)
+	- [ ] [初期状態](./basics/information_theory/_/chapters/automaton.md#オートマトン)
+	- [ ] [受理状態](./basics/information_theory/_/chapters/automaton.md#オートマトン)
+	- [ ] [有限オートマトン](./basics/information_theory/_/chapters/automaton.md#オートマトン)
 - [ ] [状態遷移表](./basics/information_theory/_/chapters/automaton.md#状態遷移表)
 - [ ] [状態遷移図](./basics/information_theory/_/chapters/automaton.md#状態遷移図)
 
 #### 計算量
 
-- [ ] [計算量（オーダ）](./basics/information_theory/_/chapters/computational_complexity.md#計算量-1)
+- [ ] [計算量（オーダ）](./basics/information_theory/_/chapters/computational_complexity.md#計算量)
 	- [ ] [時間計算量](./basics/information_theory/_/chapters/computational_complexity.md#時間計算量)
 	- [ ] [空間計算量](./basics/information_theory/_/chapters/computational_complexity.md#空間計算量)
 	- [ ] [最悪計算量](./basics/information_theory/_/chapters/computational_complexity.md#最悪計算量)
@@ -446,7 +446,7 @@
 
 ### 変数
 
-- [ ] [変数](./programming/_/chapters/variable.md#変数-1)
+- [ ] [変数](./programming/_/chapters/variable.md#変数)
 	- [ ] [グローバル変数](./programming/_/chapters/variable.md#グローバル変数)
 	- [ ] [ローカル変数（自動変数、局所変数）](./programming/_/chapters/variable.md#ローカル変数)
 	- [ ] [宣言](./programming/_/chapters/variable.md#宣言)
@@ -546,8 +546,8 @@
 
 ### 制御フロー
 
-- [ ] [制御フロー](./programming/_/chapters/control_flow.md#制御フロー-1)
-	- [ ] [制御構文](./programming/_/chapters/control_flow.md#制御フロー-1)
+- [ ] [制御フロー](./programming/_/chapters/control_flow.md#制御フロー)
+	- [ ] [制御構文](./programming/_/chapters/control_flow.md#制御フロー)
 	- [ ] [ネスト（入れ子）](./programming/_/chapters/control_flow.md#ネスト)
 - [ ] [ブロック](./programming/_/chapters/control_flow.md#ブロック)
 	- [ ] [スコープ](./programming/_/chapters/control_flow.md#スコープ)
@@ -575,7 +575,7 @@
 
 ### 関数
 
-- [ ] [関数（サブルーチン、手続き、プロシージャ）](./programming/_/chapters/function.md#関数-1)
+- [ ] [関数（サブルーチン、手続き、プロシージャ）](./programming/_/chapters/function.md#関数)
 	- [ ] [引数（パラメータ）](./programming/_/chapters/function.md#引数)
 	- [ ] [仮引数](./programming/_/chapters/function.md#引数)
 	- [ ] [実引数](./programming/_/chapters/function.md#引数)
@@ -602,7 +602,7 @@
 
 ### クラス
 
-- [ ] [オブジェクト指向](./programming/_/chapters/object_oriented.md#オブジェクト指向-1)
+- [ ] [オブジェクト指向](./programming/_/chapters/object_oriented.md#オブジェクト指向)
 	- [ ] [オブジェクト](./programming/_/chapters/object_oriented.md#オブジェクト)
 		- [ ] [メンバ](./programming/_/chapters/object_oriented.md#メンバ)
 		- [ ] [プロパティ（属性、メンバ変数、フィールド変数）](./programming/_/chapters/object_oriented.md#プロパティ)
@@ -657,8 +657,8 @@
 - [ ] [C言語](./programming/_/chapters/programming_language.md#c言語)
 	- [ ] [C++](./programming/_/chapters/programming_language.md#c)
 	- [ ] [C#](./programming/_/chapters/programming_language.md#c-1)
-		- [ ] [.NET Framework](./programming/_/chapters/programming_language.md#c-1)
-		- [ ] [Unity](./programming/_/chapters/programming_language.md#c-1)
+		- [ ] [.NET Framework](./programming/_/chapters/programming_language.md#c)
+		- [ ] [Unity](./programming/_/chapters/programming_language.md#c)
 	- [ ] [Objective-C](./programming/_/chapters/programming_language.md#objective-c)
 		- [ ] [Smalltalk](./programming/_/chapters/programming_language.md#objective-c)
 - [ ] [Java](./programming/_/chapters/programming_language.md#objective-c)

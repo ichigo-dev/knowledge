@@ -1,6 +1,6 @@
-# 『データ型』
+# 『データ型』ノート
 
-（最終更新： 2023-02-27）
+（最終更新： 2023-03-03）
 
 
 ## 目次
@@ -40,7 +40,7 @@
 
 ## プリミティブ型
 
-**プリミティブ型**（**基本データ型**、**原始型**）は、[プログラミング言語](./programming.md#プログラミング言語)で標準的に用意されている最も基本的な[型](#型)。プリミティブ型に属する[型](#型)は、[プログラミング言語](./programming.md#プログラミング言語)においてそれ以上分解することができないシンプルな[型](#型)として定義されており、[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ-1)が高速に[演算](./operation.md#演算-1)できるという特徴がある。
+**プリミティブ型**（**基本データ型**、**原始型**）は、[プログラミング言語](./programming.md#プログラミング言語)で標準的に用意されている最も基本的な[型](#型)。プリミティブ型に属する[型](#型)は、[プログラミング言語](./programming.md#プログラミング言語)においてそれ以上分解することができないシンプルな[型](#型)として定義されており、[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)が高速に[演算](./operation.md#演算)できるという特徴がある。
 
 ### 文字型
 
@@ -75,24 +75,24 @@ int main()
 
 ### ブーリアン型
 
-**ブーリアン型**( `bool, boolean` )は、[真偽値](../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#真偽値)を扱うための[型](#型)で、 `true` か `false` のどちらかの値が格納される。この[型](#型)に対しては、[論理積](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#and演算)( `AND` )、[論理和](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#or演算)( `OR` )、[排他的論理和](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#xor演算)( `XOR` )、同値、非同値、[否定](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#not演算)といった[論理演算](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算-1)が可能。[条件分岐](./control_flow.md#条件分岐)において評価結果としても用いられる。
+**ブーリアン型**( `bool, boolean` )は、[真偽値](../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#真偽値)を扱うための[型](#型)で、 `true` か `false` のどちらかの値が格納される。この[型](#型)に対しては、[論理積](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#and演算)( `AND` )、[論理和](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#or演算)( `OR` )、[排他的論理和](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#xor演算)( `XOR` )、同値、非同値、[否定](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#not演算)といった[論理演算](../../../basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算)が可能。[条件分岐](./control_flow.md#条件分岐)において評価結果としても用いられる。
 
 ### ポインタ型
 
-**ポインタ型**は、[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)の実体が格納された、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を保持しておくための[型](#型)。[配列](#配列)や[オブジェクト](#オブジェクト型)といった[複合型](#複合型)は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納されており、実体にアクセスするためには[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)のポインタを経由する必要がある。また、[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納されたデータに対してもポインタをつくることができる。
+**ポインタ型**は、[変数](./variable.md#変数)や[関数](./function.md#関数)の実体が格納された、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を保持しておくための[型](#型)。[配列](#配列)や[オブジェクト](#オブジェクト型)といった[複合型](#複合型)は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上の[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納されており、実体にアクセスするためには[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)のポインタを経由する必要がある。また、[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納されたデータに対してもポインタをつくることができる。
 
-[プログラム](./programming.md#プログラム)中で利用される[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)などのリソースは[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上で固有の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)に割り当てられており、[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を知っていればそのデータにアクセスすることができる。また、[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)の足し引きによって隣のデータにアクセスすることもできる。一方で、予期しない[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)のデータを変更してしまうと深刻な[バグ](./programming.md#バグ)に繋がるため、注意が必要である。
+[プログラム](./programming.md#プログラム)中で利用される[変数](./variable.md#変数)や[関数](./function.md#関数)などのリソースは[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上で固有の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)に割り当てられており、[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を知っていればそのデータにアクセスすることができる。また、[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)の足し引きによって隣のデータにアクセスすることもできる。一方で、予期しない[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)のデータを変更してしまうと深刻な[バグ](./programming.md#バグ)に繋がるため、注意が必要である。
 
 ポインタのポインタや、さらにそのポインタを作るといったこともできる。
 
 ### 参照型
 
-**参照型**は[ポインタ型](#ポインタ型)と同様、[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)が置かれた[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を指す[型](#型)。[ポインタ型](#ポインタ型)とは異なり、[参照](./variable.md#参照)先に書き込むことはできない、読み込み専用の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)。また、[参照](./variable.md#参照)先にデータが存在しないことを禁止しており、[ポインタ](#ポインタ型)に比べて安全に利用できるという利点がある。
+**参照型**は[ポインタ型](#ポインタ型)と同様、[変数](./variable.md#変数)や[関数](./function.md#関数)が置かれた[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を指す[型](#型)。[ポインタ型](#ポインタ型)とは異なり、[参照](./variable.md#参照)先に書き込むことはできない、読み込み専用の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)。また、[参照](./variable.md#参照)先にデータが存在しないことを禁止しており、[ポインタ](#ポインタ型)に比べて安全に利用できるという利点がある。
 
 
 ## Null
 
-**Null**は、何もないことを表すデータで、[プログラミング言語](./programming.md#プログラミング言語)によって実装や扱いが異なる。[型](#型)として定義されている言語もあれば、特別な値として扱う言語もある。空文字や `0` とは区別され、[変数](./variable.md#変数-1)に値が[代入](./variable.md#代入)されていない状態などを表す。
+**Null**は、何もないことを表すデータで、[プログラミング言語](./programming.md#プログラミング言語)によって実装や扱いが異なる。[型](#型)として定義されている言語もあれば、特別な値として扱う言語もある。空文字や `0` とは区別され、[変数](./variable.md#変数)に値が[代入](./variable.md#代入)されていない状態などを表す。
 
 
 ## 複合型
@@ -112,7 +112,7 @@ int main()
 
 ### 配列
 
-**配列**は、同じ[型](#型)のデータの集合を格納するためのデータ[型](#型)で、要素が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上で隣り合うように並べられる。要素には**インデックス**（添え字）を使ってアクセスすることができる。インデックスは配列の最初の要素を `0` とした整数値となっている。
+**配列**は、同じ[型](#型)のデータの集合を格納するためのデータ[型](#型)で、要素が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上で隣り合うように並べられる。要素には**インデックス**（添え字）を使ってアクセスすることができる。インデックスは配列の最初の要素を `0` とした整数値となっている。
 
 ```c
 // C言語
@@ -123,9 +123,9 @@ str[5] = "!";
 printf("%s\n", str);     // "Hello! world"が出力される
 ```
 
-配列には、[コンパイル](./programming.md#コンパイル)時に要素数が決まる**固定長配列**と、実行時に要素数を動的に追加したり削除したりできる**可変長配列**がある。通常、固定長配列は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に、可変長配列は[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納される。可変長配列において、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に確保したサイズが不足した場合、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域の再確保（[アロケート](./programming.md#アロケート)）が発生するため、あらかじめ十分な領域を用意しておくとよい。
+配列には、[コンパイル](./programming.md#コンパイル)時に要素数が決まる**固定長配列**と、実行時に要素数を動的に追加したり削除したりできる**可変長配列**がある。通常、固定長配列は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上の[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に、可変長配列は[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納される。可変長配列において、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に確保したサイズが不足した場合、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域の再確保（[アロケート](./programming.md#アロケート)）が発生するため、あらかじめ十分な領域を用意しておくとよい。
 
-可変長配列の末尾に対するデータの追加・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(1)$ と非常に高速である。一方、任意のインデックスに対するデータの追加・削除の際には、そのインデックスより後ろのデータ全てを移動する必要があるため、 $O(N)$ と低速となる。任意のインデックスの要素にアクセスするのにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は常に $O(1)$ で高速である。データの探索にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は基本的に $O(N)$ であるが、配列がソート済みである場合は[二分探索](./algorithm.md#二分探索)を用いて $O(\log{N})$ に抑えることもできる。
+可変長配列の末尾に対するデータの追加・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)は $O(1)$ と非常に高速である。一方、任意のインデックスに対するデータの追加・削除の際には、そのインデックスより後ろのデータ全てを移動する必要があるため、 $O(N)$ と低速となる。任意のインデックスの要素にアクセスするのにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)は常に $O(1)$ で高速である。データの探索にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)は基本的に $O(N)$ であるが、配列がソート済みである場合は[二分探索](./algorithm.md#二分探索)を用いて $O(\log{N})$ に抑えることもできる。
 
 基本的には使い勝手の良い[コンテナ型](#コンテナ型)の構造となっているが、中間位置へのデータの挿入が頻繁に行われたり、要素数が非常に大きくなるようなデータに対しては[リスト](#リスト)を用いた方が良い場合もある。
 
@@ -139,7 +139,7 @@ printf("%s\n", str);     // "Hello! world"が出力される
 
 リストは、前後のノードと[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)上で隣り合っている必要がないため、データ数が増えても[アロケート](./programming.md#アロケート)が発生しないという利点がある。
 
-リストの任意の場所へのデータの挿入・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(1)$ と高速である。一方で、要素へのアクセスにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(N)$ であり、[配列](#配列)に比べると遅い。これは、リストの要素へアクセスするには、先頭の要素から順番に[ポインタ](#ポインタ型)をたどっていく必要があるためである（[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上での配置が隣り合っているとは限らないため）。
+リストの任意の場所へのデータの挿入・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)は $O(1)$ と高速である。一方で、要素へのアクセスにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)は $O(N)$ であり、[配列](#配列)に比べると遅い。これは、リストの要素へアクセスするには、先頭の要素から順番に[ポインタ](#ポインタ型)をたどっていく必要があるためである（[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上での配置が隣り合っているとは限らないため）。
 
 ### スタック
 
@@ -155,9 +155,9 @@ printf("%s\n", str);     // "Hello! world"が出力される
 
 ### ハッシュテーブル
 
-**ハッシュテーブル**は、キーと値の組からなる**エントリ**を複数格納するデータ[型](#型)。キーを基に生成された**ハッシュ値**を[インデックス](#配列)として値を管理することで、検索や要素の追加を $O(1)$ の[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)で実現することができる。ハッシュ値を産出するための関数を**ハッシュ関数**という。
+**ハッシュテーブル**は、キーと値の組からなる**エントリ**を複数格納するデータ[型](#型)。キーを基に生成された**ハッシュ値**を[インデックス](#配列)として値を管理することで、検索や要素の追加を $O(1)$ の[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)で実現することができる。ハッシュ値を産出するための関数を**ハッシュ関数**という。
 
-ハッシュ値を[インデックス](#配列)とした[配列](#配列)であり、[インデックス](#配列)が飛び飛びとなるため、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)効率は悪い。
+ハッシュ値を[インデックス](#配列)とした[配列](#配列)であり、[インデックス](#配列)が飛び飛びとなるため、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)効率は悪い。
 
 複数の異なるキーから生成されるハッシュ値が同じものになってしまう場合があり、これを**衝突**という。**連鎖法**では、同じハッシュ値で解決されるデータを[リンクリスト](#リスト)で管理する。**開番地法**では、衝突が発生したときに別のハッシュ関数を用いて次の候補地となる[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を算出する。
 
@@ -185,7 +185,7 @@ printf("%s\n", str);     // "Hello! world"が出力される
 
 [ソースコード](./programming.md#ソースコード)中で `"` で囲まれた部分は文字列型のデータとして扱われる（ `'` と `"` を使い分けない[プログラミング言語](./programming.md#プログラミング言語)もある）。このようにクォーテーションで囲まれた、[ソースコード](./programming.md#ソースコード)中に直接記述された文字のことを**文字列リテラル**という。
 
-文字列の終端を判別するための特別な文字としては、**NULL文字**が用いられる（[Null](#null)とは異なる）。[配列](#配列)により文字列を表現する[プログラミング言語](./programming.md#プログラミング言語)では、文字列の長さにNULL文字の分の1を加えたサイズの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が必要となる。
+文字列の終端を判別するための特別な文字としては、**NULL文字**が用いられる（[Null](#null)とは異なる）。[配列](#配列)により文字列を表現する[プログラミング言語](./programming.md#プログラミング言語)では、文字列の長さにNULL文字の分の1を加えたサイズの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域が必要となる。
 
 ```c
 // C言語
@@ -203,7 +203,7 @@ int main()
 
 ## オブジェクト型
 
-**オブジェクト型**は、[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)の[プログラミング言語](./programming.md#プログラミング言語)において、[クラス](./object_oriented.md#クラス)から生成された[オブジェクト](./object_oriented.md#オブジェクト)を指すデータ[型](#型)。
+**オブジェクト型**は、[オブジェクト指向](./object_oriented.md#オブジェクト指向)の[プログラミング言語](./programming.md#プログラミング言語)において、[クラス](./object_oriented.md#クラス)から生成された[オブジェクト](./object_oriented.md#オブジェクト)を指すデータ[型](#型)。
 
 
 ## データの複製
@@ -212,14 +212,14 @@ int main()
 
 ### ディープコピー
 
-**ディープコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上のデータの実体を別の[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)にそのまま複製する方法。多くの[プログラミング言語](./programming.md#プログラミング言語)では、[プリミティブ型](#プリミティブ型)のデータの複製はディープコピーによって行われる。
+**ディープコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上のデータの実体を別の[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)にそのまま複製する方法。多くの[プログラミング言語](./programming.md#プログラミング言語)では、[プリミティブ型](#プリミティブ型)のデータの複製はディープコピーによって行われる。
 
-[コンテナ型](#コンテナ型)や[オブジェクト型](#オブジェクト型)のデータは多くの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域を必要とするため、ディープコピーのコストが大きくなる。そのため、明示しない限りは[シャローコピー](#シャローコピー)となる[プログラミング言語](./programming.md#プログラミング言語)が多い。このような特徴から、ディープコピーは**高価なコピー**であるとされ、無駄なディープコピーは避けるべきである。
+[コンテナ型](#コンテナ型)や[オブジェクト型](#オブジェクト型)のデータは多くの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域を必要とするため、ディープコピーのコストが大きくなる。そのため、明示しない限りは[シャローコピー](#シャローコピー)となる[プログラミング言語](./programming.md#プログラミング言語)が多い。このような特徴から、ディープコピーは**高価なコピー**であるとされ、無駄なディープコピーは避けるべきである。
 
-[可変長配列](#配列)のデータを追加するときに、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)不足が発生した場合、より広い[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が[アロケート](./programming.md#アロケート)され、確保した領域に元のデータがディープコピーされる。
+[可変長配列](#配列)のデータを追加するときに、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)不足が発生した場合、より広い[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域が[アロケート](./programming.md#アロケート)され、確保した領域に元のデータがディープコピーされる。
 
 ### シャローコピー
 
-**シャローコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上のデータ[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を指す[ポインタ](#ポインタ型)を取得する方式。コピー元と同じデータを指し示す[ポインタ](#ポインタ型)を取得する見かけ上のコピーであるため、データの実体が書き換えられると、コピー元もコピー先もデータが置き換わったように見える。そのため、コピー元かコピー先のどちらかのデータだけを変更したいような場合には[ディープコピー](#ディープコピー)を用いる必要がある。
+**シャローコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上のデータ[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を指す[ポインタ](#ポインタ型)を取得する方式。コピー元と同じデータを指し示す[ポインタ](#ポインタ型)を取得する見かけ上のコピーであるため、データの実体が書き換えられると、コピー元もコピー先もデータが置き換わったように見える。そのため、コピー元かコピー先のどちらかのデータだけを変更したいような場合には[ディープコピー](#ディープコピー)を用いる必要がある。
 
 [コンテナ型](#コンテナ型)や[オブジェクト型](#オブジェクト型)のデータは[ディープコピー](#ディープコピー)にかかるコストが大きいため、シャローコピーを用いることで複製のコストが抑えられる。
