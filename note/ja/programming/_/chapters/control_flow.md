@@ -461,7 +461,7 @@ for( let num of nums )
 }
 ```
 
-また、[オブジェクト](./class.md#オブジェクト)を[イテレート](./data_type.md#イテレータ)する場合の[制御構文](#制御フロー-1)を用意している[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある。
+また、[オブジェクト](./object_oriented.md#オブジェクト)を[イテレート](./data_type.md#イテレータ)する場合の[制御構文](#制御フロー-1)を用意している[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある。
 
 ```php
 <?php

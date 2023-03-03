@@ -9,7 +9,7 @@
 1. [演算](./_/chapters/operation.md)
 1. [制御フロー](./_/chapters/control_flow.md)
 1. [関数](./_/chapters/function.md)
-1. [クラス](./_/chapters/class.md)
+1. [オブジェクト指向](./_/chapters/object_oriented.md)
 1. [コーディングルール](./_/chapters/coding_rule.md)
 1. [プログラミング言語の種類](./_/chapters/programming_language.md)
 1. [アルゴリズム](./_/chapters/algorithm.md)

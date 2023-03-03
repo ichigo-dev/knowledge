@@ -50,7 +50,7 @@ int main()
 
 ### C++
 
-**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./class.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
+**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./basic_knowledge_of_programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/basic_knowledge_of_hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
 
 [C言語](#c言語)と同様、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)に[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いず、[プログラマ](./basic_knowledge_of_programming.md#プログラマ)が[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)の責務を負う。
 
@@ -62,12 +62,12 @@ int main()
 
 ### Objective-C
 
-**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./class.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
+**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)の起源ともいえる[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
 
 
 ## Java
 
-**Java**は、[C言語](#c言語)に影響を受けた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)に分類され、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)には[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いる。様々な[プラットフォーム](../../../computer/software/_/chapters/basic_knowledge_of_software.md#プラットフォーム)で実行できるように[JITコンパイラ](./basic_knowledge_of_programming.md#jitコンパイラ)方式を用いており、Java[プログラム](./basic_knowledge_of_programming.md#プログラム)を実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、[オブジェクト指向](./class.md#オブジェクト指向)を取り入れた言語でもある。非常に人気が高く、世界で最も使用されている[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)のひとつとなっている。
+**Java**は、[C言語](#c言語)に影響を受けた[汎用プログラミング言語](./basic_knowledge_of_programming.md#汎用プログラミング言語)で、[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)に分類され、[メモリ管理](./basic_knowledge_of_programming.md#プログラムのメモリ管理)には[ガベージコレクション](./basic_knowledge_of_programming.md#ガベージコレクション)を用いる。様々な[プラットフォーム](../../../computer/software/_/chapters/basic_knowledge_of_software.md#プラットフォーム)で実行できるように[JITコンパイラ](./basic_knowledge_of_programming.md#jitコンパイラ)方式を用いており、Java[プログラム](./basic_knowledge_of_programming.md#プログラム)を実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)を取り入れた言語でもある。非常に人気が高く、世界で最も使用されている[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)のひとつとなっている。
 
 ```java
 import java.util.Scanner;

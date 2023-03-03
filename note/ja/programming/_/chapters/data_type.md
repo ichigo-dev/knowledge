@@ -203,7 +203,7 @@ int main()
 
 ## オブジェクト型
 
-**オブジェクト型**は、[オブジェクト指向](./class.md#オブジェクト指向)の[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)において、[クラス](./class.md#クラス-1)から生成された[オブジェクト](./class.md#オブジェクト)を指すデータ[型](#型)。
+**オブジェクト型**は、[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)の[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)において、[クラス](./object_oriented.md#クラス)から生成された[オブジェクト](./object_oriented.md#オブジェクト)を指すデータ[型](#型)。
 
 
 ## データの複製
