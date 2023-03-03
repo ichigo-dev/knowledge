@@ -20,7 +20,7 @@
 
 ## 機械語
 
-**機械語**は、[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が直接処理することができる、[バイナリ](../../../_/chapters/computer_and_number.md#バイナリ)で記述された命令の集まり。機械語の命令パターン1つのことを**オペコード**という。
+**機械語**は、[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)が直接処理することができる、[バイナリ](../../../_/chapters/computer_and_number.md#バイナリ)で記述された命令の集まり。機械語の命令パターン1つのことを**オペコード**という。
 
 [2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)は人間にとっては直接記述するのに向いていないので、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング)の[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を作成し、それを[言語プロセッサ](#言語プロセッサ)によって機械語に変換するのが一般的。
 
@@ -65,7 +65,7 @@
 
 ## リンカ
 
-**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。
+**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。
 
 リンカによって[オブジェクトコード](#コンパイラ)をつなぎ合わせる処理を**リンク**という。
 

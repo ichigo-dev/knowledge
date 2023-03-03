@@ -58,13 +58,13 @@
 
 ## プログラミング
 
-**プログラミング**は、[プログラム](#プログラム)を記述して[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)へ命令を行い、目的とするタスクを解決すること。
+**プログラミング**は、[プログラム](#プログラム)を記述して[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)へ命令を行い、目的とするタスクを解決すること。
 
 [プログラマ](#プログラマ)には、世の中の様々なタスクや問題をプログラミングによって解決するという役割がある。毎日の単純作業のくり返しを減らしたり（表計算[ソフト](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)など）、ミスが許されない場面で正確に動作することが保証されたシステムを利用したり（銀行のシステムや信号機など）、さらに人間には難しいタスクの解決を行ったり（[AI](../../../artificial_intelligence/_/chapters/artificial_intelligence.md#人工知能)による異常検知など）と、プログラミングスキルの応用範囲は多岐にわたる。
 
 ### プログラム
 
-**プログラム**は、[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が処理を行う手順や内容を示したもの。
+**プログラム**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が処理を行う手順や内容を示したもの。
 
 ### プログラマ
 
@@ -81,7 +81,7 @@
 
 ## 機械語
 
-**機械語**（**マシン語**、**オブジェクトコード**、**ネイティブコード**）は、[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が直接解釈できる[プログラム](#プログラム)で、[2進数](../../../basics/discrete_mathematics/_/chapters/radix.md#2進数)の羅列からなる。機械語は次の例のような[プログラム](#プログラム)となっており、人間が記述したり内容を理解するのには適していない。そのため、人間が理解しやすいように[プログラミング言語](#プログラミング言語)を用いて[ソースコード](#ソースコード)を作成し、専用の[プログラム](#プログラム)によって[ソースコード](#ソースコード)を機械語に変換するのが一般的。[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)ごとに対応する機械語も異なるので注意が必要。
+**機械語**（**マシン語**、**オブジェクトコード**、**ネイティブコード**）は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が直接解釈できる[プログラム](#プログラム)で、[2進数](../../../basics/discrete_mathematics/_/chapters/radix.md#2進数)の羅列からなる。機械語は次の例のような[プログラム](#プログラム)となっており、人間が記述したり内容を理解するのには適していない。そのため、人間が理解しやすいように[プログラミング言語](#プログラミング言語)を用いて[ソースコード](#ソースコード)を作成し、専用の[プログラム](#プログラム)によって[ソースコード](#ソースコード)を機械語に変換するのが一般的。[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)ごとに対応する機械語も異なるので注意が必要。
 
 ```
 0111 1111 0100 0101 0100 1100 0100 0101 0000 0010 0000 0001 0000 0001 0000 0000
@@ -99,7 +99,7 @@
 
 ## 低水準言語
 
-**低水準言語**（**低級言語**）は、[プログラミング言語](#プログラミング言語)の中でも[機械語](#機械語)に近い言語のこと。低水準言語は[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)資源を効率よく使うことができ、高速に動作するという利点があるが、[プログラム](#プログラム)が長くなりやすく柔軟性に乏しいことから、組込みや[ファームウェア](../../../computer/_/chapters/basic_knowledge_of_computer.md#ファームウェア)といった分野など、限られた[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)資源で性能を最大限引き出すという目的がない限りは[高水準言語](#高水準言語)が用いられることがほとんどとなる。
+**低水準言語**（**低級言語**）は、[プログラミング言語](#プログラミング言語)の中でも[機械語](#機械語)に近い言語のこと。低水準言語は[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)資源を効率よく使うことができ、高速に動作するという利点があるが、[プログラム](#プログラム)が長くなりやすく柔軟性に乏しいことから、組込みや[ファームウェア](../../../computer/_/chapters/computer.md#ファームウェア)といった分野など、限られた[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)資源で性能を最大限引き出すという目的がない限りは[高水準言語](#高水準言語)が用いられることがほとんどとなる。
 
 ### アセンブリ言語
 
@@ -138,7 +138,7 @@ _start:
 
 **高水準言語**（**高級言語**）は、[低水準言語](#低水準言語)に比べて抽象度が高く、人間にとってわかりやすい[プログラミング言語](#プログラミング言語)。[機械語](#機械語)を意識することなく記述することができ、[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)に依存しない[プログラム](#プログラム)を作ることができる（[機械語](#機械語)への変換の段階で様々な[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)に対応させることができるため）。
 
-代表的な高水準言語としては、C系言語（[C](./programming_language.md#c言語), [C#](./programming_language.md#c-1), [C++](./programming_language.md#c)等）や[Java](./programming_language.md#java)、[Python](./programming_language.md#python)、[PHP](./programming_language.md#php)、[JavaScript](./programming_language.md#javascript)などがある。それぞれの言語には得手不得手があり、[C言語](./programming_language.md#c言語)であれば処理速度が高速であることから[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[サーバ](../../../computer/_/chapters/basic_knowledge_of_computer.md#サーバ)などの低レイヤの実装に向いており、[JavaScript](./programming_language.md#javascript)であれば一般的な[Webブラウザ](../../../network/_/chapters/web.md#webブラウザ)で動作することから[Web](../../../network/_/chapters/web.md#web)フロントエンド向けとなっている。
+代表的な高水準言語としては、C系言語（[C](./programming_language.md#c言語), [C#](./programming_language.md#c-1), [C++](./programming_language.md#c)等）や[Java](./programming_language.md#java)、[Python](./programming_language.md#python)、[PHP](./programming_language.md#php)、[JavaScript](./programming_language.md#javascript)などがある。それぞれの言語には得手不得手があり、[C言語](./programming_language.md#c言語)であれば処理速度が高速であることから[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[サーバ](../../../computer/_/chapters/computer.md#サーバ)などの低レイヤの実装に向いており、[JavaScript](./programming_language.md#javascript)であれば一般的な[Webブラウザ](../../../network/_/chapters/web.md#webブラウザ)で動作することから[Web](../../../network/_/chapters/web.md#web)フロントエンド向けとなっている。
 
 高水準言語は種類が多く、[ソースコード](#ソースコード)の[コンパイル・](#コンパイル)実行方式や、[データ型](./data_type.md#型)の決定方式などによって分類することができる。
 
@@ -276,7 +276,7 @@ JITコンパイラを用いる代表的な言語には、[Java](./programming_la
 - [配列](./data_type.md#配列)の要素数より大きい[インデックス](./data_type.md#配列)にアクセスを試みた
 - 存在しない[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を参照しようとした
 - ユーザが想定外の入力を行った
-- [データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)や[サーバ](../../../computer/_/chapters/basic_knowledge_of_computer.md#サーバ)への接続に失敗した
+- [データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)や[サーバ](../../../computer/_/chapters/computer.md#サーバ)への接続に失敗した
 
 ### 例外
 

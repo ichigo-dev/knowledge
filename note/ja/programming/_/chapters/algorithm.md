@@ -16,7 +16,7 @@
 
 ## アルゴリズム
 
-**アルゴリズム**は、問題を解くための手順のことで、特に[コンピュータ](../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)[プログラム](./programming.md#プログラム)について使われることが多い。適切なアルゴリズムを用いると、処理時間（[時間計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#時間計算量)）が大幅に短縮できたり、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)などの処理に必要となる資源（[空間計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#空間計算量)）を削減できたりする。アルゴリズムを学ぶことで、良い[プログラム](./programming.md#プログラム)を作ることができるようになる。
+**アルゴリズム**は、問題を解くための手順のことで、特に[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)[プログラム](./programming.md#プログラム)について使われることが多い。適切なアルゴリズムを用いると、処理時間（[時間計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#時間計算量)）が大幅に短縮できたり、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)などの処理に必要となる資源（[空間計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#空間計算量)）を削減できたりする。アルゴリズムを学ぶことで、良い[プログラム](./programming.md#プログラム)を作ることができるようになる。
 
 
 ## 背理法

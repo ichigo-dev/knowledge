@@ -24,7 +24,7 @@
 
 **論理演算**は、[真偽値](./set_and_proposition.md#真偽値)に対して行われる演算。
 
-基本的な論理演算には、[OR演算](#or演算)、[AND演算](#and演算)、[NOT演算](#not演算)があり、これらは[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が行う演算の最小単位となる。[真偽値](./set_and_proposition.md#真偽値)は[2進数](./radix.md#2進数)1桁で表現することができ、これは[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が扱う情報の最小単位であるため、[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が行う演算は全てこれらの論理演算の組み合わせにより成り立っている。
+基本的な論理演算には、[OR演算](#or演算)、[AND演算](#and演算)、[NOT演算](#not演算)があり、これらは[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)が行う演算の最小単位となる。[真偽値](./set_and_proposition.md#真偽値)は[2進数](./radix.md#2進数)1桁で表現することができ、これは[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)が扱う情報の最小単位であるため、[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)が行う演算は全てこれらの論理演算の組み合わせにより成り立っている。
 
 また、基本論理演算を組み合わせた複合的な論理演算として、[NOR演算](#nor演算)、[NAND演算](#nand演算)、[XOR演算](#xor演算)などがある。
 
