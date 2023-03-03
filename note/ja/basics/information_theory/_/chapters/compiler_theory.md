@@ -22,7 +22,7 @@
 
 **機械語**は、[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が直接処理することができる、[バイナリ](../../../_/chapters/computer_and_number.md#バイナリ)で記述された命令の集まり。機械語の命令パターン1つのことを**オペコード**という。
 
-[2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)は人間にとっては直接記述するのに向いていないので、[プログラミング言語](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)の[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を作成し、それを[言語プロセッサ](#言語プロセッサ)によって機械語に変換するのが一般的。
+[2進数](../../../discrete_mathematics/_/chapters/radix.md#2進数)は人間にとっては直接記述するのに向いていないので、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング)の[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を作成し、それを[言語プロセッサ](#言語プロセッサ)によって機械語に変換するのが一般的。
 
 
 ## アセンブリ言語
@@ -32,23 +32,23 @@
 
 ## 言語プロセッサ
 
-**言語プロセッサ**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)。言語プロセッサには、[アセンブラ](#アセンブラ)や[コンパイラ](#コンパイラ)、[インタプリタ](#インタプリタ)などがある。
+**言語プロセッサ**は、[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/programming.md#プログラミング)。言語プロセッサには、[アセンブラ](#アセンブラ)や[コンパイラ](#コンパイラ)、[インタプリタ](#インタプリタ)などがある。
 
 
 ## アセンブラ
 
-**アセンブラ**は、[アセンブリ言語](#アセンブリ言語)を[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)。[アセンブリ言語](#アセンブリ言語)を[機械語](#機械語)に変換することを**アセンブル**という。
+**アセンブラ**は、[アセンブリ言語](#アセンブリ言語)を[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/programming.md#プログラミング)。[アセンブリ言語](#アセンブリ言語)を[機械語](#機械語)に変換することを**アセンブル**という。
 
 
 ## コンパイラ
 
-**コンパイラ**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を解析して[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)。コンパイラによって[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)単位で生成された[機械語](#機械語)[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)のことを**オブジェクトコード**という。
+**コンパイラ**は、[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を解析して[機械語](#機械語)に変換するための[プログラム](../../../../programming/_/chapters/programming.md#プログラミング)。コンパイラによって[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)単位で生成された[機械語](#機械語)[プログラム](../../../../programming/_/chapters/programming.md#プログラミング)のことを**オブジェクトコード**という。
 
-[プログラミング言語](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラミング)で書かれた[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を[機械語](#機械語)に変換することを**コンパイル**という。
+[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング)で書かれた[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を[機械語](#機械語)に変換することを**コンパイル**という。
 
 ### 字句解析
 
-**字句解析**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を最小の単位の語句である**トークン**に分解する処理。
+**字句解析**は、[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を最小の単位の語句である**トークン**に分解する処理。
 
 ### 構文解析
 
@@ -60,19 +60,19 @@
 
 ### 最適化
 
-**最適化**は、[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)の高速化やサイズの縮小のための処理。
+**最適化**は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の高速化やサイズの縮小のための処理。
 
 
 ## リンカ
 
-**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)。
+**リンカ**は、[コンパイラ](#コンパイラ)が生成した[オブジェクトコード](#コンパイラ)をつなぎ合わせて[コンピュータ](../../../../computer/_/chapters/basic_knowledge_of_computer.md#コンピュータ)が実行できるようにするための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。
 
 リンカによって[オブジェクトコード](#コンパイラ)をつなぎ合わせる処理を**リンク**という。
 
 
 ## インタプリタ
 
-**インタプリタ**は、[ソースコード](../../../../programming/_/chapters/basic_knowledge_of_programming.md#ソースコード)を部分的に解釈しながら並行して実行するための[プログラム](../../../../programming/_/chapters/basic_knowledge_of_programming.md#プログラム)。
+**インタプリタ**は、[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)を部分的に解釈しながら並行して実行するための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。
 
 
 ## 参考文献

@@ -35,18 +35,18 @@
 
 ## 型
 
-**型**は、[プログラム](./basic_knowledge_of_programming.md#プログラム)で扱うデータを性質や属性によって分類してもの。[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)においては、[プログラマ](./basic_knowledge_of_programming.md#プログラマ)が[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中に型を明示することによって[コンパイル](./basic_knowledge_of_programming.md#コンパイル)時にデータの型が決まる。[静的型付け言語](./basic_knowledge_of_programming.md#静的型付け言語)においては、実行時に自動的に型が判断される。
+**型**は、[プログラム](./programming.md#プログラム)で扱うデータを性質や属性によって分類してもの。[静的型付け言語](./programming.md#静的型付け言語)においては、[プログラマ](./programming.md#プログラマ)が[ソースコード](./programming.md#ソースコード)中に型を明示することによって[コンパイル](./programming.md#コンパイル)時にデータの型が決まる。[静的型付け言語](./programming.md#静的型付け言語)においては、実行時に自動的に型が判断される。
 
 
 ## プリミティブ型
 
-**プリミティブ型**（**基本データ型**、**原始型**）は、[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)で標準的に用意されている最も基本的な[型](#型)。プリミティブ型に属する[型](#型)は、[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)においてそれ以上分解することができないシンプルな[型](#型)として定義されており、[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ-1)が高速に[演算](./operation.md#演算-1)できるという特徴がある。
+**プリミティブ型**（**基本データ型**、**原始型**）は、[プログラミング言語](./programming.md#プログラミング言語)で標準的に用意されている最も基本的な[型](#型)。プリミティブ型に属する[型](#型)は、[プログラミング言語](./programming.md#プログラミング言語)においてそれ以上分解することができないシンプルな[型](#型)として定義されており、[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ-1)が高速に[演算](./operation.md#演算-1)できるという特徴がある。
 
 ### 文字型
 
-**文字型**( `char` )は、[自然言語](./basic_knowledge_of_programming.md#プログラミング言語)の1文字を格納するための[型](#型)。1[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)で表現できる[ASCII文字](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)や、[マルチバイト文字](../../../basics/information_theory/_/chapters/character_representation.md#マルチバイト文字)で様々な文字種に対応している[JISコード](../../../basics/information_theory/_/chapters/character_representation.md#jisコード)や[Unicode](../../../basics/information_theory/_/chapters/character_representation.md#unicode)などのサポートが一般的。
+**文字型**( `char` )は、[自然言語](./programming.md#プログラミング言語)の1文字を格納するための[型](#型)。1[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)で表現できる[ASCII文字](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)や、[マルチバイト文字](../../../basics/information_theory/_/chapters/character_representation.md#マルチバイト文字)で様々な文字種に対応している[JISコード](../../../basics/information_theory/_/chapters/character_representation.md#jisコード)や[Unicode](../../../basics/information_theory/_/chapters/character_representation.md#unicode)などのサポートが一般的。
 
-[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中で `'` で囲まれた部分は文字型のデータとして扱われる（ `'` と `"` を使い分けない[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある）。このようにクォーテーションで囲まれた、[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中に直接記述された文字のことを**文字リテラル**という。
+[ソースコード](./programming.md#ソースコード)中で `'` で囲まれた部分は文字型のデータとして扱われる（ `'` と `"` を使い分けない[プログラミング言語](./programming.md#プログラミング言語)もある）。このようにクォーテーションで囲まれた、[ソースコード](./programming.md#ソースコード)中に直接記述された文字のことを**文字リテラル**という。
 
 ```c
 // C言語
@@ -63,7 +63,7 @@ int main()
 
 ### 整数型
 
-**整数型**( `int, short, long' )は、整数値を格納するための[型](#型)。1[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)が表現できる範囲は $0 \sim 255 (2^8)$ であるため、より大きい数値を扱えるように2[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)や4[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)、8[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)の整数型などを用意している[プログラミング言語](./basic_knowledge_of_programming.md#プログラミングン言語)もある。**符号付き整数**と**符号なし整数**をサポートしている[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もあり、値が負にならないことがわかっている場合には符号なし整数を用いた方が使用できる数の範囲が増える。
+**整数型**( `int, short, long' )は、整数値を格納するための[型](#型)。1[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)が表現できる範囲は $0 \sim 255 (2^8)$ であるため、より大きい数値を扱えるように2[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)や4[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)、8[バイト](../../../basics/_/chapters/computer_and_number.md#バイト)の整数型などを用意している[プログラミング言語](./programming.md#プログラミングン言語)もある。**符号付き整数**と**符号なし整数**をサポートしている[プログラミング言語](./programming.md#プログラミング言語)もあり、値が負にならないことがわかっている場合には符号なし整数を用いた方が使用できる数の範囲が増える。
 
 ### 固定長小数点数型
 
@@ -71,7 +71,7 @@ int main()
 
 ### 浮動小数点数型
 
-**浮動小数点数型**( `float, double` )は、小数を扱うための[型](#型)で、浮動小数点方式の小数を扱う。[単精度](../../../basics/discrete_mathematics/_/chapters/numeric_representation.md#浮動小数点数)と[倍精度](../../../basics/discrete_mathematics/_/chapters/numeric_representation.md#浮動小数点数)で別の[型](#型)として用意している[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある。
+**浮動小数点数型**( `float, double` )は、小数を扱うための[型](#型)で、浮動小数点方式の小数を扱う。[単精度](../../../basics/discrete_mathematics/_/chapters/numeric_representation.md#浮動小数点数)と[倍精度](../../../basics/discrete_mathematics/_/chapters/numeric_representation.md#浮動小数点数)で別の[型](#型)として用意している[プログラミング言語](./programming.md#プログラミング言語)もある。
 
 ### ブーリアン型
 
@@ -81,7 +81,7 @@ int main()
 
 **ポインタ型**は、[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)の実体が格納された、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を保持しておくための[型](#型)。[配列](#配列)や[オブジェクト](#オブジェクト型)といった[複合型](#複合型)は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納されており、実体にアクセスするためには[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)のポインタを経由する必要がある。また、[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納されたデータに対してもポインタをつくることができる。
 
-[プログラム](./basic_knowledge_of_programming.md#プログラム)中で利用される[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)などのリソースは[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上で固有の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)に割り当てられており、[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を知っていればそのデータにアクセスすることができる。また、[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)の足し引きによって隣のデータにアクセスすることもできる。一方で、予期しない[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)のデータを変更してしまうと深刻な[バグ](./basic_knowledge_of_programming.md#バグ)に繋がるため、注意が必要である。
+[プログラム](./programming.md#プログラム)中で利用される[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)などのリソースは[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上で固有の[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)に割り当てられており、[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を知っていればそのデータにアクセスすることができる。また、[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)の足し引きによって隣のデータにアクセスすることもできる。一方で、予期しない[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)のデータを変更してしまうと深刻な[バグ](./programming.md#バグ)に繋がるため、注意が必要である。
 
 ポインタのポインタや、さらにそのポインタを作るといったこともできる。
 
@@ -92,19 +92,19 @@ int main()
 
 ## Null
 
-**Null**は、何もないことを表すデータで、[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)によって実装や扱いが異なる。[型](#型)として定義されている言語もあれば、特別な値として扱う言語もある。空文字や `0` とは区別され、[変数](./variable.md#変数-1)に値が[代入](./variable.md#代入)されていない状態などを表す。
+**Null**は、何もないことを表すデータで、[プログラミング言語](./programming.md#プログラミング言語)によって実装や扱いが異なる。[型](#型)として定義されている言語もあれば、特別な値として扱う言語もある。空文字や `0` とは区別され、[変数](./variable.md#変数-1)に値が[代入](./variable.md#代入)されていない状態などを表す。
 
 
 ## 複合型
 
-**複合型**は、[プリミティブ型](#プリミティブ型)を組み合わせた構造を持つ[型](#型)。あらかじめ定義された汎用的な[型](#型)もあるが、多くの[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)では開発者が独自に定義することもできる。
+**複合型**は、[プリミティブ型](#プリミティブ型)を組み合わせた構造を持つ[型](#型)。あらかじめ定義された汎用的な[型](#型)もあるが、多くの[プログラミング言語](./programming.md#プログラミング言語)では開発者が独自に定義することもできる。
 
-各[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング)ごとに用意されている複合型や、内部的なデータ構造が異なる場合があるので注意。
+各[プログラミング言語](./programming.md#プログラミング)ごとに用意されている複合型や、内部的なデータ構造が異なる場合があるので注意。
 
 
 ## コンテナ型
 
-**コンテナ型**（**コレクション型**）は、同じ[型](#型)のデータを複数まとめるための抽象データ[型](#型)。それぞれに特性や得意とする操作が異なるため、用途に応じて適切に使い分けることで[プログラム](./basic_knowledge_of_programming.md#プログラム)の質が向上する。
+**コンテナ型**（**コレクション型**）は、同じ[型](#型)のデータを複数まとめるための抽象データ[型](#型)。それぞれに特性や得意とする操作が異なるため、用途に応じて適切に使い分けることで[プログラム](./programming.md#プログラム)の質が向上する。
 
 ### イテレータ
 
@@ -123,7 +123,7 @@ str[5] = "!";
 printf("%s\n", str);     // "Hello! world"が出力される
 ```
 
-配列には、[コンパイル](./basic_knowledge_of_programming.md#コンパイル)時に要素数が決まる**固定長配列**と、実行時に要素数を動的に追加したり削除したりできる**可変長配列**がある。通常、固定長配列は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に、可変長配列は[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納される。可変長配列において、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に確保したサイズが不足した場合、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域の再確保（[アロケート](./basic_knowledge_of_programming.md#アロケート)）が発生するため、あらかじめ十分な領域を用意しておくとよい。
+配列には、[コンパイル](./programming.md#コンパイル)時に要素数が決まる**固定長配列**と、実行時に要素数を動的に追加したり削除したりできる**可変長配列**がある。通常、固定長配列は[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上の[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に、可変長配列は[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納される。可変長配列において、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に確保したサイズが不足した場合、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域の再確保（[アロケート](./programming.md#アロケート)）が発生するため、あらかじめ十分な領域を用意しておくとよい。
 
 可変長配列の末尾に対するデータの追加・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(1)$ と非常に高速である。一方、任意のインデックスに対するデータの追加・削除の際には、そのインデックスより後ろのデータ全てを移動する必要があるため、 $O(N)$ と低速となる。任意のインデックスの要素にアクセスするのにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は常に $O(1)$ で高速である。データの探索にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は基本的に $O(N)$ であるが、配列がソート済みである場合は[二分探索](./algorithm.md#二分探索)を用いて $O(\log{N})$ に抑えることもできる。
 
@@ -137,7 +137,7 @@ printf("%s\n", str);     // "Hello! world"が出力される
 - **双方向リスト** : 各ノードが次のノードと前のノードへのポインタを持つリスト
 - **循環リスト** : 末尾のノードが先頭のノードへのポインタを持つリスト（単方向と双方向がある）
 
-リストは、前後のノードと[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)上で隣り合っている必要がないため、データ数が増えても[アロケート](./basic_knowledge_of_programming.md#アロケート)が発生しないという利点がある。
+リストは、前後のノードと[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)上で隣り合っている必要がないため、データ数が増えても[アロケート](./programming.md#アロケート)が発生しないという利点がある。
 
 リストの任意の場所へのデータの挿入・削除にかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(1)$ と高速である。一方で、要素へのアクセスにかかる[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量-1)は $O(N)$ であり、[配列](#配列)に比べると遅い。これは、リストの要素へアクセスするには、先頭の要素から順番に[ポインタ](#ポインタ型)をたどっていく必要があるためである（[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上での配置が隣り合っているとは限らないため）。
 
@@ -181,11 +181,11 @@ printf("%s\n", str);     // "Hello! world"が出力される
 
 ### 文字列型
 
-**文字列型**( `string` )は、複数の文字からなる文字列を表現するための[型](#型)。[文字型](#文字型)には1つの文字しか格納できないため、2つ以上の文字からなる文字列を取り扱いたい場合は[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)ごとに用意されている文字列型を用いる。文字列型の[オブジェクト](#オブジェクト型)を用意している場合もあれば、[文字型](#文字型)の[配列](#配列)を文字列として扱う言語もある。
+**文字列型**( `string` )は、複数の文字からなる文字列を表現するための[型](#型)。[文字型](#文字型)には1つの文字しか格納できないため、2つ以上の文字からなる文字列を取り扱いたい場合は[プログラミング言語](./programming.md#プログラミング言語)ごとに用意されている文字列型を用いる。文字列型の[オブジェクト](#オブジェクト型)を用意している場合もあれば、[文字型](#文字型)の[配列](#配列)を文字列として扱う言語もある。
 
-[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中で `"` で囲まれた部分は文字列型のデータとして扱われる（ `'` と `"` を使い分けない[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある）。このようにクォーテーションで囲まれた、[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中に直接記述された文字のことを**文字列リテラル**という。
+[ソースコード](./programming.md#ソースコード)中で `"` で囲まれた部分は文字列型のデータとして扱われる（ `'` と `"` を使い分けない[プログラミング言語](./programming.md#プログラミング言語)もある）。このようにクォーテーションで囲まれた、[ソースコード](./programming.md#ソースコード)中に直接記述された文字のことを**文字列リテラル**という。
 
-文字列の終端を判別するための特別な文字としては、**NULL文字**が用いられる（[Null](#null)とは異なる）。[配列](#配列)により文字列を表現する[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)では、文字列の長さにNULL文字の分の1を加えたサイズの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が必要となる。
+文字列の終端を判別するための特別な文字としては、**NULL文字**が用いられる（[Null](#null)とは異なる）。[配列](#配列)により文字列を表現する[プログラミング言語](./programming.md#プログラミング言語)では、文字列の長さにNULL文字の分の1を加えたサイズの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が必要となる。
 
 ```c
 // C言語
@@ -203,20 +203,20 @@ int main()
 
 ## オブジェクト型
 
-**オブジェクト型**は、[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)の[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)において、[クラス](./object_oriented.md#クラス)から生成された[オブジェクト](./object_oriented.md#オブジェクト)を指すデータ[型](#型)。
+**オブジェクト型**は、[オブジェクト指向](./object_oriented.md#オブジェクト指向-1)の[プログラミング言語](./programming.md#プログラミング言語)において、[クラス](./object_oriented.md#クラス)から生成された[オブジェクト](./object_oriented.md#オブジェクト)を指すデータ[型](#型)。
 
 
 ## データの複製
 
-[プログラム](./basic_knowledge_of_programming.md#プログラム)中で用いるデータを複製する方法には、[ディープコピー](#ディープコピー)と[シャローコピー](#シャローコピー)がある。
+[プログラム](./programming.md#プログラム)中で用いるデータを複製する方法には、[ディープコピー](#ディープコピー)と[シャローコピー](#シャローコピー)がある。
 
 ### ディープコピー
 
-**ディープコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上のデータの実体を別の[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)にそのまま複製する方法。多くの[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)では、[プリミティブ型](#プリミティブ型)のデータの複製はディープコピーによって行われる。
+**ディープコピー**は、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)上のデータの実体を別の[メモリアドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)にそのまま複製する方法。多くの[プログラミング言語](./programming.md#プログラミング言語)では、[プリミティブ型](#プリミティブ型)のデータの複製はディープコピーによって行われる。
 
-[コンテナ型](#コンテナ型)や[オブジェクト型](#オブジェクト型)のデータは多くの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域を必要とするため、ディープコピーのコストが大きくなる。そのため、明示しない限りは[シャローコピー](#シャローコピー)となる[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)が多い。このような特徴から、ディープコピーは**高価なコピー**であるとされ、無駄なディープコピーは避けるべきである。
+[コンテナ型](#コンテナ型)や[オブジェクト型](#オブジェクト型)のデータは多くの[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域を必要とするため、ディープコピーのコストが大きくなる。そのため、明示しない限りは[シャローコピー](#シャローコピー)となる[プログラミング言語](./programming.md#プログラミング言語)が多い。このような特徴から、ディープコピーは**高価なコピー**であるとされ、無駄なディープコピーは避けるべきである。
 
-[可変長配列](#配列)のデータを追加するときに、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)不足が発生した場合、より広い[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が[アロケート](./basic_knowledge_of_programming.md#アロケート)され、確保した領域に元のデータがディープコピーされる。
+[可変長配列](#配列)のデータを追加するときに、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)不足が発生した場合、より広い[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ-1)領域が[アロケート](./programming.md#アロケート)され、確保した領域に元のデータがディープコピーされる。
 
 ### シャローコピー
 

@@ -26,9 +26,9 @@
 
 ## 制御フロー
 
-**制御フロー**は、[プログラム](./basic_knowledge_of_programming.md#プログラム)の処理の流れのこと。制御フローを記述するための[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)の[文法](./basic_knowledge_of_programming.md#文法)を、**制御構文**という。
+**制御フロー**は、[プログラム](./programming.md#プログラム)の処理の流れのこと。制御フローを記述するための[プログラミング言語](./programming.md#プログラミング言語)の[文法](./programming.md#文法)を、**制御構文**という。
 
-[プログラム](./basic_knowledge_of_programming.md#プログラム)は通常、上から下へと順次実行されていくが、制御構文を用いることで、処理の流れを[分岐](#条件分岐)させたり、[繰り返し](#反復)同じ処理をさせたりすることができる。
+[プログラム](./programming.md#プログラム)は通常、上から下へと順次実行されていくが、制御構文を用いることで、処理の流れを[分岐](#条件分岐)させたり、[繰り返し](#反復)同じ処理をさせたりすることができる。
 
 ### ネスト
 
@@ -37,13 +37,13 @@
 
 ## ブロック
 
-**ブロック**は、[ソースコード](./basic_knowledge_of_programming.md#ソースコード)中で処理をまとめたもの。多くの[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)ではブロックは `{}` で囲まれた範囲となる。[Python](./programming_language.md#python)のようにインデントにより処理ブロックを表現するものもある。
+**ブロック**は、[ソースコード](./programming.md#ソースコード)中で処理をまとめたもの。多くの[プログラミング言語](./programming.md#プログラミング言語)ではブロックは `{}` で囲まれた範囲となる。[Python](./programming_language.md#python)のようにインデントにより処理ブロックを表現するものもある。
 
 ブロックは入れ子にすることもできる。
 
 ### スコープ
 
-**スコープ**は、[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)などの[識別子](./basic_knowledge_of_programming.md#識別子)を参照できる範囲。[変数](./variable.md#変数-1)などが[宣言](./variable.md#宣言)される位置などによって決定される。スコープは、[宣言](./variable.md#宣言)された場所から[宣言](./variable.md#宣言)された[ブロック](#ブロック)の終わりまでとなる。
+**スコープ**は、[変数](./variable.md#変数-1)や[関数](./function.md#関数-1)などの[識別子](./programming.md#識別子)を参照できる範囲。[変数](./variable.md#変数-1)などが[宣言](./variable.md#宣言)される位置などによって決定される。スコープは、[宣言](./variable.md#宣言)された場所から[宣言](./variable.md#宣言)された[ブロック](#ブロック)の終わりまでとなる。
 
 ```javascript
 // JavaScript
@@ -73,7 +73,7 @@
 
 ### グローバル
 
-**グローバル**とは、[ソースコード](./basic_knowledge_of_programming.md#ソースコード)全体が[スコープ](#スコープ)となっているデータ（[変数](./variable.md#変数-1)）のこと。グローバルなデータには、全ての[関数](./function.md#関数-1)から直接アクセスすることができる。更新されるタイミングがわかりにくかったり、予想外のデータとなってしまうことから[バグ](./basic_knowledge_of_programming.md#バグ)を生みやすいため、扱いには注意が必要。
+**グローバル**とは、[ソースコード](./programming.md#ソースコード)全体が[スコープ](#スコープ)となっているデータ（[変数](./variable.md#変数-1)）のこと。グローバルなデータには、全ての[関数](./function.md#関数-1)から直接アクセスすることができる。更新されるタイミングがわかりにくかったり、予想外のデータとなってしまうことから[バグ](./programming.md#バグ)を生みやすいため、扱いには注意が必要。
 
 ### ローカル
 
@@ -424,7 +424,7 @@ for( $i=0; $i<20; $i++ )
 
 ### for in文
 
-`for in` 文は、[イテレート](./data_type.md#イテレータ)可能な値に対して使用できる[反復](#反復)処理であり、[コンテナ型](./data_type.md#コンテナ型)のデータの中身を順に取り出したい場合などに用いられる。[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)によってはサポートしていないものや、別のキーワードで実装されている場合もある（[JavaScript](./programming_language.md#javascript)など）。
+`for in` 文は、[イテレート](./data_type.md#イテレータ)可能な値に対して使用できる[反復](#反復)処理であり、[コンテナ型](./data_type.md#コンテナ型)のデータの中身を順に取り出したい場合などに用いられる。[プログラミング言語](./programming.md#プログラミング言語)によってはサポートしていないものや、別のキーワードで実装されている場合もある（[JavaScript](./programming_language.md#javascript)など）。
 
 ```python
 # Python
@@ -461,7 +461,7 @@ for( let num of nums )
 }
 ```
 
-また、[オブジェクト](./object_oriented.md#オブジェクト)を[イテレート](./data_type.md#イテレータ)する場合の[制御構文](#制御フロー-1)を用意している[プログラミング言語](./basic_knowledge_of_programming.md#プログラミング言語)もある。
+また、[オブジェクト](./object_oriented.md#オブジェクト)を[イテレート](./data_type.md#イテレータ)する場合の[制御構文](#制御フロー-1)を用意している[プログラミング言語](./programming.md#プログラミング言語)もある。
 
 ```php
 <?php
@@ -499,4 +499,4 @@ for( let key in profile )
 
 ### loop文
 
-`loop` 文は、処理[ブロック](#ブロック)を**無限ループ**で実行する。一般的には、[ループ](#反復)内である条件において `break` 文を実行するように制御することで、途中で[ループ](#反復)を離脱するような実装とする場合が多い。処理を空回ししたい特殊な場合（[OS](../../../computer/software/_/chapters/operation_system.md#オペレーティングシステム-1)のhaltなど）にも用いられる。通常の[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)において無限[ループ](#反復)が発生することは[バグ](./basic_knowledge_of_programming.md#バグ)である場合が多いため、注意して使用する。
+`loop` 文は、処理[ブロック](#ブロック)を**無限ループ**で実行する。一般的には、[ループ](#反復)内である条件において `break` 文を実行するように制御することで、途中で[ループ](#反復)を離脱するような実装とする場合が多い。処理を空回ししたい特殊な場合（[OS](../../../computer/software/_/chapters/operation_system.md#オペレーティングシステム-1)のhaltなど）にも用いられる。通常の[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)において無限[ループ](#反復)が発生することは[バグ](./programming.md#バグ)である場合が多いため、注意して使用する。
