@@ -14,12 +14,14 @@
 1. [Docker Swarmサービス](#docker-swarmサービス)
 	1. [Docker Swarmサービスの作成](#docker-swarmサービスの作成)
 	1. [Docker Swarmサービスの一覧](#docker-swarmサービスの一覧)
+	1. [Docker Swarmサービスの確認](#docker-swarmサービスの確認)
 	1. [Docker Swarmサービスの更新](#docker-swarmサービスの更新)
 	1. [Docker Swarmサービスの削除](#docker-swarmサービスの削除)
 	1. [Docker Swarmサービスのスケール](#docker-swarmサービスのスケール)
 1. [Docker Swarmスタック](#docker-swarmスタック)
 	1. [Docker Swarmスタックのデプロイ](#docker-swarmスタックのデプロイ)
 	1. [Docker Swarmスタックの一覧](#docker-swarmスタックの一覧)
+	1. [Docker Swarmスタックの確認](#docker-swarmスタックの確認)
 	1. [Docker Swarmスタックの削除](#docker-swarmスタックの削除)
 
 
@@ -91,7 +93,15 @@ $ docker service create <image>:<tag> \
 
 ### Docker Swarmサービスの一覧
 
-`docker service ps` は、Docker Swarmが扱うサービスの一覧を確認するコマンド。
+`docker service ls` は、 Docker Swarmが扱うサービスの一覧を確認するコマンド。
+
+```sh
+$ docker service ls
+```
+
+### Docker Swarmサービスの確認
+
+`docker service ps` は、Docker Swarmが扱うサービスの状態を確認するコマンド。
 
 ```sh
 $ docker service ps <service>
@@ -140,6 +150,14 @@ $ docker stack deploy <stack> --compose-file <filename>
 
 ```sh
 $ docker stack ls
+```
+
+### Docker Swarmスタックの確認
+
+`docker stack ps` は、Docker Swarmのスタックの状態を確認するコマンド。
+
+```sh
+$ docker stack ps <stack>
 ```
 
 ### Docker Swarmスタックの削除
