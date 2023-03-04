@@ -83,13 +83,14 @@ $ docker run -it --name ubuntu_linux_04_shared -h ubuntu_linux_04_shared \
 
 ## bind mount
 
-**bind mount**は、ホストOS上のデバイスファイルやディレクトリなどをコンテナから参照するための機能。bind mountを行うには、コンテナ起動時に `--mount` オプションを付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用でマウントすることができる。
+**bind mount**は、ホストOS上のデバイスファイルやディレクトリなどをコンテナから参照するための機能。bind mountを行うには、コンテナ起動時に `--mount` オプションを付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用でマウントすることができる。 `--mount` の代わりに `-v` オプションを利用することもできる。
 
 bind mountを使用すると、ホストOS上のファイルシステムにコンテナが干渉できるようになるので、操作には注意が必要。
 
 ```sh
 # bind mount
 $ docker run --mount type=bind,src=<host path>,dst=<container path> <container>
+$ docker run -v <host path>:<container path> <container>
 
 # bind mountの例
 $ docker run -it --name ubuntu_linux_05 -h ubuntu_linux_05 \
