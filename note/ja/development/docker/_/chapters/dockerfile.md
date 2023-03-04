@@ -10,7 +10,6 @@
 	1. [Dockerfileのビルド](#dockerfileのビルド)
 	1. [Dockerfileの命令](#dockerfileの命令)
 1. [マルチステージビルド](#マルチステージビルド)
-1. [キャッシュの削除](#キャッシュの削除)
 
 
 ## Dockerfile
