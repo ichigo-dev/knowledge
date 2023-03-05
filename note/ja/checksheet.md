@@ -684,3 +684,26 @@
 	- [ ] [ビット全探索](./programming/_/chapters/algorithm.md#ビット全探索)
 	- [ ] [線形探索](./programming/_/chapters/algorithm.md#線形探索)
 	- [ ] [二分探索](./programming/_/chapters/algorithm.md#二分探索)
+
+
+## コンピュータ
+
+- [ ] [コンピュータ](./computer/_/chapters/computer.md#コンピュータ)
+	- [ ] [コンピュータリテラシ](./computer/_/chapters/computer.md#コンピュータ)
+- [ ] [第1世代](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [真空管](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [ABC(Atanasoff-Berry Computer)](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [ENIAC(Electronic Numerical Integrator and Computer)](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [EDSAC(Electronic Delay Storage Automatic Calculator)](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [UNIVAC-I(UNIVersal Automatic Computer)](./computer/_/chapters/computer.md#第1世代)
+	- [ ] [EDVAC(Electronic Discrete Variable Automatic Computer)](./computer/_/chapters/computer.md#第1世代)
+		- [ ] [ジョン・フォン・ノイマン](./computer/_/chapters/computer.md#第1世代)
+- [ ] [第2世代](./computer/_/chapters/computer.md#第2世代)
+	- [ ] [トランジスタ](./computer/_/chapters/computer.md#第2世代)
+	- [ ] [ダウンサイジング](./computer/_/chapters/computer.md#第2世代)
+	- [ ] [IBM1400シリーズ](./computer/_/chapters/computer.md#第2世代)
+- [ ] [第3世代](./computer/_/chapters/computer.md#第3世代)
+	- [ ] [集積回路(IC: Integrated Circuit)](./computer/_/chapters/computer.md#第3世代)
+	- [ ] [チップ](./computer/_/chapters/computer.md#第3世代)
+	- [ ] [IBM 360シリーズ](./computer/_/chapters/computer.md#第3世代)
+- [ ] [第3.5世代](./computer/_/chapters/computer.md#第35世代)
