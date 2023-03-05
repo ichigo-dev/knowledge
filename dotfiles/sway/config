@@ -68,7 +68,7 @@ bindsym $super+x exec $swaynag
 
 # Screenshot
 set $screenshot swayshot
-bindsym $super+Shift+s $screenshot
+bindsym $super+Shift+s exec $screenshot
 
 # Explore
 set $explore thunar

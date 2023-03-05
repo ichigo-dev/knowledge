@@ -1,7 +1,7 @@
 # Technical knowledge
 
 - [note](./note/README.md)
-- [config](./config/README.md)
+- [dotfiles](./dotfiles/README.md)
 
 ![thumbnail](./assets/images/thumbnail.png)
 
