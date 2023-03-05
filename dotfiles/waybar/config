@@ -4,6 +4,7 @@
 {
 	"layer": "top",
 	"position": "bottom",
+	"spacing": 0,
 
 	//==========================================================================
 	// Layout
@@ -11,22 +12,24 @@
 
 	// Left
 	"modules-left": [
-		"custom/sway",
-		"sway/workspaces"
+		"sway/workspaces",
+		"sway/mode"
 	],
 
 	// Center
 	"modules-center": [
-		"wlr/taskbar"
+		"sway/window"
 	],
 
 	//	Right
 	"modules-right": [
+		"tray",
+		"cpu",
+		"memory",
 		"pulseaudio",
 		"network",
-		"battery",
-		"clock#date",
-		"clock#time",
+		//"battery",
+		"clock",
 		"custom/poweroff"
 	],
 
@@ -37,19 +40,10 @@
 
 	//	Sway
 	"sway/workspaces": {
-		"format": "{name}",
-		"on-click": "activate"
-	},
-
-	"wlr/taskbar": {
-		"format": "{icon}",
-		"icon-size": 22,
-		"tooltip-format": "{name}",
+		"disable-scroll": true,
+		"all-outputs": true,
 		"on-click": "activate",
-		"on-click-right": "close",
-		"ignore-list": [
-		   "Alacritty"
-		]
+		"format": "{name}"
 	},
 
 	//	Battery
@@ -72,20 +66,23 @@
 		"tooltip-format": "{capacity}% ({timeTo})"
 	},
 
-	//	Clock
-	"clock#time": {
-		"timezone": "Asia/Tokyo",
-		"interval": 60,
-		"format": "{:%H:%M}",
-		"tooltip-format": "{:%H:%M:%S}"
+	//	CPU
+	"cpu": {
+		"format": " {usage}% LA:{load}",
+		"tooltip": false
 	},
 
-	//	Calendar
-	"clock#date": {
-		"timezone": "Asia/Tokyo",
-		"interval": 18000,
-		"format": " {:%Y/%m/%d}",
-		"tooltip-format": "<big>{:%Y %B \t week: %V }</big>\n<tt>{calendar}</tt>",
+	//	Memory
+	"memory": {
+		"format": " {used:0.1f}G/{total:0.1f}G({percentage}%)",
+		"tooltip": false
+	},
+
+	//	Clock
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+		"format": "{:%Y-%m-%d(%a) %H:%M}",
+		"format-alt": "{:%Y-%m-%d(%a) %H:%M}"
 	},
 
 	//	Network
@@ -103,31 +100,19 @@
 
 	//	Pulseaudio
 	"pulseaudio": {
-		"format": "{icon}",
-		"format-bluetooth": "{icon}",
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "  {icon} {volume}%",
+		"format-bluetooth-muted": "   ",
 		"format-muted": "",
-		"format-icons": [
-			"",
-			"",
-			""
-		],
-		"tooltip-format": "{volume}% ({desc})",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
 		"on-click": "pavucontrol"
-	},
-
-
-	//==========================================================================
-	// Custom
-	//==========================================================================
-	"custom/poweroff": {
-		"format": "",
-		"on-click": "systemctl poweroff",
-		"tooltip": false
-	},
-
-	"custom/sway": {
-		"format": "",
-		"on-click": "wofi --show drun --style $HOME/.config/wofi/style.css --hide-scroll --location top --lines 5",
-		"tooltip": false
 	}
 }

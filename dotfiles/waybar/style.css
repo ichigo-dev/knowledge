@@ -1,0 +1,78 @@
+*
+{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: FontAwesome;
+}
+
+window#waybar
+{
+	background: #222;
+	color: #ccc;
+}
+
+#window
+{
+	margin: 0 40px;
+	font-weight: normal;
+}
+
+#mode
+{
+	margin: 0 8px;
+	font-family: monospace;
+	font-size: 0.85em;
+	color: green;
+}
+
+#tray
+{
+	margin-right: 8px;
+}
+
+#workspaces button,
+#taskbar button,
+#cpu,
+#memory,
+#backlight,
+#battery,
+#clock,
+#network,
+#pulseaudio
+{
+	color: #ccc;
+	border-radius: 4px;
+	padding: 2px 8px;
+	margin: 4px 2px;
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+#cpu,
+#memory,
+#backlight,
+#battery,
+#clock,
+#network,
+#pulseaudio,
+#workspaces button.focused
+{
+	background-color: #444;
+}
+
+#custom-poweroff
+{
+	color: orange;
+}
+
+tooltip
+{
+	background-color: #222;
+	border-radius: 8px;
+	font-family: monospace;
+}
+
+tooltip label
+{
+	color: #888;
+}
