@@ -6,7 +6,7 @@
 1. [Linux](./_/chapters/linux.md)
 1. [シェル](./_/chapters/shell.md)
 1. [基本コマンド](./_/chapters/basic_command.md)
-1. [ファイルシステム](./_/chapters/file_system.md)
+1. [ファイルとディレクトリ](./_/chapters/file_and_directory.md)
 1. [ユーザと権限](./_/chapters/user_and_auth.md)
 1. [エディタ](./_/chapters/editor.md)
 1. [正規表現](./_/chapters/radix.md)
