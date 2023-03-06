@@ -1015,3 +1015,18 @@
 		- [ ] [SD](./computer/hardware/_/chapters/io_unit.md#フラッシュメモリカード)
 		- [ ] [miniSD](./computer/hardware/_/chapters/io_unit.md#フラッシュメモリカード)
 		- [ ] [microSD](./computer/hardware/_/chapters/io_unit.md#フラッシュメモリカード)
+
+#### 論理回路
+
+- [ ] [論理回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [MIL記号](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [OR回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [AND回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [NOT回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [NOR回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [NAND回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+	- [ ] [XOR回路](./computer/hardware/_/chapters/io_unit.md#論理回路)
+- [ ] [加算回路](./computer/hardware/_/chapters/io_unit.md#加算回路)
+	- [ ] [半加算回路(HA: Half Adder)](./computer/hardware/_/chapters/io_unit.md#半加算回路)
+	- [ ] [全加算回路(FA: Full Adder)](./computer/hardware/_/chapters/io_unit.md#全加算回路)
+	- [ ] [多数決回路](./computer/hardware/_/chapters/io_unit.md#多数決回路)
