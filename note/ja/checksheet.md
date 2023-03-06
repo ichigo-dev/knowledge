@@ -1057,3 +1057,9 @@
 		- [ ] [寄生サイクリスタ](./computer/hardware/_/chapters/io_unit.md#ラッチアップ)
 	- [ ] [ストレスマイグレーション](./computer/hardware/_/chapters/io_unit.md#ストレスマイグレーション)
 	- [ ] [エレクトロマイグレーション](./computer/hardware/_/chapters/io_unit.md#エレクトロマイグレーション)
+
+### ソフトウェア
+
+#### ソフトウェア
+
+- [ ] [](./computer/software/_/chapters/software.md#ソフトウェア)

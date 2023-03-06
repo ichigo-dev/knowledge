@@ -50,24 +50,24 @@ int main()
 
 ### C++
 
-**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./object_oriented.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
+**C++** は、[C言語](#c言語)の機能や特徴を継承しつつ表現力を向上させた[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、複数の[プログラミングパラダイム](./programming.md#プログラミングパラダイム)が組み合わされている。[オブジェクト指向](./object_oriented.md#オブジェクト指向)やテンプレートといった[C言語](#c言語)にはない機能を有しており、柔軟性に優れている。[C言語](#c言語)のように[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)を直接扱うような低レイヤ向けの言語としても、複雑な[アプリケーションソフトウェア](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を開発するような高レイヤ向けの言語としても活躍している。習得難易度は比較的高く、パフォーマンスが求められる場合や[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源を効率的に利用したい場合に適している。
 
 [C言語](#c言語)と同様、[メモリ管理](./programming.md#プログラムのメモリ管理)に[ガベージコレクション](./programming.md#ガベージコレクション)を用いず、[プログラマ](./programming.md#プログラマ)が[メモリ管理](./programming.md#プログラムのメモリ管理)の責務を負う。
 
 ### C#
 
-**C#** は、[C言語](#c言語)や[C++](#c)に影響を受けMicrosoftが開発した、[汎用プログラミング言語](./programming.md#汎用プログラミング言語)。[Windows](../../../computer/software/_/chapters/operation_system.md#windows)との相性がよく、**.NET Framework**を用いた[Windows](../../../computer/software/_/chapters/operation_system.md#windows)[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
+**C#** は、[C言語](#c言語)や[C++](#c)に影響を受けMicrosoftが開発した、[汎用プログラミング言語](./programming.md#汎用プログラミング言語)。[Windows](../../../computer/software/_/chapters/operation_system.md#windows)との相性がよく、**.NET Framework**を用いた[Windows](../../../computer/software/_/chapters/operation_system.md#windows)[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
 
 [C言語](#c言語)や[C++](#c)とは異なり、[ガベージコレクション](./programming.md#ガベージコレクション)により[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)を管理できるため、習得難易度は比較的低い。
 
 ### Objective-C
 
-**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./object_oriented.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
+**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./object_oriented.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
 
 
 ## Java
 
-**Java**は、[C言語](#c言語)に影響を受けた[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、[静的型付け言語](./programming.md#静的型付け言語)に分類され、[メモリ管理](./programming.md#プログラムのメモリ管理)には[ガベージコレクション](./programming.md#ガベージコレクション)を用いる。様々な[プラットフォーム](../../../computer/software/_/chapters/basic_knowledge_of_software.md#プラットフォーム)で実行できるように[JITコンパイラ](./programming.md#jitコンパイラ)方式を用いており、Java[プログラム](./programming.md#プログラム)を実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、[オブジェクト指向](./object_oriented.md#オブジェクト指向)を取り入れた言語でもある。非常に人気が高く、世界で最も使用されている[プログラミング言語](./programming.md#プログラミング言語)のひとつとなっている。
+**Java**は、[C言語](#c言語)に影響を受けた[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、[静的型付け言語](./programming.md#静的型付け言語)に分類され、[メモリ管理](./programming.md#プログラムのメモリ管理)には[ガベージコレクション](./programming.md#ガベージコレクション)を用いる。様々な[プラットフォーム](../../../computer/software/_/chapters/software.md#プラットフォーム)で実行できるように[JITコンパイラ](./programming.md#jitコンパイラ)方式を用いており、Java[プログラム](./programming.md#プログラム)を実行するためのソフトウェアを**JVM**（Java仮想マシン）という。また、[オブジェクト指向](./object_oriented.md#オブジェクト指向)を取り入れた言語でもある。非常に人気が高く、世界で最も使用されている[プログラミング言語](./programming.md#プログラミング言語)のひとつとなっている。
 
 ```java
 import java.util.Scanner;
@@ -96,12 +96,12 @@ public class Oddeven
 
 ### Kotlin
 
-**Kotlin**は、[Android](../../../computer/software/_/chapters/operation_system.md#android)[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するための比較的新しい[プログラミング言語](./programming.md#プログラミング言語)。[Java](#java)を簡潔に安全に記述できるように改良されており、[JVM](#java)上で動作する。
+**Kotlin**は、[Android](../../../computer/software/_/chapters/operation_system.md#android)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を開発するための比較的新しい[プログラミング言語](./programming.md#プログラミング言語)。[Java](#java)を簡潔に安全に記述できるように改良されており、[JVM](#java)上で動作する。
 
 
 ## Swift
 
-**Swift**は、Apple製品の[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)を開発するためにつくられた[プログラミング言語](./programming.md#プログラミング言語)。[Objective-C](#objective-c)に代わる新たな言語として設計されており、シンプルで直感的に[プログラミング](./programming.md#プログラミング)ができるとして人気が高い。
+**Swift**は、Apple製品の[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を開発するためにつくられた[プログラミング言語](./programming.md#プログラミング言語)。[Objective-C](#objective-c)に代わる新たな言語として設計されており、シンプルで直感的に[プログラミング](./programming.md#プログラミング)ができるとして人気が高い。
 
 
 ## Python
@@ -159,7 +159,7 @@ else
 
 ### TypeScript
 
-**TypeScript**は、Microsoftによって開発された[JavaScript](#javascript)のスーパーセット。大規模[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)開発のために設計されており、[静的型付け言語](./programming.md#静的型付け言語)のような[型](./data_type.md#型)宣言などの機能が搭載されている。実行時は、[JavaScript](#javascript)に[トランスコンパイル](./programming.md#トランスコンパイル)したものを[ブラウザ](../../../network/_/chapters/web.md#webブラウザ)上で動作させる。
+**TypeScript**は、Microsoftによって開発された[JavaScript](#javascript)のスーパーセット。大規模[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)開発のために設計されており、[静的型付け言語](./programming.md#静的型付け言語)のような[型](./data_type.md#型)宣言などの機能が搭載されている。実行時は、[JavaScript](#javascript)に[トランスコンパイル](./programming.md#トランスコンパイル)したものを[ブラウザ](../../../network/_/chapters/web.md#webブラウザ)上で動作させる。
 
 
 ## Rust
@@ -169,4 +169,4 @@ else
 
 ## Go
 
-**Go**は、高負荷がかかるシステムなどには必須の並行プログラミングがシンプルに記述できるように、Googleが開発した[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類され、[メモリ管理](./programming.md#プログラムのメモリ管理)には[ガベージコレクション](./programming.md#ガベージコレクション)を用いる。[Web](../../../network/_/chapters/web.md#web)[アプリケーション](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)やモバイル[アプリ](../../../computer/software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)などの開発に適しており、[標準ライブラリ](../../../computer/software/_/chapters/package.md#標準ライブラリ)が豊富であるという特徴がある。実行速度は[C言語](#c言語)や[Rust](#rust)には劣るものの、同じ分野で活躍する[PHP](#php)などの言語に比べると圧倒的に高速である。
+**Go**は、高負荷がかかるシステムなどには必須の並行プログラミングがシンプルに記述できるように、Googleが開発した[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類され、[メモリ管理](./programming.md#プログラムのメモリ管理)には[ガベージコレクション](./programming.md#ガベージコレクション)を用いる。[Web](../../../network/_/chapters/web.md#web)[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)やモバイル[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)などの開発に適しており、[標準ライブラリ](../../../computer/software/_/chapters/package.md#標準ライブラリ)が豊富であるという特徴がある。実行速度は[C言語](#c言語)や[Rust](#rust)には劣るものの、同じ分野で活躍する[PHP](#php)などの言語に比べると圧倒的に高速である。

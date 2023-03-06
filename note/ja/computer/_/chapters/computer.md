@@ -93,7 +93,7 @@
 
 ### サーバ
 
-**サーバ**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)と呼ばれる他の[コンピュータ](#コンピュータ)や[ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)からの要求に応じてデータやサービスを提供するための[コンピュータ](#コンピュータ)。ホームページを配信する[Web](../../../network/_/chapters/web.md#web)サーバやメールを配信するメールサーバ、ファイルを管理するためのファイルサーバなどに分類できる。
+**サーバ**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)と呼ばれる他の[コンピュータ](#コンピュータ)や[ソフトウェア](../../software/_/chapters/software.md#ソフトウェア)からの要求に応じてデータやサービスを提供するための[コンピュータ](#コンピュータ)。ホームページを配信する[Web](../../../network/_/chapters/web.md#web)サーバやメールを配信するメールサーバ、ファイルを管理するためのファイルサーバなどに分類できる。
 
 ### メインフレーム
 
@@ -122,9 +122,9 @@
 
 ### ソフトウェア
 
-**ソフトウェア**は、[コンピュータ](#コンピュータ)を動作させるための[プログラム](../../../programming/_/chapters/programming.md#プログラミング)のこと。[コンピュータ](#コンピュータ)の根幹的な制御に関わる[基本ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#基本ソフトウェア)と、特定の機能や目的のためにつくられた[応用ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)がある。
+**ソフトウェア**は、[コンピュータ](#コンピュータ)を動作させるための[プログラム](../../../programming/_/chapters/programming.md#プログラミング)のこと。[コンピュータ](#コンピュータ)の根幹的な制御に関わる[基本ソフトウェア](../../software/_/chapters/software.md#基本ソフトウェア)と、特定の機能や目的のためにつくられた[応用ソフトウェア](../../software/_/chapters/software.md#応用ソフトウェア)がある。
 
-- [ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#ソフトウェア)
+- [ソフトウェア](../../software/_/chapters/software.md#ソフトウェア)
 
 ### ファームウェア
 
@@ -132,7 +132,7 @@
 
 ### ミドルウェア
 
-**ミドルウェア**は、[ソフトウェア](#ソフトウェア)の一種で、[基本ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#基本ソフトウェア)と[応用ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#応用ソフトウェア)の中間に位置し、様々な[ソフトウェア](#ソフトウェア)から共通して利用される機能を提供するもの。[基本ソフトウェア](../../software/_/chapters/basic_knowledge_of_software.md#基本ソフトウェア)よりも分野や用途が限定された具体的な機能を提供する場合が多い。
+**ミドルウェア**は、[ソフトウェア](#ソフトウェア)の一種で、[基本ソフトウェア](../../software/_/chapters/software.md#基本ソフトウェア)と[応用ソフトウェア](../../software/_/chapters/software.md#応用ソフトウェア)の中間に位置し、様々な[ソフトウェア](#ソフトウェア)から共通して利用される機能を提供するもの。[基本ソフトウェア](../../software/_/chapters/software.md#基本ソフトウェア)よりも分野や用途が限定された具体的な機能を提供する場合が多い。
 
 
 ## コンピュータアーキテクチャ

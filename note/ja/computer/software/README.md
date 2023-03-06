@@ -3,7 +3,7 @@
 
 ## 学習ステップ
 
-1. [ソフトウェアの基礎知識](./_/chapters/basic_knowledge_of_software.md)
+1. [ソフトウェアの基礎知識](./_/chapters/software.md)
 1. [オペレーティングシステム](./_/chapters/operationg_system.md)
 1. [ミドルウェア](./_/chapters/middleware.md)
 1. [ファイルシステム](./_/chapters/file_system.md)
