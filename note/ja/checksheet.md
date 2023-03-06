@@ -728,3 +728,21 @@
 		- [ ] [ノイマン型コンピュータ](./computer/_/chapters/computer.md#プログラム内蔵方式)
 		- [ ] [フォンノイマンボトルネック](./computer/_/chapters/computer.md#プログラム内蔵方式)
 	- [ ] [逐次制御方式](./computer/_/chapters/computer.md#逐次制御方式)
+
+### ハードウェア
+
+#### ハードウェア
+
+- [ ] [ハードウェア](./computer/hardware/_/chapters/hardware.md#ハードウェア)
+- [ ] [ハードウェア5大要素](./computer/hardware/_/chapters/hardware.md#ハードウェア5大要素)
+	- [ ] [制御装置](./computer/hardware/_/chapters/hardware.md#制御装置)
+	- [ ] [演算装置(ALU: Arthmetic and Logic Unit)](./computer/hardware/_/chapters/hardware.md#演算装置)
+	- [ ] [記憶装置](./computer/hardware/_/chapters/hardware.md#記憶装置)
+		- [ ] [主記憶装置](./computer/hardware/_/chapters/hardware.md#主記憶装置)
+			- [ ] [揮発性](./computer/hardware/_/chapters/hardware.md#主記憶装置)
+		- [ ] [補助記憶装置](./computer/hardware/_/chapters/hardware.md#補助記憶装置)
+			- [ ] [不揮発性](./computer/hardware/_/chapters/hardware.md#補助記憶装置)
+	- [ ] [入力装置](./computer/hardware/_/chapters/hardware.md#入力装置)
+	- [ ] [出力装置](./computer/hardware/_/chapters/hardware.md#出力装置)
+	- [ ] [処理装置](./computer/hardware/_/chapters/hardware.md#処理装置)
+- [ ] [マザーボード](./computer/hardware/_/chapters/hardware.md#マザーボード)
