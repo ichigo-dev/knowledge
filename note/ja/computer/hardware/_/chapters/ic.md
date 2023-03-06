@@ -16,11 +16,19 @@
 
 ## IC
 
-**IC**（**集積回路**: Integrated Circuit）は半導体素子（半導体による電子部品）のひとつで、基板上に様々な部品をまとめた小型の回路。また、さらに集積度を高めたものを**LSI**（**大規模集積回路**: Large Scale Integration）という。
+**IC**（**集積回路**: Integrated Circuit）は、半導体素子（半導体による電子部品）のひとつで、基板上に様々な部品をまとめた小型の回路。
+
+### LSI
+
+**LSI**（**大規模集積回路**: Large Scale Integration）は、[IC](#ic)よりも集積度を高めた素子。
+
+### VLSI
+
+**VLSI**(Very Large Scale Integration)は、[LSI](#lsi)よりもさらに集積度を高めた素子。
 
 ### カスタムIC
 
-**カスタムIC**は、利用者が要求する特定の用途に特化したICのこと。製造するときに回路設計を決定する**ASIC**(Application Specific Integrated Circuit)や、製造後に回路を変更できる**FPGA**(Field-Programmable Gate Array)がある。FPGAの構成を記述するハードウェア言語として**HDL**(Hardware Description Language)を用いる。
+**カスタムIC**は、利用者が要求する特定の用途に特化した[IC](#ic)のこと。製造するときに回路設計を決定する**ASIC**(Application Specific Integrated Circuit)や、製造後に回路を変更できる**FPGA**(Field-Programmable Gate Array)がある。FPGAの構成を記述するハードウェア言語として**HDL**(Hardware Description Language)を用いる。
 
 ### システムLSI
 
@@ -28,15 +36,15 @@
 
 ### MEMS
 
-**MEMS**(Micro Electro Mechanical Systems)は、センサーやアクチュアエータなどの電子回路をひとつのシリコン基板に集積化したデバイス。
+**MEMS**(Micro Electro Mechanical Systems)は、[センサ](../../../../basics/measurement_and_control/_/chapters/control_theory.md#センサ)や[アクチュアエータ](../../../../basics/measurement_and_control/_/chapters/control_theory.md#アクチュエータ)などの電子回路をひとつのシリコン基板に集積化したデバイス。
 
 ### ESD破壊
 
-**ESD破壊**は半導体特有の故障のひとつで、静電気放電(ESD: ElectroStatic Discharge)によってデバイスが劣化・故障すること。人体や装置、デバイスが帯電し、酸化膜や配線などが破壊される。
+**ESD破壊**は、半導体特有の故障のひとつで、静電気放電(ESD: ElectroStatic Discharge)によってデバイスが劣化・故障すること。人体や装置、デバイスが帯電し、酸化膜や配線などが破壊される。
 
 ### ラッチアップ
 
-**ラッチアップ**は半導体特有の故障のひとつで、期待しない位置にトランジスタやサイリスタができてしまうことで回路に不具合を生じること。これを寄生トランジスタや寄生サイリスタなどと呼ぶ。
+**ラッチアップ**は、半導体特有の故障のひとつで、期待しない位置に[トランジスタ](../../../_/chapters/computer.md#第2世代)やサイリスタができてしまうことで回路に不具合を生じること。これを寄生トランジスタや寄生サイリスタなどと呼ぶ。
 
 ### ストレスマイグレーション
 
