@@ -1030,3 +1030,12 @@
 	- [ ] [半加算回路(HA: Half Adder)](./computer/hardware/_/chapters/io_unit.md#半加算回路)
 	- [ ] [全加算回路(FA: Full Adder)](./computer/hardware/_/chapters/io_unit.md#全加算回路)
 	- [ ] [多数決回路](./computer/hardware/_/chapters/io_unit.md#多数決回路)
+
+#### 機械電子制御
+
+- [ ] [機械電子制御](./computer/hardware/_/chapters/io_unit.md#機械電子制御)
+	- [ ] [シーケンス制御](./computer/hardware/_/chapters/io_unit.md#シーケンス制御)
+	- [ ] [フィードバック制御](./computer/hardware/_/chapters/io_unit.md#フィードバック制御)
+		- [ ] [サーボ制御](./computer/hardware/_/chapters/io_unit.md#フィードバック制御)
+		- [ ] [プロセス制御](./computer/hardware/_/chapters/io_unit.md#フィードバック制御)
+	- [ ] [PWM制御(Pluse Width Modulation)](./computer/hardware/_/chapters/io_unit.md#pwm制御)
