@@ -1092,3 +1092,15 @@
 #### オペレーティングシステム
 
 - [ ] [オペレーティングシステム(OS: Operating system)](./computer/software/_/chapters/operating_system.md#nui)
+	- [ ] [Windows](./computer/software/_/chapters/operating_system.md#windows)
+	- [ ] [macOS](./computer/software/_/chapters/operating_system.md#macos)
+	- [ ] [UNIX](./computer/software/_/chapters/operating_system.md#unix)
+		- [ ] [MULTICS](./computer/software/_/chapters/operating_system.md#unix)
+		- [ ] [System V](./computer/software/_/chapters/operating_system.md#unix)
+		- [ ] [UNIX互換OS](./computer/software/_/chapters/operating_system.md#unix)
+		- [ ] [BSD(Berkeley Software Distribution: バークレー版UNIX)](./computer/software/_/chapters/operating_system.md#unix)
+	- [ ] [Linux](./computer/software/_/chapters/operating_system.md#linux)
+	- [ ] [Android](./computer/software/_/chapters/operating_system.md#android)
+	- [ ] [iOS](./computer/software/_/chapters/operating_system.md#ios)
+- [ ] [カーネル](./computer/software/_/chapters/operating_system.md#カーネル)
+	- [ ] [システムコール、スーパバイザコール(SVC)](./computer/software/_/chapters/operating_system.md#カーネル)
