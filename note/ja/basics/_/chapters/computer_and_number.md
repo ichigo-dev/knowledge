@@ -34,7 +34,7 @@
 
 ### ワード
 
-**ワード**は、複数の[ビット](#ビット)を集めたデータ量の単位で、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で情報を[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)によって処理する際の単位を表している。ワードサイズは[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)や[OS](../../../computer/software/_/chapters/operation_system.md#オペレーティングシステム)によって異なるが、4[バイト](#バイト)や8[バイト](#バイト)が一般的。
+**ワード**は、複数の[ビット](#ビット)を集めたデータ量の単位で、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で情報を[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)によって処理する際の単位を表している。ワードサイズは[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)や[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって異なるが、4[バイト](#バイト)や8[バイト](#バイト)が一般的。
 
 ### MSB
 

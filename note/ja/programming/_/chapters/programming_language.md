@@ -22,7 +22,7 @@
 
 ## C言語
 
-**C言語**は、1972年に開発された[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、[高水準言語](./programming.md#高水準言語)ではあるが[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)寄りの記述が可能な[低水準言語](./programming.md#低水準言語)のような特徴も持っている。[コンパイラ言語](./programming.md#コンパイラ言語)・[静的型付け言語](./programming.md#静的型付け言語)に分類される。[OS](../../../computer/software/_/chapters/operation_system.md#オペレーティングシステム)や[デバイスドライバ](../../../computer/hardware/_/chapters/io_unit.md#デバイスドライバ)など、低レイヤを中心にあらゆる分野で利用されており、[プログラミング言語](./programming.md#プログラミング言語)の中でも実行速度は最速の部類となる。また、習得難易度は[スクリプト言語](./programming.md#スクリプト言語)に比べて高く、限られた[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資産で効率的に実行できる[プログラム](./programming.md#プログラム)を要するケースに適している。
+**C言語**は、1972年に開発された[汎用プログラミング言語](./programming.md#汎用プログラミング言語)で、[高水準言語](./programming.md#高水準言語)ではあるが[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)寄りの記述が可能な[低水準言語](./programming.md#低水準言語)のような特徴も持っている。[コンパイラ言語](./programming.md#コンパイラ言語)・[静的型付け言語](./programming.md#静的型付け言語)に分類される。[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)や[デバイスドライバ](../../../computer/hardware/_/chapters/io_unit.md#デバイスドライバ)など、低レイヤを中心にあらゆる分野で利用されており、[プログラミング言語](./programming.md#プログラミング言語)の中でも実行速度は最速の部類となる。また、習得難易度は[スクリプト言語](./programming.md#スクリプト言語)に比べて高く、限られた[ハードウェア](../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資産で効率的に実行できる[プログラム](./programming.md#プログラム)を要するケースに適している。
 
 [メモリ管理](./programming.md#プログラムのメモリ管理)に[ガベージコレクション](./programming.md#ガベージコレクション)を用いず、[プログラマ](./programming.md#プログラマ)が[メモリ管理](./programming.md#プログラムのメモリ管理)の責務を負うため、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)に関する様々な[エラー](./programming.md#エラー)を回避して[プログラム](./programming.md#プログラム)を記述する必要がある。
 
@@ -56,13 +56,13 @@ int main()
 
 ### C#
 
-**C#** は、[C言語](#c言語)や[C++](#c)に影響を受けMicrosoftが開発した、[汎用プログラミング言語](./programming.md#汎用プログラミング言語)。[Windows](../../../computer/software/_/chapters/operation_system.md#windows)との相性がよく、**.NET Framework**を用いた[Windows](../../../computer/software/_/chapters/operation_system.md#windows)[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
+**C#** は、[C言語](#c言語)や[C++](#c)に影響を受けMicrosoftが開発した、[汎用プログラミング言語](./programming.md#汎用プログラミング言語)。[Windows](../../../computer/software/_/chapters/operating_system.md#windows)との相性がよく、**.NET Framework**を用いた[Windows](../../../computer/software/_/chapters/operating_system.md#windows)[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)開発などに適している。また、ゲーム開発エンジンとして有名な**Unity**とも相性が良い。
 
 [C言語](#c言語)や[C++](#c)とは異なり、[ガベージコレクション](./programming.md#ガベージコレクション)により[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)を管理できるため、習得難易度は比較的低い。
 
 ### Objective-C
 
-**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./object_oriented.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operation_system.md#macos)や[iOS](../../../computer/software/_/chapters/operation_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operation_system.md#macos)、[iOS](../../../computer/software/_/chapters/operation_system.md#ios)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
+**Objective-C**は、[C言語](#c言語)をベースにして**Smalltalk**（[オブジェクト指向](./object_oriented.md#オブジェクト指向)の起源ともいえる[プログラミング言語](./programming.md#プログラミング言語)）の機能を取り込んだ[プログラミング言語](./programming.md#プログラミング言語)。Appple社の[macOS](../../../computer/software/_/chapters/operating_system.md#macos)や[iOS](../../../computer/software/_/chapters/operating_system.md#ios)向けの[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)開発における標準言語。近年では[MacOS](../../../computer/software/_/chapters/operating_system.md#macos)、[iOS](../../../computer/software/_/chapters/operating_system.md#ios)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)の開発用言語は[Swift](#swift)に置き換えられつつある。
 
 
 ## Java
@@ -96,7 +96,7 @@ public class Oddeven
 
 ### Kotlin
 
-**Kotlin**は、[Android](../../../computer/software/_/chapters/operation_system.md#android)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を開発するための比較的新しい[プログラミング言語](./programming.md#プログラミング言語)。[Java](#java)を簡潔に安全に記述できるように改良されており、[JVM](#java)上で動作する。
+**Kotlin**は、[Android](../../../computer/software/_/chapters/operating_system.md#android)[アプリ](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を開発するための比較的新しい[プログラミング言語](./programming.md#プログラミング言語)。[Java](#java)を簡潔に安全に記述できるように改良されており、[JVM](#java)上で動作する。
 
 
 ## Swift
@@ -164,7 +164,7 @@ else
 
 ## Rust
 
-**Rust**は、[C言語](#c言語)や[C++](#c)に代わるシステム[プログラミング言語](./programming.md#プログラミング言語)を目指す[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類される。また、[ガベージコレクション](./programming.md#ガベージコレクション)を用いない独特の[メモリ管理](./programming.md#プログラムのメモリ管理)（**ボローチェッカー**による[参照](./data_type.md#参照型)の有効性の検証）によって、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)安全性を確保している。パフォーマンスや信頼性の高さから[Linux](../../../computer/software/_/chapters/operation_system.md#linux)の[カーネル](../../../computer/software/_/chapters/operation_system.md#カーネル)[プログラム](./programming.md#プログラム)にも採用されたり、GoogleやFacebookといった企業でも一部取り入れられたりと、注目の集まる言語となっている。開発者に最も愛されている[プログラミング言語](./programming.md#プログラミング言語)としても知られるが、習得難易度は[C言語](#c言語)や[C++](#c)と同程度かそれ以上に高い。
+**Rust**は、[C言語](#c言語)や[C++](#c)に代わるシステム[プログラミング言語](./programming.md#プログラミング言語)を目指す[プログラミング言語](./programming.md#プログラミング言語)。[静的型付け言語](./programming.md#静的型付け言語)・[コンパイラ言語](./programming.md#コンパイラ言語)に分類される。また、[ガベージコレクション](./programming.md#ガベージコレクション)を用いない独特の[メモリ管理](./programming.md#プログラムのメモリ管理)（**ボローチェッカー**による[参照](./data_type.md#参照型)の有効性の検証）によって、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)安全性を確保している。パフォーマンスや信頼性の高さから[Linux](../../../computer/software/_/chapters/operating_system.md#linux)の[カーネル](../../../computer/software/_/chapters/operating_system.md#カーネル)[プログラム](./programming.md#プログラム)にも採用されたり、GoogleやFacebookといった企業でも一部取り入れられたりと、注目の集まる言語となっている。開発者に最も愛されている[プログラミング言語](./programming.md#プログラミング言語)としても知られるが、習得難易度は[C言語](#c言語)や[C++](#c)と同程度かそれ以上に高い。
 
 
 ## Go

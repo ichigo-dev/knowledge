@@ -26,11 +26,11 @@
 
 ### 基本ソフトウェア
 
-**基本ソフトウェア**は、主に[OS](./operation_system.md#オペレーティングシステム)のことであり、ユーザが[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)にデータを入力したり、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)からの出力をユーザに表示したり、[コンピュータ](../../../_/chapters/computer.md#コンピュータ)にインストールされた[アプリケーション](#応用ソフトウェア)の動作を管理したりといった、基本的な動作を行うための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のこと。
+**基本ソフトウェア**は、主に[OS](./operating_system.md#オペレーティングシステム)のことであり、ユーザが[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)にデータを入力したり、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)からの出力をユーザに表示したり、[コンピュータ](../../../_/chapters/computer.md#コンピュータ)にインストールされた[アプリケーション](#応用ソフトウェア)の動作を管理したりといった、基本的な動作を行うための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のこと。
 
 基本ソフトウェアは以下の[ソフトウェア](#ソフトウェア)群により構成される。
 
-- **制御プログラム**（狭義の[OS](./operation_system.md#オペレーティングシステム): [ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)を管理・制御し、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)資源を[アプリケーションソフトウェア](#応用ソフトウェア)に配分する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)
+- **制御プログラム**（狭義の[OS](./operating_system.md#オペレーティングシステム): [ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)を管理・制御し、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)資源を[アプリケーションソフトウェア](#応用ソフトウェア)に配分する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)
 - **サービスプログラム**: [コンピュータ](../../../_/chapters/computer.md#コンピュータ)を利用者が容易に操作できるように提供される、補助的な[プログラム](../../../../programming/_/chapters/programming.md#プログラム)
 - **言語処理プログラム**: [プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング言語)で書かれた[ソースプログラム](../../../../programming/_/chapters/programming.md#ソースコード)を、[機械語](../../../../basics/information_theory/_/chapters/compiler_theory.md#機械語)の[プログラム](../../../../programming/_/chapters/programming.md#プログラム)に変換するための[プログラム](../../../../programming/_/chapters/programming.md#プログラム)
 
@@ -48,7 +48,7 @@
 
 ## プラットフォーム
 
-**プラットフォーム**は、[アプリケーションソフトウェア](#応用ソフトウェア)が動作する環境。[ソフトウェア](#ソフトウェア)が動作するデバイス（[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)）や[OS](./operation_system.md#オペレーティングシステム)を指す。
+**プラットフォーム**は、[アプリケーションソフトウェア](#応用ソフトウェア)が動作する環境。[ソフトウェア](#ソフトウェア)が動作するデバイス（[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)）や[OS](./operating_system.md#オペレーティングシステム)を指す。
 
 ### マルチプラットフォーム
 

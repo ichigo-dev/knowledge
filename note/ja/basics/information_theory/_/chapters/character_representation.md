@@ -28,7 +28,7 @@
 
 ### EUCコード
 
-**EUCコード**は、[UNIX](../../../../computer/software/_/chapters/operation_system.md#unix)上で2[バイト](../../../_/chapters/computer_and_number.md#バイト)文字と1[バイト](../../../_/chapters/computer_and_number.md#バイト)文字を混在して用いる[文字コード](#文字コード)。
+**EUCコード**は、[UNIX](../../../../computer/software/_/chapters/operating_system.md#unix)上で2[バイト](../../../_/chapters/computer_and_number.md#バイト)文字と1[バイト](../../../_/chapters/computer_and_number.md#バイト)文字を混在して用いる[文字コード](#文字コード)。
 
 ### JISコード
 

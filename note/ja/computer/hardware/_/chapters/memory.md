@@ -80,7 +80,7 @@
 
 **マスクROM**は、出荷時にデータが書き込まれており、内容の変更ができないROM。
 
-**PROM**(Programmable ROM)は、特殊な装置により一度だけ書き込むことができるが、一度書き込んだものを消去できない。基本的に読み出し専用であり、[RAM](#ram)に比べると書き込みには時間がかかる。また、PROMの中でも**EPROM**は紫外線照射により内容の消去が可能で、再書き込みも可能。**EEPROM**は電気的に[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)単位での内容の書き換えが可能なもので、[BIOS](../../../software/_/chapters/operation_system.md#bios)や電子機器の制御[プログラム](../../../../programming/_/chapters/programming.md#プログラム)格納のために使用される。
+**PROM**(Programmable ROM)は、特殊な装置により一度だけ書き込むことができるが、一度書き込んだものを消去できない。基本的に読み出し専用であり、[RAM](#ram)に比べると書き込みには時間がかかる。また、PROMの中でも**EPROM**は紫外線照射により内容の消去が可能で、再書き込みも可能。**EEPROM**は電気的に[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)単位での内容の書き換えが可能なもので、[BIOS](../../../software/_/chapters/operating_system.md#bios)や電子機器の制御[プログラム](../../../../programming/_/chapters/programming.md#プログラム)格納のために使用される。
 
 **フラッシュメモリ**は、[ブロック](./auxiliary_memory_unit.md#ブロック)単位もしくは一括での大容量のデータの消去や書き込みができるように最適化されたROM。[USB](./bus.md#usb)[メモリ](#メモリ)や[SSD](./auxiliary_memory_unit.md#ssd)に利用されているが、本来はROMであるため、何度も書き換えを行うと劣化してしまう。
 

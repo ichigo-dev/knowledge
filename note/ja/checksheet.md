@@ -1088,3 +1088,7 @@
 		- [ ] [スワイプ](./computer/software/_/chapters/software.md#nui)
 		- [ ] [ドラッグ](./computer/software/_/chapters/software.md#nui)
 		- [ ] [ピンチアウト/ピンチイン](./computer/software/_/chapters/software.md#nui)
+
+#### オペレーティングシステム
+
+- [ ] [オペレーティングシステム(OS: Operating system)](./computer/software/_/chapters/operating_system.md#nui)
