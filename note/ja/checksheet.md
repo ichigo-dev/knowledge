@@ -1179,7 +1179,6 @@
 	- [ ] [データベース管理システム(DBMS: Database Management System](./computer/software/_/chapters/operating_system.md#データベース管理システム)
 	- [ ] [API(Application Programming Interface)](./computer/software/_/chapters/operating_system.md#api)
 
-
 #### ファイルシステム
 
 - [ ] [ファイル](./computer/software/_/chapters/file_system.md#ファイル)
@@ -1227,3 +1226,19 @@
 	- [ ] [ハードリンク（ハードリンク）](./computer/software/_/chapters/file_system.md#ハードリンク)
 		- [ ] [iノード](./computer/software/_/chapters/file_system.md#ハードリンク)
 		- [ ] [iノード番号](./computer/software/_/chapters/file_system.md#ハードリンク)
+
+#### パッケージ
+
+- [ ] [パッケージ](./computer/software/_/chapters/package.md#パッケージ)
+	- [ ] [スイート](./computer/software/_/chapters/package.md#スイート)
+	- [ ] [依存関係](./computer/software/_/chapters/package.md#依存関係)
+	- [ ] [パッケージマネージャ](./computer/software/_/chapters/package.md#パッケージマネージャ)
+- [ ] [バージョン](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [パッチバージョン](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [マイナーバージョン](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [メジャーバージョン](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [正式版](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [アルファ版](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [ベータ版](./computer/software/_/chapters/package.md#バージョン)
+	- [ ] [後方互換性](./computer/software/_/chapters/package.md#後方互換性)
+- [ ] [コンポーネント](./computer/software/_/chapters/package.md#コンポーネント)
