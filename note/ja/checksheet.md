@@ -1168,3 +1168,9 @@
 		- [ ] [セグメント](./computer/software/_/chapters/operating_system.md#セグメント方式)
 		- [ ] [ロールアウト](./computer/software/_/chapters/operating_system.md#セグメント方式)
 		- [ ] [ロールイン](./computer/software/_/chapters/operating_system.md#セグメント方式)
+
+#### ミドルウェア
+
+- [ ] [ミドルウェア](./computer/software/_/chapters/operating_system.md#ミドルウェア)
+	- [ ] [データベース管理システム(DBMS: Database Management System](./computer/software/_/chapters/operating_system.md#データベース管理システム)
+	- [ ] [API(Application Programming Interface)](./computer/software/_/chapters/operating_system.md#api)
