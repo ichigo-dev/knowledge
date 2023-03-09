@@ -1242,3 +1242,8 @@
 	- [ ] [ベータ版](./computer/software/_/chapters/package.md#バージョン)
 	- [ ] [後方互換性](./computer/software/_/chapters/package.md#後方互換性)
 - [ ] [コンポーネント](./computer/software/_/chapters/package.md#コンポーネント)
+- [ ] [モジュール](./computer/software/_/chapters/package.md#モジュール)
+- [ ] [ライブラリ](./computer/software/_/chapters/package.md#ライブラリ)
+	- [ ] [標準ライブラリ](./computer/software/_/chapters/package.md#標準ライブラリ)
+	- [ ] [サードパーティ製ライブラリ](./computer/software/_/chapters/package.md#サードパーティ製ライブラリ)
+- [ ] [フレームワーク](./computer/software/_/chapters/package.md#フレームワーク)
