@@ -1259,3 +1259,18 @@
 		- [ ] [GPL汚染](./computer/software/_/chapters/open_source_software.md#gpl)
 	- [ ] [BSD(Berkeley Softwarer Distribution)ライセンス](./computer/software/_/chapters/open_source_software.md#bsdライセンス)
 	- [ ] [MPL(Mozilla Public License)](./computer/software/_/chapters/open_source_software.md#mpl)
+
+#### マルチメディア技術
+
+- [ ] [マルチメディア](./computer/software/_/chapters/multimedia.md#マルチメディア)
+	- [ ] [オーサリング](./computer/software/_/chapters/multimedia.md#オーサリング)
+		- [ ] [オーサリングツール](./computer/software/_/chapters/multimedia.md#オーサリング)
+	- [ ] [ストリーミング](./computer/software/_/chapters/multimedia.md#ストリーミング)
+- [ ] [静止画処理](./computer/software/_/chapters/multimedia.md#静止画処理)
+	- [ ] [画素数](./computer/software/_/chapters/multimedia.md#画素数)
+	- [ ] [解像度](./computer/software/_/chapters/multimedia.md#解像度)
+	- [ ] [階調](./computer/software/_/chapters/multimedia.md#階調)
+	- [ ] [色空間](./computer/software/_/chapters/multimedia.md#色空間)
+	- [ ] [色の三原色](./computer/software/_/chapters/multimedia.md#色の三原色)
+	- [ ] [光の三原色](./computer/software/_/chapters/multimedia.md#h光の三原色)
+- [ ] [MPEG(Moving Picture Experts Group)](./computer/software/_/chapters/multimedia.md#mpeg)
