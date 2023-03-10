@@ -1247,3 +1247,15 @@
 	- [ ] [標準ライブラリ](./computer/software/_/chapters/package.md#標準ライブラリ)
 	- [ ] [サードパーティ製ライブラリ](./computer/software/_/chapters/package.md#サードパーティ製ライブラリ)
 - [ ] [フレームワーク](./computer/software/_/chapters/package.md#フレームワーク)
+
+#### オープンソースソフトウェア
+
+- [ ] [オープンソースソフトウェア(OSS: Open Source Software)](./computer/software/_/chapters/open_source_software.md#オープンソースソフトウェア)
+	- [ ] [コントリビュータ](./computer/software/_/chapters/open_source_software.md#コントリビュータ)
+- [ ] [ライセンス](./computer/software/_/chapters/open_source_software.md#ライセンス)
+	- [ ] [デュアルライセンス](./computer/software/_/chapters/open_source_software.md#デュアルライセンス)
+	- [ ] [コピーレフト](./computer/software/_/chapters/open_source_software.md#コピーレフト)
+	- [ ] [GPL(General Public License)](./computer/software/_/chapters/open_source_software.md#gpl)
+		- [ ] [GPL汚染](./computer/software/_/chapters/open_source_software.md#gpl)
+	- [ ] [BSD(Berkeley Softwarer Distribution)ライセンス](./computer/software/_/chapters/open_source_software.md#bsdライセンス)
+	- [ ] [MPL(Mozilla Public License)](./computer/software/_/chapters/open_source_software.md#mpl)
