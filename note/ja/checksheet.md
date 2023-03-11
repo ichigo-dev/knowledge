@@ -8,6 +8,7 @@
 - [ ] [ビット](./basics/_/chapters/computer_and_number.md#ビット)
 - [ ] [バイト](./basics/_/chapters/computer_and_number.md#バイト)
 - [ ] [ワード](./basics/_/chapters/computer_and_number.md#ワード)
+	- [ ] [ワードサイズ](./basics/_/chapters/computer_and_number.md#ワード)
 - [ ] [MSB](./basics/_/chapters/computer_and_number.md#msb)
 - [ ] [LSB](./basics/_/chapters/computer_and_number.md#lsb)
 
@@ -17,6 +18,7 @@
 
 - [ ] [位取り記数法](./basics/discrete_mathematics/_/chapters/radix.md#位取り記数法)
 - [ ] [基数](./basics/discrete_mathematics/_/chapters/radix.md#基数)
+	- [ ] [n進数（n進法）](./basics/discrete_mathematics/_/chapters/radix.md#基数)
 - [ ] [重み](./basics/discrete_mathematics/_/chapters/radix.md#基数)
 - [ ] [10進数](./basics/discrete_mathematics/_/chapters/radix.md#10進数)
 - [ ] [2進数](./basics/discrete_mathematics/_/chapters/radix.md#2進数)
