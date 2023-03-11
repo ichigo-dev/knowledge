@@ -46,7 +46,7 @@
 
 **MSB**（**最上位ビット**: Most Significant Bit）は、[ビット](#ビット)列において一番左の[ビット](#ビット)。
 
-[補数](../../../discrete_mathematics/_/chapters/numeric_representation.md#補数)を用いた[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の正負の数の表現において、MSBが $0$ の場合その数は正の数として、 $1$ の場合その数は負の数として扱われる。
+[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の正負の数の表現において、MSBが $0$ の場合その数は正の数として、 $1$ の場合その数は負の数として扱われる。
 
 また、[ビッグエンディアン方式](../../information_theory/_/chapters/coding_theory.md#ビッグエンディアン)のデータ表現においては、MSBがデータの先頭となる。
 

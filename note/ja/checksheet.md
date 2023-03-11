@@ -43,7 +43,7 @@
 	- [ ] [倍精度形式](./basics/discrete_mathematics/_/chapters/numeric_representation.md#浮動小数点数)
 - [ ] [BCDコード](./basics/discrete_mathematics/_/chapters/numeric_representation.md#bcdコード)
 - [ ] [ゾーン10進数（アンパック10進数）](./basics/discrete_mathematics/_/chapters/numeric_representation.md#ゾーン10進数)
-- [ ] [ゾーン部](./basics/discrete_mathematics/_/chapters/numeric_representation.md#ゾーン10進数)
+	- [ ] [ゾーン部](./basics/discrete_mathematics/_/chapters/numeric_representation.md#ゾーン10進数)
 - [ ] [パック10進数](./basics/discrete_mathematics/_/chapters/numeric_representation.md#パック10進数)
 
 #### 算術演算と精度
