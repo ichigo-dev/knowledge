@@ -1,6 +1,6 @@
 # 『コンピュータと数』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-03-11）
 
 
 ## 目次
@@ -16,33 +16,47 @@
 
 ## コンピュータとデータ
 
-[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)は多くの電子回路から構成されており、スイッチのON/OFFや電圧の高低により信号を伝達している。これらの信号を0と1に対応させる（ONなら1でOFFなら0、5V（電圧高）なら1で0V（電圧低）なら0など）ことで、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部では情報を[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)として扱っている。[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱う情報は、数字であろうと文字であろうと命令であろうと、全て[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の羅列で表現される。
+[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)は情報を処理するために設計された電子機器の総称で、スイッチのON/OFFや電圧の高低により信号を伝達している。これらの信号を $0$ と $1$ に対応させる（ONなら $1$ でOFFなら $0$ 、$5$ V（電圧高）なら $1$ で $0$ V（電圧低）なら $0$ など）ことで、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部では情報を[ビット](#ビット)列として扱っている。[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱う情報は、数字であろうと文字であろうと命令であろうと、全てこのような[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の羅列で表現される。
 
-[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で様々な情報を表現しようとすると桁数が大きくなってしまうため、1桁でより多くの情報を表せるように[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)や[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)を使用することも[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)の世界では一般的である。これらの[基数](../../discrete_mathematics/_/chapters/radix.md#基数)が用いられることが多いのは、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)との[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)が容易なためである。また、一般的に数は[10進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で扱われるため、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)や[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)、[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)と[10進数](../../discrete_mathematics/_/chapters/radix.md#10進数)の[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)もよく行われる。
+[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で様々な情報を表現しようとすると桁数が大きくなってしまうため、1桁でより多くの情報を表せるように[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)や[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)でデータを表現することも[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)の世界では一般的。これらの[基数](../../discrete_mathematics/_/chapters/radix.md#基数)が用いられることが多いのは、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)との[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)が容易なためである。また、一般的に数は[10進数](../../discrete_mathematics/_/chapters/radix.md#10進数)で扱われるため、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)や[8進数](../../discrete_mathematics/_/chapters/radix.md#8進数)、[16進数](../../discrete_mathematics/_/chapters/radix.md#16進数)と[10進数](../../discrete_mathematics/_/chapters/radix.md#10進数)の[相互変換](../../discrete_mathematics/_/chapters/radix.md#基数変換)もよく行われる。
 
 ### バイナリ
 
-**バイナリ**は、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現されたデータのことで、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が直接解釈できるデータ。
+**バイナリ**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱うデータの一種で、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現されたデータを指す。
+
+[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)において[プログラム](../../../programming/_/chapters/programming.md#プログラム)やデータは、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)内にバイナリ形式で格納されている。[プログラム](../../../programming/_/chapters/programming.md#プログラム)の実行には、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)がバイナリを解釈して命令を実行する必要がある。同様に、データもバイナリ形式で格納され、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)がその内容を解釈して利用する。
 
 ### ビット
 
-**ビット**(bit)は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの最小単位で、0か1の[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現される。
+**ビット**(bit)は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの最小単位で、 $0$ か $1$ の値を持つ。ビットという言葉は"Binary digit"からきており、情報を格納するための最小単位であるため、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内のすべての情報はビット列（[バイナリ](#バイナリ)）で表現される。
+
+[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)内のデータや[プログラム](../../../programming/_/chapters/programming.md#プログラム)は、ビット列で表現される。また、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)はビット単位の[論理演算](../../discrete_mathematics/_/chapters/logical_operation.md#論理演算)の組み合わせにより様々な処理を行っている。
 
 ### バイト
 
-**バイト**(byte)は、複数の[ビット](#ビット)を集めたデータ量の単位で、一般的には1バイトは8[ビット](#ビット)と等価である。1バイト（=8[ビット](#ビット)）は256通りの情報を表現することもできる。
+**バイト**(byte)は、コンピュータ内部で扱われるデータの単位で、8[ビット](#ビット)を1つにまとめて扱う。1バイト（=8[ビット](#ビット)）は256通りの情報を表現することもできる。[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱う[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)のサイズは一般的にバイト単位で表現される。
 
 ### ワード
 
-**ワード**は、複数の[ビット](#ビット)を集めたデータ量の単位で、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で情報を[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)によって処理する際の単位を表している。ワードサイズは[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)や[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって異なるが、4[バイト](#バイト)や8[バイト](#バイト)が一般的。
+**ワード**は、、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの単位のひとつで、通常は16[ビット](#ビット)（2[バイト](#バイト)）または32[ビット](#ビット)（4[バイト](#バイト)）、64[ビット](#ビット)（8[バイト](#バイト)）の長さを持つ。[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[レジスタ](../../../computer/hardware/_/chapters/processor.md#レジスタ)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)などでデータを扱う際の基本単位となる。
+
+ワードの長さは、[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)の[アーキテクチャ](../../../computer/hardware/_/chapters/processor.md#cpuアーキテクチャ)や設計によって異なる。16[ビット](#ビット)のワードを使用する[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)は16ビットCPU、32[ビット](#ビット)のワードを使用する[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)は32ビットCPUと呼ばれ、現在では64[ビット](#ビット)の[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)が主流となっている。ワードサイズが大きい[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)ほど一度に処理できるデータ量が大きくなるため、より高速な処理が可能となる。
+
+[プログラミング](../../../programming/_/chapters/programming.md#プログラミング)における[基本データ型](../../../programming/_/chapters/data_type.md#プリミティブ型)も、一般的には[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)のワードサイズに合わせた大きさとなっている。例えば、[C言語](../../../programming/_/chapters/programming_language.md#c言語)では `int` [型](../../../programming/_/chapters/data_type.md#型)32[ビット](#ビット)、 `short` [型](../../../programming/_/chapters/data_type.md#型)が16[ビット](#ビット)となっている。
 
 ### MSB
 
-**MSB**（**最上位ビット**: Most Significant Bit）は、[ビット](#ビット)列において一番左の[ビット](#ビット)のこと。
+**MSB**（**最上位ビット**: Most Significant Bit）は、[ビット](#ビット)列において一番左の[ビット](#ビット)。
+
+[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の[補数](./basics/discrete_mathematics/_/chapters/numeric_representation.md#補数)を用いた正負の数の表現において、MSBが `0` の場合その数は正の数として、 `1` の場合その数は負の数として扱われる。
+
+また、[ビッグエンディアン方式](../../information_theory/_/chapters/coding_theory.md#ビッグエンディアン)のデータ表現においては、MSBはデータの先頭となる。
 
 ### LSB
 
 **LSB**（**最下位ビット**: Least Significant Bit）は、[ビット](#ビット)列において一番右の[ビット](#ビット)のこと。
+
+[リトルエンディアン方式](../../information_theory/_/chapters/coding_theory.md#リトルエンディアン)のデータ表現においては、LSBはデータの先頭となる。
 
 
 ## 参考文献
