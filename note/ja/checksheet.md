@@ -119,6 +119,8 @@
 	- [ ] [標準偏差](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#標準偏差)
 - [ ] [確率分布](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率分布)
 	- [ ] [確率変数](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率変数)
+	- [ ] [確率関数](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率分布)
+	- [ ] [確率密度関数](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率分布)
 	- [ ] [期待値](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#期待値)
 	- [ ] [ベルヌーイ試行](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#ベルヌーイ試行)
 	- [ ] [二項分布](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#二項分布)
