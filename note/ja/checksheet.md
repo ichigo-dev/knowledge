@@ -140,10 +140,10 @@
 	- [ ] [目的変数](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#回帰分析)
 	- [ ] [単回帰分析](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#回帰分析)
 	- [ ] [重回帰分析](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#回帰分析)
-	- [ ] [最小二乗法](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#回帰分析)
 - [ ] [ロジスティック回帰分析](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#ロジスティック回帰分析)
 	- [ ] [カテゴリ変数](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#ロジスティック回帰分析)
-- [ ] [主成分分析](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#主成分分析)
+	- [ ] [最小二乗法](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#最小二乗法)
+- [ ] [主成分分析(PCA: Principal Component Analysis)](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#主成分分析)
 	- [ ] [主成分](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#主成分分析)
 	- [ ] [第一主成分](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#主成分分析)
 	- [ ] [第二主成分](./basics/applied_mathematics/_/chapters/probability_and_statistics.md#主成分分析)
@@ -156,11 +156,11 @@
 
 #### 数値計算
 
-- [ ] [スカラ](./basics/applied_mathematics/_/chapters/numerical_calculation.md#スカラとベクトル)
-- [ ] [ベクトル](./basics/applied_mathematics/_/chapters/numerical_calculation.md#スカラとベクトル)
+- [ ] [スカラ](./basics/applied_mathematics/_/chapters/numerical_calculation.md#スカラ)
+- [ ] [ベクトル](./basics/applied_mathematics/_/chapters/numerical_calculation.md#スカラ)
 	- [ ] [基底ベクトル](./basics/applied_mathematics/_/chapters/numerical_calculation.md#基底ベクトル)
-	- [ ] [1次従属](./basics/applied_mathematics/_/chapters/numerical_calculation.md#1次従属と1次独立)
-	- [ ] [1次独立](./basics/applied_mathematics/_/chapters/numerical_calculation.md#1次従属と1次独立)
+	- [ ] [1次従属](./basics/applied_mathematics/_/chapters/numerical_calculation.md#1次従属)
+	- [ ] [1次独立](./basics/applied_mathematics/_/chapters/numerical_calculation.md#1次独立)
 	- [ ] [単位ベクトル](./basics/applied_mathematics/_/chapters/numerical_calculation.md#単位ベクトル)
 	- [ ] [内積](./basics/applied_mathematics/_/chapters/numerical_calculation.md#ベクトルの内積)
 - [ ] [行列](./basics/applied_mathematics/_/chapters/numerical_calculation.md#行列)
