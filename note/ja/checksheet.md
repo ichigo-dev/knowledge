@@ -1224,12 +1224,6 @@
 	- [ ] [XFS](./computer/software/_/chapters/file_system.md#xfs)
 	- [ ] [ext4(fourth extended file system)](./computer/software/_/chapters/file_system.md#ext4)
 	- [ ] [BtrFS(B-Tree File System)](./computer/software/_/chapters/file_system.md#btrfs)
-- [ ] [リンク](./computer/software/_/chapters/file_system.md#リンク)
-	- [ ] [シンボリックリンク（ソフトリンク）](./computer/software/_/chapters/file_system.md#シンボリックリンク)
-		- [ ] [ショートカット](./computer/software/_/chapters/file_system.md#シンボリックリンク)
-	- [ ] [ハードリンク（ハードリンク）](./computer/software/_/chapters/file_system.md#ハードリンク)
-		- [ ] [iノード](./computer/software/_/chapters/file_system.md#ハードリンク)
-		- [ ] [iノード番号](./computer/software/_/chapters/file_system.md#ハードリンク)
 
 #### パッケージ
 
