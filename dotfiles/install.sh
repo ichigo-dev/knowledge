@@ -11,6 +11,7 @@ echo "==========================================================================
 echo " 2. Install paru as needed"
 echo "================================================================================"
 echo -e "\n\n"
+sudo pacman -S base-devel git
 if [ ! `which paru` ]; then
 	git clone https://aur.archlinux.org/paru.git
 	cd paru
