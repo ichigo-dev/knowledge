@@ -10,3 +10,4 @@
 1. [ユーザと権限](./_/chapters/user_and_permission.md)
 1. [テキストエディタ](./_/chapters/text_editor.md)
 1. [プロセスとジョブ](./_/chapters/process_and_job.md)
+1. [標準入出力とパイプライン](./_/chapters/stdio_and_pipeline.md)
