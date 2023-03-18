@@ -56,7 +56,8 @@ local options = {
       scrollbar = false,
     },
     documentation = {
-      border = border "CmpDocBorder",
+      --border = border "CmpDocBorder",
+      border = border "CmpDoc",
       winhighlight = "Normal:CmpDoc",
     },
   },
