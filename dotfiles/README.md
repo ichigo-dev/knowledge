@@ -1,1 +1,1 @@
-# Configurations
+# dotfiles
