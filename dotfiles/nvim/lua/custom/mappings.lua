@@ -23,7 +23,7 @@ M.nvterm = {
   n = {
     ["<leader>t"] = {
       function()
-        require("nvterm.terminal").new "float"
+        require("nvterm.terminal").new "horizontal"
       end,
       "toggle floating term",
     },
