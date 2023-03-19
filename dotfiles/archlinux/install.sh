@@ -32,9 +32,7 @@ echo "==========================================================================
 echo " 4. Install paru packages"
 echo "================================================================================"
 echo -e "\n\n"
-paru -S --needed \
-	neomutt \
-	trash-cli
+paru -S --needed - < pkglist.txt
 
 sudo systemctl enable cronie
 sudo systemctl enable docker

@@ -26,11 +26,10 @@
 		"tray",
 		"cpu",
 		"memory",
-		"pulseaudio",
 		"network",
 		//"battery",
+		"pulseaudio",
 		"clock",
-		"custom/poweroff"
 	],
 
 

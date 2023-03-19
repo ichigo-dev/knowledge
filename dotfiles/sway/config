@@ -213,7 +213,6 @@ exec fcitx5
 
 # Swayidle
 exec swayidle -w \
-	timeout 300 $lock \
-	timeout 1200 'systemctl suspend'
+	timeout 600 '$lock'
 
 include /etc/sway/config.d/*
