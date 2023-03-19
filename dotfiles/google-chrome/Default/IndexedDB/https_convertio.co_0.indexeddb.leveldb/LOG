@@ -1,0 +1,6 @@
+2023/02/19-07:58:14.925 2c5d Creating DB /home/ichigo/.config/google-chrome/Default/IndexedDB/https_convertio.co_0.indexeddb.leveldb since it was missing.
+2023/02/19-07:58:14.928 2c5d Reusing MANIFEST /home/ichigo/.config/google-chrome/Default/IndexedDB/https_convertio.co_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/19-07:58:17.160 2c5d Level-0 table #5: started
+2023/02/19-07:58:17.162 2c5d Level-0 table #5: 375 bytes OK
+2023/02/19-07:58:17.164 2c5d Delete type=0 #3
+2023/02/19-07:58:17.164 2c5d Manual compaction at level-0 from (begin) .. (end); will stop at (end)

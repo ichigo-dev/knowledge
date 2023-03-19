@@ -1,0 +1,3 @@
+2022/08/10-00:38:46.772 cdb Reusing MANIFEST /home/ichigo/.config/chromium/Default/IndexedDB/https_remotedesktop.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/10-00:38:46.773 cdb Recovering log #3
+2022/08/10-00:38:46.773 cdb Reusing old log /home/ichigo/.config/chromium/Default/IndexedDB/https_remotedesktop.google.com_0.indexeddb.leveldb/000003.log 

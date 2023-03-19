@@ -1,0 +1,6 @@
+2023/02/18-20:16:19.083 7dd6 Creating DB /home/ichigo/.config/google-chrome/Default/IndexedDB/https_19ebf067fa59e1bf3bbd215aabf162bd.safeframe.googlesyndication.com_0.indexeddb.leveldb since it was missing.
+2023/02/18-20:16:19.086 7dd6 Reusing MANIFEST /home/ichigo/.config/google-chrome/Default/IndexedDB/https_19ebf067fa59e1bf3bbd215aabf162bd.safeframe.googlesyndication.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/02/18-20:16:21.320 7d3c Level-0 table #5: started
+2023/02/18-20:16:21.322 7d3c Level-0 table #5: 480 bytes OK
+2023/02/18-20:16:21.323 7d3c Delete type=0 #3
+2023/02/18-20:16:21.324 7d3c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

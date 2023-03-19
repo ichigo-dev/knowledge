@@ -25,7 +25,6 @@ local plugins = {
   -- override plugin configs
   {
     "hrsh7th/nvim-cmp",
-
     {
         "windwp/nvim-autopairs",
         enabled = false,

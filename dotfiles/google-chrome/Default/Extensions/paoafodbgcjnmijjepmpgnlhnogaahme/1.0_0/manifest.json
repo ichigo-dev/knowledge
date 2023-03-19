@@ -1,0 +1,32 @@
+{
+   "description": "",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgcKC2SofUVt0jqyj2q1pgiNFAzIYFhS344iB8WIETgrpxUtJf08ws/SVrOxXzpUEzipbHxekUjtsXIEvBY57byc7o6RDuWppthKOEurh0DcIgNuH2cJak/B19DoLLtqE99hBaKLGTQDfppEXz0Z0XUTRpBgH/vgC9bZ6ZOXfUwWz8NZPKwBvGHJ7JEfTux0/AqcIy0PkmZu2oVKdRZqDRZX71gtJcR81wvmL6CIQJEgczm/x9aEmWNGIXimKqWe1qcTGEHbgNeFSZ62QXOVtFsOlvAQNKOqRRSBA4thQhyWgshuMTHwidiy2/09/j4z/FkwPLBPWF1W/yLDEUlmWtwIDAQAB",
+   "manifest_version": 2,
+   "name": "Material Theme Dark [blue-grey]",
+   "theme": {
+      "colors": {
+         "bookmark_text": [ 255, 255, 255 ],
+         "button_background": [ 38, 50, 56, 0.9 ],
+         "frame": [ 38, 50, 56 ],
+         "ntp_background": [ 38, 50, 56 ],
+         "ntp_text": [ 255, 255, 255 ],
+         "tab_background_text": [ 204, 204, 204 ],
+         "tab_text": [ 255, 255, 255 ],
+         "toolbar": [ 38, 50, 56 ]
+      },
+      "images": {
+         "theme_frame": "images/theme_frame.png",
+         "theme_tab_background": "images/theme_tab_background.png",
+         "theme_toolbar": "images/theme_toolbar.png"
+      },
+      "properties": {
+         "ntp_background_alignment": "bottom",
+         "ntp_background_repeat": "no-repeat"
+      },
+      "tints": {
+         "buttons": [ 0, 0, 1 ]
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jqr.js"></script>
+<link rel='stylesheet' href='assets/css/popup.style.css'/>
+<script src="assets/js/toggle.js"></script>
+</head>
+<body>
+<div class="popup-center">
+<div id="qrcode-img"></div>
+<div id="qrcode-img-buffer"></div>
+<textarea id="qrcode-href" value=""></textarea>
+<div class="high-qr">
+  <a target="_blank" id="export" href="https://high-qr-code-generator.com/?hd=1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 380"><defs><path fill="#777" d="M545 85q0-33.1-23.5-56.6Q498.1 5 465 5H85Q51.9 5 28.4 28.4 19.5 37.3 14 47.7 5 64.5 5 85v210q0 33 23.4 56.6Q52 375 85 375h380q33.1 0 56.5-23.4Q545 328 545 295V85z" id="ax7"/></defs><use xlink:href="#ax7"/><text/><path fill="#fff" d="M765.6 243.2q-4.4-4.4-10.6-4.4h-64.3q-6.2 0-10.6 4.4-4.4 4.4-4.4 10.6 0 6.3 4.4 10.6 4.4 4.4 10.6 4.4h28.1L664 323.5q-4.4 4.4-4.4 10.6 0 6.3 4.4 10.6 4.5 4.4 10.7 4.4 6.2 0 10.6-4.4L740 290v28q0 6.3 4.4 10.6 4.4 4.4 10.6 4.4 6.3 0 10.6-4.4 4.4-4.3 4.4-10.6v-64.2q0-6.2-4.4-10.6z" transform="rotate(135 516.5 151)" id="toggle_arrow"/>
+<text><tspan text-anchor="middle" x="263" y="250" font-size="200" id="svg_text" fill="#FFF"></tspan></text>
+</svg>
+
+  <span i18n-w="saveimg">Save</span></a><!-- 1280 720 -->
+  <a class="hd" target="_blank" href="https://high-qr-code-generator.com/?hd=1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 380"><defs><path fill="#777" d="M607 133q0-33-23-57-24-23-57-23H147q-33 0-56 23-9 9-15 20-9 16-9 37v210q0 33 24 57 23 23 56 23h380q33 0 57-23 23-24 23-57V133z" id="a2f"/><path id="a2s" stroke="#FFF" stroke-width="32" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M150 220h230v140H150V220z"/></defs><use xlink:href="#a2f" transform="translate(-62 -48)"/><path fill="#FFF" d="M766 243q-5-4-11-4h-64q-6 0-11 4-4 5-4 11t4 10q5 5 11 5h28l-55 55q-4 4-4 10t4 11q5 4 11 4t10-4l55-55v28q0 6 4 11 5 4 11 4t11-4q4-5 4-11v-64q0-6-4-11z" transform="translate(-313 -143)" id="svg_hd_anchor"/><use xlink:href="#a2s" transform="translate(-72 -57)"/></svg>
+  <span>HD</span></a>
+
+   <a class="withlogo" target="_blank" href="https://high-qr-code-generator.com/?logo=1">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 380"><defs><path fill="#777" d="M544 306l-1-1-137-134-129 129q-5 5-12 5-6 0-11-4l-52-52L78 375h387q33 0 57-23 19-20 22-46m1-221q0-33-23-57-24-23-57-23H85Q52 5 28 28q-8 9-14 20-9 16-9 37v210q0 33 23 57l16 12 146-149q5-4 12-5 6 0 11 5l52 52 130-130q5-5 11-5 7 0 11 5l128 125V85z" id="af"/></defs><use xlink:href="#af"/><path fill="#fff" d="M704 360q0-26-19-45-18-18-45-18-26 0-44 18-19 19-19 45t19 45q18 18 44 18 27 0 45-18 19-19 19-45m-30 0q0 14-10 23-10 10-24 10-13 0-23-10-10-9-10-23t10-23q10-10 23-10 14 0 24 10 10 9 10 23z" transform="translate(-506 -236)" id="svg_logo_anchor"/></svg>
+  <span>Logo</span></a>
+
+     <a class="bulk" target="_blank" href="https://high-qr-code-generator.com/bulk-qrcode.html">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 380"><defs><path fill="#777" d="M544 306l-1-1-137-134-129 129q-5 5-12 5-6 0-11-4l-52-52L78 375h387q33 0 57-23 19-20 22-46m1-221q0-33-23-57-24-23-57-23H85Q52 5 28 28q-8 9-14 20-9 16-9 37v210q0 33 23 57l16 12 146-149q5-4 12-5 6 0 11 5l52 52 130-130q5-5 11-5 7 0 11 5l128 125V85z" id="a3f"/></defs><use xlink:href="#a3f"/><g id="svg_bulk_anchor" stroke-width="28" stroke="#fff" fill="none"><circle cx="110" cy="110" r="48"/><circle cx="250" cy="110" r="48"/><circle cx="390" cy="110" r="48"/></g></svg>
+  <span>Bulk</span></a>
+
+</div>
+<button id="rate5"><b i18n-w="rate5">Rate us 5 stars!</b></button>
+<button id="qrcode-regenerate" class='pure-button pure-button-primary'>QR!</button>
+<span class="popup-footer-right">
+<a id="credit_get" target="_blank" href="https://chrome.google.com/webstore/detail/quick-qr/afpbjjgbdimpioenaedcjgkaigggcdpp" i18n-w="getthis">Get this</a>
+<a id="hide_reviews" style="display:none"; target="_blank" href="https://chrome.google.com/webstore/detail/quick-qr/afpbjjgbdimpioenaedcjgkaigggcdpp/reviews"></a>
+|
+<a id="credit_support" target="_blank" href="https://chrome.google.com/webstore/detail/quick-qr/afpbjjgbdimpioenaedcjgkaigggcdpp/support" i18n-w="support">Support</a>
+<span id="ctxt-only"> | <a href="https://www.facebook.com/quickqr" target="_blank">Facebook Page</a></span>
+</span>
+<span class="popup-footer-left">
+<span id="version_text">Version: <span id="version">-</span></span>
+<a id="settings" href="options.html#pop">
+<svg xmlns="http://www.w3.org/2000/svg" width="14px" viewBox="0 0 54 54" ><path d="M51 21h-5l-2-1c-1-1 0-2 1-2l3-4a3 3 0 000-4l-4-4h-4l-4 3-1 1-1-1-1-1V3c0-2-1-3-3-3h-6c-2 0-3 1-3 3v5a2 2 0 01-3 1l-4-3h-4l-4 4a3 3 0 000 4l3 4 1 2-2 1H3c-2 0-3 1-3 3v6c0 2 1 3 3 3h5l2 1c1 1 0 2-1 2l-3 4a3 3 0 000 4l4 4h4l4-3 1-1 2 2v5c0 2 1 3 3 3h6c2 0 3-1 3-3v-5a2 2 0 013-1l4 3h4l4-4a3 3 0 000-4l-3-4-1-2 2-1h5c2 0 3-1 3-3v-6c0-2-1-3-3-3zm-17 6a7 7 0 11-14 0 7 7 0 0114 0z" fill="#999"/></svg>
+<span i18n-w="settings">Settings</span></a>
+</span>
+</div>
+<a id="fixed_pop">
+<svg viewBox="0 0 439 439"><path d="M414 24a79 79 0 00-58-24H82C60 0 40 8 24 24A79 79 0 000 82v274c0 23 8 42 24 58s36 25 58 25h274c23 0 42-9 58-25s25-35 25-58V82c0-22-9-42-25-58zm-49 204c0 8-3 14-11 17l-7 2c-5 0-9-2-13-6l-41-41-152 153c-4 3-8 5-13 5s-9-2-13-5l-29-30c-4-3-5-7-5-12s1-10 5-13l152-153-41-41c-6-5-7-12-4-20 4-7 9-11 17-11h137c5 0 9 2 13 6 4 3 5 7 5 12v137z"/></svg>
+</a>
+<a id="fixed_print">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 475 475"><path d="M459 217a53 53 0 00-39-16h-18v-73c0-8-2-16-6-25s-8-17-13-22l-44-43c-5-6-12-10-22-14-9-4-17-6-25-6H101c-8 0-15 3-20 8-5 6-8 12-8 20v155H55c-15 0-28 5-39 16a53 53 0 00-16 39v119l3 6 6 3h64v45c0 8 3 14 8 20 5 5 12 8 20 8h274c7 0 14-3 19-8 5-6 8-12 8-20v-45h64c2 0 5-1 6-3l3-6V256c0-15-5-28-16-39zm-94 203H110v-73h255v73zm0-182H110V55h182v45c0 8 3 15 8 20 6 5 12 8 20 8h45v110zm68 31c-3 3-8 5-13 5s-9-2-13-5c-3-4-5-8-5-13s2-9 5-13c4-4 8-5 13-5s10 1 13 5a17 17 0 010 26z"/></svg>
+</a>
+<script type="text/javascript" src="assets/js/popup.js"></script>
+</body>
+</html>

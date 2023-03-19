@@ -1,0 +1,59 @@
+{
+   "app_desc": {
+      "message": "Chrome에서 평점이 가장 높은 큐알코드 생성기：편리하게 현재 페이지를 QR코드로 변환하거나 페이지의 상의 텍스트와 링크를 변환할 수 있습니다. 심지어 당신이 입력한 모든 내용을 큐알코드로 변환시킬 수 있습니다."
+   },
+   "app_name": {
+      "message": "큐알코드 생성기 (Quick QR)"
+   },
+   "back": {
+      "message": "뒤로가기"
+   },
+   "bgcolor": {
+      "message": "배경색:"
+   },
+   "color": {
+      "message": "큐알코드 색:"
+   },
+   "downloadlink": {
+      "message": "(이 플러그인 링크 \u003Ca target=\"_blank\" href=\"https://chrome.google.com/webstore/detail/quick-qr-code-generator/afpbjjgbdimpioenaedcjgkaigggcdpp\">여기를 클릭하세요\u003C/a>)"
+   },
+   "downloadsize": {
+      "message": "이미지 크기（화질）:"
+   },
+   "fbpage": {
+      "message": "Facebook 페이지"
+   },
+   "getthis": {
+      "message": "공식 사이트"
+   },
+   "hotkey": {
+      "message": "단축키"
+   },
+   "save": {
+      "message": "설정 저장"
+   },
+   "saved": {
+      "message": "설정 저장 성공"
+   },
+   "saveimg": {
+      "message": "이미지 저장"
+   },
+   "settings": {
+      "message": "설정"
+   },
+   "share_on_fb": {
+      "message": "페이스북으로 공유하기"
+   },
+   "share_on_tw": {
+      "message": "Twitter로 공유하기"
+   },
+   "suggestionbox": {
+      "message": "의견 제출"
+   },
+   "support": {
+      "message": "피드백"
+   },
+   "transbg": {
+      "message": "투명한 배경"
+   }
+}

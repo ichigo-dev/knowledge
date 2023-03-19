@@ -1,0 +1,20 @@
+[Added Associations]
+image/jpeg=imv-folder.desktop;
+text/x-log=firefox.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-S9KUS1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-S9KUS1.desktop;
+audio/x-wav=chromium.desktop;
+image/png=imv.desktop;
+text/markdown=chrome.desktop;
+
+[Default Applications]
+x-scheme-handler/gitkraken=GitKraken.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-S9KUS1.desktop
+message/rfc822=userapp-Thunderbird-S9KUS1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-S9KUS1.desktop
+text/html=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+text/markdown=chrome.desktop

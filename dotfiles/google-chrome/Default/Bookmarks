@@ -1,0 +1,466 @@
+{
+   "checksum": "c13023d18455808eccef2a904f1f0354",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13317550065211576",
+            "date_last_used": "0",
+            "guid": "e5fc8d1c-bd83-408c-990a-a899ceff6f32",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "NordPass",
+            "type": "url",
+            "url": "https://app.nordpass.com/login"
+         }, {
+            "date_added": "13317550120739829",
+            "date_last_used": "13323152123430666",
+            "guid": "12248a5f-d62a-4f57-b2cd-a8bed577b93a",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "GitHub",
+            "type": "url",
+            "url": "https://github.com/ichigo-dev"
+         }, {
+            "children": [ {
+               "date_added": "13302796026000000",
+               "date_last_used": "13320115424628173",
+               "guid": "cab46c1b-8de4-4672-93fe-5ed6996a8e19",
+               "id": "8",
+               "name": "freee人事労務",
+               "type": "url",
+               "url": "https://p.secure.freee.co.jp/"
+            }, {
+               "date_added": "13314166563000000",
+               "date_last_used": "13317802811721270",
+               "guid": "3745850c-a898-471f-84d4-2e8f5ce9ed59",
+               "id": "9",
+               "name": "freeeプロジェクト管理",
+               "type": "url",
+               "url": "https://accounts.secure.freee.co.jp/login/project_management"
+            }, {
+               "date_added": "13322205305706735",
+               "date_last_used": "0",
+               "guid": "327b4a79-c96c-4457-892e-3568ea71f273",
+               "id": "55",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "ホーム | 安否確認サービス2",
+               "type": "url",
+               "url": "https://cloud.anpikakunin.com/asianbridge?ssokey=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..NNjYGgA4fvfOaxMpHmrusQ.hbFwuW9-4g7LYVr79MRiHNcKDcGROAundldL_SjUwkwJgp7J-tTNWb8sUiZtKjOKXh2S211yxQu4s3nygnw3i0Mkug1lrIPySkLCdM6CMk9kHVxJsC7giRX1xUh-GtBwEwJGmNby2jsUGj_HmXa1cyxrA7jyzoij5xCWkEGN934ocKBK1YI8FetZoDKiPuW6JYr39cTSr-FDPe_hv6PBTLEkgwLPlsKA_cnm7JeOOTCv6ced02eE6wqiPEorPnecOJ18cM5l7oQAMcW-kWvNGcoI2pPS2O_1vtXr75bdc5E.tRKp13mq5Ez6ypQFn3H1qw"
+            }, {
+               "date_added": "13293249302641537",
+               "date_last_used": "0",
+               "guid": "c7a667d8-e2e2-4c49-826f-a6375514d25a",
+               "id": "16",
+               "name": "Notion AsianBridge",
+               "type": "url",
+               "url": "https://www.notion.so/yoshi2ys/471fdc262a6b439c9848734cf6e1abc6"
+            }, {
+               "date_added": "13314166620000000",
+               "date_last_used": "13321357119400351",
+               "guid": "c1227d68-c5c5-4293-b0c9-1b4d9ddda1ce",
+               "id": "10",
+               "name": "システムソリューション プロジェクト一覧 - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/11RmiTmyDT6KuyIPecHUhkrxVN2avW1ZmIFVM1xY66fk/edit#gid=0"
+            }, {
+               "date_added": "13319188047871978",
+               "date_last_used": "13320115640810681",
+               "guid": "20b3f2c8-3ccc-4d8e-9666-e9c4735bac46",
+               "id": "51",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "北陸_出勤スケジュール.xlsx - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/1lWfFO-qG9MlCLNLN240fA8DA9Q5R-s4j/edit#gid=1358532081"
+            }, {
+               "date_added": "13318339529775230",
+               "date_last_used": "0",
+               "guid": "7afb8b6d-04de-4cf5-bc12-50fa9999b49b",
+               "id": "45",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "アルバイト業務管理シート - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/1YD5_wd4yy6H8ePUaQ-I9JM6Hr3KSm6Dmt7trI9D7vvg/edit#gid=2000340005"
+            }, {
+               "date_added": "13314166514000000",
+               "date_last_used": "0",
+               "guid": "c05fe0b1-6872-4ff5-9166-3f046156b77d",
+               "id": "12",
+               "name": "crow | はうつー",
+               "type": "url",
+               "url": "http://php-crow.com/"
+            }, {
+               "date_added": "13318943848404462",
+               "date_last_used": "13318943859616636",
+               "guid": "510f828c-5a65-457c-830d-d540576c9156",
+               "id": "50",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "freee",
+               "type": "url",
+               "url": "https://akabanebashi.asianbridge.work/freee/"
+            }, {
+               "date_added": "13314166526000000",
+               "date_last_used": "0",
+               "guid": "db7b5ee2-c1ec-4d41-b640-107f0a8257a4",
+               "id": "13",
+               "name": "CLEARROAD4",
+               "type": "url",
+               "url": "https://akabanebashi.asianbridge.work/clearroad4/"
+            }, {
+               "date_added": "13303371351000000",
+               "date_last_used": "13317789731531865",
+               "guid": "ed2c616e-cd13-463f-bc3b-3411a43a28b9",
+               "id": "14",
+               "name": "CLEARROAD5",
+               "type": "url",
+               "url": "https://akabanebashi.asianbridge.work/clearroad5/"
+            }, {
+               "date_added": "13314426672000000",
+               "date_last_used": "13322716252533217",
+               "guid": "a22eddd5-4a8b-4089-9907-b8d602d6331b",
+               "id": "15",
+               "name": "Amazon Web Services",
+               "type": "url",
+               "url": "https://ap-northeast-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=GcPIjSUDdH32AXDij_wqKA_rVJ9Hqf7PHq5mRPqPfhA&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgsFromTB_ap-northeast-1_98362ea8d3b0c0ae&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIT%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgTvV%2BIaPszDaorMa3atVYrO9%2BQdL2ZuXt1w0mTfnU4foCIGRRVPJnH9%2FZuZYP%2FrpiVwFiHKAlb0rV5F3rm1d2A1aHKpMCCJ3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMMzkwMDM3MDA2NTAxIgwaceaZBXeX9hD4ITcq5wEempXE%2BRp6yfTLYme51U2UHnC4P0XaHPYFvyj5zFKdUpxZTKllr8%2BFYy5SumuPpnlieJEGcNop1%2FodKMXhjzPjj%2BHJg15n4fMgs4JcwKs8IUnV3OK8MyX1twCApBjZVaxa9jmITzed7sWvaVIu8HdFEQhv6QtsvzlygRsy9cNjAaPVCtcXlXs5gozgTNxrPgobcyGSbSdxOWrNM91tYMz0ysFo%2BoqvevY4cm8vnNrUoa8QqX4bmIcr4GkbyEbBnFpSyIWggK7JzvzX79YGiNiMa1CyogReAMm6Q8EJt8wqSZ%2B4lvDRTwQwv%2BqlnAY6kAGmjVVNcNd%2FrvMh2TksUaAXAE3kbhrzZ9jhQxsFjkPTZhRag2CVf6XJB7LQxIjCebjZNiTUA1yKoKV8RzM3hPSG9HTm5r5GZpeyhVY0JNeiLe7r53DU%2B%2FZUndU89iwvnvmfS1X1rXDRWCXX7CFeu%2FpCc6qUxIBxBrPiygUtm%2F6Ryxn1EiCH%2FKwpgtXckSrKDq8%3D&X-Amz-Date=20221202T035102Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVVUAENCS327TK5E5%2F20221202%2Fap-northeast-1%2Fsignin%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a216f30b6564894291683d1ddc64282be076cfa167abd25b394d5b4b3ed578f3"
+            } ],
+            "date_added": "13317549988867460",
+            "date_last_used": "0",
+            "date_modified": "13323013717346358",
+            "guid": "aad0f913-d1e2-4ac4-9cce-460ebe69ad70",
+            "id": "7",
+            "name": "Asian Bridge",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13314166756000000",
+               "date_last_used": "0",
+               "guid": "1ecb25ca-12e6-4969-96b0-3f1d14f8703d",
+               "id": "18",
+               "name": "CareeTern(キャリターン) org",
+               "type": "url",
+               "url": "https://asianbridge.org/intern/"
+            }, {
+               "date_added": "13314166658000000",
+               "date_last_used": "13321166136678387",
+               "guid": "bc6b383a-b086-4485-b707-0c2daa92b44e",
+               "id": "19",
+               "name": "CareeTern(キャリターン)",
+               "type": "url",
+               "url": "https://careetern.com/"
+            }, {
+               "date_added": "13314166640000000",
+               "date_last_used": "13322038483895607",
+               "guid": "cb020c3e-bfb1-4ca6-b7ae-f8ca03511fa1",
+               "id": "20",
+               "name": "キャリターン タスク管理シート - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/15NbSY9y1S6lyQIEMa1nt-NqwlfVOo95vhmACmq0KucU/edit#gid=55355695"
+            }, {
+               "date_added": "13319792055876963",
+               "date_last_used": "13321166136644110",
+               "guid": "041ba761-8769-425f-8975-538fe9736773",
+               "id": "48",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "CareeTern 企業管理画面",
+               "type": "url",
+               "url": "https://careetern.com/mngtnt4832/auth"
+            }, {
+               "date_added": "13319792151032291",
+               "date_last_used": "0",
+               "guid": "d7823641-335b-4b7a-9415-c0d7716e39b6",
+               "id": "47",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "CareeTern 事務局管理画面",
+               "type": "url",
+               "url": "https://careetern.com/crt_sitemng/special_intern"
+            }, {
+               "date_added": "13319866068582568",
+               "date_last_used": "13321166136875728",
+               "guid": "89edfc8e-fc6e-406f-b8b7-31ca252b35e7",
+               "id": "49",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "キャリターンメール.docx - Google ドキュメント",
+               "type": "url",
+               "url": "https://docs.google.com/document/d/1nG-oGtmT0RjcCPAS90tCn6xwM595lWOr/edit?pli=1"
+            } ],
+            "date_added": "13317549988871606",
+            "date_last_used": "0",
+            "date_modified": "13319866068582568",
+            "guid": "9023dad4-fe26-45ec-a163-9f908e45b8dd",
+            "id": "17",
+            "name": "AB - CareeTern",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13314166800000000",
+               "date_last_used": "13319119871389787",
+               "guid": "be4920fe-8506-42c2-89d8-da0c11639a2f",
+               "id": "22",
+               "name": "SportsBank (スポーツバンク) org",
+               "type": "url",
+               "url": "https://php-81.asianbridge.org/sports/"
+            }, {
+               "date_added": "13314166792000000",
+               "date_last_used": "0",
+               "guid": "a55ba3f6-2377-4296-b8b6-022f7813e4db",
+               "id": "23",
+               "name": "SportsBank (スポーツバンク)",
+               "type": "url",
+               "url": "https://sports.banklives.com/private/login"
+            } ],
+            "date_added": "13317549988872075",
+            "date_last_used": "0",
+            "date_modified": "13317549988872075",
+            "guid": "7bb7d3f4-61c5-4c26-9453-fe8dcdecad83",
+            "id": "21",
+            "name": "AB - SportsBank",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13314175760000000",
+               "date_last_used": "13321102008758335",
+               "guid": "dc31da87-0de7-427f-a5e7-56520da6d216",
+               "id": "25",
+               "name": "買いログTalk self",
+               "type": "url",
+               "url": "https://interview.code-biz.com/auth"
+            }, {
+               "date_added": "13314778862000000",
+               "date_last_used": "13321541148732886",
+               "guid": "0d1e3f41-df2b-45f4-89b2-df7d7e96c007",
+               "id": "26",
+               "name": "RnI AWS",
+               "type": "url",
+               "url": "https://ap-northeast-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=CuTAt-TinAYrTG96-fVqLUXJbYCpmed8bHBayOphnMI&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_ap-northeast-1_4a8401fe962e5aa7&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLW5vcnRoZWFzdC0xIkYwRAIgeT3hM%2B62qrN2ZCRltvReZBWy1xKG7of60ThHdmJXzoICIEB4S%2FSj7h4WeUpyI4K1cwG5LM3c0%2FYvklClLJkralAWKpMCCP7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQAhoMMzkwMDM3MDA2NTAxIgwBlaeMDqtiNbjj%2BT8q5wHxTJcqkx9xXLue%2FY%2B5jW4UcRV629AftO0289Dy6C2wzlMy5lsBXAetyGR%2FhvM1DJMxzf3amRAOS7jLI8rSfprIi18V5iNxpUPqND%2BEEFmM6gTFjaRIS8bWfwJpmm2RhSvgIKklCNstehDguoo%2BknILUvTfctaesNo%2B54K1fpQZfQYVVYxiMrYrLNBfyzZaeRMSuTKmudcZolEEcUMd%2BVElTJhSx9IGKwanqpJ4Bh4aWFyqJosoDO81iLQ2xJcOckC%2FbNpF3aTOVS81w0wR6AUsrH6CEJs6e1p0YpYv6EMO%2BUIFUByMtVowyJ67nAY6kAFCWeVytzv9jlZbLXVDNjgELAe25wzUkAsoM47iIX7uztBJwfF5Y31xXGpab%2F6IwhWV7Gziv%2FbCc0%2B0bePx3zvayP%2FI0yOOEhrxfTx%2B4o1b19SiCprPAG%2Fsymez1xGeetisiDb1zfmkKs5nLZAxpP1JPaUBbOx9%2FSGk79WodHeY%2F3CQLoSxQYcR2z8x55C%2FOO4%3D&X-Amz-Date=20221206T054101Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVVUAENCSVMGSDFKO%2F20221206%2Fap-northeast-1%2Fsignin%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=260032e5730ae6e4d30bdf22e794dd6bececf52715dcf1934737e3dd81b87df5"
+            }, {
+               "date_added": "13316261179000000",
+               "date_last_used": "13317801491202206",
+               "guid": "caf7c30f-c00b-4c6a-bfdf-8d91a78c45f3",
+               "id": "27",
+               "name": "セルフインタビュー諸々",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/1ezrdEPOgMYGdn9EmP-JK4ky3swp-xj34bZwAOGsIVfk/edit#gid=652997463"
+            }, {
+               "date_added": "13316263769000000",
+               "date_last_used": "13317813291995817",
+               "guid": "f3ac9d3c-fc68-48e6-83d2-e6b2aaa91fb4",
+               "id": "28",
+               "name": "API仕様",
+               "type": "url",
+               "url": "https://esa-pages.io/p/sharing/10574/posts/2498/76dbf60791cbb2d1d109.html"
+            }, {
+               "date_added": "13318565851486487",
+               "date_last_used": "0",
+               "guid": "b1ee2a5d-6326-4e9f-998b-a340aafef87d",
+               "id": "43",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "R&I Self Interviewテスト項目書（クライアント画面） - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/16mbqsjGlroorE-_Y_hhsUARmvueL4M5tbXzFNQ--XCI/edit#gid=0"
+            }, {
+               "date_added": "13318671781620123",
+               "date_last_used": "0",
+               "guid": "a9934c8b-32bf-430e-af8b-845967d4278e",
+               "id": "44",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "R&I Self Interviewテスト項目書（管理画面） - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/1sYjZMk0MV-G21FbCrVF9Dqkjb5WiwDLhjM8LbfZM31g/edit#gid=1040418548"
+            }, {
+               "date_added": "13322028512360710",
+               "date_last_used": "0",
+               "guid": "1f1bc838-5ea4-434a-add3-8b57355995cb",
+               "id": "54",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "買いログTalk self_テストFBまとめ - Google スプレッドシート",
+               "type": "url",
+               "url": "https://docs.google.com/spreadsheets/d/1AS3RjLFTFYdoUQPqCfkrCCTWGAZrt3AA0LTRuMUwBPI/edit#gid=1037094883"
+            } ],
+            "date_added": "13317549988872376",
+            "date_last_used": "0",
+            "date_modified": "13322028512360710",
+            "guid": "81f4ab1a-8277-4314-a090-dafcf1b31b94",
+            "id": "24",
+            "name": "AB - Self Interview",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13318049474916959",
+               "date_last_used": "0",
+               "guid": "7c9a78ff-37c1-4412-8690-41c80f67273a",
+               "id": "30",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "Redmine",
+               "type": "url",
+               "url": "https://pjmng.yppp.jp/redmine/"
+            }, {
+               "date_added": "13318049485628502",
+               "date_last_used": "0",
+               "guid": "6cec2fa6-9862-48dd-913a-f1d3376b4bc8",
+               "id": "31",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "GitBucket",
+               "type": "url",
+               "url": "https://pjmng.yppp.jp/gitbucket/"
+            }, {
+               "date_added": "13316237391000000",
+               "date_last_used": "13317986867915176",
+               "guid": "697e4301-10e7-4d41-896a-c8da5773cbdc",
+               "id": "32",
+               "name": "yppp.jp",
+               "type": "url",
+               "url": "https://yppp.jp/"
+            }, {
+               "date_added": "13316237368000000",
+               "date_last_used": "13318049018069351",
+               "guid": "a7e42178-5a8b-4040-acf8-214aa19d8120",
+               "id": "33",
+               "name": "stg2.yppp.jp",
+               "type": "url",
+               "url": "https://stg2.yppp.jp/"
+            }, {
+               "date_added": "13318049640366083",
+               "date_last_used": "0",
+               "guid": "a41a34ec-ce0a-4a72-92e9-fcb1916e0497",
+               "id": "34",
+               "meta_info": {
+                  "power_bookmark_meta": ""
+               },
+               "name": "dev.yppp.jp",
+               "type": "url",
+               "url": "https://dev.yppp.jp/"
+            }, {
+               "date_added": "13314778394000000",
+               "date_last_used": "13322570415665496",
+               "guid": "c8ac1a08-1269-4475-98df-70b962b073d5",
+               "id": "35",
+               "name": "WBS",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/EcsFqOXbnhpPsX-0H8YulcoB8bBAXCcYt9ffkz5r_SgmbQ?e=4%3aWjJBq2&at=9"
+            }, {
+               "date_added": "13309499695000000",
+               "date_last_used": "13320730271945941",
+               "guid": "beb6556f-1deb-48b6-bbfb-2421649f2960",
+               "id": "36",
+               "name": "課題管理表",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/ERvu_9nBl1dGvydTGOvPvEgBAj3c4OZp5wRazrRF_GDCaA?e=4%3aEQJFPz&at=9"
+            }, {
+               "date_added": "13314778358000000",
+               "date_last_used": "13320730465435705",
+               "guid": "bd5c9a04-bb6d-4ae4-9819-be2a0df572c7",
+               "id": "37",
+               "name": "追加要望",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/EcUNJj6Zx05EiwfmuuM9_IQBPb2Sq63wyPTBnqjPsVvHUw?e=4%3aunxXNs&at=9"
+            }, {
+               "date_added": "13314166366000000",
+               "date_last_used": "13321527665620131",
+               "guid": "b9489df5-298d-4184-b2d3-3485b1ba7ab4",
+               "id": "38",
+               "name": "サーバログイン履歴",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/EdAXEmUml51Hu0p08zaVQq8BrIMh00P6ySe6Hg4Yna2JzA?e=4%3a9junTr&at=9"
+            }, {
+               "date_added": "13314166415000000",
+               "date_last_used": "13323508465561799",
+               "guid": "5918f953-aac3-45d3-b7ac-c462f2659b78",
+               "id": "39",
+               "name": "開発保守作業日報",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/EYRSgXJakCxBj56LdAskiSMBDkPYD80GJgT5jKSJXmhYIw?e=4%3awXVTyf&at=9"
+            }, {
+               "date_added": "13315977762000000",
+               "date_last_used": "0",
+               "guid": "107634af-0efd-4959-a620-b205247d769a",
+               "id": "40",
+               "name": "ホワイトヘルスケア_オンライン服薬指導システム連携-要件定義書.xlsx",
+               "type": "url",
+               "url": "https://365intron.sharepoint.com/:x:/s/it-system/Efk8cQMUBnJNkbukSyxgiz4Bil33wffZk0UqWmG7xIvDVQ?e=4%3A7QHhSk&at=9"
+            }, {
+               "date_added": "13314958556000000",
+               "date_last_used": "13320489167013731",
+               "guid": "86578ce9-2431-4722-b325-0c3f003f0963",
+               "id": "41",
+               "name": "AWS",
+               "type": "url",
+               "url": "https://ap-northeast-1.signin.aws.amazon.com/oauth?client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&code_challenge=756HmLHb8RoBtateKGaqCMuh1wLZSd5EcQBOdkkasRY&code_challenge_method=SHA-256&response_type=code&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_ap-northeast-1_c7c1c32a96308b0e&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBcaDmFwLW5vcnRoZWFzdC0xIkcwRQIhAMTUu%2BIVUlqetklx7B58wfY9eWR9RlyajALRwB2HVJaNAiAMA9XIBquy6VeGckkMfbWH0jv4RHhqjulb0%2BZPzdgdHCqKAghAEAIaDDM5MDAzNzAwNjUwMSIMdSu%2By0TtaQoT4fVCKucBfxHiUMe19vWB80YrtDRo00ib2sKRdWMNiMdL0KU%2F0BDuJ0gxnSDDxG7i%2BQUdrnyBqTiWEAsNT330mTaN9lQmLaidD%2FvW1sPJBa1PsNws9zVGrF1BBtDKWPqVPGR2c2GiRk5rcusFZX3Mh6T6S5p3EHIJs9qZkX%2BHzFGYL9Cgx9hOOdDacGm%2B6bJJqaJxbfaeU4pM2zOqAeH0sLRdPTGemAMygws0CaY5NADgljAPzGv5%2BZkgKPo9Y2d8bynSmDghrN2iYDoy%2BR9G7usc%2Beki01HPcnWGIbPhlrrm%2FKIn8IE3lbATA%2FbBMKCYxpwGOo8BwzuXAksqZRhAWmUxtH2shNHtPeTB%2BG%2BFD6W396wD6vzJH8qCnjCOR7TXqJJ9apHQDJYURMUQXHaMnBSak0rggikkb1Xo%2FpF3ITwr6P3e4g%2Bw8ID3et23HqUObn%2BxylOqf5UigcPpDs5qpPVDjXSl%2BEyeAFPLweSgYu6LuiQWEh%2FygWIsOZQjra4T5vU8X6g%3D&X-Amz-Date=20221208T073553Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVVUAENCSQU7XCPHD%2F20221208%2Fap-northeast-1%2Fsignin%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=d2e06cbecf0dc4a671437efab4f99f56487f2b964fe2e4a8ca1cde9a67e21852"
+            } ],
+            "date_added": "13317549988874025",
+            "date_last_used": "0",
+            "date_modified": "13318049640366083",
+            "guid": "3b287122-2b30-43f5-b550-3cc8eb0a4c18",
+            "id": "29",
+            "name": "AB - イントロン",
+            "type": "folder"
+         }, {
+            "date_added": "13323315441940817",
+            "date_last_used": "13323527565470521",
+            "guid": "c74c0a07-457f-40e7-9fbd-1beb1dae7bf8",
+            "id": "57",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "https://chat.openai.com",
+            "type": "url",
+            "url": "https://chat.openai.com/?__cf_chl_tk=3M.90pyKc2UrebQCw7nGyUibFezP8srv_6oqS1iv.x4-1678841838-0-gaNycGzNFiU"
+         } ],
+         "date_added": "13318132882203929",
+         "date_last_used": "0",
+         "date_modified": "13323315441940817",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13318132882203930",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13318132882203930",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "Cu0BCswBCIiBAhLFARI8CAISOAoGCgJibRABEDMaEgmAyF9UJPcFACGAyF9UJPcFADIYChYIAhFfu6VkJPcFABgAIQAAAAAAAAAAIACSAX0KNAoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJ9MqlZCT3BQAR9MqlZCT3BQApv6qnZCT3BQAKRQoWYW5ub3RhdGlvbl9jaHJvbWVfc3luYxIFNTEhYmQaEgmAXRpfJPcFABGAXRpfJPcFACnvyKVkJPcFADCAu+n4xeT9AroBAggBEgAgASoYVlhWS1RSU0hCdStRQmw5TFNLZG9LUT09EuwBCDIS5wEKHE9mTHVUalhoTCtuQjdjejdFcFVpczhjdHJJWT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWIzckRGWC90SHJlMzY2Ymo1ZUdGNlpuZHVrNWU0WHNKc1VKT0wrMHE2d3ZFcGgyY0c1UmUyOEMvdEwraVkycm9hd2ozdXc9PRgAIAAoADCcos6Xmsb9AjjUn9Hx3TBA97CSpeswShxpS2NNNWpPZTNBWC92T1d2SDJCOVYreWhtYnc9Wh8iHfl0dzI2TDZiSXBXMkZMMTRJS2F3NEhrZ0tySVU9Ze0h8eoS7AEIMxLnAQocZ1hPSkNtN3ZLeGJmL1hPcEdqTThuUWlJek5JPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZSi9MdUJ2NldwMXdOdThTUC9nenJCaDFnSkZpMGF6c3VTZVVDSk10aWpjREFlL0hJZlN6N0ZMeWc5QmU1bjBLeDVqb0hPZz09GAAgACgAMLfhy7/N5PwCOICAiubeMECAgIrm3jBKHGtiT1l4ckdLakxMTHdYeHU5a1hVY3JQZ1VSND1aHyId8GhxcmtMcThGNjNaMUUxN3JnbWdXQzRvWTVsQT1loGbb6BLsAQgKEucBChx0TDJMcjUxWVM5bzVxTnNTVW5uTGh5N0x1Znc9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lRZ3BNc1BiQU5OUzdXVUJNNFdjRU1SK1dRNUhXYUkxT3hJK3NMQjlEQWEwNzVKUWRxZVQ3SVMyS0NoMFFqQ1VJV20xRHhRPT0YACAAKAAwjfPa9d2j/QI4hej+2NgwQO7qr/DmMEocYWpQZnhmUGtHb3ptWnVqNS9Na2hpQ1Rta2FVPVofIh3cUDlNMzloTmtyNkpYTCtrK0ttaHpzTjkzamlvPWWgZtvoEuwBCBgS5wEKHHJqcVJ2OGp6K2E1Qk1KT1ZIRTZTelZ0MjI3UT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWUJFVVlHUWRSbkFFN1BOK3hPOVJjZGNNZjF1TS80MmxGbC9zTVF6dGRMSWNRSjllNDRpYkFVVTlJVlJQbHJnNVFoaVdWV2c9PRgAIAAoADD29KSaoLz8AjiI6P7Y2DBAiOj+2NgwShxKOWs4N2dhMlcrNkhiK2tRSCtvNForSm5SaEE9Wh8iHfVzUHhnZzZsYWVKU2NFdTVOZFBEMGZSRDhmOWM9ZQAAAAAS7AEIEBLnAQocYUI0aDgydy8xYVRtbTNaMTBWZDdEWGZLdkNjPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZVTlkb3c1RlByY0VnVUZHK2p4ZzNmU0tIWmpZeWp6OG1vL3VyNEVRRGtxcTJxY3FTSGlINXNNV203ZlAxV1lOd1Bab2o1dz09GAAgACgAMNeUsI6H3f0COPHQwpX+L0Ccs8Sb7jBKHE1YeEJaQ3FpWFFjMlhWUTZGOW94RGlERVdIdz1aHyIdzlE2OVpsRWZleHpoRDVSVS9JMDU0ZzJwRHM1dz1lqnggAhLsAQg2EucBChxNT1NaRWt3a2FkRk9VRUJxai83cmNtUjQ0Umc9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lqNzZ1UVJOOUpFUEMrMVQ2RTQrTXpOOGlXUjV1SlBUOTJKMlRJNFl1d2hNTGZhMmVZNUpMcjZmWlZQanpSNmFjaGtseFlnPT0YACAAKAAwz+CKiKO3/QI46ZjCsOkwQOmYwrDpMEocV1g4TEU1VnVuTEZBdjhncDFZWmRkN3FDd0VnPVofIh32MHMxejlod2lrQW5PeXlJb1ErQklXQ2ZUUzZBPWWgZtvoEuwBCCwS5wEKHFN5VE93ck81TDYvVUdoVHRoUEZxckhvVmI2WT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWW1OSmZtU255TVNGK0lobUdDTEZvbXRpeXFSY3pJZE5sVmJzRnY2djFXWWxlWnd4OW1BeitmeTIwWXhLY3BrZ0ZBM0Nxcmc9PRgAIAAoADCF1+OfytX8Ajj0zfPv3DBA9M3z79wwShxkRTRpTnVQZEN6UXJzQk4ydnFmbVExb3Yxcjg9Wh8iHexHdlFNUTExOHlXUXBHdUNZM1dSRUc5bzlpSDQ9ZaBm2+gS7AEIJhLnAQocSjRUSXdZZlM1UVZ1UTlvNy9HL0Y2OGQ5cXBVPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZdVJqZmFFcFFsbldWQ1dhZGRnQytXQ3llNEE2SFZrQThaZDJXQlZWT3ZXQnBMQzlZRWF5dWgzRGw0T3RrRGxoVkYycUpHUT09GAAgACgAMLCguZ/ZqP0COIzo/tjYMECagtnB5zBKHEtaUVgvd2IwWnVjbkV0VGRNb1RPS0JxK0h6Zz1aHyId1ElHdnVZVDBZTVQ3Njh5R255WUF2azhxano5MD1lRMnhIxLsAQgxEucBChxHVnVPd0xIcjNqNlN2TXNmczB2QkdsY0t5MVU9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lCSSt5Y0dnY1JVdndidU40L3JNcWtuU2EwU3Zkd0J1WjU1OHZYZ3E1L2NxSmUrTGVzTGJvR1FaOTFMeG5LUWluTnN1bG1nPT0YACAAKAAwzrSup6v4/AI45oyxqeEwQOaMsanhMEocVUtWNVRuWm10RGk4KzAyY0Zqa2lBQ1d2eDlRPVofIh37UzJZOHNqcnZodHR5VkMrT0JsTWIvdzZjUkc4PWXVR000EuwBCCsS5wEKHG9ZWkI4bno1ZTFZbStyTGlocStRaVVQTjRHOD0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWTlRTGJ0dWJ0ZTdOdFNnNnI0cDUxUFBpWDlXWWplTEdoRlkyWjhhNnlKTnAweG9Ld0l5M1R3NzJSZG4xSS9HdWVCeTRGZEE9PRgAIAAoADCu8czWv9L8AjjgkrK93DBA4JKyvdwwShxVQTRWSENWRGVyM3I2R0dXNnozVlkwOC9XK2s9Wh8iHdhUMldPMlZtcmIzMytGTTN6SHpvdUlqck45N009ZaBm2+gS7AEIMBLnAQocdmZ1YW9nd0tENXN4WGU5bFJLMEp1SFRPQUNFPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZeStMSWxDUUpkZC83MDRyNWNJUDFvQTd3T2cxTFNoVUpZd1U5WXRHWS9UdHIwZDdiN2lTVFpvTFV2VXBCYVFBMXQwakZxUT09GAAgACgAMMGKmNGX9vwCOMXci4bhMEDF3IuG4TBKHC9pcDBRYVE0ZTFuSVFBczVLczBseHFtUEc0ST1aHyId7VNldllWZHhXYVBaMnBlcFhNZDNtc2JFbUhsMD1ln7/EARLsAQgMEucBChwyNXV1SkxmeEhpZzVXRXVQTmxyNCtnZnhIWnM9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lUMm1hdXFOMCtGeUZMVERlOTdPUlJkRFNFOFR0REV3SjFTeEJ1TmIvMko3cEZaTklzVUpiTkJsMXBJTWZBbTFoV0dYZWNRPT0YACAAKAAwiqHtn/e0/AI4h+j+2NgwQIfo/tjYMEocalE5Mld2QmViYlY1cElSaW94UFg0NWV1V1pRPVofIh33U0RTVnlYckRJeSt1ZEZoTFl5eFFWMC9YY1VvPWUAAAAAEqsBCAESpgEKHHl4Si82ZnZrZWNyN2twNUVRekI0dFdMcGRiRT0STlo6QURxdEFaeDd2eWg4TGVUamF2YjB6cjBIOGZ3Z2RNYzZaNmdzcit4Y0JsQmJaMzZSdjBwZXhVUjJPUGgyb3lsOUpkeG1IbmRKcENxcBgAIAAoADDL/sDw88X8AjgAQABKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAEuwBCAkS5wEKHDNPcXYvTGgxUnZGV252QndEbVdoTUdQcjhTcz0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWXdnVHVhYUhsNGV6K0YzS1lEOFlNTE5GTWVOa2g4alhNeTlOTWZ3ZVRQclN0clJLU0YyMzhUQVJQODR3KzNkaitBVFl1anc9PRgAIAAoADDpnIjHhM78AjiF6P7Y2DBAquKl9NswShw5RXRKai9tY2ZvRncwdUVrekg0dEZudm5MOVE9Wh8iHbhQZUUrRmhNOS9XK2lQcWo4K0xUR29WbG1kalE9ZVFY2woSwwEIAxK+AQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRJmWjpBRHF0QVp6T3lsYnlIOGc5T3MrMWZTamR0Rlkra0owYnFnVWxXMEVBUnI4bVdjNUM5M0Q1UGxoMVp4RG9YZEVOYlFpekIvRUZ6WXA1c0VXWGRBVTc5dUZkMVc4Y2lOeXNTdz09GAAgACgAMMv+wPDzxfwCOABAAEoceXpOQjAxY241NEE3Y1JVMHVUKy9QZ21UdFVvPVoAZQAAAAAS6wEIEhLmAQocQlJHNmdzMjhZS3E3V1YzWExmY0ljc2pXM1U0PRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZaEg5R2RCblJUaE9EalZkNjB6R01ld05VWC9Dc2hsUC9NdHFKcEdya1IxT2dvNDBJVStmRFZ6Y2dhektWMUN4bWJ3SGpHUT09GAAgACgAMPne98/N1fwCOIfo/tjYMED7/6rw3DBKHHl2ZC8vVW9UWEtyZ3ZPU2VZQitKN3pDbEdDcz1aHiIcamVnV0ZxVDdacFpIMkhyOWI1VnFBUnVmSFkwPWWfv8QBEuwBCCQS5wEKHE9rMHFrUzJNbVcrWWRsR2RsdEdGdlJ5M0VQMD0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWU5rZXdKNFcyYU01LzdKNkh5UHNReElScElUdzh1RXBWY2I4RmRadTlLTGkwR3FwOWg4RXdKeG5RQnk5cEJnZlBpaGlldFE9PRgAIAAoADCtmcnbvpH9AjiL6P7Y2DBA2ey7xeQwShx4c0pYelM1azYrL3RuSDF3a0JIeU4ySUlSMms9Wh8iHalKdVNWQ2tveW1FQ1ZEY1dBUXJsZkZ0c25HOE09ZeGWWNoS6wEIIBLmAQocSS8rT2FCSEM2N0h6eVg2Z0lmYWwzeVF5VzE4PRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZOTVtRVRoY1BmZVpEOXdBTHJwVGVvd2ZTczlBWUxsSUJnWkpDTVNJRWpkdEFiMmkweVJ6QUI1L09jdml2RFFvU1BJTkhOQT09GAAgACgAMN6W0dW8w/wCOIvo/tjYMECL6P7Y2DBKHHF5bzBDeHJLWk5QT3J3K2VsTEZOK1U2VGYzST1aHiIcN1JaRmJkWXV6MUNjVm1qOHVVUDAweWRRRE13PWUR3ouTEuwBCA4S5wEKHGZqOGYwMnlKZzVXM1MvQ2NyNjZHUEFFbkEyTT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWVlJeFJJUmdSRlVsY1FoUVl0akNSQnkvYmVLQ0t5VWVSckZpVk5peTFGVHVCSERkRU5xWWlHV2Q0M3ZtbGdkcWZWSmdlUnc9PRgAIAAoADCRs/Wu9Lv8AjiH6P7Y2DBAh+j+2NgwShxQMCtreVpkb2ZQN0VuT1ZNZWo0Y3M5MUtzV289Wh8iHf1aRUZ0MU5WRnEwVXNwY0ZGMEU3aFVPWDRZYTg9Ze0h8eoS6wEIGhLmAQocU3VpNnFUbjZuOVlKeFJPeXcxVjl4RU1NMS93PRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZZlJJTzV6enlDYTdIaEJWbHRWbmx2UFJ0RkJ5TzVzajNPdjFYSUVveER5a1VxaFVkOGpOemU5YUZ2MmlkOFgyaTBJOEIrUT09GAAgACgAMJ6Z87yLqf0COIno/tjYMECu/o/I5zBKHEp0aEQyK3FvY0JDUWRZbjFta3BQQ3Q5ZjNGUT1aHiIcSzdKVXhENTRLVzlkbW5NU3hXUHpFVHJvSnprPWWbSKBWEuwBCBUS5wEKHGgwNVpCMVN4USs0VWtZQmtVYTQ5R1AvQkJWMD0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWh3OTBzSUk2M1hoRk4xcVR1V3pyaFo1cmpnUHY3dE1nQWVBUnpXam9VRUlsazBqTjR1ak00TkJJaFFuN1dSWXdQaWkvV1E9PRgAIAAoADDT1t6YoLz8AjiI6P7Y2DBAiOj+2NgwShxpajBqL0FrME1uN25IZ0owZ2NId0hRVFpiZlk9Wh8iHe0xOWhXdHdpcDd5RnlCbzdNanJmQ0tsWnh4cnM9ZQAAAAAS7AEILRLnAQocSERhTWNxUjAxOVA3Y2loZEgrbzV6NXJXR3hRPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZVTlhSkhlU2t1UVliOENkUUhGUnQvdnRvdU1idk1JOVRKbzRYamhJNW5sTEx3WmNjOHlnVFZjSUgzTStNUGcrVXNJMElkUT09GAAgACgAMOGdz8P0y/wCOK/IvNHbMECvyLzR2zBKHFVBa0EzQWI0Qk5oMVZzUnM0NjVCMS8rd3Z4RT1aHyId8jFtUGtTUCtSaW9LOXVTZUJIOXZ6bEN2cTdrUT1loGbb6BLsAQgpEucBChxMN2ordVFNNDFoZ2hybTBXdWY2cnlpVk9SQXM9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lYL0tPK1NuV283SVVlNDhrdGlEd3d1S2JjZkFyeDhSWjNRcUY0cnM5aUVjN0IyaWh2OUcwbXZaMUJGZDN4OHYwSjEvZzRRPT0YACAAKAAwsqOvxbyK/QI4juj+2NgwQLeWwNLjMEocbVIyVkVVQlpwVVQwcFZxdVZTTWNuVk82Yk9NPVofIh39QjlKNFlTTVJ6dThrc1FLVEVkNHN6SjZ1ZTY4PWWx4+mnEuwBCBES5wEKHHRvKzAzMnAzckJiNTZjTmNNb09rWFZ4WUE3UT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWU1DM1cyK2xTK3RXOVoybnIybVBsaWNiQTVvMjNtbVhWUWIxV2xLRlZtK3IyL1ZLZnFRRnl5eVM1MFBzK2NIeCtVZWQ1MWc9PRgAIAAoADDCpJaXoLz8AjiH6P7Y2DBAh+j+2NgwShx1a2k1UTJJZHhsMlVJWEJwNENyTlg2Q3RZLzg9Wh8iHdxBdExBeGpkaGNFdGZmTm8wcEtRNU91SW9mT1E9ZQAAAAAS7AEIBxLnAQocQ3lKdWt4L0FRTkpPc3dseGdWWjMwVmpzeGxvPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZQmZFUVlneHdIMkFlVnduamV5V2pSVTNBRzhVT0plOTgyRFR4Nlg1emg4M1RMRWdiZDcvSWJ2OHBtTjNFSnEvdGs2bVdLdz09GAAgACgAMLSvkK30u/wCOIPo/tjYMECD6P7Y2DBKHFY2dWlHbzNENHMyOGNXZFZQTFR3Z2pEWXBHaz1aHyIdu0pGRFM5Yis0Z3J0Y0t1M3BocGsvc21VYUgrZz1lAAAAABLrAQgiEuYBChxpWllQem5kMG9Sb09QRHo5N2F5cTRSUGM3NDQ9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lZSVJ1QTFTelBaUGlueVVYN0oyVDZBSmZsZFExZUtKWm9hWVdRaCs0b3FFWWttUmt1aDFPTTk4QjRoWHRFUDl6dGJIa3F3PT0YACAAKAAwx7avzbzD/AI4ro+fx9owQK6Pn8faMEocc3J1MEE1aWRXaFFxQXc4bG4wSExhemhZd3NVPVoeIhx6TEljeEgyNFVOMHk4dXByak1rNm1XdEZwaEE9ZQAAAAAS7AEIExLnAQoccTBoV2xHRGpqMEtsRnZXN2phZUszaVNjK0NvPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZN0hxSjBLSExPTkpZN3ZialdDZXRPZWhmTy82aVAvOWZUcGkwWWJtMjJlZVNEaVpJN25xOEEwRlNMamlzTlRHYmEydERZZz09GAAgACgAMLil8/nc3PwCOIfo/tjYMED/mP7k3TBKHG9MQ0FkMWVtV3EwNUNJTm90ZkYvbkY3T2FnWT1aHyIdtU42YncvZUU5NWJnTVBpdkJTVkoyeGRqSFA0ND1ln7/EARLrAQgGEuYBChxvQnRUVlp3Ukl2NFg1RncwTTQyVXhza2Q2bms9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lvQXZDVE9zcjFhamM3WWlNRDhnaXZuNWlFNXVlb0FJZTR1R3d0QlN2VERpU2FpUHU0SmlTY0k1eko0MjIwMTFqSy90RWZRPT0YACAMKAwwiJu5hP7X/QI4pO6G2dgwQPL0ucjtMEocM0NCMVorbkVNZlgvU0MrMDBjR0V1WGlIeXNjPVoeIhx6RGFNN1lMNW1NK0FFVUNROFYwVFZoODh3NVk9ZQgMSi4S7AEIIxLnAQocV29oK3hXSFFtTlpoME8wKzFTMjJhR1N3ZVRRPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZNEErN3RDU3IxMDZJQSsyUDRFZnh3MWJubkpCc3pQNnBYOEo1SEFKZnFsYllzRHU5YmdveUhrOWhjYlcyK0JKMldMcG9Ndz09GAAgACgAMO/J1OWFx/0COI7o/tjYMED6uvWy6zBKHExWelpZYnJQbzVOWnR3REcvRnZnMXpFWVZFND1aHyIdkWh3Q3BLY011dlFVSmdaNjNvTmZLNCtLS0JwZz1lRMnhIxLDAQgCEr4BChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EmZaOkFEcXRBWnptZnlkcEpjeXZubzMwd000TDZNSGwzdXptS280UmJmOTd3MitRMEgrOWk5ZE9DQU91N2E5RHNIb0JMQzNQUzdHWGR2bUNQbjk2VkZXMUNWbDkyZXg5WjFKL1R3PT0YACAAKAAwy/7A8PPF/AI4AEAAShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAABLsAQgNEucBChxCVmNkVkw4NStuUGZvZXNhdHprN3VBNmNnZ0k9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1ljSE5xelg2d2tpdGVmLzEyZnN5ejFlaDNVSGE0YWUxbWN3WGRvSHVqdWJyYncvK0hJYlk3cEtZOHBTaTN1cml4Z3RleU5BPT0YACAAKAAwiqHtn/e0/AI4h+j+2NgwQIfo/tjYMEoca2pObnVJTjFGcExTRXBzTVF2dXBTZ21obldRPVofIh37NjVRK3pMZEY3U2pZRjJpb21ON3c0ZUR1enNJPWXtIfHqEusBCAgS5gEKHG1OckJJL3RYY0JGU0YwVXhmcTJVeTA3ZnR0ND0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWUFBVFhDRTlISVBZTGtJdDRWdXp4TzNnNTBTVGkzSTZJVzFRVjRwSkVjSElydm4xV2EvRlh3NVFmRUUva2p1d1J6L1RWYkE9PRgAIAAoADDpnIjHhM78AjiD6P7Y2DBAquKl9NswShxzdHJrTWg3SVVZSlMyR3ZmTHJMdklqRGFteUU9Wh4iHHA0UlhlNFVmWnBoSTVPK3NrVkZGYVV5RFFhST1lUVjbChLsAQgvEucBChxtMGpsTmdXVy9MK2g5Zm1qRGVVZGhJOXIrYmc9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lRQWZ4ZTE2NnVsR0Q2bVQwUGpabG15WDdveldZM3VvZnY4cjdMU2ZqUllHVDE4ang1Y0M3dVRqQTEyVjV4R3hkRjdRYzN3PT0YACAAKAAwjfeL/pf2/AI4+MORhuEwQPjDkYbhMEocZkE4ZUhKUHUzazdhTjJxeWNZOVo3Z0VMaGp3PVofIh32TkxtS0owb1JDZHg5WXBaWG0zNDFTZTZ4ZGFRPWWfv8QBEuwBCCcS5wEKHHk1NGd6T3cvb09iSEt3ZnVXTXFyUHlwYmZ3Zz0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWNxSW5kUmp4dlpITGJuSERGNVlEQ05GWG9yY251NENBOER6NG5KVFdsR3ZQN2I1ODE0NzREcVVXd1FUSGNJdXlNdTJRQ2c9PRgAIAAoADDunoqnrOL9AjiO6P7Y2DBA78Ob8u4wShxaZFFJZEhEMzhRUnVVZVVNWXdpa0pGSTltdDQ9Wh8iHepTUkhydkgwSkk4TU9pck9IT1pJMlpwbUJyTTA9ZeGWWNoS7AEIHBLnAQocellpWUhLem5RVHFVT1JRaUNLTDdzMkZxemxNPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZUFo3cG05L25jbStxMlY4UFhSa2NYdnk2cXdTYXZwWE85ZURKNmNHWFBybC80OUFtWnV4RkF5TnYrRGdEZzJvNnU1YytCUT09GAAgACgAMJuXtZDMvPwCOIro/tjYMECK6P7Y2DBKHHpYTHpDTFFIOVVMYUVSUXF1OU82R1UyTnpQcz1aHyIdsUZDOWE5VmdGQ0g5N093eElnK3prd045b2Jwaz1lIR4sAhLrAQgFEuYBChxBUGV3dEdnS1ZmS0puMUxqSEkza3RQdGVLWW89EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lBaENGL1A0YmxqM0Y2Y3FLSnpESHhweGxWc1YvKzlVUGNkMDFkV1dhdlMwQXQrNE94T245QTRvMUdpRitrMElBczNrOUNRPT0YACACKAIwyMTZ9fPF/AI4u7yD2dgwQN36/e7aMEocOGYxSEliSk8zTENxZ1ZzWmRhOWpuem4vdjEwPVoeIhw3SzNlV1R5aTdZRnBzcUJraWpRTVZ4OEN3OTg9ZdPjSzgS7QEIORLoAQocQzIxckR0ZEk5K1BvZG05Yy9aY0RVcU5LT21VPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZM1Q1TlFLL29xcmdwL3J0cXBDMDc0NW5YQ1cyVVlVelN5SXZvcEtiM3duQXhhaG9xRTFmREJKNXpsWS9iNkJqSGx5MjB5dz09GAAgAigCMKPZo7rz4v0COJSSlpbuMECboKn77jBKHGt2Tlc3dHBWaHZSTG52eGVVTFVwR2ZEeWVvUT1aICIe/61PSDVFOGtmVmc1Y3pXM3hKaS81cTVSeC9KRjQ9ZWkbIvMS6wEIGxLmAQocUVZSRzFoYXJqb3F2OTRmejJpMDdHUDFYWTR3PRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZcStwTmwrVkoyQXpFSDdnVmZCRmtIYnJKejB0SFJXYnVmaFl2WmhsZnlseGFjRGRvem85MTRMbkVScEJGRHpDYXNTMlJhQT09GAAgACgAMIr09pWgvPwCOIno/tjYMECJ6P7Y2DBKHC9FamFWbWdvSzEwOWFua0JpZ0U2N2dnbXVWST1aHiIcYjRWRkJhdXZ5ZjZXZWthT1F2aWVsUEhkNUljPWWgZtvoEuwBCBQS5wEKHEdCT3pZMW5aayt6K2xVNitkdURPZHZCd0o5QT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWE0Zm5td2w0Z29pOFdwaXdJd0IrWDFCRGxjNzhRamtZN3hRYjR3U2czWUNpT0p0TFplVUlQbmVGQm9RVnBkR1M0a2hoNUE9PRgAIAAoADDyhMWZyLf9AjiI6P7Y2DBA1YGjtekwShxQSmxheGRPOE0rUVYyNHNMd1RmMnlPVlFJOTA9Wh8iHdpIRlhiaDIvQ3NVUGFLQy9nejNWZW5vUkV2YUE9ZaBm2+gS6wEIIRLmAQocNFltVWtidm41VmhiTGJvNmZpVXpMSkJ6ZUk4PRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZVkFMVndNV1ZORHhyLzlacGIzdnc1QnovU1pvNzllWTNzYmRhRlRvc3F6dFVzK1ZmYS9ydHVib1Q5Nm5vZ3crQzZWYVB2QT09GAAgACgAMMqllNK8w/wCOIvo/tjYMECL6P7Y2DBKHHUvV3N6dUFSTXlLQTcxM3o1N1phcWcyNG1rUT1aHiIcUmZSMjZyWDZnaXYrdE84THhLQlpQUkVlaWg4PWUAAAAAEusBCBYS5gEKHDhiM1IzNFpWK0RKOEk3OXNrVEJuR1ZHS0wzTT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWSt5TVZjQmt0NDMwY3ZTVzZBOGJSN0lXTjZLYWtGa2lRNmZqVncvaEJhT3BNTWc5eHdqbExLUHB4SDFIbmRDckxrZmJoWUE9PRgAIAAoADCnpay6suD9AjiI6P7Y2DBAw/+d0u4wShx4cjl3NUVORzE2SGQwSzZHMDBTOXlzV29lYUE9Wh4iHEZpN2xZRUNSTTgvRXRDdVlndEY4bTU5VG9XYz1lfPFOcRLsAQglEucBChx2R29teWgrMmtWNjNlRlg4ZEd4eWlWdnRvVjA9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lpb3ZMUDkzSlNKQmRpZ2JqcnJqbEFZRktzODlNOFBqTEFxcTNqR3VBb0dhM2RkWmNTZm95YjBzNmgzZmkwck9POFBZUkRBPT0YACAAKAAwl9O0ur+R/QI4juj+2NgwQMb+x8XkMEocdkRpZjJ6L0x6VHFHUnZHZkkyRGJHakkzTGxVPVofIh2+cnFxVWYyblNoalp4SGFScUxraDh6bnpoeGhVPWXhlljaEuwBCB4S5wEKHHl6bXhTbWc2UllYYnA2R0kxRDBkSnFlTGtObz0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWt5c3pybWtTTDhMU2ZrY2daZUhld0E3T0xsWGwwZ1dmQ3lFd1o3VzhnSEFPQXoreWs3MUs1OGEzNHhTcVZYeThUTzZzTGc9PRgAIAAoADC60LTtvMP8AjjlgpXH2jBA5YKVx9owShxrQnB1eEM4dm9oQWhnRk4xSTQrYmxOamo2WTg9Wh8iHRtLekIwSFdSejJ0UlZhQ0Y5a0JuL3h2dFE0NGs9ZZj8AOMS7AEIHRLnAQocUE9OdTZiRVp0OU9HM0h0QVUzcm1ScXQ1Mk9nPRJmWjpBRHF0QVp5V0VXNU93cXZRbyswbUZKc0pZWWNZV1YvUFNzcEZjSWZ1NGwzUzBMNkZ5dm5vZGhOeVdJT3NBWnRDVDErV1BRcW1vKzUxd2NBRnZvRDNtcXd3MDI0dmd4ZXg0UT09GAAgACgAMMLV0Kf3tPwCOIro/tjYMECK6P7Y2DBKHGRtTjh1amFKbVdHeU1CSWdVR1dPakpRZURDbz1aHyId/lhMcFJjaG54SFVsUTRwakhabXRlbklwdHFzbz1lAAAAABLsAQgfEucBChxKTnFiOWh0MWRnckRYNjdLbEVnWjdmY3luSFE9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lBVTloODZIOTIxRklyRkxvd2hNbnFZQ2hrejFOOGVXUVpYeHlKWUZSVXVINllFWDQyVG5iRVFaVnVzSGRFczZjSXZGMHJ3PT0YACAAKAAw9KjO7rzD/AI4vNaVx9owQLzWlcfaMEoca2M2U1ZLT1B4NE90Rzh0S05hVWU0akJyQTlNPVofIh0pai9POTVVbzZhNmFqU1J2QkVwVkRmUFZJVCs0PWVHWB7aEusBCBkS5gEKHGN1QXZySEdpcUMrbXN6aU9VUGNWNHF0bWlWcz0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWdoam00YnRVT2pSY05ybjl4dGh6aG1tWjdic0pEQ2ErZzIrNFZubEZyVzB6cjdJakt3Ni96QTVuL1Arc1RldmNkcENzcEE9PRgAIAAoADDTtLzB/Kf9AjiJ6P7Y2DBAxNTptecwShxyc3RUWUJrTlAwTDRpUWtvRWEwQVRWcUpqUnM9Wh4iHDlIWkV6eE1VNXFJTy9Ja3hwSWMxVS9vc3drYz1lNjKsWxLsAQgPEucBChxreTQvVnExcG5KUldJQnQwYkRuK20rOGZpcDQ9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lJNkthekhCaXRQV2ZvZ296TUp5M2VyYm4vN1g2TGxuTjR1cDR3YlR0RmdwT2hPK3dWa2tjVDdUTS96aGZVUDdnQXMrWDFRPT0YACAAKAAwzauM/47b/QI4h+j+2NgwQJab4/vtMEocOVE1WFpxMHh3RVdTK041eFVxc2F5WWxLQU13PVofIh3+V0VyNmV1TEZueDFjNmFiL0hnOWtFUGdHbGdnPWWbSKBWEusBCBcS5gEKHHVRTlVkR1U1QkF6UG52cWk3SVRqazlVNnU4RT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWWJjRWw1OU8zODQ5Q2ZseHJYbi9NeS82Z2c1YkhzMWlseFFkTzh5MjE4Q01ETnpFU0d2MkhnQjlOZTRXNmVveEtNWFFQdmc9PRgAIAAoADCA+tuHsb78AjiI6P7Y2DBAiOj+2NgwShxoWmRMT1B1UWpuVW1NRk42ZWgwb2ZNbEN0WUE9Wh4iHHNBK29CQU9PREN2SGZiRUgzSjdmSEFDaVhBWT1lfPFOcRLsAQgoEucBChxNdTFMNzJsTkYzbWtDaE85UFkwUXhKZ0lRTmM9EmZaOkFEcXRBWnlXRVc1T3dxdlFvKzBtRkpzSllZY1lRUzNXZ3I0UzkyMFdHRWZUQkRRU1I0VFZNZzIxN1R4c3NxaDFjSVdvdjNoaGFScHJKanNVbTRhU3VKSjhXMENKdUxjckJnPT0YACAAKAAw3u376rzD/AI4j+j+2NgwQI/o/tjYMEocK3A3RGVJellJSmN0YnR5c1RUOG1pc2VMMmd3PVofIh3zV3pNTlFDUllNUVl1em5BSmt0elpnMGowSmNVPWXmUUKzEuwBCDcS5wEKHEVkYjQrengzZ0FzckRUNWh4VWdpRkNpRy83QT0SZlo6QURxdEFaeVdFVzVPd3F2UW8rMG1GSnNKWVljWXhwRFJhQXJucVFzZWZaNUx1RHJtWDNVOXRIWFdGd1FUM3Fhcy9jM3RpRkFNWmlqeWFQRmUvNWtwVVVlcWdvOE1EVjhKUWc9PRgAIAAoADDBwJaWmsb9Ajjq5uiE6jBA6ubohOowShx4OXlQRDh2OXBnREJ3R0hRN0JBWjFzMk9rd289Wh8iHcFMRDZxMTMzbUo4SHBnWGxLOHcwK1cwUFR2N0E9ZeOV7UswATgA",
+   "version": 1
+}

@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "/icons/dark/128x128.png",
+         "16": "/icons/dark/16x16.png",
+         "19": "/icons/dark/19x19.png",
+         "38": "/icons/dark/38x38.png",
+         "48": "/icons/dark/48x48.png"
+      },
+      "default_popup": "/popup/index.html",
+      "default_title": "Markdown Viewer"
+   },
+   "background": {
+      "service_worker": "/background/index.js"
+   },
+   "description": "Markdown Viewer",
+   "homepage_url": "https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk",
+   "host_permissions": [ "file:///*" ],
+   "icons": {
+      "128": "/icons/dark/128x128.png",
+      "16": "/icons/dark/16x16.png",
+      "19": "/icons/dark/19x19.png",
+      "38": "/icons/dark/38x38.png",
+      "48": "/icons/dark/48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsbS7x9boW+Lhms2i9kYbJI7UfY+oFUFCAsynpM5r48YEf0yIieXycaZ0aHhjnQ/0/3kyyQmZgt5uvT/1mnWHWC+f95nsn3wiQo12wU5cPZlnjD58pahkSsTBu+Jd0G2/mL0TBLhmfjYJZa7C/BOTqXFjOW0vi1OUiK4ac21LOssG34zWo9Z3tQAb6Sckq84sCk7+TLsPdtnhrwr14d0IQagrV1STRnlA0JU9YnkJBAXXUx0eTFH97YANKReYBGa32GJuPqohoS57vaPgWmq2lpYY6+GT/ZPwqJLq1WYJ893xqQDS0g1RA34KRukOvx1qWBL7pLBmmNWlCEgRPf+JjQIDAQAB",
+   "manifest_version": 3,
+   "name": "Markdown Viewer",
+   "optional_host_permissions": [ "*://*/" ],
+   "optional_permissions": [ "webRequest" ],
+   "options_page": "/options/index.html",
+   "permissions": [ "storage", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "5.1",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "/icons/dark/16x16.png", "/icons/light/16x16.png", "/themes/*", "/vendor/mathjax/fonts/*", "/vendor/prism.min.css", "/vendor/prism-okaidia.min.css" ]
+   } ]
+}

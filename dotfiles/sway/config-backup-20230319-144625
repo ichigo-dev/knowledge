@@ -1,0 +1,218 @@
+#===============================================================================
+# Sway config
+#===============================================================================
+
+# key
+set $super Mod4
+set $mod Mod1
+set $left h
+set $down j
+set $up k
+set $right l
+
+# colors
+client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
+client.unfocused        #2e3440 #1f222d #888888 #1f222d
+client.focused_inactive #2e3440 #1f222d #888888 #1f222d
+client.placeholder      #2e3440 #1f222d #888888 #1f222d
+client.urgent           #900000 #900000 #ffffff #900000
+client.background       #242424
+
+
+################################################################################
+# WallPaper
+################################################################################
+
+output "*" bg $HOME/.config/sway/bg/background.png fill
+output DP-1 disable
+
+
+################################################################################
+# Floating mode
+################################################################################
+
+floating_modifier $super normal
+
+
+################################################################################
+# Keybind
+################################################################################
+
+# Start a terminal
+set $term alacritty
+bindsym $super+Return exec $term
+
+# Kill focused window
+bindsym $super+q kill
+
+# Lock
+set $lock swaylock --clock --indicator --screenshots \
+	--effect-scale 0.7 --effect-vignette 0.2:0.5 --effect-blur 4x2 \
+	--datestr "%Y/%m/%e %a" --timestr "%k:%M"
+bindsym $super+$mod+l exec $lock
+
+# Reload the configuration file
+bindsym $super+Shift+r reload
+
+# Start your launcher
+set $menu wofi --show drun --style $HOME/.config/wofi/style.css \
+	--hide-scroll --location top --lines 5
+bindsym $super+s exec $menu
+
+# Exit sway (logs you out of your Wayland session)
+set $swaynag swaynag -t warning \
+	-m 'What do you want to do' \
+	-b 'Power off' 'systemctl poweroff' \
+	-b 'Reboot' 'systemctl reboot'
+bindsym $super+x exec $swaynag
+
+# Screenshot
+set $screenshot swayshot
+bindsym $super+Shift+s exec $screenshot
+
+# Explore
+set $explore thunar
+bindsym $super+e exec $explore
+
+
+################################################################################
+# Window
+################################################################################
+
+# Move focus around
+bindsym $super+$left focus left
+bindsym $super+$down focus down
+bindsym $super+$up focus up
+bindsym $super+$right focus right
+
+bindsym $super+Left focus left
+bindsym $super+Down focus down
+bindsym $super+Up focus up
+bindsym $super+Right focus right
+
+# Move the focused window
+bindsym $super+Shift+$left move left
+bindsym $super+Shift+$down move down
+bindsym $super+Shift+$up move up
+bindsym $super+Shift+$right move right
+
+
+################################################################################
+# Workspace
+################################################################################
+
+## Switch to workspace
+bindsym $super+1 workspace number 1
+bindsym $super+2 workspace number 2
+bindsym $super+3 workspace number 3
+bindsym $super+4 workspace number 4
+bindsym $super+5 workspace number 5
+bindsym $super+6 workspace number 6
+bindsym $super+7 workspace number 7
+bindsym $super+8 workspace number 8
+bindsym $super+9 workspace number 9
+bindsym $super+0 workspace number 10
+
+## Move focused container to workspace
+bindsym $super+Shift+1 move container to workspace number 1
+bindsym $super+Shift+2 move container to workspace number 2
+bindsym $super+Shift+3 move container to workspace number 3
+bindsym $super+Shift+4 move container to workspace number 4
+bindsym $super+Shift+5 move container to workspace number 5
+bindsym $super+Shift+6 move container to workspace number 6
+bindsym $super+Shift+7 move container to workspace number 7
+bindsym $super+Shift+8 move container to workspace number 8
+bindsym $super+Shift+9 move container to workspace number 9
+bindsym $super+Shift+0 move container to workspace number 10
+
+bindsym $super+Shift+Right workspace next
+bindsym $super+Shift+Left workspace prev
+
+
+################################################################################
+# Layout
+################################################################################
+
+set $layout "layout [h: splith] [v: splitv] [s: stacking] [t: tabbed] [f: floating toggle]"
+bindsym $mod+l mode $layout
+mode $layout {
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+	bindsym h layout splith; mode "default"
+	bindsym v layout splitv; mode "default"
+	bindsym s layout stacking; mode "default"
+	bindsym t layout tabbed; mode "default"
+	bindsym f floating toggle; mode "default"
+	bindsym x layout toggle stacking tabbed splith
+}
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+mode "resize" {
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+	bindsym $left resize shrink width 10 px or 10 ppt
+	bindsym $down resize grow height 10 px or 10 ppt
+	bindsym $up resize shrink height 10 px or 10 ppt
+	bindsym $right resize grow width 10 px or 10 ppt
+
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+}
+
+
+################################################################################
+# Status bar 
+################################################################################
+
+bar {
+	swaybar_command waybar
+}
+
+
+################################################################################
+# Input
+################################################################################
+
+input * {
+	xkb_layout "jp"
+}
+
+input type:touchpad {
+	tap enabled
+	natural_scroll enabled
+}
+
+input type:mouse {
+	accel_profile adaptive
+	pointer_accel 1
+}
+
+
+################################################################################
+# Mouse
+################################################################################
+
+focus_follows_mouse no
+focus_on_window_activation focus
+
+
+################################################################################
+# Other
+################################################################################
+
+# Notification
+exec mako
+
+# Japanese input
+exec fcitx5
+
+# Swayidle
+exec swayidle -w \
+	timeout 600 '$lock'
+
+include /etc/sway/config.d/*

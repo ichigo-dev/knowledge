@@ -1,0 +1,213 @@
+/* Fonts */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),  
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+  height:560px;  
+  overflow:hidden;
+  margin:0 auto;
+}
+
+body {
+  font-size:12px;
+  font-family:'robotoregular',sans-serif;
+  margin: 5px;
+  -webkit-user-select: none;
+  overflow:hidden;
+  width:350px;
+  background: #fafaff
+}
+.popup-center {
+  text-align: center;
+  margin: 0 auto;
+}
+#qrcode-href {
+  font-family:monaco,"ui-monospace";
+  width:320px;
+  height:99px;
+  border: 1px solid #C1C0B5;
+  border-color: #AAA #DDD #DDD #AAA;
+  background-color: #FAFAF0;
+  padding:3px;
+  outline:none;
+  visibility: hidden;
+}
+.high-qr {
+  margin: 12px 0 0 0;
+  /*text-align: left;*/
+  text-align: center;
+  /*font-weight: bold;*/
+  font-size:10px;
+}
+.high-qr svg {
+  width:24px;
+}
+.high-qr a{
+  color:#333;
+  padding: 12px 8px 2px;
+  border-radius: 18px;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: ease-in-out .2s all;
+}
+.high-qr span {
+  vertical-align: top;
+  margin-top: 1px;
+  display: inline-block;
+}
+.high-qr a:hover{
+  color:#000;
+  background: #ccf;
+  text-decoration: none;
+}
+.high-qr a#export:hover{
+  color:#000;
+  background: #FEEFAD;
+  border:1px solid #ccc;
+  border-width: 0 0 2px 0;
+}
+.high-qr a.hd:hover{
+  color:#000;
+  background: #CFE8DC;
+  border:1px solid #ccc;
+  border-width: 0 0 2px 0;
+}
+.high-qr a.withlogo:hover{
+  color:#000;
+  background: #FCE3E6;
+  border:1px solid #ccc;
+  border-width: 0 0 2px 0;
+}
+.high-qr a.bulk:hover{
+  color:#000;
+  background: #C8E3FF;
+  border:1px solid #ccc;
+  border-width: 0 0 2px 0;
+}
+#qrcode-href:focus {
+  border-color: black;
+}
+
+button#qrcode-regenerate {
+  margin:29px auto 0;
+  cursor:pointer;
+  padding:11px 35px;
+  font-size:18px;
+  font-weight:bold;
+  display: block;
+  border-radius: 50px;
+}
+button#qrcode-regenerate:hover {
+  color:#FF6;
+}
+button#qrcode-regenerate:active {
+  color:#FF6;
+  background:#339;
+}
+#qrcode-img-buffer {display:none}
+
+/* pure button
+Pure buttonf for the start button. we may decrease this later.
+ */
+.pure-button{display:block;zoom:1;line-height:normal;white-space:nowrap;vertical-align:baseline;text-align:center;cursor:pointer;-webkit-user-drag:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.pure-button::-moz-focus-inner{padding:0;border:0}
+.pure-button{font-size:100%;*font-size:90%;*overflow:visible;padding:.5em 1em;color:#444;color:rgba(0,0,0,.8);*color:#444;border:1px solid #999;border:0 rgba(0,0,0,0);background-color:#E6E6E6;text-decoration:none;border-radius:2px}
+.pure-button-hover,.pure-button:hover,.pure-button:focus{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);background-image:-webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));background-image:-webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));background-image:-moz-linear-gradient(top,rgba(0,0,0,.05) 0,rgba(0,0,0,.1));background-image:-o-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));background-image:linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1))}
+.pure-button:focus{outline:0}
+.pure-button-active,
+.pure-button:active{box-shadow:0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset}
+.pure-button[disabled],.pure-button-disabled,.pure-button-disabled:hover,.pure-button-disabled:focus,.pure-button-disabled:active{border:0;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);filter:alpha(opacity=40);-khtml-opacity:.4;-moz-opacity:.4;opacity:.4;cursor:not-allowed;box-shadow:none}
+.pure-button-hidden{display:none}
+.pure-button::-moz-focus-inner{padding:0;border:0}
+.pure-button-primary,.pure-button-selected,a.pure-button-primary,a.pure-button-selected{background-color:#0078e7;color:#fff}
+
+#qrcode-img {margin:25px 25px 9px 25px}
+
+/*a#export {font-size:10px;text-decoration: none; color:#999; cursor: pointer;display:inline-block;margin-top:5px;}*/
+/*a#export:hover {color:#000; background: #ffa}*/
+
+.popup-footer-right {
+  right:12px; color:#ccc;
+}
+.popup-footer-right a{
+  text-decoration:none; font-size:11px; color:#999
+}
+.popup-footer-right a:hover{
+  color:#333;
+}
+.popup-footer-left,.popup-footer-right {
+  position:absolute; bottom:31px;
+}
+.popup-footer-left { left:12px; color:#ccc; font-size: 10px
+}
+
+a {transition: ease-in-out .2s all;}
+
+#version_text {display:none;}
+#settings {color:#999;text-decoration: none;padding:25px 25px 25px 0;}
+#settings svg {vertical-align: middle}
+#settings:hover {color:#000;}
+#settings:hover svg path{
+  fill:#000;
+}
+
+#ctxt-only {display: none}
+.ctxt-only-style {text-align: center;position: initial;margin:0 auto;display: block;margin-top: 25px}
+
+#qrcode-img {height:300px;}
+#qrcode-img img{
+  position: relative;
+  max-height: 300px;
+  max-width:300px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#fixed_pop, #fixed_print {
+  width:16px;
+  position: absolute;
+  top:4px;
+  right: 4px;
+  cursor: pointer;
+  opacity: .1;
+  transition: ease-in-out .2s all;
+  display: none;
+}
+#fixed_pop:hover, #fixed_print:hover {
+  opacity: .6;
+}
+
+#fixed_print {
+  right: 25px;
+}
+
+#rate5 {
+  display:none;
+  margin: 14px 0 0 0;
+  padding: 0;
+  width: 200px;
+  color: #fff;
+  cursor: pointer;
+  font-size:14px;
+  height: 45px;
+  text-align: center;
+  border: none;
+  background-size: 400% 200%;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab);
+}
+#rate5:hover {
+  background-position: 100% 0;
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+#rate5 b {font-weight: normal}
+#rate5:hover:before {content:"Thank you ^_^";}
+#hide_reviews, #rate5:hover b {display:none;}
+

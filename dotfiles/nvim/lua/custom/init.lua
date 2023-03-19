@@ -21,7 +21,7 @@ diagnostic.config(
 })
 
 -- Highlight
-vim.api.nvim_set_hl(0, 'CmpDoc', { bg='gray20' })
+vim.api.nvim_set_hl(0, "CmpDoc", { bg="gray20" })
 
 -------------------------------------- autocmds ------------------------------------------
 local autocmd = vim.api.nvim_create_autocmd

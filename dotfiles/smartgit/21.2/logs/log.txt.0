@@ -1,0 +1,158 @@
+ 24 (2022-08-20 20:33:08) [main] INFO      smartgit.system - SmartGit version 21.2.3-18137-e6a16e0aa2af9a74d9b06a0ea1ae18fd86fa6460-jgit-3cfece903f373d9a56d3c89978a962593f832498-trilead-?
+ 26 (2022-08-20 20:33:08) [main] INFO      smartgit.system - SmartGit running build 18137
+ 26 (2022-08-20 20:33:08) [main] INFO      smartgit.system - SmartGit installed build 18137
+ 27 (2022-08-20 20:33:08) [main] INFO      smartgit.system - SVNKit version SVN/1.8.1 SVNKit/1.10.0 (http://svnkit.com/) rSNAPSHOT
+ 28 (2022-08-20 20:33:08) [main] INFO sc.command.line.parameters - 0 command line parameters:
+ 28 (2022-08-20 20:33:08) [main] INFO      smartgit.system - application root: /opt/smartgit
+ 28 (2022-08-20 20:33:08) [main] INFO      smartgit.system - defaults root   : /opt/smartgit/default
+ 28 (2022-08-20 20:33:08) [main] INFO      smartgit.system - settings root   : /home/ichigo/.config/smartgit/21.2
+ 28 (2022-08-20 20:33:08) [main] INFO      smartgit.system - .app directory  : null
+ 28 (2022-08-20 20:33:08) [main] WARNING      smartgit.system - Error reading /etc/lsb-release
+java.nio.file.NoSuchFileException: /etc/lsb-release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:155)
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2838)
+	at smartgit.aca.a(SourceFile:1019)
+	at smartgit.aca.a(SourceFile:1001)
+	at smartgit.aca.a(SourceFile:994)
+	at smartgit.aca.b(SourceFile:352)
+	at com.syntevo.smartgit.p.b(SourceFile:1289)
+	at com.syntevo.smartgit.p.a(SourceFile:178)
+	at smartgit.acF.b(SourceFile:68)
+	at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.syntevo.QBootLoader.main(SourceFile:115)
+
+ 29 (2022-08-20 20:33:08) [main] INFO      smartgit.system - Linux version: Arch Linux
+ 33 (2022-08-20 20:33:08) [main] INFO      smartgit.system - created temp directory /tmp/smartgit11084487102288253458
+ 60 (2022-08-20 20:33:08) [main] INFO             shutdown - Started hook Temp dir /tmp/smartgit11084487102288253458
+ 61 (2022-08-20 20:33:08) [main] INFO             shutdown - Started hook Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995188879.tmp
+ 61 (2022-08-20 20:33:08) [Temp dir /tmp/smartgit11084487102288253458] INFO             shutdown - Running hook Temp dir /tmp/smartgit11084487102288253458
+ 27 (2022-08-20 20:33:13) [main] INFO      smartgit.system - SmartGit version 21.2.3-18137-e6a16e0aa2af9a74d9b06a0ea1ae18fd86fa6460-jgit-3cfece903f373d9a56d3c89978a962593f832498-trilead-?
+ 29 (2022-08-20 20:33:13) [main] INFO      smartgit.system - SmartGit running build 18137
+ 30 (2022-08-20 20:33:13) [main] INFO      smartgit.system - SmartGit installed build 18137
+ 30 (2022-08-20 20:33:13) [main] INFO      smartgit.system - SVNKit version SVN/1.8.1 SVNKit/1.10.0 (http://svnkit.com/) rSNAPSHOT
+ 31 (2022-08-20 20:33:13) [main] INFO sc.command.line.parameters - 0 command line parameters:
+ 31 (2022-08-20 20:33:13) [main] INFO      smartgit.system - application root: /opt/smartgit
+ 31 (2022-08-20 20:33:13) [main] INFO      smartgit.system - defaults root   : /opt/smartgit/default
+ 32 (2022-08-20 20:33:13) [main] INFO      smartgit.system - settings root   : /home/ichigo/.config/smartgit/21.2
+ 32 (2022-08-20 20:33:13) [main] INFO      smartgit.system - .app directory  : null
+ 32 (2022-08-20 20:33:13) [main] WARNING      smartgit.system - Error reading /etc/lsb-release
+java.nio.file.NoSuchFileException: /etc/lsb-release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:155)
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2838)
+	at smartgit.aca.a(SourceFile:1019)
+	at smartgit.aca.a(SourceFile:1001)
+	at smartgit.aca.a(SourceFile:994)
+	at smartgit.aca.b(SourceFile:352)
+	at com.syntevo.smartgit.p.b(SourceFile:1289)
+	at com.syntevo.smartgit.p.a(SourceFile:178)
+	at smartgit.acF.b(SourceFile:68)
+	at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.syntevo.QBootLoader.main(SourceFile:115)
+
+ 33 (2022-08-20 20:33:13) [main] INFO      smartgit.system - Linux version: Arch Linux
+ 37 (2022-08-20 20:33:13) [main] INFO      smartgit.system - created temp directory /tmp/smartgit11243014007344225845
+ 55 (2022-08-20 20:33:13) [main] INFO             shutdown - Started hook Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995193648.tmp
+ 55 (2022-08-20 20:33:13) [main] INFO             shutdown - Started hook Temp dir /tmp/smartgit11243014007344225845
+ 56 (2022-08-20 20:33:13) [Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995193648.tmp] INFO             shutdown - Running hook Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995193648.tmp
+ 27 (2022-08-20 20:33:22) [main] INFO      smartgit.system - SmartGit version 21.2.3-18137-e6a16e0aa2af9a74d9b06a0ea1ae18fd86fa6460-jgit-3cfece903f373d9a56d3c89978a962593f832498-trilead-?
+ 29 (2022-08-20 20:33:22) [main] INFO      smartgit.system - SmartGit running build 18137
+ 29 (2022-08-20 20:33:22) [main] INFO      smartgit.system - SmartGit installed build 18137
+ 30 (2022-08-20 20:33:22) [main] INFO      smartgit.system - SVNKit version SVN/1.8.1 SVNKit/1.10.0 (http://svnkit.com/) rSNAPSHOT
+ 30 (2022-08-20 20:33:22) [main] INFO sc.command.line.parameters - 1 command line parameters:
+ 32 (2022-08-20 20:33:22) [main] INFO sc.command.line.parameters -  '--help'
+ 32 (2022-08-20 20:33:22) [main] INFO      smartgit.system - application root: /opt/smartgit
+ 32 (2022-08-20 20:33:22) [main] INFO      smartgit.system - defaults root   : /opt/smartgit/default
+ 32 (2022-08-20 20:33:22) [main] INFO      smartgit.system - settings root   : /home/ichigo/.config/smartgit/21.2
+ 32 (2022-08-20 20:33:22) [main] INFO      smartgit.system - .app directory  : null
+ 32 (2022-08-20 20:33:22) [main] WARNING      smartgit.system - Error reading /etc/lsb-release
+java.nio.file.NoSuchFileException: /etc/lsb-release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:155)
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2838)
+	at smartgit.aca.a(SourceFile:1019)
+	at smartgit.aca.a(SourceFile:1001)
+	at smartgit.aca.a(SourceFile:994)
+	at smartgit.aca.b(SourceFile:352)
+	at com.syntevo.smartgit.p.b(SourceFile:1289)
+	at com.syntevo.smartgit.p.a(SourceFile:178)
+	at smartgit.acF.b(SourceFile:68)
+	at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.syntevo.QBootLoader.main(SourceFile:115)
+
+ 33 (2022-08-20 20:33:22) [main] INFO      smartgit.system - Linux version: Arch Linux
+ 38 (2022-08-20 20:33:22) [main] INFO      smartgit.system - created temp directory /tmp/smartgit3528216337994979946
+ 44 (2022-08-20 20:33:22) [DestroyJavaVM] INFO             shutdown - Started hook Temp dir /tmp/smartgit3528216337994979946
+ 44 (2022-08-20 20:33:22) [DestroyJavaVM] INFO             shutdown - Started hook Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995202586.tmp
+ 46 (2022-08-20 20:33:22) [Temp dir /tmp/smartgit3528216337994979946] INFO             shutdown - Running hook Temp dir /tmp/smartgit3528216337994979946
+ 26 (2022-08-20 20:33:30) [main] INFO      smartgit.system - SmartGit version 21.2.3-18137-e6a16e0aa2af9a74d9b06a0ea1ae18fd86fa6460-jgit-3cfece903f373d9a56d3c89978a962593f832498-trilead-?
+ 28 (2022-08-20 20:33:30) [main] INFO      smartgit.system - SmartGit running build 18137
+ 28 (2022-08-20 20:33:30) [main] INFO      smartgit.system - SmartGit installed build 18137
+ 29 (2022-08-20 20:33:30) [main] INFO      smartgit.system - SVNKit version SVN/1.8.1 SVNKit/1.10.0 (http://svnkit.com/) rSNAPSHOT
+ 30 (2022-08-20 20:33:30) [main] INFO sc.command.line.parameters - 1 command line parameters:
+ 31 (2022-08-20 20:33:30) [main] INFO sc.command.line.parameters -  '--open'
+ 31 (2022-08-20 20:33:30) [main] INFO      smartgit.system - application root: /opt/smartgit
+ 31 (2022-08-20 20:33:30) [main] INFO      smartgit.system - defaults root   : /opt/smartgit/default
+ 31 (2022-08-20 20:33:30) [main] INFO      smartgit.system - settings root   : /home/ichigo/.config/smartgit/21.2
+ 31 (2022-08-20 20:33:30) [main] INFO      smartgit.system - .app directory  : null
+ 31 (2022-08-20 20:33:30) [main] WARNING      smartgit.system - Error reading /etc/lsb-release
+java.nio.file.NoSuchFileException: /etc/lsb-release
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:155)
+	at java.base/java.nio.file.Files.newBufferedReader(Files.java:2838)
+	at smartgit.aca.a(SourceFile:1019)
+	at smartgit.aca.a(SourceFile:1001)
+	at smartgit.aca.a(SourceFile:994)
+	at smartgit.aca.b(SourceFile:352)
+	at com.syntevo.smartgit.p.b(SourceFile:1289)
+	at com.syntevo.smartgit.p.a(SourceFile:178)
+	at smartgit.acF.b(SourceFile:68)
+	at com.syntevo.smartgit.SmartGit.main(SourceFile:11)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.syntevo.QBootLoader.main(SourceFile:115)
+
+ 32 (2022-08-20 20:33:30) [main] INFO      smartgit.system - Linux version: Arch Linux
+ 37 (2022-08-20 20:33:30) [main] INFO      smartgit.system - created temp directory /tmp/smartgit131067745237445582
+ 38 (2022-08-20 20:33:30) [main] INFO             shutdown - Started hook Temp dir /tmp/smartgit131067745237445582
+ 39 (2022-08-20 20:33:30) [main] INFO             shutdown - Started hook Bug file /home/ichigo/.config/smartgit/21.2/~current-log.1660995210146.tmp
+ 39 (2022-08-20 20:33:30) [Temp dir /tmp/smartgit131067745237445582] INFO             shutdown - Running hook Temp dir /tmp/smartgit131067745237445582

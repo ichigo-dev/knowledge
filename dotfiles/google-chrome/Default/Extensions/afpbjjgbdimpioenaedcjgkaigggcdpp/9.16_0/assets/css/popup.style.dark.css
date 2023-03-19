@@ -1,0 +1,48 @@
+body {
+  background:#333;
+}
+.high-qr a {
+  color: #aaa;
+}
+
+#settings:hover {color:#fff;}
+#settings:hover svg path{
+  fill:#fff;
+}
+
+.popup-footer-right a:hover{
+  color:#fff;
+}
+#fixed_pop svg path,
+#fixed_print svg path{
+  fill:#fff;
+}
+#qrcode-href {
+  background: #000;
+  color: beige;
+  outline: none;
+  border: 1px solid #666;
+}
+
+.high-qr a#export:hover,
+.high-qr a.withlogo:hover,
+.high-qr a.bulk:hover,
+.high-qr a.hd:hover{
+  color:#aaa;
+  background: #000;
+  border:1px solid #000;
+  border-width: 0 0 2px 0;
+  transition: none;
+}
+
+button#qrcode-regenerate {
+  background-color: #0078e7ee;
+  color: #ffffffee;
+}
+
+#qrcode-img img {
+  opacity: .9;
+}
+#qrcode-href {
+  opacity: .8;
+}

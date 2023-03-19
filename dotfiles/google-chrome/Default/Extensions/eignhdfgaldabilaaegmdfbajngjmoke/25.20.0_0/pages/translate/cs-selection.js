@@ -1,0 +1,1 @@
+"use strict";window.getSelection().toString();

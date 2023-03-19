@@ -1,0 +1,7 @@
+2022/08/21-20:40:08.060 1a54 Reusing MANIFEST /home/ichigo/.config/chromium/Default/IndexedDB/https_qiita.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/21-20:40:08.060 1a54 Recovering log #3
+2022/08/21-20:40:08.061 1a54 Reusing old log /home/ichigo/.config/chromium/Default/IndexedDB/https_qiita.com_0.indexeddb.leveldb/000003.log 
+2022/08/21-20:40:40.628 1a54 Level-0 table #5: started
+2022/08/21-20:40:40.630 1a54 Level-0 table #5: 3632 bytes OK
+2022/08/21-20:40:40.633 1a54 Delete type=0 #3
+2022/08/21-20:40:40.633 1a54 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

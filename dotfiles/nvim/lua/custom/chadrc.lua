@@ -19,6 +19,10 @@ M.ui = {
   tabufline = {
     enable = true,
   },
+
+  cmp = {
+    style = "default",
+  },
 }
 
 M.plugins = "custom.plugins"
