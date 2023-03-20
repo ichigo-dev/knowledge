@@ -1,6 +1,6 @@
 # 『Linux』ノート
 
-（最終更新： 2023-03-05）
+（最終更新： 2023-03-20）
 
 
 ## 目次
@@ -25,19 +25,19 @@
 
 ## Linux
 
-**Linux**は、Linus Torvaldsによって実装されたOSであり、サーバ用から組み込み機器用、学習用、デスクトップ用など、幅広い用途で利用されている。設計はUNIXに非常に似ているものの、System Vの流れもBSDの流れも汲まない独自のUNIX互換OSとして開発された。
+**Linux**は、Linus Torvaldsによって実装された[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)であり、[サーバ](../../../_/chapters/computer.md#サーバ)用から組み込み機器用、学習用、デスクトップ用など、幅広い用途で利用されている。設計は[UNIX](../../../software/_/chapters/operating_system.md#unix)に非常に似ているものの、[System V](../../../software/_/chapters/operating_system.md#unix)の流れも[BSD](../../../software/_/chapters/operating_system.md#unix)の流れも汲まない独自の[UNIX互換OS](../../../software/_/chapters/operating_system.md#unix)として開発された。
 
-UNIXは高いライセンス使用料が必要であり、個人用として利用するには敷居が高いが、LinuxはGPLライセンスであり誰でも無償で利用することができる。さらに、ソースコードの改変や再配布も自由に行えたため多くのディストリビュータにより改良され、一般に広まることとなった。
+[UNIX](../../../software/_/chapters/operating_system.md#unix)は高いライセンス使用料が必要であり、個人用として利用するには敷居が高いが、Linuxは[GPLライセンス](../../../software/_/chapters/open_source_software.md#gpl)であり誰でも無償で利用することができる。さらに、[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)の改変や再配布も自由に行えたため多くの[ディストリビュータ](#ディストリビュータ)により改良され、一般に広まることとなった。
 
-また、Linuxには高品質のソフトウェアが多く揃っているため、大変使いやすいOSとなっている。
+また、Linuxには高品質の[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)が多く揃っているため、大変使いやすい[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)となっている。
 
 ### 狭義のLinux
 
-**狭義のLinux**は、Linuxカーネルを指す言葉。OSの中核となる、ハードウェア制御を行うソフトウェアのみを指し、実際にユーザが用いるツールやアプリケーションは含まれない。
+**狭義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)を指す言葉。[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)の中核となる、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)制御を行う[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)のみを指し、実際にユーザが用いるツールや[アプリケーション](../../../software/_/chapters/#応用ソフトウェア)は含まれない。
 
 ### 広義のLinux
 
-**広義のLinux**は、Linuxカーネルに加えて、基本的なコマンド群やアプリケーションなどを含めて、ユーザがそのまま利用できるようにパッケージングして提供されたものを指す言葉。一般的には、単にLinuxというときには、広義のLinuxのことを指す場合が多い。
+**広義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)に加えて、基本的な[コマンド](./basic_command.md#コマンド)群や[アプリケーション](../../../software/_/chapters/#応用ソフトウェア)などを含めて、ユーザがそのまま利用できるようにパッケージングして提供されたものを指す言葉。一般的には、単に[Linux](#linux)というときには、広義のLinuxのことを指す場合が多い。
 
 
 ## ディストリビューション

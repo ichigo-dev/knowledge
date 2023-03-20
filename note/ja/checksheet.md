@@ -1290,3 +1290,11 @@
 	- [ ] [PCM](./computer/software/_/chapters/multimedia.md#マルチメディアデータの標準形式)
 	- [ ] [WAV](./computer/software/_/chapters/multimedia.md#マルチメディアデータの標準形式)
 	- [ ] [MIDI](./computer/software/_/chapters/multimedia.md#マルチメディアデータの標準形式)
+
+### Linux
+
+#### Linux
+
+- [ ] [Linux](./computer/linux/_/chapters/linux.md#linux)
+	- [ ] [狭義のLinux](./computer/linux/_/chapters/linux.md#狭義のlinux)
+	- [ ] [広義のLinux](./computer/linux/_/chapters/linux.md#広義のlinux)
