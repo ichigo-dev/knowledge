@@ -1311,3 +1311,6 @@
 	- [ ] [Slackware系](./computer/linux/_/chapters/linux.md#slackware系)
 		- [ ] [Slackware](./computer/linux/_/chapters/linux.md#slackware系)
 		- [ ] [openSUSE](./computer/linux/_/chapters/linux.md#slackware系)
+	- [ ] [独立系](./computer/linux/_/chapters/linux.md#独立系)
+		- [ ] [Arch Linux](./computer/linux/_/chapters/linux.md#独立系)
+- [ ] [パッケージ](./computer/linux/_/chapters/linux.md#パッケージ)
