@@ -1314,3 +1314,19 @@
 	- [ ] [独立系](./computer/linux/_/chapters/linux.md#独立系)
 		- [ ] [Arch Linux](./computer/linux/_/chapters/linux.md#独立系)
 - [ ] [パッケージ](./computer/linux/_/chapters/linux.md#パッケージ)
+	- [ ] [パッケージマネージャ](./computer/linux/_/chapters/linux.md#パッケージマネージャ)
+	- [ ] [RPM(RPM Package Manager)](./computer/linux/_/chapters/linux.md#rpm)
+	- [ ] [yum(Yellowdog Updater Modified)](./computer/linux/_/chapters/linux.md#yum)
+	- [ ] [dnf(Dandified yum)](./computer/linux/_/chapters/linux.md#dnf)
+	- [ ] [dpkg](./computer/linux/_/chapters/linux.md#dpkg)
+	- [ ] [apt](./computer/linux/_/chapters/linux.md#apt)
+
+#### シェルとターミナル
+
+- [ ] [シェル](./computer/linux/_/chapters/shell_and_terminal.md#シェル)
+	- [ ] [ログインシェル](./computer/linux/_/chapters/shell_and_terminal.md#ログインシェル)
+		- [ ] [SHELL環境変数](./computer/linux/_/chapters/shell_and_terminal.md#ログインシェル)
+		- [ ] [chsh](./computer/linux/_/chapters/shell_and_terminal.md#ログインシェル)
+	- [ ] [プロンプト](./computer/linux/_/chapters/shell_and_terminal.md#プロンプト)
+		- [ ] [PROMPT、RPROMPT環境変数](./computer/linux/_/chapters/shell_and_terminal.md#プロンプト)
+		- [ ] [セカンダリプロンプト](./computer/linux/_/chapters/shell_and_terminal.md#プロンプト)
