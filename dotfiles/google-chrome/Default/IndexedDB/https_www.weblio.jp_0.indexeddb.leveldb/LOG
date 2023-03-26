@@ -1,6 +1,0 @@
-2023/02/12-12:32:26.433 1e23 Creating DB /home/ichigo/.config/google-chrome/Default/IndexedDB/https_www.weblio.jp_0.indexeddb.leveldb since it was missing.
-2023/02/12-12:32:26.436 1e23 Reusing MANIFEST /home/ichigo/.config/google-chrome/Default/IndexedDB/https_www.weblio.jp_0.indexeddb.leveldb/MANIFEST-000001
-2023/02/12-12:32:55.037 1de3 Level-0 table #5: started
-2023/02/12-12:32:55.039 1de3 Level-0 table #5: 377 bytes OK
-2023/02/12-12:32:55.041 1de3 Delete type=0 #3
-2023/02/12-12:32:55.041 1de3 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,1 +1,0 @@
-"use strict";!function(){var e=window,t=e.location,o="undefined"!=typeof chrome&&chrome||{};e.top!==e.self&&"https://pay.google.com"===t.origin&&t.pathname.startsWith("/webrequestcheck_")&&(o=o.runtime.getURL("PATH/").replace("/PATH/",""),"object"!=typeof(t=t.ancestorOrigins)||1===t.length&&t[0]===o)&&e.parent.postMessage({bm_method:"webrequestcheck"},o)}();

@@ -1,7 +1,0 @@
-2023/02/06-14:57:36.954 3530 Reusing MANIFEST /home/ichigo/.config/google-chrome/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2023/02/06-14:57:36.954 3530 Recovering log #3
-2023/02/06-14:57:36.954 3530 Reusing old log /home/ichigo/.config/google-chrome/Default/IndexedDB/https_calendar.google.com_0.indexeddb.leveldb/000003.log 
-2023/02/06-14:57:52.812 3530 Level-0 table #5: started
-2023/02/06-14:57:52.813 3530 Level-0 table #5: 1651 bytes OK
-2023/02/06-14:57:52.815 3530 Delete type=0 #3
-2023/02/06-14:57:52.815 3530 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

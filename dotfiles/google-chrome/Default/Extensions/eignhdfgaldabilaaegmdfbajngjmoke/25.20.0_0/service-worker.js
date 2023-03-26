@@ -1,1 +1,0 @@
-"use strict";!function(){self;var s=["/scripts/cj-basics.js","/scripts/basic-templates.js","/scripts/cjg-apis.js","/scripts/background.js"];if("undefined"!=typeof importScripts)try{importScripts.apply(void 0,s)}catch(s){}else for(var t=0;t<s.length;t++){var c=document.createElement("script");c.src=s[t],document.body.appendChild(c)}}();
