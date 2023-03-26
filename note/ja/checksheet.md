@@ -1429,3 +1429,13 @@
 		- [ ] [iノード](./computer/linux/_/chapters/file.md#ハードリンク)
 		- [ ] [iノード番号](./computer/linux/_/chapters/file.md#ハードリンク)
 - [ ] [ファイルディスクリプタ](./computer/linux/_/chapters/file.md#ファイルディスクリプタ)
+
+#### ユーザと権限
+
+- [ ] [ユーザ](./computer/linux/_/chapters/user_and_permission.md#ユーザ)
+	- [ ] [UID](./computer/linux/_/chapters/user_and_permission.md#ユーザ)
+- [ ] [whoami](./computer/linux/_/chapters/user_and_permission.md#ユーザ名の確認)
+- [ ] [useradd](./computer/linux/_/chapters/user_and_permission.md#ユーザの作成)
+- [ ] [usermod](./computer/linux/_/chapters/user_and_permission.md#ユーザの変更)
+- [ ] [userdel](./computer/linux/_/chapters/user_and_permission.md#ユーザの削除)
+- [ ] [passwd](./computer/linux/_/chapters/user_and_permission.md#ユーザパスワードの変更)
