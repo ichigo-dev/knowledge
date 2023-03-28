@@ -1467,3 +1467,6 @@
 	- [ ] [インサートモード](./computer/linux/_/chapters/text_editor.md#vim)
 	- [ ] [ビジュアルモード](./computer/linux/_/chapters/text_editor.md#vim)
 	- [ ] [セレクションモード（矩形選択モード）](./computer/linux/_/chapters/text_editor.md#vim)
+	- [ ] [コマンドラインモード](./computer/linux/_/chapters/text_editor.md#vim)
+- [ ] [Emacs](./computer/linux/_/chapters/text_editor.md#emacs)
+- [ ] [nano](./computer/linux/_/chapters/text_editor.md#nano)
