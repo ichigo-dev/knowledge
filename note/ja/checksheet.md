@@ -1458,3 +1458,12 @@
 - [ ] [rootユーザ（スーパーユーザ）](./computer/linux/_/chapters/user_and_permission.md#rootユーザ)
 	- [ ] [su](./computer/linux/_/chapters/user_and_permission.md#rootユーザへの切り替え)
 	- [ ] [sudo](./computer/linux/_/chapters/user_and_permission.md#rootユーザとしてコマンド実行)
+
+#### テキストエディタ
+
+- [ ] [vi](./computer/linux/_/chapters/text_editor.md#vi)
+	- [ ] [vim](./computer/linux/_/chapters/text_editor.md#vim)
+	- [ ] [ノーマルモード](./computer/linux/_/chapters/text_editor.md#vim)
+	- [ ] [インサートモード](./computer/linux/_/chapters/text_editor.md#vim)
+	- [ ] [ビジュアルモード](./computer/linux/_/chapters/text_editor.md#vim)
+	- [ ] [セレクションモード（矩形選択モード）](./computer/linux/_/chapters/text_editor.md#vim)
