@@ -1532,3 +1532,14 @@
 		- [ ] [semget](./computer/linux/_/chapters/process_and_job.md#セマフォ)
 		- [ ] [semop](./computer/linux/_/chapters/process_and_job.md#セマフォ)
 		- [ ] [semctl](./computer/linux/_/chapters/process_and_job.md#セマフォ)
+
+#### 標準入出力とパイプライン
+
+- [ ] [標準入出力(stdio: standard input/output)](./computer/linux/_/chapters/process_and_job.md#標準入出力)
+	- [ ] [標準入力(stdin: standard input)](./computer/linux/_/chapters/process_and_job.md#標準入力)
+	- [ ] [標準出力(stdout: standard output)](./computer/linux/_/chapters/process_and_job.md#標準出力)
+	- [ ] [標準エラー出力(stderr: standard error output)](./computer/linux/_/chapters/process_and_job.md#標準エラー出力)
+- [ ] [リダイレクト](./computer/linux/_/chapters/process_and_job.md#リダイレクト)
+	- [ ] [nullデバイス(/dev/null)](./computer/linux/_/chapters/process_and_job.md#nullデバイス)
+- [ ] [パイプライン](./computer/linux/_/chapters/process_and_job.md#パイプライン)
+- [ ] [フィルタ](./computer/linux/_/chapters/process_and_job.md#フィルタ)
