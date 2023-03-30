@@ -1543,3 +1543,7 @@
 	- [ ] [nullデバイス(/dev/null)](./computer/linux/_/chapters/process_and_job.md#nullデバイス)
 - [ ] [パイプライン](./computer/linux/_/chapters/process_and_job.md#パイプライン)
 - [ ] [フィルタ](./computer/linux/_/chapters/process_and_job.md#フィルタ)
+
+#### テキスト処理と正規表現
+
+- [ ] [wc](./computer/linux/_/chapters/process_and_job.md#ファイルサイズの確認)
