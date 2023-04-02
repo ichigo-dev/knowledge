@@ -1246,6 +1246,7 @@
 - [ ] [ライブラリ](./computer/software/_/chapters/package.md#ライブラリ)
 	- [ ] [標準ライブラリ](./computer/software/_/chapters/package.md#標準ライブラリ)
 	- [ ] [サードパーティ製ライブラリ](./computer/software/_/chapters/package.md#サードパーティ製ライブラリ)
+- [ ] [プラグイン](./computer/software/_/chapters/package.md#プラグイン)
 - [ ] [フレームワーク](./computer/software/_/chapters/package.md#フレームワーク)
 
 #### オープンソースソフトウェア
