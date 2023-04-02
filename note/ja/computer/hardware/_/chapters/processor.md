@@ -264,7 +264,7 @@
 **内部割込み**（**ソフトウェア割込み**）は、実行中の[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の内部からの[割込み](#割込み)。
 
 - **プログラム割込み** : [プログラム](../../../../programming/_/chapters/programming.md#プログラム)内で0除算や[オーバフロー](../../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#オーバフロー)が起こったときに発生
-- **SVC割込み** : **SVC**(Super Visor Call)とは、[カーネル](../../../software/_/chapters/operating_system.md#カーネル)を呼び出すための命令のこと。[プログラム](../../../../programming/_/chapters/programming.md#プログラム)が[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)に処理を依頼するときに行われる
+- **SVC割込み** : **SVC**(Super Visor Call)とは、[カーネル](../../../software/_/chapters/operating_system.md#カーネル)を呼び出すための命令。[プログラム](../../../../programming/_/chapters/programming.md#プログラム)が[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)に処理を依頼するときに行われる
 - **ページフォールト** : [仮想記憶管理](../../../software/_/chapters/operating_system.md#仮想記憶管理)において、存在しない[ページ](../../../software/_/chapters/operating_system.md#ページ)にアクセスするときに行われる
 
 ### 外部割込み

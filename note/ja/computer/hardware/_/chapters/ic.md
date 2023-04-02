@@ -1,6 +1,6 @@
 # 『IC』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-04-03）
 
 
 ## 目次
@@ -28,7 +28,7 @@
 
 ### カスタムIC
 
-**カスタムIC**は、利用者が要求する特定の用途に特化した[IC](#ic)のこと。製造するときに回路設計を決定する**ASIC**(Application Specific Integrated Circuit)や、製造後に回路を変更できる**FPGA**(Field-Programmable Gate Array)がある。FPGAの構成を記述するハードウェア言語として**HDL**(Hardware Description Language)を用いる。
+**カスタムIC**は、利用者が要求する特定の用途に特化した[IC](#ic)。製造するときに回路設計を決定する**ASIC**(Application Specific Integrated Circuit)や、製造後に回路を変更できる**FPGA**(Field-Programmable Gate Array)がある。FPGAの構成を記述するハードウェア言語として**HDL**(Hardware Description Language)を用いる。
 
 ### システムLSI
 

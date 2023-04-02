@@ -1,6 +1,6 @@
 # 『メモリ』ノート
 
-（最終更新： 2023-03-09）
+（最終更新： 2023-04-03）
 
 
 ## 目次
@@ -113,7 +113,7 @@
 
 ### ヒット率
 
-**ヒット率**は、[キャッシュメモリ](#キャッシュメモリ)を用いて[CPU](./processor.md#cpu)と[メモリ](#メモリ)がやり取りをするときに、データが[キャッシュメモリ](#キャッシュメモリ)上にある[確率](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)のこと。ヒット率が高いほど[キャッシュメモリ](#キャッシュメモリ)が使用される[確率](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)が高く、高速な処理が可能となる。
+**ヒット率**は、[キャッシュメモリ](#キャッシュメモリ)を用いて[CPU](./processor.md#cpu)と[メモリ](#メモリ)がやり取りをするときに、データが[キャッシュメモリ](#キャッシュメモリ)上にある[確率](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)。ヒット率が高いほど[キャッシュメモリ](#キャッシュメモリ)が使用される[確率](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)が高く、高速な処理が可能となる。
 
 一方で、呼び出したいデータが[キャッシュメモリ](#キャッシュメモリ)上に無い[確率](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)を**NFP**(Not Found Probability)という。
 
