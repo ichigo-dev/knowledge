@@ -1548,3 +1548,5 @@
 #### テキスト処理と正規表現
 
 - [ ] [wc](./computer/linux/_/chapters/process_and_job.md#ファイルサイズの確認)
+- [ ] [sort](./computer/linux/_/chapters/process_and_job.md#ファイル行のソート)
+- [ ] [cut](./computer/linux/_/chapters/process_and_job.md#テキストの切り出し)
