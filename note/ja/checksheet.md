@@ -1557,3 +1557,11 @@
 - [ ] [正規表現](./computer/linux/_/chapters/process_and_job.md#正規表現)
 	- [ ] [リテラル](./computer/linux/_/chapters/process_and_job.md#正規表現)
 	- [ ] [メタ文字](./computer/linux/_/chapters/process_and_job.md#正規表現)
+
+#### シェルスクリプト
+
+- [ ] [シェルスクリプト](./computer/linux/_/chapters/shell_script.md#シェルスクリプト)
+	- [ ] [シバン](./computer/linux/_/chapters/shell_script.md#シバン)
+	- [ ] [source](./computer/linux/_/chapters/shell_script.md#シェルスクリプトの実行)
+	- [ ] [コマンド置換](./computer/linux/_/chapters/shell_script.md#コマンド置換)
+	- [ ] [位置パラメータ](./computer/linux/_/chapters/shell_script.md#位置パラメータ)
