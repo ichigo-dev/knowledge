@@ -1574,3 +1574,21 @@
 - [ ] [システム](./system/_/chapters/system.md#システム)
 	- [ ] [サブシステム](./system/_/chapters/system.md#サブシステム)
 - [ ] [ビジネスロジック](./system/_/chapters/system.md#ビジネスロジック)
+
+### システムの処理形態
+
+- [ ] [集中処理](./system/_/chapters/system_processing_model.md#集中処理)
+	- [ ] [集中システム(Centralized System)](./system/_/chapters/system_processing_model.md#集中システム)
+	- [ ] [バッチ処理](./system/_/chapters/system_processing_model.md#バッチ処理)
+	- [ ] [リアルタイム処理](./system/_/chapters/system_processing_model.md#リアルタイム処理)
+	- [ ] [対話型処理](./system/_/chapters/system_processing_model.md#対話型処理)
+	- [ ] [リアルタイム制御処理](./system/_/chapters/system_processing_model.md#リアルタイム制御処理)
+	- [ ] [トランザクション処理（オンライントランザクション処理、OLTP）](./system/_/chapters/system_processing_model.md#トランザクション処理)
+	- [ ] [ACID特性(Atomicity, Consistency, Isolation, Durability](./system/_/chapters/system_processing_model.md#acid特性)
+		- [ ] [原始性・不可分性(Atomicity)](./system/_/chapters/system_processing_model.md#acid特性)
+		- [ ] [一貫性(Consistency)](./system/_/chapters/system_processing_model.md#acid特性)
+			- [ ] [強整合性](./system/_/chapters/system_processing_model.md#acid特性)
+		- [ ] [独立性・隔離性(Isolation)](./system/_/chapters/system_processing_model.md#acid特性)
+		- [ ] [永続性・持続性(Durability)](./system/_/chapters/system_processing_model.md#acid特性)
+			- [ ] [AFR（年間故障率）](./system/_/chapters/system_processing_model.md#acid特性)
+		- [ ] [結果整合性](./system/_/chapters/system_processing_model.md#acid特性)
