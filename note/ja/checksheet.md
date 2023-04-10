@@ -1618,3 +1618,18 @@
 		- [ ] [プレゼンテーション層](./system/_/chapters/system_processing_model.md#3層クライアントサーバシステム)
 		- [ ] [ファンクション層](./system/_/chapters/system_processing_model.md#3層クライアントサーバシステム)
 		- [ ] [データベース層](./system/_/chapters/system_processing_model.md#3層クライアントサーバシステム)
+	- [ ] [ストアドプロシージャ](./system/_/chapters/system_processing_model.md#ストアドプロシージャ)
+	- [ ] [シンクライアントシステム](./system/_/chapters/system_processing_model.md#シンクライアントシステム)
+
+### システム構成
+
+- [ ] [冗長性(Redundancy)、多重化](./system/_/chapters/system_architecture.md#冗長化)
+	- [ ] [冗長化](./system/_/chapters/system_architecture.md#冗長化)
+- [ ] [単一障害点(SPOF: Single Point Of Failure)](./system/_/chapters/system_architecture.md#単一障害点)
+- [ ] [TSS（タイムシェアリングシステム）](./system/_/chapters/system_architecture.md#tss)
+- [ ] [シンプレックスシステム](./system/_/chapters/system_architecture.md#シンプレックスシステム)
+- [ ] [デュアルシステム](./system/_/chapters/system_architecture.md#デュアルシステム)
+- [ ] [デュプレックスシステム](./system/_/chapters/system_architecture.md#デュプレックスシステム)
+	- [ ] [ホットスタンバイ](./system/_/chapters/system_architecture.md#ホットスタンバイ)
+	- [ ] [ウォームスタンバイ](./system/_/chapters/system_architecture.md#ホットスタンバイ)
+	- [ ] [コールドスタンバイ](./system/_/chapters/system_architecture.md#ホットスタンバイ)

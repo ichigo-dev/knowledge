@@ -53,3 +53,4 @@
 
 ストレージ(hardware)
 デバイスファイル(linux)
+フェイルオーバ(system)
