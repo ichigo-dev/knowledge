@@ -1686,3 +1686,16 @@
 - [ ] [SAN(Storage Area Network)](./system/_/chapters/raid.md#san)
 	- [ ] [ファイバチャネル](./system/_/chapters/raid.md#san)
 - [ ] [NAS(Network Attached Storage)](./system/_/chapters/raid.md#nas)
+
+### 信頼性設計
+
+- [ ] [フォールトトレランス（耐障害性: Fault tolerance）](./system/_/chapters/reliability_design.md#フォールトトレランス)
+- [ ] [フォールトアボイダンス（障害回避: Fault avoidance）](./system/_/chapters/reliability_design.md#フォールトアボイダンス)
+- [ ] [フェールセーフ](./system/_/chapters/reliability_design.md#フェールセーフ)
+- [ ] [フェールソフト](./system/_/chapters/reliability_design.md#フェールソフト)
+	- [ ] [フォールバック（縮退運転）](./system/_/chapters/reliability_design.md#フェールソフト)
+- [ ] [フォールトマスキング](./system/_/chapters/reliability_design.md#フォールトマスキング)
+- [ ] [フールプルーフ](./system/_/chapters/reliability_design.md#フールプルーフ)
+- [ ] [フェールオーバ](./system/_/chapters/reliability_design.md#フェールオーバ)
+	- [ ] [仮想IPアドレス(VIP: Virtual IP Address)](./system/_/chapters/reliability_design.md#フェールオーバ)
+	- [ ] [ヘルスチェック](./system/_/chapters/reliability_design.md#ヘルスチェック)
