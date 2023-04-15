@@ -51,8 +51,8 @@
 
 ### メモ
 
-ストレージ(hardware)
-デバイスファイル(linux)
-フェイルオーバ(system)
-IoT
-RAIDのイメージをつくる
+- ストレージ(hardware)
+- デバイスファイル(linux)
+- フェイルオーバ(system)
+- IoT
+- RAIDのイメージをつくる
