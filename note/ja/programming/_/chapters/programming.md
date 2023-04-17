@@ -1,6 +1,6 @@
 # 『プログラミング』ノート
 
-（最終更新： 2023-04-03）
+（最終更新： 2023-04-17）
 
 
 ## 目次
@@ -47,13 +47,6 @@
 	1. [未定義動作](#未定義動作)
 	1. [識別子](#識別子)
 	1. [予約語](#予約語)
-1. [プログラムのメモリ管理](#プログラムのメモリ管理)
-	1. [ヒープ領域の確保と解放](#ヒープ領域の確保と解放)
-	1. [メモリリーク](#メモリリーク)
-	1. [ダブルフリー](#ダブルフリー)
-	1. [ダングリングポインタ](#ダングリングポインタ)
-	1. [ガベージコレクション](#ガベージコレクション)
-	1. [アロケート](#アロケート)
 1. [プログラミングを始める](#プログラミングを始める)
 
 
@@ -326,37 +319,6 @@ auto, break, case, char, const, continue, default, do, double, else, enum,
 extern, float, for, goto, if, int, long, register, return, signed, sizeof,
 ...
 ```
-
-
-## プログラムのメモリ管理
-
-[プログラム](#プログラム)中で用いられる[変数](./variable.md#変数)や[関数](./function.md#関数)は、[プログラム](#プログラム)に割り当てられた[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域内に格納される。[グローバル変数](./variable.md#グローバル変数)は[静的領域](../../../computer/hardware/_/chapters/memory.md#静的領域)に、[関数](./function.md#関数)内で使用される[ローカル変数](./variable.md#ローカル変数)は[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に、[配列](./data_type.md#配列)や[オブジェクト](./object_oriented.md#オブジェクト)といった可変長のデータの実体は[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納される。
-
-### ヒープ領域の確保と解放
-
-[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納された[変数](./variable.md#変数)は、[関数](./function.md#関数)の実行が完了すると自動的に解放されるが、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納したデータは別の手段により解放する必要がある。[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)のデータを解放する手段は[プログラミング言語](#プログラミング言語)によって異なる。[C言語](./programming_language.md#c言語)や[C++](./programming_language.md#c)では、[プログラマ](#プログラマ)が明示的に[ソースコード](#ソースコード)中で[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の確保・解放を宣言する必要があり、その他のほとんどの[プログラミング言語](#プログラミング言語)では[ガベージコレクション](#ガベージコレクション)を用いる。また、[Rust](./programming_language.md#rust)では[ガベージコレクション](#ガベージコレクション)を用いずに[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)の解放に関する一定のルールを設けることで、[プログラマ](#プログラマ)が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する責任を負わなくてよいようにしている。
-
-### メモリリーク
-
-**メモリリーク**は、[プログラム](#プログラム)が使い終わった[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)の解放を忘れることで、使用できなくなる[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域ができてしまうこと。[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する[バグ](#バグ)の一種。
-
-### ダブルフリー
-
-**ダブルフリー**（[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)の二重解放、多重フリー）は、既に解放された[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)を、再度解放しようとすること。[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する[バグ](#バグ)の一種。
-
-### ダングリングポインタ
-
-**ダングリングポインタ**は、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納されたデータの[アドレス](../../../computer/hardware/_/chapters/memory.md#アドレス)を格納した[スタック領域](../../../computer/hardware/_/chapters/memory.md#アドレス)の[ポインタ](./data_type.md#ポインタ型)において、既に解放された[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)を指し示す[ポインタ](./data_type.md#ポインタ型)。[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する[バグ](#バグ)の一種。
-
-### ガベージコレクション
-
-**ガベージコレクション**（**GC**）は、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)のデータを定期的に確認し、不要になったデータを解放する[プログラム](#プログラム)。ガベージコレクションを用いる場合、[ソースコード](#ソースコード)中で[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の解放を明示する必要はない。
-
-[メモリリーク](#メモリリーク)や[ダブルフリー](#ダブルフリー)、[ダングリングポインタ](#ダングリングポインタ)といった[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)に関する[バグ](#バグ)を回避するこおとができる。ただし、[プログラマ](#プログラマ)自身が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理をする[プログラミング言語](#プログラミング言語)に比べてパフォーマンスは低く、[プログラム](#プログラム)の実行に関係のない[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)（ガベージコレクション）を動作させる必要があるというデメリットがある。また、ガベージコレクションが動くタイミングで[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)の動作が遅くなる可能性がある。
-
-### アロケート
-
-**アロケート**（**アロケーション**）は、データを配置するために必要な[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域を確保すること。可変長データを拡張しようとしたときに、あらかじめ確保した[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)領域が不足した場合、改めて十分な空き領域をアロケートする必要がある。基本的にアロケートは低速な操作であるため、アロケートが発生する回数が少なくなるようにすることで[プログラム](#プログラム)を高速化することができる場合がある。
 
 
 ## プログラミングを始める

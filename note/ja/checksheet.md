@@ -439,12 +439,6 @@
 - [ ] [未定義動作](./programming/_/chapters/programming.md#未定義動作)
 - [ ] [識別子（シンボル）](./programming/_/chapters/programming.md#識別子)
 - [ ] [予約語](./programming/_/chapters/programming.md#予約語)
-- [ ] [メモリ管理](./programming/_/chapters/programming.md#プログラムのメモリ管理)
-	- [ ] [メモリリーク](./programming/_/chapters/programming.md#メモリリーク)
-	- [ ] [ダブルフリー（多重フリー）](./programming/_/chapters/programming.md#ダブルフリー)
-	- [ ] [ダングリングポインタ](./programming/_/chapters/programming.md#ダングリングポインタ)
-	- [ ] [ガベージコレクション(GC)](./programming/_/chapters/programming.md#ガベージコレクション)
-	- [ ] [アロケート（アロケーション）](./programming/_/chapters/programming.md#アロケート)
 - [ ] [実行環境](./programming/_/chapters/programming.md#プログラミングを始める)
 - [ ] [テキストエディタ](./programming/_/chapters/programming.md#プログラミングを始める)
 - [ ] [統合開発環境](./programming/_/chapters/programming.md#プログラミングを始める)
@@ -688,6 +682,15 @@
 	- [ ] [ビット全探索](./programming/_/chapters/algorithm.md#ビット全探索)
 	- [ ] [線形探索](./programming/_/chapters/algorithm.md#線形探索)
 	- [ ] [二分探索](./programming/_/chapters/algorithm.md#二分探索)
+
+### メモリ管理
+
+- [ ] [メモリ管理](./programming/_/chapters/memory_management.md#プログラムのメモリ管理)
+	- [ ] [メモリリーク](./programming/_/chapters/memory_management.md#メモリリーク)
+	- [ ] [ダブルフリー（多重フリー）](./programming/_/chapters/memory_management.md#ダブルフリー)
+	- [ ] [ダングリングポインタ](./programming/_/chapters/memory_management.md#ダングリングポインタ)
+	- [ ] [ガベージコレクション(GC)](./programming/_/chapters/memory_management.md#ガベージコレクション)
+	- [ ] [アロケート（アロケーション）](./programming/_/chapters/memory_management.md#アロケート)
 
 
 ## コンピュータ

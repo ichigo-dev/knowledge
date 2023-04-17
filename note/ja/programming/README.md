@@ -13,6 +13,7 @@
 1. [コーディングルール](./_/chapters/coding_rule.md)
 1. [プログラミング言語の種類](./_/chapters/programming_language.md)
 1. [アルゴリズム](./_/chapters/algorithm.md)
+1. [メモリ管理](./_/chapters/memory_management.md)
 
 
 ## カテゴリ
