@@ -1,6 +1,6 @@
 # 『システム構成』ノート
 
-（最終更新： 2023-04-13）
+（最終更新： 2023-04-19）
 
 
 ## 目次
@@ -142,7 +142,7 @@
 
 ### IaaS
 
-**IaaS**(Infrastructure as a Service)は、[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)や[サーバ](./system_processing_model.md#クライアントサーバシステム)（[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)、ストレージ）などのコンピューティングリソースを提供するサービス形態。従来は自社の[オンプレミス](#オンプレミス)環境を利用してITシステムを運用する必要があったが、IaaSを利用することで必要な時に必要なだけコンピューティングリソースを借りることができる。
+**IaaS**(Infrastructure as a Service)は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)や[サーバ](./system_processing_model.md#クライアントサーバシステム)（[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)、ストレージ）などのコンピューティングリソースを提供するサービス形態。従来は自社の[オンプレミス](#オンプレミス)環境を利用してITシステムを運用する必要があったが、IaaSを利用することで必要な時に必要なだけコンピューティングリソースを借りることができる。
 
 ### FaaS
 
@@ -155,23 +155,23 @@
 
 ## グリッドコンピューティング
 
-**グリッドコンピューティング**は、[インターネット](../../../network/_/chapters/basic_knowledge_of_network.md#インターネット)などを介して[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を結び付け、高い処理能力を得る構成。
+**グリッドコンピューティング**は、[インターネット](../../../network/_/chapters/network.md#インターネット)などを介して[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を結び付け、高い処理能力を得る構成。
 
 
 ## エッジコンピューティング
 
-**エッジコンピューティング**は、サービスを提供する[サーバ](./system_processing_model.md#クライアントサーバシステム)とサービスの利用者の距離が物理的に近くなるような構成。ユーザの使用するIoTデバイスやモバイル端末といった**エッジ**に処理を集中させることで、[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)の[オーバヘッド](./system_performance_evaluation.md#オーバヘッド)を減らすことができる。
+**エッジコンピューティング**は、サービスを提供する[サーバ](./system_processing_model.md#クライアントサーバシステム)とサービスの利用者の距離が物理的に近くなるような構成。ユーザの使用するIoTデバイスやモバイル端末といった**エッジ**に処理を集中させることで、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)の[オーバヘッド](./system_performance_evaluation.md#オーバヘッド)を減らすことができる。
 
 ### CDN
 
-**CDN**(Content Delivery Network)は、[クラウド](#クラウド)における[エッジコンピューティング](#エッジコンピューティング)の手法のひとつで、[サーバ](./system_processing_model.md#クライアントサーバシステム)を各所に分散して配置することで、[クライアント](./system_processing_model.md#クライアントサーバシステム)に近い[サーバ](./system_processing_model.md#クライアントサーバシステム)からコンテンツを配信する仕組み。[インターネット](../../../network/_/chapters/basic_knowledge_of_network.md#インターネット)回線の負荷を軽減するために、動画や音声などの大容量データをCDNによって配信することが多い。
+**CDN**(Content Delivery Network)は、[クラウド](#クラウド)における[エッジコンピューティング](#エッジコンピューティング)の手法のひとつで、[サーバ](./system_processing_model.md#クライアントサーバシステム)を各所に分散して配置することで、[クライアント](./system_processing_model.md#クライアントサーバシステム)に近い[サーバ](./system_processing_model.md#クライアントサーバシステム)からコンテンツを配信する仕組み。[インターネット](../../../network/_/chapters/network.md#インターネット)回線の負荷を軽減するために、動画や音声などの大容量データをCDNによって配信することが多い。
 
 
 ## 仮想化技術
 
 **仮想化技術**は、仮想[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)を用いて1台の物理[サーバ](./system_processing_model.md#クライアントサーバシステム)上で複数の[仮想マシン](#仮想マシン)を走らせ、それを1台の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)として利用したり、[クラスタリング](#クラスタリング)により複数台のマシンをひとつにまとめたりする技術。[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)を使って仮想的に必要な資源を割り当てる。
 
-[システム](./system.md#システム)によっては、平日は利用者数が少ないが休日は利用者数が増える、一日の中でアクセスが多い時間帯と少ない時間帯がある、といった負荷のムラがある。仮想化技術は、こういった[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)資源の無駄を減らすために生まれた。
+[システム](./system.md#システム)によっては、平日は利用者数が少ないが休日は利用者数が増える、一日の中でアクセスが多い時間帯と少ない時間帯がある、といった負荷のムラがある。仮想化技術は、こういった[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)資源の無駄を減らすために生まれた。
 
 ### 仮想マシン
 

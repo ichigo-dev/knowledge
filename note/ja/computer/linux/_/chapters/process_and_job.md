@@ -1,6 +1,6 @@
 # 『プロセスとジョブ』ノート
 
-（最終更新： 2023-03-29）
+（最終更新： 2023-04-19）
 
 
 ## 目次
@@ -413,7 +413,7 @@ $ systemctl is-enabled httpd
 
 ### ソケット
 
-**ソケット**(Socket)は、[ネットワーク](../../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)を介して[プロセス間通信](#プロセス間通信)を行うための[API](../../../software/_/chapters/operating_system.md#api)。ソケットには、[TCP](../../../../network/_/chapters/transport_layer.md#tcp)や[UDP](../../../../network/_/chapters/transport_layer.md#udp)などの[プロトコル](../../../../network/_/chapters/network_architecture.md#プロトコル)に対応した種類がある。
+**ソケット**(Socket)は、[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を介して[プロセス間通信](#プロセス間通信)を行うための[API](../../../software/_/chapters/operating_system.md#api)。ソケットには、[TCP](../../../../network/_/chapters/transport_layer.md#tcp)や[UDP](../../../../network/_/chapters/transport_layer.md#udp)などの[プロトコル](../../../../network/_/chapters/network_architecture.md#プロトコル)に対応した種類がある。
 
 [サーバ](../../../_/chapters/computer.md#サーバ)は以下のような手順で通信を行う。
 

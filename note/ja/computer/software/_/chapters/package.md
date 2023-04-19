@@ -1,6 +1,6 @@
 # 『パッケージ』ノート
 
-（最終更新： 2023-03-31）
+（最終更新： 2023-04-19）
 
 
 ## 目次
@@ -26,7 +26,7 @@
 
 ### スイート
 
-**スイート**は、単体で機能を提供されているものを組み合わせた[パッケージ](#パッケージ)。例えば、[インターネット](../../../../network/_/chapters/basic_knowledge_of_network.md#インターネット)は複数の通信規約の実装（[プロトコル](../../../../network/_/chapters/communication_protocol.md#プロトコル)）からなっており、これらを[インターネットプロトコルスイート](../../../../network/_/chapters/communication_protocol.md#プロトコルスイート)と呼ぶ。
+**スイート**は、単体で機能を提供されているものを組み合わせた[パッケージ](#パッケージ)。例えば、[インターネット](../../../../network/_/chapters/network.md#インターネット)は複数の通信規約の実装（[プロトコル](../../../../network/_/chapters/communication_protocol.md#プロトコル)）からなっており、これらを[インターネットプロトコルスイート](../../../../network/_/chapters/communication_protocol.md#プロトコルスイート)と呼ぶ。
 
 ### 依存関係
 

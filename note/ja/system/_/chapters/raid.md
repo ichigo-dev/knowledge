@@ -1,6 +1,6 @@
 # 『RAID』ノート
 
-（最終更新： 2023-04-14）
+（最終更新： 2023-04-19）
 
 
 ## 目次
@@ -61,11 +61,11 @@
 
 ### SAN
 
-**SAN**(Storage Area Network)は、[サーバ](./system_processing_model.md#クライアントサーバシステム)とストレージを接続するために専用の[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)を使用する方法。ファイバチャネルや[IP](../../../network/_/chapters/internet_layer.md#ip)[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)を使って、あたかも内蔵したストレージのように使用することができる。**ファイバチャネル**とは、主にストレージ[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)用に使用される高速[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)を構築する技術のひとつ。
+**SAN**(Storage Area Network)は、[サーバ](./system_processing_model.md#クライアントサーバシステム)とストレージを接続するために専用の[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)を使用する方法。ファイバチャネルや[IP](../../../network/_/chapters/internet_layer.md#ip)[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)を使って、あたかも内蔵したストレージのように使用することができる。**ファイバチャネル**とは、主にストレージ[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)用に使用される高速[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)を構築する技術のひとつ。
 
 ### NAS
 
-**NAS**(Network Attached Storage)は、[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を格納する[サーバ](./system_processing_model.md#クライアントサーバシステム)を[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)に直接接続することで、外部から[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を利用できるようにする方法。複数の[サーバ](./system_processing_model.md#クライアントサーバシステム)や[クライアント](./system_processing_model.md#クライアントサーバシステム)がストレージを共有できるため、資源を効率的に活用することができる。また、物理的なストレージの数が減らせることから、バックアップも取りやすくなる。
+**NAS**(Network Attached Storage)は、[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を格納する[サーバ](./system_processing_model.md#クライアントサーバシステム)を[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)に直接接続することで、外部から[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を利用できるようにする方法。複数の[サーバ](./system_processing_model.md#クライアントサーバシステム)や[クライアント](./system_processing_model.md#クライアントサーバシステム)がストレージを共有できるため、資源を効率的に活用することができる。また、物理的なストレージの数が減らせることから、バックアップも取りやすくなる。
 
 
 ## 参考文献
