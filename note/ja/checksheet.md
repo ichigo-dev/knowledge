@@ -692,6 +692,38 @@
 	- [ ] [ガベージコレクション(GC)](./programming/_/chapters/memory_management.md#ガベージコレクション)
 	- [ ] [アロケート（アロケーション）](./programming/_/chapters/memory_management.md#アロケート)
 
+### Rust
+
+#### Rust
+
+- [ ] [Rust](./programming/rust/_/chapters/rust.md#rust)
+	- [ ] [ゼロオーバヘッド原則](./programming/rust/_/chapters/rust.md#実行速度)
+	- [ ] [ゼロコスト抽象化](./programming/rust/_/chapters/rust.md#実行速度)
+- [ ] [rustup](./programming/rust/_/chapters/rust.md#rustup)
+- [ ] [Cargo](./programming/rust/_/chapters/rust.md#cargo)
+- [ ] [rustc](./programming/rust/_/chapters/rust.md#rustc)
+- [ ] [rustdoc](./programming/rust/_/chapters/rust.md#rustdoc)
+
+### データ型
+
+- [ ] [型推論](./programming/rust/_/chapters/data_type.md#型推論)
+- [ ] [ジェネリック](./programming/rust/_/chapters/data_type.md#ジェネリック)
+- [ ] [整数型](./programming/rust/_/chapters/data_type.md#整数型)
+	- [ ] [暗黙の型変換](./programming/rust/_/chapters/data_type.md#整数型)
+	- [ ] [チェック付き演算](./programming/rust/_/chapters/data_type.md#チェック付き演算)
+	- [ ] [ラップ演算](./programming/rust/_/chapters/data_type.md#ラップ演算)
+	- [ ] [飽和演算](./programming/rust/_/chapters/data_type.md#飽和演算)
+	- [ ] [オーバフロー演算](./programming/rust/_/chapters/data_type.md#オーバフロー演算)
+- [ ] [タプル型](./programming/rust/_/chapters/data_type.md#タプル型)
+	- [ ] [ユニット型](./programming/rust/_/chapters/data_type.md#タプル型)
+- [ ] [ポインタ型](./programming/rust/_/chapters/data_type.md#ポインタ型)
+	- [ ] [参照](./programming/rust/_/chapters/data_type.md#参照)
+	- [ ] [Box](./programming/rust/_/chapters/data_type.md#box)
+	- [ ] [rawポインタ](./programming/rust/_/chapters/data_type.md#rawポインタ)
+- [ ] [スライス](./programming/rust/_/chapters/data_type.md#スライス)
+- [ ] [文字列リテラル](./programming/rust/_/chapters/data_type.md#文字列リテラル)
+	- [ ] [生文字列(raw string)](./programming/rust/_/chapters/data_type.md#文字列リテラル)
+
 
 ## コンピュータ
 
