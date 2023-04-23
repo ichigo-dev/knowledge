@@ -723,6 +723,27 @@
 - [ ] [スライス](./programming/rust/_/chapters/data_type.md#スライス)
 - [ ] [文字列リテラル](./programming/rust/_/chapters/data_type.md#文字列リテラル)
 	- [ ] [生文字列(raw string)](./programming/rust/_/chapters/data_type.md#文字列リテラル)
+- [ ] [型エイリアス](./programming/rust/_/chapters/data_type.md#型エイリアス)
+
+### 所有権と移動
+
+- [ ] [所有権](./programming/rust/_/chapters/ownership_and_move.md#所有権)
+- [ ] [移動(move)](./programming/rust/_/chapters/ownership_and_move.md#移動)
+- [ ] [コピー型](./programming/rust/_/chapters/ownership_and_move.md#コピー型)
+- [ ] [Rc](./programming/rust/_/chapters/ownership_and_move.md#rcとarc)
+- [ ] [Arc](./programming/rust/_/chapters/ownership_and_move.md#rcとarc)
+
+### 参照とライフタイム
+
+- [ ] [借用](./programming/rust/_/chapters/reference_and_lifetime.md#参照と借用)
+	- [ ] [値渡し](./programming/rust/_/chapters/reference_and_lifetime.md#参照と借用)
+	- [ ] [参照渡し](./programming/rust/_/chapters/reference_and_lifetime.md#参照と借用)
+	- [ ] [共有参照](./programming/rust/_/chapters/reference_and_lifetime.md#共有参照)
+	- [ ] [可変参照](./programming/rust/_/chapters/reference_and_lifetime.md#可変参照)
+- [ ] [ライフタイム（生存期間）](./programming/rust/_/chapters/reference_and_lifetime.md#ライフタイム)
+- [ ] [ボローチェッカー](./programming/rust/_/chapters/reference_and_lifetime.md#ボローチェッカー)
+- [ ] ['staticライフタイム](./programming/rust/_/chapters/reference_and_lifetime.md#staticライフタイム)
+	- [ ] [ライフタイムパラメータ](./programming/rust/_/chapters/reference_and_lifetime.md#staticライフタイム)
 
 
 ## コンピュータ
