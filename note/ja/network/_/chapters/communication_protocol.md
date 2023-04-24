@@ -1,6 +1,6 @@
 # 『通信プロトコル』ノート
 
-（最終更新： 2023-03-07）
+（最終更新： 2023-04-24）
 
 
 ## 目次
@@ -21,15 +21,15 @@
 
 ## TCP/IP
 
-**TCP/IP**(Transmission Control Protocol/Internet Protocol)は、IETFで標準化されている、インターネットで使われているプロトコルスイート。TCP/IPは、OSI基本参照モデルによく似たレイヤ構造でプロトコルを体系化している。
+**TCP/IP**(Transmission Control Protocol/Internet Protocol)は、[IETF](#ietf)で標準化されている、[インターネット](./network.md#インターネット)で使われている[プロトコルスイート](#プロトコルスイート)。TCP/IPは、[OSI基本参照モデル](./network_architecture.md#osi基本参照モデル)によく似た[レイヤ](./network_architecture.md#レイヤ)構造で[プロトコル](./network_architecture.md#プロトコル)を体系化している。
 
-TCP/IPは「実装すること」を念頭に作業が進められ、その方針から素早くプロトコルを完成させることができた。そのため、ISOのOSIよりも先に動作するプロトコルを作り上げることができ、世の中に普及していくこととなった。
+TCP/IPは「実装すること」を念頭に作業が進められ、その方針から素早く[プロトコル](./network_architecture.md#プロトコル)を完成させることができた。そのため、[ISO](./network_architecture.md#iso)の[OSI](./network_architecture.md#osi基本参照モデル)よりも先に動作する[プロトコル](./network_architecture.md#プロトコル)を作り上げることができ、世の中に普及していくこととなった。
 
-TCP/IPでは、インターネット層とトランスポート層がOSに組み込まれていることを想定しており、その上でアプリケーションがインターネットに接続されているような構成となっている。
+TCP/IPでは、[インターネット層](#インターネット層)と[トランスポート層](#トランスポート層)が[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)に組み込まれていることを想定しており、その上で[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)が[インターネット](./network.md#インターネット)に接続されているような構成となっている。
 
 ### プロトコルスイート
 
-**プロトコルスイート**は、複数のプロトコルを一式で提供したパッケージ。
+**プロトコルスイート**は、複数の[プロトコル](./network_architecture.md#プロトコル)を一式で提供した[パッケージ](../../../computer/software/_/chapters/package.md#パッケージ)。
 
 ### アプリケーション層
 

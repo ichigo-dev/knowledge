@@ -277,8 +277,11 @@
 - [ ] [ASCIIコード](./basics/information_theory/_/chapters/character_representation.md#asciiコード)
 - [ ] [EUCコード](./basics/information_theory/_/chapters/character_representation.md#eucコード)
 - [ ] [JISコード](./basics/information_theory/_/chapters/character_representation.md#jisコード)
-- [ ] [シフトJISコード](./basics/information_theory/_/chapters/character_representation.md#シフトjisコード)
+- [ ] [シフトJISコード(Shift_JIS)](./basics/information_theory/_/chapters/character_representation.md#シフトjisコード)
 - [ ] [Unicode](./basics/information_theory/_/chapters/character_representation.md#unicode)
+	- [ ] [UTF-8](./basics/information_theory/_/chapters/character_representation.md#unicode)
+	- [ ] [UTF-16](./basics/information_theory/_/chapters/character_representation.md#unicode)
+	- [ ] [UTF-32](./basics/information_theory/_/chapters/character_representation.md#unicode)
 
 #### 述語理論
 
@@ -1901,3 +1904,21 @@
 - [ ] [OSI基本参照モデル(OSI: Open System Interconnection)](./network/_/chapters/network_architecture.md#osi基本参照モデル)
 	- [ ] [ISO（国際標準化機構: International Organization for Standardization）](./network/_/chapters/network_architecture.md#iso)
 	- [ ] [アプリケーション層](./network/_/chapters/network_architecture.md#アプリケーション層)
+	- [ ] [プレゼンテーション層](./network/_/chapters/network_architecture.md#プレゼンテーション層)
+	- [ ] [セッション層](./network/_/chapters/network_architecture.md#セッション層)
+	- [ ] [トランスポート層](./network/_/chapters/network_architecture.md#トランスポート層)
+	- [ ] [ネットワーク層](./network/_/chapters/network_architecture.md#ネットワーク層)
+	- [ ] [物理層](./network/_/chapters/network_architecture.md#物理層)
+- [ ] [LAN間接続装置](./network/_/chapters/network_architecture.md#lan間接続装置)
+	- [ ] [スイッチ](./network/_/chapters/network_architecture.md#スイッチ)
+	- [ ] [リピータ](./network/_/chapters/network_architecture.md#リピータ)
+	- [ ] [ブリッジ](./network/_/chapters/network_architecture.md#ブリッジ)
+	- [ ] [ルータ](./network/_/chapters/network_architecture.md#ルータ)
+	- [ ] [レイヤ4-7スイッチ](./network/_/chapters/network_architecture.md#レイヤ4-7スイッチ)
+	- [ ] [ゲートウェイ](./network/_/chapters/network_architecture.md#ゲートウェイ)
+		- [ ] [アプリケーションゲートウェイ](./network/_/chapters/network_architecture.md#ゲートウェイ)
+
+### 通信プロトコル
+
+- [ ] [TCP/IP(Transmission Control Protocol/Internet Protocol)](./network/_/chapters/communication_protocol.md#tcpip)
+	- [ ] [プロトコルスイート](./network/_/chapters/communication_protocol.md#プロトコルスイート)

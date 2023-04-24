@@ -37,7 +37,7 @@
 
 ### ARPANETの誕生
 
-1969年に[パケット交換](./network.md#パケット交換)の実用性を確認するための実験が行われた。この時に構築された[ネットワーク](./network.md#ネットワーク)は、アメリカの大学と研究機関4つのノードを結んだもので、**ARPANET**（Advanced Research Projects Agency Network）と呼ばれた。ARPANETの開発には、**アメリカ国防総省高等研究計画局**(**DARPA**: Defense Advanced Research Projects Agency)が資金援助していた。
+1969年に[パケット交換](./network.md#パケット交換)の実用性を確認するための実験が行われた。この時に構築された[ネットワーク](./network.md#ネットワーク)は、アメリカの大学と研究機関4つの[ノード](./network.md#ノード)を結んだもので、**ARPANET**（Advanced Research Projects Agency Network）と呼ばれた。ARPANETの開発には、**アメリカ国防総省高等研究計画局**(**DARPA**: Defense Advanced Research Projects Agency)が資金援助していた。
 
 この実験により[パケット交換](./network.md#パケット交換)技術が実用に耐えられることが証明された。
 
