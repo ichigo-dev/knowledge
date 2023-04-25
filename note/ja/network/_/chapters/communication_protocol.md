@@ -1,6 +1,6 @@
 # 『通信プロトコル』ノート
 
-（最終更新： 2023-04-24）
+（最終更新： 2023-04-25）
 
 
 ## 目次
@@ -33,63 +33,63 @@ TCP/IPでは、[インターネット層](#インターネット層)と[トラ�
 
 ### アプリケーション層
 
-**アプリケーション層**には、標準で様々なプロトコルが規定されており、アプリケーションごとに独自のプロトコルを実装することも可能である。TCP/IPのアプリケーションの多くは、クライアント/サーバーモデルで作られている。 サービスを提供するプログラムをサーバ、サービスを受けるプログラムをクライアントとして、サーバはいつでもクライアントの要求を受け取れるように常に起動しておく（このような常に起動して用いるプログラムをデーモンと呼ぶ）。
+**アプリケーション層**は、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)同士の通信に関する規約を取り決めた[レイヤ](#レイヤ)。標準で様々な[プロトコル](./network_architecture.md#プロトコル)が規定されており、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)ごとに独自の[プロトコル](./network_architecture.md#プロトコル)を実装することも可能。[TCP/IP](#tcpip)の[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)の多くは、[クライアント/サーバモデル](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)で作られている。サービスを提供する[プログラム](../../../programming/_/chapters/programming.md#プログラム)を[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)、サービスを受ける[プログラム](../../../programming/_/chapters/programming.md#プログラム)を[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)として、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)はいつでも[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)の要求を受け取れるように常に起動しておく（このような常に起動して用いる[プログラム](../../../programming/_/chapters/programming.md#プログラム)を[デーモン](../../../computer/linux/_/chapters/process_and_job.md#デーモン)と呼ぶ）。
 
-WWWは、インターネットが一般に普及する原動力となったアプリケーションで、Webブラウザと呼ばれるソフトウェアを通して、ネットワークの中にある様々な情報を閲覧することができる。ここで、ブラウザとサーバの間の通信に用いられるプロトコルはHTTPで、送信に用いられる主なデータフォーマットはHTMLである。
+[WWW](./application_layer.md#www)は、[インターネット](./network.md#インターネット)が一般に普及する原動力となった[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)で、[Webブラウザ](./web.md#webブラウザ)と呼ばれる[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)を通して、[ネットワーク](./network.md#ネットワーク)の中にある様々な情報を閲覧することができる。ここで、[ブラウザ](./web.md#webブラウザ)と[サーバ](./web.md#webサーバ)の間の通信に用いられる[プロトコル](./network_architecture.md#プロトコル)は[HTTP](./application_layer.md#http)で、送信に用いられる主なデータフォーマットは[HTML](./web.md#html)である。
 
-電子メールは、ネットワーク上で郵便の仕組みを再現したものである。SMTPやPOP3といったプロトコルが用いられている。もともとはテキスト形式での電子メールが一般的であったが、現在は電子メールで送信できるデータ形式を拡張するMIMEの仕様が整えられた。
+[電子メール](./application_layer.md#電子メール)は、[ネットワーク](./network.md#ネットワーク)上で郵便の仕組みを再現したもの。[SMTP](./application_layer.md#smtp)や[POP](./application_layer.md#pop)といった[プロトコル](./network_architecture.md#プロトコル)が用いられている。もともとはテキスト形式での[電子メール](./application_layer.md#電子メール)が一般的であったが、現在は[電子メール](./application_layer.md#電子メール)で送信できるデータ形式を拡張する[MIME](./application_layer.md#mime)の仕様が整えられた。
 
-ファイル転送は、異なるコンピュータのハードディスク上に存在するファイルを相互に転送することができるアプリケーション。FTPというプロトコルが用いられ、ファイルの転送を指示するための制御コネクションと、実際にデータを転送するためのデータコネクションという2つのTCPコネクションを確立する。
+[ファイル転送](./application_layer.md#ファイル転送)は、異なる[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)の[ハードディスク](../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)上に存在する[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を相互に転送することができる[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)。[FTP](./application_layer.md#ftp)という[プロトコル](./network_architecture.md#プロトコル)が用いられ、[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)の転送を指示するための制御コネクションと、実際にデータを転送するためのデータコネクションという2つの[TCP](./transport_layer.md#tcp)[コネクション](./network.md#コネクション)を確立する。
 
-遠隔ログインは、遠く離れたコンピュータにログインして、そのコンピュータでプログラムを走らせることができるようにするための機能。TELNETやSSHといったプロトコルがよく用いられる。また、リモートデスクトップなどを用いる際はRDPがプロトコルとして用いられる。
+[遠隔ログイン](./application_layer.md#遠隔ログイン)は、物理的に離れた場所にある[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)にログインして、その[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)で[プログラム](../../../programming/_/chapters/programming.md#プログラム)を走らせることができるようにするための機能。[TELNET](./application_layer.md#telnet)や[SSH](./application_layer.md#ssh)といった[プロトコル](./network_architecture.md#プロトコル)がよく用いられる。また、リモートデスクトップなどを用いる際はRDPが[プロトコル](./network_architecture.md#プロトコル)として用いられる。
 
-ネットワーク管理には、SNMPが用いられる。SNMPで管理されるルーターやブリッジ、ホストなどをエージェントといい、これらを管理するプログラムをマネージャという。エージェントは様々な情報をMIBという構造によって管理する。
+[ネットワーク管理](./application_layer.md#ネットワーク管理)には、[SNMP](./application_layer.md#snmp)が用いられる。[SNMP](./application_layer.md#snmp)で管理される[ルータ](./network_architecture.md#ルータ)や[ブリッジ](./network_architecture.md#ブリッジ)、[ホスト](./network.md#ホスト)などを[エージェント](./application_layer.md#snmp)といい、これらを管理する[プログラム](../../../programming/_/chapters/programming.md#プログラム)を[マネージャ](./application_layer.md#snmp)という。[エージェント](./application_layer.md#snmp)は様々な情報を[MIB](./application_layer.md#mib)という構造によって管理する。
 
 ### トランスポート層
 
-**トランスポート層**は、アプリケーションプログラム間の通信を実現する役割があるレイヤ。そのため、どのプログラムがどのプログラムと通信しているかを識別するために、ポート番号と呼ばれる識別子を用いる。トランスポート層では以下の2つの代表的なプロトコルが用いられる。
+**トランスポート層**は、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)[プログラム](../../../programming/_/chapters/programming.md#プログラム)間の通信を実現する役割がある[レイヤ](./network_architecture.md#レイヤ)。そのため、どの[プログラム](../../../programming/_/chapters/programming.md#プログラム)がどの[プログラム](../../../programming/_/chapters/programming.md#プログラム)と通信しているかを識別するために、[ポート番号](./address_on_network.md#ポート番号)と呼ばれる識別子を用いる。トランスポート層では以下の2つの代表的な[プロトコル](./network_architecture.md#プロトコル)が用いられる。
 
-TCPは、コネクション型で信頼性のある通信を実現するために用いられる。両端のホスト間でのデータの到達性を保証する。経路の途中でパケットが失われたり順番が入れ替わったりしても、TCPがそれを解決する。コネクションの確立・切断をするだけで制御のために7回もパケットをやり取りするため、データの転送量が少ない場合は無駄が多くなる。
+[TCP](./transport_layer.md#tcp)は、[コネクション型](./network.md#コネクション型)で信頼性のある通信を実現するために用いられる。両端の[ホスト](./network.md#ホスト)間でのデータの到達性を保証する。経路の途中で[パケット](./network.md#パケット)が失われたり順番が入れ替わったりしても、[TCP](./transport_layer.md#tcp)がそれを解決する。[コネクション](./network.md#コネクション)の確立・切断をするだけで制御のために7回も[パケット](./network.md#パケット)をやり取りするため、データの転送量が少ない場合は無駄が多くなる。
 
-UDPは、コネクションレス型でデータの到達に関して信頼性のないプロトコルである。送信したデータが相手に届いているかどうかの確認は行わない。パケット数が少ない通信や、ブロードキャストやマルチキャスト通信、ビデオや音声などのマルチメディア通信に向いている。
+[UDP](./transport_layer.md#udp)は、[コネクションレス型](./network.md#コネクションレス型)でデータの到達に関して信頼性のない[プロトコル](./network_architecture.md#プロトコル)である。送信したデータが相手に届いているかどうかの確認は行わない。[パケット](./network.md#パケット)数が少ない通信や、[ブロードキャスト](./network.md#ブロードキャスト)や[マルチキャスト](./network.md#マルチキャスト)通信、ビデオや音声などの[マルチメディア](../../../computer/software/_/chapters/multimedia.md#マルチメディア)通信に向いている。
 
 ### インターネット層
 
-**インターネット層**（**ネットワーク層**）の代表的なプロトコルはIPで、IPアドレスをもとにしてパケットを転送する役割を担う。
+**インターネット層**（**ネットワーク層**）の代表的な[プロトコル](./network_architecture.md#プロトコル)は[IP](./internet_layer.md#ip)で、[IPアドレス](./address_on_network.md#ipアドレス)をもとにして[パケット](./network.md#パケット)を転送する役割を担う。
 
-IPは、ネットワークをまたいでパケットを配送し、インターネット全体にパケットを送り届けるためのプロトコル。それぞれのホストを識別するために、IPアドレスと呼ばれる識別子を用いる。
+[IP](./internet_layer.md#ip)は、[ネットワーク](./network.md#ネットワーク)をまたいで[パケット](./network.md#パケット)を配送し、[インターネット](./network.md#インターネット)全体に[パケット](./network.md#パケット)を送り届けるための[プロトコル](./network_architecture.md#プロトコル)。それぞれの[ホスト](./network.md#ホスト)を識別するために、[IPアドレス](./address_on_network.md#ipアドレス)と呼ばれる識別子を用いる。
 
-ICMPは、IPパケットの配送中に何らかの異常が発生してパケットを転送できなくなったときに、送信元に異常を知らせるために用いられるプロトコル。
+[ICMP](./internet_layer.md#icmp)は、[IP](./internet_layer.md#ip)[パケット](./network.md#パケット)の配送中に何らかの異常が発生して[パケット](./network.md#パケット)を転送できなくなったときに、送信元に異常を知らせるために用いられる[プロトコル](./network_architecture.md#プロトコル)。
 
-ARPは、パケットの送り先のMACアドレスをIPアドレスから取得するプロトコル。
+[ARP](./internet_layer.md#arp)は、[パケット](./network.md#パケット)の送り先の[MACアドレス](./address_on_network.md#macアドレス)を[IPアドレス](./address_on_network.md#ipアドレス)から取得する[プロトコル](./network_architecture.md#プロトコル)。
 
 ### データリンク層
 
-**データリンク層**（**ネットワークインタフェース層**）は、データフレームをネットワーク上で隣接するコンピュータに転送する役割をもつレイヤ。
+**データリンク層**（**ネットワークインタフェース層**）は、[データフレーム](./datalink_layer.md#フレーム)を[ネットワーク](./network.md#ネットワーク)上で隣接する[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に転送する役割をもつ[レイヤ](./network_architecture.md#レイヤ)。
 
-具体的には、NICを動かすためのデバイスドライバのこと。OSがNICを認識して、そのカードを利用できるように設定する必要がある。
+具体的には、[NIC](./network.md#nic)を動かすための[デバイスドライバ](../../../computer/hardware/_/chapters/io_unit.md#デバイスドライバ)のこと。[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)が[NIC](./network.md#nic)を認識して、そのカードを利用できるように設定する必要がある。
 
 
 ## TCP/IPの標準化
 
 ### IETF
 
-**IETF**(Internet Engineering Task Force)は、インターネットやTCP/IPの技術面に関する標準化団体。
+**IETF**(Internet Engineering Task Force)は、[インターネット](./network.md#インターネット)や[TCP/IP](#tcpip)の技術面に関する標準化団体。
 
 ### RFC
 
-**RFC**(Request For COmments)は、IETFによって議論されて標準化されているTCP/IPのプロトコルの仕様に関するドキュメント。一度RFCになったものは、後からその内容を改定することはできない。そのため同じプロトコルでも、内容を更新するたびに新しいRFCを発行する必要がある。
+**RFC**(Request For Comments)は、[IETF](#ietf)によって議論されて標準化されている[TCP/IP](#tcpip)の[プロトコル](./network_architecture.md#プロトコル)の仕様に関するドキュメント。一度RFCになったものは、後からその内容を改定することはできない。そのため同じ[プロトコル](./network_architecture.md#プロトコル)でも、内容を更新するたびに新しいRFCを発行する必要がある。
 
 - [RFCのホームページ](https://www.rfc-editor.org/)
 
 ### STD
 
-**STD**(Standard)は、TCP/IPの主要なプロトコルや標準に対して割り当てられた、変化しない番号のこと。RFCはプロトコルの仕様が変更されるたびに番号が変わってしまい不便であるという意見から用意された。
+**STD**(Standard)は、[TCP/IP](#tcpip)の主要な[プロトコル](./network_architecture.md#プロトコル)や標準に対して割り当てられた、変化しない番号。[RFC](#rfc)は[プロトコル](./network_architecture.md#プロトコル)の仕様が変更されるたびに番号が変わってしまい不便であるという意見から用意された。
 
 ### FYI
 
-**FYI**(For Your Information)は、インターネットのユーザや管理者に向けて有益な情報を提供するためのRFCドキュメント。
+**FYI**(For Your Information)は、[インターネット](./network.md#インターネット)のユーザや管理者に向けて有益な情報を提供するための[RFC](#rfc)ドキュメント。
 
 ### 標準化の流れ
 
-TCP/IPの標準化作業は、まず、仕様を煮詰める**インターネットドラフト**(I-D: Internet-Draft)から始まる。そして、標準化したほうが良いと認められるとRFCになり、**提案標準**(Proposed Standard)になる。次に標準の草案である**ドラフト標準**(Draft Standard)になり、最後に**標準**(Standard)となる。
+[TCP/IP](#tcpip)の標準化作業は、まず、仕様を煮詰める**インターネットドラフト**(I-D: Internet-Draft)から始まる。そして、標準化したほうが良いと認められると[RFC](#rfc)になり、**提案標準**(Proposed Standard)になる。次に標準の草案である**ドラフト標準**(Draft Standard)になり、最後に**標準**(Standard)となる。
