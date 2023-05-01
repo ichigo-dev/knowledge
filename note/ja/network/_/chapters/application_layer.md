@@ -1,6 +1,6 @@
 # 『アプリケーション層』ノート
 
-（最終更新： 2023-04-01）
+（最終更新： 2023-05-01）
 
 
 ## 目次
@@ -122,11 +122,11 @@ IMAPを使用することにより、[サーバ](../../../computer/_/chapters/co
 
 **HTTP**(HyperText Transfer Protocol)は、HTML文書や画像、音声、動画などのコンテンツ送受信に用いられる[プロトコル](./network_architecture.md#プロトコル)で、TCPの80番[ポート](./address_on_network.md#ポート番号)を用いる。
 
-HTTPでは、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)（Web[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)）に情報を要求（[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)）し、この要求に対してHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に情報を返却（[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)）する。
+HTTPでは、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)（[Webサーバ](./web.md#webサーバ)）に情報を要求（[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)）し、この要求に対してHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に情報を返却（[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)）する。
 
 HTTP1.0は、[IETF](./communication_protocol.md#ietf)で[標準化](./communication_protocol.md#標準化の流れ)が行われた最初の[バージョン](../../../computer/software/_/chapters/package.md#バージョン)である。HTTP1.0の最初の[ドラフト](./communication_protocol.md#標準化の流れ)は1993年に公開され、3年後の1996年に最終[バージョン](../../../computer/software/_/chapters/package.md#バージョン)が公開された。この時期はNetscape NavigatorやInternet Explorerの[ブラウザ](./web.md#webブラウザ)戦争が最も激化していたため、仕様と実装の乖離が生じてしまった。HTTP1.0では、ヘッダの導入、[GET](./web.md#httpメソッド)以外のメソッドの追加などが行われた。
 
-HTTP1.1は1997年に策定されて、1999年から2015年まで利用されていた。HTTP1.1では、チャンク転送、Acceptヘッダによるコンテントネゴシエーション、複雑な[キャッシュ](./web.md#キャッシュ)コントロール、持続的接続などの機能を追加している。また、パイプラインという前の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の転送が完了する前に次の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を転送できる機能や、バーチャルホストという1つのWeb[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)で別々の異なる[ドメイン](./internet_layer.md#ドメイン名)の[ホームページ](./web.md#web)が公開できる仕組みが搭載された。
+HTTP1.1は1997年に策定されて、1999年から2015年まで利用されていた。HTTP1.1では、チャンク転送、Acceptヘッダによるコンテントネゴシエーション、複雑な[キャッシュ](./web.md#キャッシュ)コントロール、持続的接続などの機能を追加している。また、パイプラインという前の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の転送が完了する前に次の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を転送できる機能や、バーチャルホストという1つの[Webサーバ](./web.md#webサーバ)で別々の異なる[ドメイン](./internet_layer.md#ドメイン名)の[ホームページ](./web.md#web)が公開できる仕組みが搭載された。
 
 HTTP2.0は2015年に公開された。複数の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を同時に処理可能になり、ヘッダの圧縮やサーバプッシュ、転送するコンテンツの優先度設定などの複数の機能追加が行われた。
 

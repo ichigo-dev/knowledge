@@ -1,6 +1,6 @@
 # 『Web』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-05-01）
 
 
 ## 目次
@@ -63,27 +63,27 @@
 
 ## Web
 
-**Web**は、TCP/IPのアプリケーションレイヤのシステムで、インターネット上でHTTP通信によりハイパーテキスト形式の情報をやり取りすることができる。世界最大の分散システムであり、ハイパーメディアという情報システムの一種である。
+**Web**は、[TCP/IP](./communication_protocol.md#tcpip)の[アプリケーションレイヤ](./communication_protocol.md#アプリケーションレイヤ)の[システム](../../../system/_/chapters/system.md#システム)で、[インターネット](./network.md#インターネット)上で[HTTP](./application_layer.md#http)通信によりハイパーテキスト形式の情報をやり取りすることができる。世界最大の[分散システム](../../../system/_/chapters/system_processing_model.md#分散システム)であり、ハイパーメディアという情報システムの一種である。
 
-Webブラウザの画面に表示されるイメージ全体を**Webページ**、Webページの見出しとなるページを**ホームページ**と呼ぶ。
+[Webブラウザ](#webブラウザ)の画面に表示されるイメージ全体を**Webページ**、Webページの見出しとなるページを**ホームページ**と呼ぶ。
 
 ### Webブラウザ
 
-**Webブラウザ**は、Webの情報を画面に表示するためのクライアントソフトウェア。代表的なブラウザとしてはMicrosoftのMicrosoft EdgeやMozila FoundationのFirefox、GoogleのGoogle Chrome、Opera SoftwareのOpera、AppleのSafariなどがある。
+**Webブラウザ**は、[Web](#web)の情報を画面に表示するための[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)。代表的なブラウザとしてはMicrosoftのMicrosoft EdgeやMozilla FoundationのFirefox、GoogleのGoogle Chrome、Opera SoftwareのOpera、AppleのSafariなどがある。
 
-HTMLやCSS、JavaScriptをどのように解釈するかはブラウザの実装次第であるため、Webコンテンツの表示や挙動が微妙に異なる場合がある。
+[HTML](#html)やCSS、JavaScriptをどのように解釈するかはブラウザの実装次第であるため、[Web](#web)コンテンツの表示や挙動が微妙に異なる場合がある。
 
 ### Webサーバ
 
-**Webサーバ**は、インターネット上でWebのコンテンツを配信するサーバ。
+**Webサーバ**は、[インターネット](./network.md#インターネット)上で[Webブラウザ](#webブラウザ)にコンテンツを配信する[サーバ](../../../computer/_/chapters/computer.md#サーバ)。
 
 ### ユーザエージェント
 
-**ユーザエージェント**(**UA**: User Agent)は、Webコンテンツにアクセスする具体的なプログラムやソフトウェアのこと。OSやブラウザの名称やバージョンなどの情報はユーザエージェントとしてサーバに通知される。
+**ユーザエージェント**(**UA**: User Agent)は、[Web](#web)コンテンツにアクセスする具体的な[プログラム](../../../programming/_/chapters/programming.md#プログラム)や[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)。[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)や[ブラウザ](#webブラウザ)の名称、[バージョン](../../../computer/software/_/chapters/package.md#バージョン)などの情報はユーザエージェントとして[サーバ](../../../computer/_/chapters/computer.md#サーバ)に通知される。
 
 ### Web API
 
-**Web API**(Web Application Programming Interface)は、Webを介して他のソフトウェアと機能やサービスを共有する仕組み。データを共有する際のフォーマットとしてはXMLやJSONがよく用いられる。
+**Web API**(Web Application Programming Interface)は、[Web](#web)を介して他の[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)と機能やサービスを共有する仕組み。データを共有する際のフォーマットとしてはXMLやJSONがよく用いられる。
 
 ### W3C
 

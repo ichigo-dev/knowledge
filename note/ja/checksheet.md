@@ -1154,7 +1154,7 @@
 
 #### オペレーティングシステム
 
-- [ ] [オペレーティングシステム(OS: Operating system)](./computer/software/_/chapters/operating_system.md#nui)
+- [ ] [オペレーティングシステム(OS: Operating system)](./computer/software/_/chapters/operating_system.md#オペレーティングシステム)
 	- [ ] [Windows](./computer/software/_/chapters/operating_system.md#windows)
 	- [ ] [macOS](./computer/software/_/chapters/operating_system.md#macos)
 	- [ ] [UNIX](./computer/software/_/chapters/operating_system.md#unix)
@@ -2128,3 +2128,18 @@
 - [ ] [NTP(Network Time Protocol))](./network/_/chapters/application_layer.md#ntp)
 - [ ] [OT(Operational Technology)](./network/_/chapters/application_layer.md#制御システムのプロトコル)
 - [ ] [ICS(Industrial Control Systems)](./network/_/chapters/application_layer.md#制御システムのプロトコル)
+
+### Web
+
+- [ ] [Web](./network/_/chapters/web.md#web)
+	- [ ] [Webページ](./network/_/chapters/web.md#web)
+	- [ ] [ホームページ](./network/_/chapters/web.md#web)
+	- [ ] [Webブラウザ](./network/_/chapters/web.md#webブラウザ)
+		- [ ] [Microsoft Edge](./network/_/chapters/web.md#webブラウザ)
+		- [ ] [Mozilla Firefox](./network/_/chapters/web.md#webブラウザ)
+		- [ ] [Google Chrome](./network/_/chapters/web.md#webブラウザ)
+		- [ ] [Opera](./network/_/chapters/web.md#webブラウザ)
+		- [ ] [Safari](./network/_/chapters/web.md#webブラウザ)
+	- [ ] [Webサーバ](./network/_/chapters/web.md#webサーバ)
+	- [ ] [ユーザエージェント(UA: User Agent)](./network/_/chapters/web.md#ユーザエージェント)
+	- [ ] [Web API(Web Application Programming Interface)](./network/_/chapters/web.md#web-api)
