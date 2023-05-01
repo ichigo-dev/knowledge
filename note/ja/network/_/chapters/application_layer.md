@@ -27,7 +27,7 @@
 	1. [SNMP](#snmp)
 	1. [MIB](#mib)
 	1. [RMON](#rmon)
-1. [H.323](#h-323)
+1. [H.323](#h323)
 1. [SIP](#sip)
 1. [RTP](#rtp)
 	1. [RTCP](#rtcp)
@@ -120,76 +120,76 @@ IMAPを使用することにより、[サーバ](../../../computer/_/chapters/co
 
 ### HTTP
 
-**HTTP**(HyperText Transfer Protocol)は、HTML文書や画像、音声、動画などのコンテンツ送受信に用いられるプロトコルで、TCPの80番ポートを用いる。
+**HTTP**(HyperText Transfer Protocol)は、HTML文書や画像、音声、動画などのコンテンツ送受信に用いられる[プロトコル](./network_architecture.md#プロトコル)で、TCPの80番[ポート](./address_on_network.md#ポート番号)を用いる。
 
-HTTPでは、クライアントがHTTPサーバ（Webサーバ）に情報を要求（リクエスト）し、この要求に対してHTTPサーバがクライアントに情報を返却（レスポンス）する。
+HTTPでは、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)（Web[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)）に情報を要求（[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)）し、この要求に対してHTTP[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に情報を返却（[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)）する。
 
-HTTP1.0は、IETFで標準化が行われた最初のバージョンである。HTTP1.0の最初のドラフトは1993年に公開され、3年後の1996年に最終バージョンが公開された。この時期はNetscape NavigatorやInternet Explorerのブラウザ戦争が最も激化していたため、仕様と実装の乖離が生じてしまった。HTTP1.0では、ヘッダの導入、GET以外のメソッドの追加などが行われた。
+HTTP1.0は、[IETF](./communication_protocol.md#ietf)で[標準化](./communication_protocol.md#標準化の流れ)が行われた最初の[バージョン](../../../computer/software/_/chapters/package.md#バージョン)である。HTTP1.0の最初の[ドラフト](./communication_protocol.md#標準化の流れ)は1993年に公開され、3年後の1996年に最終[バージョン](../../../computer/software/_/chapters/package.md#バージョン)が公開された。この時期はNetscape NavigatorやInternet Explorerの[ブラウザ](./web.md#webブラウザ)戦争が最も激化していたため、仕様と実装の乖離が生じてしまった。HTTP1.0では、ヘッダの導入、[GET](./web.md#httpメソッド)以外のメソッドの追加などが行われた。
 
-HTTP1.1は1997年に策定されて、1999年から2015年まで利用されていた。HTTP1.1では、チャンク転送、Acceptヘッダによるコンテントネゴシエーション、複雑なキャッシュコントロール、持続的接続などの機能を追加している。また、パイプラインという前のリクエストの転送が完了する前に次のリクエストを転送できる機能や、バーチャルホストという1つのWebサーバで別々の異なるドメインのホームページが公開できる仕組みが搭載された。
+HTTP1.1は1997年に策定されて、1999年から2015年まで利用されていた。HTTP1.1では、チャンク転送、Acceptヘッダによるコンテントネゴシエーション、複雑な[キャッシュ](./web.md#キャッシュ)コントロール、持続的接続などの機能を追加している。また、パイプラインという前の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の転送が完了する前に次の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を転送できる機能や、バーチャルホストという1つのWeb[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)で別々の異なる[ドメイン](./internet_layer.md#ドメイン名)の[ホームページ](./web.md#web)が公開できる仕組みが搭載された。
 
-HTTP2.0は2015年に公開された。複数のリクエストを同時に処理可能になり、ヘッダの圧縮やサーバプッシュ、転送するコンテンツの優先度設定などの複数の機能追加が行われた。
+HTTP2.0は2015年に公開された。複数の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を同時に処理可能になり、ヘッダの圧縮やサーバプッシュ、転送するコンテンツの優先度設定などの複数の機能追加が行われた。
 
-HTTP3.0は2018年に公開された。TCPではなく、UDPとQUICというプロトコル上で動作するアプリケーションプロトコルである。HTTP3.0では、暗号化通信がプロトコル自体に組み込まれ、スリーウェイハンドシェイクの必要がないため接続が高速であるなどの特徴がある。
+HTTP3.0は2018年に公開された。[TCP](./transport_layer.md#tcp)ではなく、[UDP](./transport_layer.md#udp)と[QUIC](./transport_layer.md#quic)という[プロトコル](./network_architecture.md#プロトコル)上で動作するアプリケーションプロトコルである。HTTP3.0では、暗号化通信が[プロトコル](./network_architecture.md#プロトコル)自体に組み込まれ、[スリーウェイハンドシェイク](./transport_layer.md#スリーウェイハンドシェイク)の必要がないため接続が高速であるなどの特徴がある。
 
 ### WebSocket
 
-**WebSocket**は、クライアントとサーバの間で双方向通信を実現するためのプロトコル。最初にHTTP通信を行い、upgradeリクエストによってWebSocket用の通信路を確立する。
+**WebSocket**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)と[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)の間で双方向通信を実現するための[プロトコル](./network_architecture.md#プロトコル)。最初に[HTTP](#http)通信を行い、upgrade[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)によってWebSocket用の通信路を確立する。
 
 
 ## ネットワーク管理
 
 ### SNMP
 
-**SNMP**(Simple Network Management Protocol)は、ネットワーク管理に用いられるプロトコルで、UDP/IP上で動作する。
+**SNMP**(Simple Network Management Protocol)は、[ネットワーク](./network.md#ネットワーク)管理に用いられる[プロトコル](./network_architecture.md#プロトコル)で、[UDP](./transport_layer.md#udp)/[IP](./internet_layer.md#ip)上で動作する。
 
-SNMPでは、管理する側を**マネージャ**（ネットワーク監視端末）、管理される側を**エージェント**（ルーター、スイッチなど）と呼ぶ。
+SNMPでは、管理する側を**マネージャ**（ネットワーク監視端末）、管理される側を**エージェント**（[ルータ](./network_architecture.md#ルータ)、[スイッチ](./network_architecture.md#スイッチ)など）と呼ぶ。
 
 SNMPでの処理は機器へのデータの書き込みと読み込みに集約される。この方法を、**フェッチ/ストアパラダイム**と呼ぶ。
 
 ### MIB
 
-**MIB**(Management Information Base)は、SNMPでやり取りされる情報で、ツリー型の構造をもった管理情報データベースとなっている。 MIBには、**標準MIB**と各メーカーが独自に作成した**拡張MIB**がある。
+**MIB**(Management Information Base)は、[SNMP](#snmp)でやり取りされる情報で、ツリー型の構造をもった管理情報[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)となっている。 MIBには、**標準MIB**と各メーカーが独自に作成した**拡張MIB**がある。
 
 ### RMON
 
-**RMON**(Remote Monitoring MIB)は、通常のMIBがネットワーク機器のインタフェース（点）を監視するのに対し、接続されるネットワークの回線（線）を監視する。
+**RMON**(Remote Monitoring MIB)は、通常の[MIB](#mib)が[ネットワーク](./network.md#ネットワーク)機器のインタフェース（点）を監視するのに対し、接続される[ネットワーク](./network.md#ネットワーク)の回線（線）を監視する。
 
-ある特定のホストがどこの誰と、どのようなプロトコルで通信しているかという統計情報を知ることができる。
+ある特定の[ホスト](./network.md#ホスト)がどこの誰と、どのような[プロトコル](./network_architecture.md#プロトコル)で通信しているかという統計情報を知ることができる。
 
 
 ## H.323
 
-**H.323**は、IPネットワーク上で音声や映像をやり取りするためのプロトコル体系。
+**H.323**は、[IP](./internet_layer.md#ip)[ネットワーク](./network.md#ネットワーク)上で音声や映像をやり取りするための[プロトコル](./network_architecture.md#プロトコル)体系。
 
 
 ## SIP
 
-**SIP**はH.323より後に開発されて、インターネットでの利用によりマッチしているプロトコル。
+**SIP**は、[H.323](#h323)より後に開発された、[インターネット](./network.md#インターネット)での利用によりマッチした[プロトコル](./network_architecture.md#プロトコル)。
 
 
 ## RTP
 
-**RTP**(Real-Time Transport Protocol)は、UDPでリアルタイムなマルチメディア通信を実現するために、アプリケーション層でシーケンス番号やパケット送信時刻の管理をするプロトコル。
+**RTP**(Real-Time Transport Protocol)は、[UDP](./transport_layer.md#udp)でリアルタイムな[マルチメディア](../../../computer/software/_/chapters/multimedia.md#マルチメディア)通信を実現するために、[アプリケーション層](./communication_protocol.md#アプリケーション層)で[シーケンス番号](./transport_layer.md#シーケンス番号)や[パケット](./network.md#パケット)送信時刻の管理をする[プロトコル](./network_architecture.md#プロトコル)。
 
 ### RTCP
 
-**RTCP**(RTP Control Protocol)は、パケット喪失率など通信回線の品質を管理することで、RTPによる通信を補助するプロトコル。
+**RTCP**(RTP Control Protocol)は、[パケット](./network.md#パケット)喪失率など通信回線の品質を管理することで、[RTP](#rtp)による通信を補助する[プロトコル](./network_architecture.md#プロトコル)。
 
 
 ## P2P
 
-**P2**(Peer To Peer)は、ネットワーク上に展開する各端末やホストがサーバーなどを介さずに1対1で直接接続して通信する形態。
+**P2P**(Peer To Peer)は、[ネットワーク](./network.md#ネットワーク)上に展開する各端末や[ホスト](./network.md#ホスト)が[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)などを介さずに1対1で直接接続して通信する形態。
 
 
 ## LDAP
 
-**LDAP**(Lightweight Directory Access Protocol)は、ユーザー名やパスワードなどの情報を一元管理する仕組みである、ディレクトリサービスへのアクセスに使われる。**ディレクトリサービス**は、ネットワーク上の資源に関してデータベース的な情報提供を行うサービスである。
+**LDAP**(Lightweight Directory Access Protocol)は、ユーザ名やパスワードなどの情報を一元管理する仕組みである、ディレクトリサービスへのアクセスに使われる[プロトコル](./network_architecture.md#プロトコル)。**ディレクトリサービス**は、ネットワーク上の資源に関してデータベース的な情報提供を行うサービスである。
 
 
 ## NTP
 
-**NTP**(Network Time Protocol)は、ネットワークに接続される機器の時刻を同期するためのアプリケーションプロトコル。
+**NTP**(Network Time Protocol)は、[ネットワーク](./network.md#ネットワーク)に接続される機器の時刻を同期するためのアプリケーションプロトコル。
 
 
 ## 制御システムのプロトコル
