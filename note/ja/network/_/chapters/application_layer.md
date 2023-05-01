@@ -1,6 +1,6 @@
 # 『アプリケーション層』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-04-01）
 
 
 ## 目次
@@ -41,23 +41,23 @@
 
 ### TELNET
 
-**TELNET**は、TCPのコネクションを1つ利用して、通信相手のコンピュータにコマンドを文字列として送信し実行するプロトコル。相手のコンピュータ内部で動作しているシェルに接続しているような状態となる。
+**TELNET**は、[TCP](./transport_layer.md#tcp)の[コネクション](./network.md#コネクション)を1つ利用して、通信相手の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に[コマンド](../../../computer/linux/_/chapters/basic_command.md#コマンド)を文字列として送信し実行する[プロトコル](./network_architecture.md#プロトコル)。相手の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で動作している[シェル](../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)に接続しているような状態となる。
 
 TELNETでは、ユーザが入力した文字以外にもオプションをやり取りすることができる。**NVT**(Network Virtual Terminal)を実現するための画面制御情報はこのオプション機能を利用して送信される。
 
 またTELNETには、改行キーが入力されるごとに1行分のデータをまとめて送る**行モード**と、入力された文字を1文字ごとに送る**透過モード**がある。
 
-TELNETプロトコルを利用するクライアントプログラムを**TELNETクライアント**といい、TELNETクライアントは基本的に23番ポートに接続することでtelnetdとやり取りをする。しかし、それ以外のポートに接続することで、キーボードから各プロトコルのコマンドを直接入力することもできる。これを利用して、TCP/IPアプリケーション開発時のデバッグに利用されることもある。
+TELNET[プロトコル](./network_architecture.md#プロトコル)を利用する[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)[プログラム](../../../programming/_/chapters/programming.md#プログラム)を**TELNETクライアント**といい、TELNETクライアントは基本的に23番[ポート](./address_on_network.md#ポート番号)に接続することでtelnetdとやり取りをする。しかし、それ以外の[ポート](./address_on_network.md#ポート番号)に接続することで、キーボードから各[プロトコル](./network_architecture.md#プロトコル)の[コマンド](../../../computer/linux/_/chapters/basic_command.md#コマンド)を直接入力することもできる。これを利用して、[TCP/IP](./communication_protocol.md#tcpip)[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)開発時のデバッグに利用されることもある。
 
 ### SSH
 
-**SSH**(Secure SHell)は、暗号化された遠隔ログインシステムで、一般的に22番ポートが利用される。SSHの基本的な機能は以下の通り。
+**SSH**(Secure SHell)は、暗号化された遠隔ログインシステムで、一般的に22番[ポート](./address_on_network.md#ポート番号)が利用される。SSHの基本的な機能は以下の通り。
 
 - 通信内容の暗号化
 - ファイルの転送
 - ポートフォワード機能
 
-ポートフォワード機能は、特定のポートに届けられたメッセージを、特定のIPアドレス、ポート番号に転送する仕組み。
+ポートフォワード機能は、特定の[ポート](./address_on_network.md#ポート番号)に届けられたメッセージを、特定の[IPアドレス](./address_on_network.md#ipアドレス)、[ポート番号](./address_on_network.md#ポート番号)に転送する仕組み。
 
 SSHの認証には、パスワード認証の他にも**公開鍵認証**や**ワンタイムパスワード認証**が利用できる。
 
@@ -66,57 +66,57 @@ SSHの認証には、パスワード認証の他にも**公開鍵認証**や**�
 
 ### FTP
 
-**FTP**(File Transfer Protcol)は、異なるコンピュータ間でファイルを転送するときに使われるプロトコル。インターネット上には、誰でもログインできる**anonymous FTPサーバ**があり、これらはanonymousかftpというユーザ名でログインできる。anonymous FTPサーバは不特定多数へのソフトウェアの公開などのために用いられる。
+**FTP**(File Transfer Protcol)は、異なる[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)間で[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を転送するときに使われる[プロトコル](./network_architecture.md#プロトコル)。[インターネット](./network.md#インターネット)上には、誰でもログインできる**anonymous FTPサーバ**があり、これらはanonymousかftpというユーザ名でログインできる。anonymous FTPサーバは不特定多数への[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)の公開などのために用いられる。
 
-FTPでは、2つのTCPコネクションが利用され、1つは制御用（21番ポート）で、もう1つはファイル転送用（20番ポート）である。ファイル転送には、一般的に20番ポートを用いるが、セキュリティ向上のためにポート番号を乱数的に割り当てるのが一般的。
+FTPでは、2つの[TCP](./transport_layer.md#tcp)[コネクション](./network.md#コネクション)が利用され、1つは制御用（21番[ポート](./address_on_network.md#ポート番号)）で、もう1つはファイル転送用（20番[ポート](./address_on_network.md#ポート番号)）である。ファイル転送には、一般的に20番[ポート](./address_on_network.md#ポート番号)を用いるが、セキュリティ向上のために[ポート番号](./address_on_network.md#ポート番号)を乱数的に割り当てるのが一般的。
 
 
 ## 電子メール
 
-電子メールサービスを提供するためのプロトコルはSMTPで、TCPを利用している。通常のユーザが利用するコンピュータは常に電源が入っているとは限らないので、常に起動している**メールサーバ**を経由してメッセージの送受信を行う。受信者がメールサーバから電子メールを受け取るためのプロトコルとしてはPOPがある。
+電子メールサービスを提供するための[プロトコル](./network_architecture.md#プロトコル)は[SMTP](#smtp)で、[TCP](./transport_layer.md#tcp)を利用している。通常のユーザが利用する[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)は常に電源が入っているとは限らないので、常に起動している**メールサーバ**を経由してメッセージの送受信を行う。受信者がメールサーバから電子メールを受け取るための[プロトコル](./network_architecture.md#プロトコル)としては[POP](#pop)がある。
 
 ### MIME
 
-**MEME**(Multipurpose Internet Mail Extensions)は、電子メールでテキスト以外のデータ形式を送信できるようにした、拡張形式。MMIMEを利用することで、画像や音声、動画などが添付できる。
+**MEME**(Multipurpose Internet Mail Extensions)は、電子メールでテキスト以外のデータ形式を送信できるようにした拡張形式。MIMEを利用することで、画像や音声、動画などの[マルチメディア](../../../computer/software/_/chapters/multimedia.md#マルチメディア)データが添付できる。
 
 ### SMTP
 
-**SMTP**(Simple Mail Transfer Protocol)は、電子メールを配送するアプリケーションプロトコルで、TCPの25番ポートを用いる。SMTPには認証の仕組みがないため、迷惑メール（スパムメール）を送り付けるような悪用が簡単にできてしまう。
+**SMTP**(Simple Mail Transfer Protocol)は、電子メールを配送するアプリケーションプロトコルで、[TCP](./transport_layer.md#tcp)の25番[ポート](./address_on_network.md#ポート番号)を用いる。SMTPには認証の仕組みがないため、迷惑メール（スパムメール）を送り付けるような悪用が簡単にできてしまう。
 
 ### POP before SMTP
 
-**POP before SMTP**は、POPによるユーザ認証を行い、認証が正しければ一定期間クライアントIPアドレスからのSMTP通信を受け入れる仕組み。
+**POP before SMTP**は、[POP](#pop)によるユーザ認証を行い、認証が正しければ一定期間[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)[IPアドレス](./address_on_network.md#ipアドレス)からの[SMTP](#smtp)通信を受け入れる仕組み。
 
 ### SMTP認証
 
-**SMTP認証**(SMTP Authentication)は、メール送信時にSMTPサーバでユーザ認証を行うようにした仕組み。
+**SMTP認証**(SMTP Authentication)は、メール送信時に[SMTP](#smtp)[サーバ](../../../computer/_/chapters/computer.md#サーバ)でユーザ認証を行うようにした仕組み。
 
 ### SPF
 
-**SPF**(Sender Policy Framework)は、送信元メールサーバのIPアドレスをDNSサーバに登録しておき、受信側で受信したメールのIPアドレスと送信元メールサーバのIPアドレスを確認してドメイン認証をすることで、なりすましを防止する仕組み。
+**SPF**(Sender Policy Framework)は、送信元メールサーバの[IPアドレス](./address_on_network.md#ipアドレス)を[DNS](./internet_layer.md#dns)[サーバ](../../../computer/_/chapters/computer.md#サーバ)に登録しておき、受信側で受信したメールの[IPアドレス](./address_on_network.md#ipアドレス)と送信元メールサーバの[IPアドレス](./address_on_network.md#ipアドレス)を確認してドメイン認証をすることで、なりすましを防止する仕組み。
 
 ### DKIM
 
-**DKIM**(DomainKeys Identified Mail)は、送信元メールサーバで電子署名を付与し、受信側では電子署名を認証することで、なりすましを防止する仕組み。送信元は公開鍵をDNSサーバに登録しておく。
+**DKIM**(DomainKeys Identified Mail)は、送信元メールサーバで電子署名を付与し、受信側では電子署名を認証することで、なりすましを防止する仕組み。送信元は公開鍵を[DNS](./internet_layer.md#dns)[サーバ](../../../computer/_/chapters/computer.md#サーバ)に登録しておく。
 
 ### DMARC
 
-**DMARC**(Domain-based Message Authentication, Reporting and Conformance)は、SPFやDKIMなど送信元ドメインを認証する仕組みにおいて、認証が失敗した場合のメールの取り扱いポリシーを送信者がDNSに登録しておく仕組み。
+**DMARC**(Domain-based Message Authentication, Reporting and Conformance)は、[SPF](#spf)や[DKIM](#dkim)など送信元ドメインを認証する仕組みにおいて、認証が失敗した場合のメールの取り扱いポリシーを送信者が[DNS](./internet_layer.md#dns)に登録しておく仕組み。
 
 ### POP
 
-**POP**(Post Office Protocol)は、電子メールの受信ホストがメールサーバからメールを受け取るためのプロトコル。現在は主に**POP3**(POP version 3.0)が使われている。
+**POP**(Post Office Protocol)は、電子メールの受信[ホスト](./network.md#ホスト)がメールサーバからメールを受け取るための[プロトコル](./network_architecture.md#プロトコル)。現在は主に**POP3**(POP version 3.0)が使われている。
 
 ### IMAP
 
-**IMAP**(Internet Message Access Protocol)は、POPと同様に電子メールなどのメッセージを受信するためのプロトコル。IMAPでは、サーバ上の電子メールを全てダウンロードすることなく電子メールを読むことができる。
+**IMAP**(Internet Message Access Protocol)は、[POP](#pop)と同様に電子メールなどのメッセージを受信するための[プロトコル](./network_architecture.md#プロトコル)。IMAPでは、サーバ上の電子メールを全てダウンロードすることなく電子メールを読むことができる。
 
-IMAPを使用することにより、サーバ上に補完されているメールを、あたかも自分の使うクライアントの記憶媒体のように使うことができる。そのため、ある端末から一度開いたメールは、他の端末から見ても既読したことになっている。
+IMAPを使用することにより、[サーバ](../../../computer/_/chapters/computer.md#サーバ)上に補完されているメールを、あたかも自分の使う[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)の記憶媒体のように使うことができる。そのため、ある端末から一度開いたメールは、他の端末から見ても既読したことになっている。
 
 
 ## WWW
 
-**WWW**(World Wide Web)は、インターネット上の情報をハイパーテキスト形式で参照できる情報提供システム。単にWebと呼ばれることも多い。
+**WWW**(World Wide Web)は、[インターネット](./network.md#インターネット)上の情報をハイパーテキスト形式で参照できる情報提供[システム](../../../system/_/chapters/system.md#システム)。単に[Web](./web.md#web)と呼ばれることも多い。
 
 ### HTTP
 
