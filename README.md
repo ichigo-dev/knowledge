@@ -2,14 +2,12 @@
 
 - [note](./note/README.md)
 
-![thumbnail](./assets/images/thumbnail.png)
-
 
 ## Questinos generation tool
 
 When you execute the command below, questions on the checksheet will appear randomly.
 
-```
+```sh
 $ ./tools/generate_checksheet
 ```
 
