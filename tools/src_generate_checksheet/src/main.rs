@@ -6,7 +6,7 @@ use markdown_to_text;
 
 fn main()
 {
-    let doc_root = String::from("../note/ja/");
+    let doc_root = String::from("note/ja/");
     let filename = "checksheet.md";
 
     //  ファイルを読み込む
@@ -15,6 +15,7 @@ fn main()
     let _ = reader.build_index();
 
     let mut question_cnt = 0;
+    let mut ok_cnt = 0;
     loop
     {
         //  ランダムに1行取得して、空行かヘッダ行ならスキップ
@@ -36,7 +37,7 @@ fn main()
         let mut hint_cnt = 0;
         'answer: loop
         {
-            print!("\tCould you explain this term? [y/n] >> ");
+            print!("\tCould you explain this term? [y/n/q(quit)] >> ");
             std::io::stdout().flush().unwrap();
             let mut result = String::new();
             io::stdin().read_line(&mut result).unwrap();
@@ -45,6 +46,7 @@ fn main()
             {
                 "y" =>
                 {
+                    ok_cnt += 1;
                     println!("\t\tGood!");
                     break;
                 },
@@ -137,6 +139,11 @@ fn main()
                             break 'hint;
                         }
                     }
+                },
+                "q" =>
+                {
+                    println!("\nResult: {}/{}", ok_cnt, question_cnt-1);
+                    return;
                 },
                 _ => {},
             }
