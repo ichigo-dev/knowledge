@@ -8,7 +8,7 @@
 When you execute the command below, questions on the checksheet will appear randomly.
 
 ```sh
-$ ./tools/generate_checksheet
+$ ./quiz
 ```
 
 

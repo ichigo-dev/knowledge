@@ -1050,7 +1050,7 @@
 
 - [ ] [補助記憶装置](./computer/hardware/_/chapters/auxiliary_memory_unit.md#補助記憶装置)
 - [ ] [ハードディスク装置(HDD: Hard Disk Drive、磁気ディスク装置)](./computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)
-	- [ ] [プラッタ（磁気ディスク）](./computer/hardware/_/chapters/auxiliary_memory_unit.md.md#プラッタ)
+	- [ ] [プラッタ（磁気ディスク）](./computer/hardware/_/chapters/auxiliary_memory_unit.md#プラッタ)
 	- [ ] [スピンドルモータ](./computer/hardware/_/chapters/auxiliary_memory_unit.md#スピンドルモータ)
 	- [ ] [アクセスアーム（スイングアーム）](./computer/hardware/_/chapters/auxiliary_memory_unit.md#アクセスアーム)
 	- [ ] [磁気ヘッド](./computer/hardware/_/chapters/auxiliary_memory_unit.md#磁気ヘッド)
@@ -1083,7 +1083,7 @@
 - [ ] [論理回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
 	- [ ] [MIL記号](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
 	- [ ] [OR回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
-	- [ ] [AND回路](./computer/hardware/_/chapters/logical_circuit.md.md#論理回路)
+	- [ ] [AND回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
 	- [ ] [NOT回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
 	- [ ] [NOR回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
 	- [ ] [NAND回路](./computer/hardware/_/chapters/logical_circuit.md#論理回路)
