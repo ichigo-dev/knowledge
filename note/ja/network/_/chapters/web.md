@@ -1,6 +1,6 @@
 # 『Web』ノート
 
-（最終更新： 2023-05-02）
+（最終更新： 2023-05-03）
 
 
 ## 目次
@@ -59,6 +59,7 @@
 	1. [頻出のステータスコード](#頻出のステータスコード)
 1. [セッション](#セッション)
 	1. [Cookie](#cookie)
+	1. [ローカルストレージ](#ローカルストレージ)
 
 
 ## Web
@@ -172,99 +173,99 @@ RESTは、**ULCODC$SS**(Uniform Layered Code on Demand Client Cache Stateless Se
 
 ### 統一インタフェース
 
-**統一インタフェース**(Uniform Interface)は、URIで指示したリソースに対する操作を、統一した限定的なインタフェースにより行うアーキテクチャスタイル。実際にHTTPには限られたいくつかのメソッドしか用意されておらず、Webのアーキテクチャ全体をシンプルに保っている。
+**統一インタフェース**(Uniform Interface)は、[URI](#uri)で指示した[リソース](#リソース)に対する操作を、統一した限定的なインタフェースにより行うアーキテクチャスタイル。実際に[HTTP](./application_layer.md#http)には限られたいくつかの[メソッド](#httpメソッド)しか用意されておらず、[Web](#web)のアーキテクチャ全体をシンプルに保っている。
 
 ### 階層化システム
 
-**階層化システム**(Layerd System)は、システムをいくつかの階層に分類するアーキテクチャスタイル。統一インタフェースの恩恵もあり、サーバとクライアントの間にロードバランサを設置して負荷分散をしたり、プロキシサーバを設置してアクセスを制限したりすることが容易となっている。
+**階層化システム**(Layered System)は、[システム](../../../system/_/chapters/system.md#システム)をいくつかの階層に分類するアーキテクチャスタイル。[統一インタフェース](#統一インタフェース)の恩恵もあり、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)と[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)の間にロードバランサを設置して負荷分散をしたり、プロキシサーバを設置してアクセスを制限したりすることが容易となっている。
 
 ### コードオンデマンド
 
-**コードオンデマンド**は、プログラムコードをサーバからダウンロードして、それをクライアント側で実行するアーキテクチャスタイル。**JavaScript**や**Flash**、**Javaアンプレット**がこれに該当する技術で、クライアント側の拡張性が高くなるという利点がある。
+**コードオンデマンド**は、[プログラム](../../../programming/_/chapters/programming.md#プログラム)[コード](../../../programming/_/chapters/programming.md#ソースコード)を[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)からダウンロードして、それを[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側で実行するアーキテクチャスタイル。[JavaScript](../../../programming/_/chapters/programming_language.md#javascript)や**Flash**、**Javaアンプレット**がこれに該当する技術で、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側の拡張性が高くなるという利点がある。
 
 ### RESTful
 
-**RESTful**は、RESTの制約に従うRESTらしいサービスのことを指す。個別のWebサービスやWeb APIがRESTfulになると、Webは全体としてより良くなるため、開発者はRESTを意識して個別のシステムを設計する必要がある。
+**RESTful**は、[REST](#rest)の制約に従う[REST](#rest)らしいサービスのことを指す用語。個別の[Web](#web)サービスや[Web API](#web-api)がRESTfulになると、[Web](#web)は全体としてより良くなるため、開発者は[REST](#rest)を意識して個別の[システム](../../../system/_/chapters/system.md#システム)を設計する必要がある。
 
 
 ## URI
 
-**URI**（Uniform Resource Identifier: **統一リソース識別子**）は、インターネット上の資源（リソース）を表す識別子。
+**URI**（Uniform Resource Identifier: **統一リソース識別子**）は、[インターネット](./network.md#インターネット)上の資源（[リソース](#リソース)）を表す識別子。
 
-URIで表されるパスにはASCII文字のみ利用することができ、日本語などのASCII以外の文字を使いたい場合は**%エンコーディング**という方式を用いて文字をエンコードする。
+URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)文字のみ利用することができ、日本語などの[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)以外の文字を使いたい場合は**%エンコーディング**という方式を用いて文字をエンコードする。
 
 ### URL
 
-**URL**(Uniform Resource Locator)は、URIよりも狭義の概念で、インターネット上のWebリソースを表す識別子のことを指す。
+**URL**(Uniform Resource Locator)は、[URI](#uri)よりも狭義の概念で、[インターネット](./network.md#インターネット)上の[Web](#web)[リソース](#リソース)を表す識別子のことを指す。
 
 ### URN
 
-**URN**(Uniform Resource Name)は、URIよりも狭義の概念で、リソースに恒久的なIDを振るための識別子。例えば、書籍には**ISBN**という世界的に統一されたURNが割り振られている。
+**URN**(Uniform Resource Name)は、[URI](#uri)よりも狭義の概念で、[リソース](#リソース)に恒久的なIDを振るための識別子。例えば、書籍には**ISBN**という世界的に統一されたURNが割り振られている。
 
 ### スキーム
 
-**スキーム**(Scheme)は、URI中でそのURIが利用するプロトコルを指す部分。スキームの公式な一覧は**IANA**(Internet Assigned Numbers Authority)にある。
+**スキーム**(Scheme)は、[URI](#uri)中でその[URI](#uri)が利用する[プロトコル](./network_architecture.md#プロトコル)を指す部分。スキームの公式な一覧は**IANA**(Internet Assigned Numbers Authority)にある。
 
 ### クエリパラメータ
 
-**クエリパラメータ**（**クエリ文字列**）は、URI中に指定することができるパラメータで、クライアントがサーバに対して情報を送信したい場合に用いられる。
+**クエリパラメータ**（**クエリ文字列**）は、[URI](#uri)中に指定することができるパラメータで、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に対して情報を送信したい場合に用いられる。
 
 ### URIフラグメント
 
-**URIフラグメント**は、URI中でリソースの内部のさらに細かい部分を指定するときに使用される部分。
+**URIフラグメント**は、[URI](#uri)中で[リソース](#リソース)の内部のさらに細かい部分を指定するときに使用される部分。
 
 ### リソース
 
-**リソース**は、Web上に存在するURIを持ったありとあらゆる情報のこと。ひとつのリソースが複数の名前を持つこともできる。
+**リソース**は、[Web](#web)上に存在する[URI](#uri)を持ったありとあらゆる情報を指す用語。ひとつのリソースが複数の名前を持つこともできる。
 
-実際にクライアントとサーバがやり取りするデータのことを**リソースの表現**といい、リソースの表現は時間によって**状態**が変化する可能性がある。
+実際に[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)と[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がやり取りするデータのことを**リソースの表現**といい、リソースの表現は時間によって**状態**が変化する可能性がある。
 
 ### アドレス可能性
 
-**アドレス可能性**は、URIが持つリソースを一意的に指し示すことができる性質。
+**アドレス可能性**は、[URI](#uri)が持つ、[リソース](#リソース)を一意的に指し示すことができる性質。
 
 ### クールURI
 
-**クールURI**は、良いURIや綺麗なURIを指す言葉で、Berners-Leeが1998年に発表した「Cool URIs don't change」というWebページが発祥となっている。Berners-Leeは、「URIは変わらないべきである。変わらないURIこそが最上のURIである」と主張した。
+**クールURI**は、良い[URI](#uri)や綺麗な[URI](#uri)を指す言葉で、Berners-Leeが1998年に発表した「Cool URIs don't change」という[Web](#web)ページが発祥となっている。Berners-Leeは、「[URI](#uri)は変わらないべきである。変わらない[URI](#uri)こそが最上のURIである」と主張した。
 
 ### リダイレクト
 
-**リダイレクト**(Redirect)は、古いURIを新しいURIに転送するHTTPの仕組み。URIを変更したい場合はリダイレクトにより古いURIが完全に使えなくなることを防ぐとよい。
+**リダイレクト**(Redirect)は、古い[URI](#uri)を新しい[URI](#uri)に転送する[HTTP](./application_layer.md#http)の仕組み。[URI](#uri)を変更したい場合はリダイレクトにより古い[URI](#uri)が完全に使えなくなることを防ぐとよい。
 
 
 ## HTML
 
-**HTML**(HyperText Markup Language)は、Webページを記述するためのマークアップ言語あるいはデータ形式のこと。HTMLはハイパーテキストであり、画面に表示する文字や画像にリンクを張って別の情報と紐づけることができる。
+**HTML**(HyperText Markup Language)は、[Web](#web)ページを記述するためのマークアップ言語あるいはデータ形式。HTMLは[ハイパーテキスト](#ハイパーテキスト)であり、画面に表示する文字や画像に[リンク](#ハイパーリンク)を張って別の情報と紐づけることができる。
 
-HTMLはWWWのプレゼンテーション層の機能であるが、このプレゼンテーション層は完全には整備されておらず、OSやブラウザが異なると表示の細かい部分に違いを生じる場合がある。
+HTMLは[WWW](./application_layer.md#www)の[プレゼンテーション層](./network_architecture.md#プレゼンテーション層)の機能であるが、この[プレゼンテーション層](./network_architecture.md#プレゼンテーション層)は完全には整備されておらず、[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)や[ブラウザ](#webブラウザ)が異なると表示の細かい部分に違いを生じる場合がある。
 
 
 ## HTTPにおける認証
 
 ### Basic認証
 
-**Basic認証**は、base64でエンコードされたユーザIDとパスワードによる認証。平文でネットワークを流れるので安全性は低く、HTTPSの暗号化通信と組み合わせて使用することが推奨されている。
+**Basic認証**は、base64でエンコードされたユーザIDとパスワードによる認証。平文で[ネットワーク](./network.md#ネットワーク)を流れるので、安全性は低く、HTTPSの暗号化通信と組み合わせて使用することが推奨されている。
 
 ### Digest認証
 
-**Digest認証**は、Basic認証の欠点であった平文で認証情報が流れてしまうことを改善した認証方式。ユーザIDとパスワードをMD5でハッシュ化して送信する。ただし、Digest認証の暗号化方式も解析が可能となっているため、HTTPSと合わせて使用するなど安全性を高める対策は必要となる。
+**Digest認証**は、[Basic認証](#basic認証)の欠点であった平文で認証情報が流れてしまうことを改善した認証方式。ユーザIDとパスワードをMD5でハッシュ化して送信する。ただし、Digest認証の暗号化方式も解析が可能となっているため、HTTPSと合わせて使用するなど安全性を高める対策は必要となる。
 
 
 ## HTTPメッセージ
 
-**HTTPメッセージ**は、HTTP通信においてリクエストやレスポンスの際にやり取りされるメッセージ。
+**HTTPメッセージ**は、[HTTP](./application_layer.md#http)通信において[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)や[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)の際にやり取りされるメッセージ。
 
 ### HTTPヘッダ
 
-**HTTPヘッダ**は、HTTPメッセージにおいて、HTTP通信のメタデータが格納された部分。
+**HTTPヘッダ**は、[HTTPメッセージ](#httpメッセージ)において、[HTTP](./application_layer.md#http)通信のメタデータが格納された部分。
 
 ### HTTPボディ
 
-**HTTPボディ**は、HTTPメッセージにおいて様々な情報が格納される部分で、その扱いはソフトウェア次第。HTTPボディは省略することも可能。通常のWebページのレスポンスではHTTPボディにHTMLが格納され、Web APIではリクエストのパラメータやレスポンスデータとしてHTTPボディにXMLやJSONなどが格納されることが多い。
+**HTTPボディ**は、[HTTPメッセージ](#httpメッセージ)において様々な情報が格納される部分で、その扱いは[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)次第。HTTPボディは省略することも可能。通常の[Web](#web)ページの[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)ではHTTPボディに[HTML](#html)が格納され、[Web API](#web-api)では[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)のパラメータや[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)データとしてHTTPボディにXMLやJSONなどが格納されることが多い。
 
 ### リクエストメッセージ
 
-**リクエストメッセージ**は、HTTP通信においてリクエストの際にやり取りされるHTTPメッセージ。
+**リクエストメッセージ**は、[HTTP](./application_layer.md#http)通信において[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の際にやり取りされる[HTTPメッセージ](#httpメッセージ)。
 
 ```
 [リクエストメッセージの例]
@@ -276,11 +277,11 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9
 
 ### リクエストライン
 
-**リクエストライン**は、リクエストメッセージの1行目にあたる部分で、HTTPメソッド、リクエストURI、プロトコルバージョンからなる。
+**リクエストライン**は、[リクエストメッセージ](#リクエストメッセージ)の1行目にあたる部分で、[HTTPメソッド](#httpメソッド)、[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)[URI](#uri)、[プロトコル](./network_architecture.md#プロトコル)[バージョン](../../../computer/software/_/chapters/package.md#バージョン)からなる。
 
 ### レスポンスメッセージ
 
-**レスポンスメッセージ**は、HTTP通信においてレスポンスの際にやり取りされるHTTPメッセージ。
+**レスポンスメッセージ**は、[HTTP](./application_layer.md#http)通信において[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)の際にやり取りされる[HTTPメッセージ](#httpメッセージ)。
 
 ```
 [レスポンスメッセージの例]
@@ -294,12 +295,12 @@ Content-Type: application/xhtml+xml; charset=utf-8
 
 ### ステータスライン
 
-**ステータスライン**は、レスポンスメッセージの1行目にあたる部分で、プロトコルバージョン、ステータスコード、テキストフレーズからなる。
+**ステータスライン**は、[レスポンスメッセージ](#レスポンスメッセージ)の1行目にあたる部分で、[プロトコル](./network_architecture.md#プロトコル)[バージョン](../../../computer/software/_/chapters/package.md#バージョン)、[ステータスコード](#ステータスコード)、テキストフレーズからなる。
 
 
 ## HTTPメソッド
 
-**HTTPメソッド**は、HTTPリクエストの際に、対象となるリソースに対してどのような操作を行うかを表す命令。中でもGET、POST、PUT、DELETEは、これら4つでCRUDの性質を満たす。
+**HTTPメソッド**は、[HTTP](./application_layer.md#http)[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の際に、対象となる[リソース](#リソース)に対してどのような操作を行うかを表す命令。中でもGET、POST、PUT、DELETEは、これら4つでCRUDの性質を満たす。
 
 | メソッド | 意味                                                     |
 |----------|----------------------------------------------------------|
@@ -330,12 +331,12 @@ Content-Type: application/xhtml+xml; charset=utf-8
 
 ### 頻出のステータスコード
 
-| ステータスコード          | 概要                                                         |
+| ステータスコード          | 概要                                                                                                                   |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------|
 | 200 OK                    | リクエストが成功したことを示す。                                                                                       |
-| 201 Created               | リソースを新たに作成したことを示す。                         |
-| 301 Moved Permanently     | リクエストで指定したリソースが新しいURIに移動したことを示す。古いURIを保ちつつ新しいURIに移行する際に用いられる。     |
-| 303 See Other             | リクエストに対する処理結果が別のURIで取得できることを示す。POSTでリソースを操作した結果をGETで返す場合など。          |
+| 201 Created               | リソースを新たに作成したことを示す。                                                                                   |
+| 301 Moved Permanently     | リクエストで指定したリソースが新しいURIに移動したことを示す。古いURIを保ちつつ新しいURIに移行する際に用いられる。      |
+| 303 See Other             | リクエストに対する処理結果が別のURIで取得できることを示す。POSTでリソースを操作した結果をGETで返す場合など。           |
 | 400 Bad Request           | リクエストの構文やパラメータが間違っていることを示す。適切なクライアントエラーがない場合にも用いられる。               |
 | 401 Unauthorized          | リクエストの認証情報が不適切であることを示す。                                                                         |
 | 404 Not Found             | 指定したリソースが見つからなかったことを示す。                                                                         |
@@ -345,10 +346,14 @@ Content-Type: application/xhtml+xml; charset=utf-8
 
 ## セッション
 
-**セッション**は、クライアントがあるWebサイトに訪問してから離脱するまでの通信のこと。各クライアントごとのセッション情報はサーバが利用するストレージに格納されており、クライアントは自分のセッション情報を参照するためのキーをCookieなどで保持する。
+**セッション**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がある[Web](#web)サイトに訪問してから離脱するまでの通信。各[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)ごとのセッション情報は[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が利用するストレージに格納されており、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)は自分のセッション情報を参照するためのキーを[Cookie](#cookie)などで保持する。
 
-サーバを冗長化する場合は、全てのサーバが共有できるストレージ（DBやキャッシュサーバなど）でセッション情報を管理する必要がある。
+[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)を[冗長化](../../../system/_/chapters/system_architecture.md#冗長化)する場合は、全ての[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が共有できるストレージ（[DB](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)や[キャッシュ](#キャッシュ)[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)など）でセッション情報を管理する必要がある。
 
 ### Cookie
 
-**Cookie**は、ブラウザに保存される情報で、セッション情報を参照するためのキーの管理などに用いられる。Cookieの情報をどれだけの期間保持しておくかは、ブラウザの設定やHTTPメッセージ内のメタ情報により制御する。
+**Cookie**は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[セッション](#セッション)情報を参照するためのキーの管理などに用いられる。Cookieの情報をどれだけの期間保持しておくかは、[ブラウザ](#webブラウザ)の設定や[HTTPメッセージ](#httpメッセージ)内のメタ情報により制御する。
+
+### ローカルストレージ
+
+**ローカルストレージ**(Local Storage)は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[Cookie](#cookie)よりも情報の保存期間が長く、格納できるデータ量も大きい。[Cookie](#cookie)の情報は[HTTPメッセージ](#httpメッセージ)を介して[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)にも送信されるが、ローカルストレージの情報はブラウザのみで使用されるため、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側の[セッション](#セッション)の管理には向いていない。
