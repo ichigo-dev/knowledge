@@ -54,8 +54,8 @@ fn main()
         .expect("something went wrong while reading the file");
     let _ = reader.build_index();
 
-    let mut cnt_question = 0;
-    let mut cnt_correct = 0;
+    let mut quiz_cnt = 0;
+    let mut correct_cnt = 0;
     loop
     {
         //  ランダムに1行取得して、空行かヘッダ行ならスキップ
@@ -71,12 +71,12 @@ fn main()
 
         let question_content = items[1];
         let answer_link = items[0];
-        cnt_question += 1;
+        quiz_cnt += 1;
         println!
         (
             "\n{}{}{}{}{}\n",
             " Q-".on_bright_cyan().black(),
-            cnt_question.to_string().on_bright_cyan().black(),
+            quiz_cnt.to_string().on_bright_cyan().black(),
             ". ".on_bright_cyan().black(),
             &question_content.on_bright_cyan().black(),
             " ".on_bright_cyan()
@@ -96,7 +96,7 @@ fn main()
             {
                 "y" =>
                 {
-                    cnt_correct += 1;
+                    correct_cnt += 1;
                     println!("\t{}\n", "Good".bold().green());
                     skip_fail!(show_answer(&doc_root, answer_link));
                     break;
@@ -150,10 +150,16 @@ fn main()
                     (
                         "\n{}{}{}{}",
                         "Result: ".green().bold(),
-                        cnt_correct.to_string().green().bold(),
+                        correct_cnt.to_string().green().bold(),
                         "/".green().bold(),
-                        (cnt_question - 1).to_string().green().bold()
+                        (quiz_cnt - 1).to_string().green().bold()
                     );
+
+                    print!("Press Enter to finish");
+                    skip_fail!(std::io::stdout().flush());
+                    let mut fin = String::new();
+                    let _ = io::stdin().read_line(&mut fin);
+
                     return;
                 },
                 _ => {},
@@ -191,7 +197,8 @@ fn show_answer
         let answer_line = answer_line?;
 
         //  回答の始まり
-        if answer_line.to_lowercase().ends_with(answer_header)
+        if answer_line.to_lowercase()
+            .ends_with(&("# ".to_string() + answer_header))
         {
             is_answer_start = true;
             continue;
