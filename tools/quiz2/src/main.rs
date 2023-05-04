@@ -147,7 +147,10 @@ fn main()
             match result.to_lowercase().trim()
             {
                 s if s.len() >= 2 &&
-                    quiz_answer.to_lowercase().starts_with(s) =>
+                (
+                    quiz_answer.to_lowercase().starts_with(s)
+                    || quiz_answer.to_lowercase().ends_with(s)
+                ) =>
                 {
                     correct_cnt += 1;
                     println!("\t{}\n", "Good".bold().green());

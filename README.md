@@ -11,6 +11,12 @@ When you execute the command below, questions on the checksheet will appear rand
 $ ./quiz
 ```
 
+or
+
+```sh
+$ ./quiz2
+```
+
 
 ## Acknowledgments
 

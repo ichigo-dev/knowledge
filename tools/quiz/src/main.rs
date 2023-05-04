@@ -87,7 +87,7 @@ fn main()
         let mut hint_cnt = 0;
         'answer: loop
         {
-            print!("Could you explain this term? [y/n/q(quit)] >> ");
+            print!("Could you explain this term? [y/n/s(skip)/q(quit)] >> ");
             skip_fail!(std::io::stdout().flush());
             let mut result = String::new();
             skip_fail!(io::stdin().read_line(&mut result));
@@ -98,6 +98,11 @@ fn main()
                 {
                     correct_cnt += 1;
                     println!("\t{}\n", "Good".bold().green());
+                    skip_fail!(show_answer(&doc_root, answer_link));
+                    break;
+                },
+                "s" =>
+                {
                     skip_fail!(show_answer(&doc_root, answer_link));
                     break;
                 },
