@@ -1865,7 +1865,7 @@
 	- [ ] [局舎](./network/_/chapters/network.md#局舎)
 	- [ ] [ローミング](./network/_/chapters/network.md#ローミング)
 	- [ ] [SIM(Subscriber Identity Module)](./network/_/chapters/network.md#sim)
-- [ ] [データセンター](./network/_/chapters/network.md#データセンター)
+- [ ] [データセンタ](./network/_/chapters/network.md#データセンタ)
 - [ ] [インターネット(Internet)](./network/_/chapters/network.md#インターネット)
 	- [ ] [イントラネット(Intranet)](./network/_/chapters/network.md#イントラネット)
 - [ ] [インターネットの構造](./network/_/chapters/network.md#インターネットの構造)
@@ -2264,3 +2264,10 @@
 		- [ ] [LSP(Label Switching Path)](./network/_/chapters/routing_protocol.md#ラベルスイッチング)
 	- [ ] [LSR(Label Switching Router)](./network/_/chapters/routing_protocol.md#lsr)
 		- [ ] [LER(Label Edge Router)](./network/_/chapters/routing_protocol.md#lsr)
+
+### AWS
+
+- [ ] [AWS(Amazon Web Service)](./network/aws/_/chapters/aws.md#aws)
+	- [ ] [リージョン](./network/aws/_/chapters/aws.md#リージョン)
+	- [ ] [AZ（アベイラビリティゾーン、ゾーン）](./network/aws/_/chapters/aws.md#az)
+		- [ ] [マルチAZ](./network/aws/_/chapters/aws.md#マルチaz)
