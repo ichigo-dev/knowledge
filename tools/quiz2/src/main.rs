@@ -153,7 +153,13 @@ fn main()
                 ) =>
                 {
                     correct_cnt += 1;
-                    println!("\t{}\n", "Good".bold().green());
+                    println!
+                    (
+                        "\t{}\n{}{}\n",
+                        "Good".bold().green(),
+                        "Answer. ",
+                        quiz_answer
+                    );
                     break;
                 },
                 "h" =>
