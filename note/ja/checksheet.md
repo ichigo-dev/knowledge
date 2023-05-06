@@ -1792,6 +1792,7 @@
 		- [ ] [不故障率](./system/_/chapters/system_performance_evaluation.md#故障率)
 - [ ] [スケールアップ](./system/_/chapters/system_performance_evaluation.md#スケールアップ)
 - [ ] [スケールアウト](./system/_/chapters/system_performance_evaluation.md#スケールアウト)
+- [ ] [スケールイン](./system/_/chapters/system_performance_evaluation.md#スケールイン)
 
 
 ## ネットワーク
@@ -2267,7 +2268,69 @@
 
 ### AWS
 
+#### AWS
+
 - [ ] [AWS(Amazon Web Service)](./network/aws/_/chapters/aws.md#aws)
 	- [ ] [リージョン](./network/aws/_/chapters/aws.md#リージョン)
 	- [ ] [AZ（アベイラビリティゾーン、ゾーン）](./network/aws/_/chapters/aws.md#az)
 		- [ ] [マルチAZ](./network/aws/_/chapters/aws.md#マルチaz)
+
+#### 分析サービス
+
+- [ ] [ENR(Amazon Elastic MapReduce)](./network/aws/_/chapters/analytics.md#enr)
+	- [ ] [HDFS(Hadoop Distributed File System)](./network/aws/_/chapters/analytics.md#enr)
+- [ ] [Amazon Kinesis](./network/aws/_/chapters/analytics.md#kinesis)
+	- [ ] [Data Streams](./network/aws/_/chapters/analytics.md#kinesis)
+	- [ ] [Data Firehose](./network/aws/_/chapters/analytics.md#kinesis)
+	- [ ] [Video Streams](./network/aws/_/chapters/analytics.md#kinesis)
+	- [ ] [Data Analytics](./network/aws/_/chapters/analytics.md#kinesis)
+- [ ] [AWS Data Pipeline](./network/aws/_/chapters/analytics.md#data-pipeline)
+- [ ] [AWS Glue](./network/aws/_/chapters/analytics.md#glue)
+
+#### アプリケーション統合
+
+- [ ] [MQ(Amazon Messaging Queue)](./network/aws/_/chapters/application_integration.md#mq)
+- [ ] [SQS(Amazon Simple Queue Service)](./network/aws/_/chapters/application_integration.md#sqs)
+- [ ] [SNS(Amazon Simple Notification Service)](./network/aws/_/chapters/application_integration.md#sns)
+- [ ] [SES(Amazon Simple Email Service)](./network/aws/_/chapters/application_integration.md#sns)
+
+#### コンピューティング
+
+- [ ] [EC2(Amazon Elastic Compute Cloud)](./network/aws/_/chapters/computing.md#ec2)
+	- [ ] [インスタンス](./network/aws/_/chapters/computing.md#ec2)
+		- [ ] [Running](./network/aws/_/chapters/computing.md#ec2)
+		- [ ] [Stopped](./network/aws/_/chapters/computing.md#ec2)
+		- [ ] [Terminated](./network/aws/_/chapters/computing.md#ec2)
+	- [ ] [従量課金型](./network/aws/_/chapters/computing.md#ec2)
+	- [ ] [AMI(Amazon Machine Image)](./network/aws/_/chapters/computing.md#ami)
+	- [ ] [インスタンスタイプ](./network/aws/_/chapters/computing.md#インスタンスタイプ)
+		- [ ] [インスタンスファミリー](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+			- [ ] [汎用](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+			- [ ] [コンピューティング最適化](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+			- [ ] [メモリ最適化](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+			- [ ] [高速コンピューティング](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+			- [ ] [ストレージ最適化](./network/aws/_/chapters/computing.md#インスタンスファミリー)
+		- [ ] [世代](./network/aws/_/chapters/computing.md#インスタンスタイプ)
+		- [ ] [インスタンスサイズ](./network/aws/_/chapters/computing.md#インスタンスタイプ)
+	- [ ] [スポットインスタンス](./network/aws/_/chapters/computing.md#スポットインスタンス)
+	- [ ] [リザーブドインスタンス](./network/aws/_/chapters/computing.md#リザーブドインスタンス)
+	- [ ] [EBS最適化オプション](./network/aws/_/chapters/computing.md#ebs最適化オプション)
+- [ ] [Auto Scaling](./network/aws/_/chapters/computing.md#ebsauto-scaling)
+	- [ ] [スケーリングポリシー](./network/aws/_/chapters/computing.md#スケーリングポリシー)
+		- [ ] [簡易スケーリング](./network/aws/_/chapters/computing.md#スケーリングポリシー)
+		- [ ] [ステップスケーリング](./network/aws/_/chapters/computing.md#スケーリングポリシー)
+		- [ ] [ターゲット追跡スケーリング](./network/aws/_/chapters/computing.md#スケーリングポリシー)
+	- [ ] [猶予期間](./network/aws/_/chapters/computing.md#猶予期間)
+	- [ ] [ウォームアップ](./network/aws/_/chapters/computing.md#ウォームアップ)
+	- [ ] [クールダウン](./network/aws/_/chapters/computing.md#クールダウン)
+	- [ ] [ライフサイクルフック](./network/aws/_/chapters/computing.md#ライフサイクルフック)
+	- [ ] [終了ポリシー](./network/aws/_/chapters/computing.md#終了ポリシー)
+- [ ] [ECS(Amazon Elastic Container Service)](./network/aws/_/chapters/computing.md#ecs)
+	- [ ] [Task](./network/aws/_/chapters/computing.md#ecs)
+	- [ ] [Cluster](./network/aws/_/chapters/computing.md#ecs)
+	- [ ] [Service](./network/aws/_/chapters/computing.md#ecs)
+	- [ ] [Task Definition](./network/aws/_/chapters/computing.md#ecs)
+- [ ] [AWS Lambda](./network/aws/_/chapters/computing.md#lambda)
+	- [ ] [Lambda関数](./network/aws/_/chapters/computing.md#lambda)
+		- [ ] [キック](./network/aws/_/chapters/computing.md#lambda)
+- [ ] [Elastic Beanstalk](./network/aws/_/chapters/computing.md#elastic-beanstalk)
