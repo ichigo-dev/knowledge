@@ -155,7 +155,7 @@ fn main()
                     correct_cnt += 1;
                     println!
                     (
-                        "\t{}\n{}{}\n",
+                        "\t{}\n\t{}{}\n",
                         "Good".bold().green(),
                         "Answer. ",
                         quiz_answer
