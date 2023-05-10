@@ -1,6 +1,6 @@
 # 『ニューラルネットワークアルゴリズム』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-05-11）
 
 
 ## 目次
@@ -103,84 +103,84 @@
 
 ## Transformer
 
-**Transformer**は、Attentionを応用した**Self-Attention**機構を持つニューラルネットワークのモデル。Self-Attentionは自然言語処理のタスクにおいて、ある単語がその文章中のどの単語と結びつきが強いのか、という情報を明らかにするレイヤ。基本形はSeq2Seqと同様Encoder-Decoderのモデルであるが、Encoderのみを取り出したものもある。
+**Transformer**は、[Attention](#attention)を応用した**Self-Attention**機構を持つ[ニューラルネットワーク](./neural_network.md#ニューラルネットワーク)の[モデル](./machine_learning.md#学習モデル)。Self-Attentionは[自然言語処理](./neural_network.md#自然言語処理)のタスクにおいて、ある単語がその文章中のどの単語と結びつきが強いのか、という情報を明らかにするレイヤ。基本形は[Seq2Seq](#seq2seq)と同様Encoder-Decoderの[モデル](./machine_learning.md#学習モデル)であるが、Encoderのみを取り出したものもある。
 
 
 ## BERT
 
-**BERT**(Bidirectional Encoder Representations from Transformers)は、Googleが開発した自然言語処理のモデルで、Transformerを用いて双方向に単語をエンコードする。双方向RNNやELMoと同様、前後の文脈から単語の意味を推測することができる。
+**BERT**(Bidirectional Encoder Representations from Transformers)は、Googleが開発した[自然言語処理](./neural_network.md#自然言語処理)の[モデル](./machine_learning.md#学習モデル)で、[Transformer](#transformer)を用いて双方向に単語をエンコードする。双方向[RNN](#rnn)や[ELMo](#elmo)と同様、前後の文脈から単語の意味を推測することができる。
 
 
 ## オートエンコーダ
 
-**オートエンコーダ**（**自己符号化器**）は、教師なし学習の手法のひとつで、ニューラルネットワークの入力と同じ出力を行うようにモデルを学習する。中間層のサイズを入力層よりも小さくしておくことで、学習後のモデルの中間層には入力された特徴量を圧縮した情報が存在する状態となる。最終的に出力層（あるいは後段の層）を取り除くことで、ニューラルネットワークを特徴抽出器として利用することができる。
+**オートエンコーダ**（**自己符号化器**）は、[教師なし学習](./machine_learning.md#教師なし学習)の手法のひとつで、[ニューラルネットワーク](./neural_network.md#ニューラルネットワーク)の入力と同じ出力を行うように[モデル](./machine_learning.md#学習モデル)を学習する方法。[中間層](./neural_network.md#中間層)のサイズを[入力層](./neural_network.md#入力層)よりも小さくしておくことで、学習後の[モデル](./machine_learning.md#学習モデル)の[中間層](./neural_network.md#中間層)には入力された[特徴量](./machine_learning.md#特徴量)を圧縮した情報が存在する状態となる。最終的に[出力層](./neural_network.md#出力層)（あるいは後段の層）を取り除くことで、[ニューラルネットワーク](./neural_network.md#ニューラルネットワーク)を[特徴抽出](./neural_network.md#特徴抽出)器として利用することができる。
 
 ### VAE
 
-**VAE**（**変分自己符号化器**: Variational Autoencoder）は、オートエンコーダにおいて中間層の潜在変数に確率分布を用いることで、未知のデータに対しても確率的に応用できる。オートエンコーダは入力データと同じデータを出力することしかできないが、VAEは確率的に様々なデータを生成することができる。
+**VAE**（**変分自己符号化器**: Variational Autoencoder）は、[オートエンコーダ](#オートエンコーダ)において[中間層](./neural_network.md#中間層)の潜在変数に[確率分布](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率分布)を用いることで、未知のデータに対しても[確率](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)的に応用できる。[オートエンコーダ](#オートエンコーダ)は入力データと同じデータを出力することしかできないが、VAEは[確率](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)的に様々なデータを生成することができる。
 
 
 ## GAN
 
 **GAN**（**敵対的生成ネットワーク**: Generative Adversarial Network）は、データから特徴を学ぶことで実在しない偽造データを生成するGeneratorと、データが本物であるか偽造データであるかを識別するDiscriminatorからなるネットワーク。
 
-学習の方向性によっては、生成されるデータに偏りができる**モード崩壊**を起こす可能性がある。そういった場合は、ハイパーパラメータのチューニングなどを見直す必要がある。
+学習の方向性によっては、生成されるデータに偏りができる**モード崩壊**を起こす可能性がある。そういった場合は、[ハイパーパラメータ](./machine_learning.md#ハイパーパラメータ)の[チューニング](./machine_learning.md#チューニング)などを見直す必要がある。
 
 
 ## 強化学習
 
-強化学習のアルゴリズムは大きく**モデルベース**と**モデルフリー**に大別できる。さらにモデルベースの学習は、**方策ベース**と**価値ベース**のアルゴリズムに分類できる。
+強化学習の[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)は大きく**モデルベース**と**モデルフリー**に大別できる。さらにモデルベースの学習は、**方策ベース**と**価値ベース**の[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)に分類できる。
 
 ### Q学習
 
-**Q学習**は、価値ベースの強化学習手法で、対応表（Qテーブル）を用いてある状態においてある行動をとることがどれほど価値があるかを学習する。状態と行動の選択肢が増えると、Qテーブルが膨大になってしまう。
+**Q学習**は、[価値ベース](#強化学習)の[強化学習](./machine_learning.md#強化学習)手法で、対応表（Qテーブル）を用いてある状態においてある行動をとることがどれほど価値があるかを学習する。状態と行動の選択肢が増えると、Qテーブルが膨大になってしまうという欠点がある。
 
 ### DQN
 
-**DQN**(Deep Q-Network)は、Q学習のテーブルをニューラルネットワークに置き替えたもの。状態を入力すると、それに対して各行動をとったときの価値が出力される。
+**DQN**(Deep Q-Network)は、[Q学習](#q学習)のテーブルを[ニューラルネットワーク](./neural_network.md#ニューラルネットワーク)に置き替えたもの。状態を入力すると、それに対して各行動をとったときの価値が出力される。
 
 ### Experience Reply
 
-**Experience Reply**は、DQNにおいて、行動や行動前後の状態、報酬を記録しておき、その記録を何度も学習に生かせる機能。
+**Experience Reply**は、[DQN](#dqn)において、行動や行動前後の状態、報酬を記録しておき、その記録を何度も学習に生かせる機能。
 
 ### greedy方策
 
-**greedy方策**は、価値ベースの強化学習におけるエージェントの行動選択のアルゴリズムのひとつで、最適行動価値関数がわかっていると仮定したときに、現在の状態に対して最適行動価値関数が最大となるような行動を選択する方法。
+**greedy方策**は、[価値ベース](#強化学習)の[強化学習](./machine_learning.md#強化学習)における[エージェント](./machine_learning.md#エージェント)の行動選択の[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)のひとつで、最適行動価値関数がわかっていると仮定したときに、現在の状態に対して最適行動価値関数が最大となるような行動を選択する方法。
 
-学習中は最適行動価値関数が確定していないため、 $\epsilon$ の確率でランダムな行動を選択し、 $1 - \epsilon$ の確率で最適な行動を選択する**ε-greedy方策**が用いられる。
+学習中は最適行動価値関数が確定していないため、 $\epsilon$ の[確率](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)でランダムな行動を選択し、 $1 - \epsilon$ の[確率](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)で最適な行動を選択する**ε-greedy方策**が用いられる。
 
 ### 方策勾配法
 
-**方策勾配法**は、方策ベースの強化学習におけるエージェントの行動選択のアルゴリズムのひとつで、ホウ砂ウをパラメータで表された関数として、パラメータを最適化することで方策を学習する方法。
+**方策勾配法**は、[方策ベース](#強化学習)の[強化学習](./machine_learning.md#強化学習)における[エージェント](./machine_learning.md#エージェント)の行動選択の[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)のひとつで、方策をパラメータで表された関数として、パラメータを最適化することで方策を学習する方法。
 
 ### REINFORCE
 
-**REINFORCE**は、方策勾配法の代表的なアルゴリズムで、最初に行動を繰り返して状態・行動・報酬のデータを収集し、高い報酬を得ることのつながった行動の確率を高くする手法。
+**REINFORCE**は、[方策勾配法](#方策勾配法)の代表的な[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)で、最初に行動を繰り返して状態・行動・報酬のデータを収集し、高い報酬を得ることのつながった行動の確率を高くする手法。
 
 ### Actor-Critic
 
-**Actor-Critic**は、方策ベースのモデルであるActor（状態を入力として各行動の確率を出力する）と、価値ベースのモデルであるCritic（状態を入力として状態価値を出力する）を組み合わせて学習を進める。
+**Actor-Critic**は、[方策ベース](#強化学習)の[モデル](./machine_learning.md#学習モデル)であるActor（状態を入力として各行動の[確率](../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#確率)を出力する）と、[価値ベース](#強化学習)の[モデル](./machine_learning.md#学習モデル)であるCritic（状態を入力として状態価値を出力する）を組み合わせて学習を進める。
 
 
 ## 物体検出
 
-**物体検出**は、画像の中に何が写っている物体を認識する技術。**バウンディングボックス**という矩形の範囲を生成し、その中に含まれる物体のラベルをお出力する、というタスクを行う。
+**物体検出**は、画像の中に何が写っている物体を認識する技術。**バウンディングボックス**という矩形の範囲を生成し、その中に含まれる物体の[ラベル](./machine_learning.md#ラベル)を出力する、というタスクを行う。
 
-物体検出は、注目領域の決定と物体のラベル推測という2つのタスクを解決する必要がある。sliding window methodやregion proposal methodは注目領域決定のためのアルゴリズムで、end-to-endは注目領域決定と物体のラベル推測をまとめて行うアルゴリズム。
+物体検出は、注目領域の決定と物体の[ラベル](./machine_learning.md#ラベル)推測という2つのタスクを解決する必要がある。[sliding window method](#sliding-window-method)や[region proposal method](#region-proposal-method)は注目領域決定のための[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)で、[end-to-end](#end-to-end)は注目領域決定と物体の[ラベル](./machine_learning.md#ラベル)推測をまとめて行う[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)。
 
 ### sliding window method
 
-**sliding window method**は、いくつかの大きさのウィンドウをスライドさせながら、画像の全領域を網羅するように切り抜き、それらすべてのラベルを推測する手法。物体の切り抜き漏れはないが、膨大な計算量がかかる。
+**sliding window method**は、いくつかの大きさのウィンドウをスライドさせながら、画像の全領域を網羅するように切り抜き、それらすべての[ラベル](./machine_learning.md#ラベル)を推測する手法。物体の切り抜き漏れはないが、膨大な[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)がかかる。
 
 ### region proposal method
 
-**region proposal method**は、画像中で物体がありそうな領域を提案するアルゴリズムを用いて、その部分についてラベルを推測する手法。sliding window methodに比べて大幅に計算量を削減できる。
+**region proposal method**は、画像中で物体がありそうな領域を提案する[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)を用いて、その部分について[ラベル](./machine_learning.md#ラベル)を推測する手法。[sliding window method](#sliding-window-method)に比べて大幅に[計算量](../../../basics/information_theory/_/chapters/computational_complexity.md#計算量)を削減できる。
 
 ### end-to-end
 
-**end-to-end**は、注目領域決定とラベル推測のタスクをひとつのニューラルネットワークで行う手法。代表的なアルゴリズムとして、**Faster R-CNN**、**SSD**、**Yolo**といったものがある。
+**end-to-end**は、注目領域決定と[ラベル](./machine_learning.md#ラベル)推測のタスクをひとつの[ニューラルネットワーク](./neural_network.md#ニューラルネットワーク)で行う手法。代表的な[アルゴリズム](../../../programming/_/chapters/algorithm.md#アルゴリズム)として、**Faster R-CNN**、**SSD**、**Yolo**といったものがある。
 
-| アルゴリズム | 識別制度 | 処理速度 |
+| アルゴリズム | 識別精度 | 処理速度 |
 |--------------|----------|----------|
 | Faster R-CNN | 高       | 低       |
 | SSD          | 中       | 中       |
