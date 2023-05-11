@@ -2724,3 +2724,10 @@
 		- [ ] [Faster R-CNN](./artificial_intelligence/_/chapters/neural_network_algorithm.md#end-to-end)
 		- [ ] [SSD](./artificial_intelligence/_/chapters/neural_network_algorithm.md#end-to-end)
 		- [ ] [Yolo](./artificial_intelligence/_/chapters/neural_network_algorithm.md#end-to-end)
+
+
+## 開発
+
+### Git
+
+- [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)

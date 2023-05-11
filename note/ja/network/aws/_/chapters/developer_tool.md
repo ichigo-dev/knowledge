@@ -13,7 +13,7 @@
 
 ## CodeCommit
 
-**CodeCommit**は、[Git](../../../../development/git/_/chapters/basic_knowledge_of_git.md#git)[リポジトリ](../../../../development/git/_/chapters/create_repository.md#リポジトリ)を提供するマネージドサービス。[IAM](./security_and_identity.md#iam)ユーザを利用して権限管理を行うことができたり、他の[AWS](./aws.md#aws)サービスとシームレスに連携できたり、[プルリクエスト](../../../../development/git/_/chapters/branch.md#プルリクエスト)機能があるといった特徴がある。
+**CodeCommit**は、[Git](../../../../development/git/_/chapters/git.md#git)[リポジトリ](../../../../development/git/_/chapters/create_repository.md#リポジトリ)を提供するマネージドサービス。[IAM](./security_and_identity.md#iam)ユーザを利用して権限管理を行うことができたり、他の[AWS](./aws.md#aws)サービスとシームレスに連携できたり、[プルリクエスト](../../../../development/git/_/chapters/branch.md#プルリクエスト)機能があるといった特徴がある。
 
 
 ## CodeBuild
