@@ -2731,3 +2731,26 @@
 ### Git
 
 - [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
+	- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
+		- [ ] [CVS](./development/git/_/chapters/git.md#集中管理方式)
+		- [ ] [SVN](./development/git/_/chapters/git.md#集中管理方式)
+	- [ ] [分散管理方式（分散型）](./development/git/_/chapters/git.md#分散管理方式)
+		- [ ] [Mercurial](./development/git/_/chapters/git.md#分散管理方式)
+- [ ] [Git](./development/git/_/chapters/git.md#git)
+- [ ] [GUIソフトウェア](./development/git/_/chapters/git.md#guiソフトウェア)
+	- [ ] [SourceTree](./development/git/_/chapters/git.md#guiソフトウェア)
+	- [ ] [Git Fork](./development/git/_/chapters/git.md#guiソフトウェア)
+	- [ ] [GitKraken](./development/git/_/chapters/git.md#guiソフトウェア)
+- [ ] [Gitホスティングサービス](./development/git/_/chapters/git.md#gitホスティングサービス)
+	- [ ] [GitHub](./development/git/_/chapters/git.md#gitホスティングサービス)
+	- [ ] [GitLab](./development/git/_/chapters/git.md#gitホスティングサービス)
+	- [ ] [BitBucket](./development/git/_/chapters/git.md#gitホスティングサービス)
+
+### Gitの設定
+
+- [ ] [system](./development/git/_/chapters/git_config.md#設定のレベル)
+- [ ] [global](./development/git/_/chapters/git_config.md#設定のレベル)
+- [ ] [local](./development/git/_/chapters/git_config.md#設定のレベル)
+- [ ] [セクション](./development/git/_/chapters/git_config.md#セクション)
+- [ ] [キー](./development/git/_/chapters/git_config.md#キー)
+- [ ] [git config](./development/git/_/chapters/git_config.md#設定の変更)
