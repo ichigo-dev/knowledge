@@ -1,6 +1,6 @@
 # 『その他の機能』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-05-13）
 
 
 ## 目次
@@ -19,7 +19,7 @@
 
 ## ワークツリーの退避
 
-`git stash` は、ワークツリーに加えた変更を一時的に退避するためのコマンド。ワークツリーの変更内容を**スタッシュ**領域に退避しておき、緊急の作業等を行った後にスタッシュの内容を復元する、といった使い方ができる。また、引数にコメントをつけることで、複数のスタッシュが管理しやすくなる。
+`git stash` は、[ワークツリー](./record_history.md#ワークツリー)に加えた変更を一時的に退避するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ワークツリー](./record_history.md#ワークツリー)の変更内容を**スタッシュ**領域に退避しておき、緊急の作業等を行った後にスタッシュの内容を復元する、といった使い方ができる。また、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)にコメントをつけることで、複数のスタッシュが管理しやすくなる。
 
 ```sh
 # ワークツリーをスタッシュに退避
@@ -31,7 +31,7 @@ $ git stash "<comment>"
 
 ### スタッシュの一覧表示
 
-`git stash list` は、スタッシュに退避した変更内容を一覧表示するコマンド。
+`git stash list` は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を一覧表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git stash list
@@ -39,7 +39,7 @@ $ git stash list
 
 ### スタッシュの復元
 
-`git stash apply` や `git stash pop` は、スタッシュに退避した変更内容をワークツリーに反映するコマンド。 `git stash apply` はスタッシュの内容を維持したままワークツリーに反映し、 `git stash pop` はスタッシュの内容をワークツリーに反映した後に破棄される。また、 `git stash list` で確認できるスタッシュの識別子を指定してスタッシュを復元することもできる。
+`git stash apply` や `git stash pop` は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を[ワークツリー](./record_history.md#ワークツリー)に反映する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `git stash apply` は[スタッシュ](#ワークツリーの退避)の内容を維持したまま[ワークツリー](./record_history.md#ワークツリー)に反映し、 `git stash pop` は[スタッシュ](#ワークツリーの退避)の内容を[ワークツリー](./record_history.md#ワークツリー)に反映した後に破棄される。また、 `git stash list` で確認できる[スタッシュ](#ワークツリーの退避)の識別子を指定して[スタッシュ](#ワークツリーの退避)を復元することもできる。
 
 
 ```sh
@@ -54,7 +54,7 @@ $ git stash pop <stash>
 
 ### スタッシュの確認
 
-`git stash show` は、スタッシュの変更ファイルを確認するコマンド。引数を指定しなければ直前のスタッシュの変更ファイルを表示し、引数にスタッシュの識別子を指定すると任意のスタッシュの変更ファイルを表示できる。また、 `git stash show` コマンドに `-p` オプションを指定することで、スタッシュの変更内容を確認できる。
+`git stash show` は、[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しなければ直前の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示し、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)に[スタッシュ](#ワークツリーの退避)の識別子を指定すると任意の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示できる。また、 `git stash show` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-p` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[スタッシュ](#ワークツリーの退避)の変更内容を確認できる。
 
 ```sh
 # 直前のスタッシュの変更ファイルを確認
@@ -72,7 +72,7 @@ $ git stash show <stash> -p
 
 ### スタッシュの削除
 
-`git stash drop` は、スタッシュを削除するコマンド。引数としてスタッシュの識別子を指定することで、任意のスタッシュを削除できる。また、 `git stash clear` を用いることで全てのスタッシュを一括で削除できる。
+`git stash drop` は、[スタッシュ](#ワークツリーの退避)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)として[スタッシュ](#ワークツリーの退避)の識別子を指定することで、任意の[スタッシュ](#ワークツリーの退避)を削除できる。また、 `git stash clear` を用いることで全ての[スタッシュ](#ワークツリーの退避)を一括で削除できる。
 
 
 ```sh
@@ -86,11 +86,11 @@ $ git stash clear
 
 ## タグ
 
-**タグ**は、特定のコミットをマークすることで参照しやすくするための機能。**軽量タグ**では、ある特定のコミットに対して名前を付けることができる。**注釈付きタグ**では、タグ名に加えて作成者や作成日、コメントといった情報を付与することができる。タグはコミットハッシュのエイリアスとしても利用できる。
+**タグ**は、特定の[コミット](./record_history.md#コミット)をマークすることで参照しやすくするための機能。**軽量タグ**では、ある特定の[コミット](./record_history.md#コミット)に対して名前を付けることができる。**注釈付きタグ**では、タグ名に加えて作成者や作成日、コメントといった情報を付与することができる。タグは[コミットハッシュ](./record_history.md#コミットハッシュ)のエイリアスとしても利用できる。
 
 ### タグの一覧表示
 
-`git tag` は、登録されているタグの一覧を表示するコマンド。
+`git tag` は、登録されている[タグ](#タグ)の一覧を表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git tag
@@ -98,7 +98,7 @@ $ git tag
 
 ### タグの作成
 
-`git tag` コマンドの引数として任意のタグ名を与えることで、 `HEAD` に対して軽量タグを作成できる。さらに、 `-a` オプションを指定することで注釈付きタグを作成したり、タグ名の後にコミットハッシュを指定することで任意のコミットにタグをつけることもできる。
+`git tag` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)の[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)として任意の[タグ](#タグ)名を与えることで、 `HEAD` に対して[軽量タグ](#タグ)を作成できる。さらに、 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで[注釈付きタグ](#タグ)を作成したり、[タグ](#タグ)名の後に[コミットハッシュ](./record_history.md#コミットハッシュ)を指定することで任意の[コミット](./record_history.md#コミット)に[タグ](#タグ)をつけることもできる。
 
 ```sh
 # 軽量タグの作成
@@ -118,7 +118,7 @@ $ git tag -a <tagname> <commit-hash> -m <comment>
 
 ### タグの削除
 
-`git tag` コマンドに `-d` オプションを指定することで、任意のタグを削除できる。
+`git tag` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-d` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、任意の[タグ](#タグ)を削除できる。
 
 ```sh
 $ git tag -d <tagname>
@@ -126,4 +126,4 @@ $ git tag -d <tagname>
 
 ### タグの共有
 
-`git push` コマンドに引数としてリモート名とタグ名を指定することで、リモートリポジトリに対してタグを共有することができる。
+`git push` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)としてリモート名と[タグ](#タグ)名を指定することで、[リモートリポジトリ](./record_history.md#リモートリポジトリ)に対して[タグ](#タグ)を共有することができる。
