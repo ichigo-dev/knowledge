@@ -2774,3 +2774,32 @@
 - [ ] [git remote rm](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を削除)
 - [ ] [git remote rename](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
 - [ ] [git remote set-url](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
+
+### 履歴の記録
+
+- [ ] [ワークツリー（ワーキングディレクトリ）](./development/git/_/chapters/record_history.md#ワークツリー)
+- [ ] [ステージ（インデックス）](./development/git/_/chapters/record_history.md#ステージ)
+- [ ] [ローカルリポジトリ](./development/git/_/chapters/record_history.md#ローカルリポジトリ)
+- [ ] [リモートリポジトリ](./development/git/_/chapters/record_history.md#リモートリポジトリ)
+- [ ] [git status](./development/git/_/chapters/record_history.md#状態の確認)
+- [ ] [ステージング](./development/git/_/chapters/record_history.md#ステージング)
+	- [ ] [git add](./development/git/_/chapters/record_history.md#ステージング)
+	- [ ] [ハンク(Hank)](./development/git/_/chapters/record_history.md#ハンク)
+	- [ ] [インタラクティブセッション](./development/git/_/chapters/record_history.md#インタラクティブセッション)
+- [ ] [git restore](./development/git/_/chapters/record_history.md#ファイルの復元)
+- [ ] [コミット](./development/git/_/chapters/record_history.md#コミット)
+	- [ ] [リビジョン](./development/git/_/chapters/record_history.md#コミット)
+	- [ ] [git commit](./development/git/_/chapters/record_history.md#コミット)
+	- [ ] [コミットハッシュ](./development/git/_/chapters/record_history.md#コミットハッシュ)
+	- [ ] [HEAD](./development/git/_/chapters/record_history.md#コミットハッシュのエイリアス)
+	- [ ] [コミットメッセージ](./development/git/_/chapters/record_history.md#コミットメッセージ)
+	- [ ] [--amend](./development/git/_/chapters/record_history.md#コミットの修正)
+
+### リポジトリの同期
+
+- [ ] [プッシュ(Push)](./development/git/_/chapters/repository_sync.md#プッシュ)
+	- [ ] [git push](./development/git/_/chapters/repository_sync.md#プッシュ)
+- [ ] [フェッチ(Fetch)](./development/git/_/chapters/repository_sync.md#フェッチ)
+	- [ ] [git fetch](./development/git/_/chapters/repository_sync.md#フェッチ)
+- [ ] [プル(Pull)](./development/git/_/chapters/repository_sync.md#プル)
+	- [ ] [git pull](./development/git/_/chapters/repository_sync.md#プル)
