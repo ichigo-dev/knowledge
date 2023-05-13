@@ -2754,3 +2754,23 @@
 - [ ] [セクション](./development/git/_/chapters/git_config.md#セクション)
 - [ ] [キー](./development/git/_/chapters/git_config.md#キー)
 - [ ] [git config](./development/git/_/chapters/git_config.md#設定の変更)
+
+### リポジトリの作成
+
+- [ ] [リポジトリ](./development/git/_/chapters/create_repository.md#リポジトリ)
+	- [ ] [ベアリポジトリ](./development/git/_/chapters/create_repository.md#ベアリポジトリ)
+	- [ ] [ノンベアリポジトリ](./development/git/_/chapters/create_repository.md#ノンベアリポジトリ)
+- [ ] [git init](./development/git/_/chapters/create_repository.md#リポジトリの初期化)
+- [ ] [クローン](./development/git/_/chapters/create_repository.md#クローン)
+	- [ ] [git clone](./development/git/_/chapters/create_repository.md#クローン)
+- [ ] [フォーク](./development/git/_/chapters/create_repository.md#フォーク)
+
+### リモートリポジトリ
+
+- [ ] [エイリアス（ショートカット）](./development/git/_/chapters/remote_repository.md#エイリアス)
+- [ ] [origin](./development/git/_/chapters/remote_repository.md#origin)
+- [ ] [git remote](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を一覧表示)
+- [ ] [git remote add](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を追加)
+- [ ] [git remote rm](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を削除)
+- [ ] [git remote rename](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
+- [ ] [git remote set-url](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
