@@ -2730,6 +2730,8 @@
 
 ### Git
 
+#### Git
+
 - [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
 	- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
 		- [ ] [CVS](./development/git/_/chapters/git.md#集中管理方式)
@@ -2746,7 +2748,7 @@
 	- [ ] [GitLab](./development/git/_/chapters/git.md#gitホスティングサービス)
 	- [ ] [BitBucket](./development/git/_/chapters/git.md#gitホスティングサービス)
 
-### Gitの設定
+#### Gitの設定
 
 - [ ] [system](./development/git/_/chapters/git_config.md#設定のレベル)
 - [ ] [global](./development/git/_/chapters/git_config.md#設定のレベル)
@@ -2755,7 +2757,7 @@
 - [ ] [キー](./development/git/_/chapters/git_config.md#キー)
 - [ ] [git config](./development/git/_/chapters/git_config.md#設定の変更)
 
-### リポジトリの作成
+#### リポジトリの作成
 
 - [ ] [リポジトリ](./development/git/_/chapters/create_repository.md#リポジトリ)
 	- [ ] [ベアリポジトリ](./development/git/_/chapters/create_repository.md#ベアリポジトリ)
@@ -2765,7 +2767,7 @@
 	- [ ] [git clone](./development/git/_/chapters/create_repository.md#クローン)
 - [ ] [フォーク](./development/git/_/chapters/create_repository.md#フォーク)
 
-### リモートリポジトリ
+#### リモートリポジトリ
 
 - [ ] [エイリアス（ショートカット）](./development/git/_/chapters/remote_repository.md#エイリアス)
 - [ ] [origin](./development/git/_/chapters/remote_repository.md#origin)
@@ -2775,7 +2777,7 @@
 - [ ] [git remote rename](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
 - [ ] [git remote set-url](./development/git/_/chapters/remote_repository.md#リモートリポジトリとの接続を編集)
 
-### 履歴の記録
+#### 履歴の記録
 
 - [ ] [ワークツリー（ワーキングディレクトリ）](./development/git/_/chapters/record_history.md#ワークツリー)
 - [ ] [ステージ（インデックス）](./development/git/_/chapters/record_history.md#ステージ)
@@ -2795,7 +2797,7 @@
 	- [ ] [コミットメッセージ](./development/git/_/chapters/record_history.md#コミットメッセージ)
 	- [ ] [--amend](./development/git/_/chapters/record_history.md#コミットの修正)
 
-### リポジトリの同期
+#### リポジトリの同期
 
 - [ ] [プッシュ(Push)](./development/git/_/chapters/repository_sync.md#プッシュ)
 	- [ ] [git push](./development/git/_/chapters/repository_sync.md#プッシュ)
@@ -2803,3 +2805,31 @@
 	- [ ] [git fetch](./development/git/_/chapters/repository_sync.md#フェッチ)
 - [ ] [プル(Pull)](./development/git/_/chapters/repository_sync.md#プル)
 	- [ ] [git pull](./development/git/_/chapters/repository_sync.md#プル)
+
+#### コミット履歴
+
+- [ ] [git log](./development/git/_/chapters/commit_history.md#履歴の確認)
+- [ ] [git revert](./development/git/_/chapters/commit_history.md#コミットの打ち消し)
+- [ ] [git reset](./development/git/_/chapters/commit_history.md#コミットの取り消し)
+- [ ] [git reflog](./development/git/_/chapters/commit_history.md#gitの操作履歴)
+
+#### 差分比較
+
+- [ ] [git diff](./development/git/_/chapters/difference_comparison.md#差分の比較)
+- [ ] [git show](./development/git/_/chapters/difference_comparison.md#特定のコミットの確認)
+
+#### ブランチ
+
+- [ ] [ブランチ](./development/git/_/chapters/branchm.md#ブランチ)
+	- [ ] [master(main)](./development/git/_/chapters/branchm.md#ブランチ)
+	- [ ] [トピックブランチ](./development/git/_/chapters/branchm.md#ブランチ)
+	- [ ] [git branch](./development/git/_/chapters/branchm.md#ブランチの確認)
+	- [ ] [git switch](./development/git/_/chapters/branchm.md#ブランチの切り替え)
+- [ ] [マージ](./development/git/_/chapters/branchm.md#マージ)
+	- [ ] [git merge](./development/git/_/chapters/branchm.md#マージ)
+	- [ ] [Fast-forwardマージ（早送りマージ）](./development/git/_/chapters/branchm.md#fast-forwardマージ)
+	- [ ] [3wayマージ（三方向マージ）](./development/git/_/chapters/branchm.md#3wayマージ)
+	- [ ] [コンフリクト](./development/git/_/chapters/branchm.md#コンフリクト)
+- [ ] [リベース](./development/git/_/chapters/branchm.md#リベース)
+	- [ ] [git rebase](./development/git/_/chapters/branchm.md#リベース)
+- [ ] [プルリクエスト](./development/git/_/chapters/branchm.md#プルリクエスト)

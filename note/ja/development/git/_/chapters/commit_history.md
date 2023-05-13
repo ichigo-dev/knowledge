@@ -20,7 +20,7 @@
 
 ## 履歴の確認
 
-`git log` は、コミット履歴を確認するためのコマンド。
+`git log` は、[コミット](./record_history.md#コミット)履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git log
@@ -39,7 +39,7 @@ Date:   Wed Feb 1 00:00:00 2023
 
 ### コミット内容の確認
 
-`git log` コマンドに `-p` オプションを指定することで、コミットの変更内容を確認できる。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-p` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[コミット](./record_history.md#コミット)の変更内容を確認できる。
 
 ```sh
 # コミット履歴の変更内容を表示
@@ -51,7 +51,7 @@ $ git log -p -2
 
 ### コミットの統計情報の確認
 
-`git log` コマンドに `--stat` オプションあるいは `--shortstat` オプションを指定することで、コミット履歴の各ファイルに対する変更の統計情報（変更されたファイルの数、追加・削除された行数）を確認できる。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--stat` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)あるいは `--shortstat` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[コミット](./record_history.md#コミット)履歴の各[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)に対する変更の統計情報（変更された[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の数、追加・削除された行数）を確認できる。
 
 ```sh
 $ git log --stat
@@ -76,7 +76,7 @@ Date:   Thu Feb 1 00:00:00 2023
 
 ### 変更ファイルの確認
 
-`git log` コマンドに `--name-only` オプションあるいは `--name-status` オプションを指定することで、コミット履歴とその時の変更ファイルを確認できる 。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--name-only` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)あるいは `--name-status` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[コミット](./record_history.md#コミット)履歴とその時の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を確認できる 。
 
 ```sh
 # 変更したファイルを一覧表示
@@ -88,11 +88,11 @@ $ git log --name-status
 
 ### コミットの相対日時の確認
 
-`git log` コマンドに `--relative-date` オプションを指定することで、コミット履歴に表示されるコミット日時を相対フォーマット（ `2 weeks ago` など）で表示できる。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--relative-date` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[コミット](./record_history.md#コミット)履歴に表示される[コミット](./record_history.md#コミット)日時を相対フォーマット（ `2 weeks ago` など）で表示できる。
 
 ### ブランチとマージの履歴
 
-`git log` コマンドに `--graph` オプションを指定することで、ブランチとマージの履歴をアスキーアートで表示できる。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--graph` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[ブランチ](./branch.md#ブランチ)と[マージ](./branch.md#マージ)の履歴をアスキーアートで表示できる。
 
 ```sh
 $ git log --graph
@@ -100,7 +100,7 @@ $ git log --graph
 
 ### 履歴のフォーマット
 
-`git log` コマンドに `--pretty` オプションを指定することで、コミット履歴の出力を任意のフォーマットに置き換えることができる。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--pretty` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[コミット](./record_history.md#コミット)履歴の出力を任意のフォーマットに置き換えることができる。
 
 ```sh
 # コミット履歴を1行で表示
@@ -112,14 +112,14 @@ $ git log --pretty=format:"%h - %an, %ar : %s"
 
 ### 履歴表示の制限
 
-`git log` コマンドに数字をオプションとして指定することで、表示する履歴の数を限定できる 。
+`git log` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に数字を[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)として指定することで、表示する履歴の数を限定できる 。
 
 ```sh
 # 2件の履歴を表示
 $ git log -2
 ```
 
-他にも、コミット履歴の絞り込みには次のようなオプションが用意されている。
+他にも、[コミット](./record_history.md#コミット)履歴の絞り込みには次のような[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)が用意されている。
 
 | オプション                | 概要                                                                     |
 |---------------------------|--------------------------------------------------------------------------|
@@ -132,7 +132,7 @@ $ git log -2
 
 ## コミットの打ち消し
 
-`git revert` は、任意のコミットを打ち消すためのコマンド。コミット履歴を削除するのではなく、特定のコミットを打ち消すような新しいコミットを作成する。コミット履歴を破壊しないため、リモートリポジトリと同期済みのコミットを取り消しても安全。また、このコマンドでは特定のコミットのみを打ち消すため、指定したコミット以降のすべての変更内容を元に戻すわけではない。
+`git revert` は、任意の[コミット](./record_history.md#コミット)を打ち消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コミット](./record_history.md#コミット)履歴を削除するのではなく、特定の[コミット](./record_history.md#コミット)を打ち消すような新しい[コミット](./record_history.md#コミット)を作成する。[コミット](./record_history.md#コミット)履歴を破壊しないため、[リモートリポジトリ](./record_history.md#リモートリポジトリ)と同期済みの[コミット](./record_history.md#コミット)を取り消しても安全。また、この[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)では特定の[コミット](./record_history.md#コミット)のみを打ち消すため、指定した[コミット](./record_history.md#コミット)以降のすべての変更内容を元に戻すわけではない。
 
 ```sh
 # 任意のコミットを打消し
@@ -146,7 +146,7 @@ $ git revert HEAD~3
 
 ## コミットの取り消し
 
-`git reset` は、コミットを取り消すためのコマンド。ブランチ上の `HEAD` の位置を移動し、オプションに応じてステージとワークツリーの状態も変更する。
+`git reset` は、[コミット](./record_history.md#コミット)を取り消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ブランチ](./branch.md#ブランチ)上の `HEAD` の位置を移動し、[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)に応じて[ステージ](./record_history.md#ステージ)と[ワークツリー](./record_history.md#ワークツリー)の状態も変更する。
 
 | オプション | 概要                                                                                      |
 |------------|-------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ $ git reset HEAD~3
 
 ## Gitの操作履歴
 
-`git reflog` は、Gitの操作履歴を確認するためのコマンド。Gitでは操作履歴に対してもハッシュがついており、 `git reset` コマンドにハッシュあるいは `HEAD@{0}` のようなエイリアスを指定することで、その操作を取り消すとこができる。誤って必要なブランチを消してしまったり、ワークツリーの変更内容を破棄してしまった場合などに、その操作を取り消すことで復旧できる。
+`git reflog` は、[Git](./git.md#git)の操作履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Git](./git.md#git)では操作履歴に対してもハッシュがついており、 `git reset` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)にハッシュあるいは `HEAD@{0}` のようなエイリアスを指定することで、その操作を取り消すとこができる。誤って必要な[ブランチ](./branch.md#ブランチ)を消してしまったり、[ワークツリー](./record_history.md#ワークツリー)の変更内容を破棄してしまった場合などに、その操作を取り消すことで復旧できる。
 
 ```sh
 $ git reflog
