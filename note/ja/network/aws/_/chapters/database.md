@@ -27,7 +27,7 @@
 
 ## RDS
 
-**RDS**(**Amazon Relational Database Service**)は、[AWS](./aws.md#aws)が提供するマネージド[RDB](../../../../development/database/_/chapters/basic_knowledge_of_database.md#リレーショナルデータベース)サービス。データベースエンジンは、[Aurora](#aurora)やMySQL、MariaDB、PostgreSQL、Oracle、Microsoft SQL Serverなどから選択できる。RDSのデータ保存用ストレージには、[EBS](./storage.md#ebs)を利用する。
+**RDS**(**Amazon Relational Database Service**)は、[AWS](./aws.md#aws)が提供するマネージド[RDB](../../../../development/database/_/chapters/database.md#リレーショナルデータベース)サービス。データベースエンジンは、[Aurora](#aurora)やMySQL、MariaDB、PostgreSQL、Oracle、Microsoft SQL Serverなどから選択できる。RDSのデータ保存用ストレージには、[EBS](./storage.md#ebs)を利用する。
 
 ### Aurora
 
@@ -45,7 +45,7 @@
 
 **自動バックアップ**は、バックアップウィンドウと保持期間を指定することで、1日1回自動的にバックアップ（DBスナップショット）を取得してくれるサービス。
 
-**手動スナップショット**は、任意のタイミングで[RDB](../../../../development/database/_/chapters/basic_knowledge_of_database.md#リレーショナルデータベース)のバックアップを取得できるサービス。
+**手動スナップショット**は、任意のタイミングで[RDB](../../../../development/database/_/chapters/database.md#リレーショナルデータベース)のバックアップを取得できるサービス。
 
 データの**リストア**は、スナップショットから新規の[RDS](#rds)を作成することで簡単に実現できる。
 
@@ -60,7 +60,7 @@
 
 ## DynamoDB
 
-**Amazon DynamoDB**は、[AWS](./aws.md#aws)が提供するKey-Value型のマネージド[NoSQLデータベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#nosqlデータベース)サービス。[テーブル](../../../../development/database/_/chapters/rdb.md#テーブル)や[インデックス](../../../../development/database/_/chapters/index.md#インデックス)を作成する際に、読み取り・書き込みに必要な[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)を指定してリソースを確保することで、安定した性能を担保する仕組み。[トランザクション](../../../../development/database/_/chapters/transaction.md#トランザクション)機能にも対応している。
+**Amazon DynamoDB**は、[AWS](./aws.md#aws)が提供するKey-Value型のマネージド[NoSQLデータベース](../../../../development/database/_/chapters/database.md#nosqlデータベース)サービス。[テーブル](../../../../development/database/_/chapters/rdb.md#テーブル)や[インデックス](../../../../development/database/_/chapters/index.md#インデックス)を作成する際に、読み取り・書き込みに必要な[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)を指定してリソースを確保することで、安定した性能を担保する仕組み。[トランザクション](../../../../development/database/_/chapters/transaction.md#トランザクション)機能にも対応している。
 
 以下のようなシステムに適している。
 
@@ -114,7 +114,7 @@ DynamoDBはデータを**パーティション**という単位で分散保存�
 
 ## Redshift
 
-**Amazon Redshift**は、[AWS](./aws.md#aws)が提供するデータウェアハウス（データの分析に最適化された[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)）向けの[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)サービス。大量のデータから意思決定に役立つ情報を見つけ出すために必要な環境を安価で準備できる。
+**Amazon Redshift**は、[AWS](./aws.md#aws)が提供するデータウェアハウス（データの分析に最適化された[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)）向けの[データベース](../../../../development/database/_/chapters/database.md#データベース)サービス。大量のデータから意思決定に役立つ情報を見つけ出すために必要な環境を安価で準備できる。
 
 Redshiftは、複数ノードによる分散並列実行が大きな特徴として挙げられる。1つのRedshiftを構成する複数のノードのまとまりをRedshiftクラスタと呼び、クラスタは1つのリーダノードと複数のコンピュートノードから構成される。いかにコンピュートノードをまたがずに処理を完結させることができるのかがRedshift利用のポイントとなる。
 

@@ -149,7 +149,7 @@ SNMPでの処理は機器へのデータの書き込みと読み込みに集約�
 
 ### MIB
 
-**MIB**(Management Information Base)は、[SNMP](#snmp)でやり取りされる情報で、ツリー型の構造をもった管理情報[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)となっている。 MIBには、**標準MIB**と各メーカーが独自に作成した**拡張MIB**がある。
+**MIB**(Management Information Base)は、[SNMP](#snmp)でやり取りされる情報で、ツリー型の構造をもった管理情報[データベース](../../../development/database/_/chapters/database.md#データベース)となっている。 MIBには、**標準MIB**と各メーカーが独自に作成した**拡張MIB**がある。
 
 ### RMON
 

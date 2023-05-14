@@ -116,7 +116,7 @@
 
 ## ダンデムシステム
 
-**ダンデムシステム**は、それぞれ機能の異なる複数の専用[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)を直列に接続した構成。メッセージ処理専用のフロントエンドプロセッサ、[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)管理専用のバックエンドプロセッサなどからなる。
+**ダンデムシステム**は、それぞれ機能の異なる複数の専用[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)を直列に接続した構成。メッセージ処理専用のフロントエンドプロセッサ、[データベース](../../../development/database/_/chapters/database.md#データベース)管理専用のバックエンドプロセッサなどからなる。
 
 
 ## オンプレミス
@@ -126,7 +126,7 @@
 
 ## クラウドコンピューティング
 
-**クラウドコンピューティング**は、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)を介して、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)、ストレージなどを利用する形態やサービス。場所や端末を選ばずに[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に接続することができる。クラウドは[仮想化技術](#仮想化技術)により資源を自動的に提供する仕組みの応用である。
+**クラウドコンピューティング**は、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)を介して、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[データベース](../../../development/database/_/chapters/database.md#データベース)、ストレージなどを利用する形態やサービス。場所や端末を選ばずに[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に接続することができる。クラウドは[仮想化技術](#仮想化技術)により資源を自動的に提供する仕組みの応用である。
 
 ### オーケストレーション
 
@@ -138,7 +138,7 @@
 
 ### PaaS
 
-**PaaS**(Platform as a Service)は、[サーバ](./system_processing_model.md#クライアントサーバシステム)上の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)にインストールされた[ミドルウェア](../../../computer/_/chapters/computer.md#ミドルウェア)などの開発[プラットフォーム](../../../computer/software/_/chapters/software.md#プラットフォーム)を、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)経由でサービスとしてユーザに提供する形態。開発者は[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)やオブジェクトストレージといった[ミドルウェア](../../../computer/_/chapters/computer.md#ミドルウェア)を利用することができる。
+**PaaS**(Platform as a Service)は、[サーバ](./system_processing_model.md#クライアントサーバシステム)上の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)にインストールされた[ミドルウェア](../../../computer/_/chapters/computer.md#ミドルウェア)などの開発[プラットフォーム](../../../computer/software/_/chapters/software.md#プラットフォーム)を、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)経由でサービスとしてユーザに提供する形態。開発者は[データベース](../../../development/database/_/chapters/database.md#データベース)やオブジェクトストレージといった[ミドルウェア](../../../computer/_/chapters/computer.md#ミドルウェア)を利用することができる。
 
 ### IaaS
 

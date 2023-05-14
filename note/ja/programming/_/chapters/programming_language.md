@@ -120,7 +120,7 @@ else:
 
 ## PHP
 
-**PHP**は、動的な[Web](../../../network/_/chapters/web.md#web)サイトを作成するためのツールから派生した[スクリプト言語](./programming.md#スクリプト言語)。[Web](../../../network/_/chapters/web.md#web)開発に特化しており、HTMLに埋め込むような記法を用いることができるという特徴がある。そのほかにも、学習コストが低い点や[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)アクセスを容易に行えるという強みもある。
+**PHP**は、動的な[Web](../../../network/_/chapters/web.md#web)サイトを作成するためのツールから派生した[スクリプト言語](./programming.md#スクリプト言語)。[Web](../../../network/_/chapters/web.md#web)開発に特化しており、HTMLに埋め込むような記法を用いることができるという特徴がある。そのほかにも、学習コストが低い点や[データベース](../../../development/database/_/chapters/database.md#データベース)アクセスを容易に行えるという強みもある。
 
 ```php
 <?php

@@ -47,7 +47,7 @@ EBSは[EC2](./computing.md#ec2)と1対1で対応するサービスであり、�
 [EBS](#ebs)には、[SSD](../../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ssd)と[HDD](../../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)それぞれにボリュームタイプの種類があり、それに加えて旧世代のHDDストレージタイプとしてマグネティックタイプがある。各タイプの性能を最大限発揮するためには、[EBS最適化インスタンスオプション](./computing.md#ebs最適化オプション)のついた[EC2](./computing.md#ec2)を利用することが推奨される。
 
 - **汎用SSD**(gp2,gp3): [EBS](#ebs)の中で最も一般的なボリュームタイプ。性能の指標としてIOPS（1秒あたりに処理できるI/Oアクセス数）を用い、容量に応じたベースライン性能がある。容量が少ないボリュームには、一時的なIOPSの上昇に対応できるようにバースト機能が用意されている。
-- **プロビジョンドIOPS SSD**(io1): [EBS](#ebs)の中で最も高性能なボリュームタイプ。[RDS](./database.md#rds)や[EC2インスタンス](./computing.md#ec2)で[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)サーバを構成する場合など、高いIOPS性能が求められる場合や、高い[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)が必要なユースケースに適している。
+- **プロビジョンドIOPS SSD**(io1): [EBS](#ebs)の中で最も高性能なボリュームタイプ。[RDS](./database.md#rds)や[EC2インスタンス](./computing.md#ec2)で[データベース](../../../../development/database/_/chapters/database.md#データベース)サーバを構成する場合など、高いIOPS性能が求められる場合や、高い[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)が必要なユースケースに適している。
 - **スループット最適化HDD**(st1): [HDD](../../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)をベースとした[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)重視のボリュームタイプ。ログデータに対する処理やバッチ処理のインプット用[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)など、大容量[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を高速に読み取るようなユースケースに適している。性能指標として[スループット](../../../../system/_/chapters/system_performance_evaluation.md#スループット)を用いている。
 - **Cold HDD**(sc1): 性能は高くはないが最も低コストなボリュームタイプ。利用頻度が少なく、アクセス時の性能も求められないデータにシーケンシャルアクセス（端から順番にアクセスする、⇔ ランダムアクセス）するようなユースケース、あるいはアーカイブ領域の用途に適している。
 
@@ -94,7 +94,7 @@ EBSは[EC2](./computing.md#ec2)と1対1で対応するサービスであり、�
 - ETL(Extract/Transform/Load)の中間ファイル保存
 - [Auto Scaling](./computing.md#auto-scaling)構成された[EC2インスタンス](./computing.md#ec2)やコンテナからのログ転送先
 - 静的コンテンツのホスティング
-- Key-Value型の[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)
+- Key-Value型の[データベース](../../../../development/database/_/chapters/database.md#データベース)
 
 ### バケット
 

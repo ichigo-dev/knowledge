@@ -16,7 +16,7 @@
 
 ### データベース管理システム
 
-**データベース管理システム**(**DBMS**: Database Management System)は、[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)を管理してデータに対するアクセス要求に応える[ソフトウェア](./software.md#ソフトウェア)。データの形式や利用手順を標準化することで、特定の[アプリケーションソフトウェア](./software.md#応用ソフトウェア)から独立させることができる。
+**データベース管理システム**(**DBMS**: Database Management System)は、[データベース](../../../../development/database/_/chapters/database.md#データベース)を管理してデータに対するアクセス要求に応える[ソフトウェア](./software.md#ソフトウェア)。データの形式や利用手順を標準化することで、特定の[アプリケーションソフトウェア](./software.md#応用ソフトウェア)から独立させることができる。
 
 ### API
 

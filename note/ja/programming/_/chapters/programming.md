@@ -203,7 +203,7 @@ JITコンパイラを用いる代表的な言語には、[Java](./programming_la
 
 ### 宣言型プログラミング
 
-**宣言型プログラミング**は、達成したい目的を記述し、その命令の実行手順については[コンパイラ](#コンパイラ)に任せるような言語。[プログラム](#プログラム)の本質がわかりやすく、記述がシンプルになるものの、複雑な処理を行うことはできない。[データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)に対する[クエリ](../../../development/database/_/chapters/sql.md#クエリ)を記述する[SQL](../../../development/database/_/chapters/sql.md#sql)は宣言型に準拠した言語である。
+**宣言型プログラミング**は、達成したい目的を記述し、その命令の実行手順については[コンパイラ](#コンパイラ)に任せるような言語。[プログラム](#プログラム)の本質がわかりやすく、記述がシンプルになるものの、複雑な処理を行うことはできない。[データベース](../../../development/database/_/chapters/database.md#データベース)に対する[クエリ](../../../development/database/_/chapters/sql.md#クエリ)を記述する[SQL](../../../development/database/_/chapters/sql.md#sql)は宣言型に準拠した言語である。
 
 または、数学論理学に根ざした流れをくむ、[関数型プログラミング](#関数型プログラミング)や[論理プログラミング](#論理プログラミング)、[制約プログラミング](#制約プログラミング)を総称して宣言型プログラミングと呼ぶこともある。
 
@@ -274,7 +274,7 @@ JITコンパイラを用いる代表的な言語には、[Java](./programming_la
 - [配列](./data_type.md#配列)の要素数より大きい[インデックス](./data_type.md#配列)にアクセスを試みた
 - 存在しない[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を参照しようとした
 - ユーザが想定外の入力を行った
-- [データベース](../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)や[サーバ](../../../computer/_/chapters/computer.md#サーバ)への接続に失敗した
+- [データベース](../../../development/database/_/chapters/database.md#データベース)や[サーバ](../../../computer/_/chapters/computer.md#サーバ)への接続に失敗した
 
 ### 例外
 

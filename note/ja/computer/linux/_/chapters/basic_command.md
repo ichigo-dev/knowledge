@@ -527,7 +527,7 @@ locate [OPTION]... PATTERN
 $ locate /etc/*ssh*
 ```
 
-`locate` は、[ディスク](../../../hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)をスキャンすることなく、専用の[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)を利用するため、高速に動作する。ただし、[ファイルパス](../../../software/_/chapters/file_system.md#パス)の[データベース](../../../../development/database/_/chapters/basic_knowledge_of_database.md#データベース)が更新されていない可能性があるため、既に存在しない[ファイル](../../../software/_/chapters/file_system.md#ファイル)が表示されたり、存在する[ファイル](../../../software/_/chapters/file_system.md#ファイル)が表示されない可能性がある。最新の情報を手動で更新するには、 `updatedb` [コマンド](#コマンド)を実行する。主要な[オプション](#オプション)は以下の通り。
+`locate` は、[ディスク](../../../hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)をスキャンすることなく、専用の[データベース](../../../../development/database/_/chapters/database.md#データベース)を利用するため、高速に動作する。ただし、[ファイルパス](../../../software/_/chapters/file_system.md#パス)の[データベース](../../../../development/database/_/chapters/database.md#データベース)が更新されていない可能性があるため、既に存在しない[ファイル](../../../software/_/chapters/file_system.md#ファイル)が表示されたり、存在する[ファイル](../../../software/_/chapters/file_system.md#ファイル)が表示されない可能性がある。最新の情報を手動で更新するには、 `updatedb` [コマンド](#コマンド)を実行する。主要な[オプション](#オプション)は以下の通り。
 
 | オプション | 概要                           |
 | ---------- | :----------------------------- |
