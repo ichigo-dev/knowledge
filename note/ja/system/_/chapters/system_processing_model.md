@@ -1,6 +1,6 @@
 # 『システムの処理形態』ノート
 
-（最終更新： 2023-04-10）
+（最終更新： 2023-05-15）
 
 
 ## 目次
@@ -73,7 +73,7 @@
 
 ## 分散処理
 
-**分散処理**は、複数の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)で接続し、処理能力や資源を共有しあって効率の良い処理を実現する処理形態。1台の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が停止しても[システム](./system.md#システム)への影響が少なく、拡張性も高い。また、[システム](./system.md#システム)の利用者が場所を選ばずに機能にアクセスできるという利点もあり、このような性質を**アクセス透過性**という。一方で、データの不整合が発生してしまったり、保守が複雑になるといったデメリットもある。
+**分散処理**は、複数の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)で接続し、処理能力や資源を共有しあって効率の良い処理を実現する処理形態。1台の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が停止しても[システム](./system.md#システム)への影響が少なく、拡張性も高い。また、[システム](./system.md#システム)の利用者が場所を選ばずに機能にアクセスできるという利点もあり、このような性質を**アクセス透過性**という。一方で、データの不整合が発生してしまったり、保守が複雑になるといったデメリットもある。
 
 ### 分散システム
 
@@ -81,7 +81,7 @@
 
 ### RPC
 
-**RPC**（**遠隔手続き呼び出し**: Remote Procedure Call）は、[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)によって繋がれた他の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)上の[プログラム](../../../programming/_/chapters/prgramming.md#プログラミング)を実行する仕組みで、[分散処理](#分散処理)実行の基盤となる。
+**RPC**（**遠隔手続き呼び出し**: Remote Procedure Call）は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)によって繋がれた他の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)上の[プログラム](../../../programming/_/chapters/prgramming.md#プログラミング)を実行する仕組みで、[分散処理](#分散処理)実行の基盤となる。
 
 有名なRPC[システム](./system.md#システム)としては、Sun Microsystemsの**SunRPC**(ONC RPC)や**アポロ**、IBMとDECが共同開発した**DCE**(Distributed Computing Environment)がある。
 
@@ -89,7 +89,7 @@
 
 **分散オブジェクト**(Distributed Object)は、[RPC](#rpc)のような単なる[関数](../../../programming/_/chapters/function.md#関数)の呼び出しではなく、[オブジェクト](../../../programming/_/chapters/object_oriented.md#オブジェクト)自体をリモートに配置する技術。
 
-代表的な分散オブジェクトには、**CORBA**(Common Object Request Broker Architecture)やMicrosoftが開発した**DCOM**(Distributed Component Object Model)がある。これらは、**IDL**(Interface Definition Language)によって[オブジェクト](../../../programming/_/chapters/object_oriented.md#オブジェクト)[メソッド](../../../programming/_/chapters/object_oriented.md#メソッド)を定義し、[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)越しにシリアライズしたメッセージを交換する仕組みであった。
+代表的な分散オブジェクトには、**CORBA**(Common Object Request Broker Architecture)やMicrosoftが開発した**DCOM**(Distributed Component Object Model)がある。これらは、**IDL**(Interface Definition Language)によって[オブジェクト](../../../programming/_/chapters/object_oriented.md#オブジェクト)[メソッド](../../../programming/_/chapters/object_oriented.md#メソッド)を定義し、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)越しにシリアライズしたメッセージを交換する仕組みであった。
 
 ### ロードシェアリングシステム
 
@@ -131,7 +131,7 @@
 
 ### シンクライアントシステム
 
-**シンクライアントシステム**は、[クライアント](#クライアントサーバシステム)側の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に最低限の機能のみを持たせ、実際の処理やデータの蓄積を[サーバ](#クライアントサーバシステム)側で行う[システム](./system.md#システム)。[クライアント](#クライアントサーバシステム)側にデータを残さないことで情報漏洩を防ぐことができる。ただし、[ネットワーク](../../../network/_/chapters/basic_knowledge_of_network.md#ネットワーク)に接続できない環境においては全く機能しないという欠点もある。
+**シンクライアントシステム**は、[クライアント](#クライアントサーバシステム)側の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に最低限の機能のみを持たせ、実際の処理やデータの蓄積を[サーバ](#クライアントサーバシステム)側で行う[システム](./system.md#システム)。[クライアント](#クライアントサーバシステム)側にデータを残さないことで情報漏洩を防ぐことができる。ただし、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)に接続できない環境においては全く機能しないという欠点もある。
 
 
 ## 参考文献
