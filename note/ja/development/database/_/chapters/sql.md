@@ -1,6 +1,6 @@
 # 『SQL』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-05-17）
 
 
 ## 目次
@@ -55,32 +55,34 @@
 
 ## SQL
 
-**SQL**は、リレーショナルデータベースを操作するための言語。各RDBMSごとに多少違いはあるものの、基本的には標準SQLの仕様に準拠している場合が多い。
+**SQL**は、[リレーショナルデータベース](./database.md#リレーショナルデータベース)を操作するための言語。各[RDBMS](./database.md#rdbms)ごとに多少違いはあるものの、基本的には標準SQLの仕様に準拠している場合が多い。
 
 ### DDL
 
-**DDL**(Data Definition Language)は、データベースに格納されるデータ構造（スキーマ）を定義するためのSQL命令。テーブルの生成や削除、カラムの変更などを行うことができる。
+**DDL**(Data Definition Language)は、[データベース](./database.md#データベース)に格納されるデータ構造（[スキーマ](./database.md#スキーマ)）を定義するための[SQL](#sql)命令。[テーブル](./rdb.md#テーブル)の生成や削除、[カラム](./rdb.md#カラム)の変更などを行うことができる。
 
 ### DML
 
-**DML**(Data Manipulation Language)は、DDLによってあらかじめ定義したデータ構造を操作するためのSQL命令。データの抽出や挿入、変更、削除を行うことができる。
+**DML**(Data Manipulation Language)は、[DDL](#ddl)によってあらかじめ定義したデータ構造を操作するための[SQL](#sql)命令。データの抽出や挿入、変更、削除を行うことができる。
 
 ### DCL
 
-**DCL**(Data Control Language)は、複数のユーザにより同時にデータ要求を行っても矛盾が生じないようにするための、保全機能やデータ機密保護機能を提供するためのSQL命令。
+**DCL**(Data Control Language)は、複数のユーザにより同時にデータ要求を行っても矛盾が生じないようにするための、保全機能やデータ機密保護機能を提供するための[SQL](#sql)命令。
 
 ### クエリ
 
-**クエリ**（問い合わせ）は、データベースに対するデータの抽出や更新といった処理要求の文字列のこと。
+**クエリ**（問合せ）は、[データベース](./database.md#データベース)に対するデータの抽出や更新といった処理要求の文字列。
 
 ### サブクエリ
 
-**サブクエリ**は、SQLの命令文中で呼び出す別の命令文のこと。
+**サブクエリ**（副問合せ）は、[SQL](#sql)の命令文中で呼び出す別の命令文。
 
 
 ## データベース操作
 
 ### データベースの一覧表示
+
+[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)の一覧を表示するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 SHOW DATABASES;
@@ -88,17 +90,23 @@ SHOW DATABASES;
 
 ### データベースの作成
 
+[インスタンス](./rdb.md#インスタンス)に新しい[データベース](./database.md#データベース)を作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 CREATE DATABASE [name];
 ```
 
 ### データベースの削除
 
+[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)を削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 DROP DATABASE [name];
 ```
 
 ### データベースの選択
+
+操作したい[データベース](./database.md#データベース)を選択するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 USE [name];
@@ -109,11 +117,15 @@ USE [name];
 
 ### テーブルの一覧表示
 
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の一覧を表示するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 SHOW TABLES;
 ```
 
 ### テーブルの作成
+
+[データベース](./database.md#データベース)中に新しい[テーブル](./rdb.md#テーブル)を作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 CREATE TABLE [name]
@@ -137,6 +149,8 @@ CREATE TABLE `user`
 ```
 
 ### テーブルの変更
+
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の定義を変更するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 -- カラムの追加
@@ -164,6 +178,8 @@ ALTER TABLE [name] DROP ([column1], [column2], ...);
 
 ### テーブルの削除
 
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)を削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 DROP TABLE [name];
 ```
@@ -172,6 +188,8 @@ DROP TABLE [name];
 ## データ操作
 
 ### データの取得
+
+[テーブル](./rdb.md#テーブル)からデータを取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 SELECT
@@ -192,6 +210,8 @@ FROM
 
 ### データの挿入
 
+[テーブル](./rdb.md#テーブル)に新しいデータを挿入するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 INSERT INTO [table]
 (
@@ -209,6 +229,8 @@ VALUES
 
 ### データの更新
 
+[テーブル](./rdb.md#テーブル)のデータを更新するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 UPDATE
     [table]
@@ -220,11 +242,15 @@ SET
 
 ### データの削除
 
+[テーブル](./rdb.md#テーブル)のデータを削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 DELETE FROM [table];
 ```
 
 ### データの抽出
+
+[テーブル](./rdb.md#テーブル)のデータを抽出して取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 SELECT
@@ -305,6 +331,8 @@ WHERE
 
 ### エイリアスの設定
 
+操作するデータに別名をつけるには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。複数のテーブルを組み合わせたクエリを記述する場合などに、長いテーブル名を繰り返し記述して冗長になることを避けるために用いられる。
+
 ```sql
 SELECT
     [column] AS [alias]
@@ -313,6 +341,8 @@ FROM
 ```
 
 ### データのソート
+
+[テーブル](./rdb.md#テーブル)のデータをソートして取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 -- 昇順
@@ -338,6 +368,8 @@ ORDER BY
 
 ### データの制限
 
+[テーブル](./rdb.md#テーブル)のデータの取得数を制限するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 SELECT
     [column1],
@@ -350,6 +382,8 @@ LIMIT
 ```
 
 ### データの集約
+
+[テーブル](./rdb.md#テーブル)のデータを集約して様々な統計データを取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 -- 合計値
@@ -385,6 +419,8 @@ FROM
 
 ### データの加工
 
+[テーブル](./rdb.md#テーブル)のデータを加工するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 -- 四捨五入
 SELECT
@@ -406,6 +442,8 @@ FROM
 ```
 
 ### データのグループ化
+
+[テーブル](./rdb.md#テーブル)のデータをグループ化するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 SELECT
@@ -434,7 +472,7 @@ GROUP BY
 
 ### 内部結合
 
-**内部結合**は、結合するテーブルのデータのうち、条件に指定したカラムの値が一致するデータのみを結合する。
+**内部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータのみを結合する。
 
 ```sql
 SELECT
@@ -462,7 +500,7 @@ WHERE
 
 ### 外部結合
 
-**外部結合**は、結合するテーブルのデータのうち、片方のテーブルのデータをすべて取り出し、条件に指定したカラムの値が一致するデータに関しては結合される。
+**外部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、片方の[テーブル](./rdb.md#テーブル)のデータをすべて取り出し、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータに関してのみ結合される。
 
 ```sql
 -- 左外部結合
@@ -504,7 +542,7 @@ ON
 
 ### 交差結合
 
-**交差結合**（**直積結合**）は、結合するテーブルのデータのすべての組み合わせを取り出す。
+**交差結合**（**直積結合**）は、結合する[テーブル](./rdb.md#テーブル)のデータのすべての組み合わせを取り出す。
 
 ```sql
 SELECT
@@ -520,6 +558,8 @@ CROSS JOIN
 
 ## 条件分岐
 
+[クエリ](#クエリ)中で条件分岐を行いたい場合は、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 CASE
     WHEN [condition1] THEN [value1]
@@ -534,13 +574,15 @@ END
 
 ### ビューの一覧表示
 
-ビューはテーブルと同じ扱いのため、テーブルの一覧表示と同様。
+ビューは[テーブル](./rdb.md#テーブル)と同じ扱いのため、[テーブル](./rdb.md#テーブル)の一覧表示と同様。
 
 ```sql
 SHOW TABLES;
 ```
 
 ### ビューの作成
+
+[データベース](./database.md#データベース)中に新しいビューを作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 CREATE VIEW [name]
@@ -558,6 +600,8 @@ FROM
 ```
 
 ### ビューの変更
+
+[データベース](./database.md#データベース)中のビューを変更するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 -- ビュー名の変更
@@ -580,6 +624,8 @@ FROM
 
 ### ビューの削除
 
+[データベース](./database.md#データベース)中のビューを削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 DROP VIEW [name];
 ```
@@ -589,11 +635,15 @@ DROP VIEW [name];
 
 ### トランザクションの開始
 
+[トランザクション](./transaction.md#トランザクション)を開始するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 START TRANSACTION;
 ```
 
 ### コミット
+
+[トランザクション](./transaction.md#トランザクション)中の実行結果を[コミット](./transaction.md#コミット)するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 COMMIT;
@@ -601,11 +651,15 @@ COMMIT;
 
 ### ロールバック
 
+[トランザクション](./transaction.md#トランザクション)中の実行結果を[ロールバック](./transaction.md#ロールバック)するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 ROLLBACK;
 ```
 
 ### セーブポイント
+
+[トランザクション](./transaction.md#トランザクション)中に[セーブポイント](./transaction.md#セーブポイント)を設けるには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 SAVEPOINT [name];
@@ -619,11 +673,15 @@ ROLLBACK TO SAVEPOINT [name];
 
 ### ユーザの作成
 
+[インスタンス](./rdb.md#インスタンス)中に新しいユーザを作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+
 ```sql
 CREATE USER [name]@[host] IDENTIFIED BY [password];
 ```
 
 ### 権限の付与
+
+ユーザに権限を付与するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sql
 GRANT [type] ON [database].[table] TO [user]@[host];
