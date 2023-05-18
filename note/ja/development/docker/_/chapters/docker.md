@@ -24,13 +24,13 @@
 
 ## Docker
 
-**Docker**は、2013年にリリースされた[OSS](../../../../computer/software/_/chapters/open_source_software.md#オープンソースソフトウェア)で、[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[OS](../../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)の開発・配信を行うためのコンテナエンジン。Dockerを利用することで、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)開発者は[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源を意識せずに、容易に[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の開発・実行環境を構築することができる。[ハイパーバイザ型](../../../../system/_/chapters/system_architecture.md#ハイパーバイザ型)の[仮想化](../../../../system/_/chapters/system_architecture.md#仮想化技術)[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)に比べて、[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源の消費が少なく、[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)に必要な環境のみを集約して再現することができる。
+**Docker**は、2013年にリリースされた[OSS](../../../../computer/software/_/chapters/open_source_software.md#オープンソースソフトウェア)で、[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[OS](../../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)の開発・配信を行うための[コンテナエンジン](./container.mdコンテナエンジン)。Dockerを利用することで、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)開発者は[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源を意識せずに、容易に[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の開発・実行環境を構築することができる。[ハイパーバイザ型](../../../../system/_/chapters/system_architecture.md#ハイパーバイザ型)の[仮想化](../../../../system/_/chapters/system_architecture.md#仮想化技術)[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)に比べて、[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源の消費が少なく、[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)に必要な環境のみを集約して再現することができる。
 
 [ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)開発においては、[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)単位での環境の分離や、開発環境の作成と廃棄を容易に行えるというメリットがある。また、運用管理の面で見ても、ITインフラでDockerを運用することにより、開発した[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)を素早く展開することができるDevOps環境やイミュータブルインフラストラクチャが実現しやすくなる。
 
 ### Dockerエンジン
 
-**Dockerエンジン**は、[Docker](#docker)のコンテナエンジン。[デーモン](../../../../computer/linux/_/chapters/process_and_job.md#デーモン)としてホストOSに常駐し、[コンテナ](./container.md#コンテナ)の管理や実行を担う。
+**Dockerエンジン**は、[Docker](#docker)の[コンテナエンジン](./container.md#コンテナエンジン)。[デーモン](../../../../computer/linux/_/chapters/process_and_job.md#デーモン)としてホストOSに常駐し、[コンテナ](./container.md#コンテナ)の管理や実行を担う。
 
 ### Dockerクライアント
 

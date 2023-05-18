@@ -1,6 +1,6 @@
 # 『コンテナ』ノート
 
-（最終更新： 2023-03-04）
+（最終更新： 2023-05-18）
 
 
 ## 目次
@@ -31,11 +31,11 @@
 
 ## コンテナ
 
-**コンテナ**は、ホストOS上で独立したプロセスとして実行されるアプリケーション環境。OSの基本コマンドやアプリケーションの実行バイナリ、ライブラリなどの実行環境全体をパッケージ化し、それらをホストOS上の分離された空間で実行できる技術。
+**コンテナ**は、ホストOS上で独立した[プロセス](../../../../computer/linux/_/chapters/process_and_job.md#プロセス)として実行される[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)環境。[OS](../../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)の基本[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)や[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の実行[バイナリ](../../../../computer/software/_/chapters/file_system.md#バイナリファイル)、[ライブラリ](../../../../computer/software/_/chapters/package.md#ライブラリ)などの実行環境全体を[パッケージ](../../../../computer/software/_/chapters/package.md#パッケージ)化し、それらをホストOS上の分離された空間で実行できる技術。
 
 ### コンテナエンジン
 
-**コンテナエンジン**は、コンテナを稼働させ、管理するためのソフトウェア。中でも、実際にコンテナを実行するプログラムのことを**コンテナランタイム**という。
+**コンテナエンジン**は、[コンテナ](#コンテナ)を稼働させ、管理するための[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)。中でも、実際に[コンテナ](#コンテナ)を実行する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のことを**コンテナランタイム**という。
 
 
 ## コンテナの起動
