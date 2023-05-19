@@ -1,6 +1,6 @@
 # 『ボリュームとマウント』ノート
 
-（最終更新： 2023-03-04）
+（最終更新： 2023-05-19）
 
 
 ## 目次
@@ -15,7 +15,7 @@
 
 ## Volume
 
-**Volume**は、ホストOSが管理するボリュームをコンテナで利用できるようにする機能。Volumeを利用するには、コンテナ起動時に `--mount` オプションを付与し、 `type=volume` を指定する。また、 `readonly` を指定することで、読み取り専用でマウントすることができる。 `--mount` の代わりに `-v` オプションを利用することもできる。
+**Volume**は、ホストOSが管理するデータを[コンテナ](./container.md#コンテナ)で利用できるようにする機能。Volumeを利用するには、[コンテナ](./container.md#コンテナ)起動時に `--mount` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与し、 `type=volume` を指定する。また、 `readonly` を指定することで、読み取り専用で[マウント](../../../../computer/software/_/chapters/file_system.md#マウント)することができる。 `--mount` の代わりに `-v` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を利用することもできる。
 
 Volumeは基本的に、ホストOS上の `/var/lib/docker/volumes` 以下に作成される。
 
@@ -40,7 +40,7 @@ $ docker run -it --name ubuntu_linux_04 -h ubuntu_linux_04 \
 
 ### Volumeの作成
 
-`docker volume create` は、ボリュームを作成するコマンド。
+`docker volume create` は、[ボリューム](#volume)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # Volumeの作成
@@ -52,7 +52,7 @@ $ docker volume create vol_fuga
 
 ### Volumeの一覧
 
-`docker volume ls` は、ボリュームの一覧を確認するコマンド。
+`docker volume ls` は、[ボリューム](#volume)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ dokcer volume ls
@@ -63,7 +63,7 @@ local     vol_fuga
 
 ### Volumeの共有
 
-既存のVolumeを他のコンテンからも参照できるようにするには、コンテナ起動時に `--volumes-from` オプションを付与する。指定するVolume名の末尾に `:ro` を指定することで、読み取り専用で共有することも可能。
+既存の[ボリューム](#volume)を他の[コンテナ](./container.md#コンテナ)からも参照できるようにするには、[コンテナ](./container.md#コンテナ)起動時に `--volumes-from` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与する。指定する[Volume](#volume)名の末尾に `:ro` を指定することで、読み取り専用で共有することも可能。
 
 ```sh
 # Volumeの共有
@@ -83,9 +83,9 @@ $ docker run -it --name ubuntu_linux_04_shared -h ubuntu_linux_04_shared \
 
 ## bind mount
 
-**bind mount**は、ホストOS上のデバイスファイルやディレクトリなどをコンテナから参照するための機能。bind mountを行うには、コンテナ起動時に `--mount` オプションを付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用でマウントすることができる。 `--mount` の代わりに `-v` オプションを利用することもできる。
+**bind mount**は、ホストOS上のデバイスファイルや[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)などを[コンテナ](./container.md#コンテナ)から参照するための機能。bind mountを行うには、[コンテナ](./container.md#コンテナ)起動時に `--mount` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用で[マウント](../../../../computer/software/_/chapters/file_system.md#マウント)することができる。 `--mount` の代わりに `-v` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を利用することもできる。
 
-bind mountを使用すると、ホストOS上のファイルシステムにコンテナが干渉できるようになるので、操作には注意が必要。
+bind mountを使用すると、ホストOS上の[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)に[コンテナ](./container.md#コンテナ)が干渉できるようになるので、操作には注意が必要。
 
 ```sh
 # bind mount
@@ -106,7 +106,7 @@ $ docker run -it --name ubuntu_linux_05 -h ubuntu_linux_05 \
 
 ## tmpfs mount
 
-**tmpfs mount** は、ホストOSのメモリの一部をファイルシステムとしてコンテナから利用する機能。インメモリのファイルシステムを提供できるため、コンテナ内で非常に高速な読み書きができるが、メモリ上のデータは永続的に利用することはできない。tmpfs mountを行うには、コンテナ起動時に `--mount` オプションを付与し、 `type=tmpfs` を指定する。また、インメモリのファイルシステムのディレクトリや権限、サイズなどを指定できる。
+**tmpfs mount** は、ホストOSの[メモリ](../../../../computer/hardware/_/chapters/memory.md#メモリ)の一部を[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)として[コンテナ](./container.md#コンテナ)から利用する機能。オンメモリの[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)を提供できるため、[コンテナ](./container.md#コンテナ)内で非常に高速な読み書きができるが、[メモリ](../../../../computer/hardware/_/chapters/memory.md#メモリ)上のデータは永続的に利用することはできない。tmpfs mountを行うには、[コンテナ](./container.md#コンテナ)起動時に `--mount` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与し、 `type=tmpfs` を指定する。また、オンメモリの[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)の[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)や[権限](../../../../computer/linux/_/chapters/user_and_permission.md#権限)、サイズなどを指定できる。
 
 ```sh
 # tmpfs mount
