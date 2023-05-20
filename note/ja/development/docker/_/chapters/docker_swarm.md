@@ -1,6 +1,6 @@
 # 『Docker Swarm』ノート
 
-（最終更新： 2023-03-04）
+（最終更新： 2023-05-20）
 
 
 ## 目次
@@ -27,12 +27,12 @@
 
 ## Docker Swarm
 
-**Docker Swarm**は、Dockerが開発しているオープンソースのコンテナオーケストレーションツール。Docker SwarmがインストールされたホストOSは、Dockerクラスタ構成のマスタノード（**Swarm Manager**）となり、他のDockerがインストールされたワーカノードをまとめる役割を持つ。Docker Swarmのインタフェースは通常のDockerコマンドとほぼ同じで、APIを通じて各ノードのDockerを操作することができる。
+**Docker Swarm**は、[Docker](./docker.md#docker)が開発している[オープンソース](../../../../computer/software/_/chapters/open_source_software.md#オープンソースソフトウェア)の[コンテナオーケストレーション](./kubernetes.md#コンテナオーケストレーション)ツール。Docker SwarmがインストールされたホストOSは、[Docker](./docker.md#docker)[クラスタ](../../../../system/_/chapters/system_architecture.md#クラスタコンピューティング)構成のマスタノード（**Swarm Manager**）となり、他の[Docker](./docker.md#docker)がインストールされたワーカノードをまとめる役割を持つ。Docker Swarmのインタフェースは通常の[Docker](./docker.md#docker)[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)とほぼ同じで、[API](../../../../computer/software/_/chapters/operating_system.md#api)を通じて各[ノード](../../../../network/_/chapters/network.md#ノード)の[Docker](./docker.md#docker)を操作することができる。
 
 
 ## Docker Swarmの起動
 
-`docker swarm init` は、Docker Swarmのマスタノードを起動するコマンド。Swarm Managerのホストで実行する。
+`docker swarm init` は、Docker Swarmのマスタノードを起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。
 
 ```sh
 $ docker swarm init
@@ -41,7 +41,7 @@ $ docker swarm init
 
 ## Docker Swarmノードの追加
 
-`docker swarm join` は、Docker Swarmのクラスタに参加するためのコマンド。Swarm Managerが管理する各ワーカノードとなるホストで実行する。トークンには、Docker Swarmの起動時に生成されたものを指定する。
+`docker swarm join` は、[Docker Swarm](#docker-swarm)の[クラスタ](../../../../system/_/chapters/system_architecture.md#クラスタコンピューティング)に参加するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)が管理する各ワーカノードとなる[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。トークンには、[Docker Swarm](#docker-swarm)の起動時に生成されたものを指定する。
 
 ```sh
 $ docker swarm join <master node ip>:<master node port> --token <token>
@@ -50,7 +50,7 @@ $ docker swarm join <master node ip>:<master node port> --token <token>
 
 ## Docker Swarmのトークンの確認
 
-`docker swarm join-token` は、ノードを追加するためのトークンを再度表示するためのコマンド。Swarm Managerのホストで実行することができる。
+`docker swarm join-token` は、[ノード](../../../../network/_/chapters/network.md#ノード)を追加するためのトークンを再度表示するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行することができる。
 
 ```sh
 $ docker swarm join-token worker
@@ -59,7 +59,7 @@ $ docker swarm join-token worker
 
 ## Docker Swarmノードの確認
 
-`docker swarm node ls` は、Swarm Managerが管理するノードを確認するコマンド。
+`docker swarm node ls` は、[Swarm Manager](#docker-swarm)が管理する[ノード](../../../../network/_/chapters/network.md#ノード)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker swarm node ls
@@ -68,7 +68,7 @@ $ docker swarm node ls
 
 ## Docker Swarmネットワークの構築
 
-Docker Swarmのマスタノードとワーカノードを接続するには、overlayネットワークを構築する必要がある。
+[Docker Swarm](#docker-swarm)のマスタノードとワーカノードを接続するには、[overlay](./network.md#overlay)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を構築する必要がある。
 
 ```sh
 $ docker network create -d overlay <network>
@@ -77,11 +77,11 @@ $ docker network create -d overlay <network>
 
 ## Docker Swarmサービス
 
-**サービス**は、Docker Swarmが管理するコンテナの単位。
+**サービス**は、[Docker Swarm](#docker-swarm)が管理する[コンテナ](./container.md#コンテナ)の単位。
 
 ### Docker Swarmサービスの作成
 
-`docker service create` は、Docker Swarmが扱うサービスを作成するコマンド。 `--name` オプションにはサービス名を、 `--hostname` にはコンテナのホスト名を、 `--network` には使用するオーバレイネットワークを、 `--replicas` には起動時のコンテナの複製の数を指定する。また、 `--update-delay` オプションを指定すると、ローリングアップデート時にすべてのレプリカが同時に停止してまわないように遅延時間を設けることができる。
+`docker service create` は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `--name` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)にはサービス名を、 `--hostname` には[コンテナ](./container.md#コンテナ)の[ホスト](../../../../network/_/chapters/network.md#ホスト)名を、 `--network` には使用する[overlay](./network.md#overlay)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を、 `--replicas` には起動時の[コンテナ](./container.md#コンテナ)の複製の数を指定する。また、 `--update-delay` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、ローリングアップデート時にすべてのレプリカが同時に停止してまわないように遅延時間を設けることができる。
 
 ```sh
 $ docker service create <image>:<tag> \
@@ -93,7 +93,7 @@ $ docker service create <image>:<tag> \
 
 ### Docker Swarmサービスの一覧
 
-`docker service ls` は、 Docker Swarmが扱うサービスの一覧を確認するコマンド。
+`docker service ls` は、 [Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service ls
@@ -101,7 +101,7 @@ $ docker service ls
 
 ### Docker Swarmサービスの確認
 
-`docker service ps` は、Docker Swarmが扱うサービスの状態を確認するコマンド。
+`docker service ps` は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service ps <service>
@@ -109,7 +109,7 @@ $ docker service ps <service>
 
 ### Docker Swarmサービスの更新
 
-`docker service update` は、Docker Swarmのサービスをローリングアップデートするコマンド。
+`docker service update` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をローリングアップデートする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service update --image <image>:<tag> <service>
@@ -117,7 +117,7 @@ $ docker service update --image <image>:<tag> <service>
 
 ### Docker Swarmサービスの削除
 
-`docker service rm` は、Docker Swarmのサービスを破棄するコマンド。
+`docker service rm` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)を破棄する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service rm <service>
@@ -125,20 +125,20 @@ $ docker service rm <service>
 
 ### Docker Swarmサービスのスケール
 
-`docker service sclae` は、Docker Swarmのサービスをスケールするコマンド。
+`docker service scale` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をスケールする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
-$ docker service sclae <service>=<replica num>
+$ docker service scale <service>=<replica num>
 ```
 
 
 ## Docker Swarmスタック
 
-**スタック**は、Docker Swarmのサービスをまとめて管理するための単位。スタックの設定には、Docker Composeと同様のYAML形式のファイルを用いる。
+**スタック**は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をまとめて管理するための単位。スタックの設定には、[Docker Compose](./docker_compose.md#docker-compose)と同様のYAML形式のファイルを用いる。
 
 ### Docker Swarmスタックのデプロイ
 
-`docker stack deploy` は、Docker Swarmのスタックをデプロイするコマンド。スタックの定義ファイルから、サービスを生成する。
+`docker stack deploy` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)をデプロイする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[スタック](#docker-swarm#スタック)の定義ファイルから、[サービス](#docker-swarmサービス)を生成する。
 
 ```sh
 $ docker stack deploy <stack> --compose-file <filename>
@@ -146,7 +146,7 @@ $ docker stack deploy <stack> --compose-file <filename>
 
 ### Docker Swarmスタックの一覧
 
-`docker stack ls` は、Docker Swarmのスタックを一覧で確認するコマンド。
+`docker stack ls` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack ls
@@ -154,7 +154,7 @@ $ docker stack ls
 
 ### Docker Swarmスタックの確認
 
-`docker stack ps` は、Docker Swarmのスタックの状態を確認するコマンド。
+`docker stack ps` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack ps <stack>
@@ -162,7 +162,7 @@ $ docker stack ps <stack>
 
 ### Docker Swarmスタックの削除
 
-`docker stack remove` は、Docker Swarmのスタックを削除するコマンド。
+`docker stack remove` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack remove <stack>

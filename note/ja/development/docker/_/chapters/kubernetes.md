@@ -1,6 +1,6 @@
 # 『Kubernetes』ノートkubernetes
 
-（最終更新： 2023-03-04）
+（最終更新： 2023-05-20）
 
 
 ## 目次
@@ -19,26 +19,26 @@
 
 ## コンテナオーケストレーション
 
-**コンテナオーケストレーション**は、複数のコンテナやマルチサーバに導入されているDockerの管理、コンテナのデプロイなど、コンテナをより便利に扱うための機能。
+**コンテナオーケストレーション**は、複数の[コンテナ](./container.md#コンテナ)やマルチサーバに導入されている[Docker](./docker.md#docker)の管理、[コンテナ](./container.md#コンテナ)のデプロイなど、[コンテナ](./container.md#コンテナ)をより便利に扱うための機能。
 
 
 ## Kubernetes
 
-**Kubernetes**(**K8s**)は、Googleが開発したコンテナオーケストレーションツール。複数の物理サーバからなるマルチホストのコンテナ環境を統合的に管理するためのフレームワーク。Kubernetesは、マルチホストのコンテナ環境全体を管理する**Kubernetes管理ノード**（マスタノード）と、コンテナが稼働する**管理対象ノード**（ワーカノード）からなる。
+**Kubernetes**(**K8s**)は、Googleが開発した[コンテナオーケストレーション](#コンテナオーケストレーション)ツール。複数の物理[サーバ](../../../../computer/_/chapters/computer.md#サーバ)からなるマルチ[ホスト](../../../../network/_/chapters/network.md#ホスト)の[コンテナ](./container.md#コンテナ)環境を統合的に管理するためのフレームワーク。Kubernetesは、マルチ[ホスト](../../../../network/_/chapters/network.md#ホスト)の[コンテナ](./container.md#コンテナ)環境全体を管理する**Kubernetes管理ノード**（マスタノード）と、コンテナが稼働する**管理対象ノード**（ワーカノード）からなる。
 
-Kubernetesは、Dockerだけではなくcontainerdやcri-oといったコンテナエンジンもサポートしている。
+Kubernetesは、[Docker](./docker.md#docker)だけではなくcontainerdやcri-oといった[コンテナエンジン](./container.md#コンテナエンジン)もサポートしている。
 
 ### Pod
 
-**Pod**は、管理対象ノード上で稼働する複数のアプリケーションコンテナをひとまとめにしたものの単位。KubernetesではPodを単位としてアプリケーションを管理する。
+**Pod**は、[管理対象ノード](#kubernetes)上で稼働する複数の[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)[コンテナ](./container.md#コンテナ)をひとまとめにしたものの単位。[Kubernetes](#kubernetes)ではPodを単位として[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)を管理する。
 
 ### ReplicaSet
 
-**ReplicaSet**は、Kubernetesにおいて複数のPodのレプリカをセットで作成する機能。
+**ReplicaSet**は、[Kubernetes](#kubernetes)において複数の[Pod](#pod)のレプリカをセットで作成する機能。
 
 ### Podの起動
 
-`kubectl run` は、Pod単位でコンテナを起動するコマンド。
+`kubectl run` は、[Pod](#pod)単位で[コンテナ](./container.md#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl run <pod> --image=<image>:<tag>
@@ -46,13 +46,13 @@ $ kubectl run <pod> --image=<image>:<tag>
 
 ### Podの状態確認
 
-`kubectl get pods` は、Podの状態を一覧で確認するコマンド。
+`kubectl get pods` は、[Pod](#pod)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl get pods
 ```
 
-`kubectl describe pods` は、Podの詳細を確認するコマンド。
+`kubectl describe pods` は、[Pod](#pod)の詳細を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl describe pods <pod>
@@ -61,7 +61,7 @@ $ kubectl describe pods <pod>
 
 ## 複数のPodの管理
 
-Kubernetesでは、複数のPodをYAMLファイルを用いて管理することができる。
+[Kubernetes](#kubernetes)では、複数の[Pod](#pod)をYAMLファイルを用いて管理することができる。
 
 ```yaml
 apiVersion: v1
@@ -76,7 +76,7 @@ spec:
     - containerPort: 80
 ```
 
-YAMLファイルを元にPodを生成するには、 `kubectl create` に `-f` オプションを付与してYAMLファイルのパスを指定する。
+YAMLファイルを元に[Pod](#pod)を生成するには、 `kubectl create` に `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与してYAMLファイルの[パス](../../../../computer/software/_/chapters/file_system.md#パス)を指定する。
 
 ```sh
 $ kubectl create -f <filename>
@@ -84,7 +84,7 @@ $ kubectl create -f <filename>
 
 ### ReplicaSetの利用
 
-ReplicaSetを利用するには、Podの定義を書いたYAMLファイルを次のように記述する。
+[ReplicaSet](#replicaset)を利用するには、[Pod](#pod)の定義を書いたYAMLファイルを次のように記述する。
 
 ```yaml
 apiVersion: apps/v1
@@ -112,7 +112,7 @@ spec:
 
 ### ReplicaSetの状態確認
 
-`kubectl get rs` は、ReplicaSetの状態を一覧で確認するコマンド。
+`kubectl get rs` は、[ReplicaSet](#replicaset)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl get rs
@@ -120,7 +120,7 @@ $ kubectl get rs
 
 ### ReplicaSetのスケール
 
-`kubectl scale` は、ReplicaSetのスケールを行うコマンド。
+`kubectl scale` は、[ReplicaSet](#replicaset)のスケールを行う[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl scale --replicas <replica num> -f <filename>
