@@ -14,7 +14,7 @@
 
 ## Dockerfile
 
-**Dockerfile**は、イメージを作成するための手順を示した定義書。イメージがどのようなアプリケーションで構成されているのか、どのような手順で構築されるのかといった情報を含んでおり、イメージのメンテナンス性を向上させる。
+**Dockerfile**は、[イメージ](./image.md#イメージ)を作成するための手順を示した定義書。[イメージ](./image.md#イメージ)がどのような[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)で構成されているのか、どのような手順で構築されるのかといった情報を含んでおり、[イメージ](./image.md#イメージ)のメンテナンス性を向上させる。
 
 ```dockerfile
 FROM python:3.6
@@ -29,11 +29,11 @@ CMD ["python", "app.py"]
 
 ### ビルドコンテキスト
 
-**ビルドコンテキスト**は、イメージのビルド時に与える付加情報。Dockerfile内でホストOSを参照する命令において、参照先となるパスを指定する。
+**ビルドコンテキスト**は、[イメージ](./image.md#イメージ)の[ビルド](#dockerfileのビルド)時に与える付加情報。[Dockerfile](#dockerfile)内でホストOSを参照する命令において、参照先となる[パス](../../../../computer/software/_/chapters/file_system.md#パス)を指定する。
 
 ### Dockerfileのビルド
 
-`docker build` は、Dockerfileからイメージを生成するコマンド。コンテキストには、Dockerfileが参照するホストOSのディレクトリパスを指定する。デフォルトではカレントディレクトリにある `Dockerfile` という名前のファイルを元にビルドを行うが、 `-f` オプションで任意のDockerfileを使用できる。また、 `-t` オプションを付与して、イメージ名やタグを指定できる。
+`docker build` は、[Dockerfile](#dockerfile)から[イメージ](./image.md#イメージ)を生成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテキスト](#ビルドコンテキスト)には、[Dockerfile](#dockerfile)が参照するホストOSの[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)[パス](../../../../computer/software/_/chapters/file_system.md#パス)を指定する。デフォルトでは[カレントディレクトリ](../../../../computer/software/_/chapters/file_system.md#カレントディレクトリ)にある `Dockerfile` という名前の[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を元にビルドを行うが、 `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)で任意の[Dockerfile](#dockerfile)を使用できる。また、 `-t` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与して、[イメージ](./image.md#イメージ)名やタグを指定できる。
 
 ```sh
 # イメージのビルド
@@ -46,11 +46,11 @@ $ docker build . -t my_ubuntu:01 -f ./Dockerfile
 
 ### Dockerfileの命令
 
-Dockerfile内で使用できる命令は以下の通り。
+[Dockerfile](#dockerfile)内で使用できる命令は以下の通り。
 
 | 命令          | 機能                                                                                                |
 | ------------- | --------------------------------------------------------------------------------------------------- |
-| `ADD`         | ホストOS上のファイルやディレクトリをコンテナにコピーし、アーカイブファイルを指定した場合は展開する |
+| `ADD`         | ホストOS上のファイルやディレクトリをコンテナにコピーし、アーカイブファイルを指定した場合は展開する  |
 | `ARG`         | `docker build` コマンドの引数を渡す                                                                 |
 | `CMD`         | コンテナ内でコマンドを実行する（ `docker run` 時のコマンド指定で上書き）                            |
 | `COPY`        | ホストOS上のファイルやディレクトリをコンテナにコピーする                                            |
@@ -70,9 +70,9 @@ Dockerfile内で使用できる命令は以下の通り。
 
 ## マルチステージビルド
 
-**マルチステージビルド**は、Dockerfile内に、処理対象とするイメージを複数記述して、それらから生成されたファイルやバイナリを最終的なDockerイメージに埋め込む方法。マルチステージビルドを利用することにより、開発用のDockerイメージと本番環境用のDockerイメージを1つのDockerfileで記述できたり、イメージのファイルサイズを減らすことができる。
+**マルチステージビルド**は、[Dockerfile](#dockerfile)内に、処理対象とする[イメージ](./image.md#イメージ)を複数記述して、それらから生成された[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)や[バイナリ](../../../../computer/software/_/chapters/file_system.md#バイナリファイル)を最終的な[Dockerイメージ](./image.md#イメージ)に埋め込む方法。マルチステージビルドを利用することにより、開発用の[Dockerイメージ](./image.md#イメージ)と本番環境用の[Dockerイメージ](./image.md#イメージ)を1つの[Dockerfile](#dockerfile)で記述できたり、[イメージ](./image.md#イメージ)のファイルサイズを減らすことができる。
 
-以下は、Rustによって開発環境でビルドしたリリースバイナリを、リリース用のイメージにコピーするマルチステージビルドDockerfileの例。
+以下は、[Rust](../../../../programming/rust/_/chapters/rust.md)によって開発環境で[ビルド](#dockerfileのビルド)したリリースバイナリを、リリース用の[イメージ](./image.md#イメージ)にコピーするマルチステージビルド[Dockerfile](#dockerfile)の例。
 
 ```dockerfile
 # ステージ1: 開発環境用
@@ -90,7 +90,7 @@ COPY --from=build /app/target/release/my_app .
 CMD ["./my_app"]
 ```
 
-特定の構築ステージ用のイメージを作成したい場合は、 `docker build` に `--target` オプションを指定し、Dockerfileに `AS` で指定した名前を渡す。
+特定の構築ステージ用の[イメージ](./image.md#イメージ)を作成したい場合は、 `docker build` に `--target` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定し、[Dockerfile](#dockerfile)に `AS` で指定した名前を渡す。
 
 ```sh
 $ docker build --target develop .
