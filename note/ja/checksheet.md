@@ -800,7 +800,7 @@
 - [ ] [ハードウェア5大要素](./computer/hardware/_/chapters/hardware.md#ハードウェア5大要素)
 	- [ ] [制御装置](./computer/hardware/_/chapters/hardware.md#制御装置)
 	- [ ] [演算装置(ALU: Arthmetic and Logic Unit)](./computer/hardware/_/chapters/hardware.md#演算装置)
-	- [ ] [記憶装置](./computer/hardware/_/chapters/hardware.md#記憶装置)
+	- [ ] [記憶装置（ストレージ）](./computer/hardware/_/chapters/hardware.md#記憶装置)
 		- [ ] [主記憶装置](./computer/hardware/_/chapters/hardware.md#主記憶装置)
 			- [ ] [揮発性](./computer/hardware/_/chapters/hardware.md#主記憶装置)
 		- [ ] [補助記憶装置](./computer/hardware/_/chapters/hardware.md#補助記憶装置)

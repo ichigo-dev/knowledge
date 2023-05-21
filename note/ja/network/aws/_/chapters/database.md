@@ -1,6 +1,6 @@
 # 『データベース』ノート
 
-（最終更新： 2023-05-06）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -27,11 +27,11 @@
 
 ## RDS
 
-**RDS**(**Amazon Relational Database Service**)は、[AWS](./aws.md#aws)が提供するマネージド[RDB](../../../../development/database/_/chapters/database.md#リレーショナルデータベース)サービス。データベースエンジンは、[Aurora](#aurora)やMySQL、MariaDB、PostgreSQL、Oracle、Microsoft SQL Serverなどから選択できる。RDSのデータ保存用ストレージには、[EBS](./storage.md#ebs)を利用する。
+**RDS**(**Amazon Relational Database Service**)は、[AWS](./aws.md#aws)が提供するマネージド[RDB](../../../../development/database/_/chapters/database.md#リレーショナルデータベース)サービス。データベースエンジンは、[Aurora](#aurora)やMySQL、MariaDB、PostgreSQL、Oracle、Microsoft SQL Serverなどから選択できる。RDSのデータ保存用[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)には、[EBS](./storage.md#ebs)を利用する。
 
 ### Aurora
 
-**Amazon Aurora**は、[AWS](./aws.md#aws)が開発したデータベースエンジンで、[RDS](#rds)の利用時に選択することができる。DBインスタンスを作成すると同時にDBクラスタが作成される。DBクラスタは、1つ以上のDBインスタンスと、各DBインスタンスから参照するデータストレージ（クラスタボリューム）で構成される。クラスタボリュームは単一の[リージョン](./aws.md#リージョン)内の3つの[AZ](./aws.md#az)にそれぞれ2つのデータコピーで構成され、各ストレージ間のデータは自動的に同期される。
+**Amazon Aurora**は、[AWS](./aws.md#aws)が開発したデータベースエンジンで、[RDS](#rds)の利用時に選択することができる。DBインスタンスを作成すると同時にDBクラスタが作成される。DBクラスタは、1つ以上のDBインスタンスと、各DBインスタンスから参照するデータ[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)（クラスタボリューム）で構成される。クラスタボリュームは単一の[リージョン](./aws.md#リージョン)内の3つの[AZ](./aws.md#az)にそれぞれ2つのデータコピーで構成され、各[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)間のデータは自動的に同期される。
 
 **Auroraレプリカ**は通常の[リードレプリカ](#リードレプリカ)と違い、Auroraのプライマリインスタンスに障害が発生した場合にレプリカインスタンスがプライマリインスタンスに昇格することで[フェールオーバ](../../../../system/_/chapters/reliability_design.md#フェールオーバ)を実現する。
 
@@ -55,7 +55,7 @@
 
 [RDS](#rds)は[VPC](./networking_and_content_delivery.md#vpc)に対応しているため、[インターネット](../../../_/chapters/network.md#インターネット)に接続せずとも[VPC](./networking_and_content_delivery.md#vpc)内のサービスから利用できる。[セキュリティグループ](./networking_and_content_delivery.md#セキュリティグループ)による通信要件の制限も可能で、[EC2](./computing.md#ec2)やほかの[AWS](./aws.md#aws)サービスから[RDS](#rds)までの通信もデータベースエンジンが提供するSSLを使った暗号化に対応している。
 
-また、[RDS](#rds)の**暗号化オプション**を有効にすることで、データが保存されるストレージやスナップショット、ログなどの[RDS](#rds)に関連するすべてのデータが暗号化された状態で保持される。
+また、[RDS](#rds)の**暗号化オプション**を有効にすることで、データが保存される[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)やスナップショット、ログなどの[RDS](#rds)に関連するすべてのデータが暗号化された状態で保持される。
 
 
 ## DynamoDB
@@ -120,7 +120,7 @@ Redshiftは、複数ノードによる分散並列実行が大きな特徴とし
 
 **リーダノード**では、[SQL](../../../../development/database/_/chapters/sql.md#sql)クライアントやBI(Business Intelligence)ツールからの実行[クエリ](../../../../development/database/_/chapters/sql.md#クエリ)を受け付けて、[クエリ](../../../../development/database/_/chapters/sql.md#クエリ)の解析や実行プランの作成を行う。
 
-**コンピュートノード**では、リーダノードからの実行[クエリ](../../../../development/database/_/chapters/sql.md#クエリ)を処理する。各コンピュートノードはストレージとセットになっている。
+**コンピュートノード**では、リーダノードからの実行[クエリ](../../../../development/database/_/chapters/sql.md#クエリ)を処理する。各コンピュートノードは[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)とセットになっている。
 
 **ノードスライス**は、Redshiftが分散並列処理をする最小の単位で、コンピュートノードの中でさらにリソースを分割してスライスという単位を構成する。
 

@@ -1,6 +1,6 @@
 # 『システムの性能評価』ノート
 
-（最終更新： 2023-05-06）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -75,7 +75,7 @@
 
 ### サイジング
 
-**サイジング**は、[システム](./system.md#システム)に必要な規模や性能を見極めて構成要素を用意する工程。[サーバ](./system_processing_model.md#クライアントサーバシステム)の台数や[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)の性能、ストレージの容量などを見積もる。
+**サイジング**は、[システム](./system.md#システム)に必要な規模や性能を見極めて構成要素を用意する工程。[サーバ](./system_processing_model.md#クライアントサーバシステム)の台数や[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)の性能、[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)の容量などを見積もる。
 
 ### チューニング
 

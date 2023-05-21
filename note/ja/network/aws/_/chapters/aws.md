@@ -1,6 +1,6 @@
-# 『AWSの基礎知識』ノート
+# 『AWS』ノート
 
-（最終更新： 2023-05-05）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -13,7 +13,7 @@
 
 ## AWS
 
-**AWS**(Amazon Web Service)は、Amazonが提供する[クラウドコンピューティング](../../../../system/_/chapters/system_architecture.md#クラウドコンピューティング)サービスで、[インターネット](../../../_/chapters/network.md#インターネット)を介して、[サーバ](../../../../computer/_/chapters/computer.md#サーバ)やストレージ、[データベース](../../../../development/database/_/chapters/database.md#データベース)、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)などを利用することができる。従来の[オンプレミス](../../../../system/_/chapters/system_architecture.md#オンプレミス)よりも低いコストでサービスを運用できたり、障害への対策や負荷分散が手軽に行えるといった利点がある。
+**AWS**(Amazon Web Service)は、Amazonが提供する[クラウドコンピューティング](../../../../system/_/chapters/system_architecture.md#クラウドコンピューティング)サービスで、[インターネット](../../../_/chapters/network.md#インターネット)を介して、[サーバ](../../../../computer/_/chapters/computer.md#サーバ)や[ストレージ](../../../../computer/hardware/_/chapters/hardware.md#記憶装置)、[データベース](../../../../development/database/_/chapters/database.md#データベース)、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)などを利用することができる。従来の[オンプレミス](../../../../system/_/chapters/system_architecture.md#オンプレミス)よりも低いコストでサービスを運用できたり、障害への対策や負荷分散が手軽に行えるといった利点がある。
 
 [クラウドコンピューティング](../../../../system/_/chapters/system_architecture.md#クラウドコンピューティング)サービスの役割は、[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)や通信機器を設置することに特化した[データセンタ](../../../_/chapters/network.md#データセンタ)の[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)資源を、[インターネット](../../../_/chapters/network.md#インターネット)を介してユーザに提供することである。AWSは単一の[データセンタ](../../../_/chapters/network.md#データセンタ)ではなく、複数の地域にまたがった[データセンタ](../../../_/chapters/network.md#データセンタ)から構成されている。
 

@@ -1,6 +1,6 @@
 # 『システム構成』ノート
 
-（最終更新： 2023-04-19）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -126,7 +126,7 @@
 
 ## クラウドコンピューティング
 
-**クラウドコンピューティング**は、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)を介して、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[データベース](../../../development/database/_/chapters/database.md#データベース)、ストレージなどを利用する形態やサービス。場所や端末を選ばずに[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に接続することができる。クラウドは[仮想化技術](#仮想化技術)により資源を自動的に提供する仕組みの応用である。
+**クラウドコンピューティング**は、[インターネット](../../../network/_/chapters/network_architecture.md#インターネット)を介して、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)や[データベース](../../../development/database/_/chapters/database.md#データベース)、[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)などを利用する形態やサービス。場所や端末を選ばずに[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)に接続することができる。クラウドは[仮想化技術](#仮想化技術)により資源を自動的に提供する仕組みの応用である。
 
 ### オーケストレーション
 
@@ -142,7 +142,7 @@
 
 ### IaaS
 
-**IaaS**(Infrastructure as a Service)は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)や[サーバ](./system_processing_model.md#クライアントサーバシステム)（[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)、ストレージ）などのコンピューティングリソースを提供するサービス形態。従来は自社の[オンプレミス](#オンプレミス)環境を利用してITシステムを運用する必要があったが、IaaSを利用することで必要な時に必要なだけコンピューティングリソースを借りることができる。
+**IaaS**(Infrastructure as a Service)は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)や[サーバ](./system_processing_model.md#クライアントサーバシステム)（[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)、[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)）などのコンピューティングリソースを提供するサービス形態。従来は自社の[オンプレミス](#オンプレミス)環境を利用してITシステムを運用する必要があったが、IaaSを利用することで必要な時に必要なだけコンピューティングリソースを借りることができる。
 
 ### FaaS
 
@@ -191,7 +191,7 @@
 
 ### シンプロビジョニング
 
-**シンプロビジョニング**は、[サーバ](./system_processing_model.md#クライアントサーバシステム)ではなく[ハードディスク](../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)などのストレージを[仮想化](#仮想化技術)する方法。仮想的なディスクドライブを設定することで、[サーバ](./system_processing_model.md#クライアントサーバシステム)は実際の物理的な容量を意識せずに大容量が割り当てられているものとして運用することができる。
+**シンプロビジョニング**は、[サーバ](./system_processing_model.md#クライアントサーバシステム)ではなく[ハードディスク](../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#ハードディスク)などの[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)を[仮想化](#仮想化技術)する方法。仮想的なディスクドライブを設定することで、[サーバ](./system_processing_model.md#クライアントサーバシステム)は実際の物理的な容量を意識せずに大容量が割り当てられているものとして運用することができる。
 
 ### ライブマイグレーション
 

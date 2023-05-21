@@ -1,6 +1,6 @@
 # 『Web』ノート
 
-（最終更新： 2023-05-03）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -346,9 +346,9 @@ Content-Type: application/xhtml+xml; charset=utf-8
 
 ## セッション
 
-**セッション**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がある[Web](#web)サイトに訪問してから離脱するまでの通信。各[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)ごとのセッション情報は[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が利用するストレージに格納されており、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)は自分のセッション情報を参照するためのキーを[Cookie](#cookie)などで保持する。
+**セッション**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がある[Web](#web)サイトに訪問してから離脱するまでの通信。各[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)ごとのセッション情報は[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が利用する[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)に格納されており、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)は自分のセッション情報を参照するためのキーを[Cookie](#cookie)などで保持する。
 
-[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)を[冗長化](../../../system/_/chapters/system_architecture.md#冗長化)する場合は、全ての[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が共有できるストレージ（[DB](../../../development/database/_/chapters/database.md#データベース)や[キャッシュ](#キャッシュ)[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)など）でセッション情報を管理する必要がある。
+[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)を[冗長化](../../../system/_/chapters/system_architecture.md#冗長化)する場合は、全ての[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が共有できる[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)（[DB](../../../development/database/_/chapters/database.md#データベース)や[キャッシュ](#キャッシュ)[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)など）でセッション情報を管理する必要がある。
 
 ### Cookie
 

@@ -1,6 +1,6 @@
 # 『プロセスとジョブ』ノート
 
-（最終更新： 2023-04-19）
+（最終更新： 2023-05-21）
 
 
 ## 目次
@@ -44,7 +44,7 @@
 
 ## プロセス
 
-**プロセス**は、[メモリ](../../../hardware/_/chapters/memory.md#メモリ)上で[実行状態](../../../software/_/chapters/operating_system.md#実行状態)にある[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。[Linux](./linux.md#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)はストレージ装置から[メモリ](../../../hardware/_/chapters/memory.md#メモリ)に[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を読み出し、その[メモリ](../../../hardware/_/chapters/memory.md#メモリ)の内容に従って[CPU](../../../hardware/_/chapters/processor.md#cpu)が[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を実行する。プロセスはシステム上で一意の**PID**によって識別される。
+**プロセス**は、[メモリ](../../../hardware/_/chapters/memory.md#メモリ)上で[実行状態](../../../software/_/chapters/operating_system.md#実行状態)にある[プログラム](../../../../programming/_/chapters/programming.md#プログラム)。[Linux](./linux.md#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)は[ストレージ](../../../hardware/_/chapters/hardware.md#記憶装置)装置から[メモリ](../../../hardware/_/chapters/memory.md#メモリ)に[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を読み出し、その[メモリ](../../../hardware/_/chapters/memory.md#メモリ)の内容に従って[CPU](../../../hardware/_/chapters/processor.md#cpu)が[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を実行する。プロセスはシステム上で一意の**PID**によって識別される。
 
 ひとつの[プログラム](../../../../programming/_/chapters/programming.md#プログラム)や[コマンド](./basic_command.md#コマンド)が複数のプロセスを生成したり、プロセスがさらにプロセスを生成することもある。あるプロセスによって生み出された別のプロセスは、そのプロセスの子プロセスとなる。
 
