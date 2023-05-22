@@ -1,6 +1,6 @@
 # 『ファイル』ノート
 
-（最終更新： 2023-03-26）
+（最終更新： 2023-05-22）
 
 
 ## 目次
@@ -11,6 +11,7 @@
 	1. [シンボリックリンク](#シンボリックリンク)
 	1. [ハードリンク](#ハードリンク)
 1. [ファイルディスクリプタ](#ファイルディスクリプタ)
+1. [デバイスファイル](#デバイスファイル)
 
 
 ## Linuxとファイル
@@ -80,3 +81,14 @@
 ファイルディスクリプタには、識別子とともに[ファイル](../../../software/_/chapters/file_system.md#ファイル)名、[ファイル](../../../software/_/chapters/file_system.md#ファイル)サイズ、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)が操作中の[ファイル](../../../software/_/chapters/file_system.md#ファイル)内の位置、作成日時、更新日時などの情報が含まれている。
 
 通常は、 $0$ に[標準入力](./stdio_and_pipeline.md#標準入力)、 $1$ に[標準出力](./stdio_and_pipeline.md#標準出力)、 $2$ に[標準エラー出力](./stdio_and_pipeline.md#標準エラー出力)が[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)によって最初に用意されるため、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)が[ファイル](../../../software/_/chapters/file_system.md#ファイル)をオープンすると $3$ から順番にディスクリプタが割り当てられる。
+
+
+## デバイスファイル
+
+**デバイスファイル**（**スペシャルファイル**）は、[Linux](./linux.md#linux)の[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)の入出力機能のひとつで、[コンピュータ](../../../_/chapters/computer.md#コンピュータ)に接続した周辺機器などを[ファイルシステム](../../../software/_/chapters/file_system.md#ファイルシステム)上の[ファイル](../../../software/_/chapters/file_system.md#ファイル)のように扱い、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の読み書きと同じ手順でデータの入出力を制御をできるようにしたもの。[コンピュータ](../../../_/chapters/computer.md#コンピュータ)に装置を接続してデバイスドライバを導入すると、 `/dev` [ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)配下にデバイスファイルが作成される。[シェル](./shell_and_terminal.md#シェル)や[プログラム](../../../../programming/_/chapters/programming.md#プログラム)などからは、通常のファイル入出力と同じ機能を通じてアクセスすることができる。
+
+### nullデバイス
+
+**nullデバイス**(/dev/null)は、常に空であるという特別な[デバイスファイル](#デバイスファイル)で、[リダイレクト](#リダイレクト)先としてよく利用される。
+
+nullデバイスを[標準入力](#標準入力)の入力先として用いると、何も内容を返さない。nullデバイスを[標準出力](#標準出力)の出力先として用いると、書き込んだデータはすべて破棄される。

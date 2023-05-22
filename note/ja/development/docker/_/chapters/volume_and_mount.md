@@ -1,6 +1,6 @@
 # 『ボリュームとマウント』ノート
 
-（最終更新： 2023-05-19）
+（最終更新： 2023-05-22）
 
 
 ## 目次
@@ -83,7 +83,7 @@ $ docker run -it --name ubuntu_linux_04_shared -h ubuntu_linux_04_shared \
 
 ## bind mount
 
-**bind mount**は、ホストOS上のデバイスファイルや[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)などを[コンテナ](./container.md#コンテナ)から参照するための機能。bind mountを行うには、[コンテナ](./container.md#コンテナ)起動時に `--mount` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用で[マウント](../../../../computer/software/_/chapters/file_system.md#マウント)することができる。 `--mount` の代わりに `-v` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を利用することもできる。
+**bind mount**は、ホストOS上の[デバイスファイル](../../../../computer/linux/_/chapters/file.md#デバイスファイル)や[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)などを[コンテナ](./container.md#コンテナ)から参照するための機能。bind mountを行うには、[コンテナ](./container.md#コンテナ)起動時に `--mount` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与し、 `type=bind` を指定する。また、 `readonly` を指定することで、読み取り専用で[マウント](../../../../computer/software/_/chapters/file_system.md#マウント)することができる。 `--mount` の代わりに `-v` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を利用することもできる。
 
 bind mountを使用すると、ホストOS上の[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)に[コンテナ](./container.md#コンテナ)が干渉できるようになるので、操作には注意が必要。
 
