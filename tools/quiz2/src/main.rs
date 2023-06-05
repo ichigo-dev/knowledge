@@ -4,6 +4,7 @@ use std::io::{ self, Write, BufRead, BufReader };
 use easy_reader::EasyReader;
 use markdown_to_text;
 use colored::Colorize;
+use chrono::Utc;
 
 //------------------------------------------------------------------------------
 //  エラーをスキップしてcontinue
@@ -47,6 +48,10 @@ fn main()
     let doc_root = String::from("note/ja/");
     let filename = "checksheet.md";
     let challenge_upper = 3;
+    let mut log_file = File::create
+    (
+        format!("result_{}.log", Utc::now().format("%Y%m%d_%H%M%S"))
+    ).expect("could'nt open log file");
 
     //  ファイルを読み込む
     let file = File::open(doc_root.clone() + filename)
@@ -128,6 +133,13 @@ fn main()
         if is_quiz
         {
             println!("{}\n{}", print_quiz_header, print_quiz_content.cyan());
+            let _ = writeln!
+            (
+                log_file,
+                "{}\n{}",
+                print_quiz_header,
+                print_quiz_content.cyan()
+            );
         }
         else
         {
@@ -143,6 +155,7 @@ fn main()
             skip_fail!(std::io::stdout().flush());
             let mut result = String::new();
             skip_fail!(io::stdin().read_line(&mut result));
+            let _ = writeln!(log_file, "Your result: {}", result);
 
             match result.to_lowercase().trim()
             {
@@ -155,7 +168,15 @@ fn main()
                     correct_cnt += 1;
                     println!
                     (
-                        "\t{}\n\t{}{}\n",
+                        "\t{}\n\n\t{}{}\n",
+                        "Good".bold().green(),
+                        "Answer. ",
+                        quiz_answer
+                    );
+                    let _ = writeln!
+                    (
+                        log_file,
+                        "\t{}\n\n\t{}{}\n",
                         "Good".bold().green(),
                         "Answer. ",
                         quiz_answer
@@ -167,7 +188,15 @@ fn main()
                     mask_pos += 1;
                     print!
                     (
-                        "\t{}{}{}",
+                        "\t{}{}{}\n",
+                        "Hint-".yellow(),
+                        mask_pos.to_string().yellow(),
+                        ". ".yellow(),
+                    );
+                    let _ = writeln!
+                    (
+                        log_file,
+                        "\t{}{}{}\n",
                         "Hint-".yellow(),
                         mask_pos.to_string().yellow(),
                         ". ".yellow(),
@@ -178,13 +207,21 @@ fn main()
                         if i >= mask_pos
                         {
                             print!("X");
+                            let _ = write!(log_file, "X");
                         }
                         else
                         {
                             print!("{}", char.to_string().yellow());
+                            let _ = write!
+                            (
+                                log_file,
+                                "{}",
+                                char.to_string().yellow()
+                            );
                         }
                     }
                     print!("\n");
+                    let _ = write!(log_file, "\n");
 
                     skip_fail!(std::io::stdout().flush());
                 }
@@ -196,12 +233,28 @@ fn main()
                         "Answer. ".bold().red(),
                         quiz_answer.bold().red()
                     );
+                    let _ = writeln!
+                    (
+                        log_file,
+                        "\t{}{}\n",
+                        "Answer. ".bold().red(),
+                        quiz_answer.bold().red()
+                    );
                     break;
                 }
                 "q" =>
                 {
                     println!
                     (
+                        "\n{}{}{}{}",
+                        "Result: ".green().bold(),
+                        correct_cnt.to_string().green().bold(),
+                        "/".green().bold(),
+                        (quiz_cnt - 1).to_string().green().bold()
+                    );
+                    let _ = writeln!
+                    (
+                        log_file,
                         "\n{}{}{}{}",
                         "Result: ".green().bold(),
                         correct_cnt.to_string().green().bold(),
@@ -228,10 +281,27 @@ fn main()
                         "/".bold().red(),
                         challenge_upper.to_string().bold().red()
                     );
+                    let _ = writeln!
+                    (
+                        log_file,
+                        "\t{}{}{}{}\n",
+                        "Failed. ".bold().red(),
+                        fail_cnt.to_string().bold().red(),
+                        "/".bold().red(),
+                        challenge_upper.to_string().bold().red()
+                    );
+
                     if fail_cnt >= challenge_upper
                     {
                         println!
                         (
+                            "\t{}{}\n",
+                            "Answer. ".bold().red(),
+                            quiz_answer.bold().red()
+                        );
+                        let _ = writeln!
+                        (
+                            log_file,
                             "\t{}{}\n",
                             "Answer. ".bold().red(),
                             quiz_answer.bold().red()
