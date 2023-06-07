@@ -1869,6 +1869,7 @@
 - [ ] [高度標的型攻撃(APT: Advanced Persistent Threat)](./system/security/_/chapters/cyber_attack.md#高度標的型攻撃)
 - [ ] [パスザハッシュ](./system/security/_/chapters/cyber_attack.md#パスザハッシュ)
 	- [ ] [パスザチケット](./system/security/_/chapters/cyber_attack.md#パスザチケット)
+- [ ] [ディレクトリトラバーサル](./system/security/_/chapters/cyber_attack.md#ディレクトリトラバーサル)
 
 #### 暗号化技術
 
@@ -1890,12 +1891,25 @@
 	- [ ] [認証局(CA: Certificate Authority)](./system/security/_/chapters/encryption_technology.md#認証局)
 	- [ ] [登録局(RA: Registration Authority)](./system/security/_/chapters/encryption_technology.md#登録局)
 	- [ ] [発行局(IA: Issuing Authority)](./system/security/_/chapters/encryption_technology.md#発行局)
+	- [ ] [CRL(Certificate Revocation List)](./system/security/_/chapters/encryption_technology.md#crl)
+	- [ ] [OCSP(Online Certificate Status Protocol)](./system/security/_/chapters/encryption_technology.md#ocsp)
+- [ ] [SSL(Secure Sockets Layer)](./system/security/_/chapters/encryption_technology.md#ssl)
+	- [ ] [TLS(Transport Layer Security)](./system/security/_/chapters/encryption_technology.md#tls)
+	- [ ] [ドメイン認証](./system/security/_/chapters/encryption_technology.md#ドメイン認証)
+	- [ ] [企業実在認証](./system/security/_/chapters/encryption_technology.md#企業実在認証)
+	- [ ] [EV認証](./system/security/_/chapters/encryption_technology.md#ev認証)
+- [ ] [IPsec(Security Architecture for Internet Protocol)](./system/security/_/chapters/encryption_technology.md#ipsec)
+	- [ ] [AH(Authentication Header)](./system/security/_/chapters/encryption_technology.md#ipsec)
+	- [ ] [ESP(Encapsulationg Security Payload)](./system/security/_/chapters/encryption_technology.md#ipsec)
+	- [ ] [IKE(Internet Key Exchange)](./system/security/_/chapters/encryption_technology.md#ipsec)
 
 #### セキュリティ技術
 
 - [ ] [ファイアウォール](./system/security/_/chapters/security_technology.md#ファイアウォール)
 	- [ ] [パケットフィルタリング](./system/security/_/chapters/security_technology.md#ファイアウォール)
 	- [ ] [WAF(Web Application Firewall)](./system/security/_/chapters/security_technology.md#waf)
+	- [ ] [IDS（侵入検知システム: Intrusion Detectino System）](./system/security/_/chapters/security_technology.md#ids)
+	- [ ] [IPS（侵入防御システム: Intrusion Prevention System）](./system/security/_/chapters/security_technology.md#ips)
 - [ ] [プロキシ(Proxy)](./system/security/_/chapters/security_technology.md#プロキシ)
 	- [ ] [リバースプロキシ(Reverse Proxy)](./system/security/_/chapters/security_technology.md#リバースプロキシ)
 - [ ] [ブロックチェーン](./system/security/_/chapters/security_technology.md#ブロックチェーン)
@@ -1924,6 +1938,8 @@
 - [ ] [パケット交換](./network/_/chapters/network.md#パケット交換)
 	- [ ] [パケット](./network/_/chapters/network.md#パケット)
 	- [ ] [データグラム](./network/_/chapters/network.md#パケット)
+		- [ ] [ヘッダー](./network/_/chapters/network.md#ヘッダー)
+		- [ ] [ペイロード](./network/_/chapters/network.md#ペイロード)
 - [ ] [ネットワークトポロジ](./network/_/chapters/network.md#ネットワークトポロジ)
 	- [ ] [半二重通信](./network/_/chapters/network.md#半二重通信)
 	- [ ] [全二重通信](./network/_/chapters/network.md#全二重通信)

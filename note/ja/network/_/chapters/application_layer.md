@@ -1,6 +1,6 @@
 # 『アプリケーション層』ノート
 
-（最終更新： 2023-05-01）
+（最終更新： 2023-06-07）
 
 
 ## 目次
@@ -51,7 +51,7 @@ TELNET[プロトコル](./network_architecture.md#プロトコル)を利用す�
 
 ### SSH
 
-**SSH**(Secure SHell)は、暗号化された遠隔ログインシステムで、一般的に22番[ポート](./address_on_network.md#ポート番号)が利用される。SSHの基本的な機能は以下の通り。
+**SSH**(Secure SHell)は、[公開鍵暗号方式](../../../system/security/_/chapters/encryption_technology.md#公開鍵暗号方式)によって暗号化された遠隔ログインシステムで、一般的に22番[ポート](./address_on_network.md#ポート番号)が利用される。SSHの基本的な機能は以下の通り。
 
 - 通信内容の暗号化
 - ファイルの転送

@@ -7,6 +7,8 @@
 
 1. [ファイアウォール](#ファイアウォール)
 	1. [WAF](#waf)
+	1. [IDS](#ids)
+	1. [IPS](#ips)
 1. [プロキシ](#プロキシ)
 	1. [リバースプロキシ](#リバースプロキシ)
 1. [ブロックチェーン](#ブロックチェーン)
@@ -26,6 +28,14 @@
 ### WAF
 
 **WAF**(Web Application Firewall)は、[Web](../../../../network/_/chapters/web.md#web)[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の[セキュリティ](./security.md#セキュリティ)を向上させるために使用される技術のひとつで、[Web](../../../../network/_/chapters/web.md#web)トラフィックを監視し、悪意のある攻撃や不正なアクセスを検出および防御する。[XSS](./cyber_attack.md#xss)や[SQLインジェクション](./cyber_attack.md#sqlインジェクション)、[CSRF](./cyber_attack.md#csrf)などの攻撃を検知して防御したり、トラフィックの異常な挙動を検知してブロックしたり、ログ記録を行うといった役割を持つ。
+
+### IDS
+
+**IDS**（**侵入検知システム**: Intrusion Detectino System）は、[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)や[システム](../../../_/chapters/system.md#システム)における侵入や攻撃を検知するための[セキュリティ](./security.md#セキュリティ)[システム](../../../_/chapters/system.md#システム)。[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)トラフィックや[システム](../../../_/chapters/system.md#システム)のログを監視し、異常なアクティビティや攻撃パターンを特定することで、潜在的な[セキュリティ](./security.md#セキュリティ)侵害を検知する。
+
+### IPS
+
+**IPS**（侵入防御システム: Intrusion Prevention System）は、[IDS](ids)の機能に加えて、攻撃を防止するためのアクションを実行するための[セキュリティ](./security.md#セキュリティ)[システム](../../../_/chapters/system.md#システム)。[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)トラフィックや[システム](../../../_/chapters/system.md#システム)のログを監視し、悪意のある侵入や攻撃を検知して即座に対応を講じることで、[セキュリティ](./security.md#セキュリティ)の強化を図る。
 
 
 ## プロキシ

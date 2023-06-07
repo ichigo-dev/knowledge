@@ -47,6 +47,7 @@
 1. [ソーシャルエンジニアリング](#ソーシャルエンジニアリング)
 1. [高度標的型攻撃](#高度標的型攻撃)
 1. [パスザハッシュ](#パスザハッシュ)
+1. [ディレクトリトラバーサル](#ディレクトリトラバーサル)
 
 
 ## サイバー攻撃
@@ -265,3 +266,8 @@ SQLインジェクションの一般的な攻撃例として、入力フィー�
 **パスザハッシュ**は、主に[Windows](../../../../computer/software/_/chapters/operating_system.md#windows)の[認証](./security_technology.md#認証)[システム](../../../_/chapters/system.md#システム)に対して行われる攻撃で、攻撃者はパスワードハッシュを窃取することで標的ユーザのパスワードを推測することなく認証をバイパスする。[Windows](../../../../computer/software/_/chapters/operating_system.md#windows)はNTLM認証を用いており、入力されたパスワードを[ハッシュ](./encryption_technology.md#ハッシュ)化して[システム](../../../_/chapters/system.md#システム)の特定領域に保存している。攻撃者はこの[ハッシュ値](./encryption_technology.md#ハッシュ)を摂取することで、[システム](../../../_/chapters/system.md#システム)の認証を突破する。
 
 また、[Windows](../../../../computer/software/_/chapters/operating_system.md#windows)のよりセキュアな認証方式であるKerberos認証を採用しているが、パスザハッシュで得た権限をもとにKerberos認証を破る手法として**パスザチケット**攻撃も生み出されている。
+
+
+## ディレクトリトラバーサル
+
+**ディレクトリトラバーサル**は、[Web](../../../../network/_/chapters/web.md#web)[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の[パス](../../../../computer/software/_/chapters/file_system.md#パス)名として `../` や `..\` といった親[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)を表す文字列を使用して、[サーバ](../../../_/chapters/system_processing_model.md#クライアントサーバシステム)内の公開が予定されていない[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を指定する攻撃。機密[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の情報漏えいや設定ファイルの改ざんなどに利用される恐れがある。
