@@ -21,7 +21,14 @@
 1. [ネットワーク](./network/README.md)
 	1. [AWS](./network/aws/README.md)
 1. [人工知能](./artificial_intelligence/README.md)
-1. [開発](./development/README.md)
+1. [Web開発](./web_development/README.md)
+	1. [HTML](./web_development/html/README.md)
+	1. [CSS](./web_development/css/README.md)
+	1. [JavaScript](./web_development/javascript/README.md)
+1. [アプリ開発](./app_development/README.md)
+	1. [Android](./app_development/android/README.md)
+	1. [iOS](./app_development/ios/README.md)
+1. [開発全般](./development/README.md)
 	1. [Git](./development/git/README.md)
 	1. [データベース](./development/database/README.md)
 	1. [Docker](./development/docker/README.md)
@@ -37,10 +44,11 @@
 ### 未着手
 
 - 並行プログラミング
-- アルゴリズムは別リポジトリで
 - デザインパターン
 - ソフトウェアアーキテクチャ
 - マネジメント
+- Web開発(MDN)
+- アプリ開発
 
 ### メモ
 

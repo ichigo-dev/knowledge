@@ -2854,7 +2854,7 @@
 		- [ ] [Yolo](./artificial_intelligence/_/chapters/neural_network_algorithm.md#end-to-end)
 
 
-## 開発
+## 開発全般
 
 ### GraphQL
 
