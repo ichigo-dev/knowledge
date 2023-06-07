@@ -25,7 +25,6 @@
 	1. [Git](./development/git/README.md)
 	1. [データベース](./development/database/README.md)
 	1. [Docker](./development/docker/README.md)
-	1. [GraphQL](./development/graphql/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
 	1. [マネジメント](./development/management/README.md)
@@ -48,7 +47,6 @@
 - IoT
 - RAIDのイメージをつくる
 - ロードバランサ、負荷分散
-- ペイロード
 - チェックサム
 
 - ネットワークトポロジのイメージをつくる
