@@ -1870,6 +1870,7 @@
 - [ ] [パスザハッシュ](./system/security/_/chapters/cyber_attack.md#パスザハッシュ)
 	- [ ] [パスザチケット](./system/security/_/chapters/cyber_attack.md#パスザチケット)
 - [ ] [ディレクトリトラバーサル](./system/security/_/chapters/cyber_attack.md#ディレクトリトラバーサル)
+- [ ] [テンペスト](./system/security/_/chapters/cyber_attack.md#テンペスト)
 
 #### 暗号化技術
 
@@ -1887,6 +1888,8 @@
 	- [ ] [SHA-1(Secure Hash Algorithm 1)](./system/security/_/chapters/encryption_technology.md#sha-1)
 	- [ ] [SHA-2(Secure Hash Algorithm 2)](./system/security/_/chapters/encryption_technology.md#sha-2)
 - [ ] [デジタル署名](./system/security/_/chapters/encryption_technology.md#デジタル署名)
+	- [ ] [タイムスタンプ認証](./system/security/_/chapters/encryption_technology.md#タイムスタンプ認証)
+		- [ ] [タイムスタンプサービス(Trusted Timestamp Authority)](./system/security/_/chapters/encryption_technology.md#タイムスタンプ認証)
 - [ ] [PKI（公開鍵基盤: Public Key Infrastructure）](./system/security/_/chapters/encryption_technology.md#デジタル署名)
 	- [ ] [認証局(CA: Certificate Authority)](./system/security/_/chapters/encryption_technology.md#認証局)
 	- [ ] [登録局(RA: Registration Authority)](./system/security/_/chapters/encryption_technology.md#登録局)
@@ -1902,6 +1905,7 @@
 	- [ ] [AH(Authentication Header)](./system/security/_/chapters/encryption_technology.md#ipsec)
 	- [ ] [ESP(Encapsulationg Security Payload)](./system/security/_/chapters/encryption_technology.md#ipsec)
 	- [ ] [IKE(Internet Key Exchange)](./system/security/_/chapters/encryption_technology.md#ipsec)
+- [ ] [ステガノグラフィ](./system/security/_/chapters/encryption_technology.md#ステガノグラフィ)
 
 #### セキュリティ技術
 
@@ -1918,6 +1922,7 @@
 - [ ] [認証](./system/security/_/chapters/security_technology.md#認証)
 	- [ ] [多要素認証(MFA: Multi-Factor Authentication)](./system/security/_/chapters/security_technology.md#多要素認証)
 	- [ ] [生体認証(Biometric Authentication)](./system/security/_/chapters/security_technology.md#生体認証)
+- [ ] [CAPTCHA(Completely AUtomated Public Turing test to tell Computers and Humans Apart)](./system/security/_/chapters/security_technology.md#captcha)
 - [ ] [デジタルフォレンジック](./system/security/_/chapters/security_technology.md#デジタルフォレンジック)
 	- [ ] [ハニーポット](./system/security/_/chapters/security_technology.md#ハニーポット)
 
