@@ -3238,3 +3238,18 @@
 	- [ ] [kubectl describe pods](./development/docker/_/chapters/kubernetes.md#podの状態確認)
 	- [ ] [kubectl get rs](./development/docker/_/chapters/kubernetes.md#replicasetの状態確認)
 	- [ ] [kubectl scale](./development/docker/_/chapters/kubernetes.md#replicasetのスケール)
+
+### マネジメント
+
+#### 開発プロセス
+
+- [ ] [共通フレーム](./development/management/_/chapters/development_process.md#共通フレーム)
+	- [ ] [V字モデル](./development/management/_/chapters/development_process.md#v字モデル)
+- [ ] [要件定義](./development/management/_/chapters/development_process.md#要件定義)
+	- [ ] [機能要件](./development/management/_/chapters/development_process.md#機能要件)
+	- [ ] [非機能要件](./development/management/_/chapters/development_process.md#非機能要件)
+- [ ] [レビュー](./development/management/_/chapters/development_process.md#レビュー)
+	- [ ] [ウォークスルー](./development/management/_/chapters/development_process.md#ウォークスルー)
+	- [ ] [インスペクション](./development/management/_/chapters/development_process.md#インスペクション)
+- [ ] [POA（プロセス中心アプローチ: Process Oriented Approach）](./development/management/_/chapters/development_process.md#poa)
+	- [ ] [DFD(Data Flow Diagram)](./development/management/_/chapters/development_process.md#dfd)
