@@ -3251,5 +3251,17 @@
 - [ ] [レビュー](./development/management/_/chapters/development_process.md#レビュー)
 	- [ ] [ウォークスルー](./development/management/_/chapters/development_process.md#ウォークスルー)
 	- [ ] [インスペクション](./development/management/_/chapters/development_process.md#インスペクション)
+- [ ] [フローチャート（流れ図）](./development/management/_/chapters/development_process.md#フローチャート)
 - [ ] [POA（プロセス中心アプローチ: Process Oriented Approach）](./development/management/_/chapters/development_process.md#poa)
 	- [ ] [DFD(Data Flow Diagram)](./development/management/_/chapters/development_process.md#dfd)
+		- [ ] [プロセス](./development/management/_/chapters/development_process.md#プロセス)
+		- [ ] [ターミネータ](./development/management/_/chapters/development_process.md#ターミネータ)
+		- [ ] [データストア](./development/management/_/chapters/development_process.md#データストア)
+		- [ ] [データフロー](./development/management/_/chapters/development_process.md#データフロー)
+- [ ] [DOA（データ中心アプローチ: Data Oriented Approach）](./development/management/_/chapters/development_process.md#doa)
+- [ ] [OOA（オブジェクト指向アプローチ: Object Oriented Approach）](./development/management/_/chapters/development_process.md#ooa)
+	- [ ] [UML（統一モデリング言語: Unified Modeling Language）](./development/management/_/chapters/development_process.md#uml)
+		- [ ] [クラス図](./development/management/_/chapters/development_process.md#クラス図)
+		- [ ] [シーケンス図](./development/management/_/chapters/development_process.md#シーケンス図)
+
+#### 開発手法

@@ -1,6 +1,6 @@
 # 『開発プロセス』ノート
 
-（最終更新： 2023-06-09）
+（最終更新： 2023-06-10）
 
 
 ## 目次
@@ -13,8 +13,18 @@
 1. [レビュー](#レビュー)
 	1. [ウォークスルー](#ウォークスルー)
 	1. [インスペクション](#インスペクション)
+1. [フローチャート](#フローチャート)
 1. [POA](#poa)
 	1. [DFD](#dfd)
+	1. [プロセス](#プロセス)
+	1. [ターミナル](#ターミナル)
+	1. [データストア](#データストア)
+	1. [データフロー](#データフロー)
+1. [DOA](#doa)
+1. [OOA](#ooa)
+	1. [UML](#uml)
+	1. [クラス図](#クラス図)
+	1. [シーケンス図](#シーケンス図)
 
 
 ## 共通フレーム
@@ -58,10 +68,55 @@
 **インスペクション**は、[システム](../../../../system/_/chapters/system.md#システム)開発における[レビュー](#レビュー)手法のひとつで、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)やドキュメントの品質を向上させるために、経験豊富なチームメンバーや専門家が詳細な検査を行う。インスペクションは、問題の早期発見や、品質の向上、[レビュー](#レビュー)の効率化を目的として行われる。
 
 
+## フローチャート
+
+**フローチャート**（流れ図）は、プロセスや手順をグラフィカルに表現する図。図やシンボルを使って、タスクの流れや意思決定のフロー、プロセスの手順を表現する。フローチャートでは、順次、選択、繰り返しといった[プログラム](../../../../programming/_/chapters/programming.md#プログラム)における基本的な[制御構文](../../../../programming/_/chapters/control_flow.md#制御フロー)を表現することができる。
+
+
 ## POA
 
 **POA**（プロセス中心アプローチ: Process Oriented Approach）は、[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)の機能（プロセス）を中心としたアプローチで、[システム](../../../../system/_/chapters/system.md#システム)を[サブシステム](../../../../system/_/chapters/system.md#サブシステム)に、さらに段階的に詳細化指定木、最終的には最小機能の単位である[モジュール](../../../../computer/software/_/chapters/package.md#モジュール)に分割する。データの流れを表現する[DFD](#dfd)やプロセスの状態遷移を表現する[状態遷移図](../../../../basics/information_theory/_/chapters/automaton.md#状態遷移図)が用いられたり、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング言語)として[C言語](../../../../programming/_/chapters/programming_language.md#c言語)などの構造化言語がよく採用される。
 
 ### DFD
 
-**DFD**(Data Flow Diagram)は、[POA](#poa)においてよく用いられる、プロセスを中心にデータの流れを記述するための図。
+**DFD**(Data Flow Diagram)は、[POA](#poa)においてよく用いられる、[プロセス](#プロセス)を中心にデータの流れをグラフィカルに表現する図。[システム](../../../../system/_/chapters/system.md#システム)の入出力がどのような情報なのかを示し、データがどこから来てどこへ行くのか、どこに格納されるのかといったことを示す。[プロセス](#プロセス)、[ターミネータ](#ターミネータ)、[データストア](#データストア)、[データフロー](#データフロー)という要素によって描かれる。
+
+![DFDの例](../assets/images/dfd_example.png)
+
+### プロセス
+
+**プロセス**は、[DFD](#dfd)において、入力データに対して何かしらの処理を施し、データを出力する要素。必ず入力と出力の[データフロー](#データフロー)が存在する。
+
+### ターミネータ
+
+**ターミネータ**（外部実体）は、[DFD](#dfd)において、データの入力先、または出力先となる外部要素。
+
+### データストア
+
+**データストア**は、[DFD](#dfd)において、データの保存先となる要素。[データベース](../../../database/_/chapters/database.md#データベース)に限らず、[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)などのデータを保管する媒体全体を指す。
+
+### データフロー
+
+**データフロー**は、[DFD](#dfd)において、データの移動経路や方向を矢印で表したもの。
+
+
+## DOA
+
+**DOA**（データ中心アプローチ: Data Oriented Approach）は、業務で扱うデータに着目したアプローチで、業務で扱うデータ全体を[ER図](../../../database/_/chapters/rdb.md#er図)を用いてモデル化する。個々の[システム](../../../../system/_/chapters/system.md#システム)はこの[データベース](../../../database/_/chapters/database.md#データベース)を中心に設計することによって、データの整合性や一貫性が保たれ、[システム](../../../../system/_/chapters/system.md#システム)間でのやり取りが容易になる。[プログラミング](../../../../programming/_/chapters/programming.md#プログラミング)と[データベース](../../../database/_/chapters/database.md#データベース)を分離するデータ独立の考え方となっている。
+
+
+## OOA
+
+**OOA**（オブジェクト指向アプローチ: Object Oriented Approach）は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)やデータをオブジェクトとして捉え、それを組み合わせて[システム](../../../../system/_/chapters/system.md#システム)を構築するアプローチ。オブジェクトを表現するために、[クラス図](#クラス図)や[シーケンス図](#シーケンス図)といった[UML](#uml)が用いられたり、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング言語)として[Java](../../../../programming/_/chapters/programming_language.md#java)などの[オブジェクト指向言語](../../../../programming/_/chapters/programming.md#オブジェクト指向プログラミング)がよく採用される。
+
+### UML
+
+**UML**（統一モデリング言語: Unified Modeling Language）は、[オブジェクト指向](../../../../programming/_/chapters/object_oriented.md#オブジェクト指向)で用いられる表記法で、[クラス図](#クラス図)や[シーケンス図](#シーケンス図)などの様々な図が定義されている。
+
+### クラス図
+
+**クラス図**は、[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)の仕様と[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)間の関係を表現する図。[ER図](../../../database/_/chapters/rdb.md#er図)の発展形のようになっており、データのエンティティだけでなく、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の持つプロセス（[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)）も表現する。
+
+### シーケンス図
+
+**シーケンス図**は、[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)間の相互作用を時系列で表現する図。

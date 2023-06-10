@@ -4,6 +4,7 @@
 ## 学習ステップ
 
 1. [開発プロセス](./_/chapters/development_process.md)
+1. [開発手法](./_/chapters/development_method.md)
 
 
 ## キーワード
