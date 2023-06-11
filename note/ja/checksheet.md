@@ -3265,3 +3265,7 @@
 		- [ ] [シーケンス図](./development/management/_/chapters/development_process.md#シーケンス図)
 
 #### 開発手法
+
+- [ ] [ウォーターフォールモデル](./development/management/_/chapters/development_method.md#ウォーターフォールモデル)
+- [ ] [プロトタイピングモデル](./development/management/_/chapters/development_method.md#プロトタイピングモデル)
+- [ ] [スパイラルモデル](./development/management/_/chapters/development_method.md#スパイラルモデル)
