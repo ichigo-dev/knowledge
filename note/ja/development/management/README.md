@@ -5,17 +5,4 @@
 
 1. [開発プロセス](./_/chapters/development_process.md)
 1. [開発手法](./_/chapters/development_method.md)
-
-
-## キーワード
-
-- スパイラルモデル
-- DevOps
-- MLOps
-- ウォータフォール開発
-- アジャイル開発
-- モノリシックなレガシーシステムのモダナイゼーション
-- マイクロサービス
-- イミュータブルインフラストラクチャ
-- リフトアンドシフト
-- クラウドバースト
+1. [デプロイ戦略](./_/chapters/deployment_strategy.md)

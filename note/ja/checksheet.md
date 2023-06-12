@@ -3273,3 +3273,14 @@
 - [ ] [アジャイル開発](./development/management/_/chapters/development_method.md#アジャイル開発)
 - [ ] [インクリメンタルモデル](./development/management/_/chapters/development_method.md#インクリメンタルモデル)
 - [ ] [エボリューショナルモデル](./development/management/_/chapters/development_method.md#エボリューショナルモデル)
+- [ ] [テスト駆動開発(TDD: Test-Drive Development)](./development/management/_/chapters/development_method.md#テスト駆動開発)
+- [ ] [ドメイン駆動開発(DDD: Domain-Drive Development)](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
+	- [ ] [ユキビタス言語](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
+- [ ] [CI（継続的インテグレーション: Continuous Integration）](./development/management/_/chapters/development_method.md#ci)
+- [ ] [CD（継続的デプロイメント: Continuous Deployment、継続的デリバリー: Continuous Delivery）](./development/management/_/chapters/development_method.md#cd)
+
+#### デプロイ戦略
+
+- [ ] [デプロイ(Deploy)](./development/management/_/chapters/deployment_strategy.md#デプロイ)
+- [ ] [ブルーグリーンデプロイメント](./development/management/_/chapters/deployment_strategy.md#ブルーグリーンデプロイメント)
+- [ ] [ローリングデプロイ](./development/management/_/chapters/deployment_strategy.md#ローリングデプロイ)
