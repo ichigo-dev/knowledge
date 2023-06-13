@@ -3302,3 +3302,10 @@
 - [ ] [イミュータブルデプロイ](./development/management/_/chapters/deployment_strategy.md#イミュータブルデプロイ)
 - [ ] [ローリングデプロイ](./development/management/_/chapters/deployment_strategy.md#ローリングデプロイ)
 - [ ] [カナリアデプロイ](./development/management/_/chapters/deployment_strategy.md#カナリアデプロイ)
+
+#### テスト
+
+- [ ] [単体テスト（ユニットテスト）](./development/management/_/chapters/test.md#単体テスト)
+- [ ] [結合テスト](./development/management/_/chapters/test.md#結合テスト)
+- [ ] [総合テスト（システムテスト）](./development/management/_/chapters/test.md#総合テスト)
+- [ ] [チューニング](./development/management/_/chapters/test.md#チューニング)
