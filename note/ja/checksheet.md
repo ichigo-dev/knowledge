@@ -3271,6 +3271,14 @@
 - [ ] [スパイラルモデル](./development/management/_/chapters/development_method.md#スパイラルモデル)
 - [ ] [RAD(Rapid Application Development)](./development/management/_/chapters/development_method.md#rad)
 - [ ] [アジャイル開発](./development/management/_/chapters/development_method.md#アジャイル開発)
+	- [ ] [XP(Extreme Programming)](./development/management/_/chapters/development_method.md#xp)
+	- [ ] [スクラム](./development/management/_/chapters/development_method.md#スクラム)
+		- [ ] [スクラムチーム](./development/management/_/chapters/development_method.md#スクラム)
+		- [ ] [プロダクトオーナ](./development/management/_/chapters/development_method.md#スクラム)
+		- [ ] [スクラムマスタ](./development/management/_/chapters/development_method.md#スクラム)
+		- [ ] [スプリント](./development/management/_/chapters/development_method.md#スクラム)
+		- [ ] [バックログ](./development/management/_/chapters/development_method.md#スクラム)
+	- [ ] [リーンソフトウェア開発](./development/management/_/chapters/development_method.md#リーンソフトウェア開発)
 - [ ] [インクリメンタルモデル](./development/management/_/chapters/development_method.md#インクリメンタルモデル)
 - [ ] [エボリューショナルモデル](./development/management/_/chapters/development_method.md#エボリューショナルモデル)
 - [ ] [テスト駆動開発(TDD: Test-Drive Development)](./development/management/_/chapters/development_method.md#テスト駆動開発)
@@ -3278,6 +3286,12 @@
 	- [ ] [ユキビタス言語](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
 - [ ] [CI（継続的インテグレーション: Continuous Integration）](./development/management/_/chapters/development_method.md#ci)
 - [ ] [CD（継続的デプロイメント: Continuous Deployment、継続的デリバリー: Continuous Delivery）](./development/management/_/chapters/development_method.md#cd)
+- [ ] [ペアプログラミング](./development/management/_/chapters/development_method.md#ペアプログラミング)
+	- [ ] [ドライバ](./development/management/_/chapters/development_method.md#ペアプログラミング)
+	- [ ] [ナビゲータ](./development/management/_/chapters/development_method.md#ペアプログラミング)
+- [ ] [リバースエンジニアリング](./development/management/_/chapters/development_method.md#リバースエンジニアリング)
+	- [ ] [コールグラフ](./development/management/_/chapters/development_method.md#リバースエンジニアリング)
+- [ ] [マッシュアップ(Mashup)](./development/management/_/chapters/development_method.md#マッシュアップ)
 
 #### デプロイ戦略
 
