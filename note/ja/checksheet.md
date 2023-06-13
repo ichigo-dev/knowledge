@@ -3281,6 +3281,7 @@
 	- [ ] [リーンソフトウェア開発](./development/management/_/chapters/development_method.md#リーンソフトウェア開発)
 - [ ] [インクリメンタルモデル](./development/management/_/chapters/development_method.md#インクリメンタルモデル)
 - [ ] [エボリューショナルモデル](./development/management/_/chapters/development_method.md#エボリューショナルモデル)
+- [ ] [DevOps](./development/management/_/chapters/development_method.md#devops)
 - [ ] [テスト駆動開発(TDD: Test-Drive Development)](./development/management/_/chapters/development_method.md#テスト駆動開発)
 - [ ] [ドメイン駆動開発(DDD: Domain-Drive Development)](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
 	- [ ] [ユキビタス言語](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
