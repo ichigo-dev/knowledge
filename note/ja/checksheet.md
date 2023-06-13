@@ -3297,5 +3297,8 @@
 #### デプロイ戦略
 
 - [ ] [デプロイ(Deploy)](./development/management/_/chapters/deployment_strategy.md#デプロイ)
-- [ ] [ブルーグリーンデプロイメント](./development/management/_/chapters/deployment_strategy.md#ブルーグリーンデプロイメント)
+- [ ] [インプレースデプロイ](./development/management/_/chapters/deployment_strategy.md#インプレースデプロイ)
+- [ ] [ブルーグリーンデプロイ](./development/management/_/chapters/deployment_strategy.md#ブルーグリーンデプロイ)
+- [ ] [イミュータブルデプロイ](./development/management/_/chapters/deployment_strategy.md#イミュータブルデプロイ)
 - [ ] [ローリングデプロイ](./development/management/_/chapters/deployment_strategy.md#ローリングデプロイ)
+- [ ] [カナリアデプロイ](./development/management/_/chapters/deployment_strategy.md#カナリアデプロイ)
