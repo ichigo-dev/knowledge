@@ -239,6 +239,8 @@ URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapt
 
 HTMLは[WWW](./application_layer.md#www)の[プレゼンテーション層](./network_architecture.md#プレゼンテーション層)の機能であるが、この[プレゼンテーション層](./network_architecture.md#プレゼンテーション層)は完全には整備されておらず、[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)や[ブラウザ](#webブラウザ)が異なると表示の細かい部分に違いを生じる場合がある。
 
+- [HTML](../../../web_development/html/_/chapters/html.md)
+
 
 ## HTTPにおける認証
 
