@@ -2861,10 +2861,6 @@
 
 ## 開発全般
 
-### GraphQL
-
-- [ ] [GraphQL](./development/_/topics/graphql.md#graphql)
-
 ### Git
 
 #### Git
@@ -3308,4 +3304,10 @@
 - [ ] [単体テスト（ユニットテスト）](./development/management/_/chapters/test.md#単体テスト)
 - [ ] [結合テスト](./development/management/_/chapters/test.md#結合テスト)
 - [ ] [総合テスト（システムテスト）](./development/management/_/chapters/test.md#総合テスト)
+- [ ] [リグレッションテスト](./development/management/_/chapters/test.md#リグレッションテスト)
+- [ ] [ホワイトボックステスト](./development/management/_/chapters/test.md#ホワイトボックステスト)
 - [ ] [チューニング](./development/management/_/chapters/test.md#チューニング)
+
+### GraphQL
+
+- [ ] [GraphQL](./development/_/topics/graphql.md#graphql)
