@@ -3251,6 +3251,18 @@
 
 ### マネジメント
 
+#### マネジメント
+
+- [ ] [PMBOK(Project Management Body of Knowledge)](./development/management/_/chapters/development_process.md#pmbok)
+	- [ ] [プロセスグループ](./development/management/_/chapters/development_process.md#プロセスグループ)
+		- [ ] [立上げプロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
+		- [ ] [計画プロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
+		- [ ] [実行プロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
+		- [ ] [監視コントロール・プロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
+		- [ ] [終結プロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
+	- [ ] [知識エリア](./development/management/_/chapters/development_process.md#知識エリア)
+- [ ] [プロジェクトライフサイクル](./development/management/_/chapters/development_process.md#プロジェクトライフサイクル)
+
 #### 開発プロセス
 
 - [ ] [共通フレーム](./development/management/_/chapters/development_process.md#共通フレーム)
