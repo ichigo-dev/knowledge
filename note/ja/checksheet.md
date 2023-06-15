@@ -3262,6 +3262,7 @@
 		- [ ] [終結プロセス群](./development/management/_/chapters/development_process.md#プロセスグループ)
 	- [ ] [知識エリア](./development/management/_/chapters/development_process.md#知識エリア)
 - [ ] [プロジェクトライフサイクル](./development/management/_/chapters/development_process.md#プロジェクトライフサイクル)
+- [ ] [PDCAサイクル（Plan-Do-Check-Actサイクル）](./development/management/_/chapters/development_process.md#pdcaサイクル)
 
 #### 開発プロセス
 
