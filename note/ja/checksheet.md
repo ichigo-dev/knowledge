@@ -2867,10 +2867,14 @@
 
 - [ ] [HTML(HyperText Markup Language)](./web_development/html/_/chapters/html.md#html)
 	- [ ] [タグ](./web_development/html/_/chapters/html.md#タグ)
+- [ ] [要素](./web_development/html/_/chapters/html.md#要素)
 	- [ ] [ブロック要素](./web_development/html/_/chapters/html.md#ブロック要素)
 	- [ ] [インライン要素](./web_development/html/_/chapters/html.md#インライン要素)
 	- [ ] [空要素](./web_development/html/_/chapters/html.md#空要素)
 - [ ] [属性](./web_development/html/_/chapters/html.md#属性)
+	- [ ] [論理属性](./web_development/html/_/chapters/html.md#論理属性)
+- [ ] [実体参照](./web_development/html/_/chapters/html.md#実体参照)
+- [ ] [コメント](./web_development/html/_/chapters/html.md#コメント)
 
 
 ## 開発全般
@@ -2879,8 +2883,8 @@
 
 #### Git
 
-- [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
-	- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
+	- [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
+		- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
 		- [ ] [CVS](./development/git/_/chapters/git.md#集中管理方式)
 		- [ ] [SVN](./development/git/_/chapters/git.md#集中管理方式)
 	- [ ] [分散管理方式（分散型）](./development/git/_/chapters/git.md#分散管理方式)
