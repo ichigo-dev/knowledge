@@ -35,8 +35,7 @@
 	1. [デザインパターン（※）](./development/design_pattern/README.md)
 	1. [ソフトウェアアーキテクチャ（※）](./development/software_architecture/README.md)
 	1. [マネジメント](./development/management/README.md)
-
-- [チェックシート](./checksheet.md)
+1. [チェックシート](./checksheet.md)
 
 
 ## メモ
