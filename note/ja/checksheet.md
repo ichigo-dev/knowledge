@@ -2875,6 +2875,7 @@
 	- [ ] [論理属性](./web_development/html/_/chapters/html.md#論理属性)
 - [ ] [実体参照](./web_development/html/_/chapters/html.md#実体参照)
 - [ ] [コメント](./web_development/html/_/chapters/html.md#コメント)
+- [ ] [ヘッド部](./web_development/html/_/chapters/html.md#ヘッド部)
 
 
 ## 開発全般

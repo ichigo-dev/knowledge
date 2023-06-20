@@ -1,6 +1,6 @@
 # 『HTML』ノート
 
-（最終更新： 2023-06-14）
+（最終更新： 2023-06-21）
 
 
 ## 目次
@@ -102,3 +102,5 @@
 
 
 ## ヘッド部
+
+**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `html` [タグ](#タグ)内で `head` [タグ](#タグ)で囲まれた領域がヘッド部となる。 `title` やCSSおよび[JavaScript](../../../../programming/_/chapters/programming_language.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報を含む。
