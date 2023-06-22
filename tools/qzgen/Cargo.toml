@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+chrono = "0.4.26"
 clap = { version = "4.0.29", features = ["derive"] }
-markdown = "0.3.0"
+glob = "0.3.1"

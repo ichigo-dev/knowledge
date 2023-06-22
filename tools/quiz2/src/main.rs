@@ -50,7 +50,7 @@ fn main()
     let challenge_upper = 3;
     let mut log_file = File::create
     (
-        format!("result_{}.log", Utc::now().format("%Y%m%d_%H%M%S"))
+        format!("output/result_{}.log", Utc::now().format("%Y%m%d_%H%M%S"))
     ).expect("could'nt open log file");
 
     //  ファイルを読み込む
@@ -159,11 +159,15 @@ fn main()
 
             match result.to_lowercase().trim()
             {
-                s if s.len() >= 2 &&
-                (
-                    quiz_answer.to_lowercase().starts_with(s)
-                    || quiz_answer.to_lowercase().ends_with(s)
-                ) =>
+                //  4文字以上なら入力内容を含んでいれば正解
+                //  3文字以下の場合は完答で正解
+                s if (
+                        s.len() >= 4
+                        && quiz_answer
+                            .to_lowercase()
+                            .contains(&s.to_string().to_lowercase())
+                    )
+                    || s.to_lowercase() == quiz_answer.to_lowercase() =>
                 {
                     correct_cnt += 1;
                     println!
