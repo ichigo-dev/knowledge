@@ -4,10 +4,14 @@
 
 */
 
-use std::path::PathBuf;
-use std::fs;
+use std::path::{ Path, PathBuf };
+use std::fs::{ self, File };
+use std::io::Write;
 
 use clap::Parser;
+use serde::{ Serialize, Deserialize };
+use serde_json;
+use rand::seq::SliceRandom;
 
 #[derive(Parser)]
 #[clap(author, version, about)]
@@ -48,16 +52,36 @@ fn main()
 {
     let cli = Cli::parse();
 
-    let checksheet = fs::read_to_string(cli.checksheet_path)
-        .expect("failed to read checksheet");
-    let terms = parse_checksheet(&checksheet);
+    //  Parses the checksheet and convert it to a vector of terms.
+    let mut terms = if Path::new("terms.cache").is_file()
+    {
+        load_terms_cache()
+    }
+    else
+    {
+        let checksheet = fs::read_to_string(cli.checksheet_path)
+            .expect("failed to read checksheet");
+        let terms = parse_checksheet(&checksheet);
+        create_terms_cache(&terms);
+        terms
+    };
+
+    //  Shuffles the terms.
+    terms.shuffle(&mut rand::thread_rng());
+
+    //  Generates a quiz for each term.
+    for (index, term) in terms.enumerate()
+    {
+        println!("Q-{}", index + 1);
+        quiz(term);
+    }
 }
 
 
 //------------------------------------------------------------------------------
 //  A structure representing a term.
 //------------------------------------------------------------------------------
-#[derive(Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 struct Term
 {
     //  Term.
@@ -121,7 +145,7 @@ fn parse_checksheet_line( line: &str ) -> Option<Term>
     let (link, flagment) = if parts[1].contains('#')
     {
         //  If the link contains a flagment, splits it.
-        let mut parts = parts[1].split_once('#').unwrap();
+        let parts = parts[1].split_once('#').unwrap();
         (convert_path(parts.0), parts.1)
     }
     else
@@ -130,43 +154,42 @@ fn parse_checksheet_line( line: &str ) -> Option<Term>
     };
 
     //  Extracts a specific fragment from the note.
-    let content = fs::read_to_string(link).unwrap_or("".to_string());
+    let content = fs::read_to_string(link.clone()).unwrap_or("".to_string());
     let content = if flagment.is_empty()
     {
         content
     }
     else
     {
-        //  Splits sections by lines startnig with `#`.
-        let mut sections = Vec::new();
-        let mut start = 0;
+        //  Extracts a section from the note.
+        let mut section = String::new();
         let mut is_in_section = false;
-        for (index, line) in content.lines().enumerate()
+        for line in content.lines()
         {
-            if line.starts_with("#")
+            if is_in_section
             {
-                if is_in_section
+                if line.starts_with("#")
                 {
-                    let section = &content[start..index];
-                    sections.push(section.trim());
-                    is_in_section = false;
+                    break;
                 }
 
-                start = index;
+                section.push_str(line);
+            }
+            else if line.to_lowercase().contains(&("# ".to_string() + flagment))
+            {
                 is_in_section = true;
             }
         }
-        println!("{:?}", sections);
 
-        "".to_string()
+        section
     };
 
     Some(Term
     {
-        term: String::new(),
-        link: String::new(),
-        flagment: String::new(),
-        content: String::new(),
+        term: term.to_string(),
+        link: link,
+        flagment: flagment.to_string(),
+        content: content,
     })
 }
 
@@ -179,4 +202,31 @@ fn convert_path( path: &str ) -> String
     let mut note_path = PathBuf::from(cli.note_path.clone());
     note_path.push(path);
     note_path.into_os_string().into_string().unwrap_or("".to_string())
+}
+
+//------------------------------------------------------------------------------
+//  Creates a cache file for each term.
+//------------------------------------------------------------------------------
+fn create_terms_cache( terms: &[Term] )
+{
+    let json_string = serde_json::to_string(terms).unwrap();
+    let mut cache_file = File::create("terms.cache").unwrap();
+    let _ = cache_file.write_all(json_string.as_bytes()).unwrap();
+}
+
+//------------------------------------------------------------------------------
+//  Load a cache file for each term.
+//------------------------------------------------------------------------------
+fn load_terms_cache() -> Vec<Term>
+{
+    let content = fs::read_to_string("terms.cache").unwrap();
+    serde_json::from_str(&content).unwrap()
+}
+
+//------------------------------------------------------------------------------
+//  Generates a quiz for a term.
+//------------------------------------------------------------------------------
+fn quiz( term: Term )
+{
+    println!("{}");
 }
