@@ -415,7 +415,7 @@ fn generate_quiz( term: &Term ) -> String
     //  Masks the term and alias.
     content = content.replace(['*', '`'], "");
     content = content.replace(target, replace);
-    let re = Regex::new(r"\(([^\)]*)\)|（([^）]*)）").unwrap();
+    let re = Regex::new(r"(\w+)\s*[\(（](\w+)[\)）]").unwrap();
     for cap in re.captures_iter(&target)
     {
         let mut alias = String::new();
