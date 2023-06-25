@@ -471,16 +471,18 @@ fn print_block( block: Block )
         },
         Block::Blockquote(v) =>
         {
+            println!("\n");
             for block in v
             {
                 print_block(block);
             }
+            println!("\n");
         },
         Block::CodeBlock(s1, s2) =>
         {
             outputln!
             (
-                "\n=====\n{}{}{}{}\n=====\n",
+                "\n{}{}{}{}\n",
                 color::Bg(color::LightBlack),
                 s1.unwrap_or("".to_string()),
                 s2,
@@ -607,8 +609,13 @@ fn quit_quiz( result: &Result )
 {
     if result.number_of_quiz > 0
     {
-        outputln!("{}", result);
+        outputln!("\n{}", result);
     }
+
+    //  Waits for the user input.
+    println!("Press any key to quit...");
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).unwrap();
     std::process::exit(0);
 }
 
