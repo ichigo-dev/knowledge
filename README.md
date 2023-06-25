@@ -5,16 +5,10 @@
 
 ## Questinos generation tool
 
-When you execute the command below, questions on the checksheet will appear randomly.
+When you execute the command below, quizes on the checksheet will appear randomly.
 
 ```sh
-$ ./quiz
-```
-
-or
-
-```sh
-$ ./quiz2
+$ ./quizgen
 ```
 
 

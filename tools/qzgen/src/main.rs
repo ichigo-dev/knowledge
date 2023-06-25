@@ -98,7 +98,14 @@ fn main()
     for term in terms
     {
         result.number_of_quiz += 1;
-        output!("Q-{}\n\n", result.number_of_quiz);
+        output!
+        (
+            "{}{} Q-{} {}\n\n",
+            color::Bg(color::Blue),
+            color::Fg(color::Black),
+            result.number_of_quiz,
+            style::Reset
+        );
         quiz(&term, &mut result);
         output!("\n\n");
     }
@@ -119,12 +126,30 @@ impl fmt::Display for Result
 {
     fn fmt( &self, f: &mut fmt::Formatter<'_> ) -> fmt::Result
     {
+        let mut incorrect_terms = String::new();
+        for term in &self.incorrect_terms
+        {
+            incorrect_terms.push_str(&format!
+            (
+                "\n* {}: {}",
+                term.term,
+                term.link
+            ));
+        }
+
         write!
         (
             f,
-            "Result: {}/{} ({}%)",
+            "{}{}Result: {}/{} ({}%){}\n{}{}{}{}",
+            style::Bold,
+            color::Fg(color::Green),
             self.correct, self.number_of_quiz,
-            self.correct as f32 / self.number_of_quiz as f32 * 100.0
+            self.correct as f32 / self.number_of_quiz as f32 * 100.0,
+            style::Reset,
+            style::Bold,
+            color::Fg(color::Red),
+            incorrect_terms,
+            style::Reset
         )
     }
 }
@@ -295,9 +320,18 @@ fn quiz( term: &Term, result: &mut Result )
                 hint_cnt += 1;
                 if hint_cnt == term.term.chars().count()
                 {
+                    outputln!("No more hints.");
+                    outputln!
+                    (
+                        "{}Answer: {}{}",
+                        color::Fg(color::Red),
+                        term.term,
+                        style::Reset
+                    );
                     return;
                 }
 
+                output!("{}", color::Fg(color::Yellow));
                 for (i, char) in term.term.chars().enumerate()
                 {
                     if i < hint_cnt
@@ -309,12 +343,18 @@ fn quiz( term: &Term, result: &mut Result )
                         output!("_");
                     }
                 }
-                output!("\n");
+                output!("{}\n", style::Reset);
             },
             s if s == "s".to_string() =>
             {
                 outputln!("Skip this quiz.");
-                outputln!("Answer: {}", term.term);
+                outputln!
+                (
+                    "{}Answer: {}{}",
+                    color::Fg(color::Red),
+                    term.term,
+                    style::Reset
+                );
                 result.number_of_quiz -= 1;
                 return;
             },
@@ -331,7 +371,13 @@ fn quiz( term: &Term, result: &mut Result )
                     || lower_s.len() >= 5 && lower_term.contains(&lower_s)
                 {
                     outputln!("Correct!");
-                    outputln!("Answer: {}", term.term);
+                    outputln!
+                    (
+                        "{}Answer: {}{}",
+                        color::Fg(color::Green),
+                        term.term,
+                        style::Reset
+                    );
                     result.correct += 1;
                     return;
                 }
@@ -341,7 +387,13 @@ fn quiz( term: &Term, result: &mut Result )
                     if retry_cnt >= max_retry_cnt
                     {
                         outputln!("Failed...");
-                        outputln!("Answer: {}", term.term);
+                        outputln!
+                        (
+                            "{}Answer: {}{}",
+                            color::Fg(color::Red),
+                            term.term,
+                            style::Reset
+                        );
                         result.incorrect_terms.push(term.clone());
                         return;
                     }
@@ -358,9 +410,10 @@ fn generate_quiz( term: &Term ) -> String
 {
     let mut content = term.content.clone();
     let target = &term.term;
-    let replace = r" [xxxxx] ";
+    let replace = &format!("<xxxxx>");
 
     //  Masks the term and alias.
+    content = content.replace(['*', '`'], "");
     content = content.replace(target, replace);
     let re = Regex::new(r"\(([^\)]*)\)|（([^）]*)）").unwrap();
     for cap in re.captures_iter(&target)
@@ -423,13 +476,14 @@ fn print_block( block: Block )
                 print_block(block);
             }
         },
-        Block::CodeBlock(_, s) =>
+        Block::CodeBlock(s1, s2) =>
         {
             outputln!
             (
-                "\n=====\n{}{}{}\n=====\n",
+                "\n=====\n{}{}{}{}\n=====\n",
                 color::Bg(color::LightBlack),
-                s,
+                s1.unwrap_or("".to_string()),
+                s2,
                 style::Reset
             );
         },
