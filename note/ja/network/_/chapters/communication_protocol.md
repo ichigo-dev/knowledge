@@ -1,6 +1,6 @@
 # 『通信プロトコル』ノート
 
-（最終更新： 2023-04-25）
+（最終更新： 2023-06-25）
 
 
 ## 目次
@@ -26,6 +26,8 @@
 TCP/IPは「実装すること」を念頭に作業が進められ、その方針から素早く[プロトコル](./network_architecture.md#プロトコル)を完成させることができた。そのため、[ISO](./network_architecture.md#iso)の[OSI](./network_architecture.md#osi基本参照モデル)よりも先に動作する[プロトコル](./network_architecture.md#プロトコル)を作り上げることができ、世の中に普及していくこととなった。
 
 TCP/IPでは、[インターネット層](#インターネット層)と[トランスポート層](#トランスポート層)が[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)に組み込まれていることを想定しており、その上で[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)が[インターネット](./network.md#インターネット)に接続されているような構成となっている。
+
+![TCP/IP](../assets/images/tcpip.png)
 
 ### プロトコルスイート
 
