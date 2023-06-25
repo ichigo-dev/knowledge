@@ -8,7 +8,7 @@
 When you execute the command below, quizes on the checksheet will appear randomly.
 
 ```sh
-$ ./quizgen
+$ ./qzgen
 ```
 
 
