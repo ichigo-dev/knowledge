@@ -2035,6 +2035,7 @@
 - [ ] [ネットワークアーキテクチャ](./network/_/chapters/network_architecture.md#ネットワークアーキテクチャ)
 	- [ ] [レイヤ（層）](./network/_/chapters/network_architecture.md#レイヤ)
 	- [ ] [プロトコル](./network/_/chapters/network_architecture.md#プロトコル)
+	- [ ] [TLV(Type-Length-Value)](./network/_/chapters/network_architecture.md#TLV)
 	- [ ] [インタフェース](./network/_/chapters/network_architecture.md#インタフェース)
 - [ ] [OSI基本参照モデル(OSI: Open Systems Interconnection)](./network/_/chapters/network_architecture.md#osi基本参照モデル)
 	- [ ] [ISO（国際標準化機構: International Organization for Standardization）](./network/_/chapters/network_architecture.md#iso)
