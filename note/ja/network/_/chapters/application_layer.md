@@ -1,6 +1,6 @@
 # 『アプリケーション層』ノート
 
-（最終更新： 2023-06-07）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -12,7 +12,7 @@
 	1. [FTP](#ftp)
 1. [電子メール](#電子メール)
 	1. [MIME](#mime)
-	1. [SMTP](#smpt)
+	1. [SMTP](#smtp)
 	1. [POP before SMTP](#pop-before-smtp)
 	1. [SMTP認証](#smtp認証)
 	1. [SPF](#spf)

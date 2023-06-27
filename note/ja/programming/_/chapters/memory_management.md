@@ -32,7 +32,7 @@
 
 ### ヒープ領域の確保と解放
 
-[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納された[変数](./variable.md#変数)は、[関数](./function.md#関数)の実行が完了すると自動的に解放されるが、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納したデータは別の手段により解放する必要がある。[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)のデータを解放する手段は[プログラミング言語](#プログラミング言語)によって異なる。[C言語](./programming_language.md#c言語)や[C++](./programming_language.md#c)では、[プログラマ](#プログラマ)が明示的に[ソースコード](#ソースコード)中で[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の確保・解放を宣言する必要があり、その他のほとんどの[プログラミング言語](#プログラミング言語)では[ガベージコレクション](#ガベージコレクション)を用いる。また、[Rust](./programming_language.md#rust)では[ガベージコレクション](#ガベージコレクション)を用いずに[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)の解放に関する一定のルールを設けることで、[プログラマ](#プログラマ)が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する責任を負わなくてよいようにしている。
+[スタック領域](../../../computer/hardware/_/chapters/memory.md#スタック領域)に格納された[変数](./variable.md#変数)は、[関数](./function.md#関数)の実行が完了すると自動的に解放されるが、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)に格納したデータは別の手段により解放する必要がある。[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)のデータを解放する手段は[プログラミング言語](./programming.md#プログラミング言語)によって異なる。[C言語](./programming_language.md#c言語)や[C++](./programming_language.md#c)では、[プログラマ](./programming.md#プログラマ)が明示的に[ソースコード](./programming.md#ソースコード)中で[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の確保・解放を宣言する必要があり、その他のほとんどの[プログラミング言語](./programming.md#プログラミング言語)では[ガベージコレクション](#ガベージコレクション)を用いる。また、[Rust](./programming_language.md#rust)では[ガベージコレクション](#ガベージコレクション)を用いずに[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)の解放に関する一定のルールを設けることで、[プログラマ](./programming.md#プログラマ)が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理に関する責任を負わなくてよいようにしている。
 
 ### メモリリーク
 
@@ -50,7 +50,7 @@
 
 **ガベージコレクション**（**GC**）は、[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)のデータを定期的に確認し、不要になったデータを解放する[プログラム](./programming.md#プログラム)。ガベージコレクションを用いる場合、[ソースコード](./programming.md#ソースコード)中で[ヒープ領域](../../../computer/hardware/_/chapters/memory.md#ヒープ領域)の解放を明示する必要はない。
 
-[メモリリーク](#メモリリーク)や[ダブルフリー](#ダブルフリー)、[ダングリングポインタ](#ダングリングポインタ)といった[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)に関する[バグ](#バグ)を回避するこおとができる。ただし、[プログラマ](#プログラマ)自身が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理をする[プログラミング言語](#プログラミング言語)に比べてパフォーマンスは低く、[プログラム](./programming.md#プログラム)の実行に関係のない[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)（ガベージコレクション）を動作させる必要があるというデメリットがある。また、ガベージコレクションが動くタイミングで[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)の動作が遅くなる可能性がある。
+[メモリリーク](#メモリリーク)や[ダブルフリー](#ダブルフリー)、[ダングリングポインタ](#ダングリングポインタ)といった[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)に関する[バグ](./programming.md#バグ)を回避するこおとができる。ただし、[プログラマ](./programming.md#プログラマ)自身が[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)管理をする[プログラミング言語](./programming.md#プログラミング言語)に比べてパフォーマンスは低く、[プログラム](./programming.md#プログラム)の実行に関係のない[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)（ガベージコレクション）を動作させる必要があるというデメリットがある。また、ガベージコレクションが動くタイミングで[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)の動作が遅くなる可能性がある。
 
 ### アロケート
 

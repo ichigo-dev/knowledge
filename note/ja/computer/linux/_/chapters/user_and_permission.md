@@ -345,7 +345,7 @@ chmod [OPTION]... --reference=RFILE FILE...
 $ chmod 650 filename
 ```
 
-[所有者](#所有者)に[書き込み権限](#権限)を与える場合、次のような[コマンド](#コマンド)を実行する。
+[所有者](#所有者)に[書き込み権限](#権限)を与える場合、次のような[コマンド](./basic_command.md#コマンド)を実行する。
 
 ```sh
 $ chmod u+w filename

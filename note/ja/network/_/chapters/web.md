@@ -1,6 +1,6 @@
 # 『Web』ノート
 
-（最終更新： 2023-05-21）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -40,7 +40,7 @@
 	1. [URIフラグメント](#uriフラグメント)
 	1. [リソース](#リソース)
 	1. [アドレス可能性](#アドレス可能性)
-	1. [クールURI](#クールrui)
+	1. [クールURI](#クールuri)
 	1. [リダイレクト](#リダイレクト)
 1. [HTML](#html)
 1. [HTTPにおける認証](#httpにおける認証)
@@ -96,7 +96,7 @@
 
 1993年にイリノイ大学の**NCSA**（National Center for Supercomputing Application: 米国立スーパーコンピュータ応用研究所）が公開した**Mosaic**という[ブラウザ](#webブラウザ)は、それまでの[ブラウザ](#webブラウザ)がテキストのみを扱っていたのに対して、画像をインライン表示できるという機能を備えていた。
 
-様々な高機能[ブラウザ](#webブラウザ)が登場すると[Web](#web)は急速に普及し、[インターネット](./network.md#インターネット)の[標準化](./communication_protocol.md#標準化の流れ)を行う[IETF](./communication_protocol.md#ietf)の[RFC](./network/_/chapters/communication_protocol.md#rfc)の仕様策定が追いつかなくなった。そこで、1994年にBerners-Leeが中心となって[W3C](#w3c)を設立し、[IETF](./communication_protocol.md#ietf)に代わって[Web](#web)の[標準化](./communication_protocol.md#標準化の流れ)を進めた。
+様々な高機能[ブラウザ](#webブラウザ)が登場すると[Web](#web)は急速に普及し、[インターネット](./network.md#インターネット)の[標準化](./communication_protocol.md#標準化の流れ)を行う[IETF](./communication_protocol.md#ietf)の[RFC](./communication_protocol.md#rfc)の仕様策定が追いつかなくなった。そこで、1994年にBerners-Leeが中心となって[W3C](#w3c)を設立し、[IETF](./communication_protocol.md#ietf)に代わって[Web](#web)の[標準化](./communication_protocol.md#標準化の流れ)を進めた。
 
 
 ## ハイパーメディア

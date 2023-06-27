@@ -1,6 +1,6 @@
 # 『プログラミング言語の種類』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -16,8 +16,8 @@
 1. [PHP](#php)
 1. [JavaScript](#javascript)
 	1. [TypeScript](#typescript)
-1. [Rust](#Rust)
-1. [Go](#Go)
+1. [Rust](#rust)
+1. [Go](#go)
 
 
 ## C言語

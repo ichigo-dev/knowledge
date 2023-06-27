@@ -1,6 +1,6 @@
 # 『Git』ノート
 
-（最終更新： 2023-05-12）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -55,7 +55,7 @@
 
 ## Gitのインストール
 
-[Git](#git)が既に自身の環境にインストールされているかを確認するには、[ターミナル](../../../../computer/linux/_/chapters/shell_and_terminal.md#ターミナル)[ソフトウェア](../../../../computer/software/_/chapters/software.md応用ソフトウェア)（Macのターミナル、Windowsのコマンドプロンプト等）を起動し、次の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[Git](#git)が既に自身の環境にインストールされているかを確認するには、[ターミナル](../../../../computer/linux/_/chapters/shell_and_terminal.md#ターミナル)[ソフトウェア](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)（Macのターミナル、Windowsのコマンドプロンプト等）を起動し、次の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
 
 ```sh
 $ git --version

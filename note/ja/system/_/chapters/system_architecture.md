@@ -1,6 +1,6 @@
 # 『システム構成』ノート
 
-（最終更新： 2023-05-22）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -49,7 +49,7 @@
 
 ## 単一障害点
 
-**単一障害点**(**SPOF**: Single Point Of Failure)は、[システム](./system.md#システム)を構成する要素のうちそこが停止すると[システム](./system.md#システム)全体が停止してしまう部分。[可用性](#可用性)の高い[システム](./system.md#システム)を構成するには、個々の構成要素を[冗長化](#冗長化)して[フェールオーバ](./reliability_design.md#フェールオーバ)の機構を用意しておくなど、単一障害点を減らすことが重要となる。
+**単一障害点**(**SPOF**: Single Point Of Failure)は、[システム](./system.md#システム)を構成する要素のうちそこが停止すると[システム](./system.md#システム)全体が停止してしまう部分。[可用性](./system_performance_evaluation.md#可用性)の高い[システム](./system.md#システム)を構成するには、個々の構成要素を[冗長化](#冗長化)して[フェールオーバ](./reliability_design.md#フェールオーバ)の機構を用意しておくなど、単一障害点を減らすことが重要となる。
 
 
 ## TSS
@@ -103,11 +103,11 @@
 
 ### 密結合マルチプロセッサシステム
 
-**密結合マルチプロセッサシステム**(**TCMP**: Tightly Coupled Multiprocessor)は、[主記憶](../../hardware/_/chapters/hardware.md#主記憶装置)を共有しながら1つの[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって制御されるような構成。1つの[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)パッケージに複数の独立した[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)コアが搭載されている**マルチコアプロセッサ**は代表的なTCMPのひとつ。
+**密結合マルチプロセッサシステム**(**TCMP**: Tightly Coupled Multiprocessor)は、[主記憶](../../../computer/hardware/_/chapters/hardware.md#主記憶装置)を共有しながら1つの[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって制御されるような構成。1つの[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)パッケージに複数の独立した[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)コアが搭載されている**マルチコアプロセッサ**は代表的なTCMPのひとつ。
 
 ### 疎結合マルチプロセッサシステム
 
-**疎結合マルチプロセッサシステム**(**LCMP**: Loosely Coupled Multiprocessor)または**クラスタシステム**は、複数の[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)がそれぞれの[主記憶装置](../../hardware/_/chapters/hardware.md#主記憶装置)を持ち、別々の[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって制御されるような構成。多くの場合、単体で完結して動作する独立した複数の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を、通信インタフェースを介して連動させて全体をひとつの[システム](./system.md#システム)とする構成となっている。
+**疎結合マルチプロセッサシステム**(**LCMP**: Loosely Coupled Multiprocessor)または**クラスタシステム**は、複数の[プロセッサ](../../../computer/hardware/_/chapters/processor.md#プロセッサ)がそれぞれの[主記憶装置](../../../computer/hardware/_/chapters/hardware.md#主記憶装置)を持ち、別々の[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)によって制御されるような構成。多くの場合、単体で完結して動作する独立した複数の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)を、通信インタフェースを介して連動させて全体をひとつの[システム](./system.md#システム)とする構成となっている。
 
 ### クラスタコンピューティング
 
@@ -164,12 +164,12 @@
 
 ### CDN
 
-**CDN**(Content Delivery Network)は、[クラウド](#クラウド)における[エッジコンピューティング](#エッジコンピューティング)の手法のひとつで、[サーバ](./system_processing_model.md#クライアントサーバシステム)を各所に分散して配置することで、[クライアント](./system_processing_model.md#クライアントサーバシステム)に近い[サーバ](./system_processing_model.md#クライアントサーバシステム)からコンテンツを配信する仕組み。[インターネット](../../../network/_/chapters/network.md#インターネット)回線の負荷を軽減するために、動画や音声などの大容量データをCDNによって配信することが多い。
+**CDN**(Content Delivery Network)は、[クラウド](#クラウドコンピューティング)における[エッジコンピューティング](#エッジコンピューティング)の手法のひとつで、[サーバ](./system_processing_model.md#クライアントサーバシステム)を各所に分散して配置することで、[クライアント](./system_processing_model.md#クライアントサーバシステム)に近い[サーバ](./system_processing_model.md#クライアントサーバシステム)からコンテンツを配信する仕組み。[インターネット](../../../network/_/chapters/network.md#インターネット)回線の負荷を軽減するために、動画や音声などの大容量データをCDNによって配信することが多い。
 
 
 ## 仮想化技術
 
-**仮想化技術**は、仮想[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)を用いて1台の物理[サーバ](./system_processing_model.md#クライアントサーバシステム)上で複数の[仮想マシン](#仮想マシン)を走らせ、それを1台の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)として利用したり、[クラスタリング](#クラスタリング)により複数台のマシンをひとつにまとめたりする技術。[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)を使って仮想的に必要な資源を割り当てる。
+**仮想化技術**は、仮想[OS](../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)を用いて1台の物理[サーバ](./system_processing_model.md#クライアントサーバシステム)上で複数の[仮想マシン](#仮想マシン)を走らせ、それを1台の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)として利用したり、[クラスタリング](#クラスタコンピューティング)により複数台のマシンをひとつにまとめたりする技術。[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)を使って仮想的に必要な資源を割り当てる。
 
 [システム](./system.md#システム)によっては、平日は利用者数が少ないが休日は利用者数が増える、一日の中でアクセスが多い時間帯と少ない時間帯がある、といった負荷のムラがある。仮想化技術は、こういった[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)資源の無駄を減らすために生まれた。
 

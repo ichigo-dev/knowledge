@@ -1,6 +1,6 @@
 # 『システムの性能評価』ノート
 
-（最終更新： 2023-05-21）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -71,7 +71,7 @@
 
 ### ワークロード
 
-**ワークロード**は、[コンピュータ](../../../computer/_/chapters/compuser.md#コンピュータ)資源の利用状況や負荷状況。[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)利用率などで現行[システム](./system.md#システム)の測定を行い、ヒアリングなどで関係者の意見を聞くなどして見積もる。
+**ワークロード**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)資源の利用状況や負荷状況。[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)利用率などで現行[システム](./system.md#システム)の測定を行い、ヒアリングなどで関係者の意見を聞くなどして見積もる。
 
 ### サイジング
 
@@ -84,7 +84,7 @@
 
 ## RASとRASIS
 
-**RAS**(Reliability, Availability and Serviceability)、**RASIS**(Reliability, Availability, Serviceability, Integrity, Security)は[システム](#システム)の信頼性を総合的に評価する基準として用いられる概念。RASは1970年代にIBMが製品の特性を表す用語として用いたのが定着したもので、RASISは日本ではよく使われるものの海外では一般的ではない。
+**RAS**(Reliability, Availability and Serviceability)、**RASIS**(Reliability, Availability, Serviceability, Integrity, Security)は[システム](./system.md#システム)の信頼性を総合的に評価する基準として用いられる概念。RASは1970年代にIBMが製品の特性を表す用語として用いたのが定着したもので、RASISは日本ではよく使われるものの海外では一般的ではない。
 
 ### 信頼性
 

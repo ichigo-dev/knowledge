@@ -1,6 +1,6 @@
 # 『ストレージ』ノート
 
-（最終更新： 2023-05-21）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -26,7 +26,7 @@
 	1. [インベントリ](#インベントリ)
 	1. [ジョブ](#ジョブ)
 	1. [S3 Glacier Select](#s3-glacier-select)
-	1. [ボールトロック](#ボールとロック)
+	1. [ボールトロック](#ボールトロック)
 1. [Storage Gateway](#storage-gateway)
 	1. [ファイルゲートウェイ](#ファイルゲートウェイ)
 	1. [ボリュームゲートウェイ](#ボリュームゲートウェイ)
@@ -191,7 +191,7 @@ EBSは[EC2](./computing.md#ec2)と1対1で対応するサービスであり、�
 
 ## FSx
 
-**Amazon FSx**は、フルマネージドなファイルストレージで、[Windows](../../../../computer/software/_/chapters/operating_system.md#windows)向けの[Amazon FSx for Windowsファイルサーバ](#fsx-for-windows)と、ハイパフォーマンスコンピューティング向けの[Amazon FSx for Lustre](./fsx-for-lustre)がある。
+**Amazon FSx**は、フルマネージドなファイルストレージで、[Windows](../../../../computer/software/_/chapters/operating_system.md#windows)向けの[Amazon FSx for Windowsファイルサーバ](#fsx-for-windowsファイルサーバ)と、ハイパフォーマンスコンピューティング向けの[Amazon FSx for Lustre](#fsx-for-lustre)がある。
 
 ### FSx for Windowsファイルサーバ
 

@@ -22,7 +22,7 @@
 $ git diff
 ```
 
-### 差分の協調表示
+### 差分の強調表示
 
 `git diff` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `--color-words` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、差分を強調表示することができる。
 

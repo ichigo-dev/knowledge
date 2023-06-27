@@ -1,6 +1,6 @@
 # 『システムの処理形態』ノート
 
-（最終更新： 2023-05-15）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -81,7 +81,7 @@
 
 ### RPC
 
-**RPC**（**遠隔手続き呼び出し**: Remote Procedure Call）は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)によって繋がれた他の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)上の[プログラム](../../../programming/_/chapters/prgramming.md#プログラミング)を実行する仕組みで、[分散処理](#分散処理)実行の基盤となる。
+**RPC**（**遠隔手続き呼び出し**: Remote Procedure Call）は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)によって繋がれた他の[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)上の[プログラム](../../../programming/_/chapters/programming.md#プログラミング)を実行する仕組みで、[分散処理](#分散処理)実行の基盤となる。
 
 有名なRPC[システム](./system.md#システム)としては、Sun Microsystemsの**SunRPC**(ONC RPC)や**アポロ**、IBMとDECが共同開発した**DCE**(Distributed Computing Environment)がある。
 

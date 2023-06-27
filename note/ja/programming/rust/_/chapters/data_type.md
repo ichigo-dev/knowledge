@@ -1,6 +1,6 @@
 # 『データ型』ノート
 
-（最終更新： 2023-04-23）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -20,8 +20,6 @@
 1. [タプル型](#タプル型)
 1. [ポインタ型](#ポインタ型)
 	1. [参照](#参照)
-	1. [共有参照](#共有参照)
-	1. [可変参照](#可変参照)
 	1. [Box](#box)
 	1. [rawポインタ](#rawポインタ)
 1. [配列](#配列)
@@ -35,9 +33,9 @@
 
 ## Rustの型システム
 
-[Rust](./rustmd#rust)は[静的型付け言語](../../../_/chapters/programming.md#静的型付け言語)であり、[JavaScript](../../../_/chapters/programming_language.md#javascript)や[Python](../../../_/chapters/programming_language.md#python)といった[動的型付け言語](../../../_/chapters/programming.md#動的型付け言語)とは異なり、[変数](../../../_/chapters/variable.md#変数)の型が[コンパイル](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)時に確定する。[静的型付け言語](../../../_/chapters/programming.md#静的型付け言語)では、[プログラム](../../../_/chapters/programming.md#プログラム)中の[変数](../../../_/chapters/variable.md#変数)には明示的に[型](../../../_/chapters/data_type.md#型)を示しておく必要があり、[コード](../../../_/chapters/programming.md#ソースコード)が煩雑になってしまう傾向がある。また、[型](../../../_/chapters/data_type.md#型)を確定させてしまうことで、[関数](../../../_/chapters/function.md#関数)の汎用性が低下してしまう（[ダックタイピング](../../../_/chapters/object_oriented.md#ダックタイピング)ができない）というデメリットもある。
+[Rust](./rust.md#rust)は[静的型付け言語](../../../_/chapters/programming.md#静的型付け言語)であり、[JavaScript](../../../_/chapters/programming_language.md#javascript)や[Python](../../../_/chapters/programming_language.md#python)といった[動的型付け言語](../../../_/chapters/programming.md#動的型付け言語)とは異なり、[変数](../../../_/chapters/variable.md#変数)の型が[コンパイル](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)時に確定する。[静的型付け言語](../../../_/chapters/programming.md#静的型付け言語)では、[プログラム](../../../_/chapters/programming.md#プログラム)中の[変数](../../../_/chapters/variable.md#変数)には明示的に[型](../../../_/chapters/data_type.md#型)を示しておく必要があり、[コード](../../../_/chapters/programming.md#ソースコード)が煩雑になってしまう傾向がある。また、[型](../../../_/chapters/data_type.md#型)を確定させてしまうことで、[関数](../../../_/chapters/function.md#関数)の汎用性が低下してしまう（[ダックタイピング](../../../_/chapters/object_oriented.md#ダックタイピング)ができない）というデメリットもある。
 
-[Rust](#rust)ではこれらのデメリットを軽減するために、[型推論](#型推論)と[ジェネリック](#ジェネリック)という機能を提供している。
+[Rust](./rust.md#rust)ではこれらのデメリットを軽減するために、[型推論](#型推論)と[ジェネリック](#ジェネリック)という機能を提供している。
 
 ### 型推論
 
@@ -49,7 +47,7 @@
 
 [JavaScript](../../../_/chapters/programming_language.md#javascript)や[Python](../../../_/chapters/programming_language.md#python)といった[動的型付け言語](../../../_/chapters/programming.md#動的型付け言語)では、すべての[関数](../../../_/chapters/function.md#関数)が自然とこのよう動作となる。[関数](../../../_/chapters/function.md#関数)は、その[関数](../../../_/chapters/function.md#関数)が必要とする[プロパティ](../../../_/chapters/object_oriented.md#プロパティ)や[メソッド](../../../_/chapters/object_oriented.md#メソッド)を持つすべての[オブジェクト](../../../_/chapters/object_oriented.md#オブジェクト)を[引数](../../../_/chapters/function.md#引数)として取ることができる（[引数](../../../_/chapters/function.md#引数)として取りうる[オブジェクト](../../../_/chapters/object_oriented.md#オブジェクト)を明示的に制限しない）。このような性質を[ダックタイピング](../../../_/chapters/object_oriented.md#ダックタイピング)といい、これにより[プログラム](../../../_/chapters/programming.md#プログラム)が効率的になる一方で、[エラー](../../../_/chapters/programming.md#エラー)や[バグ](../../../_/chapters/programming.md#バグ)の原因ともなりうる。
 
-[Rust](#rust)ではジェネリック機構を利用することで、厳密な[コンパイル](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)時の[型](../../../_/chapters/data_type.md#型)チェックと柔軟性を両立している。
+[Rust](./rust.md#rust)ではジェネリック機構を利用することで、厳密な[コンパイル](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)時の[型](../../../_/chapters/data_type.md#型)チェックと柔軟性を両立している。
 
 
 ## 固定長数値型
