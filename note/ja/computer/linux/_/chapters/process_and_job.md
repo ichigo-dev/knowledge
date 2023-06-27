@@ -347,7 +347,7 @@ $ systemctl restart httpd
 
 ### サービスの状態確認
 
-`systemctl status` は、[systemd](#systemd)を使用して[Linux](#linux.md#linux)システム上の[サービス](#サービス)の状態を確認する[コマンド](./basic_command.md#コマンド)。
+`systemctl status` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)の状態を確認する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)の状態を表示する。
 
@@ -369,7 +369,7 @@ $ systemctl enable httpd
 
 `systemctl disable` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上で自動的に起動されるように登録された[サービス](#サービス)を解除する[コマンド](./basic_command.md#コマンド)。
 
-例えば以下の[コマンド](#コマンド)を実行すると、 `httpd` [サービス](#サービス)が次回のシステムの起動時に自動的に開始されないようにする。
+例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)が次回のシステムの起動時に自動的に開始されないようにする。
 
 ```sh
 $ systemctl disable httpd

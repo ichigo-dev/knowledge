@@ -1,6 +1,6 @@
 # 『テキスト処理と正規表現』ノート
 
-（最終更新： 2023-04-05）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -21,7 +21,7 @@
 
 ### ファイルサイズの確認
 
-`wc` は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の行数、単語数、[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)数を数える[コマンド](./basic_command.md3コマンド)。
+`wc` は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の行数、単語数、[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)数を数える[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 

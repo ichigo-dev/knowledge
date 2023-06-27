@@ -93,7 +93,7 @@ user@host:~$
 
 ### csh
 
-**csh**(C Shell)は、[BSD](./computer/software/_/chapters/operating_system.md#unix)系の[OS](../../../software/_/chapters/operating_system.md#nui)で使用されている[シェル](#シェル)で、[sh](#sh)とは異なり文法が[C言語](../../../../programming/_/chapters/programming_language.md#c言語)風となっている。
+**csh**(C Shell)は、[BSD](../../../software/_/chapters/operating_system.md#unix)系の[OS](../../../software/_/chapters/operating_system.md#nui)で使用されている[シェル](#シェル)で、[sh](#sh)とは異なり文法が[C言語](../../../../programming/_/chapters/programming_language.md#c言語)風となっている。
 
 ### tcsh
 
@@ -144,7 +144,7 @@ user@host:~$
 
 ## シェルセッション
 
-**シェルセッション**は、[ユーザ](./user_and_permission.md#ユーザ)がシェルにログインしてから[シェル](#シェル)を閉じるまでの一連の流れ。セッションが開始されると、[シェル](#シェル)は設定を読み込んで[ユーザ](./user_and_permission.md#ユーザ)に[プロンプト](#プロンプト)を返し、[コマンド](#コマンド)を入力できる状態となる。セッションは、[ユーザ](./user_and_permission.md#ユーザ)がログアウトするか、システムが再起動されると終了する。
+**シェルセッション**は、[ユーザ](./user_and_permission.md#ユーザ)がシェルにログインしてから[シェル](#シェル)を閉じるまでの一連の流れ。セッションが開始されると、[シェル](#シェル)は設定を読み込んで[ユーザ](./user_and_permission.md#ユーザ)に[プロンプト](#プロンプト)を返し、[コマンド](./basic_command.md#コマンド)を入力できる状態となる。セッションは、[ユーザ](./user_and_permission.md#ユーザ)がログアウトするか、システムが再起動されると終了する。
 
 
 ## ターミナル

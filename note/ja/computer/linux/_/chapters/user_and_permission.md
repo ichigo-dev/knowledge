@@ -1,6 +1,6 @@
 # 『ユーザと権限』ノート
 
-（最終更新： 2023-03-28）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -161,7 +161,7 @@ $ passwd foo
 
 ## グループ
 
-**グループ**は、複数の[ユーザ](#ユーザ)をひとまとめにする機能で、[アクセス権限](#権限)の設定や[ファイル](../../../software/_/chapters/file_system.md#ファイル)の[所有権](#所有権)管理などに利用される。グループを利用することで、[Linux](./linux.md#linux)上の[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)に対する[アクセス権](#権限)をまとめてコントロールすることができる。グループはシステム上で一意の**GID**によって識別される。
+**グループ**は、複数の[ユーザ](#ユーザ)をひとまとめにする機能で、[アクセス権限](#権限)の設定や[ファイル](../../../software/_/chapters/file_system.md#ファイル)の[所有権](#権限)管理などに利用される。グループを利用することで、[Linux](./linux.md#linux)上の[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)に対する[アクセス権](#権限)をまとめてコントロールすることができる。グループはシステム上で一意の**GID**によって識別される。
 
 [ユーザ](#ユーザ)は必ずひとつの[メイングループ](#メイングループ)に所属しており、任意の数の[サブグループ](#サブグループ)に所属することができる。また、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)も必ずひとつのグループに所属している。
 
@@ -293,7 +293,7 @@ $ chgrp hoge test.txt
 
 ## 権限
 
-**権限**（**パーミッション**）は、[Linux](./linux.md#linux)において[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)などのアクセス制御を行うための機能。[Linux](./linux.md3linux)の権限管理では、誰にどのような操作を許可するかを設定する。
+**権限**（**パーミッション**）は、[Linux](./linux.md#linux)において[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)などのアクセス制御を行うための機能。[Linux](./linux.md#linux)の権限管理では、誰にどのような操作を許可するかを設定する。
 
 各[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)には、以下の3つの対象に対して権限を設定できる。
 
@@ -386,7 +386,7 @@ su [OPTION]... [-] [USER [ARGUMENT...]]
 $ su
 ```
 
-また、[rootユーザ](#rootユーザ)からログアウトして `foo` [ユーザ](#ユーザ)に復帰するには、 `exit` [コマンド](#コマンド)を実行する。
+また、[rootユーザ](#rootユーザ)からログアウトして `foo` [ユーザ](#ユーザ)に復帰するには、 `exit` [コマンド](./basic_command.md#コマンド)を実行する。
 
 ### rootユーザとしてコマンド実行
 

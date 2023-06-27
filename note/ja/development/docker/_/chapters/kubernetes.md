@@ -1,6 +1,6 @@
 # 『Kubernetes』ノートkubernetes
 
-（最終更新： 2023-05-20）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -10,7 +10,6 @@
 	1. [Pod](#pod)
 	1. [Podの起動](#podの起動)
 	1. [Podの状態確認](#podの状態確認)
-	1. [Podの削除](#podの削除)
 1. [複数のPodの管理](#複数のpodの管理)
 	1. [ReplicaSetの利用](#replicasetの利用)
 	1. [ReplicaSetの状態確認](#replicasetの状態確認)

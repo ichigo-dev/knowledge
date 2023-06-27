@@ -1,6 +1,6 @@
 # 『Docker Swarm』ノート
 
-（最終更新： 2023-05-20）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -138,7 +138,7 @@ $ docker service scale <service>=<replica num>
 
 ### Docker Swarmスタックのデプロイ
 
-`docker stack deploy` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)をデプロイする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[スタック](#docker-swarm#スタック)の定義ファイルから、[サービス](#docker-swarmサービス)を生成する。
+`docker stack deploy` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)をデプロイする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[スタック](#docker-swarmスタック)の定義ファイルから、[サービス](#docker-swarmサービス)を生成する。
 
 ```sh
 $ docker stack deploy <stack> --compose-file <filename>

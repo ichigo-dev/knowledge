@@ -1,6 +1,6 @@
 # 『ネットワーク』ノート
 
-（最終更新： 2023-05-20）
+（最終更新： 2023-06-27）
 
 
 ## 目次
@@ -51,7 +51,7 @@ vethを作成すると、2つの仮想[NIC](../../../../network/_/chapters/netwo
 
 ### macvlan
 
-**macvlan**は、[Docker](./docker.md#docker)のネットワークドライバのひとつで、[コンテナ](./container.md#コンテナ)に対して[MACアドレス](../../../../network/_/chapters/address_on_network.md#macアドレス)を割り当て、[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)上の物理デバイスをシミュレートする方法。[コンテナ](./contaner.md#コンテナ)を、ホストOSと同じ[LAN](../../../../network/_/chapters/network.md#lan)[セグメント](../../../../network/_/chapters/datalink_layer.md#セグメント)に所属した、ひとつの物理機器として扱うことができる。
+**macvlan**は、[Docker](./docker.md#docker)のネットワークドライバのひとつで、[コンテナ](./container.md#コンテナ)に対して[MACアドレス](../../../../network/_/chapters/address_on_network.md#macアドレス)を割り当て、[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)上の物理デバイスをシミュレートする方法。[コンテナ](./container.md#コンテナ)を、ホストOSと同じ[LAN](../../../../network/_/chapters/network.md#lan)[セグメント](../../../../network/_/chapters/datalink_layer.md#セグメント)に所属した、ひとつの物理機器として扱うことができる。
 
 ### none
 
