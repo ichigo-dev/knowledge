@@ -36,7 +36,7 @@
 
 ### IPS
 
-**IPS**（侵入防御システム: Intrusion Prevention System）は、[IDS](ids)の機能に加えて、攻撃を防止するためのアクションを実行するための[セキュリティ](./security.md#セキュリティ)[システム](../../../_/chapters/system.md#システム)。[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)トラフィックや[システム](../../../_/chapters/system.md#システム)のログを監視し、悪意のある侵入や攻撃を検知して即座に対応を講じることで、[セキュリティ](./security.md#セキュリティ)の強化を図る。
+**IPS**（侵入防御システム: Intrusion Prevention System）は、[IDS](#ids)の機能に加えて、攻撃を防止するためのアクションを実行するための[セキュリティ](./security.md#セキュリティ)[システム](../../../_/chapters/system.md#システム)。[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)トラフィックや[システム](../../../_/chapters/system.md#システム)のログを監視し、悪意のある侵入や攻撃を検知して即座に対応を講じることで、[セキュリティ](./security.md#セキュリティ)の強化を図る。
 
 
 ## プロキシ
