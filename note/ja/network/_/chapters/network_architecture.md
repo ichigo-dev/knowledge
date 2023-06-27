@@ -67,7 +67,7 @@
 
 **プレゼンテーション層**は、[OSI基本参照モデル](#osi基本参照モデル)において、[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)が扱う情報を通信に適したデータ形式に変換したり、下位層から来たデータを上位層が処理できるデータ形式にしたりと、データフォーマットに関する責任を負う[レイヤ](#レイヤ)。
 
-例として、[コンピュータ](../../../computer/_/chapters/compuer.md#コンピュータ)内部でデータを[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上に配置する際の方式に、[ビッグエンディアン](../../../basics/information_theory/_/chapters/coding_theory.md#ビッグエンディアン)方式と[リトルエンディアン](../../../basics/information_theory/_/chapters/coding_theory.md#リトルエンディアン)方式という異なる表現方式がある。このような[コンピュータ](../../../computer/_/chapters/compuer.md#コンピュータ)内部での表現と、[ネットワーク](./network.md#ネットワーク)全体での共通表現を変換するのは、プレゼンテーション層の役割。
+例として、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部でデータを[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上に配置する際の方式に、[ビッグエンディアン](../../../basics/information_theory/_/chapters/coding_theory.md#ビッグエンディアン)方式と[リトルエンディアン](../../../basics/information_theory/_/chapters/coding_theory.md#リトルエンディアン)方式という異なる表現方式がある。このような[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部での表現と、[ネットワーク](./network.md#ネットワーク)全体での共通表現を変換するのは、プレゼンテーション層の役割。
 
 また、文字コードも同様で、[UTF-8](../../../basics/information_theory/_/chapters/character_representation.md#unicode)や[Shift_JIS](../../../basics/information_theory/_/chapters/character_representation.md#シフトjisコード)、EUP-JPなど多くの符号化形式がある。
 

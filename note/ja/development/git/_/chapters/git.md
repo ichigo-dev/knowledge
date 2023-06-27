@@ -100,9 +100,9 @@ $ git config --list
 
 ### GUIソフトウェア
 
-[Git](#git)[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)は、[ターミナル](../../../../computer/linux/_/chapters/shell_and_terminal.md#ターミナル)[ソフトウェア](../../../../computer/software/_/chapters/software.md応用ソフトウェア)上で[CLI](../../../../computer/software/_/chapters/software.md#cui)として利用できる。[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)による操作が苦手な場合は、[Git](#git)用の[GUI](../../../../computer/software/_/chapters/software.md#gui)[ソフトウェア](../../../../computer/software/_/chapters/software.md応用ソフトウェア)をインストールすることで直感的な操作が可能となる。
+[Git](#git)[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)は、[ターミナル](../../../../computer/linux/_/chapters/shell_and_terminal.md#ターミナル)[ソフトウェア](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)上で[CLI](../../../../computer/software/_/chapters/software.md#cui)として利用できる。[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)による操作が苦手な場合は、[Git](#git)用の[GUI](../../../../computer/software/_/chapters/software.md#gui)[ソフトウェア](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)をインストールすることで直感的な操作が可能となる。
 
-代表的な[Git](#git)の[GUI](../../../../computer/software/_/chapters/software.md#gui)クライアント[ソフトウェア](../../../../computer/software/_/chapters/software.md応用ソフトウェア)は以下の通り。
+代表的な[Git](#git)の[GUI](../../../../computer/software/_/chapters/software.md#gui)クライアント[ソフトウェア](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)は以下の通り。
 
 - [SourceTree](https://www.sourcetreeapp.com/)
 - [Git Fork](https://git-fork.com/)
