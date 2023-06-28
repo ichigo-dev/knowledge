@@ -2092,6 +2092,7 @@
 	- [ ] [サブネットワーク](./network/_/chapters/address_on_network.md#サブネットワーク)
 	- [ ] [サブネットマスク](./network/_/chapters/address_on_network.md#サブネットマスク)
 	- [ ] [CIDR(Classless InterDomain Routing)](./network/_/chapters/address_on_network.md#cidr)
+		- [ ] [プレフィックス長](./network/_/chapters/address_on_network.md#cidr)
 	- [ ] [VLSM(Variable Length Subnet Mask)](./network/_/chapters/address_on_network.md#vlsm)
 	- [ ] [グローバルIPアドレス](./network/_/chapters/address_on_network.md#グローバルipアドレス)
 		- [ ] [ICANN(Internet Corporation for Assigned Names and Numbers)](./network/_/chapters/address_on_network.md#グローバルipアドレス)
@@ -2107,7 +2108,7 @@
 
 - [ ] [データリンク](./network/_/chapters/datalink_layer.md#データリンク)
 	- [ ] [フレーム](./network/_/chapters/datalink_layer.md#フレーム)
-	- [ ] [セグメント](./network/_/chapters/datalink_layer.md#セグメント)
+	- [ ] [セグメント（サブネットワーク）](./network/_/chapters/datalink_layer.md#セグメント)
 	- [ ] [MTU（Maximum Transmission Unit: 最大転送単位）](./network/_/chapters/datalink_layer.md#mtu)
 	- [ ] [プリアンブル](./network/_/chapters/datalink_layer.md#イーサネットのフレームフォーマット)
 		- [ ] [SFD(Start Frame Delimiter)](./network/_/chapters/datalink_layer.md#イーサネットのフレームフォーマット)
