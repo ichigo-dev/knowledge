@@ -13,4 +13,4 @@
 
 ## 関連記事
 
-1. [GraphQL](./_/topics/graphql.md)
+- [GraphQL](./_/topics/graphql.md)

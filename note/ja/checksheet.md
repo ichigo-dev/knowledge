@@ -2190,9 +2190,10 @@
 - [ ] [TCP(Transmission Control Protocol)](./network/_/chapters/transport_layer.md#tcp)
 	- [ ] [ストリーム](./network/_/chapters/transport_layer.md#ストリーム)
 	- [ ] [スリーウェイハンドシェイク](./network/_/chapters/transport_layer.md#スリーウェイハンドシェイク)
-	- [ ] [確認応答(ACK)](./network/_/chapters/transport_layer.md#確認応答)
-	- [ ] [否定確認応答(NACK)](./network/_/chapters/transport_layer.md#否定確認応答)
+	- [ ] [確認応答(ACK: Acknowledgement field significant)](./network/_/chapters/transport_layer.md#確認応答)
+	- [ ] [否定確認応答(NACK: Negative Acknowledgement field significant)](./network/_/chapters/transport_layer.md#否定確認応答)
 	- [ ] [シーケンス番号](./network/_/chapters/transport_layer.md#シーケンス番号)
+		- [ ] [SYN(Synchronize sequence numbers)](./network/_/chapters/transport_layer.md#スリーウェイハンドシェイク)
 	- [ ] [タイムアウト](./network/_/chapters/transport_layer.md#タイムアウト)
 		- [ ] [再送タイムアウト時間](./network/_/chapters/transport_layer.md#タイムアウト)
 - [ ] [UDP(User Datagram Protocol)](./network/_/chapters/transport_layer.md#udp)
@@ -2886,8 +2887,8 @@
 
 #### Git
 
-	- [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
-		- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
+- [ ] [バージョン管理システム(VCS: Version Control System)](./development/git/_/chapters/git.md#バージョン管理システム)
+	- [ ] [集中管理方式（集中型）](./development/git/_/chapters/git.md#集中管理方式)
 		- [ ] [CVS](./development/git/_/chapters/git.md#集中管理方式)
 		- [ ] [SVN](./development/git/_/chapters/git.md#集中管理方式)
 	- [ ] [分散管理方式（分散型）](./development/git/_/chapters/git.md#分散管理方式)
