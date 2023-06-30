@@ -1,0 +1,98 @@
+//------------------------------------------------------------------------------
+//	Themes.
+//------------------------------------------------------------------------------
+.theme_light
+{
+	--color-bg: #ccc;
+	--color-fg: #000;
+}
+
+.theme_dark
+{
+	--color-bg: #222;
+	--color-fg: #fff;
+}
+
+
+//------------------------------------------------------------------------------
+//	Page base.
+//------------------------------------------------------------------------------
+html
+{
+	height: 100%;
+}
+
+body
+{
+	min-height: 100vh;
+	margin: 0;
+}
+
+
+//------------------------------------------------------------------------------
+//	Common UI components.
+//------------------------------------------------------------------------------
+.ui_panel
+{
+	background-color: var(--color-bg);
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+
+.ui_label
+{
+}
+
+.ui_toggle
+{
+}
+
+
+//------------------------------------------------------------------------------
+//	Main contents.
+//------------------------------------------------------------------------------
+.wrapper
+{
+	background-color: var(--color-bg);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.inner
+	{
+		width: 100%;
+		max-width: 600px;
+	}
+}
+
+.header
+{
+	position: relative;
+
+	.page_title
+	{
+		font-size: 32px;
+		font-wieght: bold;
+		text-align: center;
+	}
+
+	.theme_toggle
+	{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+}
+
+.panel_quiz
+{
+}
+
+.panel_answer
+{
+}
