@@ -43,21 +43,16 @@ body
 
 .header
 {
-	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
 
-	.page_title
-	{
-		font-size: var(--fs-xl);
-		font-wieght: bold;
-		text-align: center;
-	}
-
-	.theme_toggle
-	{
-		position: absolute;
-		top: var(--spacing-md);
-		right: var(--spacing-md);
-	}
+.page_title
+{
+	font-size: var(--fs-xl);
+	font-wieght: bold;
+	text-align: center;
 }
 
 .panel_quiz

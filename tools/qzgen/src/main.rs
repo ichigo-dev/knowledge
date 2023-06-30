@@ -1,5 +1,5 @@
 mod app;
-mod common;
+mod component;
 mod panel;
 mod theme;
 

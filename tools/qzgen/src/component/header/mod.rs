@@ -1,3 +1,7 @@
+mod settings_icon;
+mod settings_popup;
+
+use settings_icon::SettingsIcon;
 use crate::app::AppState;
 use crate::theme::Theme;
 use sycamore::prelude::*;
@@ -7,6 +11,7 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
 {
     let app_state = use_context::<AppState>(cx);
 
+    //  Toggle dark mode.
     let checked = create_signal(cx, false);
     let toggle_theme = |_|
     {
@@ -25,8 +30,7 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
         cx,
         header(class="header")
         {
-            h1(class="page_title") { "Quiz Generator" }
-            label(class="theme_toggle")
+            label(class="margin_right_sm")
             {
                 span(class="ui_label margin_right_sm") { "Dark Mode" }
                 input
@@ -37,6 +41,7 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
                     bind:checked=checked,
                 )
             }
+            SettingsIcon
         }
     }
 }

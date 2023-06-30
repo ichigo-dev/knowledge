@@ -1,13 +1,16 @@
 use std::default::Default;
 use std::rc::Rc;
+use std::path::PathBuf;
+
 use crate::theme::Theme;
-use crate::common::Header;
+use crate::component::Header;
 use crate::panel::{ PanelQuiz, PanelAnswer, PanelScore };
 use sycamore::prelude::*;
 
 pub struct AppState
 {
-    pub theme: RcSignal<Theme>,
+    theme: RcSignal<Theme>,
+    checksheet_path: RcSignal<PathBuf>,
 }
 
 impl AppState
@@ -21,15 +24,27 @@ impl AppState
     {
         self.theme.set(theme);
     }
+
+    pub fn checksheet_path( &self ) -> Rc<PathBuf>
+    {
+        self.checksheet_path.get()
+    }
+
+    pub fn set_checksheet_path( &self, checksheet_path: PathBuf )
+    {
+        self.checksheet_path.set(checksheet_path);
+    }
 }
 
 impl Default for AppState
 {
     fn default() -> Self
     {
+        let checksheet_path = PathBuf::from("./note/ja/checksheet.md");
         AppState
         {
             theme: create_rc_signal(Theme::default()),
+            checksheet_path: create_rc_signal(checksheet_path),
         }
     }
 }
@@ -51,6 +66,7 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
             div(class="inner")
             {
                 Header
+                h1(class="page_title") { "Quiz Generator" }
                 PanelQuiz
                 PanelAnswer
                 PanelScore

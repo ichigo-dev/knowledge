@@ -400,6 +400,22 @@
 
 
 //------------------------------------------------------------------------------
+//	Common icon.
+//------------------------------------------------------------------------------
+.ui_icon
+{
+	height: var(--fs-lg);
+	width: var(--fs-lg);
+	fill: var(--color-text-primary);
+
+	&.clickable
+	{
+		cursor: pointer;
+	}
+}
+
+
+//------------------------------------------------------------------------------
 //	Common panel.
 //------------------------------------------------------------------------------
 .ui_panel
@@ -409,6 +425,58 @@
 	border-radius: var(--radius-md);
 	background-color: var(--color-panel);
 	box-shadow: var(--box-shadow);
+}
+
+
+//------------------------------------------------------------------------------
+//	Common poup.
+//------------------------------------------------------------------------------
+.ui_popup
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 200ms;
+
+	&.show
+	{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	> div
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 80%;
+		max-width: var(--panel-sm);
+		max-height : calc(100% - var(--spacing-xl));
+		padding: var(--spacing-md);
+		border-radius: var(--radius-md);
+
+		background-color: var(--color-panel);
+		box-shadow: var(--box-shadow);
+
+		.header
+		{
+		}
+
+		.body
+		{
+		}
+
+		.footer
+		{
+		}
+	}
 }
 
 

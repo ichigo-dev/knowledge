@@ -9,3 +9,4 @@ wasm-bindgen-futures = "0.4"
 sycamore = { version = "0.8", features = ["suspense"] }
 console_log = "0.2.0"
 log = "0.4.17"
+web-sys = "0.3.64"
