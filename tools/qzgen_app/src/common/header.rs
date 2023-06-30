@@ -28,6 +28,7 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
             h1(class="page_title") { "Quiz Generator" }
             label(class="theme_toggle")
             {
+                span(class="ui_label margin_right_sm") { "Dark Mode" }
                 input
                 (
                     class="ui_toggle",
@@ -35,7 +36,6 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
                     on:change=toggle_theme,
                     bind:checked=checked,
                 )
-                span(class="ui_label") { "Dark Mode" }
             }
         }
     }

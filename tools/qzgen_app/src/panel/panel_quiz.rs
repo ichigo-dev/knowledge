@@ -6,7 +6,7 @@ pub fn PanelQuiz<G: Html>( cx: Scope ) -> View<G>
     view!
     {
         cx,
-        div(class="ui_panel panel_quiz")
+        div(class="ui_panel margin_vertical padding")
         {
             p { "panel quiz " }
         }

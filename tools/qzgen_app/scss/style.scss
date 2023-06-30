@@ -1,17 +1,5 @@
-//------------------------------------------------------------------------------
-//	Themes.
-//------------------------------------------------------------------------------
-.theme_light
-{
-	--color-bg: #ccc;
-	--color-fg: #000;
-}
-
-.theme_dark
-{
-	--color-bg: #222;
-	--color-fg: #fff;
-}
+@import "theme";
+@import "ui";
 
 
 //------------------------------------------------------------------------------
@@ -30,43 +18,26 @@ body
 
 
 //------------------------------------------------------------------------------
-//	Common UI components.
-//------------------------------------------------------------------------------
-.ui_panel
-{
-	background-color: var(--color-bg);
-	width: 100%;
-	margin: 10px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-}
-
-.ui_label
-{
-}
-
-.ui_toggle
-{
-}
-
-
-//------------------------------------------------------------------------------
 //	Main contents.
 //------------------------------------------------------------------------------
 .wrapper
 {
-	background-color: var(--color-bg);
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
+	background-color: var(--color-bg);
+	font-size: var(--fs-md);
+	color: var(--color-text-primary);
+
 	.inner
 	{
 		width: 100%;
-		max-width: 600px;
+		max-width: var(--panel-md);
+		padding: var(--spacing-md);
+		box-sizing: border-box;
 	}
 }
 
@@ -76,7 +47,7 @@ body
 
 	.page_title
 	{
-		font-size: 32px;
+		font-size: var(--fs-xl);
 		font-wieght: bold;
 		text-align: center;
 	}
@@ -84,8 +55,8 @@ body
 	.theme_toggle
 	{
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: var(--spacing-md);
+		right: var(--spacing-md);
 	}
 }
 
