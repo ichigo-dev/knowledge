@@ -1,16 +1,25 @@
 use sycamore::prelude::*;
 use crate::component::Popup;
 
-#[component]
-pub fn SettingsPopup<G: Html>( cx: Scope ) -> View<G>
+#[component(inline_props)]
+pub fn SettingsPopup<'cx, G: Html>
+(
+    cx: Scope<'cx>,
+    is_open: &'cx Signal<bool>
+) -> View<G>
 {
     view!
     {
         cx,
-        Popup(child=view!
-        {
-            cx,
-            div { "Hello" }
-        })
+        Popup
+        (
+            title="Settings",
+            child=view!
+            {
+                cx,
+                div { "Hello" }
+            },
+            is_open=is_open,
+        )
     }
 }
