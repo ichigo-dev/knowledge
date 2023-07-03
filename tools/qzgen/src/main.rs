@@ -3,8 +3,6 @@ mod component;
 mod panel;
 mod theme;
 mod language;
-mod term;
-mod api;
 
 use app::App;
 
