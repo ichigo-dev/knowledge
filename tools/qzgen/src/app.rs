@@ -1,16 +1,21 @@
 use std::default::Default;
 use std::rc::Rc;
-use std::path::PathBuf;
 
 use crate::theme::Theme;
+use crate::language::Language;
+use crate::term::Term;
 use crate::component::Header;
-use crate::panel::{ PanelQuiz, PanelAnswer, PanelScore };
+use crate::panel::{ QuizPanel, AnswerPanel, ScorePanel };
+use crate::api::GitHubApi;
+
 use sycamore::prelude::*;
+use sycamore::futures::create_resource;
 
 pub struct AppState
 {
     theme: RcSignal<Theme>,
-    checksheet_path: RcSignal<PathBuf>,
+    language: RcSignal<Language>,
+    terms: RcSignal<Vec<Term>>,
 }
 
 impl AppState
@@ -25,14 +30,24 @@ impl AppState
         self.theme.set(theme);
     }
 
-    pub fn checksheet_path( &self ) -> Rc<PathBuf>
+    pub fn language( &self ) -> Rc<Language>
     {
-        self.checksheet_path.get()
+        self.language.get()
     }
 
-    pub fn set_checksheet_path( &self, checksheet_path: PathBuf )
+    pub fn set_language( &self, language: Language )
     {
-        self.checksheet_path.set(checksheet_path);
+        self.language.set(language);
+    }
+
+    pub fn terms( &self ) -> Rc<Vec<Term>>
+    {
+        self.terms.get()
+    }
+
+    pub fn set_terms( &self, terms: Vec<Term> )
+    {
+        self.terms.set(terms);
     }
 }
 
@@ -40,11 +55,11 @@ impl Default for AppState
 {
     fn default() -> Self
     {
-        let checksheet_path = PathBuf::from("./note/ja/checksheet.md");
         AppState
         {
             theme: create_rc_signal(Theme::default()),
-            checksheet_path: create_rc_signal(checksheet_path),
+            language: create_rc_signal(Language::default()),
+            terms: create_rc_signal(Vec::new()),
         }
     }
 }
@@ -58,6 +73,24 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
         "wrapper ".to_string() + &app_state.theme().get_class_name()
     };
 
+    create_resource(cx, async move
+    {
+        let api = GitHubApi::new();
+        let checksheet_path = format!
+        (
+            "note/{}/checksheet.md",
+            app_state.language().code(),
+        );
+
+        match api.get_content(&checksheet_path).await
+        {
+            Some(s) =>
+            {
+            },
+            None => {},
+        };
+    });
+
     view!
     {
         cx,
@@ -67,9 +100,9 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
             {
                 Header
                 h1(class="page_title") { "Quiz Generator" }
-                PanelQuiz
-                PanelAnswer
-                PanelScore
+                QuizPanel
+                AnswerPanel
+                ScorePanel
             }
         }
     }

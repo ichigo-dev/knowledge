@@ -2,6 +2,124 @@
 
 
 //------------------------------------------------------------------------------
+//	Common button.
+//------------------------------------------------------------------------------
+.ui_button
+{
+	background-color: var(--color-panel);
+	color: var(--color-text-primary);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-weak);
+
+	//	Color.
+	&.primary
+	{
+		background-color: var(--color-primary);
+		color: var(--color-primary-text);
+
+		&_light
+		{
+			background-color: var(--color-primary-light);
+			color: var(--color-primary-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-primary-dark);
+			color: var(--color-primary-text);
+		}
+	}
+	&.secondary
+	{
+		background-color: var(--color-secondary);
+		color: var(--color-secondary-text);
+
+		&_light
+		{
+			background-color: var(--color-secondary-light);
+			color: var(--color-secondary-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-secondary-dark);
+			color: var(--color-secondary-text);
+		}
+	}
+	&.error
+	{
+		background-color: var(--color-error);
+		color: var(--color-error-text);
+
+		&_light
+		{
+			background-color: var(--color-error-light);
+			color: var(--color-error-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-error-dark);
+			color: var(--color-error-text);
+		}
+	}
+	&.warn
+	{
+		background-color: var(--color-warn);
+		color: var(--color-warn-text);
+
+		&_light
+		{
+			background-color: var(--color-warn-light);
+			color: var(--color-warn-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-warn-dark);
+			color: var(--color-warn-text);
+		}
+	}
+	&.info
+	{
+		background-color: var(--color-info);
+		color: var(--color-info-text);
+
+		&_light
+		{
+			background-color: var(--color-info-light);
+			color: var(--color-info-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-info-dark);
+			color: var(--color-info-text);
+		}
+	}
+	&.success
+	{
+		background-color: var(--color-success);
+		color: var(--color-success-text);
+
+		&_light
+		{
+			background-color: var(--color-success-light);
+			color: var(--color-success-text);
+		}
+		&_dark
+		{
+			background-color: var(--color-success-dark);
+			color: var(--color-success-text);
+		}
+	}
+
+	&.disabled
+	{
+		background-color: var(--color-gray-500);
+		color: var(--color-text-disabled);
+		cursor: not-allowed;
+	}
+}
+
+
+//------------------------------------------------------------------------------
 //	Common icon.
 //------------------------------------------------------------------------------
 .ui_icon
@@ -26,7 +144,7 @@
 	border: var(--border);
 	border-radius: var(--radius-md);
 	background-color: var(--color-panel);
-	box-shadow: var(--box-shadow);
+	box-shadow: var(--shadow);
 }
 
 
@@ -65,7 +183,7 @@
 		border-radius: var(--radius-md);
 
 		background-color: var(--color-panel);
-		box-shadow: var(--box-shadow);
+		box-shadow: var(--shadow);
 
 		.header
 		{
@@ -96,6 +214,36 @@
 	color: var(--color-text-secondary);
 }
 
+.ui_text
+{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: var(--border);
+	padding: var(--spacing-xs) var(--spacing-sm);
+
+	&:read-only,
+	&:disabled
+	{
+		background-color: var(--color-gray-100);
+	}
+}
+
+.ui_select
+{
+	border: var(--border);
+	padding: var(--spacing-xs) var(--spacing-sm);
+	border-radius: var(--radius-sm);
+	background-color: var(--color-panel);
+	cursor: pointer;
+
+	&:read-only,
+	&:disabled
+	{
+		background-color: var(--color-gray-100);
+	}
+}
+
 .ui_toggle
 {
 	-webkit-appearance: none;
@@ -111,7 +259,7 @@
 	overflow: hidden;
 	cursor: pointer;
 	background-color: var(--color-panel);
-	box-shadow: var(--box-shadow-inset);
+	box-shadow: var(--shadow-inset);
 	vertical-align: middle;
 	transition: all 0.2s ease;
 
@@ -126,7 +274,7 @@
 		padding-left: calc(50% - 2px);
 		border-radius: 999px;
 		background-color: var(--color-panel);
-		box-shadow: var(--box-shadow);
+		box-shadow: var(--shadow);
 		transition: all 0.2s ease;
 	}
 

@@ -1,7 +1,7 @@
-mod panel_quiz;
-mod panel_answer;
-mod panel_score;
+mod quiz_panel;
+mod answer_panel;
+mod score_panel;
 
-pub use panel_quiz::PanelQuiz;
-pub use panel_answer::PanelAnswer;
-pub use panel_score::PanelScore;
+pub use quiz_panel::QuizPanel;
+pub use answer_panel::AnswerPanel;
+pub use score_panel::ScorePanel;

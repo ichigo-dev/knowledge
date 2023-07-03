@@ -1,5 +1,13 @@
 @import "theme";
 
+//------------------------------------------------------------------------------
+//	Hide element,
+//------------------------------------------------------------------------------
+.hide
+{
+	display: none;
+}
+
 
 //------------------------------------------------------------------------------
 //	Spacing.
@@ -407,13 +415,25 @@
 	display: flex;
 
 	//	Direction.
-	&_row
+	&.row
 	{
+		display: flex;
 		flex-direction: row;
 	}
-	&_column
+	&.column
 	{
+		display: flex;
 		flex-direction: column;
+	}
+	&.row_reverse
+	{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	&.column_reverse
+	{
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
 	//	Justify.
@@ -446,5 +466,27 @@
 	&.align_stretch
 	{
 		align-items: stretch;
+	}
+
+	//	Gap.
+	&.gap_xs
+	{
+		gap: var(--spacing-xs);
+	}
+	&.gap_sm
+	{
+		gap: var(--spacing-sm);
+	}
+	&.gap_md
+	{
+		gap: var(--spacing-md);
+	}
+	&.gap_lg
+	{
+		gap: var(--spacing-lg);
+	}
+	&.gap_xl
+	{
+		gap: var(--spacing-xl);
 	}
 }
