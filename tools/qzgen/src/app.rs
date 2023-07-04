@@ -1,11 +1,12 @@
 use std::default::Default;
 use std::rc::Rc;
-use std::fs;
 
 use crate::theme::Theme;
 use crate::language::Language;
+use crate::term::Term;
 use crate::component::Header;
 use crate::panel::{ QuizPanel, AnswerPanel, ScorePanel };
+use crate::api::GitHubApi;
 
 use sycamore::prelude::*;
 use sycamore::futures::create_resource;
@@ -14,6 +15,8 @@ pub struct AppState
 {
     theme: RcSignal<Theme>,
     language: RcSignal<Language>,
+    terms: RcSignal<Vec<Term>>,
+    quiz_no: RcSignal<usize>,
 }
 
 impl AppState
@@ -37,6 +40,21 @@ impl AppState
     {
         self.language.set(language);
     }
+
+    pub fn terms( &self ) -> Rc<Vec<Term>>
+    {
+        self.terms.get()
+    }
+
+    pub fn set_terms( &self, terms: Vec<Term> )
+    {
+        self.terms.set(terms);
+    }
+
+    pub fn quiz_no( &self ) -> Rc<usize>
+    {
+        self.quiz_no.get()
+    }
 }
 
 impl Default for AppState
@@ -47,6 +65,8 @@ impl Default for AppState
         {
             theme: create_rc_signal(Theme::default()),
             language: create_rc_signal(Language::default()),
+            terms: create_rc_signal(Vec::new()),
+            quiz_no: create_rc_signal(0),
         }
     }
 }
@@ -59,6 +79,13 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
     {
         "wrapper ".to_string() + &app_state.theme().get_class_name()
     };
+
+    create_resource(cx, async move
+    {
+        let api = GitHubApi::new();
+        let terms = api.get_terms(&app_state.language().code()).await;
+        app_state.set_terms(terms);
+    });
 
     view!
     {
