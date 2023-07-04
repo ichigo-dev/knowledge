@@ -15,7 +15,7 @@ impl GitHubApi
     const API_ENDPOINT: &str = "https://api.github.com";
     const API_OWNER: &str = "ichigo-dev";
     const API_REPO: &str = "knowledge";
-    const API_TOKEN: &str = "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";
+    const API_TOKEN: &str = "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";
 
     pub fn new() -> Self
     {
@@ -65,14 +65,15 @@ impl GitHubApi
         terms
     }
 
-    pub async fn get_content( &self, path: &str ) -> String
+    pub async fn get_content( &self, lang_code: &str, path: &str ) -> String
     {
         let url = format!
         (
-            "{}/repos/{}/{}/contents/note/{}",
+            "{}/repos/{}/{}/contents/note/{}/{}",
             Self::API_ENDPOINT,
             Self::API_OWNER,
             Self::API_REPO,
+            lang_code,
             path,
         );
         let response = self.client

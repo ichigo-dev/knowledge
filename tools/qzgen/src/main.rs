@@ -10,6 +10,6 @@ use app::App;
 
 fn main()
 {
-    console_log::init_with_level(log::Level::Debug).unwrap();
+    console_log::init_with_level(log::Level::Info).unwrap();
     sycamore::render(App);
 }

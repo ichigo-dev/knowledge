@@ -1,32 +1,26 @@
-use crate::api::GitHubApi;
 use crate::app::AppState;
+use crate::term::Term;
 
 use sycamore::prelude::*;
 use sycamore::futures::create_resource;
 
 #[component]
-pub fn QuizPanel<G: Html>( cx: Scope ) -> View<G>
+pub async fn QuizPanel<G: Html>( cx: Scope<'_> ) -> View<G>
 {
     let app_state = use_context::<AppState>(cx);
+    let terms = use_context::<RcSignal<Vec<Term>>>(cx);
 
-    let quiz = create_signal(cx, "".to_string());
-    create_resource(cx, async move
-    {
-        log::info!("test");
-        let quiz_no = app_state.quiz_no();
-        let terms = app_state.terms();
-        let term = &terms[*quiz_no];
-        let path = term.path();
-        let contents = GitHubApi::new().get_content(path).await;
-        quiz.set(contents);
-    });
+    let lang_code = app_state.language().code();
+    let term = terms.get();
+    let term = term.get(0).unwrap();
+    let quiz = term.generate_quiz(&lang_code).await;
 
     view!
     {
         cx,
         div
         (
-            dangerously_set_inner_html=&quiz.get(),
+            dangerously_set_inner_html=&quiz,
             class="ui_panel margin_vertical padding",
         )
     }
