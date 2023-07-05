@@ -15,7 +15,8 @@ pub fn LanguageSelect<G: Html>( cx: Scope ) -> View<G>
     let all_languages = Language::get_all_languages();
     let select_item = create_signal(cx, all_languages);
 
-    let language = create_signal(cx, app_state.language().code().to_string());
+    let language_code = app_state.language.get().code().to_string();
+    let language = create_signal(cx, language_code);
 
     create_effect
     (
@@ -23,13 +24,7 @@ pub fn LanguageSelect<G: Html>( cx: Scope ) -> View<G>
         move ||
         {
             let new_language = Language::from(language.get().as_str());
-            app_state.set_language(new_language);
-
-            spawn_local_scoped(cx, async
-            {
-                let api = GitHubApi::new();
-                terms.set(api.get_terms(&app_state.language().code()).await);
-            });
+            app_state.language.set(new_language);
         }
     );
 

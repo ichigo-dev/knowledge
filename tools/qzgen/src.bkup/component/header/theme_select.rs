@@ -14,11 +14,11 @@ pub fn ThemeSelect<G: Html>( cx: Scope ) -> View<G>
     {
         if *checked.get() == true
         {
-            app_state.set_theme(Theme::Light);
+            app_state.theme.set(Theme::Light);
         }
         else
         {
-            app_state.set_theme(Theme::Dark);
+            app_state.theme.set(Theme::Dark);
         }
     };
 

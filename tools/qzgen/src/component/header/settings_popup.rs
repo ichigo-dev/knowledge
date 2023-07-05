@@ -1,16 +1,22 @@
+use super::HeaderState;
 use crate::component::Popup;
-use super::theme_select::ThemeSelect;
-use super::language_select::LanguageSelect;
 
 use sycamore::prelude::*;
 
-#[component(inline_props)]
-pub fn SettingsPopup<'cx, G: Html>
-(
-    cx: Scope<'cx>,
-    is_open: &'cx Signal<bool>
-) -> View<G>
+
+//------------------------------------------------------------------------------
+//  Settings popup component.
+//------------------------------------------------------------------------------
+#[component]
+pub fn SettingsPopup<'cx, G: Html>( cx: Scope<'cx> ) -> View<G>
 {
+    let header_state = use_context::<HeaderState>(cx);
+    let is_open = create_signal(cx, *header_state.settings_popup_is_open.get());
+    create_effect(cx, ||
+    {
+        header_state.settings_popup_is_open.set(*is_open.get());
+    });
+
     view!
     {
         cx,
@@ -22,8 +28,7 @@ pub fn SettingsPopup<'cx, G: Html>
                 cx,
                 div(class="flex column gap_md")
                 {
-                    ThemeSelect
-                    LanguageSelect
+                    "Hello"
                 }
             },
             is_open=is_open,

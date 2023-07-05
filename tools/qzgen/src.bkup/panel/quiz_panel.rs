@@ -10,7 +10,7 @@ pub async fn QuizPanel<G: Html>( cx: Scope<'_> ) -> View<G>
     let app_state = use_context::<AppState>(cx);
     let terms = use_context::<RcSignal<Vec<Term>>>(cx);
 
-    let lang_code = app_state.language().code();
+    let lang_code = app_state.language.get().code();
     let term = terms.get();
     let term = term.get(0).unwrap();
     let quiz = term.generate_quiz(&lang_code).await;

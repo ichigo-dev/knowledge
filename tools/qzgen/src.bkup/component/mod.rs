@@ -1,5 +1,5 @@
-mod popup;
 mod header;
+mod popup;
 
-pub use popup::Popup;
 pub use header::Header;
+pub use popup::Popup;
