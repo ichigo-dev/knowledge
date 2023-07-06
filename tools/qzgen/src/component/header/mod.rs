@@ -1,5 +1,12 @@
+/*
+
+    Application header.
+
+*/
+
 mod settings_icon;
 mod settings_popup;
+mod theme_select;
 
 use std::default::Default;
 

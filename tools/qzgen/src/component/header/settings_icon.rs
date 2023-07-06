@@ -1,11 +1,13 @@
+/*
+
+    Settings icon component.
+
+*/
+
 use sycamore::prelude::*;
 
 use super::HeaderState;
 
-
-//------------------------------------------------------------------------------
-//  Settings icon component.
-//------------------------------------------------------------------------------
 #[component]
 pub fn SettingsIcon<G: Html>( cx: Scope ) -> View<G>
 {

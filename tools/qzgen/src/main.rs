@@ -1,3 +1,9 @@
+/*
+
+    Application endpoint.
+
+*/
+
 mod app;
 mod component;
 mod theme;

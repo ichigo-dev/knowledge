@@ -1,3 +1,9 @@
+/*
+
+    Application base.
+
+*/
+
 use std::default::Default;
 
 use sycamore::prelude::*;

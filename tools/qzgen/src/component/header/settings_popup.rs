@@ -1,12 +1,15 @@
+/*
+
+    Settings popup component.
+
+*/
+
 use super::HeaderState;
+use super::theme_select::ThemeSelect;
 use crate::component::Popup;
 
 use sycamore::prelude::*;
 
-
-//------------------------------------------------------------------------------
-//  Settings popup component.
-//------------------------------------------------------------------------------
 #[component]
 pub fn SettingsPopup<'cx, G: Html>( cx: Scope<'cx> ) -> View<G>
 {
@@ -28,7 +31,7 @@ pub fn SettingsPopup<'cx, G: Html>( cx: Scope<'cx> ) -> View<G>
                 cx,
                 div(class="flex column gap_md")
                 {
-                    "Hello"
+                    ThemeSelect
                 }
             },
             is_open=is_open,
