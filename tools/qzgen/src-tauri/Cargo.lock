@@ -2830,6 +2830,7 @@ name = "qzgen"
 version = "0.0.0"
 dependencies = [
  "directories",
+ "dunce",
  "futures",
  "serde",
  "serde_json",
