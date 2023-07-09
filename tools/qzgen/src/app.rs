@@ -11,7 +11,6 @@ use sycamore::prelude::*;
 use crate::theme::Theme;
 use crate::component::Header;
 
-
 //------------------------------------------------------------------------------
 //  Application State.
 //------------------------------------------------------------------------------
@@ -52,8 +51,11 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
         cx,
         div(class=class())
         {
-            Header
-            "Hello, World"
+            div(class="inner")
+            {
+                Header
+                "Hello, World"
+            }
         }
     }
 }
