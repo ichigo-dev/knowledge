@@ -2,12 +2,21 @@ use std::env;
 use std::fs;
 
 use dotenv::dotenv;
-use sqlx::mysql::MySqlPool;
+use sqlx::mysql::MySqlConnectOptions;
+use sqlx::{ Connection, ConnectOptions };
 use regex::Regex;
+use chrono::Local;
 
 #[tokio::main]
 async fn main()
 {
+    println!("Start to update terms.");
+
+    //  Gets current time.
+    let now = Local::now();
+    let now = now.naive_local();
+    let now = now.format("%Y-%m-%d %H:%M:%S").to_string();
+
     //  Reads .env file.
     dotenv().ok();
     let note_path = env::var("NOTE_PATH")
@@ -18,26 +27,42 @@ async fn main()
     let db_user = env::var("DB_USER").expect("DB_USER is not set");
     let db_pass = env::var("DB_PASS").expect("DB_PASS is not set");
 
+    //  Connects to database.
+    println!("Connecting to database...");
+    let mut pool = MySqlConnectOptions::new()
+        .host(&db_host)
+        .port(db_port.parse().unwrap_or(3306))
+        .database(&db_name)
+        .username(&db_user)
+        .password(&db_pass)
+        .connect()
+        .await
+        .expect("failed to connect database");
+    let mut tx = pool.begin().await.expect("failed to begin transaction");
+
+    println!("Updating terms...");
     let paths = get_markdown_recursive(&note_path);
     for path in paths
     {
-        let content = fs::read_to_string(path).unwrap();
+        let content = fs::read_to_string(&path).unwrap();
         let sections = match get_sections_from_markdown(&content)
         {
             Some(s) => s,
             None => continue,
         };
 
+        println!("  {}", path);
         for section in sections
         {
             let terms = get_terms_from_section(&section);
-
             for term in terms
             {
-
+                update_term(&mut tx, &path, &term, &section).await;
             }
         }
     }
+    delete_terms(&mut tx, &now).await;
+    tx.commit().await.unwrap();
 }
 
 
@@ -142,4 +167,92 @@ fn get_terms_from_section( section: &str ) -> Vec<String>
     }
 
     terms
+}
+
+//------------------------------------------------------------------------------
+//  Updates term.
+//------------------------------------------------------------------------------
+async fn update_term
+(
+    tx: &mut sqlx::Transaction<'_, sqlx::MySql>,
+    path: &str,
+    term: &str,
+    section: &str
+)
+{
+    let exists_term = sqlx::query
+    (
+        r#"
+            SELECT
+                `term_id`
+            FROM
+                `term`
+            WHERE
+                `path` = ? AND
+                `term` = ?
+        "#
+    )
+    .bind(&path)
+    .bind(&term)
+    .fetch_one(&mut **tx)
+    .await;
+
+    if exists_term.is_ok()
+    {
+        sqlx::query
+        (
+            r#"
+                UPDATE `term`
+                SET
+                    `content` = ?,
+                    `updated_at` = NOW()
+                WHERE
+                    `path` = ? AND
+                    `term` = ?
+            "#
+        )
+        .bind(&section)
+        .bind(&path)
+        .bind(&term)
+        .execute(&mut **tx)
+        .await
+        .expect("failed to update term");
+    }
+    else
+    {
+        sqlx::query
+        (
+            r#"
+                INSERT INTO `term`
+                (`path`, `term`, `content`, `created_at`, `updated_at`)
+                VALUES
+                (?, ?, ?, NOW(), NOW())
+            "#
+        )
+        .bind(&path)
+        .bind(&term)
+        .bind(&section)
+        .execute(&mut **tx)
+        .await
+        .expect("failed to insert term");
+    }
+}
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+async fn delete_terms( tx: &mut sqlx::Transaction<'_, sqlx::MySql>, now: &str )
+{
+    sqlx::query
+    (
+        r#"
+            DELETE FROM
+                `term`
+            WHERE
+                `updated_at` < ?
+        "#
+    )
+    .bind(&now)
+    .fetch_one(&mut **tx)
+    .await
+    .expect("failed to delete terms");
 }
