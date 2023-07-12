@@ -1,24 +1,37 @@
 use std::env;
-use std::fs;
+use std::fs::{ self, File };
+use std::io::{ Write, BufReader };
 
 use dotenv::dotenv;
 use sqlx::mysql::MySqlConnectOptions;
 use sqlx::{ Connection, ConnectOptions };
 use regex::Regex;
 use chrono::Local;
+use reqwest::Client;
+use zip::ZipArchive;
 
 #[tokio::main]
 async fn main()
 {
     println!("Start to update terms.");
+    dotenv().ok();
 
     //  Gets current time.
     let now = Local::now();
     let now = now.naive_local();
     let now = now.format("%Y-%m-%d %H:%M:%S").to_string();
 
+    //  Gets repository from GitHub.
+    println!("Getting repository...");
+    let zip_file_name = env::var("ZIP_FILE_NAME")
+        .expect("ZIP_FILE_NAME is not set");
+    let repo_name = env::var("REPO_NAME")
+        .expect("REPO_NAME is not set");
+    download_repository(&zip_file_name).await;
+    unzip_file(&zip_file_name, "./").await;
+    let _ = fs::remove_file(&zip_file_name);
+
     //  Reads .env file.
-    dotenv().ok();
     let note_path = env::var("NOTE_PATH")
         .expect("NOTE_PATH is not set");
     let db_host = env::var("DB_HOST").expect("DB_HOST is not set");
@@ -63,6 +76,54 @@ async fn main()
     }
     delete_terms(&mut tx, &now).await;
     tx.commit().await.unwrap();
+    let _ = fs::remove_dir_all(&repo_name);
+}
+
+
+//------------------------------------------------------------------------------
+//  Downloads repository from GitHub.
+//------------------------------------------------------------------------------
+async fn download_repository( file_name: &str )
+{
+    let endpoint = env::var("REPO_ENDPOINT")
+        .expect("REPO_ENDPOINT is not set");
+    let client = Client::new();
+    let response = client
+        .get(&endpoint)
+        .send()
+        .await
+        .expect("failed to get repository");
+    let body = response.bytes().await.expect("failed to get body");
+    let mut out = File::create(file_name)
+        .expect("failed to create a zip file");
+    out.write_all(body.as_ref())
+        .expect("failed to write body");
+}
+
+
+//------------------------------------------------------------------------------
+//  Unzips file.
+//------------------------------------------------------------------------------
+async fn unzip_file( from_name: &str, to_name: &str )
+{
+    let file = File::open(from_name).expect("failed to open a zip file");
+    let reader = BufReader::new(file);
+    let mut zip = ZipArchive::new(reader).expect("failed to read a zip file");
+
+    for i in 0..zip.len()
+    {
+        let mut entry = zip.by_index(i).unwrap();
+        let extract_path = format!("{}/{}", to_name, entry.name());
+        if entry.is_dir()
+        {
+            fs::create_dir_all(&extract_path).unwrap();
+        }
+        else
+        {
+            let mut out = File::create(&extract_path).unwrap();
+            std::io::copy(&mut entry, &mut out).unwrap();
+        }
+    }
 }
 
 
@@ -239,6 +300,7 @@ async fn update_term
 }
 
 //------------------------------------------------------------------------------
+//  Deletes terms.
 //------------------------------------------------------------------------------
 async fn delete_terms( tx: &mut sqlx::Transaction<'_, sqlx::MySql>, now: &str )
 {
