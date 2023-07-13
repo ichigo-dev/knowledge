@@ -70,7 +70,7 @@ async fn main()
             let terms = get_terms_from_section(&section);
             for term in terms
             {
-                update_term(&mut tx, &path, &term, &section).await;
+                update_term(&mut tx, &path, &term, &section, &now).await;
             }
         }
     }
@@ -238,7 +238,8 @@ async fn update_term
     tx: &mut sqlx::Transaction<'_, sqlx::MySql>,
     path: &str,
     term: &str,
-    section: &str
+    section: &str,
+    now: &str,
 )
 {
     let exists_term = sqlx::query
@@ -266,13 +267,14 @@ async fn update_term
                 UPDATE `term`
                 SET
                     `content` = ?,
-                    `updated_at` = NOW()
+                    `updated_at` = ?
                 WHERE
                     `path` = ? AND
                     `term` = ?
             "#
         )
         .bind(&section)
+        .bind(&now)
         .bind(&path)
         .bind(&term)
         .execute(&mut **tx)
@@ -287,12 +289,14 @@ async fn update_term
                 INSERT INTO `term`
                 (`path`, `term`, `content`, `created_at`, `updated_at`)
                 VALUES
-                (?, ?, ?, NOW(), NOW())
+                (?, ?, ?, ?, ?)
             "#
         )
         .bind(&path)
         .bind(&term)
         .bind(&section)
+        .bind(&now)
+        .bind(&now)
         .execute(&mut **tx)
         .await
         .expect("failed to insert term");
@@ -314,7 +318,7 @@ async fn delete_terms( tx: &mut sqlx::Transaction<'_, sqlx::MySql>, now: &str )
         "#
     )
     .bind(&now)
-    .fetch_one(&mut **tx)
+    .execute(&mut **tx)
     .await
     .expect("failed to delete terms");
 }
