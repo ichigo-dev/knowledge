@@ -10,6 +10,8 @@ use sycamore::prelude::*;
 
 use crate::theme::Theme;
 use crate::component::Header;
+use crate::component::QuizPanel;
+
 
 //------------------------------------------------------------------------------
 //  Application State.
@@ -54,7 +56,7 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
             div(class="inner")
             {
                 Header
-                "Hello, World"
+                QuizPanel
             }
         }
     }
