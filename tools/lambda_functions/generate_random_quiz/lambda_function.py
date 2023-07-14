@@ -1,25 +1,29 @@
+import sys
+import os
+import boto3
+from botocore.exceptions import ClientError
+import base64
 import mysql.connector
 import json
- 
+
 #   RDS settings
-DB_USER = "qzgen"
-DB_PORT = 3306
-DB_PASSWORD = "Y77rZ21mHyMG9tagC^n7"
-DB_HOST = "ichigo-dev-knowledge-db.c5ecesxssz8k.ap-northeast-1.rds.amazonaws.com"
-DB_NAME = "qzgen"
+DB_HOST = os.environ['DB_HOST']
+DB_NAME = os.environ['DB_NAME']
 
 def lambda_handler(event, context):
+    secret = get_secret()
+    print("secret")
     try:
         conn = mysql.connector.connect(
             host=DB_HOST,
-            port=DB_PORT,
-            user=DB_USER,
-            password=DB_PASSWORD,
+            user=secret['username'],
+            password=secret['password'],
             database=DB_NAME)
     except Exception  as e:
         print("Fail connecting to RDS mysql instance")
         print(e)
         sys.exit()
+    print("connect")
  
     cursor = conn.cursor(dictionary=True)
     sql = "SELECT * FROM `term` ORDER BY rand() LIMIT 1"
@@ -30,5 +34,25 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
-        'body': json.dumps(result, indent=2, default=str)
+        'body': json.dumps(result, indent=2, default=str, ensure_ascii=False)
     }
+
+def get_secret():
+    secret_name = "ichigo-dev-knowledge-rds-secret"
+    region_name = "ap-northeast-1"
+
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        raise e
+
+    secret = get_secret_value_response['SecretString']
+    return json.loads(secret)
