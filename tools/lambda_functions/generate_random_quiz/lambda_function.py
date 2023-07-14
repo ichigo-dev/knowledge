@@ -12,7 +12,6 @@ DB_NAME = os.environ['DB_NAME']
 
 def lambda_handler(event, context):
     secret = get_secret()
-    print("secret")
     try:
         conn = mysql.connector.connect(
             host=DB_HOST,
@@ -23,7 +22,6 @@ def lambda_handler(event, context):
         print("Fail connecting to RDS mysql instance")
         print(e)
         sys.exit()
-    print("connect")
  
     cursor = conn.cursor(dictionary=True)
     sql = "SELECT * FROM `term` ORDER BY rand() LIMIT 1"
