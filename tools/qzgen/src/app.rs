@@ -7,10 +7,11 @@
 use std::default::Default;
 
 use sycamore::prelude::*;
+use sycamore_router::{ Route, Router, HistoryIntegration };
 
 use crate::theme::Theme;
 use crate::component::Header;
-use crate::component::QuizPanel;
+use crate::page::{ Home, Quiz, NotFound };
 
 
 //------------------------------------------------------------------------------
@@ -37,6 +38,23 @@ impl Default for AppState
 
 
 //------------------------------------------------------------------------------
+//  Application router.
+//------------------------------------------------------------------------------
+#[derive(Route)]
+enum AppRoute
+{
+    #[to("/")]
+    Home,
+
+    #[to("/quiz")]
+    Quiz,
+
+    #[not_found]
+    NotFound,
+}
+
+
+//------------------------------------------------------------------------------
 //  Application base component.
 //------------------------------------------------------------------------------
 #[component]
@@ -51,13 +69,32 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
     view!
     {
         cx,
-        div(class=class())
-        {
-            div(class="inner")
+        Router
+        (
+            integration=HistoryIntegration::new(),
+            view=move |cx, route: &ReadSignal<AppRoute>|
             {
-                Header
-                QuizPanel
+                view!
+                {
+                    cx,
+                    div(class=class())
+                    {
+                        div(class="inner")
+                        {
+                            Header
+                            div(class="flex column spacer")
+                            {
+                                (match route.get().as_ref()
+                                {
+                                    AppRoute::Home => view! { cx, Home },
+                                    AppRoute::Quiz => view! { cx, Quiz },
+                                    AppRoute::NotFound => view! { cx, NotFound },
+                                })
+                            }
+                        }
+                    }
+                }
             }
-        }
+        )
     }
 }

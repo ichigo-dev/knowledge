@@ -24,7 +24,7 @@ def lambda_handler(event, context):
         sys.exit()
  
     cursor = conn.cursor(dictionary=True)
-    sql = "SELECT * FROM `term` ORDER BY rand() LIMIT 1"
+    sql = "SELECT * FROM `term` WHERE `deleted` = 0 ORDER BY rand() LIMIT 1"
     cursor.execute(sql)
     result = cursor.fetchone()
     cursor.close()

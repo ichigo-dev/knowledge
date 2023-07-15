@@ -449,6 +449,18 @@
 	{
 		justify-content: flex-end;
 	}
+	&.justify_between
+	{
+		justify-content: space-between;
+	}
+	&.justify_around
+	{
+		justify-content: space-around;
+	}
+	&.justify_evenly
+	{
+		justify-content: space-evenly;
+	}
 
 	//	Align.
 	&.align_start
@@ -489,4 +501,9 @@
 	{
 		gap: var(--spacing-xl);
 	}
+}
+
+.spacer
+{
+	flex: 1;
 }

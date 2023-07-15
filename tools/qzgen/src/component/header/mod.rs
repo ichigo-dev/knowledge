@@ -4,6 +4,7 @@
 
 */
 
+mod home_icon;
 mod settings_icon;
 mod settings_popup;
 mod theme_select;
@@ -12,6 +13,7 @@ use std::default::Default;
 
 use sycamore::prelude::*;
 
+use home_icon::HomeIcon;
 use settings_icon::SettingsIcon;
 use settings_popup::SettingsPopup;
 
@@ -50,8 +52,9 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
     view!
     {
         cx,
-        header(class="header")
+        header(class="header margin_bottom")
         {
+            HomeIcon
             SettingsIcon
         }
 
