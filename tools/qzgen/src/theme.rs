@@ -6,6 +6,7 @@
 
 use std::default::Default;
 
+#[derive(PartialEq, Clone, Copy)]
 pub enum Theme
 {
     Light,

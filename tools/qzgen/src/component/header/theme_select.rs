@@ -15,7 +15,7 @@ pub fn ThemeSelect<G: Html>( cx: Scope ) -> View<G>
     let app_state = use_context::<AppState>(cx);
 
     //  Toggle dark mode.
-    let checked = create_signal(cx, false);
+    let checked = create_signal(cx, app_state.theme.get() == Theme::Dark.into());
     let toggle_theme = |_|
     {
         if *checked.get() == true
