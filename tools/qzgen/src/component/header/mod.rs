@@ -4,41 +4,14 @@
 
 */
 
-mod home_icon;
-mod settings_icon;
 mod settings_popup;
 mod theme_select;
 
-use std::default::Default;
-
 use sycamore::prelude::*;
 
-use home_icon::HomeIcon;
-use settings_icon::SettingsIcon;
+use crate::component::HomeIcon;
+use crate::component::SettingsIcon;
 use settings_popup::SettingsPopup;
-
-
-//------------------------------------------------------------------------------
-//  Header state.
-//------------------------------------------------------------------------------
-pub struct HeaderState
-{
-    pub settings_popup_is_open: RcSignal<bool>,
-}
-
-impl Default for HeaderState
-{
-    //--------------------------------------------------------------------------
-    //  Gets the default hedaer state.
-    //--------------------------------------------------------------------------
-    fn default() -> Self
-    {
-        Self
-        {
-            settings_popup_is_open: create_rc_signal(false),
-        }
-    }
-}
 
 
 //------------------------------------------------------------------------------
@@ -47,7 +20,7 @@ impl Default for HeaderState
 #[component]
 pub fn Header<G: Html>( cx: Scope ) -> View<G>
 {
-    let header_state = provide_context(cx, HeaderState::default());
+    let is_open = create_signal(cx, false);
 
     view!
     {
@@ -55,19 +28,11 @@ pub fn Header<G: Html>( cx: Scope ) -> View<G>
         header(class="header margin_bottom")
         {
             HomeIcon
-            SettingsIcon
+            SettingsIcon(callback=Some(Box::new(move ||
+            {
+                is_open.set(true);
+            })))
         }
-
-        //  Settings popup.
-        (
-            if *header_state.settings_popup_is_open.get()
-            {
-                view! { cx, SettingsPopup }
-            }
-            else
-            {
-                view! { cx, }
-            }
-        )
+        SettingsPopup(is_open=is_open)
     }
 }

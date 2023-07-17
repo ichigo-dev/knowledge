@@ -982,6 +982,11 @@ body {
   text-align: center;
 }
 
+.quiz_panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
 .quiz_panel .mask {
   color: var(--color-info);
   font-weight: bold;

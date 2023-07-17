@@ -67,6 +67,10 @@ body
 
 .quiz_panel
 {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+
 	.mask
 	{
 		color: var(--color-info);

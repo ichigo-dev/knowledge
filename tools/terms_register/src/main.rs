@@ -178,7 +178,7 @@ fn get_sections_from_markdown( content: &str ) -> Option<Vec<String>>
     //  Gets sections from markdown file.
     for line in content.lines()
     {
-        if line.starts_with("#")
+        if line.starts_with('#')
         {
             if section.is_empty() == false
             {
@@ -189,7 +189,11 @@ fn get_sections_from_markdown( content: &str ) -> Option<Vec<String>>
         }
         else if line.is_empty() == false
         {
-            section.push_str(&line);
+            section.push_str(&(line.to_string() + "\n"));
+        }
+        else if section.is_empty() == false
+        {
+            section.push_str("\n");
         }
     }
 
