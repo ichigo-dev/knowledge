@@ -7,11 +7,14 @@
 use std::default::Default;
 
 use sycamore::prelude::*;
+use sycamore::futures::spawn_local_scoped;
 use sycamore_router::{ Route, Router, HistoryIntegration };
 
+use crate::data::User;
 use crate::theme::Theme;
 use crate::component::Header;
 use crate::page::{ Home, Quiz, NotFound };
+use crate::functions::get_or_create_user;
 
 
 //------------------------------------------------------------------------------
@@ -20,6 +23,7 @@ use crate::page::{ Home, Quiz, NotFound };
 pub struct AppState
 {
     pub theme: RcSignal<Theme>,
+    pub user: RcSignal<Option<User>>,
 }
 
 impl Default for AppState
@@ -32,6 +36,7 @@ impl Default for AppState
         Self
         {
             theme: create_rc_signal(Theme::default()),
+            user: create_rc_signal(None),
         }
     }
 }
@@ -65,6 +70,12 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
     {
         "wrapper ".to_string() + &app_state.theme.get().class_name()
     };
+
+    spawn_local_scoped(cx, async move
+    {
+        let user = get_or_create_user().await;
+        app_state.user.set(Some(user));
+    });
 
     view!
     {

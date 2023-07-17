@@ -14,6 +14,8 @@ pub fn AnswerPopup<'cx, G: Html>
     cx: Scope<'cx>,
     is_open: &'cx Signal<bool>,
     answer: &'cx Signal<String>,
+    answer_path: &'cx Signal<String>,
+    message: &'cx Signal<View<G>>,
     callback: Box<dyn Fn() + 'cx>,
 ) -> View<G>
 {
@@ -28,8 +30,15 @@ pub fn AnswerPopup<'cx, G: Html>
                 cx,
                 p(class="margin_bottom")
                 {
+                    (*message.get())
+                }
+                p(class="margin_bottom")
+                {
                     "Answer: "
-                    (answer.get())
+                    a(href=answer_path.get(), target="_blank")
+                    {
+                        (answer.get())
+                    }
                 }
                 div(class="flex justify_center")
                 {

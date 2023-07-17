@@ -67,10 +67,19 @@ async fn main()
         println!("  {}", path);
         for section in sections
         {
-            let terms = get_terms_from_section(&section);
+            let section_title = section.0;
+            let section_content = section.1;
+            let terms = get_terms_from_section(&section_content);
             for term in terms
             {
-                update_term(&mut tx, &path, &term, &section, &now).await;
+                update_term
+                (
+                    &mut tx,
+                    &(path.to_string() + "#" + &section_title),
+                    &term,
+                    &section_content,
+                    &now
+                ).await;
             }
         }
     }
@@ -170,30 +179,36 @@ fn get_markdown_recursive( base_path: &str ) -> Vec<String>
 //------------------------------------------------------------------------------
 //  Gets section from markdown file.
 //------------------------------------------------------------------------------
-fn get_sections_from_markdown( content: &str ) -> Option<Vec<String>>
+fn get_sections_from_markdown( content: &str ) -> Option<Vec<(String, String)>>
 {
     let mut sections = Vec::new();
-    let mut section = String::new();
+    let mut section_title = String::new();
+    let mut section_content = String::new();
 
     //  Gets sections from markdown file.
     for line in content.lines()
     {
         if line.starts_with('#')
         {
-            if section.is_empty() == false
+            if section_content.is_empty() == false
             {
-                sections.push(section);
+                sections.push((section_title, section_content));
             }
 
-            section = String::new();
+            section_title = line
+                .trim_start_matches('#')
+                .trim()
+                .to_string()
+                .to_lowercase();
+            section_content = String::new();
         }
         else if line.is_empty() == false
         {
-            section.push_str(&(line.to_string() + "\n"));
+            section_content.push_str(&(line.to_string() + "\n"));
         }
-        else if section.is_empty() == false
+        else if section_content.is_empty() == false
         {
-            section.push_str("\n");
+            section_content.push_str("\n");
         }
     }
 

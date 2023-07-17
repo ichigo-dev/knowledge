@@ -9,8 +9,9 @@ mod page;
 mod app;
 mod theme;
 mod data;
+mod functions;
 
-pub use data::Term;
+pub use data::*;
 use app::App;
 
 const API_URL: &str = "https://y31vtnaik7.execute-api.ap-northeast-1.amazonaws.com";
