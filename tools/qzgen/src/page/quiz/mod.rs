@@ -15,8 +15,8 @@ use quit_popup::QuitPopup;
 use giveup_popup::GiveupPopup;
 use answer_popup::AnswerPopup;
 
-use crate::MAX_TRY_CNT;
-use crate::functions::generate_quiz;
+use crate::{ MAX_TRY_CNT, AppState, UserResult };
+use crate::functions::{ generate_quiz, create_user_result, get_or_create_user };
 
 
 //------------------------------------------------------------------------------
@@ -25,6 +25,8 @@ use crate::functions::generate_quiz;
 #[component]
 pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
 {
+    let app_state = use_context::<AppState>(cx);
+
     //  Signals.
     let quiz = create_signal(cx, String::new());
     let answer = create_signal(cx, String::new());
@@ -33,6 +35,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     let hint = create_signal(cx, String::new());
 
     //  User answer.
+    let user_result = create_signal(cx, Option::<UserResult>::None);
     let input_answer = create_signal(cx, String::new());
     let remain = create_signal(cx, MAX_TRY_CNT);
 
@@ -107,6 +110,20 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     //  Initializes quiz.
     spawn_local_scoped(cx, async move
     {
+        quiz.set("Generating user result...".to_string());
+        match app_state.user.get().as_ref()
+        {
+            Some(user) =>
+            {
+                user_result.set(Some(create_user_result(&user).await));
+            },
+            None =>
+            {
+                let user = get_or_create_user().await;
+                user_result.set(Some(create_user_result(&user).await));
+                app_state.user.set(Some(user));
+            },
+        }
         update_quiz().await;
     });
 

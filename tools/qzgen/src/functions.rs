@@ -1,7 +1,17 @@
-use crate::{ API_URL, NOTE_URL, NOTE_PATH_PREFIX, Term, User };
 use regex::{ Regex, Captures };
 use reqwest::Client;
 use pulldown_cmark::{ html, Parser, Options };
+use uuid::Uuid;
+
+use crate::{
+    API_URL,
+    NOTE_URL,
+    NOTE_PATH_PREFIX,
+    USER_CODE_KEY,
+    Term,
+    User,
+    UserResult,
+};
 
 
 //------------------------------------------------------------------------------
@@ -9,8 +19,27 @@ use pulldown_cmark::{ html, Parser, Options };
 //------------------------------------------------------------------------------
 pub async fn get_or_create_user() -> User
 {
+    //  Gets user code from local storage.
+    let local_storage = web_sys::window()
+        .unwrap()
+        .local_storage()
+        .unwrap()
+        .expect("local storage should be available");
+    let user_code = if let Ok(Some(user_code))
+        = local_storage.get_item(USER_CODE_KEY)
+    {
+        user_code
+    }
+    else
+    {
+        let user_code = Uuid::new_v4().to_string();
+        local_storage.set_item(USER_CODE_KEY, &user_code).unwrap();
+        user_code
+    };
+
+    //  Gets user information.
     let client = Client::new();
-    let url = API_URL.to_string() + "/get_or_create_user";
+    let url = API_URL.to_string() + "/get_or_create_user/" + &user_code;
     let response = client.get(url).send().await.unwrap();
     let body = response.text().await.unwrap_or("".to_string());
     let user: User = serde_json::from_str(&body).unwrap();
@@ -77,4 +106,20 @@ pub async fn generate_quiz() -> (String, String, String)
     let quiz = html_str.replace(&term.term, mask);
 
     (quiz, term.term, (NOTE_URL.to_string() + &path))
+}
+
+
+//------------------------------------------------------------------------------
+//  Creates user result.
+//------------------------------------------------------------------------------
+pub async fn create_user_result( user: &User ) -> UserResult
+{
+    let client = Client::new();
+    let url = API_URL.to_string()
+        + "/create_user_result/"
+        + &user.user_id.to_string();
+    let response = client.get(url).send().await.unwrap();
+    let body = response.text().await.unwrap_or("".to_string());
+    let user_result: UserResult = serde_json::from_str(&body).unwrap();
+    user_result
 }

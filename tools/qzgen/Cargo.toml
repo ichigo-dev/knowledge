@@ -6,8 +6,9 @@ edition = "2021"
 [dependencies]
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
 wasm-bindgen-futures = "0.4"
-web-sys = { version = "0.3.64", features = [] }
+web-sys = { version = "0.3.64", features = ["Storage"] }
 sycamore = { version = "0.8", features = ["suspense"] }
+sycamore-router = "0.8.0"
 console_log = "0.2.0"
 log = "0.4.17"
 
@@ -17,4 +18,4 @@ serde-wasm-bindgen = "0.5.0"
 serde_json = "1.0.102"
 pulldown-cmark = "0.9.3"
 regex = "1.9.1"
-sycamore-router = "0.8.0"
+uuid = { version = "1.4.1", features = ["serde", "v4", "js"] }

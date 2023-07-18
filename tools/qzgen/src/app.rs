@@ -99,7 +99,11 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
                                 {
                                     AppRoute::Home => view! { cx, Home },
                                     AppRoute::Quiz => view! { cx, Quiz },
-                                    AppRoute::NotFound => view! { cx, NotFound },
+                                    AppRoute::NotFound => view!
+                                    {
+                                        cx,
+                                        NotFound
+                                    },
                                 })
                             }
                         }
