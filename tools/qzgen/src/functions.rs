@@ -5,6 +5,7 @@ use uuid::Uuid;
 
 use crate::{
     API_URL,
+    API_KEY,
     NOTE_URL,
     NOTE_PATH_PREFIX,
     USER_CODE_KEY,
@@ -40,7 +41,12 @@ pub async fn get_or_create_user() -> User
     //  Gets user information.
     let client = Client::new();
     let url = API_URL.to_string() + "/get_or_create_user/" + &user_code;
-    let response = client.get(url).send().await.unwrap();
+    let response = client
+        .get(url)
+        .header("x-api-key", API_KEY)
+        .send()
+        .await
+        .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
     let user: User = serde_json::from_str(&body).unwrap();
     user
@@ -61,7 +67,12 @@ pub async fn generate_quiz() -> (String, String, String)
 {
     let client = Client::new();
     let url = API_URL.to_string() + "/generate_random_quiz";
-    let response = client.get(url).send().await.unwrap();
+    let response = client
+        .get(url)
+        .header("x-api-key", API_KEY)
+        .send()
+        .await
+        .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
     let term: Term = serde_json::from_str(&body).unwrap();
 
@@ -118,7 +129,12 @@ pub async fn create_user_result( user: &User ) -> UserResult
     let url = API_URL.to_string()
         + "/create_user_result/"
         + &user.user_id.to_string();
-    let response = client.get(url).send().await.unwrap();
+    let response = client
+        .get(url)
+        .header("x-api-key", API_KEY)
+        .send()
+        .await
+        .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
     let user_result: UserResult = serde_json::from_str(&body).unwrap();
     user_result

@@ -13,12 +13,15 @@ def lambda_handler(event, context):
             'body': 'Bad Request'
         }
  
+    conn.start_transaction()
     cursor = conn.cursor(dictionary=True)
     sql = "SELECT * FROM `user` WHERE `code` = '" + code + "'"
     cursor.execute(sql)
     result = cursor.fetchone()
     if result is None:
         sql = "INSERT INTO `user` (`code`) VALUES ('" + code + "')"
+        cursor.execute(sql)
+        sql = "SELECT * FROM `user` WHERE `user_id` = " + str(cursor.lastrowid)
         cursor.execute(sql)
         result = cursor.fetchone()
     cursor.close()

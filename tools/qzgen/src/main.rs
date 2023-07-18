@@ -12,9 +12,10 @@ mod data;
 mod functions;
 
 pub use data::*;
-use app::*;
+pub use app::*;
 
 const API_URL: &str = "https://y31vtnaik7.execute-api.ap-northeast-1.amazonaws.com";
+const API_KEY: &str = "xxx";
 const NOTE_URL: &str = "https://github.com/ichigo-dev/knowledge/blob/main";
 const NOTE_PATH_PREFIX: &str = "./knowledge-main";
 const MAX_TRY_CNT: usize = 3;

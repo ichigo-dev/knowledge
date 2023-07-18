@@ -10,7 +10,7 @@ def lambda_handler(event, context):
         print(e)
         return {
             'statusCode': 400,
-            'body': json.dumps('Bad Request')
+            'body': 'Bad Request'
         }
 
     conn.start_transaction()

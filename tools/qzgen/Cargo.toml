@@ -19,3 +19,4 @@ serde_json = "1.0.102"
 pulldown-cmark = "0.9.3"
 regex = "1.9.1"
 uuid = { version = "1.4.1", features = ["serde", "v4", "js"] }
+dotenv = "0.15.0"
