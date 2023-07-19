@@ -5,10 +5,8 @@ use uuid::Uuid;
 
 use crate::{
     API_URL,
-    API_KEY,
     NOTE_URL,
     NOTE_PATH_PREFIX,
-    USER_CODE_KEY,
     Term,
     User,
     UserResult,
@@ -18,7 +16,7 @@ use crate::{
 //------------------------------------------------------------------------------
 //  Gets user information (create if it doesn't exist).
 //------------------------------------------------------------------------------
-pub async fn get_or_create_user() -> User
+pub async fn get_or_create_user( api_key: &str ) -> User
 {
     //  Gets user code from local storage.
     let local_storage = web_sys::window()
@@ -27,14 +25,14 @@ pub async fn get_or_create_user() -> User
         .unwrap()
         .expect("local storage should be available");
     let user_code = if let Ok(Some(user_code))
-        = local_storage.get_item(USER_CODE_KEY)
+        = local_storage.get_item("user_code")
     {
         user_code
     }
     else
     {
         let user_code = Uuid::new_v4().to_string();
-        local_storage.set_item(USER_CODE_KEY, &user_code).unwrap();
+        local_storage.set_item("user_code", &user_code).unwrap();
         user_code
     };
 
@@ -43,7 +41,7 @@ pub async fn get_or_create_user() -> User
     let url = API_URL.to_string() + "/get_or_create_user/" + &user_code;
     let response = client
         .get(url)
-        .header("x-api-key", API_KEY)
+        .header("x-api-key", api_key)
         .send()
         .await
         .unwrap();
@@ -63,13 +61,13 @@ pub async fn get_or_create_user() -> User
 //          answer_url: String,
 //      )
 //------------------------------------------------------------------------------
-pub async fn generate_quiz() -> (String, String, String)
+pub async fn generate_quiz( api_key: &str ) -> (String, String, String)
 {
     let client = Client::new();
     let url = API_URL.to_string() + "/generate_random_quiz";
     let response = client
         .get(url)
-        .header("x-api-key", API_KEY)
+        .header("x-api-key", api_key)
         .send()
         .await
         .unwrap();
@@ -123,7 +121,7 @@ pub async fn generate_quiz() -> (String, String, String)
 //------------------------------------------------------------------------------
 //  Creates user result.
 //------------------------------------------------------------------------------
-pub async fn create_user_result( user: &User ) -> UserResult
+pub async fn create_user_result( api_key: &str, user: &User ) -> UserResult
 {
     let client = Client::new();
     let url = API_URL.to_string()
@@ -131,7 +129,7 @@ pub async fn create_user_result( user: &User ) -> UserResult
         + &user.user_id.to_string();
     let response = client
         .get(url)
-        .header("x-api-key", API_KEY)
+        .header("x-api-key", api_key)
         .send()
         .await
         .unwrap();

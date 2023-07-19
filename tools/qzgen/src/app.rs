@@ -24,6 +24,7 @@ pub struct AppState
 {
     pub theme: RcSignal<Theme>,
     pub user: RcSignal<Option<User>>,
+    pub api_key: RcSignal<String>,
 }
 
 impl Default for AppState
@@ -37,6 +38,7 @@ impl Default for AppState
         {
             theme: create_rc_signal(Theme::default()),
             user: create_rc_signal(None),
+            api_key: create_rc_signal(String::new()),
         }
     }
 }
@@ -71,9 +73,20 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
         "wrapper ".to_string() + &app_state.theme.get().class_name()
     };
 
+    //  Gets api key from local storage.
+    let local_storage = web_sys::window()
+        .unwrap()
+        .local_storage()
+        .unwrap()
+        .expect("local storage should be available");
+    if let Ok(Some(api_key)) = local_storage.get_item("api_key")
+    {
+        app_state.api_key.set(api_key);
+    }
+
     spawn_local_scoped(cx, async move
     {
-        let user = get_or_create_user().await;
+        let user = get_or_create_user(&app_state.api_key.get()).await;
         app_state.user.set(Some(user));
     });
 

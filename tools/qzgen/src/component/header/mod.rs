@@ -6,6 +6,7 @@
 
 mod settings_popup;
 mod theme_select;
+mod api_key_input;
 
 use sycamore::prelude::*;
 

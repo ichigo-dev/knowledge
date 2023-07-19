@@ -56,7 +56,9 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
 
         //  Generates next quiz.
         quiz.set("Generating quiz...".to_string());
-        let (new_quiz, new_answer, new_answer_path) = generate_quiz().await;
+        let api_key = app_state.api_key.get();
+        let (new_quiz, new_answer, new_answer_path) = generate_quiz(&api_key)
+            .await;
         quiz.set(new_quiz);
         answer.set(new_answer);
         answer_path.set(new_answer_path);
@@ -111,16 +113,23 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     spawn_local_scoped(cx, async move
     {
         quiz.set("Generating user result...".to_string());
+        let api_key = app_state.api_key.get();
         match app_state.user.get().as_ref()
         {
             Some(user) =>
             {
-                user_result.set(Some(create_user_result(&user).await));
+                user_result.set
+                (
+                    Some(create_user_result(&api_key, &user).await)
+                );
             },
             None =>
             {
-                let user = get_or_create_user().await;
-                user_result.set(Some(create_user_result(&user).await));
+                let user = get_or_create_user(&api_key).await;
+                user_result.set
+                (
+                    Some(create_user_result(&api_key, &user).await)
+                );
                 app_state.user.set(Some(user));
             },
         }

@@ -5,6 +5,7 @@
 */
 
 use super::theme_select::ThemeSelect;
+use super::api_key_input::ApiKeyInput;
 use crate::component::Popup;
 
 use sycamore::prelude::*;
@@ -28,6 +29,7 @@ pub fn SettingsPopup<'cx, G: Html>
                 div(class="flex column gap_md")
                 {
                     ThemeSelect
+                    ApiKeyInput
                 }
             },
             is_open=is_open,
