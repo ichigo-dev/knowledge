@@ -3,14 +3,7 @@ use reqwest::Client;
 use pulldown_cmark::{ html, Parser, Options };
 use uuid::Uuid;
 
-use crate::{
-    API_URL,
-    NOTE_URL,
-    NOTE_PATH_PREFIX,
-    Term,
-    User,
-    UserResult,
-};
+use crate::*;
 
 
 //------------------------------------------------------------------------------
@@ -57,11 +50,11 @@ pub async fn get_or_create_user( api_key: &str ) -> User
 //  Return:
 //      (
 //          quiz: String,
-//          answer: String,
+//          term: Term,
 //          answer_url: String,
 //      )
 //------------------------------------------------------------------------------
-pub async fn generate_quiz( api_key: &str ) -> (String, String, String)
+pub async fn generate_quiz( api_key: &str ) -> (String, Term, String)
 {
     let client = Client::new();
     let url = API_URL.to_string() + "/generate_random_quiz";
@@ -75,7 +68,7 @@ pub async fn generate_quiz( api_key: &str ) -> (String, String, String)
     let term: Term = serde_json::from_str(&body).unwrap();
 
     //  Converts markdown to HTML.
-    let content = term.content;
+    let content = term.content.clone();
     let mut options = Options::empty();
     options.insert(Options::ENABLE_TABLES);
     let parser = Parser::new_ext(&content.trim(), options);
@@ -83,7 +76,7 @@ pub async fn generate_quiz( api_key: &str ) -> (String, String, String)
     html::push_html(&mut html_str, parser);
 
     //  Replaces href link.
-    let path = term.path;
+    let path = term.path.clone();
     let path = path.replace(NOTE_PATH_PREFIX, "");
     let (path_note, _) = path
         .rsplit_once('#')
@@ -114,7 +107,7 @@ pub async fn generate_quiz( api_key: &str ) -> (String, String, String)
     let mask = "<label class=\"mask\" for=\"user_answer\">_____</label>";
     let quiz = html_str.replace(&term.term, mask);
 
-    (quiz, term.term, (NOTE_URL.to_string() + &path))
+    (quiz, term, (NOTE_URL.to_string() + &path))
 }
 
 
@@ -136,4 +129,21 @@ pub async fn create_user_result( api_key: &str, user: &User ) -> UserResult
     let body = response.text().await.unwrap_or("".to_string());
     let user_result: UserResult = serde_json::from_str(&body).unwrap();
     user_result
+}
+
+
+//------------------------------------------------------------------------------
+//  Creates user answer.
+//------------------------------------------------------------------------------
+pub async fn insert_user_answer( api_key: &str, answer: &UserAnswer )
+{
+    let client = Client::new();
+    let url = API_URL.to_string() + "/insert_user_answer/";
+    let _response = client
+        .post(url)
+        .header("x-api-key", api_key)
+        .body(serde_json::to_string(answer).unwrap())
+        .send()
+        .await
+        .unwrap();
 }

@@ -1,6 +1,6 @@
-use serde::Deserialize;
+use serde::{ Serialize, Deserialize };
 
-#[derive(Deserialize, Debug, PartialEq, Eq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
 pub struct User
 {
     pub user_id: usize,
@@ -8,7 +8,7 @@ pub struct User
     pub created_at: String,
 }
 
-#[derive(Deserialize, Debug, PartialEq, Eq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
 pub struct Term
 {
     pub term_id: usize,
@@ -19,15 +19,16 @@ pub struct Term
     pub updated_at: String,
 }
 
-#[derive(Deserialize, Debug, PartialEq, Eq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
 pub struct UserResult
 {
     pub user_result_id: usize,
     pub user_id: usize,
     pub created_at: String,
+    pub answers: Vec<UserAnswer>,
 }
 
-#[derive(Deserialize, Debug, PartialEq, Eq)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq)]
 pub struct UserAnswer
 {
     pub user_answer_id: usize,

@@ -15,8 +15,13 @@ use quit_popup::QuitPopup;
 use giveup_popup::GiveupPopup;
 use answer_popup::AnswerPopup;
 
-use crate::{ MAX_TRY_CNT, AppState, UserResult };
-use crate::functions::{ generate_quiz, create_user_result, get_or_create_user };
+use crate::{ MAX_TRY_CNT, AppState, Term, UserResult };
+use crate::functions::{
+    generate_quiz,
+    create_user_result,
+    insert_user_answer,
+    get_or_create_user,
+};
 
 
 //------------------------------------------------------------------------------
@@ -29,7 +34,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
 
     //  Signals.
     let quiz = create_signal(cx, String::new());
-    let answer = create_signal(cx, String::new());
+    let term = create_signal::<Option<Term>>(cx, None);
     let answer_path = create_signal(cx, String::new());
     let hint_len = create_signal(cx, 0);
     let hint = create_signal(cx, String::new());
@@ -57,10 +62,10 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         //  Generates next quiz.
         quiz.set("Generating quiz...".to_string());
         let api_key = app_state.api_key.get();
-        let (new_quiz, new_answer, new_answer_path) = generate_quiz(&api_key)
+        let (new_quiz, new_term, new_answer_path) = generate_quiz(&api_key)
             .await;
         quiz.set(new_quiz);
-        answer.set(new_answer);
+        term.set(Some(new_term));
         answer_path.set(new_answer_path);
     };
 
@@ -69,25 +74,28 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     {
         let len = *hint_len.get() + 1;
         let mut new_hint = String::new();
-        for (i, char) in answer.get().chars().enumerate()
+        if let Some(t) = term.get().as_ref()
         {
-            if i < len
+            for (i, char) in t.term.chars().enumerate()
             {
-                new_hint.push(char);
+                if i < len
+                {
+                    new_hint.push(char);
+                }
+                else
+                {
+                    new_hint.push('_');
+                }
+            }
+
+            if len >= t.term.chars().count()
+            {
+                new_hint.push_str(" (No more hints...)");
             }
             else
             {
-                new_hint.push('_');
+                hint_len.set(len);
             }
-        }
-
-        if len >= answer.get().chars().count()
-        {
-            new_hint.push_str(" (No more hints...)");
-        }
-        else
-        {
-            hint_len.set(len);
         }
         hint.set(new_hint);
     };
@@ -95,17 +103,20 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     //  User answer.
     let try_answer = move ||
     {
-        remain.set(*remain.get() - 1);
-        if input_answer.get().to_lowercase().trim()
-            == answer.get().to_lowercase().trim()
+        if let Some(t) = term.get().as_ref()
         {
-            answer_popup_message.set(view!{ cx, "Great!" });
-            answer_is_open.set(true);
-        }
-        else if *remain.get() <= 0
-        {
-            answer_popup_message.set(view!{ cx, "Failed..."});
-            answer_is_open.set(true);
+            remain.set(*remain.get() - 1);
+            if input_answer.get().to_lowercase().trim()
+                == t.term.to_lowercase().trim()
+            {
+                answer_popup_message.set(view!{ cx, "Great!" });
+                answer_is_open.set(true);
+            }
+            else if *remain.get() <= 0
+            {
+                answer_popup_message.set(view!{ cx, "Failed..."});
+                answer_is_open.set(true);
+            }
         }
     };
 
@@ -233,7 +244,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         AnswerPopup
         (
             is_open=answer_is_open,
-            answer=answer,
+            term=term,
             answer_path=answer_path,
             message=answer_popup_message,
             callback=Box::new(move ||
