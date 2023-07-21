@@ -15,7 +15,7 @@ use quit_popup::QuitPopup;
 use giveup_popup::GiveupPopup;
 use answer_popup::AnswerPopup;
 
-use crate::{ MAX_TRY_CNT, AppState, Term, UserResult };
+use crate::{ MAX_TRY_CNT, AppState, Term, UserResult, UserAnswer };
 use crate::functions::{
     generate_quiz,
     create_user_result,
@@ -111,11 +111,47 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
             {
                 answer_popup_message.set(view!{ cx, "Great!" });
                 answer_is_open.set(true);
+
+                if let Some(u) = user_result.get().as_ref()
+                {
+                    let api_key = app_state.api_key.get();
+                    let user_answer = UserAnswer
+                    {
+                        user_answer_id: 0,
+                        user_result_id: u.user_result_id,
+                        term_id: t.term_id,
+                        is_correct: true,
+                        created_at: "".to_string(),
+                    };
+
+                    spawn_local_scoped(cx, async move
+                    {
+                        insert_user_answer(&api_key, &user_answer).await;
+                    });
+                }
             }
             else if *remain.get() <= 0
             {
                 answer_popup_message.set(view!{ cx, "Failed..."});
                 answer_is_open.set(true);
+
+                if let Some(u) = user_result.get().as_ref()
+                {
+                    let api_key = app_state.api_key.get();
+                    let user_answer = UserAnswer
+                    {
+                        user_answer_id: 0,
+                        user_result_id: u.user_result_id,
+                        term_id: t.term_id,
+                        is_correct: false,
+                        created_at: "".to_string(),
+                    };
+
+                    spawn_local_scoped(cx, async move
+                    {
+                        insert_user_answer(&api_key, &user_answer).await;
+                    });
+                }
             }
         }
     };
