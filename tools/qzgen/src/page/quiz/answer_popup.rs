@@ -7,26 +7,18 @@
 use sycamore::prelude::*;
 
 use crate::component::Popup;
-use crate::Term;
+use crate::Quiz;
 
 #[component(inline_props)]
 pub fn AnswerPopup<'cx, G: Html>
 (
     cx: Scope<'cx>,
     is_open: &'cx Signal<bool>,
-    term: &'cx Signal<Option<Term>>,
-    answer_path: &'cx Signal<String>,
+    quiz: &'cx Signal<Quiz>,
     message: &'cx Signal<View<G>>,
     callback: Box<dyn Fn() + 'cx>,
 ) -> View<G>
 {
-    let term = term.get();
-    let answer = match term.as_ref()
-    {
-        Some(t) => t.term.clone(),
-        None => "".to_string(),
-    };
-
     view!
     {
         cx,
@@ -43,9 +35,18 @@ pub fn AnswerPopup<'cx, G: Html>
                 p(class="margin_bottom")
                 {
                     "Answer: "
-                    a(href=answer_path.get(), target="_blank")
+                    a(href=&quiz.get().answer_path)
                     {
-                        (answer)
+                        (
+                            {
+                                let q = quiz.get();
+                                view!
+                                {
+                                    cx,
+                                    (q.term.term)
+                                }
+                            }
+                        )
                     }
                 }
                 div(class="flex justify_center")

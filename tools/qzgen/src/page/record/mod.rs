@@ -1,25 +1,33 @@
 /*
 
-    Home page.
+    Record page.
 
 */
 
+mod record_list;
+
 use sycamore::prelude::*;
+use sycamore::suspense::Suspense;
+
+use record_list::RecordList;
+use crate::component::Loading;
 
 
 //------------------------------------------------------------------------------
-//  Home page component.
+//  Record page component.
 //------------------------------------------------------------------------------
 #[component]
-pub fn Home<G: Html>( cx: Scope ) -> View<G>
+pub fn Record<G: Html>( cx: Scope ) -> View<G>
 {
     view!
     {
         cx,
         div(class="padding_lg flex column align_center")
         {
-            a(href="/quiz", class="ui_button primary") { "Start Quiz" }
-            a(href="/record", class="ui_button primary") { "Record" }
+            Suspense(fallback=view! { cx, Loading })
+            {
+                RecordList
+            }
         }
     }
 }

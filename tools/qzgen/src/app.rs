@@ -5,26 +5,29 @@
 */
 
 use std::default::Default;
+use std::str::FromStr;
 
 use sycamore::prelude::*;
-use sycamore::futures::spawn_local_scoped;
+use sycamore::suspense::Suspense;
 use sycamore_router::{ Route, Router, HistoryIntegration };
 
 use crate::data::User;
 use crate::theme::Theme;
-use crate::component::Header;
-use crate::page::{ Home, Quiz, NotFound };
+use crate::component::{ Header, Loading };
+use crate::page::{ Home, Quiz, Record, NotFound };
 use crate::functions::get_or_create_user;
 
 
 //------------------------------------------------------------------------------
 //  Application State.
 //------------------------------------------------------------------------------
+#[derive(Debug)]
 pub struct AppState
 {
     pub theme: RcSignal<Theme>,
     pub user: RcSignal<Option<User>>,
     pub api_key: RcSignal<String>,
+    pub save_result: RcSignal<bool>,
 }
 
 impl Default for AppState
@@ -34,11 +37,34 @@ impl Default for AppState
     //--------------------------------------------------------------------------
     fn default() -> Self
     {
+        //  Gets state from local storage.
+        let local_storage = web_sys::window()
+            .unwrap()
+            .local_storage()
+            .unwrap()
+            .expect("local storage should be available");
+        let mut theme = Theme::default();
+        let mut save_result = true;
+        let mut api_key = String::new();
+        if let Ok(Some(t)) = local_storage.get_item("theme")
+        {
+            theme = Theme::from_str(&t).unwrap();
+        }
+        if let Ok(Some(s)) = local_storage.get_item("save_result")
+        {
+            save_result = s == "true";
+        }
+        if let Ok(Some(a)) = local_storage.get_item("api_key")
+        {
+            api_key = a;
+        }
+
         Self
         {
-            theme: create_rc_signal(Theme::default()),
+            theme: create_rc_signal(theme),
             user: create_rc_signal(None),
-            api_key: create_rc_signal(String::new()),
+            api_key: create_rc_signal(api_key),
+            save_result: create_rc_signal(save_result),
         }
     }
 }
@@ -55,6 +81,9 @@ enum AppRoute
 
     #[to("/quiz")]
     Quiz,
+
+    #[to("/record")]
+    Record,
 
     #[not_found]
     NotFound,
@@ -73,23 +102,6 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
         "wrapper ".to_string() + &app_state.theme.get().class_name()
     };
 
-    //  Gets api key from local storage.
-    let local_storage = web_sys::window()
-        .unwrap()
-        .local_storage()
-        .unwrap()
-        .expect("local storage should be available");
-    if let Ok(Some(api_key)) = local_storage.get_item("api_key")
-    {
-        app_state.api_key.set(api_key);
-    }
-
-    spawn_local_scoped(cx, async move
-    {
-        let user = get_or_create_user(&app_state.api_key.get()).await;
-        app_state.user.set(Some(user));
-    });
-
     view!
     {
         cx,
@@ -106,23 +118,50 @@ pub fn App<G: Html>( cx: Scope ) -> View<G>
                         div(class="inner")
                         {
                             Header
-                            div(class="flex column spacer")
+                            Suspense(fallback=view! { cx, Loading })
                             {
-                                (match route.get().as_ref()
-                                {
-                                    AppRoute::Home => view! { cx, Home },
-                                    AppRoute::Quiz => view! { cx, Quiz },
-                                    AppRoute::NotFound => view!
-                                    {
-                                        cx,
-                                        NotFound
-                                    },
-                                })
+                                MainContent(route=route)
                             }
                         }
                     }
                 }
             }
         )
+    }
+}
+
+
+//------------------------------------------------------------------------------
+//  Application main content.
+//------------------------------------------------------------------------------
+#[component(inline_props)]
+async fn MainContent<'cx, G: Html>
+(
+    cx: Scope<'cx>,
+    route: &'cx ReadSignal<AppRoute>,
+) -> View<G>
+{
+    //  Initializes the user.
+    let app_state = use_context::<AppState>(cx);
+    let user = get_or_create_user(&app_state.api_key.get()).await;
+    app_state.user.set(Some(user));
+
+    view!
+    {
+        cx,
+        div(class="flex column spacer")
+        {
+            (match route.get().as_ref()
+            {
+                AppRoute::Home => view! { cx, Home },
+                AppRoute::Quiz => view! { cx, Quiz },
+                AppRoute::Record => view! { cx, Record },
+                AppRoute::NotFound => view!
+                {
+                    cx,
+                    NotFound
+                },
+            })
+        }
     }
 }

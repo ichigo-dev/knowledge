@@ -5,6 +5,7 @@
 */
 
 mod settings_popup;
+mod save_result_toggle;
 mod theme_select;
 mod api_key_input;
 

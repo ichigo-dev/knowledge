@@ -15,12 +15,12 @@ use quit_popup::QuitPopup;
 use giveup_popup::GiveupPopup;
 use answer_popup::AnswerPopup;
 
-use crate::{ MAX_TRY_CNT, AppState, Term, UserResult, UserAnswer };
+use crate::{ MAX_TRY_CNT, AppState, Quiz, UserResult, UserAnswer };
+use crate::component::Loading;
 use crate::functions::{
     generate_quiz,
     create_user_result,
     insert_user_answer,
-    get_or_create_user,
 };
 
 
@@ -33,16 +33,17 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     let app_state = use_context::<AppState>(cx);
 
     //  Signals.
-    let quiz = create_signal(cx, String::new());
-    let term = create_signal::<Option<Term>>(cx, None);
-    let answer_path = create_signal(cx, String::new());
+    let quiz_cnt = create_signal(cx, 1);
+    let quiz = create_signal::<Quiz>(cx, Quiz::default());
     let hint_len = create_signal(cx, 0);
     let hint = create_signal(cx, String::new());
 
     //  User answer.
     let user_result = create_signal(cx, Option::<UserResult>::None);
+    let answers = create_signal(cx, Vec::<UserAnswer>::new());
     let input_answer = create_signal(cx, String::new());
     let remain = create_signal(cx, MAX_TRY_CNT);
+    let is_correct = create_signal(cx, false);
 
     //  Popup states.
     let quit_is_open = create_signal(cx, false);
@@ -54,19 +55,15 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     let update_quiz = || async
     {
         //  Resets signals.
+        quiz.set(Quiz::default());
         input_answer.set("".to_string());
         hint_len.set(0);
         hint.set("".to_string());
         remain.set(MAX_TRY_CNT);
 
         //  Generates next quiz.
-        quiz.set("Generating quiz...".to_string());
         let api_key = app_state.api_key.get();
-        let (new_quiz, new_term, new_answer_path) = generate_quiz(&api_key)
-            .await;
-        quiz.set(new_quiz);
-        term.set(Some(new_term));
-        answer_path.set(new_answer_path);
+        quiz.set(generate_quiz(&api_key).await);
     };
 
     //  Updates hint.
@@ -74,111 +71,98 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     {
         let len = *hint_len.get() + 1;
         let mut new_hint = String::new();
-        if let Some(t) = term.get().as_ref()
+        for (i, char) in quiz.get().as_ref().term.term.chars().enumerate()
         {
-            for (i, char) in t.term.chars().enumerate()
+            if i < len
             {
-                if i < len
-                {
-                    new_hint.push(char);
-                }
-                else
-                {
-                    new_hint.push('_');
-                }
-            }
-
-            if len >= t.term.chars().count()
-            {
-                new_hint.push_str(" (No more hints...)");
+                new_hint.push(char);
             }
             else
             {
-                hint_len.set(len);
+                new_hint.push('_');
             }
         }
+
+        if len >= quiz.get().as_ref().term.term.chars().count()
+        {
+            new_hint.push_str(" (No more hints...)");
+        }
+        else
+        {
+            hint_len.set(len);
+        }
         hint.set(new_hint);
+    };
+
+    //  Terminates quiz.
+    let terminate_quiz = move ||
+    {
+        quiz_cnt.set(*quiz_cnt.get() + 1);
+
+        //  Creates user answer.
+        if let Some(u) = user_result.get().as_ref()
+        {
+            let api_key = app_state.api_key.get();
+            let user_answer = UserAnswer
+            {
+                user_answer_id: 0,
+                user_result_id: u.user_result_id,
+                term_id: quiz.get().as_ref().term.term_id,
+                term: quiz.get().as_ref().term.clone(),
+                is_correct: *is_correct.get(),
+                created_at: "".to_string(),
+            };
+
+            spawn_local_scoped(cx, async move
+            {
+                let user_answer = insert_user_answer
+                (
+                    &api_key,
+                    &user_answer,
+                ).await;
+                answers.modify().push(user_answer);
+            });
+        }
     };
 
     //  User answer.
     let try_answer = move ||
     {
-        if let Some(t) = term.get().as_ref()
+        remain.set(*remain.get() - 1);
+        if input_answer.get().to_lowercase().trim()
+            == quiz.get().as_ref().term.term.to_lowercase().trim()
         {
-            remain.set(*remain.get() - 1);
-            if input_answer.get().to_lowercase().trim()
-                == t.term.to_lowercase().trim()
-            {
-                answer_popup_message.set(view!{ cx, "Great!" });
-                answer_is_open.set(true);
-
-                if let Some(u) = user_result.get().as_ref()
-                {
-                    let api_key = app_state.api_key.get();
-                    let user_answer = UserAnswer
-                    {
-                        user_answer_id: 0,
-                        user_result_id: u.user_result_id,
-                        term_id: t.term_id,
-                        is_correct: true,
-                        created_at: "".to_string(),
-                    };
-
-                    spawn_local_scoped(cx, async move
-                    {
-                        insert_user_answer(&api_key, &user_answer).await;
-                    });
-                }
-            }
-            else if *remain.get() <= 0
-            {
-                answer_popup_message.set(view!{ cx, "Failed..."});
-                answer_is_open.set(true);
-
-                if let Some(u) = user_result.get().as_ref()
-                {
-                    let api_key = app_state.api_key.get();
-                    let user_answer = UserAnswer
-                    {
-                        user_answer_id: 0,
-                        user_result_id: u.user_result_id,
-                        term_id: t.term_id,
-                        is_correct: false,
-                        created_at: "".to_string(),
-                    };
-
-                    spawn_local_scoped(cx, async move
-                    {
-                        insert_user_answer(&api_key, &user_answer).await;
-                    });
-                }
-            }
+            answer_popup_message.set(view!{ cx, "Great!" });
+            answer_is_open.set(true);
+            is_correct.set(true);
         }
+        else if *remain.get() <= 0
+        {
+            answer_popup_message.set(view!{ cx, "Failed..."});
+            answer_is_open.set(true);
+            is_correct.set(false);
+        }
+    };
+
+    let button_disabled = move ||
+    {
+        quiz.get().quiz.len() <= 0
     };
 
     //  Initializes quiz.
     spawn_local_scoped(cx, async move
     {
-        quiz.set("Generating user result...".to_string());
         let api_key = app_state.api_key.get();
-        match app_state.user.get().as_ref()
+
+        if *app_state.save_result.get()
         {
-            Some(user) =>
+            if let Some(user) = app_state.user.get().as_ref()
             {
                 user_result.set
                 (
                     Some(create_user_result(&api_key, &user).await)
                 );
-            },
-            None =>
-            {
-                let user = get_or_create_user(&api_key).await;
-                user_result.set
-                (
-                    Some(create_user_result(&api_key, &user).await)
-                );
-                app_state.user.set(Some(user));
-            },
+            }
         }
         update_quiz().await;
     });
@@ -198,11 +182,27 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         }
 
         //  Quiz
-        div
-        (
-            class="quiz_panel ui_panel padding_lg margin_bottom_lg",
-            dangerously_set_inner_html=&quiz.get()
-        )
+        div(class="quiz_panel ui_panel padding_lg margin_bottom_lg")
+        {
+            div { "Q. " (quiz_cnt.get()) }
+            (
+                {
+                    let q = quiz.get();
+                    if q.quiz.len() > 0
+                    {
+                        view!
+                        {
+                            cx,
+                            div(dangerously_set_inner_html=&q.quiz)
+                        }
+                    }
+                    else
+                    {
+                        view!{ cx, Loading }
+                    }
+                }
+            )
+        }
 
         //  Answer
         div(class="ui_panel padding_lg margin_bottom_lg")
@@ -250,18 +250,34 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
             (
                 class="ui_button warn",
                 on:click=move |_| { giveup_is_open.set(true); },
+                disabled=button_disabled(),
             ) { "Give up" }
+
+            button
+            (
+                class="ui_button warn",
+                on:click=move |_|
+                {
+                    spawn_local_scoped(cx, async move
+                    {
+                        update_quiz().await;
+                    });
+                },
+                disabled=button_disabled(),
+            ) { "Skip" }
 
             button
             (
                 class="ui_button info",
                 on:click=move |_| { update_hint(); },
+                disabled=button_disabled(),
             ) { "Hint" }
 
             button
             (
                 class="ui_button success",
                 on:click=move |_| { try_answer(); },
+                disabled=button_disabled(),
             ) { "Answer" }
         }
 
@@ -275,19 +291,20 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
                 giveup_is_open.set(false);
                 answer_popup_message.set(view!{ cx, "Failed..."});
                 answer_is_open.set(true);
+                is_correct.set(false);
             }),
         )
         AnswerPopup
         (
             is_open=answer_is_open,
-            term=term,
-            answer_path=answer_path,
+            quiz=quiz,
             message=answer_popup_message,
             callback=Box::new(move ||
             {
                 answer_is_open.set(false);
                 spawn_local_scoped(cx, async move
                 {
+                    terminate_quiz();
                     update_quiz().await;
                 });
             }),

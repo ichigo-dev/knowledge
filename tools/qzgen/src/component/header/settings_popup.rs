@@ -4,6 +4,7 @@
 
 */
 
+use super::save_result_toggle::SaveResultToggle;
 use super::theme_select::ThemeSelect;
 use super::api_key_input::ApiKeyInput;
 use crate::component::Popup;
@@ -26,8 +27,9 @@ pub fn SettingsPopup<'cx, G: Html>
             child=view!
             {
                 cx,
-                div(class="flex column gap_md")
+                div(class="flex column align_start gap_md")
                 {
+                    SaveResultToggle
                     ThemeSelect
                     ApiKeyInput
                 }

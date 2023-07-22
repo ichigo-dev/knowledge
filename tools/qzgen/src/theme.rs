@@ -5,8 +5,10 @@
 */
 
 use std::default::Default;
+use std::str::FromStr;
+use std::fmt;
 
-#[derive(PartialEq, Clone, Copy)]
+#[derive(Debug, PartialEq, Clone, Copy)]
 pub enum Theme
 {
     Light,
@@ -36,5 +38,38 @@ impl Default for Theme
     fn default() -> Self
     {
         Theme::Light
+    }
+}
+
+impl FromStr for Theme
+{
+    type Err = ();
+
+    //--------------------------------------------------------------------------
+    //  Parses a theme from a string.
+    //--------------------------------------------------------------------------
+    fn from_str( s: &str ) -> Result<Self, Self::Err>
+    {
+        match s
+        {
+            "light" => Ok(Theme::Light),
+            "dark" => Ok(Theme::Dark),
+            _ => Err(()),
+        }
+    }
+}
+
+impl fmt::Display for Theme
+{
+    //--------------------------------------------------------------------------
+    //  Formats a theme to a string.
+    //--------------------------------------------------------------------------
+    fn fmt( &self, f: &mut fmt::Formatter<'_> ) -> fmt::Result
+    {
+        match self
+        {
+            Theme::Light => write!( f, "light" ),
+            Theme::Dark => write!( f, "dark" ),
+        }
     }
 }

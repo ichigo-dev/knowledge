@@ -18,13 +18,15 @@ pub fn ApiKeyInput<G: Html>( cx: Scope ) -> View<G>
     {
         app_state.api_key.set(api_key.get().to_string());
 
-        //  Saves the API key to local storage.
+        //  Saves to local storage.
         let local_storage = web_sys::window()
             .unwrap()
             .local_storage()
             .unwrap()
             .expect("local storage should be available");
-        local_storage.set_item("api_key", &api_key.get()).unwrap();
+        local_storage
+            .set_item("api_key", &app_state.api_key.get())
+            .unwrap();
     });
 
     view!
