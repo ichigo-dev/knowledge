@@ -180,7 +180,7 @@
 	//	Color.
 	&.primary
 	{
-		fill: var(--color-primary-text);
+		fill: var(--color-primary);
 
 		&_light
 		{
@@ -197,7 +197,7 @@
 	}
 	&.secondary
 	{
-		fill: var(--color-secondary-text);
+		fill: var(--color-secondary);
 
 		&_light
 		{
@@ -214,7 +214,7 @@
 	}
 	&.error
 	{
-		fill: var(--color-error-text);
+		fill: var(--color-error);
 
 		&_light
 		{
@@ -231,7 +231,7 @@
 	}
 	&.warn
 	{
-		fill: var(--color-warn-text);
+		fill: var(--color-warn);
 
 		&_light
 		{
@@ -248,7 +248,7 @@
 	}
 	&.info
 	{
-		fill: var(--color-info-text);
+		fill: var(--color-info);
 
 		&_light
 		{
@@ -265,7 +265,7 @@
 	}
 	&.success
 	{
-		fill: var(--color-success-text);
+		fill: var(--color-success);
 
 		&_light
 		{

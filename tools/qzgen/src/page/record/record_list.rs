@@ -7,6 +7,7 @@
 use sycamore::prelude::*;
 
 use crate::{ AppState, UserResult, UserAnswer };
+use crate::component::{ CheckIcon, CrossIcon, EyeIcon };
 use crate::functions::{ term_to_quiz, get_user_results };
 
 #[component]
@@ -69,7 +70,7 @@ fn RecordItem<G: Html>
         cx,
         div(class="ui_panel padding_lg shadow radius")
         {
-            div(class="ui_panel transparent border_bottom padding_bottom_sm margin_bottom flex justify_between")
+            div(class="ui_panel transparent border_bottom padding_bottom_sm margin_bottom_lg flex justify_between")
             {
                 span { (result.created_at) }
                 span(class=result_class)
@@ -78,18 +79,21 @@ fn RecordItem<G: Html>
                     "(" (correct_rate.round() as u32) "%)"
                 }
             }
-            Indexed
-            (
-                iterable = answers,
-                view = move |cx, answer|
-                {
-                    view!
+            div(class="flex column align_start gap_lg")
+            {
+                Indexed
+                (
+                    iterable = answers,
+                    view = move |cx, answer|
                     {
-                        cx,
-                        RecordAnswer(answer=answer)
-                    }
-                },
-            )
+                        view!
+                        {
+                            cx,
+                            RecordAnswer(answer=answer)
+                        }
+                    },
+                )
+            }
         }
     }
 }
@@ -102,30 +106,54 @@ fn RecordAnswer<G: Html>
 ) -> View<G>
 {
     let quiz = term_to_quiz(&answer.term);
+    let term = create_signal(cx, "*****".to_string());
+    let is_close = create_signal(cx, true);
+    create_effect(cx, move ||
+    {
+        if *is_close.get()
+        {
+            term.set("*****".to_string());
+        }
+        else
+        {
+            term.set(answer.term.term.clone());
+        }
+    });
     view!
     {
         cx,
-        div(class="record_quiz")
+        div(class="record_answer full_horizon flex column align_start")
         {
-            (answer.term.term)
-        }
-        div
-        (
-            class="quiz_content",
-            dangerously_set_inner_html=&quiz.quiz
-        )
-        div(class="record_result")
-        {
+            div(class="record_result margin_bottom_md flex justify_between full_horizon")
+            {
+                div(class="flex align_center gap_md")
+                {
+                    EyeIcon(is_close=is_close, callback=Some(Box::new
+                    (
+                        move ||
+                        {
+                            is_close.set(!(*is_close.get()));
+                        }
+                    )))
+                    (term.get())
+                }
+                (
+                    if answer.is_correct
+                    {
+                        view!{ cx, CheckIcon }
+                    }
+                    else
+                    {
+                        view!{ cx, CrossIcon }
+                    }
+                )
+            }
+            div
             (
-                if answer.is_correct
-                {
-                    view!{ cx, "O" }
-                }
-                else
-                {
-                    view!{ cx, "X" }
-                }
+                class="quiz_content",
+                dangerously_set_inner_html=&quiz.quiz
             )
+            div(class="record_answer_sep border full_horizon margin_top_md")
         }
     }
 }

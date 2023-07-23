@@ -87,8 +87,23 @@ body
 	font-weight: bold;
 }
 
+
+//------------------------------------------------------------------------------
+//	Quiz content.
+//------------------------------------------------------------------------------
 .quiz_content
 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-md);
+	color: var(--color-text-primary);
+
+	a
+	{
+		color: var(--color-info);
+	}
+
 	.mask
 	{
 		color: var(--color-info);

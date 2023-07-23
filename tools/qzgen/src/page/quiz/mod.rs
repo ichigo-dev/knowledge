@@ -182,7 +182,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         }
 
         //  Quiz
-        div(class="quiz_content ui_panel padding_lg margin_bottom_lg")
+        div(class="quiz_content ui_panel padding_lg margin_vertical_lg")
         {
             div { "Q. " (quiz_cnt.get()) }
             (
