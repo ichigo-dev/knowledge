@@ -1,6 +1,11 @@
 @import "theme";
 @import "common";
 @import "ui";
+@import "page/home";
+@import "page/record";
+
+//	Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 
 //------------------------------------------------------------------------------
@@ -13,6 +18,7 @@ html
 
 body
 {
+	font-family: 'Rubik', sans-serif;
 	min-height: 100vh;
 	margin: 0;
 }
@@ -50,6 +56,10 @@ body
 	}
 }
 
+
+//------------------------------------------------------------------------------
+//	Common header.
+//------------------------------------------------------------------------------
 .header
 {
 	display: flex;
@@ -58,19 +68,27 @@ body
 	gap: var(--spacing-md);
 }
 
-.page_title
+.settings_popup
 {
-	font-size: var(--fs-xl);
-	font-wieght: bold;
-	text-align: center;
+	.ui_label
+	{
+		display: inline-block;
+		width: 110px;
+	}
 }
 
-.quiz_panel
-{
-	display: flex;
-	flex-direction: column;
-	gap: var(--spacing-md);
 
+//------------------------------------------------------------------------------
+//	Application title.
+//------------------------------------------------------------------------------
+.app_name
+{
+	font-size: var(--fs-xl);
+	font-weight: bold;
+}
+
+.quiz_content
+{
 	.mask
 	{
 		color: var(--color-info);

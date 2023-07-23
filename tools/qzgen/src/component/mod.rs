@@ -6,4 +6,4 @@ mod icons;
 pub use loading::Loading;
 pub use popup::Popup;
 pub use header::Header;
-pub use icons::{ CloseIcon, HomeIcon, SettingsIcon };
+pub use icons::*;

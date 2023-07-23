@@ -22,7 +22,7 @@ pub fn Record<G: Html>( cx: Scope ) -> View<G>
     view!
     {
         cx,
-        div(class="padding_lg flex column align_center")
+        div(class="page_record padding_lg flex column align_center")
         {
             Suspense(fallback=view! { cx, Loading })
             {

@@ -27,7 +27,7 @@ pub fn SettingsPopup<'cx, G: Html>
             child=view!
             {
                 cx,
-                div(class="flex column align_start gap_md")
+                div(class="settings_popup flex column align_start gap_md")
                 {
                     SaveResultToggle
                     ThemeSelect

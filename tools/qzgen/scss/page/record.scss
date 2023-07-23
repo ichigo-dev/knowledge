@@ -1,0 +1,12 @@
+.page_record
+{
+	.perfect
+	{
+		font-weight: bold;
+		color: var(--color-success);
+	}
+	.imperfect
+	{
+		color: var(--color-error);
+	}
+}
