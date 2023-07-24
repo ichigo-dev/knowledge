@@ -45,8 +45,10 @@ pub fn term_to_quiz( term: &Term ) -> Quiz
     });
 
     //  Replaces the term with a mask.
-    let mask = "<label class=\"mask\" for=\"user_answer\">_____</label>";
-    let quiz = html_str.replace(&term.term, mask);
+    let mask = "<label class=\"mask\" for=\"user_answer\">".to_string()
+        + &term.term
+        + "</label>";
+    let quiz = html_str.replace(&term.term, &mask);
 
     Quiz
     {

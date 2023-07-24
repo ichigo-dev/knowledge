@@ -150,7 +150,10 @@ fn RecordAnswer<G: Html>
             }
             div
             (
-                class="quiz_content",
+                class=&("quiz_content ".to_string() + if !(*is_close.get())
+                {
+                    "show_answer"
+                } else { "" }),
                 dangerously_set_inner_html=&quiz.quiz
             )
             div(class="record_answer_sep border full_horizon margin_top_md")

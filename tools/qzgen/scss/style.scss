@@ -5,7 +5,7 @@
 @import "page/record";
 
 //	Fonts
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
 
 
 //------------------------------------------------------------------------------
@@ -18,9 +18,14 @@ html
 
 body
 {
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Rubik', 'Noto Sans JP', sans-serif;
 	min-height: 100vh;
 	margin: 0;
+}
+
+a
+{
+	color: var(--color-info);
 }
 
 
@@ -99,14 +104,37 @@ body
 	gap: var(--spacing-md);
 	color: var(--color-text-primary);
 
-	a
+	pre
 	{
-		color: var(--color-info);
+		width: 100%;
+
+		code
+		{
+			display: block;
+			width: 100%;
+			padding: var(--spacing-sm);
+			background-color: #2f3437;
+			color: #fff;
+			overflow: auto;
+		}
 	}
 
 	.mask
 	{
-		color: var(--color-info);
-		font-weight: bold;
+		display: inline-block;
+		color: transparent;
+		background-color: var(--color-text-primary);
+		border: var(--border);
+		margin: 0 var(--spacing-sm);
+		padding: 0 var(--spacing-xs);
+	}
+
+	&.show_answer
+	{
+		.mask
+		{
+			color: var(--color-text-primary);
+			background-color: transparent;
+		}
 	}
 }

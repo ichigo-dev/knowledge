@@ -171,18 +171,8 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     {
         cx,
 
-        //  Quit
-        div(class="flex row justify_start margin_bottom_lg")
-        {
-            button
-            (
-                class="ui_button error",
-                on:click=move |_| { quit_is_open.set(true); }
-            ) { "Quit" }
-        }
-
         //  Quiz
-        div(class="quiz_content ui_panel padding_lg margin_vertical_lg")
+        div(class="quiz_content ui_panel shadow radius padding_lg margin_vertical_lg")
         {
             div { "Q. " (quiz_cnt.get()) }
             (
@@ -246,6 +236,12 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         //  Operation
         div(class="flex row justify_between")
         {
+            button
+            (
+                class="ui_button error",
+                on:click=move |_| { quit_is_open.set(true); }
+            ) { "Quit" }
+
             button
             (
                 class="ui_button warn",
