@@ -1216,6 +1216,10 @@
   display: none;
 }
 
+.page_quiz .hint {
+  color: var(--color-info);
+}
+
 html {
   height: 100%;
 }
@@ -1277,6 +1281,10 @@ a {
   align-items: flex-start;
   gap: var(--spacing-md);
   color: var(--color-text-primary);
+  overflow: hidden;
+}
+.quiz_content > * {
+  overflow: auto;
 }
 .quiz_content pre {
   width: 100%;

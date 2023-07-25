@@ -79,7 +79,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
             }
             else
             {
-                new_hint.push('_');
+                new_hint.push('*');
             }
         }
 
@@ -128,7 +128,11 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     //  User answer.
     let try_answer = move ||
     {
-        remain.set(*remain.get() - 1);
+        if input_answer.get().trim().len() <= 0
+        {
+            return;
+        }
+
         if input_answer.get().to_lowercase().trim()
             == quiz.get().as_ref().term.term.to_lowercase().trim()
         {
@@ -136,7 +140,9 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
             answer_is_open.set(true);
             is_correct.set(true);
         }
-        else if *remain.get() <= 0
+
+        remain.set(*remain.get() - 1);
+        if *remain.get() <= 0
         {
             answer_popup_message.set(view!{ cx, "Failed..."});
             answer_is_open.set(true);
@@ -171,139 +177,142 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
     {
         cx,
 
-        //  Quiz
-        div(class="quiz_content ui_panel shadow radius padding_lg margin_vertical_lg")
+        div(class="page_quiz flex column spacer")
         {
-            div { "Q. " (quiz_cnt.get()) }
-            (
+            //  Quiz
+            div(class="quiz_content ui_panel shadow radius padding_lg margin_vertical_lg")
+            {
+                div { "Q. " (quiz_cnt.get()) }
+                (
+                    {
+                        let q = quiz.get();
+                        if q.quiz.len() > 0
+                        {
+                            view!
+                            {
+                                cx,
+                                div(dangerously_set_inner_html=&q.quiz)
+                            }
+                        }
+                        else
+                        {
+                            view!{ cx, Loading }
+                        }
+                    }
+                )
+            }
+
+            div(class="spacer")
+
+            //  Answer
+            div(class="ui_panel padding_md margin_bottom_lg")
+            {
+                label(class="flex column align_start")
                 {
-                    let q = quiz.get();
-                    if q.quiz.len() > 0
+                    span(class="ui_label margin_bottom")
+                    {
+                        "Answer (Remain: " (remain.get()) ")"
+                    }
+                    input
+                    (
+                        type="text",
+                        class="ui_text full_horizon",
+                        id="user_answer",
+                        bind:value=input_answer,
+                    )
+                }
+
+                (
+                    if hint.get().len() > 0
                     {
                         view!
                         {
                             cx,
-                            div(dangerously_set_inner_html=&q.quiz)
+                            p(class="margin_top hint")
+                            {
+                                "Hint: " (hint.get())
+                            }
                         }
                     }
                     else
                     {
-                        view!{ cx, Loading }
+                        view!{ cx, }
                     }
-                }
-            )
-        }
-
-        //  Answer
-        div(class="ui_panel padding_lg margin_bottom_lg")
-        {
-            label(class="flex column align_start")
-            {
-                span(class="ui_label")
-                {
-                    "Answer (Remain: " (remain.get()) ")"
-                }
-                input
-                (
-                    type="text",
-                    class="ui_text",
-                    id="user_answer",
-                    bind:value=input_answer,
                 )
+
+                //  Operation
+                div(class="margin_top flex row justify_between")
+                {
+                    button
+                    (
+                        class="ui_button error",
+                        on:click=move |_| { quit_is_open.set(true); }
+                    ) { "Quit" }
+
+                    button
+                    (
+                        class="ui_button warn",
+                        on:click=move |_| { giveup_is_open.set(true); },
+                        disabled=button_disabled(),
+                    ) { "Give up" }
+
+                    button
+                    (
+                        class="ui_button warn",
+                        on:click=move |_|
+                        {
+                            spawn_local_scoped(cx, async move
+                            {
+                                update_quiz().await;
+                            });
+                        },
+                        disabled=button_disabled(),
+                    ) { "Skip" }
+
+                    button
+                    (
+                        class="ui_button info",
+                        on:click=move |_| { update_hint(); },
+                        disabled=button_disabled(),
+                    ) { "Hint" }
+
+                    button
+                    (
+                        class="ui_button success",
+                        on:click=move |_| { try_answer(); },
+                        disabled=button_disabled(),
+                    ) { "Answer" }
+                }
             }
 
+            //  Popups
+            QuitPopup(is_open=quit_is_open)
+            GiveupPopup
             (
-                if hint.get().len() > 0
+                is_open=giveup_is_open,
+                callback=Box::new(move ||
                 {
-                    view!
-                    {
-                        cx,
-                        p(class="margin_top")
-                        {
-                            "Hint: " (hint.get())
-                        }
-                    }
-                }
-                else
-                {
-                    view!{ cx, }
-                }
+                    giveup_is_open.set(false);
+                    answer_popup_message.set(view!{ cx, "Failed..."});
+                    answer_is_open.set(true);
+                    is_correct.set(false);
+                }),
             )
-        }
-
-        div(class="spacer")
-
-        //  Operation
-        div(class="flex row justify_between")
-        {
-            button
+            AnswerPopup
             (
-                class="ui_button error",
-                on:click=move |_| { quit_is_open.set(true); }
-            ) { "Quit" }
-
-            button
-            (
-                class="ui_button warn",
-                on:click=move |_| { giveup_is_open.set(true); },
-                disabled=button_disabled(),
-            ) { "Give up" }
-
-            button
-            (
-                class="ui_button warn",
-                on:click=move |_|
+                is_open=answer_is_open,
+                quiz=quiz,
+                message=answer_popup_message,
+                callback=Box::new(move ||
                 {
+                    answer_is_open.set(false);
                     spawn_local_scoped(cx, async move
                     {
+                        terminate_quiz();
                         update_quiz().await;
                     });
-                },
-                disabled=button_disabled(),
-            ) { "Skip" }
-
-            button
-            (
-                class="ui_button info",
-                on:click=move |_| { update_hint(); },
-                disabled=button_disabled(),
-            ) { "Hint" }
-
-            button
-            (
-                class="ui_button success",
-                on:click=move |_| { try_answer(); },
-                disabled=button_disabled(),
-            ) { "Answer" }
+                }),
+            )
         }
-
-        //  Popups
-        QuitPopup(is_open=quit_is_open)
-        GiveupPopup
-        (
-            is_open=giveup_is_open,
-            callback=Box::new(move ||
-            {
-                giveup_is_open.set(false);
-                answer_popup_message.set(view!{ cx, "Failed..."});
-                answer_is_open.set(true);
-                is_correct.set(false);
-            }),
-        )
-        AnswerPopup
-        (
-            is_open=answer_is_open,
-            quiz=quiz,
-            message=answer_popup_message,
-            callback=Box::new(move ||
-            {
-                answer_is_open.set(false);
-                spawn_local_scoped(cx, async move
-                {
-                    terminate_quiz();
-                    update_quiz().await;
-                });
-            }),
-        )
     }
 }
