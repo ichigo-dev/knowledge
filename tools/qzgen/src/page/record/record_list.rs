@@ -24,7 +24,7 @@ pub async fn RecordList<G: Html>( cx: Scope<'_> ) -> View<G>
     view!
     {
         cx,
-        div(class="flex column gap_md")
+        div(class="flex column gap_md full_horizon")
         {
             Indexed
             (

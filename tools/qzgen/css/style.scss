@@ -104,21 +104,8 @@ a
 	align-items: flex-start;
 	gap: var(--spacing-md);
 	color: var(--color-text-primary);
-
-	pre
-	{
-		width: 100%;
-
-		code
-		{
-			display: block;
-			width: 100%;
-			padding: var(--spacing-sm);
-			background-color: #2f3437;
-			color: #fff;
-			overflow: auto;
-		}
-	}
+	width: 100%;
+	overflow-x: auto;
 
 	.mask
 	{
