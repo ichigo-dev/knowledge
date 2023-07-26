@@ -180,7 +180,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
         div(class="page_quiz flex column spacer")
         {
             //  Quiz
-            div(class="quiz_content ui_panel shadow radius padding_lg margin_vertical_lg")
+            div(class="ui_panel shadow radius padding_lg margin_vertical_lg")
             {
                 div { "Q. " (quiz_cnt.get()) }
                 (
@@ -191,7 +191,11 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
                             view!
                             {
                                 cx,
-                                div(dangerously_set_inner_html=&q.quiz)
+                                div
+                                (
+                                    class="quiz_content margin_top",
+                                    dangerously_set_inner_html=&q.quiz,
+                                )
                             }
                         }
                         else
