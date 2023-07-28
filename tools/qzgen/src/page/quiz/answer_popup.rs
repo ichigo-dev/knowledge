@@ -35,7 +35,12 @@ pub fn AnswerPopup<'cx, G: Html>
                 p(class="margin_bottom")
                 {
                     "Answer: "
-                    a(href=&quiz.get().answer_path)
+                    a
+                    (
+                        href=&quiz.get().answer_path,
+                        target="_blank",
+                        rel="noopener noreferrer",
+                    )
                     {
                         (
                             {
