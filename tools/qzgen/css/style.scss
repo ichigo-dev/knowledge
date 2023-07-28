@@ -6,7 +6,7 @@
 @import "page/quiz";
 
 //	Fonts
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto+Mono&family=Rubik&display=swap');
 
 
 //------------------------------------------------------------------------------
@@ -107,8 +107,10 @@ a
 	width: 100%;
 	overflow-x: auto;
 
+	//	Code.
 	code
 	{
+		font-family: 'Roboto Mono', monospace;
 		display: inline-block;
 		padding: 0 var(--spacing-sm);
 		border-radius: var(--radius-sm);
@@ -125,10 +127,54 @@ a
 			display: block;
 			width: 100%;
 			padding: var(--spacing-sm) var(--spacing-md);
-			border-radius: var(--radius-sm);
-			background-color: #2f3437;
-			color: #fff;
 			overflow: auto;
+		}
+	}
+
+	//	Table.
+	table
+	{
+		table-layout: fixed;
+
+		tr
+		{
+			th
+			{
+				background-color: var(--color-gray-600);
+				color: var(--color-common-white);
+				padding: var(--spacing-xs);
+				font-weight: bold;
+				text-align: center;
+				white-space: nowrap;
+			}
+
+			td
+			{
+				background-color: var(--color-gray-200);
+				color: var(--color-text-primary);
+				padding: var(--spacing-xs);
+				text-align: left;
+			}
+		}
+	}
+
+	//	List.
+	ul
+	{
+		list-style-type: desc;
+		padding: var(--spacing-sm) var(--spacing-sm) var(--spacing-sm) var(--spacing-xl);
+		border-left: 8px solid var(--color-info);
+		background-color: var(--color-gray-200);
+
+		li
+		{
+			padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) 0;
+
+			&:marker
+			{
+				color: var(--color-info);
+				font-size: 1.1em;
+			}
 		}
 	}
 
