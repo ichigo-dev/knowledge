@@ -1,6 +1,6 @@
 # 『メモリ』ノート
 
-（最終更新： 2023-04-03）
+（最終更新： 2023-07-31）
 
 
 ## 目次
@@ -51,7 +51,7 @@
 
 ### 静的領域
 
-**静的領域**は、[グローバル変数](../../../../programming/_/chapters/variable.md#グローバル変数)などの静的変数が格納される領域。[プログラム](**テキスト領域**は、[機械語](../../../../basics/information_theory/_/chapters/compiler_theory.md#機械語)に[コンパイル](../../../../programming/_/chapters/programming.md#コンパイル)された[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の開始から終了まで確保される。
+**静的領域**は、[グローバル変数](../../../../programming/_/chapters/variable.md#グローバル変数)などの静的変数が格納される領域。この領域のサイズは[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の[コンパイル](../../../../programming/_/chapters/programming.md#コンパイル)時に決定され、格納されたデータは[プログラム](../../../../programming/_/chapters/programming.md#プログラム)が終了するまで存在し続ける。
 
 ### スタック領域
 
