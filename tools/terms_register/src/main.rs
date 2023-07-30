@@ -188,7 +188,7 @@ fn get_sections_from_markdown( content: &str ) -> Option<Vec<(String, String)>>
     //  Gets sections from markdown file.
     for line in content.lines()
     {
-        if line.starts_with('#')
+        if line.starts_with("##")
         {
             if section_content.is_empty() == false
             {
@@ -212,14 +212,14 @@ fn get_sections_from_markdown( content: &str ) -> Option<Vec<(String, String)>>
         }
     }
 
-    if sections.len() <= 2
+    if sections.len() <= 1
     {
         return None;
     }
     else
     {
         //  Removes note title and ToC(Table of Contents) section.
-        sections = sections.split_off(2);
+        sections = sections.split_off(1);
     }
 
     Some(sections)
@@ -330,8 +330,10 @@ async fn delete_terms( tx: &mut sqlx::Transaction<'_, sqlx::MySql>, now: &str )
     sqlx::query
     (
         r#"
-            DELETE FROM
+            UPDATE
                 `term`
+            SET
+                `deleted` = 1
             WHERE
                 `updated_at` < ?
         "#

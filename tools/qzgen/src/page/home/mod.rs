@@ -24,6 +24,7 @@ pub fn Home<G: Html>( cx: Scope ) -> View<G>
             {
                 "QZgen"
             }
+            div(class="home_icon")
             div(class="flex justify_between gap_md full_horizon")
             {
                 a(href="/quiz", class="home_menu_button")

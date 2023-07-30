@@ -1,5 +1,14 @@
 .home_page
 {
+	.home_icon
+	{
+		background-image: var(--logo-icon);
+		background-size: contain;
+		background-position: center;
+		height: 150px;
+		width: 150px;
+	}
+
 	.home_menu_button
 	{
 		display: flex;
@@ -16,11 +25,12 @@
 		font-weight: bold;
 		text-decoration: none;
 		color: var(--color-primary-text);
-		transition: transform 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
 
 		&:hover
 		{
 			transform: scale(0.95);
+			background-color: var(--color-primary-light);
 		}
 	}
 }

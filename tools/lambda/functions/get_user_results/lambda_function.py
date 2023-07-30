@@ -20,15 +20,20 @@ def lambda_handler(event, context):
     cursor.execute(sql)
     result = cursor.fetchall()
     for row in result:
-        print(row)
         sql = "SELECT * FROM `user_answer` WHERE `user_result_id` = " + str(row["user_result_id"])
         cursor.execute(sql)
-        row["answers"] = cursor.fetchall()
+        answers = cursor.fetchall()
+        res_answers = []
 
-        for answer in row["answers"]:
-            sql = "SELECT * FROM `term` WHERE `term_id` = " + str(answer["term_id"])
-            cursor.execute(sql)
-            answer["term"] = cursor.fetchone()
+        for answer in answers:
+            if answer["term_id"] is not None:
+                sql = "SELECT * FROM `term` WHERE `term_id` = " + str(answer["term_id"])
+                cursor.execute(sql)
+                term = cursor.fetchone()
+                answer["term"] = term
+                res_answers.append(answer)
+        
+        row["answers"] = res_answers
     cursor.close()
     conn.commit()
     conn.close()

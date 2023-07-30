@@ -110,8 +110,8 @@ pub async fn generate_quiz( api_key: &str ) -> Quiz
         .await
         .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
-    let term: Term = serde_json::from_str(&body).unwrap();
-
+    let term: Term = serde_json::from_str(&body)
+        .unwrap_or(Term::default());
     term_to_quiz(&term)
 }
 
@@ -132,7 +132,8 @@ pub async fn create_user_result( api_key: &str, user: &User ) -> UserResult
         .await
         .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
-    let user_result: UserResult = serde_json::from_str(&body).unwrap();
+    let user_result: UserResult = serde_json::from_str(&body)
+        .unwrap_or(UserResult::default());
     user_result
 }
 
@@ -179,6 +180,7 @@ pub async fn get_user_results
         .await
         .unwrap();
     let body = response.text().await.unwrap_or("".to_string());
-    let user_results: Vec<UserResult> = serde_json::from_str(&body).unwrap();
+    let user_results: Vec<UserResult> = serde_json::from_str(&body)
+        .unwrap_or(Vec::new());
     user_results
 }

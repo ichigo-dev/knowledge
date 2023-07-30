@@ -27,7 +27,7 @@ pub struct Term
     pub updated_at: String,
 }
 
-#[derive(Serialize, Deserialize, Debug, PartialEq, Eq, Clone)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq, Clone, Default)]
 pub struct UserResult
 {
     pub user_result_id: usize,
@@ -38,7 +38,7 @@ pub struct UserResult
     pub answers: Vec<UserAnswer>,
 }
 
-#[derive(Serialize, Deserialize, Debug, PartialEq, Eq, Clone)]
+#[derive(Serialize, Deserialize, Debug, PartialEq, Eq, Clone, Default)]
 pub struct UserAnswer
 {
     pub user_answer_id: usize,
