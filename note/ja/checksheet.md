@@ -3269,6 +3269,17 @@
 	- [ ] [kubectl get rs](./development/docker/_/chapters/kubernetes.md#replicasetの状態確認)
 	- [ ] [kubectl scale](./development/docker/_/chapters/kubernetes.md#replicasetのスケール)
 
+### デザインパターン
+
+#### デザインパターン
+
+- [ ] [デザインパターン](./development/design_pattern/_/chapters/design_pattern.md#デザインパターン)
+	- [ ] [GoFデザインパターン](./development/design_pattern/_/chapters/design_pattern.md#gofデザインパターン)
+
+#### Iterator
+
+- [ ] [Iteratorパターン](./development/design_pattern/_/chapters/iterator.md#iteratorパターン)
+
 ### マネジメント
 
 #### マネジメント
