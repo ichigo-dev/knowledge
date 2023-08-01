@@ -603,7 +603,7 @@
 	- [ ] [ベースケース](./programming/_/chapters/function.md#再帰関数)
 - [ ] [カリー化](./programming/_/chapters/function.md#カリー化)
 
-### クラス
+### オブジェクト指向
 
 - [ ] [オブジェクト指向](./programming/_/chapters/object_oriented.md#オブジェクト指向)
 	- [ ] [オブジェクト](./programming/_/chapters/object_oriented.md#オブジェクト)
@@ -3279,6 +3279,24 @@
 #### Iterator
 
 - [ ] [Iteratorパターン](./development/design_pattern/_/chapters/iterator.md#iteratorパターン)
+	- [ ] [Aggregate](./development/design_pattern/_/chapters/iterator.md#aggregate)
+	- [ ] [Iterator](./development/design_pattern/_/chapters/iterator.md#iterator)
+	- [ ] [ConcreteAggregate](./development/design_pattern/_/chapters/iterator.md#concreteaggregate)
+	- [ ] [ConcreteIterator](./development/design_pattern/_/chapters/iterator.md#concreteiterator)
+
+#### Adapter
+
+- [ ] [Adapterパターン](./development/design_pattern/_/chapters/adapter.md#adapterパターン)
+	- [ ] [Target](./development/design_pattern/_/chapters/adapter.md#target)
+	- [ ] [Client](./development/design_pattern/_/chapters/adapter.md#client)
+	- [ ] [Adaptee](./development/design_pattern/_/chapters/adapter.md#adaptee)
+	- [ ] [Adapter](./development/design_pattern/_/chapters/adapter.md#adapter)
+
+#### Template Method
+
+- [ ] [Template Methodパターン](./development/design_pattern/_/chapters/template_method.md#template-methodパターン)
+	- [ ] [AbstractClass](./development/design_pattern/_/chapters/template_method.md#abstractclass)
+	- [ ] [ConcreteClass](./development/design_pattern/_/chapters/template_method.md#concreteclass)
 
 ### マネジメント
 
