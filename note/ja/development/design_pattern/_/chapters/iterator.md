@@ -1,6 +1,6 @@
 # 『Iterator』ノート
 
-（最終更新： 2023-08-01）
+（最終更新： 2023-08-02）
 
 
 ## 目次
@@ -22,7 +22,7 @@ Iteratorパターンは、集合体とアクセス方法を分離することで
 - 要素を順番に取り出すことができるため、検索や並び替えなど、要素に対する様々な操作が行いやすくなる
 - 複数の集合体で同じIteratorを使用することができ、[コード](../../../../programming/_/chapters/programming.md#ソースコード)の再利用性が高まる
 
-Iteratorパターンは主に、[Aggregate](#aggregate)、ConcreteAggregate、Iterator、ConcreteIteratorの4つの要素から構成される。
+Iteratorパターンは、[Aggregate](#aggregate)、[ConcreteAggregate](#concreteaggregate)、[Iterator](#iterator)、[ConcreteIterator](#concreteiterator)から構成される。
 
 ### Aggregate
 

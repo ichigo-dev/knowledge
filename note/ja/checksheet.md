@@ -3298,6 +3298,19 @@
 	- [ ] [AbstractClass](./development/design_pattern/_/chapters/template_method.md#abstractclass)
 	- [ ] [ConcreteClass](./development/design_pattern/_/chapters/template_method.md#concreteclass)
 
+#### Factory Method
+
+- [ ] [Factory Methodパターン](./development/design_pattern/_/chapters/factory_method.md#factory-methodパターン)
+	- [ ] [Product](./development/design_pattern/_/chapters/factory_method.md#product)
+	- [ ] [Creator](./development/design_pattern/_/chapters/factory_method.md#creator)
+	- [ ] [ConcreteProduct](./development/design_pattern/_/chapters/factory_method.md#concreteproduct)
+	- [ ] [ConcreteCreator](./development/design_pattern/_/chapters/factory_method.md#concretecreator)
+
+#### Singleton
+
+- [ ] [Singletonパターン](./development/design_pattern/_/chapters/singleton.md#singletonパターン)
+	- [ ] [Singleton](./development/design_pattern/_/chapters/singleton.md#singleton)
+
 ### マネジメント
 
 #### マネジメント

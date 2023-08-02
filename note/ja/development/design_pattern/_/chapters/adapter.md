@@ -1,6 +1,6 @@
 # 『Adapter』ノート
 
-（最終更新： 2023-08-01）
+（最終更新： 2023-08-02）
 
 
 ## 目次
@@ -15,6 +15,8 @@
 ## Adapterパターン
 
 **Adapterパターン**（**Wrapperパターン**）は、既存の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)や[コンポーネント](../../../../computer/software/_/chapters/package.md#コンポーネント)を別のインタフェースに変換するための[デザインパターン](./design_pattern.md#デザインパターン)。
+
+Adapterパターンは、[Target](#target)、[Client](#client)、[Adaptee](#adaptee)、[Adapter](#adapter)から構成される。
 
 ### Target
 
