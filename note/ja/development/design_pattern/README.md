@@ -9,3 +9,5 @@
 1. [Template Method](./_/chapters/template_method.md)
 1. [Factory Method](./_/chapters/factory_method.md)
 1. [Singleton](./_/chapters/singleton.md)
+1. [Prototype](./_/chapters/prototype.md)
+1. [Builder](./_/chapters/builder.md)

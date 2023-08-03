@@ -3311,6 +3311,20 @@
 - [ ] [Singletonパターン](./development/design_pattern/_/chapters/singleton.md#singletonパターン)
 	- [ ] [Singleton](./development/design_pattern/_/chapters/singleton.md#singleton)
 
+#### Prototype
+
+- [ ] [Prototypeパターン](./development/design_pattern/_/chapters/prototype.md#prototypeパターン)
+	- [ ] [Prototype](./development/design_pattern/_/chapters/prototype.md#prototype)
+	- [ ] [ConcretePrototype](./development/design_pattern/_/chapters/prototype.md#concreteprototype)
+	- [ ] [Client](./development/design_pattern/_/chapters/prototype.md#client)
+
+#### Builder
+
+- [ ] [Builderパターン](./development/design_pattern/_/chapters/builder.md#builderパターン)
+	- [ ] [Builder](./development/design_pattern/_/chapters/builder.md#builder)
+	- [ ] [ConcreteBuilder](./development/design_pattern/_/chapters/builder.md#concretebuilder)
+	- [ ] [Director](./development/design_pattern/_/chapters/builder.md#director)
+
 ### マネジメント
 
 #### マネジメント
