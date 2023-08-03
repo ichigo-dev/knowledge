@@ -11,3 +11,5 @@
 1. [Singleton](./_/chapters/singleton.md)
 1. [Prototype](./_/chapters/prototype.md)
 1. [Builder](./_/chapters/builder.md)
+1. [Abstract Factory](./_/chapters/abstract_factory.md)
+1. [Bridge](./_/chapters/bridge.md)

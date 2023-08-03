@@ -3325,6 +3325,18 @@
 	- [ ] [ConcreteBuilder](./development/design_pattern/_/chapters/builder.md#concretebuilder)
 	- [ ] [Director](./development/design_pattern/_/chapters/builder.md#director)
 
+### Abstract Factory
+
+- [ ] [Abstract Factoryパターン](./development/design_pattern/_/chapters/abstract_factory.md#abstract-factoryパターン)
+	- [ ] [AbstractProduct](./development/design_pattern/_/chapters/abstract_factory.md#abstractproduct)
+	- [ ] [ConcreteProduct](./development/design_pattern/_/chapters/abstract_factory.md#concreteproduct)
+	- [ ] [AbstractFactory](./development/design_pattern/_/chapters/abstract_factory.md#abstractfactory)
+	- [ ] [ConcreteFactory](./development/design_pattern/_/chapters/abstract_factory.md#concretefactory)
+
+### Bridge
+
+- [ ] [Bridgeパターン](./development/design_pattern/_/chapters/abstract_factory.md#bridgeパターン)
+
 ### マネジメント
 
 #### マネジメント
