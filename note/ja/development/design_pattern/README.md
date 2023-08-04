@@ -20,3 +20,7 @@
 1. [Chain of Responsibility](./_/chapters/chain_of_responsibility.md)
 1. [Facade](./_/chapters/facade.md)
 1. [Mediator](./_/chapters/mediator.md)
+1. [Observer](./_/chapters/observer.md)
+1. [Memento](./_/chapters/memento.md)
+1. [State](./_/chapters/state.md)
+1. [Flyweight](./_/chapters/flyweight.md)

@@ -3386,11 +3386,39 @@
 
 #### Mediator
 
-- [ ] [Mediatorパターン](./development/design_pattern/_/chapters/facade.md#mediatorパターン)
-	- [ ] [Mediator](./development/design_pattern/_/chapters/facade.md#mediator)
-	- [ ] [ConcreteMediator](./development/design_pattern/_/chapters/facade.md#concretemediator)
-	- [ ] [Collegue](./development/design_pattern/_/chapters/facade.md#collegue)
-	- [ ] [ConcreteCollegue](./development/design_pattern/_/chapters/facade.md#concretecollegue)
+- [ ] [Mediatorパターン](./development/design_pattern/_/chapters/mediator.md#mediatorパターン)
+	- [ ] [Mediator](./development/design_pattern/_/chapters/mediator.md#mediator)
+	- [ ] [ConcreteMediator](./development/design_pattern/_/chapters/mediator.md#concretemediator)
+	- [ ] [Collegue](./development/design_pattern/_/chapters/mediator.md#collegue)
+	- [ ] [ConcreteCollegue](./development/design_pattern/_/chapters/mediator.md#concretecollegue)
+
+#### Observer
+
+- [ ] [Observerパターン](./development/design_pattern/_/chapters/observer.md#observerパターン)
+	- [ ] [Subject](./development/design_pattern/_/chapters/observer.md#subject)
+	- [ ] [ConcreteSubject](./development/design_pattern/_/chapters/observer.md#concretesubject)
+	- [ ] [Observer](./development/design_pattern/_/chapters/observer.md#observer)
+	- [ ] [ConcreteObserver](./development/design_pattern/_/chapters/observer.md#concreteobserver)
+
+### Memento
+
+- [ ] [Mementoパターン](./development/design_pattern/_/chapters/memento.md#mementoパターン)
+	- [ ] [Originator](./development/design_pattern/_/chapters/memento.md#originator)
+	- [ ] [Memento](./development/design_pattern/_/chapters/memento.md#memento)
+	- [ ] [Caretaker](./development/design_pattern/_/chapters/memento.md#caretaker)
+
+#### State
+
+- [ ] [Stateパターン](./development/design_pattern/_/chapters/state.md#stateパターン)
+	- [ ] [State](./development/design_pattern/_/chapters/state.md#state)
+	- [ ] [ConcreteState](./development/design_pattern/_/chapters/state.md#concretestate)
+	- [ ] [Context](./development/design_pattern/_/chapters/state.md#context)
+
+#### Flyweight
+
+- [ ] [Flyweightパターン](./development/design_pattern/_/chapters/flyweight.md#flyweightパターン)
+	- [ ] [Flyweight](./development/design_pattern/_/chapters/flyweight.md#flyweight)
+	- [ ] [FlyweightFactory](./development/design_pattern/_/chapters/flyweight.md#flyweightfactory)
 
 ### マネジメント
 
