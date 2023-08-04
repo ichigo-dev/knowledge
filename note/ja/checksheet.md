@@ -3325,7 +3325,7 @@
 	- [ ] [ConcreteBuilder](./development/design_pattern/_/chapters/builder.md#concretebuilder)
 	- [ ] [Director](./development/design_pattern/_/chapters/builder.md#director)
 
-### Abstract Factory
+#### Abstract Factory
 
 - [ ] [Abstract Factoryパターン](./development/design_pattern/_/chapters/abstract_factory.md#abstract-factoryパターン)
 	- [ ] [AbstractProduct](./development/design_pattern/_/chapters/abstract_factory.md#abstractproduct)
@@ -3333,7 +3333,7 @@
 	- [ ] [AbstractFactory](./development/design_pattern/_/chapters/abstract_factory.md#abstractfactory)
 	- [ ] [ConcreteFactory](./development/design_pattern/_/chapters/abstract_factory.md#concretefactory)
 
-### Bridge
+#### Bridge
 
 - [ ] [Bridgeパターン](./development/design_pattern/_/chapters/bridge.md#bridgeパターン)
 	- [ ] [Abstraction](./development/design_pattern/_/chapters/bridge.md#abstraction)
@@ -3341,27 +3341,56 @@
 	- [ ] [Implementor](./development/design_pattern/_/chapters/bridge.md#implementor)
 	- [ ] [ConcreteImplementor](./development/design_pattern/_/chapters/bridge.md#concreteimplementor)
 
-### Strategy
+#### Strategy
 
 - [ ] [Strategyパターン](./development/design_pattern/_/chapters/strategy.md#strategyパターン)
 	- [ ] [Strategy](./development/design_pattern/_/chapters/strategy.md#strategy)
 	- [ ] [ConcreteStrategy](./development/design_pattern/_/chapters/strategy.md#concretestrategy)
 	- [ ] [Context](./development/design_pattern/_/chapters/strategy.md#context)
 
-### Composite
+#### Composite
 
 - [ ] [Compositeパターン](./development/design_pattern/_/chapters/composite.md#compositeパターン)
 	- [ ] [Leaf](./development/design_pattern/_/chapters/composite.md#leaf)
 	- [ ] [Composite](./development/design_pattern/_/chapters/composite.md#composite)
 	- [ ] [Component](./development/design_pattern/_/chapters/composite.md#component)
 
-### Decorator
+#### Decorator
 
 - [ ] [Decoratorパターン](./development/design_pattern/_/chapters/decorator.md#decoratorパターン)
 	- [ ] [Component](./development/design_pattern/_/chapters/decorator.md#component)
 	- [ ] [ConcreteComponent](./development/design_pattern/_/chapters/decorator.md#concretecomponent)
 	- [ ] [Decorator](./development/design_pattern/_/chapters/decorator.md#decorator)
 	- [ ] [ConcreteDecorator](./development/design_pattern/_/chapters/decorator.md#concretedecorator)
+
+#### Visitor
+
+- [ ] [Visitorパターン](./development/design_pattern/_/chapters/visitor.md#visitorパターン)
+	- [ ] [Visitor](./development/design_pattern/_/chapters/visitor.md#visitor)
+	- [ ] [ConcreteVisitor](./development/design_pattern/_/chapters/visitor.md#concretevisitor)
+	- [ ] [Acceptor](./development/design_pattern/_/chapters/visitor.md#acceptor)
+		- [ ] [ダブルディスパッチ](./development/design_pattern/_/chapters/visitor.md#acceptor)
+	- [ ] [ConcreteAcceptor](./development/design_pattern/_/chapters/visitor.md#concreteacceptor)
+
+#### Chain of Responsibility
+
+- [ ] [Chain of Responsibilityパターン](./development/design_pattern/_/chapters/chain_of_responsibility.md#chain-of-responsibilityパターン)
+	- [ ] [Handler](./development/design_pattern/_/chapters/chain_of_responsibility.md#handler)
+	- [ ] [ConcreteHandler](./development/design_pattern/_/chapters/chain_of_responsibility.md#concretehandler)
+
+#### Facade
+
+- [ ] [Facadeパターン](./development/design_pattern/_/chapters/facade.md#facadeパターン)
+	- [ ] [Facade](./development/design_pattern/_/chapters/facade.md#facade)
+	- [ ] [Class](./development/design_pattern/_/chapters/facade.md#class)
+
+#### Mediator
+
+- [ ] [Mediatorパターン](./development/design_pattern/_/chapters/facade.md#mediatorパターン)
+	- [ ] [Mediator](./development/design_pattern/_/chapters/facade.md#mediator)
+	- [ ] [ConcreteMediator](./development/design_pattern/_/chapters/facade.md#concretemediator)
+	- [ ] [Collegue](./development/design_pattern/_/chapters/facade.md#collegue)
+	- [ ] [ConcreteCollegue](./development/design_pattern/_/chapters/facade.md#concretecollegue)
 
 ### マネジメント
 

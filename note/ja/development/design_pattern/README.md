@@ -16,3 +16,7 @@
 1. [Strategy](./_/chapters/strategy.md)
 1. [Composite](./_/chapters/composite.md)
 1. [Decorator](./_/chapters/decorator.md)
+1. [Visitor](./_/chapters/visitor.md)
+1. [Chain of Responsibility](./_/chapters/chain_of_responsibility.md)
+1. [Facade](./_/chapters/facade.md)
+1. [Mediator](./_/chapters/mediator.md)
