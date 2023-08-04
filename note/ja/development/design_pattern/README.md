@@ -13,3 +13,6 @@
 1. [Builder](./_/chapters/builder.md)
 1. [Abstract Factory](./_/chapters/abstract_factory.md)
 1. [Bridge](./_/chapters/bridge.md)
+1. [Strategy](./_/chapters/strategy.md)
+1. [Composite](./_/chapters/composite.md)
+1. [Decorator](./_/chapters/decorator.md)

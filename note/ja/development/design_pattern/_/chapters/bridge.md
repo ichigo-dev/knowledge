@@ -1,11 +1,15 @@
 # 『Bridge』ノート
 
-（最終更新： 2023-08-03）
+（最終更新： 2023-08-04）
 
 
 ## 目次
 
 1. [Bridgeパターン](#bridgeパターン)
+	1. [Abstraction](#abstraction)
+	1. [RefinedAbstraction](#refinedabstraction)
+	1. [Implementor](#implementor)
+	1. [ConcreteImplementor](#concreteimplementor)
 
 
 ## Bridgeパターン
@@ -31,3 +35,7 @@ Abstractionは、実装の[クラス](../../../../programming/_/chapters/object_
 ### Implementor
 
 **implementor**（実装者）は、[Bridgeパターン](#bridgeパターン)の実装の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Abstraction](#abstraction)が利用する[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を定義した[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)。
+
+### ConcreteImplementor
+
+**ConcreteImplementor**（具体的な実装者）は、[Bridgeパターン](#bridgeパターン)の実装の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Implementor](#implementor)の[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)の具体的な実装を持つ[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。ConcreteImplementorの[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)は[Abstraction](#abstraction)の[フィールド](../../../../programming/_/chapters/object_oriented.md#フィールド)として保持される。

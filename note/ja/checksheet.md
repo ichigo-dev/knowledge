@@ -3335,7 +3335,33 @@
 
 ### Bridge
 
-- [ ] [Bridgeパターン](./development/design_pattern/_/chapters/abstract_factory.md#bridgeパターン)
+- [ ] [Bridgeパターン](./development/design_pattern/_/chapters/bridge.md#bridgeパターン)
+	- [ ] [Abstraction](./development/design_pattern/_/chapters/bridge.md#abstraction)
+	- [ ] [RefinedAbstraction](./development/design_pattern/_/chapters/bridge.md#refinedabstraction)
+	- [ ] [Implementor](./development/design_pattern/_/chapters/bridge.md#implementor)
+	- [ ] [ConcreteImplementor](./development/design_pattern/_/chapters/bridge.md#concreteimplementor)
+
+### Strategy
+
+- [ ] [Strategyパターン](./development/design_pattern/_/chapters/strategy.md#strategyパターン)
+	- [ ] [Strategy](./development/design_pattern/_/chapters/strategy.md#strategy)
+	- [ ] [ConcreteStrategy](./development/design_pattern/_/chapters/strategy.md#concretestrategy)
+	- [ ] [Context](./development/design_pattern/_/chapters/strategy.md#context)
+
+### Composite
+
+- [ ] [Compositeパターン](./development/design_pattern/_/chapters/composite.md#compositeパターン)
+	- [ ] [Leaf](./development/design_pattern/_/chapters/composite.md#leaf)
+	- [ ] [Composite](./development/design_pattern/_/chapters/composite.md#composite)
+	- [ ] [Component](./development/design_pattern/_/chapters/composite.md#component)
+
+### Decorator
+
+- [ ] [Decoratorパターン](./development/design_pattern/_/chapters/decorator.md#decoratorパターン)
+	- [ ] [Component](./development/design_pattern/_/chapters/decorator.md#component)
+	- [ ] [ConcreteComponent](./development/design_pattern/_/chapters/decorator.md#concretecomponent)
+	- [ ] [Decorator](./development/design_pattern/_/chapters/decorator.md#decorator)
+	- [ ] [ConcreteDecorator](./development/design_pattern/_/chapters/decorator.md#concretedecorator)
 
 ### マネジメント
 
