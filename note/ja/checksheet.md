@@ -3420,6 +3420,29 @@
 	- [ ] [Flyweight](./development/design_pattern/_/chapters/flyweight.md#flyweight)
 	- [ ] [FlyweightFactory](./development/design_pattern/_/chapters/flyweight.md#flyweightfactory)
 
+#### Proxy
+
+- [ ] [Proxyパターン](./development/design_pattern/_/chapters/proxy.md#proxyパターン)
+	- [ ] [Subject](./development/design_pattern/_/chapters/proxy.md#subject)
+	- [ ] [Proxy](./development/design_pattern/_/chapters/proxy.md#proxy)
+	- [ ] [RealSubject](./development/design_pattern/_/chapters/proxy.md#realsubject)
+
+#### Command
+
+- [ ] [Commandパターン](./development/design_pattern/_/chapters/command.md#commandパターン)
+	- [ ] [Command](./development/design_pattern/_/chapters/command.md#command)
+	- [ ] [ConcreteCommand](./development/design_pattern/_/chapters/command.md#concretecommand)
+	- [ ] [Receiver](./development/design_pattern/_/chapters/command.md#receiver)
+	- [ ] [Invoker](./development/design_pattern/_/chapters/command.md#invoker)
+
+#### Interpreter
+
+- [ ] [Interpreterパターン](./development/design_pattern/_/chapters/interpreter.md#interpreterパターン)
+	- [ ] [AbstractExpression](./development/design_pattern/_/chapters/interpreter.md#abstractexpression)
+	- [ ] [TerminalExpression](./development/design_pattern/_/chapters/interpreter.md#terminalexpression)
+	- [ ] [NonterminalExpression](./development/design_pattern/_/chapters/interpreter.md#nonterminalexpression)
+	- [ ] [Context](./development/design_pattern/_/chapters/interpreter.md#context)
+
 ### マネジメント
 
 #### マネジメント

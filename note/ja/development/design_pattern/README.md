@@ -24,3 +24,6 @@
 1. [Memento](./_/chapters/memento.md)
 1. [State](./_/chapters/state.md)
 1. [Flyweight](./_/chapters/flyweight.md)
+1. [Proxy](./_/chapters/proxy.md)
+1. [Command](./_/chapters/command.md)
+1. [Interpreter](./_/chapters/interpreter.md)
