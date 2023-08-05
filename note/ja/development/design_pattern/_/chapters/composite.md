@@ -27,4 +27,4 @@ Compositeパターンは、[Leaf](#leaf)、[Composite](#composite)、[Component]
 
 ### Component
 
-**Component**は、[Compositeパターン](#compositeパターン)において、[Leaf](#leaf)と[Composite](#composite)の役を同一視するための抽象化構造。例えば、[Leaf](#leaf)と[Composite](#composite)の共通の[スーパクラス](../../../../programming/_/chapters/object_oriented.md#親クラス)として実現することができる。
+**Component**は、[Compositeパターン](#compositeパターン)において、[Leaf](#leaf)と[Composite](#composite)の役を同一視するための抽象化構造。例えば、[Leaf](#leaf)と[Composite](#composite)の共通の[スーパークラス](../../../../programming/_/chapters/object_oriented.md#親クラス)として実現することができる。

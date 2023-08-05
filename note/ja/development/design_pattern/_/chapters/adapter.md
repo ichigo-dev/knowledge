@@ -14,7 +14,7 @@
 
 ## Adapterパターン
 
-**Adapterパターン**（**Wrapperパターン**）は、既存の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)や[コンポーネント](../../../../computer/software/_/chapters/package.md#コンポーネント)を別のインタフェースに変換するための[デザインパターン](./design_pattern.md#デザインパターン)。
+**Adapterパターン**（**Wrapperパターン**）は、既存の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)や[コンポーネント](../../../../computer/software/_/chapters/package.md#コンポーネント)を別のインタフェースに変換するための[デザインパターン](./design_pattern.md#デザインパターン)。このパターンは、既存の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)を利用したいが、そのインタフェースが[プログラム](../../../../programming/_/chapters/programming.md#プログラム)との互換性がない場合に非常に有用である。また、[スーパクラス](../../../../programming/_/chapters/object_oriented.md#親クラス)に欠けている機能を、対象となる[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)をラップすることで動的に追加するという使い方もできる（[Decoratorパターン](./decorator.md#decoratorパターン)のような使い方）。
 
 Adapterパターンは、[Target](#target)、[Client](#client)、[Adaptee](#adaptee)、[Adapter](#adapter)から構成される。
 
