@@ -1,6 +1,6 @@
 # 『Iterator』ノート
 
-（最終更新： 2023-08-05）
+（最終更新： 2023-08-06）
 
 
 ## 目次
@@ -80,7 +80,7 @@ public class Client
 //------------------------------------------------------------------------------
 // Aggregate
 //------------------------------------------------------------------------------
-public interface Aggregate<T>
+interface Aggregate<T>
 {
     public abstract Iterator<T> iterator();
 }
@@ -88,7 +88,7 @@ public interface Aggregate<T>
 //------------------------------------------------------------------------------
 // Iterator
 //------------------------------------------------------------------------------
-public interface Iterator<T>
+interface Iterator<T>
 {
     public abstract boolean hasNext();
     public abstract T next();

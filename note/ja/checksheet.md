@@ -3288,7 +3288,6 @@
 
 - [ ] [Adapterパターン](./development/design_pattern/_/chapters/adapter.md#adapterパターン)
 	- [ ] [Target](./development/design_pattern/_/chapters/adapter.md#target)
-	- [ ] [Client](./development/design_pattern/_/chapters/adapter.md#client)
 	- [ ] [Adaptee](./development/design_pattern/_/chapters/adapter.md#adaptee)
 	- [ ] [Adapter](./development/design_pattern/_/chapters/adapter.md#adapter)
 
