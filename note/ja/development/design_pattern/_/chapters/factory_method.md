@@ -44,6 +44,8 @@ Creatorは実際に生成される[ConcreteProduct](#concreteproduct)につい�
 
 ### Java
 
+テキスト形式の文書を出力する[システム](../../../../system/_/chapters/system.md#システム)について、将来的に別形式の文書での出力に対応することを見据えた実装を考える。
+
 ```java
 //------------------------------------------------------------------------------
 // Client
@@ -52,6 +54,7 @@ public class Client
 {
     public static void main( String[] args )
     {
+        // 文書を生成
         DocumentFactory factory = new TextDocumentFactory();
         Document document = factory.create("Hello, world");
         System.out.println(document.getContent());
