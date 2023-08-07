@@ -36,7 +36,7 @@ Builderパターンは、[Builder](#builder)、[ConcreteBuilder](#concretebuilde
 
 ### Java
 
-メール送信機能の実装に[Builderパターン](#builderパターン)を適用する例を考える。
+電子メールの作成機能の実装に[Builderパターン](#builderパターン)を適用する例を考える。
 
 ```java
 //------------------------------------------------------------------------------
