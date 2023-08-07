@@ -47,6 +47,8 @@ Abstractionは、実装の[クラス](../../../../programming/_/chapters/object_
 
 ### Java
 
+[HTML](../../../../web_development/html/_/chapters/html.md#html)[コンポーネント](../../../../computer/software/_/chapters/package.md#コンポーネント)を生成する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)において、[コンポーネント](../../../../computer/software/_/chapters/package.md#コンポーネント)自体とそれを描画する[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)を分離する場合を考える。
+
 ```java
 //------------------------------------------------------------------------------
 // Client
