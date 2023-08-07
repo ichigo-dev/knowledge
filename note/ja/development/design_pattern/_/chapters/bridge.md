@@ -1,6 +1,6 @@
 # 『Bridge』ノート
 
-（最終更新： 2023-08-04）
+（最終更新： 2023-08-07）
 
 
 ## 目次
@@ -10,6 +10,8 @@
 	1. [RefinedAbstraction](#refinedabstraction)
 	1. [Implementor](#implementor)
 	1. [ConcreteImplementor](#concreteimplementor)
+1. [サンプルプログラム](#サンプルプログラム)
+	1. [Java](#java)
 
 
 ## Bridgeパターン
@@ -30,12 +32,162 @@ Abstractionは、実装の[クラス](../../../../programming/_/chapters/object_
 
 ### RefinedAbstraction
 
-**RefinedAbstraction**（改善した抽象化）は、[Bridgeパターン](#bridgeパターン)の機能の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Abstraction](#abstraction)を[継承](../../../../programming/_/chapters/object_oriented.md#継承)して機能を拡充した[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。[Abstraction](#abstraction)から直接[継承](../../../../programming/_/chapters/object_oriented.md#継承)するだけでなく、RefinedAbstractionの機能を[継承](../../../../programming/_/chapters/object_oriented.md#継承)してさらに機能追加を行うこともできる。
+**RefinedAbstraction**（改善した抽象化）は、[Bridgeパターン](#bridgeパターン)の機能の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Abstraction](#abstraction)を[継承](../../../../programming/_/chapters/object_oriented.md#継承)して機能を拡充した[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。[Abstraction](#abstraction)から直接[継承](../../../../programming/_/chapters/object_oriented.md#継承)するだけでなく、別のRefinedAbstractionの機能を[継承](../../../../programming/_/chapters/object_oriented.md#継承)してさらに機能追加を行うこともできる。
 
 ### Implementor
 
-**implementor**（実装者）は、[Bridgeパターン](#bridgeパターン)の実装の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Abstraction](#abstraction)が利用する[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を定義した[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)。
+**Implementor**（実装者）は、[Bridgeパターン](#bridgeパターン)の実装の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Abstraction](#abstraction)が利用する[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を定義した[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)。[Abstraction](#abstraction)はImplementatorで宣言された[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を介してのみ具体的な実装を利用することができる。
 
 ### ConcreteImplementor
 
 **ConcreteImplementor**（具体的な実装者）は、[Bridgeパターン](#bridgeパターン)の実装の[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)階層において、[Implementor](#implementor)の[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)の具体的な実装を持つ[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。ConcreteImplementorの[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)は[Abstraction](#abstraction)の[フィールド](../../../../programming/_/chapters/object_oriented.md#フィールド)として保持される。
+
+
+## サンプルプログラム
+
+### Java
+
+```java
+//------------------------------------------------------------------------------
+// Client
+//------------------------------------------------------------------------------
+public class Client
+{
+    public static void main( String[] args )
+    {
+        // コンポーネントの作成と描画
+        Component component = new ButtonComponent();
+        component.setContent("Example");
+        ComponentRenderer renderer = new ComponentRenderer(component);
+        renderer.display();
+
+        // コンポーネントレンダラーの拡張
+        AdvancedComponentRenderer advancedRenderer = renderer.advanced();
+        advancedRenderer.displayWithParen();
+    }
+}
+
+//------------------------------------------------------------------------------
+// Abstraction
+//------------------------------------------------------------------------------
+class ComponentRenderer
+{
+    protected Component component;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ（Componentを委譲）
+    //--------------------------------------------------------------------------
+    public ComponentRenderer( Component component )
+    {
+        this.component = component;
+    }
+
+    //--------------------------------------------------------------------------
+    // コンポーネントを描画
+    //--------------------------------------------------------------------------
+    public void display()
+    {
+        System.out.println(this.component.build());
+    }
+
+    //--------------------------------------------------------------------------
+    // 拡張
+    //--------------------------------------------------------------------------
+    public AdvancedComponentRenderer advanced()
+    {
+        return new AdvancedComponentRenderer(this.component);
+    }
+}
+
+//------------------------------------------------------------------------------
+// RefinedAbstraction
+//------------------------------------------------------------------------------
+class AdvancedComponentRenderer extends ComponentRenderer
+{
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public AdvancedComponentRenderer( Component component )
+    {
+        super(component);
+    }
+
+    //--------------------------------------------------------------------------
+    // 括弧付きでコンポーネントを描画
+    //--------------------------------------------------------------------------
+    public void displayWithParen()
+    {
+        System.out.println("(" + this.component.build() + ")");
+    }
+}
+
+//------------------------------------------------------------------------------
+// Implementor
+//------------------------------------------------------------------------------
+interface Component
+{
+    public abstract void setContent( String content );
+    public abstract String build();
+}
+
+//------------------------------------------------------------------------------
+// ConcreteImplementor
+//------------------------------------------------------------------------------
+class ButtonComponent implements Component
+{
+    protected String content;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public ButtonComponent()
+    {
+        this.content = "";
+    }
+
+    //--------------------------------------------------------------------------
+    // コンテンツの設定
+    //--------------------------------------------------------------------------
+    public void setContent( String content )
+    {
+        this.content = content;
+    }
+
+    //--------------------------------------------------------------------------
+    // パーツの作成
+    //--------------------------------------------------------------------------
+    public String build()
+    {
+        return "<button>" + this.content + "</button>";
+    }
+}
+
+class TextFieldComponent implements Component
+{
+    protected String content;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public TextFieldComponent()
+    {
+        this.content = "";
+    }
+
+    //--------------------------------------------------------------------------
+    // コンテンツの設定
+    //--------------------------------------------------------------------------
+    public void setContent( String content )
+    {
+        this.content = content;
+    }
+
+    //--------------------------------------------------------------------------
+    // パーツの作成
+    //--------------------------------------------------------------------------
+    public String build()
+    {
+        return "<label><input>" + this.content + "</label>";
+    }
+}
+```
