@@ -139,6 +139,7 @@ pub fn Quiz<G: Html>( cx: Scope ) -> View<G>
             answer_popup_message.set(view!{ cx, "Great!" });
             answer_is_open.set(true);
             is_correct.set(true);
+            return;
         }
 
         remain.set(*remain.get() - 1);
