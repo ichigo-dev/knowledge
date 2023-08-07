@@ -3315,7 +3315,6 @@
 - [ ] [Prototypeパターン](./development/design_pattern/_/chapters/prototype.md#prototypeパターン)
 	- [ ] [Prototype](./development/design_pattern/_/chapters/prototype.md#prototype)
 	- [ ] [ConcretePrototype](./development/design_pattern/_/chapters/prototype.md#concreteprototype)
-	- [ ] [Client](./development/design_pattern/_/chapters/prototype.md#client)
 
 #### Builder
 
