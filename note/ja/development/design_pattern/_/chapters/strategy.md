@@ -39,6 +39,8 @@ Strategyパターンは、[Strategy](#strategy)、[ConcreteStrategy](#concretest
 ソート[アルゴリズム](../../../../programming/_/chapters/algorithm.md#アルゴリズム)を柔軟に選択できるようなユーティリティの実装を考える。
 
 ```java
+import java.util.Arrays;
+
 //------------------------------------------------------------------------------
 // Client
 //------------------------------------------------------------------------------
@@ -47,13 +49,27 @@ public class Client
     public static void main( String[] args )
     {
         // 配列のソート
-        Integer[] array = { 5, 1, 2, 8, 9, 3, 4, 6, 0, 7 };
-        SortStrategy<Integer> strategy = new QuickSort<>();
-        SortContext<Integer> context = new SortContext<>(strategy);
-        context.sort(array);
-        for( int i = 0; i < array.length; i++ )
+        Integer[] array1 = { 5, 1, 2, 8, 9, 3, 4, 6, 0, 7 };
+        SortStrategy<Integer> strategy1 = new BubbleSort<>();
+        SortContext<Integer> context = new SortContext<>(strategy1);
+        context.sort(array1);
+        System.out.println("Bubble Sort");
+        for( int i = 0; i < array1.length; i++ )
         {
-            System.out.println(array[i]);
+            System.out.println(array1[i]);
+        }
+
+        System.out.println("===========");
+
+        // 戦略を変更してのソート
+        Integer[] array2 = { 8, 2, 0, 9, 4, 6, 1, 3, 5, 7 };
+        SortStrategy<Integer> strategy2 = new MergeSort<>();
+        context.setStrategy(strategy2);
+        context.sort(array2);
+        System.out.println("Merge Sort");
+        for( int i = 0; i < array2.length; i++ )
+        {
+            System.out.println(array2[i]);
         }
     }
 }
@@ -160,7 +176,15 @@ class MergeSort<T extends Comparable<T>> implements SortStrategy<T>
 
     public void sort( T[] array, int low, int high )
     {
+        if( low < high )
+        {
+            int mid = (low + high) / 2;
 
+            // 左右に分割してソート
+            this.sort(array, low, mid);
+            this.sort(array, mid + 1, high);
+            this.merge(array, low, mid, high);
+        }
     }
 
     //--------------------------------------------------------------------------
@@ -168,7 +192,43 @@ class MergeSort<T extends Comparable<T>> implements SortStrategy<T>
     //--------------------------------------------------------------------------
     public void merge( T[] array, int low, int mid, int high )
     {
+        int n1 = mid - low + 1;
+        int n2 = high - mid;
+        T[] leftArray = Arrays.copyOfRange(array, low, mid + 1);
+        T[] rightArray = Arrays.copyOfRange(array, mid + 1, high + 1);
 
+        int i = 0;
+        int j = 0;
+        int k = low;
+
+        while( i < n1 && j < n2 )
+        {
+            if( leftArray[i].compareTo(rightArray[j]) <= 0 )
+            {
+                array[k] = leftArray[i];
+                i++;
+            }
+            else
+            {
+                array[k] = rightArray[j];
+                j++;
+            }
+            k++;
+        }
+
+        while( i < n1 )
+        {
+            array[k] = leftArray[i];
+            i++;
+            k++;
+        }
+
+        while( j < n2 )
+        {
+            array[k] = rightArray[j];
+            j++;
+            k++;
+        }
     }
 }
 
@@ -183,6 +243,14 @@ class SortContext<T extends Comparable<T>>
     // コンストラクタ
     //--------------------------------------------------------------------------
     public SortContext( SortStrategy<T> strategy )
+    {
+        this.strategy = strategy;
+    }
+
+    //--------------------------------------------------------------------------
+    // 戦略の設定
+    //--------------------------------------------------------------------------
+    public void setStrategy( SortStrategy<T> strategy )
     {
         this.strategy = strategy;
     }
