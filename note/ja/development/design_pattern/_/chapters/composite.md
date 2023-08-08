@@ -34,9 +34,9 @@ Compositeパターンは、[Component](#component)、[Leaf](#leaf)、[Composite]
 
 ## サンプルプログラム
 
-JSONをコンポーネントとして表現し、それを表示する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を考える。
-
 ### Java
+
+JSONをコンポーネントとして表現し、それを表示する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を考える。
 
 ```java
 import java.util.ArrayList;
@@ -49,6 +49,7 @@ public class Client
 {
     public static void main( String[] args )
     { 
+        // JSONコンポーネントを作成して表示
         JsonComposite root = new JsonComposite("root");
 
         JsonComposite person = new JsonComposite("person");
@@ -136,6 +137,8 @@ class JsonComposite extends JsonComponent
         System.out.println(indent + "\"" + key + "\": {");
         for( int i = 0; i < children.size(); i++ )
         {
+            // 子要素はComositeでもLeafでもdisplayを実装しているので、それを呼び
+            // 出す（処理を委任）
             JsonComponent component = children.get(i);
             component.display(depth + 1);
             if( i < children.size() - 1 )
