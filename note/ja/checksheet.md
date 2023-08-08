@@ -3349,9 +3349,9 @@
 #### Composite
 
 - [ ] [Compositeパターン](./development/design_pattern/_/chapters/composite.md#compositeパターン)
+	- [ ] [Component](./development/design_pattern/_/chapters/composite.md#component)
 	- [ ] [Leaf](./development/design_pattern/_/chapters/composite.md#leaf)
 	- [ ] [Composite](./development/design_pattern/_/chapters/composite.md#composite)
-	- [ ] [Component](./development/design_pattern/_/chapters/composite.md#component)
 
 #### Decorator
 
