@@ -3379,6 +3379,7 @@
 #### Facade
 
 - [ ] [Facadeパターン](./development/design_pattern/_/chapters/facade.md#facadeパターン)
+	- [ ] [神オブジェクト](./development/design_pattern/_/chapters/facade.md#facadeパターン)
 	- [ ] [Facade](./development/design_pattern/_/chapters/facade.md#facade)
 	- [ ] [Class](./development/design_pattern/_/chapters/facade.md#class)
 
