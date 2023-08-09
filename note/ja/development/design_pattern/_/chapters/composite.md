@@ -135,13 +135,13 @@ class JsonComposite extends JsonComponent
     {
         String indent = " ".repeat(this.displayIndent * depth);
         System.out.println(indent + "\"" + key + "\": {");
-        for( int i = 0; i < children.size(); i++ )
+        for( int i = 0; i < this.children.size(); i++ )
         {
             // 子要素はComositeでもLeafでもdisplayを実装しているので、それを呼び
             // 出す（処理を委任）
-            JsonComponent component = children.get(i);
+            JsonComponent component = this.children.get(i);
             component.display(depth + 1);
-            if( i < children.size() - 1 )
+            if( i < this.children.size() - 1 )
             {
                 System.out.println(",");
             }
