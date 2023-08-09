@@ -3388,8 +3388,8 @@
 - [ ] [Mediatorパターン](./development/design_pattern/_/chapters/mediator.md#mediatorパターン)
 	- [ ] [Mediator](./development/design_pattern/_/chapters/mediator.md#mediator)
 	- [ ] [ConcreteMediator](./development/design_pattern/_/chapters/mediator.md#concretemediator)
-	- [ ] [Collegue](./development/design_pattern/_/chapters/mediator.md#collegue)
-	- [ ] [ConcreteCollegue](./development/design_pattern/_/chapters/mediator.md#concretecollegue)
+	- [ ] [Colleague](./development/design_pattern/_/chapters/mediator.md#colleague)
+	- [ ] [ConcreteColleague](./development/design_pattern/_/chapters/mediator.md#concretecolleague)
 
 #### Observer
 
