@@ -1,6 +1,6 @@
 # 『Observer』ノート
 
-（最終更新： 2023-08-04）
+（最終更新： 2023-08-10）
 
 
 ## 目次
@@ -10,6 +10,8 @@
 	1. [ConcreteSubject](#concretesubject)
 	1. [Observer](#observer)
 	1. [ConcreteObserver](#concreteobserver)
+1. [サンプルプログラム](#サンプルプログラム)
+	1. [Java](#java)
 
 
 ## Observerパターン
@@ -126,7 +128,7 @@ abstract class Component
 class TextFieldComponent extends Component
 {
     //--------------------------------------------------------------------------
-    // 値の入力
+    // 値の入力イベント
     //--------------------------------------------------------------------------
     public void input( String value )
     {
@@ -138,7 +140,7 @@ class TextFieldComponent extends Component
 class ButtonComponent extends Component
 {
     //--------------------------------------------------------------------------
-    // ボタン押下
+    // ボタン押下イベント
     //--------------------------------------------------------------------------
     public void click()
     {
