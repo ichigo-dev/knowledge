@@ -1,6 +1,6 @@
 # 『Memento』ノート
 
-（最終更新： 2023-08-11）
+（最終更新： 2023-08-12）
 
 
 ## 目次
@@ -9,6 +9,8 @@
 	1. [Originator](#originator)
 	1. [Memento](#memento)
 	1. [Caretaker](#caretaker)
+1. [サンプルプログラム](#サンプルプログラム)
+	1. [Java](#java)
 
 
 ## Mementoパターン
@@ -28,3 +30,151 @@ Mementoパターンは、[Originator](#originator)、[Memento](#memento)、[Care
 ### Caretaker
 
 **Caretaker**（世話人）は、[Mementoパターン](#mementoパターン)において、[Memento](#memento)の履歴を保持し、[Originator](#originator)の状態を保存したり、ある時点の状態に戻したりするためタイミングを管理する[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。どのタイミングで[Originator](#originator)の状態を獲得するべきか、また復元すべきかを知っており、[Mementoパターン](#mementoパターン)を利用する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)はCaretakerの[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を利用するだけで、状態管理のタイミングを意識する必要はない。
+
+
+## サンプルプログラム
+
+### Java
+
+入力した文字列を保存しておき、後から復元できるようなテキストエディタの実装を考える。
+
+```java
+import java.util.ArrayDeque;
+
+//------------------------------------------------------------------------------
+// Client
+//------------------------------------------------------------------------------
+public class Client
+{
+    public static void main( String[] args )
+    {
+        // エディタの編集履歴の管理
+        TextEditor editor = new TextEditor();
+        TextEditorMementoManager manager = new TextEditorMementoManager(editor);
+
+        editor.appendText("Hello");
+        manager.save();
+        editor.appendText(", ");
+        manager.save();
+        editor.appendText("world");
+        manager.save();
+        editor.appendText("!");
+
+        editor.printText();
+        manager.load();
+        editor.printText();
+        manager.load();
+        editor.printText();
+        manager.load();
+        editor.printText();
+    }
+}
+
+//------------------------------------------------------------------------------
+// Originator
+//------------------------------------------------------------------------------
+public class TextEditor
+{
+    private String text;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public TextEditor()
+    {
+        this.text = new String();
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列を追加
+    //--------------------------------------------------------------------------
+    public void appendText( String text )
+    {
+        this.text += text;
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列を表示
+    //--------------------------------------------------------------------------
+    public void printText()
+    {
+        System.out.println(this.text);
+    }
+
+    //--------------------------------------------------------------------------
+    // Mementoを作成
+    //--------------------------------------------------------------------------
+    public TextEditorMemento createMemento()
+    {
+        return new TextEditorMemento(this.text);
+    }
+
+    //--------------------------------------------------------------------------
+    // Mementoを復元
+    //--------------------------------------------------------------------------
+    public void setMemento( TextEditorMemento memento )
+    {
+        this.text = memento.getText();
+    }
+}
+
+//------------------------------------------------------------------------------
+// Memento
+//------------------------------------------------------------------------------
+public class TextEditorMemento
+{
+    private String text;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public TextEditorMemento( String text )
+    {
+        this.text = text;
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列を取得
+    //--------------------------------------------------------------------------
+    public String getText()
+    {
+        return this.text;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Caretaker
+//------------------------------------------------------------------------------
+public class TextEditorMementoManager
+{
+    private TextEditor editor;
+    private ArrayDeque<TextEditorMemento> mementoList;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public TextEditorMementoManager( TextEditor editor )
+    {
+        this.editor = editor;
+        this.mementoList = new ArrayDeque<TextEditorMemento>();
+    }
+
+    //--------------------------------------------------------------------------
+    // 状態の保存
+    //--------------------------------------------------------------------------
+    public void save()
+    {
+        TextEditorMemento memento = this.editor.createMemento();
+        this.mementoList.push(memento);
+    }
+
+    //--------------------------------------------------------------------------
+    // 状態の復元
+    //--------------------------------------------------------------------------
+    public void load()
+    {
+        TextEditorMemento memento = this.mementoList.pop();
+        this.editor.setMemento(memento);
+    }
+}
+```
