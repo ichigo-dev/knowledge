@@ -73,7 +73,7 @@ public class Client
 //------------------------------------------------------------------------------
 // Originator
 //------------------------------------------------------------------------------
-public class TextEditor
+class TextEditor
 {
     private String text;
 
@@ -121,7 +121,7 @@ public class TextEditor
 //------------------------------------------------------------------------------
 // Memento
 //------------------------------------------------------------------------------
-public class TextEditorMemento
+class TextEditorMemento
 {
     private String text;
 
@@ -145,7 +145,7 @@ public class TextEditorMemento
 //------------------------------------------------------------------------------
 // Caretaker
 //------------------------------------------------------------------------------
-public class TextEditorMementoManager
+class TextEditorMementoManager
 {
     private TextEditor editor;
     private ArrayDeque<TextEditorMemento> mementoList;
