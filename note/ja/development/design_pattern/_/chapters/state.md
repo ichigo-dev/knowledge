@@ -1,6 +1,6 @@
 # 『State』ノート
 
-（最終更新： 2023-08-14）
+（最終更新： 2023-08-15）
 
 
 ## 目次
@@ -36,6 +36,8 @@ Stateパターンは、[State](#state)、[ConcreteState](#concretestate)、[Cont
 
 ### Java
 
+時間を計測するストップウォッチの実装において、ストップウォッチの状態を[Stateパターン](#stateパターン)で管理するケースを考える。
+
 ```java
 //------------------------------------------------------------------------------
 // Client
@@ -44,13 +46,325 @@ public class Client
 {
     public static void main( String[] args )
     {
+        // ストップウォッチによる時間の計測
+        Stopwatch stopwatch = new Stopwatch();
+        System.out.println(stopwatch.getTime());
+
+        try
+        {
+            stopwatch.start();
+            Thread.sleep(10);
+            stopwatch.stop();
+            System.out.println(stopwatch.getTime());
+
+            stopwatch.start();
+            Thread.sleep(20);
+            stopwatch.stop();
+            System.out.println(stopwatch.getTime());
+        }
+        catch( Exception e )
+        {
+            System.out.println(e);
+        }
+
+        stopwatch.reset();
+        System.out.println(stopwatch.getTime());
     }
 }
 
 //------------------------------------------------------------------------------
 // State
 //------------------------------------------------------------------------------
-abstract class InputMode
+interface StopwatchState
 {
+    public abstract void start( StopwatchContext context );
+    public abstract void stop( StopwatchContext context );
+    public abstract void reset( StopwatchContext context );
+    public abstract int getTime( StopwatchContext context );
+}
+
+//------------------------------------------------------------------------------
+// ConcreteState
+//------------------------------------------------------------------------------
+class InitialState implements StopwatchState
+{
+    private static InitialState instance;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタをprivateに隠蔽
+    //--------------------------------------------------------------------------
+    private InitialState()
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // インスタンス取得
+    //--------------------------------------------------------------------------
+    public static StopwatchState getInstance()
+    {
+        if( InitialState.instance == null )
+        {
+            InitialState.instance = new InitialState();
+        }
+        return InitialState.instance;
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の開始
+    //--------------------------------------------------------------------------
+    public void start( StopwatchContext context )
+    {
+        context.setState(MeasuringState.getInstance());
+        context.setStartTime((int)System.currentTimeMillis());
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の終了
+    //--------------------------------------------------------------------------
+    public void stop( StopwatchContext context )
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録のリセット
+    //--------------------------------------------------------------------------
+    public void reset( StopwatchContext context )
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の取得
+    //--------------------------------------------------------------------------
+    public int getTime( StopwatchContext context )
+    {
+        return 0;
+    }
+}
+
+class MeasuringState implements StopwatchState
+{
+    private static MeasuringState instance;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタをprivateに隠蔽
+    //--------------------------------------------------------------------------
+    private MeasuringState()
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // インスタンス取得
+    //--------------------------------------------------------------------------
+    public static StopwatchState getInstance()
+    {
+        if( MeasuringState.instance == null )
+        {
+            MeasuringState.instance = new MeasuringState();
+        }
+        return MeasuringState.instance;
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の開始
+    //--------------------------------------------------------------------------
+    public void start( StopwatchContext context )
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の終了
+    //--------------------------------------------------------------------------
+    public void stop( StopwatchContext context )
+    {
+        context.setState(ResultState.getInstance());
+        context.setTime(this.calculateTime(context));
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録のリセット
+    //--------------------------------------------------------------------------
+    public void reset( StopwatchContext context )
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の取得
+    //--------------------------------------------------------------------------
+    public int getTime( StopwatchContext context )
+    {
+        return this.calculateTime(context);
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の計算
+    //--------------------------------------------------------------------------
+    private int calculateTime( StopwatchContext context )
+    {
+        int now = (int)System.currentTimeMillis();
+        return now - context.getStartTime() + context.getInnerTime();
+    }
+}
+
+class ResultState implements StopwatchState
+{
+    private static ResultState instance;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタをprivateに隠蔽
+    //--------------------------------------------------------------------------
+    private ResultState()
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // インスタンス取得
+    //--------------------------------------------------------------------------
+    public static StopwatchState getInstance()
+    {
+        if( ResultState.instance == null )
+        {
+            ResultState.instance = new ResultState();
+        }
+        return ResultState.instance;
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の開始
+    //--------------------------------------------------------------------------
+    public void start( StopwatchContext context )
+    {
+        context.setState(MeasuringState.getInstance());
+        context.setStartTime((int)System.currentTimeMillis());
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の終了
+    //--------------------------------------------------------------------------
+    public void stop( StopwatchContext context )
+    {
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録のリセット
+    //--------------------------------------------------------------------------
+    public void reset( StopwatchContext context )
+    {
+        context.setState(InitialState.getInstance());
+        context.setTime(0);
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の取得
+    //--------------------------------------------------------------------------
+    public int getTime( StopwatchContext context )
+    {
+        return context.getInnerTime();
+    }
+}
+
+//------------------------------------------------------------------------------
+// Context
+//------------------------------------------------------------------------------
+interface StopwatchContext
+{
+    public abstract void setState( StopwatchState state );
+    public abstract int getInnerTime();
+    public abstract int getStartTime();
+    public abstract void setTime( int time );
+    public abstract void setStartTime( int startTime );
+    public abstract void start();
+    public abstract void stop();
+    public abstract void reset();
+    public abstract int getTime();
+}
+
+//------------------------------------------------------------------------------
+// Contextの実装
+//------------------------------------------------------------------------------
+class Stopwatch implements StopwatchContext
+{
+    private int time;
+    private int startTime;
+    private StopwatchState state;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public Stopwatch()
+    {
+        this.state = InitialState.getInstance();
+    }
+
+    //--------------------------------------------------------------------------
+    // 状態の設定
+    //--------------------------------------------------------------------------
+    public void setState( StopwatchState state )
+    {
+        this.state = state;
+    }
+
+    //--------------------------------------------------------------------------
+    // 時間の取得
+    //--------------------------------------------------------------------------
+    public int getInnerTime()
+    {
+        return this.time;
+    }
+
+    //--------------------------------------------------------------------------
+    // 開始時間の取得
+    //--------------------------------------------------------------------------
+    public int getStartTime()
+    {
+        return this.startTime;
+    }
+
+    //--------------------------------------------------------------------------
+    // 時間の設定
+    //--------------------------------------------------------------------------
+    public void setTime( int time )
+    {
+        this.time = time;
+    }
+
+    //--------------------------------------------------------------------------
+    // 開始時間の設定
+    //--------------------------------------------------------------------------
+    public void setStartTime( int startTime )
+    {
+        this.startTime = startTime;
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の開始
+    //--------------------------------------------------------------------------
+    public void start()
+    {
+        this.state.start(this);
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の終了
+    //--------------------------------------------------------------------------
+    public void stop()
+    {
+        this.state.stop(this);
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録のリセット
+    //--------------------------------------------------------------------------
+    public void reset()
+    {
+        this.state.reset(this);
+    }
+
+    //--------------------------------------------------------------------------
+    // 記録の取得
+    //--------------------------------------------------------------------------
+    public int getTime()
+    {
+        return this.state.getTime(this);
+    }
 }
 ```
