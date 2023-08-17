@@ -3423,8 +3423,8 @@
 
 - [ ] [Proxyパターン](./development/design_pattern/_/chapters/proxy.md#proxyパターン)
 	- [ ] [Subject](./development/design_pattern/_/chapters/proxy.md#subject)
-	- [ ] [Proxy](./development/design_pattern/_/chapters/proxy.md#proxy)
 	- [ ] [RealSubject](./development/design_pattern/_/chapters/proxy.md#realsubject)
+	- [ ] [Proxy](./development/design_pattern/_/chapters/proxy.md#proxy)
 
 #### Command
 
