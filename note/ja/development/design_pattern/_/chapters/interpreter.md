@@ -1,6 +1,6 @@
 # 『Interpreter』ノート
 
-（最終更新： 2023-08-05）
+（最終更新： 2023-08-17）
 
 
 ## 目次
@@ -10,6 +10,8 @@
 	1. [TerminalExpression](#terminalexpression)
 	1. [NonterminalExpression](#nonterminalexpression)
 	1. [Context](#context)
+1. [サンプルプログラム](#サンプルプログラム)
+	1. [Java](#java)
 
 
 ## Interpreterパターン
@@ -33,3 +35,181 @@ Interpreterパターンは、[AbstractExpression](#abstractexpression)、[Termin
 ### Context
 
 **Context**（文脈、前後関係）は、[Interpreterパターン](#interpreterパターン)において、インタプリタが構文解析を行うための情報を提供する役。
+
+
+## サンプルプログラム
+
+### Java
+
+```java
+import java.util.ArrayList;
+
+//------------------------------------------------------------------------------
+// Client
+//------------------------------------------------------------------------------
+public class Client
+{
+    public static void main( String[] args )
+    {
+    }
+}
+
+//------------------------------------------------------------------------------
+// AbstractExpression
+//------------------------------------------------------------------------------
+abstract class Node
+{
+    public abstract void parse( Context context );
+    public abstract String toString();
+}
+
+//------------------------------------------------------------------------------
+// TerminalExpression
+//------------------------------------------------------------------------------
+class PrimitiveCommandNode extends Node
+{
+    private String name;
+
+    //--------------------------------------------------------------------------
+    // 構文解析
+    //--------------------------------------------------------------------------
+    public void parse( Context context )
+    {
+        this.name = context.currentToken();
+        context.skipToken(this.name);
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列として取得
+    //--------------------------------------------------------------------------
+    public String toString()
+    {
+        return this.name;
+    }
+}
+
+//------------------------------------------------------------------------------
+// NonTerminalExpression
+//------------------------------------------------------------------------------
+class ProgramNode extends Node
+{
+    private Node commandListNode;
+
+    //--------------------------------------------------------------------------
+    // 構文解析
+    //--------------------------------------------------------------------------
+    public void parse( Context context )
+    {
+        context.skipToken("program");
+        this.commandListNode = new CommandListNode();
+        this.commandListNode.parse(context);
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列として取得
+    //--------------------------------------------------------------------------
+    public String toString()
+    {
+        return "[program " + this.commandListNode.toString() + "]";
+    }
+}
+
+class CommandListNode extends Node
+{
+    private ArrayList list;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public CommandListNode()
+    {
+        this.list = new ArrayList();
+    }
+
+    //--------------------------------------------------------------------------
+    // 構文解析
+    //--------------------------------------------------------------------------
+    public void parse( Context context )
+    {
+        while( true )
+        {
+            if( context.currentToken().equals("end") )
+            {
+                context.skipToken("end");
+                break;
+            }
+            else
+            {
+                Node commandNode = new CommandNode();
+                commandNode.parse(context);
+                this.list.add(commandNode);
+            }
+        }
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列として取得
+    //--------------------------------------------------------------------------
+    public String toString()
+    {
+        return this.list.toString();
+    }
+}
+
+class CommandNode extends Node
+{
+    private Node node;
+
+    //--------------------------------------------------------------------------
+    // 構文解析
+    //--------------------------------------------------------------------------
+    public void parse( Context context )
+    {
+        if( context.currentToken().equals("repeat") )
+        {
+            this.node = new RepeatCommandNode();
+            this.node.parse(context);
+        }
+        else
+        {
+            this.node = new PrimitiveCommandNode();
+            this.node.parse(context);
+        }
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列として取得
+    //--------------------------------------------------------------------------
+    public String toString()
+    {
+        return this.node.toString();
+    }
+}
+
+class RepeatCommandNode extends Node
+{
+    private int number;
+    private Node commandListNode;
+
+    //--------------------------------------------------------------------------
+    // 構文解析
+    //--------------------------------------------------------------------------
+    public void parse( Context context )
+    {
+        context.skipToken("repeat");
+        number = context.currentNumber();
+        context.nextToken();
+        this.commandListNode = new CommandListNode();
+        this.commandListNode.parse(context);
+    }
+
+    //--------------------------------------------------------------------------
+    // 文字列として取得
+    //--------------------------------------------------------------------------
+    public String toString()
+    {
+        return "[repeat " + this.number + " " + this.commandListNode + "]";
+    }
+}
+
+```
