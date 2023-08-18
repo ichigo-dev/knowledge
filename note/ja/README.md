@@ -33,7 +33,7 @@
 	1. [データベース](./development/database/README.md)
 	1. [Docker](./development/docker/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
-		1. [マルチスレッドデザインパターン](./development/design_pattern/multi_th/README.md)
+		1. [マルチスレッドデザインパターン](./development/design_pattern/multi_thread/README.md)
 	1. [ソフトウェアアーキテクチャ（※）](./development/software_architecture/README.md)
 	1. [マネジメント](./development/management/README.md)
 1. [チェックシート](./checksheet.md)
