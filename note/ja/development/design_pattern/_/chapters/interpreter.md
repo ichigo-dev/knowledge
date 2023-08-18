@@ -1,6 +1,6 @@
 # 『Interpreter』ノート
 
-（最終更新： 2023-08-17）
+（最終更新： 2023-08-18）
 
 
 ## 目次
@@ -41,8 +41,11 @@ Interpreterパターンは、[AbstractExpression](#abstractexpression)、[Termin
 
 ### Java
 
+独自の命令（ここでは、ロボットの動き（前進・進行方向の変更）を制御するためのミニ言語をイメージしたもの）を持つミニ[プログラム](../../../../programming/_/chapters/programming.md#プログラム)を解析する例を考える。
+
 ```java
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 //------------------------------------------------------------------------------
 // Client
@@ -51,6 +54,21 @@ public class Client
 {
     public static void main( String[] args )
     {
+        // ミニプログラム言語の解析
+        String text = """
+                      program end
+                      program go end
+                      program right go right go right go right end
+                      program repeat 4 go right end end
+                      program repeat 4 repeat 3 go left end right end end
+                      """;
+        String[] split = text.split("\n");
+        for( int i = 0; i < split.length; i++ )
+        {
+            Node node = new ProgramNode();
+            node.parse(new Context(split[i]));
+            System.out.println(node.toString());
+        }
     }
 }
 
@@ -116,14 +134,14 @@ class ProgramNode extends Node
 
 class CommandListNode extends Node
 {
-    private ArrayList list;
+    private ArrayList<Node> list;
 
     //--------------------------------------------------------------------------
     // コンストラクタ
     //--------------------------------------------------------------------------
     public CommandListNode()
     {
-        this.list = new ArrayList();
+        this.list = new ArrayList<Node>();
     }
 
     //--------------------------------------------------------------------------
@@ -212,4 +230,75 @@ class RepeatCommandNode extends Node
     }
 }
 
+//------------------------------------------------------------------------------
+// Context
+//------------------------------------------------------------------------------
+class Context
+{
+    private StringTokenizer tokenizer;
+    private String currentToken;
+
+    //--------------------------------------------------------------------------
+    // コンストラクタ
+    //--------------------------------------------------------------------------
+    public Context( String text )
+    {
+        this.tokenizer = new StringTokenizer(text);
+        this.nextToken();
+    }
+
+    //--------------------------------------------------------------------------
+    // 現在のトークンを次に進める
+    //--------------------------------------------------------------------------
+    public String nextToken()
+    {
+        if( this.tokenizer.hasMoreTokens() )
+        {
+            this.currentToken = this.tokenizer.nextToken();
+        }
+        else
+        {
+            this.currentToken = null;
+        }
+        return this.currentToken;
+    }
+
+    //--------------------------------------------------------------------------
+    // 現在のトークンを取得
+    //--------------------------------------------------------------------------
+    public String currentToken()
+    {
+        return this.currentToken;
+    }
+
+    //--------------------------------------------------------------------------
+    // 指定したトークンをスキップ
+    //--------------------------------------------------------------------------
+    public void skipToken( String token )
+    {
+        if( token.equals(this.currentToken) == false )
+        {
+            System.out.println(token + " is expected, but " + this.currentToken + " is found.");
+            return;
+        }
+        nextToken();
+    }
+
+    //--------------------------------------------------------------------------
+    // 現在のトークンを数値としてパースして取得
+    //--------------------------------------------------------------------------
+    public int currentNumber()
+    {
+        int number = 0;
+        try
+        {
+            number = Integer.parseInt(this.currentToken);
+        }
+        catch( Exception e )
+        {
+            System.out.println(e);
+        }
+        return number;
+    }
+}
 ```
