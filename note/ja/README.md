@@ -23,7 +23,7 @@
 1. [人工知能](./artificial_intelligence/README.md)
 1. [Web開発](./web_development/README.md)
 	1. [HTML](./web_development/html/README.md)
-	1. [CSS（※）](./web_development/css/README.md)
+	1. [CSS](./web_development/css/README.md)
 	1. [JavaScript（※）](./web_development/javascript/README.md)
 1. [アプリ開発（※）](./app_development/README.md)
 	1. [Android（※）](./app_development/android/README.md)
