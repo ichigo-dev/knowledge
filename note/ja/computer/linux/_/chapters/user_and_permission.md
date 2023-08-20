@@ -1,6 +1,6 @@
 # 『ユーザと権限』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -41,7 +41,7 @@
 
 ### ユーザ名の確認
 
-`whoami` は、[Linux](./linux.md#linux)上で現在ログインしている[ユーザ](#ユーザ)の[ユーザ](#ユーザ)名を確認するための[コマンド](./basic_command.md#コマンド)。
+**whoami**は、[Linux](./linux.md#linux)上で現在ログインしている[ユーザ](#ユーザ)の[ユーザ](#ユーザ)名を確認するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -51,7 +51,7 @@ whoami [OPTION]...
 
 ### ユーザ情報の確認
 
-`id` は、[Linux](./linux.md#linux)上で現在ログインしている[ユーザ](#ユーザ)の情報を表示するための[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)名、[UID](#ユーザ)、所属する[グループ](#グループ)名、[GID](#グループ)といった情報を表示できる。
+**id**は、[Linux](./linux.md#linux)上で現在ログインしている[ユーザ](#ユーザ)の情報を表示するための[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)名、[UID](#ユーザ)、所属する[グループ](#グループ)名、[GID](#グループ)といった情報を表示できる。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -61,7 +61,7 @@ id [OPTION]... [USER]...
 
 ### ユーザの作成
 
-`useradd` は、[Linux](./linux.md#linux)上で新しい[ユーザ](#ユーザ)を作成するための[コマンド](./basic_command.md#コマンド)。
+**useradd**は、[Linux](./linux.md#linux)上で新しい[ユーザ](#ユーザ)を作成するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -85,7 +85,7 @@ $ passwd foo
 
 ### ユーザの変更
 
-`usermod` は、[Linux](./linux.md#linux)上で既存の[ユーザ](./user_and_permission.md#ユーザ)アカウントを変更するための[コマンド](./basic_command.md#コマンド)。主に以下のようなユーザアカウント情報を変更するために使用される。
+**usermod**は、[Linux](./linux.md#linux)上で既存の[ユーザ](./user_and_permission.md#ユーザ)アカウントを変更するための[コマンド](./basic_command.md#コマンド)。主に以下のようなユーザアカウント情報を変更するために使用される。
 
 - [ユーザ](#ユーザ)名
 - [ユーザ](#ユーザ)パスワード
@@ -120,7 +120,7 @@ $ usermod -aG hoge foo
 
 ### ユーザの削除
 
-`userdel` は、[Linux](./linux.md#linux)上で[ユーザ](#ユーザ)を削除するための[コマンド](./basic_command.md#コマンド)。
+**userdel**は、[Linux](./linux.md#linux)上で[ユーザ](#ユーザ)を削除するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -140,7 +140,7 @@ $ userdel foo
 
 ### ユーザパスワードの変更
 
-`passwd` は、[Linux](./linux.md#linux)で[ユーザ](#ユーザ)のパスワードを変更するために使用される[コマンド](./basic_command.md#コマンド)。
+**passwd**は、[Linux](./linux.md#linux)で[ユーザ](#ユーザ)のパスワードを変更するために使用される[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -177,7 +177,7 @@ $ passwd foo
 
 ### 所属グループの確認
 
-`groups` は、[Linux](./linux.md#linux)上の[ユーザ](#ユーザ)の所属[グループ](#グループ)リストを確認するための[コマンド](./basic_command.md#コマンド)。
+**groups**は、[Linux](./linux.md#linux)上の[ユーザ](#ユーザ)の所属[グループ](#グループ)リストを確認するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -187,7 +187,7 @@ groups [USER]
 
 ### グループの作成
 
-`groupadd` は、[Linux](./linux.md#linux)上で新しい[グループ](#グループ)を作成するための[コマンド](./basic_command.md#コマンド)。
+**groupadd**は、[Linux](./linux.md#linux)上で新しい[グループ](#グループ)を作成するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -205,7 +205,7 @@ $ groupadd hoge
 
 ### グループの変更
 
-`groupmod` は、[Linux](./linux.md#linux)上で既存の[グループ](#グループ)の属性を変更するための[コマンド](./basic_command.md#コマンド)。主に以下のような[グループ](#グループ)情報を変更するために使用される。
+**groupmod**は、[Linux](./linux.md#linux)上で既存の[グループ](#グループ)の属性を変更するための[コマンド](./basic_command.md#コマンド)。主に以下のような[グループ](#グループ)情報を変更するために使用される。
 
 - [グループ](#グループ)ID([GID](#グループ))
 - [グループ](#グループ)名
@@ -225,7 +225,7 @@ $ groupmod -n fuga hoge
 
 ### グループの削除
 
-`groupdel` は、[Linux](./linux.md#linux)上で[グループ](#グループ)を削除するための[コマンド](./basic_command.md#コマンド)。
+**groupdel**は、[Linux](./linux.md#linux)上で[グループ](#グループ)を削除するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -252,7 +252,7 @@ $ groupdel hoge
 
 ### 所有者の変更
 
-`chown` は、[Linux](./linux.md#linux)上で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の[所有者](#所有者)を変更するための[コマンド](./basic_command.md#コマンド)。 `chown` は "change owner"の略語。
+**chown**は、[Linux](./linux.md#linux)上で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の[所有者](#所有者)を変更するための[コマンド](./basic_command.md#コマンド)。 `chown` は "change owner"の略語。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -275,7 +275,7 @@ $ chown -R foo:group test.txt
 
 ### ファイルのグループの変更
 
-`chgrp` は、[Linux](./linux.md#linux)上で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の所属[グループ](#グループ)を変更する[コマンド](./basic_command.md#コマンド)。
+**chgrp**は、[Linux](./linux.md#linux)上で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の所属[グループ](#グループ)を変更する[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -329,7 +329,7 @@ $ chgrp hoge test.txt
 
 ### 権限の変更
 
-`chmod` は、[Linux](./linux.md#linux)上の[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の[権限](#権限)を変更するための[コマンド](./basic_command.md#コマンド)。 `chmod` では、3桁の数字や記号により[権限](#権限)を操作することができる。
+**chmod**は、[Linux](./linux.md#linux)上の[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の[権限](#権限)を変更するための[コマンド](./basic_command.md#コマンド)。 `chmod` では、3桁の数字や記号により[権限](#権限)を操作することができる。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -372,7 +372,7 @@ $ chmod a-x filename
 
 ### rootユーザへの切り替え
 
-`su` は、[Linux](./linux.md#linux)で一時的に別の[ユーザ](#ユーザ)に切り替えて作業するための[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)を指定しなかった場合は[rootユーザ](#rootユーザ)に切り替える。 `su` は"substitute user"の略語。
+**su**は、[Linux](./linux.md#linux)で一時的に別の[ユーザ](#ユーザ)に切り替えて作業するための[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)を指定しなかった場合は[rootユーザ](#rootユーザ)に切り替える。 `su` は"substitute user"の略語。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -390,7 +390,7 @@ $ su
 
 ### rootユーザとしてコマンド実行
 
-`sudo` は、[Linux](./linux.md#linux)で別の[ユーザ](#ユーザ)として[コマンド](./basic_command.md#コマンド)を実行するために利用される[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)名を指定しなかった場合は[rootユーザ](#rootユーザ)として[コマンド](./basic_command.md#コマンド)を実行する。
+**sudo**は、[Linux](./linux.md#linux)で別の[ユーザ](#ユーザ)として[コマンド](./basic_command.md#コマンド)を実行するために利用される[コマンド](./basic_command.md#コマンド)。[ユーザ](#ユーザ)名を指定しなかった場合は[rootユーザ](#rootユーザ)として[コマンド](./basic_command.md#コマンド)を実行する。
 
 一般的には[ユーザ](#ユーザ)名を省略して、[rootユーザ](#rootユーザ)に切り替える目的で用いられることが多い。[コマンド](./basic_command.md#コマンド)を実行すると、[プロンプト](./shell_and_terminal.md#プロンプト)で、ログイン中の[ユーザ](#ユーザ)のパスワード入力を求められる。例えば、[ユーザ](#ユーザ)名が `foo` の[ユーザ](#ユーザ)としてログイン中、[rootユーザ](#rootユーザ)として `cat` [コマンド](./basic_command.md#コマンド)を使用し `test.txt` を閲覧したい場合、以下の[コマンド](./basic_command.md#コマンド)を実行する。
 

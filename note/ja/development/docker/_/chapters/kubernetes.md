@@ -1,6 +1,6 @@
 # 『Kubernetes』ノートkubernetes
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -37,7 +37,7 @@ Kubernetesは、[Docker](./docker.md#docker)だけではなくcontainerdやcri-o
 
 ### Podの起動
 
-`kubectl run` は、[Pod](#pod)単位で[コンテナ](./container.md#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**kubectl run**は、[Pod](#pod)単位で[コンテナ](./container.md#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl run <pod> --image=<image>:<tag>
@@ -45,13 +45,13 @@ $ kubectl run <pod> --image=<image>:<tag>
 
 ### Podの状態確認
 
-`kubectl get pods` は、[Pod](#pod)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**kubectl get pods**は、[Pod](#pod)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl get pods
 ```
 
-`kubectl describe pods` は、[Pod](#pod)の詳細を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**kubectl describe pods**は、[Pod](#pod)の詳細を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl describe pods <pod>
@@ -111,7 +111,7 @@ spec:
 
 ### ReplicaSetの状態確認
 
-`kubectl get rs` は、[ReplicaSet](#replicaset)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**kubectl get rs**は、[ReplicaSet](#replicaset)の状態を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl get rs
@@ -119,7 +119,7 @@ $ kubectl get rs
 
 ### ReplicaSetのスケール
 
-`kubectl scale` は、[ReplicaSet](#replicaset)のスケールを行う[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**kubectl scale**は、[ReplicaSet](#replicaset)のスケールを行う[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ kubectl scale --replicas <replica num> -f <filename>

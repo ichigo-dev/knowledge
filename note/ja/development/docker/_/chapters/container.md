@@ -1,6 +1,6 @@
 # 『コンテナ』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -40,7 +40,7 @@
 
 ## コンテナの起動
 
-`docker run` は、[イメージ](./image.md#イメージ)を元にして[コンテナ](#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker run**は、[イメージ](./image.md#イメージ)を元にして[コンテナ](#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナの起動
@@ -147,7 +147,7 @@ Address: 2404:6800:4004:822::200e
 
 ## コンテナの一覧
 
-`docker ps` は、起動中の[コンテナ](#コンテナ)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。また、 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)をつけることで、停止中の[コンテナ](#コンテナ)も表示することができる。
+**docker ps**は、起動中の[コンテナ](#コンテナ)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。また、 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)をつけることで、停止中の[コンテナ](#コンテナ)も表示することができる。
 
 起動中の[コンテナ](#コンテナ)は `STATUS` に `Up` と表示され、停止中の[コンテナ](#コンテナ)は `Exit` と表示される。
 
@@ -159,7 +159,7 @@ c2d63875bf6a   ubuntu:22.10   "/bin/bash"   2 hours ago    Exited (137) 6 second
 
 ### コンテナの情報
 
-`docker inspect` は、[コンテナ](#コンテナ)の情報を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker inspect**は、[コンテナ](#コンテナ)の情報を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナの情報確認
@@ -171,7 +171,7 @@ $ docker inspect ubuntu_linux_01
 
 ### コンテナのリソース使用状況
 
-`docker stats` は、[コンテナ](#コンテナ)のリソース使用状況を追跡する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、停止している[コンテナ](#コンテナ)を含めてすべてのリソース使用状況を表示する。 `--no-stream` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、リソースの使用状況を追跡するのではなく、一度だけ表示する。 `--no-trunc` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると完全なコンテナIDを表示。
+**docker stats**は、[コンテナ](#コンテナ)のリソース使用状況を追跡する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、停止している[コンテナ](#コンテナ)を含めてすべてのリソース使用状況を表示する。 `--no-stream` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、リソースの使用状況を追跡するのではなく、一度だけ表示する。 `--no-trunc` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると完全なコンテナIDを表示。
 
 ```sh
 $ docker stats
@@ -180,7 +180,7 @@ CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK
 
 ### コンテナのログ
 
-`docker logs` は、[コンテナ](#コンテナ)内で作業した命令をログとして確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-t` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、時刻付きでログを出力できる。
+**docker logs**は、[コンテナ](#コンテナ)内で作業した命令をログとして確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-t` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、時刻付きでログを出力できる。
 
 ```sh
 # コンテナのログの確認
@@ -193,7 +193,7 @@ $ docker logs ubuntu_linux_02
 
 ## コンテナのコミット
 
-`docker commit` は、[コンテナ](#コンテナ)を[イメージ](./image.md#イメージ)として保存する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。コンテナIDと[イメージ](./image.md#イメージ)名、タグを指定する。
+**docker commit**は、[コンテナ](#コンテナ)を[イメージ](./image.md#イメージ)として保存する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。コンテナIDと[イメージ](./image.md#イメージ)名、タグを指定する。
 
 ```sh
 # コンテナのコミット
@@ -221,7 +221,7 @@ c2d63875bf6a   ubuntu:22.10   "/bin/bash"   23 hours ago    Exited (137) 14 minu
 
 ## コンテナの削除
 
-`docker rm` は、停止中の[コンテナ](#コンテナ)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテナ](#コンテナ)のIDあるいは[コンテナ](#コンテナ)名を指定することで削除することができる。起動中の[コンテナ](#コンテナ)を停止したい場合は、 `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与する。
+**docker rm**は、停止中の[コンテナ](#コンテナ)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテナ](#コンテナ)のIDあるいは[コンテナ](#コンテナ)名を指定することで削除することができる。起動中の[コンテナ](#コンテナ)を停止したい場合は、 `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与する。
 
 ```sh
 # コンテナの削除
@@ -234,7 +234,7 @@ $ docker rm ubuntu_linux_01
 
 ## コンテナの起動
 
-`docker start` は、停止中の[コンテナ](#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker start**は、停止中の[コンテナ](#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナの起動
@@ -247,7 +247,7 @@ $ docker start ubuntu_linux_02
 
 ## コンテナの停止
 
-`docker stop` は、[コンテナ](#コンテナ)を停止する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker stop**は、[コンテナ](#コンテナ)を停止する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナの停止
@@ -260,7 +260,7 @@ $ docker stop ubuntu_linux_02
 
 ## コンテナのアタッチ
 
-`docker attach` は、バックグラウンドで起動中の[コンテナ](#コンテナ)の[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)に接続する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテナ](#コンテナ)内で[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)が動作していない場合は接続することはできず、 `exit` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いると[コンテナ](#コンテナ)は停止する。
+**docker attach**は、バックグラウンドで起動中の[コンテナ](#コンテナ)の[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)に接続する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテナ](#コンテナ)内で[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)が動作していない場合は接続することはできず、 `exit` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いると[コンテナ](#コンテナ)は停止する。
 
 ```sh
 # コンテナのアタッチ
@@ -273,7 +273,7 @@ $ docker attach ubuntu_linux_02
 
 ## コンテナでのコマンド実行
 
-`docker exec` は、[コンテナ](#コンテナ)内で[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)を起動して[コンテナ](#コンテナ)に接続する際に用いる場合が多い。
+**docker exec**は、[コンテナ](#コンテナ)内で[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[シェル](../../../../computer/linux/_/chapters/shell_and_terminal.md#シェル)を起動して[コンテナ](#コンテナ)に接続する際に用いる場合が多い。
 
 ```sh
 # コンテナでのコマンド実行
@@ -286,7 +286,7 @@ $ docker exec ubuntu_linux_02 /bin/bash
 
 ## コンテナのエクスポート
 
-`docker export` は、[コンテナ](#コンテナ)を `tar` 形式の[アーカイブ](../../../../computer/software/_/chapters/multimedia.md#アーカイブ)に変換する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker export**は、[コンテナ](#コンテナ)を `tar` 形式の[アーカイブ](../../../../computer/software/_/chapters/multimedia.md#アーカイブ)に変換する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナのエクスポート
@@ -299,7 +299,7 @@ $ docker export ubuntu_linux_02 > ubuntu_linux_02.tar
 
 ## コンテナのインポート
 
-`docker import` は、エクスポートした[コンテナ](#コンテナ)の[アーカイブ](../../../../computer/software/_/chapters/multimedia.md#アーカイブ)を元に[イメージ](./image.md#イメージ)を取り込む[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker import**は、エクスポートした[コンテナ](#コンテナ)の[アーカイブ](../../../../computer/software/_/chapters/multimedia.md#アーカイブ)を元に[イメージ](./image.md#イメージ)を取り込む[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # コンテナのインポート
@@ -323,4 +323,4 @@ a739176f4844ea9ecb013406915cc68dfb070c0b129fa164d2665a53fdb2d6ed
 
 ## データコンテナ
 
-**データコンテナ**は、データ専用の[コンテナ](#コンテナ)。[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の[コンテナ](#コンテナ)とデータの[コンテナ](#コンテナ)を分離して、データの再利用性を高めたり、バックアップやリストアに利用したりする。データコンテナには、 `busybox` [イメージ](./image.md#イメージ)がよく用いられる。
+**データコンテナ**は、データ専用の[コンテナ](#コンテナ)。[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)の[コンテナ](#コンテナ)とデータの[コンテナ](#コンテナ)を分離して、データの再利用性を高めたり、バックアップやリストアに利用したりする。データコンテナには、**busybox**[イメージ](./image.md#イメージ)がよく用いられる。

@@ -1,6 +1,6 @@
 # 『ボリュームとマウント』ノート
 
-（最終更新： 2023-05-22）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -40,7 +40,7 @@ $ docker run -it --name ubuntu_linux_04 -h ubuntu_linux_04 \
 
 ### Volumeの作成
 
-`docker volume create` は、[ボリューム](#volume)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker volume create**は、[ボリューム](#volume)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # Volumeの作成
@@ -52,7 +52,7 @@ $ docker volume create vol_fuga
 
 ### Volumeの一覧
 
-`docker volume ls` は、[ボリューム](#volume)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker volume ls**は、[ボリューム](#volume)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ dokcer volume ls

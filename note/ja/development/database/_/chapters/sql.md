@@ -1,6 +1,6 @@
 # 『SQL』ノート
 
-（最終更新： 2023-05-17）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -82,7 +82,7 @@
 
 ### データベースの一覧表示
 
-[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)の一覧を表示するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)の一覧を表示するには、**SHOW DATABASES**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SHOW DATABASES;
@@ -90,7 +90,7 @@ SHOW DATABASES;
 
 ### データベースの作成
 
-[インスタンス](./rdb.md#インスタンス)に新しい[データベース](./database.md#データベース)を作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[インスタンス](./rdb.md#インスタンス)に新しい[データベース](./database.md#データベース)を作成するには、**CREATE DATABASE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 CREATE DATABASE [name];
@@ -98,7 +98,7 @@ CREATE DATABASE [name];
 
 ### データベースの削除
 
-[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)を削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[インスタンス](./rdb.md#インスタンス)に存在する[データベース](./database.md#データベース)を削除するには、**DROP DATABASE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 DROP DATABASE [name];
@@ -106,7 +106,7 @@ DROP DATABASE [name];
 
 ### データベースの選択
 
-操作したい[データベース](./database.md#データベース)を選択するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+操作したい[データベース](./database.md#データベース)を選択するには、**USE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 USE [name];
@@ -117,7 +117,7 @@ USE [name];
 
 ### テーブルの一覧表示
 
-[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の一覧を表示するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の一覧を表示するには、**SHOW TABLES**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SHOW TABLES;
@@ -125,7 +125,7 @@ SHOW TABLES;
 
 ### テーブルの作成
 
-[データベース](./database.md#データベース)中に新しい[テーブル](./rdb.md#テーブル)を作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中に新しい[テーブル](./rdb.md#テーブル)を作成するには、**CREATE TABLE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 CREATE TABLE [name]
@@ -150,7 +150,7 @@ CREATE TABLE `user`
 
 ### テーブルの変更
 
-[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の定義を変更するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)の定義を変更するには、**ALTER TABLE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- カラムの追加
@@ -178,7 +178,7 @@ ALTER TABLE [name] DROP ([column1], [column2], ...);
 
 ### テーブルの削除
 
-[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)を削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中の[テーブル](./rdb.md#テーブル)を削除するには、**DROP TABLE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 DROP TABLE [name];
@@ -189,7 +189,7 @@ DROP TABLE [name];
 
 ### データの取得
 
-[テーブル](./rdb.md#テーブル)からデータを取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)からデータを取得するには、**SELECT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -210,7 +210,7 @@ FROM
 
 ### データの挿入
 
-[テーブル](./rdb.md#テーブル)に新しいデータを挿入するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)に新しいデータを挿入するには、**INSERT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 INSERT INTO [table]
@@ -229,7 +229,7 @@ VALUES
 
 ### データの更新
 
-[テーブル](./rdb.md#テーブル)のデータを更新するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータを更新するには、**UPDATE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 UPDATE
@@ -242,7 +242,7 @@ SET
 
 ### データの削除
 
-[テーブル](./rdb.md#テーブル)のデータを削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータを削除するには、**DELETE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 DELETE FROM [table];
@@ -250,7 +250,7 @@ DELETE FROM [table];
 
 ### データの抽出
 
-[テーブル](./rdb.md#テーブル)のデータを抽出して取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータを抽出して取得するには、**WHERE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -331,7 +331,7 @@ WHERE
 
 ### エイリアスの設定
 
-操作するデータに別名をつけるには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。複数のテーブルを組み合わせたクエリを記述する場合などに、長いテーブル名を繰り返し記述して冗長になることを避けるために用いられる。
+操作するデータに別名をつけるには、**AS**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。複数のテーブルを組み合わせたクエリを記述する場合などに、長いテーブル名を繰り返し記述して冗長になることを避けるために用いられる。
 
 ```sql
 SELECT
@@ -342,7 +342,7 @@ FROM
 
 ### データのソート
 
-[テーブル](./rdb.md#テーブル)のデータをソートして取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータをソートして取得するには、**ORDER BY**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- 昇順
@@ -368,7 +368,7 @@ ORDER BY
 
 ### データの制限
 
-[テーブル](./rdb.md#テーブル)のデータの取得数を制限するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータの取得数を制限するには、**LIMIT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -383,7 +383,7 @@ LIMIT
 
 ### データの集約
 
-[テーブル](./rdb.md#テーブル)のデータを集約して様々な統計データを取得するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータを集約して様々な統計データを取得するには、**SUM**、**AVG**、**MAX**、**MIN**、**COUNT**といった[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- 合計値
@@ -419,7 +419,7 @@ FROM
 
 ### データの加工
 
-[テーブル](./rdb.md#テーブル)のデータを加工するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータを加工するには、**ROUND**、**FLOOR**、**CEILING**といった[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- 四捨五入
@@ -443,7 +443,7 @@ FROM
 
 ### データのグループ化
 
-[テーブル](./rdb.md#テーブル)のデータをグループ化するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[テーブル](./rdb.md#テーブル)のデータをグループ化するには、**GROUP BY**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -472,7 +472,7 @@ GROUP BY
 
 ### 内部結合
 
-**内部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータのみを結合する。
+**内部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータのみを結合する。内部結合を行うには、**INNER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -500,7 +500,7 @@ WHERE
 
 ### 外部結合
 
-**外部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、片方の[テーブル](./rdb.md#テーブル)のデータをすべて取り出し、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータに関してのみ結合される。
+**外部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、片方の[テーブル](./rdb.md#テーブル)のデータをすべて取り出し、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータに関してのみ結合される。外部結合を行うには、**OUTER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- 左外部結合
@@ -542,7 +542,7 @@ ON
 
 ### 交差結合
 
-**交差結合**（**直積結合**）は、結合する[テーブル](./rdb.md#テーブル)のデータのすべての組み合わせを取り出す。
+**交差結合**（**直積結合**）は、結合する[テーブル](./rdb.md#テーブル)のデータのすべての組み合わせを取り出す。交差結合を行うには、**CROSS JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -558,7 +558,7 @@ CROSS JOIN
 
 ## 条件分岐
 
-[クエリ](#クエリ)中で条件分岐を行いたい場合は、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[クエリ](#クエリ)中で条件分岐を行いたい場合は、**CASE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 CASE
@@ -582,7 +582,7 @@ SHOW TABLES;
 
 ### ビューの作成
 
-[データベース](./database.md#データベース)中に新しいビューを作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中に新しいビューを作成するには、**CREATE VIEW**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 CREATE VIEW [name]
@@ -601,7 +601,7 @@ FROM
 
 ### ビューの変更
 
-[データベース](./database.md#データベース)中のビューを変更するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中のビューを変更するには、**ALTER VIEW**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- ビュー名の変更
@@ -624,7 +624,7 @@ FROM
 
 ### ビューの削除
 
-[データベース](./database.md#データベース)中のビューを削除するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[データベース](./database.md#データベース)中のビューを削除するには、**DROP VIEW**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 DROP VIEW [name];
@@ -635,7 +635,7 @@ DROP VIEW [name];
 
 ### トランザクションの開始
 
-[トランザクション](./transaction.md#トランザクション)を開始するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[トランザクション](./transaction.md#トランザクション)を開始するには、**START TRANSACTION**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 START TRANSACTION;
@@ -643,7 +643,7 @@ START TRANSACTION;
 
 ### コミット
 
-[トランザクション](./transaction.md#トランザクション)中の実行結果を[コミット](./transaction.md#コミット)するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[トランザクション](./transaction.md#トランザクション)中の実行結果を[コミット](./transaction.md#コミット)するには、**COMMIT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 COMMIT;
@@ -651,7 +651,7 @@ COMMIT;
 
 ### ロールバック
 
-[トランザクション](./transaction.md#トランザクション)中の実行結果を[ロールバック](./transaction.md#ロールバック)するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[トランザクション](./transaction.md#トランザクション)中の実行結果を[ロールバック](./transaction.md#ロールバック)するには、**ROLLBACK**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 ROLLBACK;
@@ -659,7 +659,7 @@ ROLLBACK;
 
 ### セーブポイント
 
-[トランザクション](./transaction.md#トランザクション)中に[セーブポイント](./transaction.md#セーブポイント)を設けるには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[トランザクション](./transaction.md#トランザクション)中に[セーブポイント](./transaction.md#セーブポイント)を設けるには、**SAVEPOINT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SAVEPOINT [name];
@@ -668,12 +668,28 @@ SAVEPOINT [name];
 ROLLBACK TO SAVEPOINT [name];
 ```
 
+### レコードロック
+
+[レコードロック](./transaction.md#レコードロック)を獲得するには、**FOR UPDATE**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
+
+```sql
+SELECT
+    [column1],
+    [column2],
+    ...
+FROM
+    [table]
+WHERE
+    [condition]
+FOR UPDATE;
+```
+
 
 ## ユーザ操作
 
 ### ユーザの作成
 
-[インスタンス](./rdb.md#インスタンス)中に新しいユーザを作成するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+[インスタンス](./rdb.md#インスタンス)中に新しいユーザを作成するには、**CREATE USER**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 CREATE USER [name]@[host] IDENTIFIED BY [password];
@@ -681,7 +697,7 @@ CREATE USER [name]@[host] IDENTIFIED BY [password];
 
 ### 権限の付与
 
-ユーザに権限を付与するには、以下の[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する。
+ユーザに権限を付与するには、**GRANT**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 GRANT [type] ON [database].[table] TO [user]@[host];

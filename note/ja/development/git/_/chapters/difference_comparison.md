@@ -1,6 +1,6 @@
 # 『差分比較』ノート
 
-（最終更新： 2023-05-13）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -16,7 +16,7 @@
 
 ## 差分の比較
 
-`git diff` は、2つの入力データセットを比較して、その差分を出力する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しなかった場合は、 `HEAD` と[ワークツリー](./record_history.md#ワークツリー)の差分を出力する。
+**git diff**は、2つの入力データセットを比較して、その差分を出力する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しなかった場合は、 `HEAD` と[ワークツリー](./record_history.md#ワークツリー)の差分を出力する。
 
 ```sh
 $ git diff
@@ -96,7 +96,7 @@ $ git diff <branch-1> <branch-2>
 
 ## 特定のコミットの確認
 
-`git show` は、[コミットハッシュ](./record_history.md#コミットハッシュ)を指定することで、指定した[コミット](./record_history.md#コミット)と直前の[コミット](./record_history.md#コミット)を `git diff` した結果を出力できる。
+**git show**は、[コミットハッシュ](./record_history.md#コミットハッシュ)を指定することで、指定した[コミット](./record_history.md#コミット)と直前の[コミット](./record_history.md#コミット)を `git diff` した結果を出力できる。
 
 ```sh
 # HEADとHEAD~1のdiffを出力

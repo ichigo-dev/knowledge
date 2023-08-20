@@ -1,6 +1,6 @@
 # 『テキスト処理と正規表現』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -21,7 +21,7 @@
 
 ### ファイルサイズの確認
 
-`wc` は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の行数、単語数、[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)数を数える[コマンド](./basic_command.md#コマンド)。
+**wc**は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の行数、単語数、[バイト](../../../../basics/_/chapters/computer_and_number.md#バイト)数を数える[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -46,7 +46,7 @@ $ wc test.txt
 
 ### ファイル行のソート
 
-`sort` は、テキストの内容を行単位でソートする[コマンド](./basic_command.md#コマンド)。デフォルトでは、辞書順（アルファベット順）でソートを行う。
+**sort**は、テキストの内容を行単位でソートする[コマンド](./basic_command.md#コマンド)。デフォルトでは、辞書順（アルファベット順）でソートを行う。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -69,7 +69,7 @@ $ sort test.txt
 
 ### 重複行の除去
 
-`uniq` は、連続した同じ内容の行を省く[コマンド](./basic_command.md#コマンド)。重複する行が連続していない場合は省かれないため、 `sort` [コマンド](./basic_command.md#コマンド)と組み合わせる場合が多い。
+**uniq**は、連続した同じ内容の行を省く[コマンド](./basic_command.md#コマンド)。重複する行が連続していない場合は省かれないため、 `sort` [コマンド](./basic_command.md#コマンド)と組み合わせる場合が多い。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -87,7 +87,7 @@ $ uniq test.txt
 
 ### テキストの切り出し
 
-`cut` は、入力行の一部分を切り出して出力する[コマンド](./basic_command.md#コマンド)。
+**cut**は、入力行の一部分を切り出して出力する[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -105,7 +105,7 @@ $ cut -d , -f 3 test.csv
 
 ### 文字列の変換と削除
 
-`tr` は、入力テキストの内容から、特定の文字を置き換えるための[コマンド](./basic_command.md#コマンド)。
+**tr**は、入力テキストの内容から、特定の文字を置き換えるための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -123,7 +123,7 @@ $ cat data.txt | tr ; ,
 
 ### ファイルの差分の確認
 
-`diff` は、2つの[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を表示するための[コマンド](./basic_command.md#コマンド)。例えば、編集前後の[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)や設定[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を確認するために使用される。
+**diff**は、2つの[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を表示するための[コマンド](./basic_command.md#コマンド)。例えば、編集前後の[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)や設定[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を確認するために使用される。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -149,7 +149,7 @@ $ diff test1.txt test2.txt
 
 ### ファイルの差分の適用
 
-`patch` は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を適用するための[コマンド](./basic_command.md#コマンド)。
+**patch**は、[ファイル](../../../software/_/chapters/file_system.md#ファイル)の差分を適用するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -165,7 +165,7 @@ $ diff old.txt new.txt | patch new.txt
 
 ### 文字列の処理
 
-`sed` は、文字列を柔軟に処理することができる[コマンド](./basic_command.md#コマンド)。 `sed` は"stream editor"の略語。
+**sed**は、文字列を柔軟に処理することができる[コマンド](./basic_command.md#コマンド)。 `sed` は"stream editor"の略語。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 

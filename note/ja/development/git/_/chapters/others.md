@@ -1,6 +1,6 @@
 # 『その他の機能』ノート
 
-（最終更新： 2023-05-13）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -19,7 +19,7 @@
 
 ## ワークツリーの退避
 
-`git stash` は、[ワークツリー](./record_history.md#ワークツリー)に加えた変更を一時的に退避するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ワークツリー](./record_history.md#ワークツリー)の変更内容を**スタッシュ**領域に退避しておき、緊急の作業等を行った後にスタッシュの内容を復元する、といった使い方ができる。また、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)にコメントをつけることで、複数のスタッシュが管理しやすくなる。
+**git stash**は、[ワークツリー](./record_history.md#ワークツリー)に加えた変更を一時的に退避するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ワークツリー](./record_history.md#ワークツリー)の変更内容を**スタッシュ**領域に退避しておき、緊急の作業等を行った後にスタッシュの内容を復元する、といった使い方ができる。また、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)にコメントをつけることで、複数のスタッシュが管理しやすくなる。
 
 ```sh
 # ワークツリーをスタッシュに退避
@@ -31,7 +31,7 @@ $ git stash "<comment>"
 
 ### スタッシュの一覧表示
 
-`git stash list` は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を一覧表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git stash list**は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を一覧表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git stash list
@@ -39,7 +39,7 @@ $ git stash list
 
 ### スタッシュの復元
 
-`git stash apply` や `git stash pop` は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を[ワークツリー](./record_history.md#ワークツリー)に反映する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `git stash apply` は[スタッシュ](#ワークツリーの退避)の内容を維持したまま[ワークツリー](./record_history.md#ワークツリー)に反映し、 `git stash pop` は[スタッシュ](#ワークツリーの退避)の内容を[ワークツリー](./record_history.md#ワークツリー)に反映した後に破棄される。また、 `git stash list` で確認できる[スタッシュ](#ワークツリーの退避)の識別子を指定して[スタッシュ](#ワークツリーの退避)を復元することもできる。
+**git stash apply**や**git stash pop**は、[スタッシュ](#ワークツリーの退避)に退避した変更内容を[ワークツリー](./record_history.md#ワークツリー)に反映する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `git stash apply` は[スタッシュ](#ワークツリーの退避)の内容を維持したまま[ワークツリー](./record_history.md#ワークツリー)に反映し、 `git stash pop` は[スタッシュ](#ワークツリーの退避)の内容を[ワークツリー](./record_history.md#ワークツリー)に反映した後に破棄される。また、 `git stash list` で確認できる[スタッシュ](#ワークツリーの退避)の識別子を指定して[スタッシュ](#ワークツリーの退避)を復元することもできる。
 
 
 ```sh
@@ -54,7 +54,7 @@ $ git stash pop <stash>
 
 ### スタッシュの確認
 
-`git stash show` は、[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しなければ直前の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示し、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)に[スタッシュ](#ワークツリーの退避)の識別子を指定すると任意の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示できる。また、 `git stash show` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-p` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[スタッシュ](#ワークツリーの退避)の変更内容を確認できる。
+**git stash show**は、[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しなければ直前の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示し、[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)に[スタッシュ](#ワークツリーの退避)の識別子を指定すると任意の[スタッシュ](#ワークツリーの退避)の変更[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を表示できる。また、 `git stash show` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-p` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[スタッシュ](#ワークツリーの退避)の変更内容を確認できる。
 
 ```sh
 # 直前のスタッシュの変更ファイルを確認
@@ -72,7 +72,7 @@ $ git stash show <stash> -p
 
 ### スタッシュの削除
 
-`git stash drop` は、[スタッシュ](#ワークツリーの退避)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)として[スタッシュ](#ワークツリーの退避)の識別子を指定することで、任意の[スタッシュ](#ワークツリーの退避)を削除できる。また、 `git stash clear` を用いることで全ての[スタッシュ](#ワークツリーの退避)を一括で削除できる。
+**git stash drop**は、[スタッシュ](#ワークツリーの退避)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)として[スタッシュ](#ワークツリーの退避)の識別子を指定することで、任意の[スタッシュ](#ワークツリーの退避)を削除できる。また、 `git stash clear` を用いることで全ての[スタッシュ](#ワークツリーの退避)を一括で削除できる。
 
 
 ```sh
@@ -90,7 +90,7 @@ $ git stash clear
 
 ### タグの一覧表示
 
-`git tag` は、登録されている[タグ](#タグ)の一覧を表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git tag**は、登録されている[タグ](#タグ)の一覧を表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git tag

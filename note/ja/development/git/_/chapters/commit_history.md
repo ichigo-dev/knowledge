@@ -1,6 +1,6 @@
 # 『コミット履歴』ノート
 
-（最終更新： 2023-05-13）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -20,7 +20,7 @@
 
 ## 履歴の確認
 
-`git log` は、[コミット](./record_history.md#コミット)履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git log**は、[コミット](./record_history.md#コミット)履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git log
@@ -132,7 +132,7 @@ $ git log -2
 
 ## コミットの打ち消し
 
-`git revert` は、任意の[コミット](./record_history.md#コミット)を打ち消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コミット](./record_history.md#コミット)履歴を削除するのではなく、特定の[コミット](./record_history.md#コミット)を打ち消すような新しい[コミット](./record_history.md#コミット)を作成する。[コミット](./record_history.md#コミット)履歴を破壊しないため、[リモートリポジトリ](./record_history.md#リモートリポジトリ)と同期済みの[コミット](./record_history.md#コミット)を取り消しても安全。また、この[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)では特定の[コミット](./record_history.md#コミット)のみを打ち消すため、指定した[コミット](./record_history.md#コミット)以降のすべての変更内容を元に戻すわけではない。
+**git revert**は、任意の[コミット](./record_history.md#コミット)を打ち消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コミット](./record_history.md#コミット)履歴を削除するのではなく、特定の[コミット](./record_history.md#コミット)を打ち消すような新しい[コミット](./record_history.md#コミット)を作成する。[コミット](./record_history.md#コミット)履歴を破壊しないため、[リモートリポジトリ](./record_history.md#リモートリポジトリ)と同期済みの[コミット](./record_history.md#コミット)を取り消しても安全。また、この[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)では特定の[コミット](./record_history.md#コミット)のみを打ち消すため、指定した[コミット](./record_history.md#コミット)以降のすべての変更内容を元に戻すわけではない。
 
 ```sh
 # 任意のコミットを打消し
@@ -146,7 +146,7 @@ $ git revert HEAD~3
 
 ## コミットの取り消し
 
-`git reset` は、[コミット](./record_history.md#コミット)を取り消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ブランチ](./branch.md#ブランチ)上の `HEAD` の位置を移動し、[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)に応じて[ステージ](./record_history.md#ステージ)と[ワークツリー](./record_history.md#ワークツリー)の状態も変更する。
+**git reset**は、[コミット](./record_history.md#コミット)を取り消すための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[ブランチ](./branch.md#ブランチ)上の `HEAD` の位置を移動し、[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)に応じて[ステージ](./record_history.md#ステージ)と[ワークツリー](./record_history.md#ワークツリー)の状態も変更する。
 
 | オプション | 概要                                                                                      |
 |------------|-------------------------------------------------------------------------------------------|
@@ -166,7 +166,7 @@ $ git reset HEAD~3
 
 ## Gitの操作履歴
 
-`git reflog` は、[Git](./git.md#git)の操作履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Git](./git.md#git)では操作履歴に対してもハッシュがついており、 `git reset` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)にハッシュあるいは `HEAD@{0}` のようなエイリアスを指定することで、その操作を取り消すとこができる。誤って必要な[ブランチ](./branch.md#ブランチ)を消してしまったり、[ワークツリー](./record_history.md#ワークツリー)の変更内容を破棄してしまった場合などに、その操作を取り消すことで復旧できる。
+**git reflog**は、[Git](./git.md#git)の操作履歴を確認するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Git](./git.md#git)では操作履歴に対してもハッシュがついており、 `git reset` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)にハッシュあるいは `HEAD@{0}` のようなエイリアスを指定することで、その操作を取り消すとこができる。誤って必要な[ブランチ](./branch.md#ブランチ)を消してしまったり、[ワークツリー](./record_history.md#ワークツリー)の変更内容を破棄してしまった場合などに、その操作を取り消すことで復旧できる。
 
 ```sh
 $ git reflog

@@ -1,6 +1,6 @@
 # 『リポジトリの作成』ノート
 
-（最終更新： 2023-05-13）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -30,7 +30,7 @@
 
 ## リポジトリの初期化
 
-`git init` は、[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)内で[Git](./git.md#git)の管理対象としたい任意の[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)を、[リポジトリ](#リポジトリ)として初期化するには[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git init**は、[コンピュータ](../../../../computer/_/chapters/computer.md#コンピュータ)内で[Git](./git.md#git)の管理対象としたい任意の[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)を、[リポジトリ](#リポジトリ)として初期化するには[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # 新たにプロジェクト用のディレクトリを作成
@@ -52,7 +52,7 @@ Initialized empty Git repository in /path/to/working_directory/<project-name>/.g
 
 クローン元となった[リモートリポジトリ](./record_history.md#リモートリポジトリ)は、[ローカルリポジトリ](./record_history.md#ローカルリポジトリ)に `origin` という[エイリアス](./remote_repository.md#エイリアス)で登録される。
 
-[リポジトリ](#リポジトリ)のクローンには、 `git clone` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
+[リポジトリ](#リポジトリ)のクローンには、**git clone**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
 
 ```sh
 # クローンしたいディレクトリに移動

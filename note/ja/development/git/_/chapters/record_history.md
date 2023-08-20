@@ -1,6 +1,6 @@
 # 『履歴の記録』ノート
 
-（最終更新： 2023-05-13）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -44,7 +44,7 @@
 
 ## 状態の確認
 
-`git status` は、[ワークツリー](#ワークツリー)、[ステージ](#ステージ)にある[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git status**は、[ワークツリー](#ワークツリー)、[ステージ](#ステージ)にある[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ git status
@@ -114,7 +114,7 @@ M  example1.txt
 
 **ステージング**は、履歴として記録したい[ワークツリー](#ワークツリー)の変更内容を一時的に[ステージエリア](#ステージ)に登録する操作。ステージングしただけでは変更は履歴に記録されないので注意が必要。
 
-ステージングには、 `git add` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
+ステージングには、**git add**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
 
 ```sh
 # ファイル、ディレクトリのパスを指定してステージに移動
@@ -147,7 +147,7 @@ index xxxxxxx..xxxxxxx 000000
 
 ## ファイルの復元
 
-`git restore` は、指定した[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の変更内容を取り消し、元の状態を復元する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**git restore**は、指定した[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の変更内容を取り消し、元の状態を復元する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # ファイル、ディレクトリのパスを指定して復元
@@ -176,7 +176,7 @@ $ git restore . --staged
 
 [Git](./git.md#git)では、コミットごとに差分のみ記録するのではなく、毎回すべての[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の**スナップショット**（ある時点での[ソースコード](../../../../programming/_/chapters/programming.md#ソースコード)や[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)、[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)などの状態を抜き出したもの）を作成している。差分のみを記録していると、古いリビジョンの[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を復元するために履歴を全てたどる必要があるが、スナップショットを保存しておくことで高速に再現することができる。
 
-コミットには、 `git commit` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
+コミットには、**git commit**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。
 
 ```sh
 # 変更をコミット（エディタが開かれてコミットメッセージの入力に移る）
@@ -196,7 +196,7 @@ $ git commit -m "<message>"
 
 | エイリアス                          | 概要                                   |
 |-------------------------------------|----------------------------------------|
-| `HEAD`, `@`                         | 現在のHEADコミット                     |
+| `HEAD` , `@`                        | 現在のHEADコミット                     |
 | `HEAD^` , `HEAD~` , `@^` , `@~`     | 1つ前のコミット                        |
 | `HEAD^^` , `HEAD~~` , `@^^` , `@~~` | 2つ前のコミット                        |
 | `HEAD~{n}` , `@~{n}`                | n個前のコミット                        |

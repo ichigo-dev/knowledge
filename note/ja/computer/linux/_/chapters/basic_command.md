@@ -1,6 +1,6 @@
 # 『基本コマンド』ノート
 
-（最終更新： 2023-03-26）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -60,7 +60,7 @@ $ systemctl start httpd
 
 ### マニュアル
 
-`man` は、[Linux](./linux.md#linux)のマニュアルページを表示するために使用される[コマンド](#コマンド)。マニュアルページには、[Linux](./linux.md#linux)システムや[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)の機能、[オプション](#オプション)、使用例などが記載されている。 `man` [コマンド](#コマンド)を使うことで、[コマンド](#コマンド)や[ファイル](../../../software/_/chapters/file_system.md#ファイル)、システムの概要を調べることができる。
+**man**は、[Linux](./linux.md#linux)のマニュアルページを表示するために使用される[コマンド](#コマンド)。マニュアルページには、[Linux](./linux.md#linux)システムや[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)の機能、[オプション](#オプション)、使用例などが記載されている。 `man` [コマンド](#コマンド)を使うことで、[コマンド](#コマンド)や[ファイル](../../../software/_/chapters/file_system.md#ファイル)、システムの概要を調べることができる。
 
 `man` [コマンド](#コマンド)の書式は以下の通り。
 
@@ -117,17 +117,17 @@ $ ls --help
 
 ## ログアウト
 
-`exit` は、[Linux](./linux.md#linux)において[シェル](./shell_and_terminal.md#シェル)からログアウトするための[コマンド](#コマンド)。この[コマンド](#コマンド)の実行により現在使用している[シェル](./shell_and_terminal.md#シェル)[プロセス](./process_and_job.md#プロセス)を終了する。
+**exit**は、[Linux](./linux.md#linux)において[シェル](./shell_and_terminal.md#シェル)からログアウトするための[コマンド](#コマンド)。この[コマンド](#コマンド)の実行により現在使用している[シェル](./shell_and_terminal.md#シェル)[プロセス](./process_and_job.md#プロセス)を終了する。
 
 ### シャットダウン
 
-`shutdown` は、[Linux](./linux.md#linux)システムをシャットダウンするための[コマンド](#コマンド)。システムをシャットダウンする前に[ユーザ](./user_and_permission.md#ユーザ)に通知を行い、デフォルトではシャットダウンまで1分間の待ち時間が設定されている。
+**shutdown**は、[Linux](./linux.md#linux)システムをシャットダウンするための[コマンド](#コマンド)。システムをシャットダウンする前に[ユーザ](./user_and_permission.md#ユーザ)に通知を行い、デフォルトではシャットダウンまで1分間の待ち時間が設定されている。
 
-また、 `poweroff` もシャットダウンのための[コマンド](#コマンド)。ただし、 `shutdown` とは異なり、システムを直ちに停止するため、[アプリケーション](../../../software/_/chapters/software.md#応用ソフトウェア)が意図せず停止されてしまう恐れがある。
+また、**poweroff**もシャットダウンのための[コマンド](#コマンド)。ただし、 `shutdown` とは異なり、システムを直ちに停止するため、[アプリケーション](../../../software/_/chapters/software.md#応用ソフトウェア)が意図せず停止されてしまう恐れがある。
 
 ### 再起動
 
-`reboot` は、[Linux](./linux.md#linux)システムを再起動するための[コマンド](#コマンド)。 `reboot` を実行すると、システムはシャットダウンして再起動する。 `shutdown` コマンドのように再起動時刻を指定して実行することもできる。例えば、5分後にシステムを再起動したい場合、以下の[コマンド](#コマンド)を実行する。
+**reboot**は、[Linux](./linux.md#linux)システムを再起動するための[コマンド](#コマンド)。 `reboot` を実行すると、システムはシャットダウンして再起動する。 `shutdown` コマンドのように再起動時刻を指定して実行することもできる。例えば、5分後にシステムを再起動したい場合、以下の[コマンド](#コマンド)を実行する。
 
 ```sh
 $ reboot +5
@@ -135,14 +135,14 @@ $ reboot +5
 
 ### スリープモード
 
-`suspend` は、[Linux](./linux.md#linux)システムをスリープモードにするための[コマンド](#コマンド)。 `suspend` を実行すると、[コンピュータ](../../../_/chapters/computer.md#コンピュータ)の電源はOFFにならず、[CPU](../../../hardware/_/chapters/processor.md#cpu)や[メモリ](../../../hardware/_/chapters/memory.md#メモリ)などの一部の機能が停止して、省エネモードになる。また、この[コマンド](#コマンド)から復帰すると、停止前の状態から作業を再開することができる。
+**suspend**は、[Linux](./linux.md#linux)システムをスリープモードにするための[コマンド](#コマンド)。 `suspend` を実行すると、[コンピュータ](../../../_/chapters/computer.md#コンピュータ)の電源はOFFにならず、[CPU](../../../hardware/_/chapters/processor.md#cpu)や[メモリ](../../../hardware/_/chapters/memory.md#メモリ)などの一部の機能が停止して、省エネモードになる。また、この[コマンド](#コマンド)から復帰すると、停止前の状態から作業を再開することができる。
 
 
 ## ファイル操作
 
 ### ファイルの一覧表示
 
-`ls` は、[Linux](./linux.md#linux)及び[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の一覧表示を行う[コマンド](#コマンド)。 `ls` は"list"の略語。[ファイル](../../../software/_/chapters/file_system.md#ファイル)名や[パーミッション](./user_and_permission.md#パーミッション)、[所有者](./user_and_permission.md#所有者)、更新日時、ファイルサイズなどの情報を表示することができる。
+**ls**は、[Linux](./linux.md#linux)及び[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の一覧表示を行う[コマンド](#コマンド)。 `ls` は"list"の略語。[ファイル](../../../software/_/chapters/file_system.md#ファイル)名や[パーミッション](./user_and_permission.md#パーミッション)、[所有者](./user_and_permission.md#所有者)、更新日時、ファイルサイズなどの情報を表示することができる。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -173,7 +173,7 @@ ls [OPTION]... [FILE]...
 
 ### ファイルの作成
 
-`touch` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティグシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、空の[ファイル](../../../software/_/chapters/file_system.md#ファイル)を作成したり、既存の[ファイル](../../../software/_/chapters/file_system.md#ファイル)の更新日時を変更する[コマンド](#コマンド)です。
+**touch**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティグシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、空の[ファイル](../../../software/_/chapters/file_system.md#ファイル)を作成したり、既存の[ファイル](../../../software/_/chapters/file_system.md#ファイル)の更新日時を変更する[コマンド](#コマンド)です。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -198,7 +198,7 @@ $ touch test.txt
 
 ### ファイルの削除
 
-`rm` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#オペレーティングシステム)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を削除するための[コマンド](#コマンド)。 `rm` は"remove"の略語。
+**rm**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#オペレーティングシステム)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を削除するための[コマンド](#コマンド)。 `rm` は"remove"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -224,7 +224,7 @@ $ rm test.txt
 
 ### ファイルのコピー
 
-`cp` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)をコピーするための[コマンド](#コマンド)。 `cp` は"copy"の略語。
+**cp**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)をコピーするための[コマンド](#コマンド)。 `cp` は"copy"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -252,7 +252,7 @@ cp /home/user/src/test.txt /home/user/dest/test.txt
 
 ### ファイルの移動
 
-`mv` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を移動するための[コマンド](#コマンド)。また、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の名前を変更するためにも用いられる。 `mv` は"move"の略語。
+**mv**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を移動するための[コマンド](#コマンド)。また、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の名前を変更するためにも用いられる。 `mv` は"move"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -278,7 +278,7 @@ $ mv /home/user/src/test.txt /home/user/src/test2.txt
 
 ### ファイルの内容確認
 
-`cat` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキストファイルの内容を表示するための[コマンド](#コマンド)。 `cat` は"concatenate"の略語。
+**cat**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキストファイルの内容を表示するための[コマンド](#コマンド)。 `cat` は"concatenate"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -307,7 +307,7 @@ $ cat test1.txt test2.txt
 
 ### ファイルのページャ表示
 
-`less` や `more` [コマンド](#コマンド)は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)を閲覧するための[コマンド](#コマンド)。 `less` は `more` よりも高度な機能を持っている。
+**less**や**more**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)を閲覧するための[コマンド](#コマンド)。 `less` は `more` よりも高度な機能を持っている。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -331,7 +331,7 @@ $ less /var/log/syslog
 
 ### ファイルの先頭表示
 
-`head` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の先頭から指定された行数分の内容を表示する[コマンド](#コマンド)。 `tail` [コマンド](#コマンド)と同様に、ログ[ファイル](../../../software/_/chapters/file_system.md#ファイル)や大容量テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の処理に便利なツール。
+**head**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の先頭から指定された行数分の内容を表示する[コマンド](#コマンド)。 `tail` [コマンド](#コマンド)と同様に、ログ[ファイル](../../../software/_/chapters/file_system.md#ファイル)や大容量テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の処理に便利なツール。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -353,7 +353,7 @@ $ head test1.txt test2.txt
 
 ### ファイルの末尾表示
 
-`tail` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の末尾から指定された行数分の内容を表示するための[コマンド](#コマンド)。主にログ[ファイル](../../../software/_/chapters/file_system.md#ファイル)や大容量のテキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の処理や解析に便利なツール。
+**tail**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、テキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の末尾から指定された行数分の内容を表示するための[コマンド](#コマンド)。主にログ[ファイル](../../../software/_/chapters/file_system.md#ファイル)や大容量のテキスト[ファイル](../../../software/_/chapters/file_system.md#ファイル)の処理や解析に便利なツール。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -384,7 +384,7 @@ $ tail -f access.log
 
 ### カレントディレクトリの確認
 
-`pwd` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、現在の作業[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を表示するための[コマンド](#コマンド)。 `pwd` は"print working directory"の略語。
+**pwd**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、現在の作業[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を表示するための[コマンド](#コマンド)。 `pwd` は"print working directory"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -398,7 +398,7 @@ pwd [OPTION]...
 
 ### ディレクトリの移動
 
-`cd` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[カレントディレクトリ](../../../software/_/chapters/file_system.md#カレントディレクトリ)を変更するための[コマンド](#コマンド)。 `cd` は"change directory"の略語。
+**cd**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[カレントディレクトリ](../../../software/_/chapters/file_system.md#カレントディレクトリ)を変更するための[コマンド](#コマンド)。 `cd` は"change directory"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -420,7 +420,7 @@ $ cd ..
 
 ### ディレクトリの作成
 
-`mkdir` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、新しい[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を作成するための[コマンド](#コマンド)。 `mkdir` は"make directory"の略語。
+**mkdir**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、新しい[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を作成するための[コマンド](#コマンド)。 `mkdir` は"make directory"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -442,7 +442,7 @@ $ mkdir docs music pictures
 
 ### ディレクトリの削除
 
-`rmdir` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、空の[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を削除するための[コマンド](#コマンド)。 `rmdir` は"remove directory"の略語。
+**rmdir**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、空の[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を削除するための[コマンド](#コマンド)。 `rmdir` は"remove directory"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -459,7 +459,7 @@ $ rmdir docs
 
 ## リンクの作成
 
-`ln` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[リンク](./file.md#リンク)を作成するために使用される[コマンド](#コマンド)。 `ln` は"link"の略語。
+**ln**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[リンク](./file.md#リンク)を作成するために使用される[コマンド](#コマンド)。 `ln` は"link"の略語。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -487,7 +487,7 @@ $ ln -s /home/user/docs /home/user/docs_link
 
 ## ファイルの検索
 
-`find` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、指定された[ディレクトリツリー](../../../software/_/chapters/file_system.md#ツリー構造)内で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を検索するための[コマンド](#コマンド)。条件に合致する[ファイル](../../../software/_/chapters/file_system.md#ファイル)を見つけ出して、指定されたアクションを実行することができる。
+**find**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、指定された[ディレクトリツリー](../../../software/_/chapters/file_system.md#ツリー構造)内で[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)を検索するための[コマンド](#コマンド)。条件に合致する[ファイル](../../../software/_/chapters/file_system.md#ファイル)を見つけ出して、指定されたアクションを実行することができる。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -513,7 +513,7 @@ $ find . -name "test.txt"
 
 ### データベースを利用したファイルの検索
 
-`locate` は、[ファイルシステム](../../../software/_/chapters/file_system.md#ファイルシステム)内で指定した文字列にマッチする[ファイル](../../../software/_/chapters/file_system.md#ファイル)を高速に検索するための[コマンド](#コマンド)。 `find` [コマンド](#コマンド)よりも効率的で、パターンマッチングにも対応している。
+**locate**は、[ファイルシステム](../../../software/_/chapters/file_system.md#ファイルシステム)内で指定した文字列にマッチする[ファイル](../../../software/_/chapters/file_system.md#ファイル)を高速に検索するための[コマンド](#コマンド)。 `find` [コマンド](#コマンド)よりも効率的で、パターンマッチングにも対応している。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -539,7 +539,7 @@ $ locate /etc/*ssh*
 
 ### ファイル内のパターン検索
 
-`grep` は、指定したパターンに一致する行を[ファイル](../../../software/_/chapters/file_system.md#ファイル)から検索し、マッチする行を出力するための[コマンド](#コマンド)。
+**grep**は、指定したパターンに一致する行を[ファイル](../../../software/_/chapters/file_system.md#ファイル)から検索し、マッチする行を出力するための[コマンド](#コマンド)。
 
 [コマンド](#コマンド)の書式は以下の通り。
 
@@ -578,7 +578,7 @@ grep "*.png" *
 
 ## コマンドの検索
 
-`which` は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[コマンド](#コマンド)がどの場所にインストールされているかを特定するための[コマンド](#コマンド)。
+**which**は、[Linux](./linux.md#linux)および[UNIX系](../../../software/_/chapters/operating_system.md#unix)[オペレーティングシステム](../../../software/_/chapters/operating_system.md#オペレーティングシステム)で使用される、[コマンド](#コマンド)がどの場所にインストールされているかを特定するための[コマンド](#コマンド)。
 
 [コマンド](#コマンド)の書式は以下の通り。
 

@@ -1,6 +1,6 @@
 # 『Gitの設定』ノート
 
-（最終更新： 2023-05-12）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -17,7 +17,7 @@
 
 [Git](./git.md#git)は設定によって、[コミット](./record_history.md#コミット)時に記録されるユーザ名やメールアドレス、[リモートリポジトリ](./record_history.md#リモートリポジトリ)との接続に関するオプションなどを変更することができる。
 
-設定は、[ホームディレクトリ](../../../../computer/software/_/chapters/file_system.md#ホームディレクトリ)や各[リポジトリ](./create_repository.md#リポジトリ)の `.git` [ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)にある設定[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)に記述することで適用される。また、 `git config` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)によって設定の確認や変更が行える。
+設定は、[ホームディレクトリ](../../../../computer/software/_/chapters/file_system.md#ホームディレクトリ)や各[リポジトリ](./create_repository.md#リポジトリ)の `.git` [ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)にある設定[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)に記述することで適用される。また、**git config**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)によって設定の確認や変更が行える。
 
 ### 設定のレベル
 

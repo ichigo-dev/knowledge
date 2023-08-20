@@ -1,6 +1,6 @@
 # 『Dockerfile』ノート
 
-（最終更新： 2023-05-20）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -33,7 +33,7 @@ CMD ["python", "app.py"]
 
 ### Dockerfileのビルド
 
-`docker build` は、[Dockerfile](#dockerfile)から[イメージ](./image.md#イメージ)を生成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテキスト](#ビルドコンテキスト)には、[Dockerfile](#dockerfile)が参照するホストOSの[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)[パス](../../../../computer/software/_/chapters/file_system.md#パス)を指定する。デフォルトでは[カレントディレクトリ](../../../../computer/software/_/chapters/file_system.md#カレントディレクトリ)にある `Dockerfile` という名前の[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を元にビルドを行うが、 `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)で任意の[Dockerfile](#dockerfile)を使用できる。また、 `-t` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与して、[イメージ](./image.md#イメージ)名やタグを指定できる。
+**docker build**は、[Dockerfile](#dockerfile)から[イメージ](./image.md#イメージ)を生成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[コンテキスト](#ビルドコンテキスト)には、[Dockerfile](#dockerfile)が参照するホストOSの[ディレクトリ](../../../../computer/software/_/chapters/file_system.md#ディレクトリ)[パス](../../../../computer/software/_/chapters/file_system.md#パス)を指定する。デフォルトでは[カレントディレクトリ](../../../../computer/software/_/chapters/file_system.md#カレントディレクトリ)にある `Dockerfile` という名前の[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を元にビルドを行うが、 `-f` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)で任意の[Dockerfile](#dockerfile)を使用できる。また、 `-t` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与して、[イメージ](./image.md#イメージ)名やタグを指定できる。
 
 ```sh
 # イメージのビルド

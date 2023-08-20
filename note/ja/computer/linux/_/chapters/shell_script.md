@@ -1,6 +1,6 @@
 # 『シェルスクリプト』ノート
 
-（最終更新： 2023-04-06）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -52,7 +52,7 @@ $ ./homesize.sh
 
 ### シェルスクリプトの実行
 
-`source` は、指定した[ファイル](../../../software/_/chapters/file_system.md#ファイル)を現在の[シェル](./shell_and_terminal.md#シェル)で実行する[コマンド](./basic_command.md#コマンド)。 `./` を用いる場合とは異なり、現在の[シェル](./shell_and_terminal.md#シェル)にそのまま[コマンド](./basic_command.md#コマンド)を流し込むかたちとなるので、[ファイル](../../../software/_/chapters/file_system.md#ファイル)に[シバン](#シバン)を記述する必要はない。また、[ファイル](../../../software/_/chapters/file_system.md#ファイル)自体に[実行権限](./user_and_permission.md#権限)を付与しなくてもよい。
+**source**は、指定した[ファイル](../../../software/_/chapters/file_system.md#ファイル)を現在の[シェル](./shell_and_terminal.md#シェル)で実行する[コマンド](./basic_command.md#コマンド)。 `./` を用いる場合とは異なり、現在の[シェル](./shell_and_terminal.md#シェル)にそのまま[コマンド](./basic_command.md#コマンド)を流し込むかたちとなるので、[ファイル](../../../software/_/chapters/file_system.md#ファイル)に[シバン](#シバン)を記述する必要はない。また、[ファイル](../../../software/_/chapters/file_system.md#ファイル)自体に[実行権限](./user_and_permission.md#権限)を付与しなくてもよい。
 
 以下は、 `homesize.sh` という[シェルスクリプト](#シェルスクリプト)を `source` を用いてカレントシェルで実行する例。
 
@@ -182,7 +182,7 @@ cp -r $backup_from $backup_to
 
 ### コマンドラインからの入力の受け取り
 
-`read` は、ユーザに[プロンプト](./shell_and_terminal.md#プロンプト)を返して、コマンドラインからの入力を待ち受ける状態とする[コマンド](./basic_command.md#コマンド)。
+**read**は、ユーザに[プロンプト](./shell_and_terminal.md#プロンプト)を返して、コマンドラインからの入力を待ち受ける状態とする[コマンド](./basic_command.md#コマンド)。
 
 ```sh
 #!/bin/bash

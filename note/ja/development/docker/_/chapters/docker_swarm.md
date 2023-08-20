@@ -1,6 +1,6 @@
 # 『Docker Swarm』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -32,7 +32,7 @@
 
 ## Docker Swarmの起動
 
-`docker swarm init` は、Docker Swarmのマスタノードを起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。
+**docker swarm init**は、Docker Swarmのマスタノードを起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。
 
 ```sh
 $ docker swarm init
@@ -41,7 +41,7 @@ $ docker swarm init
 
 ## Docker Swarmノードの追加
 
-`docker swarm join` は、[Docker Swarm](#docker-swarm)の[クラスタ](../../../../system/_/chapters/system_architecture.md#クラスタコンピューティング)に参加するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)が管理する各ワーカノードとなる[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。トークンには、[Docker Swarm](#docker-swarm)の起動時に生成されたものを指定する。
+**docker swarm join**は、[Docker Swarm](#docker-swarm)の[クラスタ](../../../../system/_/chapters/system_architecture.md#クラスタコンピューティング)に参加するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)が管理する各ワーカノードとなる[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行する。トークンには、[Docker Swarm](#docker-swarm)の起動時に生成されたものを指定する。
 
 ```sh
 $ docker swarm join <master node ip>:<master node port> --token <token>
@@ -50,7 +50,7 @@ $ docker swarm join <master node ip>:<master node port> --token <token>
 
 ## Docker Swarmのトークンの確認
 
-`docker swarm join-token` は、[ノード](../../../../network/_/chapters/network.md#ノード)を追加するためのトークンを再度表示するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行することができる。
+**docker swarm join-token**は、[ノード](../../../../network/_/chapters/network.md#ノード)を追加するためのトークンを再度表示するための[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[Swarm Manager](#docker-swarm)の[ホスト](../../../../network/_/chapters/network.md#ホスト)で実行することができる。
 
 ```sh
 $ docker swarm join-token worker
@@ -59,7 +59,7 @@ $ docker swarm join-token worker
 
 ## Docker Swarmノードの確認
 
-`docker swarm node ls` は、[Swarm Manager](#docker-swarm)が管理する[ノード](../../../../network/_/chapters/network.md#ノード)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker swarm node ls**は、[Swarm Manager](#docker-swarm)が管理する[ノード](../../../../network/_/chapters/network.md#ノード)を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker swarm node ls
@@ -81,7 +81,7 @@ $ docker network create -d overlay <network>
 
 ### Docker Swarmサービスの作成
 
-`docker service create` は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `--name` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)にはサービス名を、 `--hostname` には[コンテナ](./container.md#コンテナ)の[ホスト](../../../../network/_/chapters/network.md#ホスト)名を、 `--network` には使用する[overlay](./network.md#overlay)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を、 `--replicas` には起動時の[コンテナ](./container.md#コンテナ)の複製の数を指定する。また、 `--update-delay` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、ローリングアップデート時にすべてのレプリカが同時に停止してまわないように遅延時間を設けることができる。
+**docker service create**は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `--name` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)にはサービス名を、 `--hostname` には[コンテナ](./container.md#コンテナ)の[ホスト](../../../../network/_/chapters/network.md#ホスト)名を、 `--network` には使用する[overlay](./network.md#overlay)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を、 `--replicas` には起動時の[コンテナ](./container.md#コンテナ)の複製の数を指定する。また、 `--update-delay` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると、ローリングアップデート時にすべてのレプリカが同時に停止してまわないように遅延時間を設けることができる。
 
 ```sh
 $ docker service create <image>:<tag> \
@@ -93,7 +93,7 @@ $ docker service create <image>:<tag> \
 
 ### Docker Swarmサービスの一覧
 
-`docker service ls` は、 [Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker service ls**は、 [Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の一覧を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service ls
@@ -101,7 +101,7 @@ $ docker service ls
 
 ### Docker Swarmサービスの確認
 
-`docker service ps` は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker service ps**は、[Docker Swarm](#docker-swarm)が扱う[サービス](#docker-swarmサービス)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service ps <service>
@@ -109,7 +109,7 @@ $ docker service ps <service>
 
 ### Docker Swarmサービスの更新
 
-`docker service update` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をローリングアップデートする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker service update**は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をローリングアップデートする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service update --image <image>:<tag> <service>
@@ -117,7 +117,7 @@ $ docker service update --image <image>:<tag> <service>
 
 ### Docker Swarmサービスの削除
 
-`docker service rm` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)を破棄する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker service rm**は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)を破棄する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service rm <service>
@@ -125,7 +125,7 @@ $ docker service rm <service>
 
 ### Docker Swarmサービスのスケール
 
-`docker service scale` は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をスケールする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker service scale**は、[Docker Swarm](#docker-swarm)の[サービス](#docker-swarmサービス)をスケールする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker service scale <service>=<replica num>
@@ -138,7 +138,7 @@ $ docker service scale <service>=<replica num>
 
 ### Docker Swarmスタックのデプロイ
 
-`docker stack deploy` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)をデプロイする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[スタック](#docker-swarmスタック)の定義ファイルから、[サービス](#docker-swarmサービス)を生成する。
+**docker stack deploy**は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)をデプロイする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[スタック](#docker-swarmスタック)の定義ファイルから、[サービス](#docker-swarmサービス)を生成する。
 
 ```sh
 $ docker stack deploy <stack> --compose-file <filename>
@@ -146,7 +146,7 @@ $ docker stack deploy <stack> --compose-file <filename>
 
 ### Docker Swarmスタックの一覧
 
-`docker stack ls` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker stack ls**は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を一覧で確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack ls
@@ -154,7 +154,7 @@ $ docker stack ls
 
 ### Docker Swarmスタックの確認
 
-`docker stack ps` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker stack ps**は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)の状態を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack ps <stack>
@@ -162,7 +162,7 @@ $ docker stack ps <stack>
 
 ### Docker Swarmスタックの削除
 
-`docker stack remove` は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker stack remove**は、[Docker Swarm](#docker-swarm)の[スタック](#docker-swarmスタック)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker stack remove <stack>

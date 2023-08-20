@@ -1,6 +1,6 @@
 # 『ネットワーク』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -77,7 +77,7 @@ $ docker run ubuntu:22.10 --network docker01
 
 ## ネットワークの作成
 
-`docker network create` は、新しい[Docker](./docker.md#docker)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `--attachable` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、手動による[コンテナ](./container.md#コンテナ)のアタッチが可能となる。また、 `--subnet` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与することで、[コンテナ](./container.md#コンテナ)が所属する[サブネット](../../../../network/_/chapters/address_on_network.md#サブネットワーク)を指定することができる。
+**docker network create**は、新しい[Docker](./docker.md#docker)[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を作成する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `--attachable` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、手動による[コンテナ](./container.md#コンテナ)のアタッチが可能となる。また、 `--subnet` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与することで、[コンテナ](./container.md#コンテナ)が所属する[サブネット](../../../../network/_/chapters/address_on_network.md#サブネットワーク)を指定することができる。
 
 ```sh
 # ネットワークの作成
@@ -92,7 +92,7 @@ $ docker network create my_network --attachable --subnet 172.21.0.0/16
 
 ## ネットワークの一覧
 
-`docker network ls` は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を一覧で表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker network ls**は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を一覧で表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker network ls
@@ -105,7 +105,7 @@ e7d006713a1a   bridge              bridge    local
 
 ## ネットワークの削除
 
-`docker network rm` は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker network rm**は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # ネットワークの削除
@@ -118,7 +118,7 @@ $ docker network rm my_network
 
 ## ネットワークの詳細
 
-`docker network inspect` は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)の詳細を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker network inspect**は、[Docker](./docker.md#docker)上に存在する[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)の詳細を確認する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # ネットワークの詳細確認
@@ -138,7 +138,7 @@ $ docker network inspect bridge
 
 ## ネットワークの接続
 
-`docker network connect` は、[コンテナ](./container.md#コンテナ)を[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)に接続する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker network connect**は、[コンテナ](./container.md#コンテナ)を[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)に接続する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # ネットワークの接続
@@ -151,7 +151,7 @@ $ docker network connect my_network ubuntu_linux_01
 
 ## ネットワークの切断
 
-`docker network disconnect` は、[コンテナ](./container.md#コンテナ)を[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)から切断する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker network disconnect**は、[コンテナ](./container.md#コンテナ)を[ネットワーク](../../../../network/_/chapters/network.md#ネットワーク)から切断する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # ネットワークの切断

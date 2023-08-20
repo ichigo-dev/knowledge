@@ -1,6 +1,6 @@
 # 『標準入出力とパイプライン』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -17,19 +17,19 @@
 
 ## 標準入出力
 
-**標準入出力**(stdio: standard input/output)は、[標準入力](#標準入力)、[標準出力](#標準出力)、[標準エラー出力](#標準エラー出力)を合わせたもの。[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)によって最初に用意される。
+**標準入出力**(**stdio**: standard input/output)は、[標準入力](#標準入力)、[標準出力](#標準出力)、[標準エラー出力](#標準エラー出力)を合わせたもの。[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)によって最初に用意される。
 
 ### 標準入力
 
-**標準入力**(stdin: standard input)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のデフォルトのデータ入力元。通常は[キーボード](../../../hardware/_/chapters/io_unit.md#キーボード)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $0$ に割り当てられる。
+**標準入力**(**stdin**: standard input)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のデフォルトのデータ入力元。通常は[キーボード](../../../hardware/_/chapters/io_unit.md#キーボード)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $0$ に割り当てられる。
 
 ### 標準出力
 
-**標準出力**(stdout: standard output)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のデフォルトのデータ出力先。通常は[端末ディスプレイ](./shell_and_terminal.md#ターミナル)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $1$ に割り当てられる。
+**標準出力**(**stdout**: standard output)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)のデフォルトのデータ出力先。通常は[端末ディスプレイ](./shell_and_terminal.md#ターミナル)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $1$ に割り当てられる。
 
 ### 標準エラー出力
 
-**標準エラー出力**(stderr: standard error output)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の[エラー](../../../../programming/_/chapters/programming.md#エラー)メッセージを出力するためのデフォルトの出力先。通常は[端末ディスプレイ](./shell_and_terminal.md#ターミナル)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $2$ に割り当てられる。
+**標準エラー出力**(**stderr**: standard error output)は、[プログラム](../../../../programming/_/chapters/programming.md#プログラム)の[エラー](../../../../programming/_/chapters/programming.md#エラー)メッセージを出力するためのデフォルトの出力先。通常は[端末ディスプレイ](./shell_and_terminal.md#ターミナル)が使用される。[ファイルディスクリプタ](./file.md#ファイルディスクリプタ)の $2$ に割り当てられる。
 
 
 ## リダイレクト

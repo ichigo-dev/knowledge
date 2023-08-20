@@ -1,6 +1,6 @@
 # 『ブランチ』ノート
 
-（最終更新： 2023-03-03）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -25,7 +25,7 @@
 
 ### ブランチの確認
 
-`git branch` は、[リポジトリ](./create_repository.md#リポジトリ)上の[ブランチ](#ブランチ)の一覧を表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しない場合は[ローカルリポジトリ](./record_history.md#ローカルリポジトリ)の[ブランチ](#ブランチ)を、 `-r` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると[リモートリポジトリ](./record_history.md#リモートリポジトリ)の[ブランチ](#ブランチ)を確認できる。また、 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[ローカルリポジトリ](./record_history.md#ローカルリポジトリ)と[リモートリポジトリ](./record_history.md#リモートリポジトリ)の両方を一覧表示できる。
+**git branch**は、[リポジトリ](./create_repository.md#リポジトリ)上の[ブランチ](#ブランチ)の一覧を表示する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。[オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定しない場合は[ローカルリポジトリ](./record_history.md#ローカルリポジトリ)の[ブランチ](#ブランチ)を、 `-r` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定すると[リモートリポジトリ](./record_history.md#リモートリポジトリ)の[ブランチ](#ブランチ)を確認できる。また、 `-a` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、[ローカルリポジトリ](./record_history.md#ローカルリポジトリ)と[リモートリポジトリ](./record_history.md#リモートリポジトリ)の両方を一覧表示できる。
 
 ```sh
 # ローカルリポジトリのブランチを一覧表示
@@ -70,7 +70,7 @@ $ git push <remote> --delete <branch>
 
 ### ブランチの切り替え
 
-`git swtich` は、指定した[ブランチ](#ブランチ)への切り替えを行う[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。切り換え先の `HEAD` の内容が[ワークツリー](./record_history.md#ワークツリー)に展開される。 `git swtich` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-c` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、新規[ブランチ](#ブランチ)の作成も同時に行える。
+**git swtich**は、指定した[ブランチ](#ブランチ)への切り替えを行う[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。切り換え先の `HEAD` の内容が[ワークツリー](./record_history.md#ワークツリー)に展開される。 `git swtich` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)に `-c` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を指定することで、新規[ブランチ](#ブランチ)の作成も同時に行える。
 
 ```sh
 # 指定のブランチに切り替え
@@ -92,7 +92,7 @@ $ git switch -
 
 **マージ**は、ある[ブランチ](#ブランチ)の `HEAD` を別の[ブランチ](#ブランチ)に取り込む操作。[トピックブランチ](#ブランチ)の変更を本流となる[ブランチ](#ブランチ)に統合したり、本流となる[ブランチ](#ブランチ)の変更点を[トピックブランチ](#ブランチ)に取り込むといった使い方をする。
 
-マージには `git merge` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。まずは `HEAD` をマージ先の[ブランチ](#ブランチ)に切り替え、 `git merge` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)の[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)にマージしたい[ブランチ](#ブランチ)名を指定する。
+マージには**git merge**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。まずは `HEAD` をマージ先の[ブランチ](#ブランチ)に切り替え、 `git merge` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)の[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)にマージしたい[ブランチ](#ブランチ)名を指定する。
 
 ```sh
 # 現在のブランチに指定のブランチをマージ
@@ -135,7 +135,7 @@ $ git merge --abort
 
 **リベース**は、[Fast-forwardマージ](#fast-forwardマージ)ができないような2つの[ブランチ](#ブランチ)を、[マージ](#マージ)[コミット](./record_history.md#コミット)を作成せずに統合する方法。統合元の[ブランチ](#ブランチ)の[コミット](./record_history.md#コミット)履歴の先頭に、統合先の[ブランチ](#ブランチ)の[コミット](./record_history.md#コミット)履歴の差分を全て直線的に追加する。これにより不要な[マージ](#マージ)[コミット](./record_history.md#コミット)が除去され、履歴を汚さずに済む。ただし、リベースを行うと統合元の[ブランチ](#ブランチ)の[コミット](./record_history.md#コミット)を打ち消してしまう可能性があるので、本流となる[ブランチ](#ブランチ)を自身が作業する[トピックブランチ](#ブランチ)に統合する場合などに限って利用すると良い。
 
-リベースには `git rebase` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。まずは `HEAD` を統合先の[ブランチ](#ブランチ)に切り替え、 `git merge` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)の[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)に統合したい[ブランチ](#ブランチ)名を指定する。
+リベースには**git rebase**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を用いる。まずは `HEAD` を統合先の[ブランチ](#ブランチ)に切り替え、 `git merge` [コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)の[引数](../../../../computer/linux/_/chapters/basic_command.md#オプション)に統合したい[ブランチ](#ブランチ)名を指定する。
 
 ```sh
 # 現在のブランチに指定のブランチをリベース

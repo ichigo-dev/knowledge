@@ -173,7 +173,7 @@ user@host:~$
 
 ## エイリアス
 
-**エイリアス**は、既存の[コマンド](./basic_command.md#コマンド)に対して別名をつけて実行できるようにする機能。
+**エイリアス**は、既存の[コマンド](./basic_command.md#コマンド)に対して別名をつけて実行できるようにする機能。エイリアスの設定には**alias**[コマンド](./basic_command.md#コマンド)を使用する。
 
 例えば以下のようなエイリアスを設定すると、 `ls` [コマンド](./basic_command.md#コマンド)を実行したときに `-F` [オプション](./basic_command.md#オプション)が自動で付与されるようになる。
 
@@ -181,20 +181,20 @@ user@host:~$
 $ alias ls='ls -F'
 ```
 
-ある[コマンド](./basic_command.md#コマンド)が、本当に[コマンド](./basic_command.md#コマンド)であるかエイリアスであるかを確認するには、 `type` [コマンド](./basic_command.md#コマンド)を使用する。
+ある[コマンド](./basic_command.md#コマンド)が、本当に[コマンド](./basic_command.md#コマンド)であるかエイリアスであるかを確認するには、**type**[コマンド](./basic_command.md#コマンド)を使用する。
 
 ```sh
 $ type ls
 ls is an alias for ls -F
 ```
 
-また、エイリアスを削除するには `unalias` [コマンド](./basic_command.md#コマンド)を使用する。
+また、エイリアスを削除するには**unalias**[コマンド](./basic_command.md#コマンド)を使用する。
 
 ```sh
 $ unalias ls
 ```
 
-`command` [コマンド](./basic_command.md#コマンド)を使用したり、[コマンド](./basic_command.md#コマンド)の先頭に `\` を付与することで、一時的にエイリアスを無視して元の[コマンド](./basic_command.md#コマンド)を実行することもできる。
+**command**[コマンド](./basic_command.md#コマンド)を使用したり、[コマンド](./basic_command.md#コマンド)の先頭に `\` を付与することで、一時的にエイリアスを無視して元の[コマンド](./basic_command.md#コマンド)を実行することもできる。
 
 ```sh
 $ command ls
@@ -236,7 +236,7 @@ $ MY_SHELL_VAR=value
 
 ### PATH
 
-`PATH` は、[シェル](#シェル)が[コマンド](./basic_command.md#コマンド)を実行する際に検索する[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)のリストを含む[環境変数](#環境変数)。 `PATH` には、[シェル](#シェル)が[コマンド](./basic_command.md#コマンド)を検索する順序で、コロンで区切られた[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)のリストが格納される。
+**PATH**は、[シェル](#シェル)が[コマンド](./basic_command.md#コマンド)を実行する際に検索する[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)のリストを含む[環境変数](#環境変数)。 `PATH` には、[シェル](#シェル)が[コマンド](./basic_command.md#コマンド)を検索する順序で、コロンで区切られた[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)のリストが格納される。
 
 例えば、 `PATH` が `/usr/local/bin:/usr/bin:/bin` に設定されている場合、[シェル](#シェル)はまず `/usr/local/bin` を検索し、次に `/usr/bin` を検索し、最後に `/bin` を検索する。
 
@@ -245,7 +245,7 @@ $ MY_SHELL_VAR=value
 
 ## 設定ファイルの読み込み
 
-`source` は、指定された[シェルスクリプト](./shell_script.md#シェルスクリプト)を現在の[シェルセッション](#シェルセッション)で実行し、その[シェルスクリプト](./shell_script.md#シェルスクリプト)内で定義された[変数](../../../../programming/_/chapters/variable.md#変数)や[関数](../../../../programming/_/chapters/function.md#関数)、設定等を有効にする[コマンド](./basic_command.md#コマンド)。
+**source**は、指定された[シェルスクリプト](./shell_script.md#シェルスクリプト)を現在の[シェルセッション](#シェルセッション)で実行し、その[シェルスクリプト](./shell_script.md#シェルスクリプト)内で定義された[変数](../../../../programming/_/chapters/variable.md#変数)や[関数](../../../../programming/_/chapters/function.md#関数)、設定等を有効にする[コマンド](./basic_command.md#コマンド)。
 
 例えば次の[コマンド](./basic_command.md#コマンド)を実行すると、[ホームディレクトリ](../../../software/_/chapters/file_system.md#ホームディレクトリ)にある[bash](#bash)の設定ファイルである `.bashrc` を現在の[シェル](#シェル)に読み込む。
 

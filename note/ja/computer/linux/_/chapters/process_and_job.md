@@ -1,6 +1,6 @@
 # 『プロセスとジョブ』ノート
 
-（最終更新： 2023-05-21）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -64,7 +64,7 @@
 
 ### プロセスの確認
 
-`ps` は、[プロセス](#プロセス)の状態を表示するための[コマンド](./basic_command.md#コマンド)。 `ps` は"process status"の略語。
+**ps**は、[プロセス](#プロセス)の状態を表示するための[コマンド](./basic_command.md#コマンド)。 `ps` は"process status"の略語。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -100,7 +100,7 @@ $ ps aux
 
 ### プロセスツリーの確認
 
-`pstree` は、[プロセス](#プロセス)の親子関係をツリー形式で表示するための[コマンド](./basic_command.md#コマンド)。
+**pstree**は、[プロセス](#プロセス)の親子関係をツリー形式で表示するための[コマンド](./basic_command.md#コマンド)。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -123,7 +123,7 @@ pstree [OPTION]...
 
 ### プロセスのリアルタイム監視
 
-`top` は、[Linux](./linux.md#linux)システムで実行されている[プロセス](#プロセス)をリアルタイムで監視するための[コマンド](./basic_command.md#コマンド)。 `top` [コマンド](./basic_command.md#コマンド)で確認できる情報は以下の通り。
+**top**は、[Linux](./linux.md#linux)システムで実行されている[プロセス](#プロセス)をリアルタイムで監視するための[コマンド](./basic_command.md#コマンド)。 `top` [コマンド](./basic_command.md#コマンド)で確認できる情報は以下の通り。
 
 | ラベル | 概要                                                                                        |
 | ------ | :------------------------------------------------------------------------------------------ |
@@ -141,7 +141,7 @@ pstree [OPTION]...
 
 ### プロセスの強制終了
 
-`kill` は、実行中の[プロセス](#プロセス)に[シグナル](#シグナル)を送信する[コマンド](./basic_command.md#コマンド)。[プロセス](#プロセス)を強制終了する場合などによく用いられる。
+**kill**は、実行中の[プロセス](#プロセス)に[シグナル](#シグナル)を送信する[コマンド](./basic_command.md#コマンド)。[プロセス](#プロセス)を強制終了する場合などによく用いられる。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -161,7 +161,7 @@ $ kill -TERM 1234
 
 ### メモリの監視
 
-`free` は、[メモリ](../../../hardware/_/chapters/memory.md#メモリ)の使用状況を表示するための[コマンド](./basic_command.md#コマンド)。主に以下の情報を表示する。
+**free**は、[メモリ](../../../hardware/_/chapters/memory.md#メモリ)の使用状況を表示するための[コマンド](./basic_command.md#コマンド)。主に以下の情報を表示する。
 
 | ラベル       | 概要                                           |
 | ------------ | :--------------------------------------------- |
@@ -215,7 +215,7 @@ free [OPTION]...
 
 ### ジョブの確認
 
-`jobs` は、アクティブな[ジョブ](#ジョブ)の一覧を確認するための[コマンド](./basic_command.md#コマンド)。
+**jobs**は、アクティブな[ジョブ](#ジョブ)の一覧を確認するための[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の例では、バックグラウンドで実行中の `sleep` [コマンド](./basic_command.md#コマンド)の状態を `jobs` によって確認している。[バックグラウンドジョブ](#バックグラウンドジョブ)の処理が終わると、[プロンプト](./shell_and_terminal.md#プロンプト)にその旨が表示される。
 
@@ -232,7 +232,7 @@ $
 
 ### フォアグラウンドジョブとして実行
 
-`fg` は、[ジョブ](#ジョブ)を[フォアグラウンドジョブ](#フォアグラウンドジョブ)として実行する[コマンド](./basic_command.md#コマンド)。
+**fg**は、[ジョブ](#ジョブ)を[フォアグラウンドジョブ](#フォアグラウンドジョブ)として実行する[コマンド](./basic_command.md#コマンド)。
 
 以下の例では、バックグラウンドで実行中の `sleep` をフォアグラウンドに切り替えている。
 
@@ -249,7 +249,7 @@ $ fg %1
 
 ### バックグラウンドジョブとして実行
 
-`bg` は、[ジョブ](#ジョブ)を[バックグラウンドジョブ](#バックグラウンドジョブ)として実行する[コマンド](./basic_command.md#コマンド)。
+**bg**は、[ジョブ](#ジョブ)を[バックグラウンドジョブ](#バックグラウンドジョブ)として実行する[コマンド](./basic_command.md#コマンド)。
 
 以下の例では、フォアグラウンドで実行していた `sleep` を `Ctrl` + `z` で一度バックグラウンドにサスペンドし、それを改めて[バックグラウンドジョブ](#バックグラウンドジョブ)として再開している。
 
@@ -301,7 +301,7 @@ systemdでは各[サービス](#サービス)がユニットファイルとし�
 
 ### サービスの管理
 
-`systemctl` は、[systemd](#systemd)を制御するために使用される[コマンド](./basic_command.md#コマンド)。[サービス](#サービス)の起動や停止、有効化、無効化などを行う[サービス](#サービス)マネージャであり、システムの管理に必要な[サブコマンド](./basic_command.md#サブコマンド)が用意されている。
+**systemctl**は、[systemd](#systemd)を制御するために使用される[コマンド](./basic_command.md#コマンド)。[サービス](#サービス)の起動や停止、有効化、無効化などを行う[サービス](#サービス)マネージャであり、システムの管理に必要な[サブコマンド](./basic_command.md#サブコマンド)が用意されている。
 
 [コマンド](./basic_command.md#コマンド)の書式は以下の通り。
 
@@ -311,7 +311,7 @@ systemctl [OPTIONS...] COMMAND [UNIT...]
 
 ### サービスの開始
 
-`systemct start` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を開始する[コマンド](./basic_command.md#コマンド)。
+**systemct start**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を開始する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)を開始する。
 
@@ -323,7 +323,7 @@ $ systemctl start httpd
 
 ### サービスの停止
 
-`systemctl stop` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を停止する[コマンド](./basic_command.md#コマンド)。
+**systemctl stop**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を停止する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)を停止する。
 
@@ -335,7 +335,7 @@ $ systemctl stop httpd
 
 ### サービスの再起動
 
-`systemctl restart` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を再起動する[コマンド](./basic_command.md#コマンド)。
+**systemctl restart**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)を再起動する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)を再起動する。
 
@@ -347,7 +347,7 @@ $ systemctl restart httpd
 
 ### サービスの状態確認
 
-`systemctl status` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)の状態を確認する[コマンド](./basic_command.md#コマンド)。
+**systemctl status**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)の状態を確認する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)の状態を表示する。
 
@@ -357,7 +357,7 @@ $ systemctl status httpd
 
 ### サービスの登録
 
-`systemctl enable` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)が起動時に自動的に開始されるように登録する[コマンド](./basic_command.md#コマンド)。
+**systemctl enable**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上の[サービス](#サービス)が起動時に自動的に開始されるように登録する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)が次回のシステムの起動時に自動的に開始される。
 
@@ -367,7 +367,7 @@ $ systemctl enable httpd
 
 ### サービスの登録解除
 
-`systemctl disable` は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上で自動的に起動されるように登録された[サービス](#サービス)を解除する[コマンド](./basic_command.md#コマンド)。
+**systemctl disable**は、[systemd](#systemd)を使用して[Linux](./linux.md#linux)システム上で自動的に起動されるように登録された[サービス](#サービス)を解除する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)が次回のシステムの起動時に自動的に開始されないようにする。
 
@@ -377,7 +377,7 @@ $ systemctl disable httpd
 
 ### サービスの登録確認
 
-`systemctl is-enabled` は、[systemd](#systemd)を使用して指定した[サービス](#サービス)が自動起動に登録されているかを確認する[コマンド](./basic_command.md#コマンド)。
+**systemctl is-enabled**は、[systemd](#systemd)を使用して指定した[サービス](#サービス)が自動起動に登録されているかを確認する[コマンド](./basic_command.md#コマンド)。
 
 例えば以下の[コマンド](./basic_command.md#コマンド)を実行すると、 `httpd` [サービス](#サービス)が登録されているかを表示する。
 
@@ -396,15 +396,15 @@ $ systemctl is-enabled httpd
 
 主なシグナルは以下の通り。
 
-| シグナル番号 | シグナル名            | 概要                                                                                      |
-| ------------ | --------------------- | :---------------------------------------------------------------------------------------- |
-| `1`          | `HUP` (Hung up)       | プロセスを再起動するシグナル。設定ファイルの再読み込みなどに用いられる。                 |
-| `2`          | `INT` (Interrupt)     | キーボードからの割込み( `Ctrl + C` )                                                      |
-| `9`          | `KILL`                | プロセスを強制終了するシグナル。正常な処理を行わないため、最悪の場合ファイルが破損する。 |
-| `15`         | `TERM` (Termination)  | プロセスを終了するシグナル。正常な終了処理を行う。                                        |
-| `18`         | `CONT` (Continue)     | 一時停止のプロセスを再開するシグナル。                                                    |
-| `19`         | `STOP`                | プロセスを一時停止するシグナル。                                                          |
-| `20`         | `TSTP` (Teminal stop) | プロセスを中断するシグナル。                                                              |
+| シグナル番号 | シグナル名             | 概要                                                                                      |
+| ------------ | ---------------------- | :---------------------------------------------------------------------------------------- |
+| `1`          | **HUP**(Hung up)       | プロセスを再起動するシグナル。設定ファイルの再読み込みなどに用いられる。                  |
+| `2`          | **INT**(Interrupt)     | キーボードからの割込み( `Ctrl + C` )                                                      |
+| `9`          | **KILL**               | プロセスを強制終了するシグナル。正常な処理を行わないため、最悪の場合ファイルが破損する。  |
+| `15`         | **TERM**(Termination)  | プロセスを終了するシグナル。正常な終了処理を行う。                                        |
+| `18`         | **CONT**(Continue)     | 一時停止のプロセスを再開するシグナル。                                                    |
+| `19`         | **STOP**               | プロセスを一時停止するシグナル。                                                          |
+| `20`         | **TSTP**(Teminal stop) | プロセスを中断するシグナル。                                                              |
 
 
 ## プロセス間通信
@@ -417,16 +417,16 @@ $ systemctl is-enabled httpd
 
 [サーバ](../../../_/chapters/computer.md#サーバ)は以下のような手順で通信を行う。
 
-1. socket: 待ち受け用のソケットを作成する
-1. bind: 待ち受ける[IPアドレス](../../../../network/_/chapters/address_on_network.md#ipアドレス)や[ポート番号](../../../../network/_/chapters/address_on_network.md#ポート番号)といった情報をソケットに紐づける
-1. listen: クライアントからの通信を待ち受ける
-1. accept: 接続要求を受け入れ、通信用に新しいソケットを作成する
-1. read/write: acceptで作成したソケットを用いて、クライアントとのデータのやり取りを行う
+1. **socket**: 待ち受け用のソケットを作成する
+1. **bind**: 待ち受ける[IPアドレス](../../../../network/_/chapters/address_on_network.md#ipアドレス)や[ポート番号](../../../../network/_/chapters/address_on_network.md#ポート番号)といった情報をソケットに紐づける
+1. **listen**: クライアントからの通信を待ち受ける
+1. **accept**: 接続要求を受け入れ、通信用に新しいソケットを作成する
+1. **read/write**: acceptで作成したソケットを用いて、クライアントとのデータのやり取りを行う
 
 クライアントは以下のような手順で通信を行う。
 
 1. socket: [サーバ](../../../_/chapters/computer.md#サーバ)との通信用のソケットを作成する
-1. connect: [サーバ](../../../_/chapters/computer.md#サーバ)が待ち受けている[IPアドレス](../../../../network/_/chapters/address_on_network.md#ipアドレス)の[ポート](../../../../network/_/chapters/address_on_network.md#ポート番号)に対して接続を試みる
+1. **connect**: [サーバ](../../../_/chapters/computer.md#サーバ)が待ち受けている[IPアドレス](../../../../network/_/chapters/address_on_network.md#ipアドレス)の[ポート](../../../../network/_/chapters/address_on_network.md#ポート番号)に対して接続を試みる
 1. read/write: 接続が確立したら、ソケットを介して[サーバ](../../../_/chapters/computer.md#サーバ)とのデータのやり取りを行う
 
 ### 共有メモリ
@@ -435,9 +435,9 @@ $ systemctl is-enabled httpd
 
 共有メモリは、システム上に特定の領域を[プロセス](#プロセス)とは独立して確保しておき、[プロセス](#プロセス)と共有メモリを紐づけることで利用できる。共有メモリを扱うための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)は以下の通り。
 
-- `shmget` : 共有メモリ領域を作成するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。共有メモリのサイズや[アクセス権限](./user_and_permission.md#権限)を指定することができる。
-- `shmat` : 共有メモリ領域にアタッチするための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。共有メモリの識別子を指定して、その共有メモリ領域を[プロセス](#プロセス)の[アドレス](../../../hardware/_/chapters/memory.md#アドレス)空間にマッピングする。
-- `shmdt` : 共有メモリ領域をデタッチするための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。[プロセス](#プロセス)が共有メモリが不要になったときに呼び出し、[プロセス](#プロセス)の[アドレス](../../../hardware/_/chapters/memory.md#アドレス)空間から共有メモリが解放される。
+- **shmget**: 共有メモリ領域を作成するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。共有メモリのサイズや[アクセス権限](./user_and_permission.md#権限)を指定することができる。
+- **shmat**: 共有メモリ領域にアタッチするための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。共有メモリの識別子を指定して、その共有メモリ領域を[プロセス](#プロセス)の[アドレス](../../../hardware/_/chapters/memory.md#アドレス)空間にマッピングする。
+- **shmdt**: 共有メモリ領域をデタッチするための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。[プロセス](#プロセス)が共有メモリが不要になったときに呼び出し、[プロセス](#プロセス)の[アドレス](../../../hardware/_/chapters/memory.md#アドレス)空間から共有メモリが解放される。
 
 ### メッセージキュー
 
@@ -445,9 +445,9 @@ $ systemctl is-enabled httpd
 
 メッセージキューを用いると、非同期的にデータを送受信することが可能。メッセージキューを扱うための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)は以下の通り。
 
-- `msgget` : メッセージキューを作成するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。作成されたメッセージキューには、一意のキーが割り当てられる。
-- `msgsnd` : メッセージキューにメッセージを送信するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。送信されるメッセージには、メッセージタイプを指定する必要がある。
-- `msgrcv` : メッセージキューからメッセージを取り出すための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。受信されるメッセージは、指定されたメッセージタイプに一致する場合に受信される。メッセージがない場合は、指定された待ち時間が経過するか、別の[プロセス](#プロセス)がメッセージを送信するまで待機する。
+- **msgget**: メッセージキューを作成するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。作成されたメッセージキューには、一意のキーが割り当てられる。
+- **msgsnd**: メッセージキューにメッセージを送信するための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。送信されるメッセージには、メッセージタイプを指定する必要がある。
+- **msgrcv**: メッセージキューからメッセージを取り出すための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。受信されるメッセージは、指定されたメッセージタイプに一致する場合に受信される。メッセージがない場合は、指定された待ち時間が経過するか、別の[プロセス](#プロセス)がメッセージを送信するまで待機する。
 
 ### セマフォ
 
@@ -455,6 +455,6 @@ $ systemctl is-enabled httpd
 
 セマフォを扱うための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)は以下の通り。
 
-- `semget` : セマフォを作成するために使用される[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォを取得する場合にも使用される。
-- `semop` : セマフォを操作するために使用される[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォの値を[インクリメント](../../../../programming/_/chapters/operation.md#インクリメント)したり、[デクリメント](../../../../programming/_/chapters/operation.md#デクリメント)したりすることができる。
-- `semctl` : セマフォの制御を行うための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォの値を取得したり、設定したり、削除したりすることができる。
+- **semget**: セマフォを作成するために使用される[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォを取得する場合にも使用される。
+- **semop**: セマフォを操作するために使用される[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォの値を[インクリメント](../../../../programming/_/chapters/operation.md#インクリメント)したり、[デクリメント](../../../../programming/_/chapters/operation.md#デクリメント)したりすることができる。
+- **semctl**: セマフォの制御を行うための[システムコール](../../../software/_/chapters/operating_system.md#システムコール)。セマフォの値を取得したり、設定したり、削除したりすることができる。

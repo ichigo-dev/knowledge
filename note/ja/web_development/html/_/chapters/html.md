@@ -17,6 +17,7 @@
 1. [実体参照](#実体参照)
 1. [コメント](#コメント)
 1. [ヘッド部](#ヘッド部)
+	1. [title](#title)
 
 
 ## HTML
@@ -113,4 +114,8 @@ HTMLは[要素](#要素)の集まりからなり、コンテンツの一部を[�
 
 ## ヘッド部
 
-**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `html` [タグ](#タグ)内で `head` [タグ](#タグ)で囲まれた領域がヘッド部となる。 `title` やCSSおよび[JavaScript](../../../../programming/_/chapters/programming_language.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報を含む。
+**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `html` [タグ](#タグ)内で `head` [タグ](#タグ)で囲まれた領域がヘッド部となる。 `title` や[CSS](../../../css/_/chapters/css.md#css)および[JavaScript](../../../javscript/_/chapters/javascript.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報を含む。
+
+### title
+
+**title**タグは、

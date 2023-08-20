@@ -1,6 +1,6 @@
 # 『Docker Compose』ノート
 
-（最終更新： 2023-05-20）
+（最終更新： 2023-08-20）
 
 
 ## 目次
@@ -82,7 +82,7 @@ services:
 
 ## Docker Composeによるビルド
 
-`docker compose build` は、YAMLファイルに記述された定義を元に、[Dockerfile](./dockerfile.md#dockerfile)から[イメージ](./image.md#イメージ)をビルドする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose build**は、YAMLファイルに記述された定義を元に、[Dockerfile](./dockerfile.md#dockerfile)から[イメージ](./image.md#イメージ)をビルドする[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker compose build
@@ -91,7 +91,7 @@ $ docker compose build
 
 ## Docker Composeによる起動
 
-`docker compose up` は、YAMLファイルに記述された定義を元に、[コンテナ](./container.md#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-d` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、バックグラウンドで起動する。 `--build` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、ビルド後に起動する。
+**docker compose up**は、YAMLファイルに記述された定義を元に、[コンテナ](./container.md#コンテナ)を起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。 `-d` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、バックグラウンドで起動する。 `--build` [オプション](../../../../computer/linux/_/chapters/basic_command.md#オプション)を付与すると、ビルド後に起動する。
 
 ```sh
 $ docker compose up
@@ -99,12 +99,12 @@ $ docker compose up -d
 $ docker compose up --build
 ```
 
-`docker compose start` は、すでに作成されている[コンテナ](./container.md#コンテナ)を再起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose start**は、すでに作成されている[コンテナ](./container.md#コンテナ)を再起動する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 
 ## Docker Composeによる停止
 
-`docker compose stop` は、YAMLファイルに記述された定義を元に、[コンテナ](./container.md#コンテナ)を停止する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose stop**は、YAMLファイルに記述された定義を元に、[コンテナ](./container.md#コンテナ)を停止する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker compose stop
@@ -113,7 +113,7 @@ $ docker compose stop
 
 ## Docker Composeによるコマンド実行
 
-`docker compose exec` は、起動中の[コンテナ](./container.md#コンテナ)のサービス名を指定して[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose exec**は、起動中の[コンテナ](./container.md#コンテナ)のサービス名を指定して[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を実行する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 # Docker Composeによるコマンド実行
@@ -126,13 +126,13 @@ $ docker compose exec nginx /bin/bash
 
 ## Docker Composeによる削除
 
-`docker compose rm` は、停止されている[コンテナ](./container.md#コンテナ)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose rm**は、停止されている[コンテナ](./container.md#コンテナ)を削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker compose rm
 ```
 
-`docker compose down` は、起動中の[コンテナ](./container.md#コンテナ)を停止して削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
+**docker compose down**は、起動中の[コンテナ](./container.md#コンテナ)を停止して削除する[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)。
 
 ```sh
 $ docker compose down

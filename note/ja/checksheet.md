@@ -1409,9 +1409,14 @@
 	- [ ] [PTY(Pseudo terminal)](./computer/linux/_/chapters/shell_and_terminal.md#pty)
 	- [ ] [PTS(Pseudo terminal slave)](./computer/linux/_/chapters/shell_and_terminal.md#pty)
 - [ ] [エイリアス](./computer/linux/_/chapters/shell_and_terminal.md#エイリアス)
+	- [ ] [alias](./computer/linux/_/chapters/shell_and_terminal.md#エイリアス)
+	- [ ] [unalias](./computer/linux/_/chapters/shell_and_terminal.md#エイリアス)
+	- [ ] [type](./computer/linux/_/chapters/shell_and_terminal.md#エイリアス)
+	- [ ] [command](./computer/linux/_/chapters/shell_and_terminal.md#エイリアス)
 - [ ] [環境変数](./computer/linux/_/chapters/shell_and_terminal.md#環境変数)
 	- [ ] [シェル変数](./computer/linux/_/chapters/shell_and_terminal.md#シェル変数)
 	- [ ] [PATH](./computer/linux/_/chapters/shell_and_terminal.md#path)
+- [ ] [PATH](./computer/linux/_/chapters/shell_and_terminal.md#設定ファイルの読み込み)
 
 #### 基本コマンド
 
@@ -1625,6 +1630,7 @@
 	- [ ] [source](./computer/linux/_/chapters/shell_script.md#シェルスクリプトの実行)
 	- [ ] [コマンド置換](./computer/linux/_/chapters/shell_script.md#コマンド置換)
 	- [ ] [位置パラメータ](./computer/linux/_/chapters/shell_script.md#位置パラメータ)
+- [ ] [read](./computer/linux/_/chapters/shell_script.md#コマンドラインからの入力の受け取り)
 
 
 ## システム
@@ -2880,6 +2886,7 @@
 - [ ] [実体参照](./web_development/html/_/chapters/html.md#実体参照)
 - [ ] [コメント](./web_development/html/_/chapters/html.md#コメント)
 - [ ] [ヘッド部](./web_development/html/_/chapters/html.md#ヘッド部)
+	- [ ] [title](./web_development/html/_/chapters/html.md#title)
 
 ### CSS
 
@@ -3128,6 +3135,7 @@
 - [ ] [COMMIT](./development/database/_/chapters/sql.md#コミット)
 - [ ] [ROLLBACK](./development/database/_/chapters/sql.md#ロールバック)
 - [ ] [SAVEPOINT](./development/database/_/chapters/sql.md#セーブポイント)
+- [ ] [FOR UPDATE](./development/database/_/chapters/sql.md#レコードロック)
 - [ ] [CREATE USER](./development/database/_/chapters/sql.md#ユーザの作成)
 - [ ] [GRANT](./development/database/_/chapters/sql.md#権限の付与)
 
