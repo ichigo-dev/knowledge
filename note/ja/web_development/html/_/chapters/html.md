@@ -1,6 +1,6 @@
 # 『HTML』ノート
 
-（最終更新： 2023-08-20）
+（最終更新： 2023-08-21）
 
 
 ## 目次
@@ -16,9 +16,6 @@
 	1. [グローバル属性](#グローバル属性)
 1. [実体参照](#実体参照)
 1. [コメント](#コメント)
-1. [ヘッド部](#ヘッド部)
-	1. [title](#title)
-	1. [meta](#meta)
 
 
 ## HTML
@@ -31,7 +28,7 @@ HTMLは[要素](#要素)の集まりからなり、コンテンツの一部を[�
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
  <head>
   <meta charset="utf-8">
   <title>HTML Example</title>
@@ -111,27 +108,3 @@ HTMLは[要素](#要素)の集まりからなり、コンテンツの一部を[�
 <!-- コメント -->
 <p>Hello, World</p>
 ```
-
-
-## ヘッド部
-
-**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `html` [タグ](#タグ)内で**head**[タグ](#タグ)で囲まれた領域がヘッド部となる。 `title` や[CSS](../../../css/_/chapters/css.md#css)および[JavaScript](../../../javscript/_/chapters/javascript.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報を含む。
-
-### title
-
-**title**は、[HTML](#html)文書全体のタイトルを表すメタデータで、 `head` [タグ](#タグ)内に記述される。この[要素](#要素)の内容は、SEOに大きく影響しており、ユーザが検索結果ページで目にすることになる重要なものとなる。また、 `title` はページのブックマークやSNSシェア時の表示などにも利用される。
-
-```html
-<!DOCTYPE html>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Example page</title>
- </head>
- <body></body>
-</html>
-```
-
-### meta
-
-**meta**は、[HTML](#html)文書のメタデータを記述するための[要素](#要素)で、 `head` [タグ](#タグ)内に複数記述することができる。[HTML](#html)文書の文字コードの指定や、作成者やページの説明の追加、SNSシェア時のOGP画像の設定などに使用する。

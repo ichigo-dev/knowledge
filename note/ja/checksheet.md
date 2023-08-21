@@ -2885,9 +2885,18 @@
 	- [ ] [グローバル属性](./web_development/html/_/chapters/html.md#グローバル属性)
 - [ ] [実体参照](./web_development/html/_/chapters/html.md#実体参照)
 - [ ] [コメント](./web_development/html/_/chapters/html.md#コメント)
-- [ ] [ヘッド部](./web_development/html/_/chapters/html.md#ヘッド部)
-	- [ ] [title](./web_development/html/_/chapters/html.md#title)
-	- [ ] [meta](./web_development/html/_/chapters/html.md#meta)
+
+#### 基本HTML
+
+- [ ] [DOCTYPE宣言](./web_development/html/_/chapters/basics.md#doctype宣言)
+- [ ] [html](./web_development/html/_/chapters/basics.md#html)
+- [ ] [head](./web_development/html/_/chapters/basics.md#head)
+	- [ ] [ヘッド部](./web_development/html/_/chapters/basics.md#head)
+	- [ ] [title](./web_development/html/_/chapters/basics.md#title)
+	- [ ] [meta](./web_development/html/_/chapters/basics.md#meta)
+	- [ ] [link](./web_development/html/_/chapters/basics.md#link)
+- [ ] [script](./web_development/html/_/chapters/basics.md#script)
+	- [ ] [noscript](./web_development/html/_/chapters/basics.md#noscript)
 
 ### CSS
 
