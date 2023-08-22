@@ -2875,7 +2875,8 @@
 #### HTML
 
 - [ ] [HTML(HyperText Markup Language)](./web_development/html/_/chapters/html.md#html)
-	- [ ] [タグ](./web_development/html/_/chapters/html.md#タグ)
+	- [ ] [マークアップ](./web_development/html/_/chapters/html.md#マークアップ)
+- [ ] [タグ](./web_development/html/_/chapters/html.md#タグ)
 - [ ] [要素](./web_development/html/_/chapters/html.md#要素)
 	- [ ] [ブロック要素](./web_development/html/_/chapters/html.md#ブロック要素)
 	- [ ] [インライン要素](./web_development/html/_/chapters/html.md#インライン要素)
@@ -2888,7 +2889,7 @@
 
 #### 基本HTML
 
-- [ ] [DOCTYPE宣言](./web_development/html/_/chapters/basics.md#doctype宣言)
+- [ ] [DOCTYPE宣言](././[web_development]()/html/_/chapters/basics.md#doctypeインタフェース[web_development]()/html/_/chapters/basics.md#doctype宣言)
 - [ ] [html](./web_development/html/_/chapters/basics.md#html)
 - [ ] [head](./web_development/html/_/chapters/basics.md#head)
 	- [ ] [ヘッド部](./web_development/html/_/chapters/basics.md#head)
@@ -2897,6 +2898,32 @@
 	- [ ] [link](./web_development/html/_/chapters/basics.md#link)
 - [ ] [script](./web_development/html/_/chapters/basics.md#script)
 	- [ ] [noscript](./web_development/html/_/chapters/basics.md#noscript)
+
+#### テキスト
+
+- [ ] [p](./web_development/html/_/chapters/text.md#p)
+- [ ] [h1](./web_development/html/_/chapters/text.md#h1)
+- [ ] [br](./web_development/html/_/chapters/text.md#br)
+- [ ] [フレージング要素](./web_development/html/_/chapters/text.md#フレージング要素)
+	- [ ] [strong](./web_development/html/_/chapters/text.md#strong)
+	- [ ] [em](./web_development/html/_/chapters/text.md#em)
+	- [ ] [b](./web_development/html/_/chapters/text.md#b)
+	- [ ] [i](./web_development/html/_/chapters/text.md#i)
+	- [ ] [u](./web_development/html/_/chapters/text.md#u)
+- [ ] [pre](./web_development/html/_/chapters/text.md#pre)
+	- [ ] [code](./web_development/html/_/chapters/text.md#code)
+- [ ] [address](./web_development/html/_/chapters/text.md#address)
+- [ ] [time](./web_development/html/_/chapters/text.md#time)
+- [ ] [small](./web_development/html/_/chapters/text.md#small)
+
+#### リスト
+
+- [ ] [ul](./web_development/html/_/chapters/list.md#ul)
+- [ ] [ol](./web_development/html/_/chapters/list.md#ol)
+- [ ] [li](./web_development/html/_/chapters/list.md#li)
+- [ ] [dl](./web_development/html/_/chapters/list.md#dl)
+	- [ ] [dt](./web_development/html/_/chapters/list.md#dt)
+	- [ ] [dd](./web_development/html/_/chapters/list.md#dd)
 
 ### CSS
 
@@ -2935,6 +2962,20 @@
 	- [ ] [アダプティブデザイン](./web_development/css/_/chapters/css.md#アダプティブデザイン)
 	- [ ] [レスポンシブデザイン](./web_development/css/_/chapters/css.md#レスポンシブデザイン)
 - [ ] [詳細度](./web_development/css/_/chapters/css.md#詳細度)
+
+#### テキスト
+
+- [ ] [color](./web_development/css/_/chapters/text.md#color)
+- [ ] [font-size](./web_development/css/_/chapters/text.md#font-size)
+- [ ] [font-weight](./web_development/css/_/chapters/text.md#font-weight)
+- [ ] [line-height](./web_development/css/_/chapters/text.md#line-height)
+- [ ] [text-align](./web_development/css/_/chapters/text.md#text-align)
+- [ ] [letter-spacing](./web_development/css/_/chapters/text.md#letter-spacing)
+- [ ] [text-decoration](./web_development/css/_/chapters/text.md#text-decoration)
+
+#### リスト
+
+- [ ] [list-style](./web_development/css/_/chapters/list.md#list-style)
 
 
 ## 開発全般

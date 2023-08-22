@@ -1,6 +1,6 @@
 # 『基本HTML』ノート
 
-（最終更新： 2023-08-21）
+（最終更新： 2023-08-22）
 
 
 ## 目次
@@ -57,7 +57,7 @@
 
 ### title
 
-**title**は、[HTML](./html.md#html)文書全体のタイトルを表すメタデータで、 `head` [タグ](#タグ)内に記述される。この[要素](#要素)の内容は、SEOに大きく影響しており、ユーザが検索結果ページで目にすることになる重要なものとなる。また、 `title` はページのブックマークやSNSシェア時の表示などにも利用される。
+**title**は、[HTML](./html.md#html)文書全体のタイトルを表すメタデータとなる[タグ](./html.md#タグ)で、 `head` [タグ](#タグ)内に記述される。この[要素](#要素)の内容は、SEOに大きく影響しており、ユーザが検索結果ページで目にすることになる重要なものとなる。また、 `title` はページのブックマークやSNSシェア時の表示などにも利用される。
 
 ```html
 <!DOCTYPE html>
@@ -74,7 +74,7 @@
 
 ### meta
 
-**meta**は、[HTML](./html.md#html)文書のメタデータを記述するための[要素](./html.md#要素)で、 `head` [タグ](./html.md#タグ)内に複数記述することができる。[HTML](./html.md#html)文書の文字コードの指定や、作成者やページの説明の追加、SNSシェア時のOGP画像の設定などに使用する。
+**meta**は、[HTML](./html.md#html)文書のメタデータを記述するための[タグ](./html.md#タグ)で、 `head` [タグ](./html.md#タグ)内に複数記述することができる。[HTML](./html.md#html)文書の文字コードの指定や、作成者やページの説明の追加、SNSシェア時のOGP画像の設定などに使用する。
 
 ```html
 <!DOCTYPE html>
@@ -98,7 +98,7 @@
 
 ### link
 
-**link**は、[HTML](./html.md#html)文書内で外部リソースとの関連付けやスタイルシートの適用などを行うために使用される[要素](./html.md#html)。 `rel` [属性](./html.md#属性)にはリンクの関係性、 `type` [属性](./html.md#属性)にはリンクされている[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の種類、 `href` [属性](./html.md#属性)にはリンク先の[URL](../../../../network/_/chapters/web.md#url)を指定する。
+**link**は、[HTML](./html.md#html)文書内で外部リソースとの関連付けやスタイルシートの適用などを行うために使用される[タグ](./html.md#タグ)。 `rel` [属性](./html.md#属性)にはリンクの関係性、 `type` [属性](./html.md#属性)にはリンクされている[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)の種類、 `href` [属性](./html.md#属性)にはリンク先の[URL](../../../../network/_/chapters/web.md#url)を指定する。
 
 linkは主に[CSS](../../../css/_/chapters/css.md#css)やファビコンの設定などに使用される。
 
@@ -122,7 +122,7 @@ linkは主に[CSS](../../../css/_/chapters/css.md#css)やファビコンの設�
 
 ## script
 
-**script**は、[HTML](./html.md#html)文書内にスクリプトコード（[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)）を埋め込むために使用される[要素](./html.md#要素)。直接スクリプトコードを記述したり、外部の[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を読み込んだりすることができる。
+**script**は、[HTML](./html.md#html)文書内にスクリプトコード（[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)）を埋め込むために使用される[タグ](./html.md#タグ)。直接スクリプトコードを記述したり、外部の[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)を読み込んだりすることができる。
 
 ```html
 <script>
@@ -136,7 +136,7 @@ alert("Hello, world!");
 
 ### noscript
 
-**noscript**は、[ブラウザ](../../../../network/_/chapters/web.md#webブラウザ)で[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)が動作しない場合に変わりのコンテンツを表示するために使用される[要素](./html.md#要素)。
+**noscript**は、[ブラウザ](../../../../network/_/chapters/web.md#webブラウザ)で[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)が動作しない場合に変わりのコンテンツを表示するために使用される[タグ](./html.md#タグ)。
 
 ```html
 <noscript>
