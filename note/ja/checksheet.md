@@ -2925,6 +2925,12 @@
 	- [ ] [dt](./web_development/html/_/chapters/list.md#dt)
 	- [ ] [dd](./web_development/html/_/chapters/list.md#dd)
 
+#### リンクと画像
+
+- [ ] [a](./web_development/html/_/chapters/link_and_image.md#a)
+- [ ] [img](./web_development/html/_/chapters/link_and_image.md#img)
+- [ ] [svg](./web_development/html/_/chapters/link_and_image.md#svg)
+
 ### CSS
 
 #### CSS
