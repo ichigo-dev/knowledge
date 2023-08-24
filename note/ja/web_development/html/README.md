@@ -8,3 +8,4 @@
 1. [テキスト](./_/chapters/text.md)
 1. [リスト](./_/chapters/list.md)
 1. [リンクと画像](./_/chapters/link_and_image.md)
+1. [ボックス](./_/chapters/box.md)

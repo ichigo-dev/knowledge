@@ -1,6 +1,6 @@
 # 『テキスト』ノート
 
-（最終更新： 2023-08-22）
+（最終更新： 2023-08-24）
 
 
 ## 目次
@@ -12,6 +12,8 @@
 1. [text-align](#text-align)
 1. [letter-spacing](#letter-spacing)
 1. [text-decoration](#text-decoration)
+1. [text-overflow](#text-overflow)
+1. [white-space](#white-space)
 
 
 ## color
@@ -47,3 +49,13 @@
 ## text-decoration
 
 **text-decoration**は、[CSS](./css.md#css)において、文字の装飾を指定するための[プロパティ](./css.md#プロパティ)。 `overline` （テキストの上線）、 `underline` （テキストの下線）、 `line-through` （テキストの字消し線）、 `none` （装飾なし）というキーワードで指定する。
+
+
+## text-overflow
+
+**text-overflow**は、[CSS](./css.md#css)において、[親要素](../../../html/_/chapters/html.md#要素)からテキストがはみ出た場合の表示方法を指定するための[プロパティ](./css.md#プロパティ)。 `ellipsis` （...に置き換える）、 `clip` （切り取る）などのキーワードを指定したり、値として任意の文字列を指定してはみ出た部分をそれに置き換えたりすることができる。
+
+
+## white-space
+
+**white-space**は、[CSS](./css.md#css)において、[親要素](../../../html/_/chapters/html.md#要素)からテキストがはみ出た場合の改行制御を指定するための[プロパティ](./css.md#プロパティ)。 `normal` （改行する）、 `nowrap` （改行しない）などのキーワードを指定することができる。
