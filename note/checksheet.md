@@ -3167,6 +3167,14 @@
 	- [ ] [animation-play-state](./web_development/css/_/chapters/animation.md#animation)
 	- [ ] [keyframes](./web_development/css/_/chapters/animation.md#keyframes)
 
+### JavaScript
+
+#### JavaScript
+
+- [ ] [JavaScript](./web_development/css/_/chapters/animation.md#javascript)
+- [ ] [DOM(Document object model)](./web_development/css/_/chapters/animation.md#dom)
+	- [ ] [ノード](./web_development/css/_/chapters/animation.md#dom)
+
 
 ## 開発全般
 
