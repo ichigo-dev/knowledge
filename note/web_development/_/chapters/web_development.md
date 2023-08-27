@@ -10,6 +10,8 @@
 1. [CMS](#cms)
 	1. [WordPress](#wordpress)
 1. [SEO](#seo)
+1. [ファビコン](#ファビコン)
+1. [OGP](#ogp)
 
 
 ## 静的サイト

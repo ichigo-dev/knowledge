@@ -2870,6 +2870,16 @@
 
 ## Web開発
 
+### Web開発
+
+- [ ] [静的サイト](./web_development/_/chapters/web_development.md#静的サイト)
+- [ ] [動的サイト](./web_development/_/chapters/web_development.md#動的サイト)
+- [ ] [CMS(Contents Management System)](./web_development/_/chapters/web_development.md#cms)
+	- [ ] [WordPress](./web_development/_/chapters/web_development.md#wordpress)
+- [ ] [SEO(検索エンジン最適化: Search Engine Optimization)](./web_development/_/chapters/web_development.md#seo)
+- [ ] [ファビコン](./web_development/_/chapters/web_development.md#ファビコン)
+- [ ] [OGP](./web_development/_/chapters/web_development.md#ogp)
+
 ### HTML
 
 #### HTML
