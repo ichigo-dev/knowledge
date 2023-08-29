@@ -465,6 +465,8 @@
 ### データ型
 
 - [ ] [型](./programming/_/chapters/data_type.md#型)
+- [ ] [リテラル](./programming/_/chapters/data_type.md#リテラル)
+	- [ ] [テンプレートリテラル](./programming/_/chapters/data_type.md#テンプレートリテラル)
 - [ ] [プリミティブ型（基本データ型、原始型）](./programming/_/chapters/data_type.md#プリミティブ型)
 	- [ ] [文字型](./programming/_/chapters/data_type.md#文字型)
 		- [ ] [文字リテラル](./programming/_/chapters/data_type.md#文字型)
@@ -476,7 +478,7 @@
 	- [ ] [ブーリアン型](./programming/_/chapters/data_type.md#ブーリアン型)
 	- [ ] [ポインタ型](./programming/_/chapters/data_type.md#ポインタ型)
 	- [ ] [参照型](./programming/_/chapters/data_type.md#参照型)
-	- [ ] [Null](./programming/_/chapters/data_type.md#null)
+- [ ] [Null](./programming/_/chapters/data_type.md#null)
 - [ ] [複合型](./programming/_/chapters/data_type.md#複合型)
 - [ ] [コンテナ型（コレクション型）](./programming/_/chapters/data_type.md#コンテナ型)
 	- [ ] [イテレータ](./programming/_/chapters/data_type.md#イテレータ)
