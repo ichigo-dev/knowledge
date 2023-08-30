@@ -753,6 +753,19 @@
 - [ ] ['staticライフタイム](./programming/rust/_/chapters/reference_and_lifetime.md#staticライフタイム)
 	- [ ] [ライフタイムパラメータ](./programming/rust/_/chapters/reference_and_lifetime.md#staticライフタイム)
 
+### 並行プログラミング
+
+- [ ] [プロセス](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#プロセス)
+	- [ ] [実行前状態](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#実行前状態)
+	- [ ] [実行状態](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#実行状態)
+	- [ ] [待機状態](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#待機状態)
+	- [ ] [終了状態](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#終了状態)
+- [ ] [並行性](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#並行性)
+- [ ] [並列性](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#並列性)
+	- [ ] [タスク並列性](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#タスク並列性)
+	- [ ] [データ並列性](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#データ並列性)
+	- [ ] [インストラクションレベル並列性](./programming/parallel_programming/_/chapters/concurrency_and_parallelism.md#インストラクションレベル並列性)
+
 
 ## コンピュータ
 
@@ -3175,9 +3188,27 @@
 
 #### JavaScript
 
-- [ ] [JavaScript](./web_development/css/_/chapters/animation.md#javascript)
+- [ ] [JavaScript(JS)](./web_development/css/_/chapters/animation.md#javascript)
 - [ ] [DOM(Document object model)](./web_development/css/_/chapters/animation.md#dom)
 	- [ ] [ノード](./web_development/css/_/chapters/animation.md#dom)
+
+#### データ
+
+- [ ] [リテラル](./web_development/css/_/chapters/animation.md#リテラル)
+- [ ] [変数](./web_development/css/_/chapters/animation.md#変数)
+- [ ] [データ型](./web_development/css/_/chapters/animation.md#データ型)
+	- [ ] [Undefined(undefined)](./web_development/css/_/chapters/animation.md#undefined)
+	- [ ] [Null(null)](./web_development/css/_/chapters/animation.md#null)
+	- [ ] [真偽値(boolean)](./web_development/css/_/chapters/animation.md#真偽値)
+		- [ ] [truthy](./web_development/css/_/chapters/animation.md#真偽値)
+		- [ ] [falsy](./web_development/css/_/chapters/animation.md#真偽値)
+	- [ ] [数値(number)](./web_development/css/_/chapters/animation.md#数値)
+		- [ ] [NaN](./web_development/css/_/chapters/animation.md#数値)
+	- [ ] [長整数(bigint)](./web_development/css/_/chapters/animation.md#長整数)
+	- [ ] [文字列(string)](./web_development/css/_/chapters/animation.md#文字列)
+- [ ] [配列(array)](./web_development/css/_/chapters/animation.md#配列)
+- [ ] [オブジェクト(object)](./web_development/css/_/chapters/animation.md#オブジェクト)
+	- [ ] [プロパティ](./web_development/css/_/chapters/animation.md#オブジェクト)
 
 
 ## 開発全般
