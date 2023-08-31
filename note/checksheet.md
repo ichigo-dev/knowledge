@@ -10,8 +10,8 @@
 - [ ] [バイト](./basics/_/chapters/computer_and_number.md#バイト)
 - [ ] [ワード](./basics/_/chapters/computer_and_number.md#ワード)
 	- [ ] [ワードサイズ](./basics/_/chapters/computer_and_number.md#ワード)
-- [ ] [MSB](./basics/_/chapters/computer_and_number.md#msb)
-- [ ] [LSB](./basics/_/chapters/computer_and_number.md#lsb)
+- [ ] [MSB（最上位ビット: Most Significant Bit）](./basics/_/chapters/computer_and_number.md#msb)
+- [ ] [LSB（最下位ビット: Least Significant Bit）](./basics/_/chapters/computer_and_number.md#lsb)
 
 ### 離散数学
 
