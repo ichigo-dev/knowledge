@@ -1,6 +1,6 @@
 # 『並行性と並列性』ノート
 
-（最終更新： 2023-08-30）
+（最終更新： 2023-08-31）
 
 
 ## 目次
@@ -21,7 +21,7 @@
 
 **プロセス**は、何らかの計算を行う抽象的な計算実行体（[OSプロセス](../../../../computer/software/_/chapters/operating_system.md#プロセス)とは別）であり、計算を完了させるためにいくつかのステップを経た後に、最終的に計算を停止する。プロセスは[実行前状態](#実行前状態)から開始し、[実行状態](#実行状態)と[待機状態](#待機状態)を経て[終了状態](#終了状態)へと遷移する。プロセスが[待機状態](#待機状態)になる理由としては以下のようなものが挙げられる。
 
-- 演算対象となるデータが存在しない、もしくは到着していない場合
+- 演算対象となるデータが存在しない、もしくは到着していない
 - 計算リソース（[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)や[メモリ](../../../../computer/hardware/_/chapters/memory.md#メモリ)など）の空きがない
 - 自発的に[待機状態](#待機状態)となる（タイマを使った処理など）
 
@@ -53,7 +53,7 @@
 
 ### タスク並列性
 
-**タスク並列性**は、複数のタスク（[プロセス](#プロセス)）が同時に実行する方法。[OS](../../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)は計算処理を[OSプロセス](../../../../computer/software/_/chapters/operating_system.md#プロセス)や[スレッド](../../../../computer/software/_/chapters/operating_system.md#スレッド)と呼ばれる[プロセス](#プロセス)で抽象化しているが、マルチタスクOSではこれらを複数の[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)を用いて同時に動作させることでタスク並列性を実現している。
+**タスク並列性**は、複数のタスク（[プロセス](#プロセス)）を同時に実行する方法。[OS](../../../../computer/software/_/chapters/operating_system.md#オペレーティングシステム)は計算処理を[OSプロセス](../../../../computer/software/_/chapters/operating_system.md#プロセス)や[スレッド](../../../../computer/software/_/chapters/operating_system.md#スレッド)と呼ばれる[プロセス](#プロセス)で抽象化しているが、マルチタスクOSではこれらを複数の[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)を用いて同時に動作させることでタスク並列性を実現している。
 
 ### データ並列性
 
@@ -61,4 +61,4 @@
 
 ### インストラクションレベル並列性
 
-**インストラクションレベル並列性**は、[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)の命令後レベルで並列化を行う方法。主に[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)や[コンパイラ](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)が暗黙的に行う並列化であり、[プログラミング](../../../_/chapters/programming.md#プログラミング)の際に意識することはほとんどない。[パイプライン](./computer/hardware/_/chapters/processor.md#パイプライン)処理もインストラクションレベル並列性の1つ。
+**インストラクションレベル並列性**は、[CPU](../../../../computer/hardware/_/chapters/processor.md#cpu)の命令語レベルで並列化を行う方法。主に[ハードウェア](../../../../computer/hardware/_/chapters/hardware.md#ハードウェア)や[コンパイラ](../../../../basics/information_theory/_/chapters/compiler_theory.md#コンパイラ)が暗黙的に行う並列化であり、[プログラミング](../../../_/chapters/programming.md#プログラミング)の際に意識することはほとんどない。[パイプライン](../../../../computer/hardware/_/chapters/processor.md#パイプライン)処理もインストラクションレベル並列性の1つ。
