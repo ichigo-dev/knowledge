@@ -1,6 +1,6 @@
 # 『同期処理』ノート
 
-（最終更新： 2023-09-01）
+（最終更新： 2023-09-02）
 
 
 ## 目次
@@ -41,7 +41,40 @@
 - ロック獲得用: 共有変数への[ポインタ](../../../_/chapters/data_type.md#ポインタ型)を受け取り、[TAS](#test-and-set)を用いてロックを獲得できるまでループする
 - ロック解放用: 共有変数への[ポインタ](../../../_/chapters/data_type.md#ポインタ型)を受け取り、[tas_release](#test-and-set)を呼び出す
 
-[アトミック処理](#アトミック処理)は実行速度上のペナルティが大きいので、[TAS](#test-and-set)をループで呼び出すのではなく、事前にロックの状態をループでチェックしておいてから最後に[TAS](#test-and-set)を呼び出す**Test and Test and Set**(**TTAS**)を利用した実装が多い。
+単純なスピンロックの実装は以下のようになる。
+
+```c
+void spinlock_acquire( bool *look )
+{
+    while( test_and_set(lock) );
+}
+
+void spinlock_release( bool *lock )
+{
+    tas_release(lock);
+}
+```
+
+[アトミック処理](#アトミック処理)は実行速度上のペナルティが大きいので、[TAS](#test-and-set)をループで呼び出すのではなく、事前にロックの状態をループでチェックしておいてから最後に[TAS](#test-and-set)を呼び出す**Test and Test and Set**(**TTAS**)を利用した実装が多い。この場合の実装は以下のようになる。
+
+```c
+void spinlock_acquire( volatile bool *lock )
+{
+    for(;;)
+    {
+        while( *lock );
+        if( test_and_set(lock) == false )
+        {
+            break;
+        }
+    }
+}
+
+void spinlock_release( bool *lock )
+{
+    tas_release(lock);
+}
+```
 
 ### ミューテックス
 
@@ -75,6 +108,29 @@ void some_func()
 ### セマフォ
 
 **セマフォ**(**semaphore**)は、[ミューテックス](#ミューテックス)をより一般化したものであり、同時に複数の[プロセス](./concurrency_and_parallelism.md#プロセス)が共有リソースにアクセスできるようにする[同期処理](#同期処理)。複数の[プロセス](./concurrency_and_parallelism.md#プロセス)が共有リソースにアクセスできるため、[ミューテックス](#ミューテックス)では防げた[レースコンディション](#レースコンディション)が防げなくなる可能性がある。
+
+単純なセマフォの実装は以下のようになる。
+
+```c
+void semaphore_acquire( volatile int *cnt )
+{
+    for(;;)
+    {
+        while( *cnt >= NUM );
+        __sync_fetch_and_add(cnt, 1);
+        if( *cnt <= NUM )
+        {
+            break;
+        }
+        __sync_fetch_and_sub(cnt, 1);
+    }
+}
+
+void semaphore_release( int *cnt )
+{
+    __sync_fetch_and_sub(cnt, 1);
+}
+```
 
 ### 条件変数
 
