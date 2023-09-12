@@ -1703,6 +1703,8 @@
 		- [ ] [データベース層](./system/_/chapters/system_processing_model.md#3層クライアントサーバシステム)
 	- [ ] [ストアドプロシージャ](./system/_/chapters/system_processing_model.md#ストアドプロシージャ)
 	- [ ] [シンクライアントシステム](./system/_/chapters/system_processing_model.md#シンクライアントシステム)
+	- [ ] [ロードバランサ](./system/_/chapters/system_processing_model.md#ロードバランサ)
+	- [ ] [負荷分散](./system/_/chapters/system_processing_model.md#負荷分散)
 
 ### システム構成
 
