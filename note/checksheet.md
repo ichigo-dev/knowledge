@@ -2040,7 +2040,7 @@
 	- [ ] [ブロードキャスト](./network/_/chapters/network.md#ブロードキャスト)
 	- [ ] [マルチキャスト](./network/_/chapters/network.md#マルチキャスト)
 	- [ ] [エニーキャスト](./network/_/chapters/network.md#エニーキャスト)
-- [ ] [エニーキャスト](./network/_/chapters/network.md#iot)
+- [ ] [IoT(Internet of Things)](./network/_/chapters/network.md#iot)
 
 ### ネットワークとインターネットの歴史
 
