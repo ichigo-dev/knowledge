@@ -364,6 +364,7 @@
 		- [ ] [誤りベクトル](./basics/communication_theory/_/chapters/transmission_theory.md#ハミング符号)
 	- [ ] [CRC](./basics/communication_theory/_/chapters/transmission_theory.md#crc)
 		- [ ] [生成多項式](./basics/communication_theory/_/chapters/transmission_theory.md#crc)
+- [ ] [チェックサム](./basics/communication_theory/_/chapters/transmission_theory.md#チェックサム)
 
 #### 信号処理
 
