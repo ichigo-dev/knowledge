@@ -12,6 +12,7 @@
 1. [SEO](#seo)
 1. [ファビコン](#ファビコン)
 1. [OGP](#ogp)
+1. [PWA](#pwa)
 
 
 ## 静的サイト
@@ -50,3 +51,8 @@
 ## OGP
 
 **OGP**(Open Graph Protocol)は、[Webサイト](../../../network/_/chapters/web.md#web)がSNSで適切に表示されるようにするためのメタデータセット。SNSで[Webサイト](../../../network/_/chapters/web.md#web)がシェアされた際に、[リンク](../../../network/_/chapters/web.md#ハイパーリンク)先のプレビュー情報を制御する。
+
+
+## PWA
+
+**PWA**（**プログレッシブWebアプリケーション**）は、[Webサイト](../../../network/_/chapters/web.md#web)をネイティブアプリと同じ感覚で使えるようにするための仕組み。ダウンロードやアップデートの必要がない点や、プッシュ通知ができる点で有用。
