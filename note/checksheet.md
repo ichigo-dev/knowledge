@@ -2044,6 +2044,7 @@
 	- [ ] [マルチキャスト](./network/_/chapters/network.md#マルチキャスト)
 	- [ ] [エニーキャスト](./network/_/chapters/network.md#エニーキャスト)
 - [ ] [IoT(Internet of Things)](./network/_/chapters/network.md#iot)
+- [ ] [5G（5th Generation: 第5世代移動通信システム）](./network/_/chapters/network.md#5g)
 
 ### ネットワークとインターネットの歴史
 
