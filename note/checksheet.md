@@ -1,4 +1,4 @@
-# チェックシート
+ふ# チェックシート
 
 
 ## 基礎理論
@@ -2899,7 +2899,8 @@
 	- [ ] [WordPress](./web_development/_/chapters/web_development.md#wordpress)
 - [ ] [SEO(検索エンジン最適化: Search Engine Optimization)](./web_development/_/chapters/web_development.md#seo)
 - [ ] [ファビコン](./web_development/_/chapters/web_development.md#ファビコン)
-- [ ] [OGP](./web_development/_/chapters/web_development.md#ogp)
+- [ ] [OGP(Open Graph Protocol)](./web_development/_/chapters/web_development.md#ogp)
+- [ ] [PWA（プログレッシブWebアプリケーション）](./web_development/_/chapters/web_development.md#pwa)
 
 ### HTML
 
