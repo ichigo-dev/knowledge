@@ -1,6 +1,6 @@
 # 『信頼性設計』ノート
 
-（最終更新： 2023-04-15）
+（最終更新： 2023-09-20）
 
 
 ## 目次
@@ -12,7 +12,8 @@
 1. [フォールトマスキング](#フォールトマスキング)
 1. [フールプルーフ](#フールプルーフ)
 1. [フェールオーバ](#フェールオーバ)
-	1. [ヘルスチェック](#ヘルスチェック)
+1. [ヘルスチェック](#ヘルスチェック)
+	1. [ICMP監視](#icmp監視)
 
 
 ## フォールトトレランス
@@ -49,9 +50,22 @@
 
 **フェールオーバ**は、障害発生時に運用系の[システム](./system.md#システム)から待機系の[システム](./system.md#システム)に自動的に切り替える機能や設計。[サーバ](./system_processing_model.md#クライアントサーバシステム)をフェールオーバにするには、**仮想IPアドレス**(**VIP**: Virtual IP Address)を用いて障害発生時にVIPの引き継ぎを行う。
 
-### ヘルスチェック
+
+## ヘルスチェック
 
 **ヘルスチェック**は、[フェールオーバ](#フェールオーバ)の実現や[システム](./system.md#システム)の監視のために、運用系の[システム](./system.md#システム)に異常が発生していないかを定期的にチェックする仕組みのこと。[IP](../../../network/_/chapters/internet_layer.md#ip)のレイヤでは[ICMP](../../../network/_/chapters/internet_layer.md#icmp)監視、[TCP](../../../network/_/chapters/transport_layer.md#tcp)のレイヤでは[ポート](../../../network/_/chapters/address_on_network.md#ポート番号)監視、[アプリケーション](../../../computer/software/_/chapters/software.md#アプリケーション)のレイヤでは[HTTP](../../../network/_/chapters/application_layer.md#http)[リクエスト](./system_processing_model.md#クライアントサーバシステム)などによるサービス監視が行われる。
+
+### ICMP監視
+
+**ICMP監視**は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)の[ネットワーク層](../../../network/_/chapters/network_architecture.md#ネットワーク層)における[ヘルスチェック](#ヘルスチェック)の手法で、[ICMP](../../../network/_/chapters/internet_layer.md#icmp)のechoリクエストを投げてリプライが返ってくるかをチェックする。最も容易で軽い[ヘルスチェック](#ヘルスチェック)ではあるが、Webサービスの停止（ApacheやNginxの停止など）は検知することができない。
+
+### ポート監視
+
+**ポート監視**は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)の[トランスポート層](../../../network/_/chapters/network_architecture.md#トランスポート層)における[ヘルスチェック](#ヘルスチェック)の手法で、[TCP](../../../network/_/chapters/transport_layer.md#tcp)での接続を試みて、接続ができるかどうかをチェックする。サービスがダウンしたことを検知できるが、過負荷状態で応答できなくなっていたり、エラーを返していることは検知できない。
+
+### サービス監視
+
+**サービス監視**は、[ネットワーク](../../../network/_/chapters/network.md#ネットワーク)の[アプリケーション層](../../../network/_/chapters/network_architecture.md#アプリケーション層)における[ヘルスチェック](#ヘルスチェック)の手法で、[HTTP](../../../network/_/chapters/application_layer.md#http)[リクエスト](./system_processing_model.md#リクエスト)などを発行して、正常な応答が返ってくるかどうかをチェックする。ほとんどの異常を検知することができるが、場合によっては[サーバ](./system_processing_model.md#クライアントサーバシステム)に負荷をかけてしまうこともある。
 
 
 ## 参考文献

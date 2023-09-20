@@ -1784,7 +1784,10 @@
 - [ ] [フールプルーフ](./system/_/chapters/reliability_design.md#フールプルーフ)
 - [ ] [フェールオーバ](./system/_/chapters/reliability_design.md#フェールオーバ)
 	- [ ] [仮想IPアドレス(VIP: Virtual IP Address)](./system/_/chapters/reliability_design.md#フェールオーバ)
-	- [ ] [ヘルスチェック](./system/_/chapters/reliability_design.md#ヘルスチェック)
+- [ ] [ヘルスチェック](./system/_/chapters/reliability_design.md#ヘルスチェック)
+	- [ ] [ICMP監視](./system/_/chapters/reliability_design.md#icmp監視)
+	- [ ] [ポート監視](./system/_/chapters/reliability_design.md#ポート監視)
+	- [ ] [サービス監視](./system/_/chapters/reliability_design.md#サービス監視)
 
 ### システムの性能評価
 
@@ -2198,6 +2201,7 @@
 	- [ ] [NAT65/DNS64](./network/_/chapters/internet_layer.md#nat64dns64)
 	- [ ] [CGN(Carrier Grade NAT)、LSN(Large Scale NAT)](./network/_/chapters/internet_layer.md#cgn)
 	- [ ] [NAT越え(NAT Traversal)](./network/_/chapters/internet_layer.md#nat越え)
+	- [ ] [DSR(Direct Server Return)](./network/_/chapters/internet_layer.md#dsr)
 - [ ] [IPトンネリング](./network/_/chapters/internet_layer.md#ipトンネリング)
 	- [ ] [ジャンボフレーム](./network/_/chapters/internet_layer.md#ipトンネリング)
 - [ ] [VRRP(Virtual Router Redudancy Protocol)](./network/_/chapters/internet_layer.md#vrrp)

@@ -1,6 +1,6 @@
 # 『インターネット層』ノート
 
-（最終更新： 2023-06-29）
+（最終更新： 2023-09-20）
 
 
 ## 目次
@@ -148,7 +148,7 @@
 
 ### ラウンドロビンDNS
 
-**ラウンドロビンDNS**は、1つの[ドメイン名](#ドメイン名)に複数の[IPアドレス](./address_on_network.md#ipアドレス)を割り当てることができる[DNS](#dns)。
+**ラウンドロビンDNS**は、1つの[ドメイン名](#ドメイン名)に複数の[IPアドレス](./address_on_network.md#ipアドレス)を割り当てることができる[DNS](#dns)。[IPアドレス](./address_on_network.md#ipアドレス)の問い合わせが行われると、同じ[ドメイン名](#ドメイン名)に登録された複数のレコードのうち毎回異なる値を返す。この動作はサービスの[負荷分散](../../../system/_/chapters/system_processing_model.md#負荷分散)などに利用される。ただし、ラウンドロビンDNSを利用した[負荷分散](../../../system/_/chapters/system_processing_model.md#負荷分散)では、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)の数だけ[グローバルIPアドレス](./address_on_network.md#グローバルipアドレス)が必要になり、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側の[プロキシサーバ](../../../system/security/_/chapters/security_technology.md#プロキシ)のキャッシュ利用により均等に負荷が分散されない可能性や、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)ダウン時に対応できないといった問題がある。
 
 ### リゾルバ
 
@@ -241,6 +241,9 @@ NATには、次のような問題点がある。
 
 **NAT越え**(NAT traversal)は、[IPv6](#ipv6)を使用する、[NAT](#nat)環境を前提とした[アプリケーション](../../../computer/software/_/chapters/software.md#応用ソフトウェア)を利用する、といった方法によって[NAT](#nat)があっても[NAT](#nat)の外側と内側が通信できるようにする技術。
 
+### DSR
+
+**DSR**(Direct Server Return)は、[NAT](#nat)とは異なり、[IPアドレス](./address_on_network.md#ipアドレス)の書き換えを行わずに[パケット](./network.md#パケット)をルーティングする技術。[トランスポート層](./network_architecture.md#トランスポート層)における[ロードバランサ](../../../system/_/chapters/system_processing_model.md#ロードバランサ)などに利用される場合が多く、[IPアドレス](./address_on_network.md#ipアドレス)の書き換えを行わない分高速でトラフィックを制御できる一方で、転送先の[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[グローバルIPアドレス](./address_on_network.md#グローバルipアドレス)を処理できなければならないという制限がある。
 
 ## IPトンネリング
 
