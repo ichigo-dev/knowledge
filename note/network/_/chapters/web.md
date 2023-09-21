@@ -1,6 +1,6 @@
 # 『Web』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-09-21）
 
 
 ## 目次
@@ -60,6 +60,7 @@
 1. [セッション](#セッション)
 	1. [Cookie](#cookie)
 	1. [ローカルストレージ](#ローカルストレージ)
+1. [FastCGI](#fastcgi)
 
 
 ## Web
@@ -359,3 +360,8 @@ Content-Type: application/xhtml+xml; charset=utf-8
 ### ローカルストレージ
 
 **ローカルストレージ**(Local Storage)は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[Cookie](#cookie)よりも情報の保存期間が長く、格納できるデータ量も大きい。[Cookie](#cookie)の情報は[HTTPメッセージ](#httpメッセージ)を介して[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)にも送信されるが、ローカルストレージの情報はブラウザのみで使用されるため、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側の[セッション](#セッション)の管理には向いていない。
+
+
+## FastCGI
+
+**FastCGI**は、[Webサーバ](#webサーバ)上で[プログラム](../../../programming/_/chapters/programming.md#プログラム)を高速に動作させるためのインタフェース。[プロセス](../../../computer/software/_/chapters/operating_system.md#プロセス)の起動には時間がかかるため、あらかじめ[プロセス](../../../computer/software/_/chapters/operating_system.md#プロセス)をいくつか[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)上に常駐させておき、[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)があった際にはその[プロセス](../../../computer/software/_/chapters/operating_system.md#プロセス)を利用して[プログラム](../../../programming/_/chapters/programming.md#プログラム)を実行する。

@@ -2205,6 +2205,9 @@
 - [ ] [IPトンネリング](./network/_/chapters/internet_layer.md#ipトンネリング)
 	- [ ] [ジャンボフレーム](./network/_/chapters/internet_layer.md#ipトンネリング)
 - [ ] [VRRP(Virtual Router Redudancy Protocol)](./network/_/chapters/internet_layer.md#vrrp)
+	- [ ] [VRRPパケット](./network/_/chapters/internet_layer.md#vrrp)
+	- [ ] [プライオリティ](./network/_/chapters/internet_layer.md#vrrp)
+	- [ ] [プリエンプティブモード](./network/_/chapters/internet_layer.md#vrrp)
 - [ ] [IGMP(Internet Group Management Protocol)](./network/_/chapters/internet_layer.md#igmp)
 	- [ ] [MLD(Multicast Listener Discovery)](./network/_/chapters/internet_layer.md#igmp)
 	- [ ] [IGMP(MLD)スヌーピング](./network/_/chapters/internet_layer.md#スヌーピング)
@@ -2385,6 +2388,7 @@
 - [ ] [セッション](./network/_/chapters/web.md#セッション)
 	- [ ] [Cookie](./network/_/chapters/web.md#cookie)
 	- [ ] [ローカルストレージ](./network/_/chapters/web.md#ローカルストレージ)
+- [ ] [FastCGI](./network/_/chapters/web.md#fastcgi)
 
 ### ルーティングプロトコル
 
