@@ -6,6 +6,7 @@
 ## 目次
 
 1. [Immutableパターン](#immutableパターン)
+	1. [Immutable](#immutable)
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [C++](#c)
 
@@ -13,6 +14,12 @@
 ## Immutableパターン
 
 **Immutableパターン**は、データへの書き込みを禁止することで、複数の[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)から共有リソースにアクセスしても問題ないようにする[デザインパターン](../../../_/chapters/design_pattern.md#デザインパターン)。
+
+Immutableパターンは[Immutable](#immutable)の役のみで構成される。
+
+### Immutable
+
+**Immutable**は、[Immutableパターン](#immutableパターン)において、変更不可能な[変数](../../../../../programming/_/chapters/variable.md#変数)や[クラス](../../../../../programming/_/chapters/object_oriented.md#クラス)。[クラス](../../../../../programming/_/chapters/object_oriented.md#クラス)を使用する場合は、setter（[メンバ変数](../../../../../programming/_/chapters/object_oriented.md#プロパティ)の変更用の[メソッド](../../../../../programming/_/chapters/object_oriented.md#メソッド)）を持たず、getter（[メンバ変数](../../../../../programming/_/chapters/object_oriented.md#プロパティ)の取得用の[メソッド](../../../../../programming/_/chapters/object_oriented.md#メソッド)）のみを持つように設計する。また、[メンバ変数](../../../../../programming/_/chapters/object_oriented.md#プロパティ)は全て[コンストラクタ](../../../../../programming/_/chapters/object_oriented.md#コンストラクタ)で設定する。
 
 
 ## サンプルプログラム
@@ -25,7 +32,7 @@
 #include <thread>
 
 //------------------------------------------------------------------------------
-// アプリケーション情報（Immutable）
+// Immutable
 //------------------------------------------------------------------------------
 class AppInfo
 {

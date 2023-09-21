@@ -6,18 +6,106 @@
 ## 目次
 
 1. [Guarded Suspentionパターン](#guarded-suspentionパターン)
+	1. [GuardedObject](#guardedobject)
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [C++](#c)
 
 
 ## Guarded Suspentionパターン
 
-**Guarded Suspentionパターン**は、ある条件が整うまで[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)をブロックしておき、その条件が満たされた時に処理を実行する[デザインパターン](../../../_/chapters/design_pattern.md#デザインパターン)。このパターンを利用しない場合、[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)は常に条件が満たされているか否かをループ処理によって監視し続ける必要があり、共有リソースをロックする時間が長くなってしまう。
+**Guarded Suspentionパターン**は、ある条件が整うまで[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)をブロックしておき、その条件が満たされた時に処理を実行する[デザインパターン](../../../_/chapters/design_pattern.md#デザインパターン)。類似の[Balkingパターン](./balking.md#balkingパターン)では、ガード条件が満たされていない場合に処理をスキップするが、このパターンでは待機する。
+
+Guarded Suspentionパターンは[GuardedObject](#guardedobject)の役のみからなる。
+
+### GuardedObject
+
+**GuardedObject**は、ガードされた[メソッド](../../../../../programming/_/chapters/object_oriented.md#メソッド)を持つ[クラス](../../../../../programming/_/chapters/object_oriented.md#クラス)。ガード条件が満たされていればこの[メソッド](../../../../../programming/_/chapters/object_oriented.md#メソッド)を実行し、満たされていなければ満たされるまで待機する。
 
 
 ## サンプルプログラム
 
 ### C++
+
+遅延してメッセージを共有[変数](../../../../../programming/_/chapters/variable.md#変数)に書き込む[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)と、共有[変数](../../../../../programming/_/chapters/variable.md#変数)にあるデータを定期的に監視してそれを読み込む[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)からなる[プログラム](../../../../../programming/_/chapters/programming.md#プログラム)を考える。
+
+```cpp
+#include <thread>
+#include <mutex>
+
+// 共有リソース
+std::mutex g_mtx;
+const char* g_data = nullptr;
+
+//------------------------------------------------------------------------------
+// データ書き込み用クラス
+//------------------------------------------------------------------------------
+class Writer
+{
+    public:
+
+        //----------------------------------------------------------------------
+        // 書き込み
+        //----------------------------------------------------------------------
+        void write( const char* msg_ )
+        {
+            std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+            g_mtx.lock();
+            std::printf("Data is ready\n");
+            g_data = msg_;
+            g_mtx.unlock();
+        }
+};
+
+//------------------------------------------------------------------------------
+// GuardedObject
+//------------------------------------------------------------------------------
+class Reader
+{
+    public:
+
+        //----------------------------------------------------------------------
+        // データの存在をチェックしてあれば読み込み、なければ待機する
+        //----------------------------------------------------------------------
+        void read()
+        {
+            while( true )
+            {
+                g_mtx.lock();
+                if( g_data != nullptr )
+                {
+                    std::printf("Read data: %s\n", g_data);
+                    g_mtx.unlock();
+                    break;
+                }
+                else
+                {
+                    std::printf("Waiting data...\n");
+                }
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                g_mtx.unlock();
+            }
+        }
+};
+
+//------------------------------------------------------------------------------
+// main
+//------------------------------------------------------------------------------
+int main()
+{
+    Writer writer;
+    Reader reader;
+    std::thread th1([&] { writer.write("Hello, world"); });
+    std::thread th2([&] { reader.read(); });
+
+    th1.join();
+    th2.join();
+
+    return 0;
+}
+```
+
+また、[C++](../../../../../programming/_/chapters/programming_language.md#c)には状態変数が実装されているため、ビジーループを使用せずに[Guarded Suspentionパターン](#guarded-suspentionパターン)を実装することができる。
 
 ```cpp
 #include <thread>
@@ -25,69 +113,70 @@
 #include <condition_variable>
 
 // 共有リソース
-const int BUFFER_SIZE = 10;
-int g_buffer[BUFFER_SIZE];
-int g_item_count = 0;
-
-// 状態変数
 std::mutex g_mtx;
-std::condition_variable g_buffer_not_empty;
-std::condition_variable g_buffer_not_full;
+std::condition_variable g_data_ready;
+const char* g_data = nullptr;
 
 //------------------------------------------------------------------------------
-// タスクを生成してバッファに追加
+// データ書き込み用クラス
 //------------------------------------------------------------------------------
-void producer()
+class Writer
 {
-    for( int i = 0; i < 100; i++ )
-    {
-        std::unique_lock<std::mutex> lock(g_mtx);
+    public:
 
-        // バッファがいっぱいであれば待機
-        while( g_item_count == BUFFER_SIZE )
+        //----------------------------------------------------------------------
+        // 書き込み
+        //----------------------------------------------------------------------
+        void write( const char* msg_ )
         {
-            g_buffer_not_full.wait(lock);
+            std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+            g_mtx.lock();
+            std::printf("Data is ready\n");
+            g_data = msg_;
+
+            // データが書き込まれたことを通知
+            g_data_ready.notify_all();
+            g_mtx.unlock();
         }
-        g_buffer[g_item_count++] = i + 1;
-        std::printf("Producer: %d\n", i + 1);
-
-        // バッファが空ではなくなったことをconsumerのスレッドに通知
-        g_buffer_not_empty.notify_all();
-    }
-}
+};
 
 //------------------------------------------------------------------------------
-// バッファのタスクを処理
+// GuardedObject
 //------------------------------------------------------------------------------
-void consumer()
+class Reader
 {
-    for( int i = 0; i < 100; i++ )
-    {
-        std::unique_lock<std::mutex> lock(g_mtx);
+    public:
 
-        // バッファが空であれば待機
-        while( g_item_count == 0 )
+        //----------------------------------------------------------------------
+        // データの存在をチェックしてあれば読み込み、なければ待機する
+        //----------------------------------------------------------------------
+        void read()
         {
-            g_buffer_not_empty.wait(lock);
-        }
-        int data = g_buffer[--g_item_count];
-        std::printf("Consumer: %d\n", data);
+            std::unique_lock<std::mutex> lock(g_mtx);
 
-        // バッファがいっぱいではなくなったことをproducerのスレッドに通知
-        g_buffer_not_full.notify_all();
-    }
-}
+            //  データが書き込まれるまで待機
+            while( g_data == nullptr )
+            {
+                std::printf("Waiting data...\n");
+                g_data_ready.wait(lock);
+            }
+            std::printf("Read data: %s\n", g_data);
+        }
+};
 
 //------------------------------------------------------------------------------
 // main
 //------------------------------------------------------------------------------
 int main()
 {
-    std::thread t1(producer);
-    std::thread t2(consumer);
+    Writer writer;
+    Reader reader;
+    std::thread th1([&] { writer.write("Hello, world"); });
+    std::thread th2([&] { reader.read(); });
 
-    t1.join();
-    t2.join();
+    th1.join();
+    th2.join();
 
     return 0;
 }
