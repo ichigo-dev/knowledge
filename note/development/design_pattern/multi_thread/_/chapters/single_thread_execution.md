@@ -5,7 +5,7 @@
 
 ## 目次
 
-1. [Single Thread Executionパターン](#single_thread_executionパターン)
+1. [Single Thread Executionパターン](#single-thread-executionパターン)
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [C++](#c)
 
@@ -19,18 +19,17 @@
 
 ### C++
 
-[Single Thread Executionパターン](#single_thread_executionパターン)を実現するためには、[ミューテックス](../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#ミューテックス)などの[同期機構](../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#同期処理)を利用する。
+[Single Thread Executionパターン](#single-thread-executionパターン)を実現するためには、[ミューテックス](../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#ミューテックス)などの[同期機構](../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#同期処理)を利用する。
 
 ```cpp
-#include <ostream>
 #include <thread>
 #include <mutex>
 
 // カウンタ（共有リソース）
-int shared_counter = 0;
+int g_shared_counter = 0;
 
 // ミューテックス
-std::mutex mtx;
+std::mutex g_mtx;
 
 //------------------------------------------------------------------------------
 // カウンタのインクリメント
@@ -39,13 +38,13 @@ void increment_shared_counter( const char* name_, int n_ )
 {
     for( int i = 0; i < n_; i++ )
     {
-        mtx.lock();
-        shared_counter++;
+        g_mtx.lock();
+        g_shared_counter++;
         std::printf("====================\n");
         std::printf("Thread: %s\n", name_);
-        std::printf("Counter: %d\n", shared_counter);
+        std::printf("Counter: %d\n", g_shared_counter);
         std::printf("====================\n");
-        mtx.unlock();
+        g_mtx.unlock();
 
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }

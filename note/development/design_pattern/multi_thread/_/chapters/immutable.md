@@ -22,7 +22,6 @@
 [Immutableパターン](#immutableパターン)を実現するためには、取得用の[メソッド](../../../../../programming/_/chapters/object_oriented.md#メソッド)(getter)のみを持つ[クラス](../../../../../programming/_/chapters/object_oriented.md#クラス)を用意し、それを各[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)から参照するようにする。
 
 ```cpp
-#include <ostream>
 #include <thread>
 
 //------------------------------------------------------------------------------
