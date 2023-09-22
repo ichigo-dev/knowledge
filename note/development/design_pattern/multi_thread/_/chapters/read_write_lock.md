@@ -172,3 +172,50 @@ int main()
     return 0;
 }
 ```
+
+また、[C++](../../../../../programming/_/chapters/programming_language.md#c)では、 `shared_mutex` を用いることでReadWriteLockを実装することもできる。
+
+```cpp
+#include <thread>
+#include <shared_mutex>
+
+int g_data = 0;
+std::shared_mutex g_rw_lock;
+
+//------------------------------------------------------------------------------
+// Reader
+//------------------------------------------------------------------------------
+void reader()
+{
+    g_rw_lock.lock_shared();
+    std::printf("Reader: %d\n", g_data);
+    g_rw_lock.unlock_shared();
+}
+
+//------------------------------------------------------------------------------
+// Writer
+//------------------------------------------------------------------------------
+void writer()
+{
+    g_rw_lock.lock();
+    std::printf("Writer\n");
+    g_data++;
+    g_rw_lock.unlock();
+}
+
+//------------------------------------------------------------------------------
+// main
+//------------------------------------------------------------------------------
+int main()
+{
+    std::thread t1(reader);
+    std::thread t2(writer);
+    std::thread t3(reader);
+
+    t1.join();
+    t2.join();
+    t3.join();
+
+    return 0;
+}
+```
