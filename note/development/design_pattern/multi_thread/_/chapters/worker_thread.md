@@ -112,10 +112,9 @@ class ThreadPool
         //----------------------------------------------------------------------
         // コンストラクタ
         //----------------------------------------------------------------------
-        ThreadPool( int thread_cnt_, int queue_size_ )
+        ThreadPool( int thread_cnt_, int queue_size_ ) : m_queue(queue_size_)
         {
             this->m_is_terminate = false;
-            this->m_queue = new TaskQueue(queue_size_);
 
             for( int i = 0; i < thread_cnt_; i++ )
             {
@@ -130,7 +129,6 @@ class ThreadPool
         {
             this->m_mtx.lock();
             this->m_is_terminate = true;
-            delete this->m_queue;
             this->m_mtx.unlock();
 
             // 各スレッドに停止を通知
@@ -148,7 +146,7 @@ class ThreadPool
         bool add( const std::function<void()> &func )
         {
             this->m_mtx.lock();
-            if( this->m_queue->put(func) == false )
+            if( this->m_queue.put(func) == false )
             {
                 return false;
             }
@@ -173,7 +171,7 @@ class ThreadPool
                     std::unique_lock<std::mutex> lock(this->m_mtx);
 
                     // タスクがなければ待機
-                    while( this->m_queue->empty() )
+                    while( this->m_queue.empty() )
                     {
                         // 停止時
                         if( this->m_is_terminate )
@@ -183,7 +181,7 @@ class ThreadPool
                         this->m_cv.wait(lock);
                     }
 
-                    if( this->m_queue->get(func) == false )
+                    if( this->m_queue.get(func) == false )
                     {
                         continue;
                     }
@@ -198,7 +196,7 @@ class ThreadPool
         };
 
         bool m_is_terminate;
-        TaskQueue* m_queue;
+        TaskQueue m_queue;
         std::mutex m_mtx;
         std::condition_variable m_cv;
         std::vector<std::thread> m_threads;

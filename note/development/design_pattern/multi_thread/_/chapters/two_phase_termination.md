@@ -50,7 +50,7 @@ class Thread
         Thread()
         {
             this->m_is_terminate = false;
-            this->m_thread = new std::thread(this->m_run);
+            this->m_thread = std::thread(this->m_run);
         }
 
         //----------------------------------------------------------------------
@@ -58,7 +58,7 @@ class Thread
         //----------------------------------------------------------------------
         ~Thread()
         {
-            this->m_thread->join();
+            this->m_thread.join();
         }
 
         //----------------------------------------------------------------------
@@ -89,7 +89,7 @@ class Thread
             }
         };
 
-        std::thread* m_thread;
+        std::thread m_thread;
         bool m_is_terminate;
 };
 
