@@ -1,6 +1,6 @@
 # 『Producer-Consumer』ノート
 
-（最終更新： 2023-09-21）
+（最終更新： 2023-09-22）
 
 
 ## 目次
@@ -40,6 +40,8 @@ Producer-Consumerパターン**は、[Producer](#producer)、[Consumer](#consume
 ## サンプルプログラム
 
 ### C++
+
+[Channel](#channel)に対して100回データの生成を行う[Producer](#producer)と、それらのデータに対して処理を行う[Consumer](#consumer)からなる[プログラム](../../../../../programming/_/chapters/programming.md#プログラム)を考える。
 
 ```cpp
 #include <thread>

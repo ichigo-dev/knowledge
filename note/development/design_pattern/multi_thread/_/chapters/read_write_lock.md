@@ -41,6 +41,8 @@ Read-Write Lockパターンは、[Reader](#reader)、[Writer](#writer)、[Shared
 
 ### C++
 
+複数の読み込みロックの獲得、もしくは単一の書き込みロックの獲得が可能な[ReadWriteLock](#readwritelock)[クラス](../../../../../programming/_/chapters/object_oriented.md#クラス)を、[ミューテックス](../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#ミューテックス)と状態変数を用いて実現する例を考える。
+
 ```cpp
 #include <thread>
 #include <mutex>
