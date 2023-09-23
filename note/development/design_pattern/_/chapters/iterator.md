@@ -1,6 +1,6 @@
 # 『Iterator』ノート
 
-（最終更新： 2023-08-06）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -23,7 +23,7 @@ Iteratorパターンは、集合体とアクセス方法を分離することで
 - 集合体の内部構造を知る必要がなく、簡潔に[コード](../../../../programming/_/chapters/programming.md#ソースコード)を記述することができる
 - 要素を順番に取り出すことができるため、検索や並び替えなど、要素に対する様々な操作が行いやすくなる
 - 複数の集合体で同じ[Iterator](#iterator)を使用することができ、[コード](../../../../programming/_/chapters/programming.md#ソースコード)の再利用性が高まる
-- 複数の[Iterator](#iterator)が同じ[コレクション](../../../../programming/_/chapters/data_type.mdコンテナ型)を互いに独立して探索することができる
+- 複数の[Iterator](#iterator)が同じ[コレクション](../../../../programming/_/chapters/data_type.md#コンテナ型)を互いに独立して探索することができる
 
 Iteratorパターンは、[Aggregate](#aggregate)、[ConcreteAggregate](#concreteaggregate)、[Iterator](#iterator)、[ConcreteIterator](#concreteiterator)から構成される。このパターンを利用する[プログラム](../../../../programming/_/chapters/programming.md#プログラム)は、[ConcreteAggregate](#concreteaggregate)や[ConcreteIterator](#concreteiterator)に依存することがなくなり、具体的な[反復処理](../../../../programming/_/chapters/control_flow.md#反復)の[アルゴリズム](../../../../programming/_/chapters/algorithm.md#アルゴリズム)を置き換えることができる。
 

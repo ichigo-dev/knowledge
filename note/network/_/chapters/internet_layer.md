@@ -1,6 +1,6 @@
 # 『インターネット層』ノート
 
-（最終更新： 2023-09-21）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -152,7 +152,7 @@
 
 ### リゾルバ
 
-**リゾルバ**は、[DNS](#dns)に問い合わせをするための[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)。リゾルバは、[コンピュータ](../../../computer/_/chapters/compuer.md#コンピュータ)内の `hosts` という[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を参照したり、外部の[ネームサーバ](#ネームサーバ)に問い合わせることで名前解決する。リゾルバの[DNS](#dns)に対する問い合わせを**クエリ**という。
+**リゾルバ**は、[DNS](#dns)に問い合わせをするための[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)。リゾルバは、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内の `hosts` という[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)を参照したり、外部の[ネームサーバ](#ネームサーバ)に問い合わせることで名前解決する。リゾルバの[DNS](#dns)に対する問い合わせを**クエリ**という。
 
 ### Aレコード
 

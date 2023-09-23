@@ -1,6 +1,6 @@
 # 『Chain of Responsibility』ノート
 
-（最終更新： 2023-08-09）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -20,11 +20,11 @@ Chain of Responsibilityパターンは、[Handler](#handler)、[ConcreteHandler]
 
 ### Handler
 
-**Handler**は、[Chain of Responsibilityパターン](#chain-of-responsibility)において、要求を処理する[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を定義した[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)や[抽象クラス](../../../../programming/_/chapters/object_oriented.md#抽象クラス)。自身で処理できない要求の場合に受け流す先（[ConcreteHandler](#concretehandler)）を[フィールド](../../../../programming/_/chapters/object_oriented.md#フィールド)として持つ。
+**Handler**は、[Chain of Responsibilityパターン](#chain-of-responsibilityパターン)において、要求を処理する[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を定義した[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)や[抽象クラス](../../../../programming/_/chapters/object_oriented.md#抽象クラス)。自身で処理できない要求の場合に受け流す先（[ConcreteHandler](#concretehandler)）を[フィールド](../../../../programming/_/chapters/object_oriented.md#フィールド)として持つ。
 
 ### ConcreteHandler
 
-**ConcreteHandler**は、[Chain of Responsibilityパターン](#chain-of-responsibility)において、[Handler](#handler)が定義する[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)の具体的な実装を持つ[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。実際に要求を自身で処理するか、次の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)に要求を渡す。
+**ConcreteHandler**は、[Chain of Responsibilityパターン](#chain-of-responsibilityパターン)において、[Handler](#handler)が定義する[インタフェース](../../../../programming/_/chapters/object_oriented.md#インタフェース)の具体的な実装を持つ[クラス](../../../../programming/_/chapters/object_oriented.md#クラス)。実際に要求を自身で処理するか、次の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)に要求を渡す。
 
 
 ## サンプルプログラム

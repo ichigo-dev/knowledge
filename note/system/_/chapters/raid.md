@@ -1,6 +1,6 @@
 # 『RAID』ノート
 
-（最終更新： 2023-05-21）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -8,7 +8,7 @@
 1. [RAID](#raid)
 	1. [RAID0](#raid0)
 	1. [RAID1](#raid1)
-	1. [RAID0+1、RAID1+0](#raid01raid10)
+	1. [RAID0+1、RAID1+0](#raid0+1、raid1+0)
 	1. [RAID3](#raid3)
 	1. [RAID4](#raid4)
 	1. [RAID5](#raid5)

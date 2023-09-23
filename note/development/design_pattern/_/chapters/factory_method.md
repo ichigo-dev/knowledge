@@ -1,6 +1,6 @@
 # 『Factory Method』ノート
 
-（最終更新： 2023-08-06）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -13,7 +13,7 @@
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [Java](#java)
 
-## Factory Method
+## Factory Methodパターン
 
 **Factory Methodパターン**は、[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)生成のための枠組みをあらかじめ[スーパークラス](../../../../programming/_/chapters/object_oriented.md#親クラス)に定めておき、その具体的な実装を[サブクラス](../../../../programming/_/chapters/object_oriented.md#子クラス)に任せる[デザインパターン](./design_pattern.md#デザインパターン)。[Template Methodパターン](./template_method.md#template-methodパターン)を[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)生成の場面に適応させたパターン。
 

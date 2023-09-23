@@ -1,6 +1,6 @@
 # 『Command』ノート
 
-（最終更新： 2023-08-17）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -16,7 +16,7 @@
 
 ## Commandパターン
 
-**Commandパターン**（**Eventパターン**）は、命令をひとつの[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)として表現することにより、命令の集まりから履歴の管理や、複数の命令をまとめた新しい命令の作成をできるようにした[デザインパターン](./design_pattern#デザインパターン)。さらに、命令自体を[関数](../../../../programming/_/chapters/function.md#関数)の[引数](../../../../programming/_/chapters/function.md#引数)として渡したり、実行の遅延や[待ち行列](../../../../basics/applied_mathematics/_/chapters/waiting_queue_theory.md#待ち行列)の利用、取り消し操作などを実現することができる。
+**Commandパターン**（**Eventパターン**）は、命令をひとつの[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)として表現することにより、命令の集まりから履歴の管理や、複数の命令をまとめた新しい命令の作成をできるようにした[デザインパターン](./design_pattern.md#デザインパターン)。さらに、命令自体を[関数](../../../../programming/_/chapters/function.md#関数)の[引数](../../../../programming/_/chapters/function.md#引数)として渡したり、実行の遅延や[待ち行列](../../../../basics/applied_mathematics/_/chapters/waiting_queue_theory.md#待ち行列)の利用、取り消し操作などを実現することができる。
 
 Commandパターンは、[Command](#command)、[ConcreteCommand](#concretecommand)、[Receiver](#receiver)、[Invoker](#invoker)から構成される。
 

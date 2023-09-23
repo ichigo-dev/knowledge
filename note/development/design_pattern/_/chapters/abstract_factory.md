@@ -30,7 +30,7 @@ Abstract Factoryパターンは、[AbstractProduct](#abstractproduct)、[Concret
 
 ### AbstractFactory
 
-**AbstractFactory**（抽象的な工場）は、[Abstract Factoryパターン](#abstract-factoryパターン)において、グループ化された全ての[AbstractProduct](#abstract)を生成するためのインタフェースを定義する[抽象クラス](../../../../programming/_/chapters/object_oriented.md#抽象クラス)。それぞれの[AbstractProduct](#abstractproduct)を生成するためのインタフェースを定義する。
+**AbstractFactory**（抽象的な工場）は、[Abstract Factoryパターン](#abstract-factoryパターン)において、グループ化された全ての[AbstractProduct](#abstractproduct)を生成するためのインタフェースを定義する[抽象クラス](../../../../programming/_/chapters/object_oriented.md#抽象クラス)。それぞれの[AbstractProduct](#abstractproduct)を生成するためのインタフェースを定義する。
 
 ### ConcreteFactory
 

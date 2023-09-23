@@ -207,7 +207,7 @@ void tas_release( bool *p )
 
 ### Load-Link/Store-Conditional
 
-**Load-Link/Store-Conditional**(**LL/SC**)は、[アトミック処理](#アトミック処理)のひとつで、[共有メモリ](../../../../computer/linux/_/chapters/process_and_job.md#共有メモリ)へのアクセス制御や[ロックフリー](#ロックフリー)な構造の実装に利用される。この操作は次のようなステップで構成される。
+**Load-Link/Store-Conditional**(**LL/SC**)は、[アトミック処理](#アトミック処理)のひとつで、[共有メモリ](../../../../computer/linux/_/chapters/process_and_job.md#共有メモリ)へのアクセス制御やロックフリーな構造の実装に利用される。この操作は次のようなステップで構成される。
 
 1. **Load-Link**: [共有メモリ](../../../../computer/linux/_/chapters/process_and_job.md#共有メモリ)の値を読み込み、リンクを設定する
 1. 読み込んだ値に対して任意の操作を行う（この間、他の[プロセス](./concurrency_and_parallelism.md#プロセス)も値にアクセスすることができる）

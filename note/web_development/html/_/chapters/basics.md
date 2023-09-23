@@ -1,6 +1,6 @@
 # 『基本HTML』ノート
 
-（最終更新： 2023-08-22）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -53,11 +53,11 @@
 
 ## head
 
-**head**は、[HTML](./html.md#html)文書のヘッド部を記述するための[タグ](./html.md#タグ)。**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `title` や[CSS](../../../css/_/chapters/css.md#css)および[JavaScript](../../../javscript/_/chapters/javascript.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報などを含む。
+**head**は、[HTML](./html.md#html)文書のヘッド部を記述するための[タグ](./html.md#タグ)。**ヘッド部***は、[HTML](#html)文書のうち、ページが読み込まれても[Webブラウザ](../../../../network/_/chapters/web.md#webブラウザ)に表示されない部分。 `title` や[CSS](../../../css/_/chapters/css.md#css)および[JavaScript](../../../javascript/_/chapters/javascript.md#javascript)へのリンク、独自のファビコンへのリンク、その他のメタデータの情報などを含む。
 
 ### title
 
-**title**は、[HTML](./html.md#html)文書全体のタイトルを表すメタデータとなる[タグ](./html.md#タグ)で、 `head` [タグ](#タグ)内に記述される。この[要素](#要素)の内容は、SEOに大きく影響しており、ユーザが検索結果ページで目にすることになる重要なものとなる。また、 `title` はページのブックマークやSNSシェア時の表示などにも利用される。
+**title**は、[HTML](./html.md#html)文書全体のタイトルを表すメタデータとなる[タグ](./html.md#タグ)で、 `head` [タグ](./html.md#タグ)内に記述される。この[要素](./html.md#要素)の内容は、SEOに大きく影響しており、ユーザが検索結果ページで目にすることになる重要なものとなる。また、 `title` はページのブックマークやSNSシェア時の表示などにも利用される。
 
 ```html
 <!DOCTYPE html>

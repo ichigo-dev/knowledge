@@ -1811,7 +1811,7 @@
 	- [ ] [信頼性(Reliability)](./system/_/chapters/system_performance_evaluation.md#信頼性)
 	- [ ] [可用性(Availability)](./system/_/chapters/system_performance_evaluation.md#可用性)
 	- [ ] [保守性(Serviceability)](./system/_/chapters/system_performance_evaluation.md#保守性)
-	- [ ] [完全性・保全性(Integrity)](./system/_/chapters/system_performance_evaluation.md#完全性保全性)
+	- [ ] [完全性・保全性(Integrity)](./system/_/chapters/system_performance_evaluation.md#完全性・保全性)
 		- [ ] [インテグリティ](./system/_/chapters/system_performance_evaluation.md#完全性保全性)
 	- [ ] [機密性(Security)](./system/_/chapters/system_performance_evaluation.md#機密性)
 - [ ] [信頼性指標](./system/_/chapters/system_performance_evaluation.md#信頼性指標)
@@ -2728,7 +2728,7 @@
 	- [ ] [オートチューニング](./artificial_intelligence/_/chapters/machine_learning.md#オートチューニング)
 	- [ ] [グリッドサーチ](./artificial_intelligence/_/chapters/machine_learning.md#グリッドサーチ)
 	- [ ] [ランダムサーチ](./artificial_intelligence/_/chapters/machine_learning.md#ランダムサーチ)
-	- [ ] [焼きなまし法（疑似アニーリング、SA）](./artificial_intelligence/_/chapters/machine_learning.md#焼きなまし法)
+	- [ ] [焼きなまし法（擬似アニーリング、SA）](./artificial_intelligence/_/chapters/machine_learning.md#焼きなまし法)
 	- [ ] [ベイズ最適化](./artificial_intelligence/_/chapters/machine_learning.md#ベイズ最適化)
 	- [ ] [遺伝的アルゴリズム](./artificial_intelligence/_/chapters/machine_learning.md#遺伝的アルゴリズム)
 - [ ] [最適化問題（最適化）](./artificial_intelligence/_/chapters/machine_learning.md#最適化問題)
@@ -2930,7 +2930,7 @@
 
 #### 基本HTML
 
-- [ ] [DOCTYPE宣言](././[web_development]()/html/_/chapters/basics.md#doctypeインタフェース[web_development]()/html/_/chapters/basics.md#doctype宣言)
+- [ ] [DOCTYPE宣言](./web_development/html/_/chapters/basics.md#doctype宣言)
 - [ ] [html](./web_development/html/_/chapters/basics.md#html)
 - [ ] [head](./web_development/html/_/chapters/basics.md#head)
 	- [ ] [ヘッド部](./web_development/html/_/chapters/basics.md#head)

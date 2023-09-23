@@ -9,7 +9,7 @@
 	1. [Component](#component)
 	1. [ConcreteComponent](#concretecomponent)
 	1. [Decorator](#decorator)
-	1. [ConcreteDecorator](#cocnretedecorator)
+	1. [ConcreteDecorator](#concretedecorator)
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [Java](#java)
 
