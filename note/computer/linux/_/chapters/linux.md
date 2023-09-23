@@ -1,6 +1,6 @@
 # 『Linux』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -33,11 +33,11 @@
 
 ### 狭義のLinux
 
-**狭義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)を指す言葉。[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)の中核となる、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)制御を行う[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)のみを指し、実際にユーザが用いるツールや[アプリケーション](../../../software/_/chapters/#応用ソフトウェア)は含まれない。
+**狭義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)を指す言葉。[OS](../../../software/_/chapters/operating_system.md#オペレーティングシステム)の中核となる、[ハードウェア](../../../hardware/_/chapters/hardware.md#ハードウェア)制御を行う[ソフトウェア](../../../software/_/chapters/software.md#ソフトウェア)のみを指し、実際にユーザが用いるツールや[アプリケーション](../../../software/_/chapters/software.md#応用ソフトウェア)は含まれない。
 
 ### 広義のLinux
 
-**広義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)に加えて、基本的な[コマンド](./basic_command.md#コマンド)群や[アプリケーション](../../../software/_/chapters/#応用ソフトウェア)などを含めて、ユーザがそのまま利用できるようにパッケージングして提供されたものを指す言葉。一般的には、単に[Linux](#linux)というときには、広義のLinuxのことを指す場合が多い。
+**広義のLinux**は、[Linux](#linux)[カーネル](../../../software/_/chapters/operating_system.md#カーネル)に加えて、基本的な[コマンド](./basic_command.md#コマンド)群や[アプリケーション](../../../software/_/chapters/software.md#応用ソフトウェア)などを含めて、ユーザがそのまま利用できるようにパッケージングして提供されたものを指す言葉。一般的には、単に[Linux](#linux)というときには、広義のLinuxのことを指す場合が多い。
 
 
 ## ディストリビューション
