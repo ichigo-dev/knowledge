@@ -1,6 +1,6 @@
 # 『Producer-Consumer』ノート
 
-（最終更新： 2023-09-22）
+（最終更新： 2023-09-23）
 
 
 ## 目次
@@ -18,7 +18,7 @@
 
 **Producer-Consumerパターン**は、データを生成する[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)と、生成されたデータを消費する[スレッド](../../../../../computer/software/_/chapters/operating_system.md#スレッド)が協力して、データを安全に共有し処理を行う[デザインパターン](../../../_/chapters/design_pattern.md#デザインパターン)。
 
-Producer-Consumerパターン**は、[Producer](#producer)、[Consumer](#consumer)、[Data](#data)、[Channel](#channel)から構成される。
+Producer-Consumerパターンは、[Producer](#producer)、[Consumer](#consumer)、[Data](#data)、[Channel](#channel)から構成される。
 
 ### Producer
 
