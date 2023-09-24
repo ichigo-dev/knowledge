@@ -3375,6 +3375,12 @@
 		- [ ] [外部スキーマ](./development/database/_/chapters/database.md#外部スキーマ)
 		- [ ] [概念スキーマ](./development/database/_/chapters/database.md#概念スキーマ)
 		- [ ] [内部スキーマ](./development/database/_/chapters/database.md#内部スキーマ)
+- [ ] [レプリケーション](./development/database/_/chapters/database.md#レプリケーション)
+	- [ ] [マスタ](./development/database/_/chapters/database.md#マスタ)
+		- [ ] [バイナリログ](./development/database/_/chapters/database.md#マスタ)
+	- [ ] [スレーブ](./development/database/_/chapters/database.md#スレーブ)
+		- [ ] [リレーログ](./development/database/_/chapters/database.md#スレーブ)
+	- [ ] [非同期レプリケーション](./development/database/_/chapters/database.md#非同期レプリケーション)
 
 #### RDB
 
