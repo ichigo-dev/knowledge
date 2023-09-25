@@ -1706,6 +1706,7 @@
 	- [ ] [シンクライアントシステム](./system/_/chapters/system_processing_model.md#シンクライアントシステム)
 	- [ ] [ロードバランサ](./system/_/chapters/system_processing_model.md#ロードバランサ)
 	- [ ] [負荷分散](./system/_/chapters/system_processing_model.md#負荷分散)
+	- [ ] [DRBD(Distributed Replicated Block Device)](./system/_/chapters/system_processing_model.md#drbd)
 
 ### システム構成
 

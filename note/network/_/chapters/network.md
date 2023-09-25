@@ -235,7 +235,7 @@
 
 ### スパニングツリー方式
 
-**スパニングツリー方式**は、各[ブリッジ](./network_architecture.md#ブリッジ)が定期的に**BPDU**(Bridge Protocol Data Unit)と呼ばれる[パケット](#パケット)を交換し、使用する[ポート](./address_on_network.md#ポート番号)と使用しない[ポート](./address_on_network.md#ポート番号)を切り替える方式。これにより、通信路が自動的に切り替わり、ループの発生を防ぐことができる。
+**スパニングツリー方式**は、各[ブリッジ](./network_architecture.md#ブリッジ)が定期的に**BPDU**(Bridge Protocol Data Unit)と呼ばれる[パケット](#パケット)を交換し、使用する[ポート](./address_on_network.md#ポート番号)と使用しない[ポート](./address_on_network.md#ポート番号)を切り替える方式。これにより、通信路が自動的に切り替わり、ループの発生を防ぐことができる。また、BPDU[パケット](#パケット)が途切れたことを検知した場合、[ブリッジ](./network_architecture.md#ブリッジ)は故障が発生したと判断して、代替経路に切り替える。
 
 スパニングツリー方式を改良したものとして、**RSTP**(Rapid Spanning Tree Protocol)や、**リンクアグリゲーション**、**LLDP**(Link Layer Discovery Protocol)といった方式がある。
 
