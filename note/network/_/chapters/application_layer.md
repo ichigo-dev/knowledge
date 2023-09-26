@@ -1,6 +1,6 @@
 # 『アプリケーション層』ノート
 
-（最終更新： 2023-06-27）
+（最終更新： 2023-09-27）
 
 
 ## 目次
@@ -77,7 +77,29 @@ FTPでは、2つの[TCP](./transport_layer.md#tcp)[コネクション](./network
 
 ### MIME
 
-**MEME**(Multipurpose Internet Mail Extensions)は、電子メールでテキスト以外のデータ形式を送信できるようにした拡張形式。MIMEを利用することで、画像や音声、動画などの[マルチメディア](../../../computer/software/_/chapters/multimedia.md#マルチメディア)データが添付できる。
+**MEME**(Multipurpose Internet Mail Extensions)は、[電子メール](#電子メール)でテキスト以外のデータ形式を送信できるようにした拡張形式。MIMEを利用することで、画像や音声、動画などの[マルチメディア](../../../computer/software/_/chapters/multimedia.md#マルチメディア)データが添付できる。もともとは[電子メール](#電子メール)用の規格であったが、現在は[HTTP](#httml)などの他の[プロトコル](./network_architecture.md#プロトコル)でも利用されている。代表的なMIMEタイプとしては以下のようなものがある。
+
+| MIMEタイプ                 | 概要             |
+| -------------------------- | ---------------- |
+| `text/plain`               | プレーンテキスト |
+| `text/html`                | HTML             |
+| `text/css`                 | CSS              |
+| `text/javascript`          | JavaScript       |
+| `image/jpeg`               | JPEG画像         |
+| `image/png`                | PNG画像          |
+| `image/gif`                | GIF画像          |
+| `image/svg+xml`            | SVG画像          |
+| `audio/mpeg`               | MP3              |
+| `audio/wav`                | WAV              |
+| `video/mpeg`               | MPEG             |
+| `video/mp4`                | MP4              |
+| `application/pdf`          | PDF              |
+| `application/zip`          | ZIP              |
+| `application/json`         | JSON             |
+| `application/xml`          | XML              |
+| `application/octet-stream` | バイト列         |
+
+[HTTP](#http)においては、Content-TypeヘッダにMIMEタイプを指定することでコンテンツの形式を特定することができる。
 
 ### SMTP
 
