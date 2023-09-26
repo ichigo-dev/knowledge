@@ -2352,7 +2352,7 @@
 		- [ ] [Javaアンプレット](./network/_/chapters/web.md#コードオンデマンド)
 	- [ ] [RESTful](./network/_/chapters/web.md#restful)
 - [ ] [URI（Uniform Resource Identifier: 統一リソース識別子）](./network/_/chapters/web.md#uri)
-	- [ ] [%エンコーディング](./network/_/chapters/web.md#uri)
+	- [ ] [%エンコーディング（パーセントエンコーディング）](./network/_/chapters/web.md#uri)
 	- [ ] [URL(Uniform Resource Locator)](./network/_/chapters/web.md#url)
 	- [ ] [URN(Uniform Resource Name)](./network/_/chapters/web.md#urn)
 		- [ ] [ISBN](./network/_/chapters/web.md#urn)

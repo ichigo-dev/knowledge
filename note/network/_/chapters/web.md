@@ -192,7 +192,7 @@ RESTは、**ULCODC$SS**(Uniform Layered Code on Demand Client Cache Stateless Se
 
 **URI**（Uniform Resource Identifier: **統一リソース識別子**）は、[インターネット](./network.md#インターネット)上の資源（[リソース](#リソース)）を表す識別子。
 
-URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)文字のみ利用することができ、日本語などの[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)以外の文字を使いたい場合は**%エンコーディング**という方式を用いて文字をエンコードする。
+URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)文字のみ利用することができ、日本語などの[ASCII](../../../basics/information_theory/_/chapters/character_representation.md#asciiコード)以外の文字を使いたい場合は**%エンコーディング**（**パーセントエンコーディング**）という方式を用いて文字をエンコードする。
 
 ### URL
 
@@ -208,11 +208,11 @@ URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapt
 
 ### クエリパラメータ
 
-**クエリパラメータ**（**クエリ文字列**）は、[URI](#uri)中に指定することができるパラメータで、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に対して情報を送信したい場合に用いられる。
+**クエリパラメータ**（**クエリ文字列**）は、[URI](#uri)中に指定することができるパラメータで、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に対して情報を送信したい場合に用いられる。[URI](#uri)中で `?` 以降に記載され、キーと値が `=` 区切りでつなげられる。複数のパラメータを含めたい場合は、 `&` によってパラメータ同士が結合された文字列となる。
 
 ### URIフラグメント
 
-**URIフラグメント**は、[URI](#uri)中で[リソース](#リソース)の内部のさらに細かい部分を指定するときに使用される部分。
+**URIフラグメント**は、[URI](#uri)中で[リソース](#リソース)の内部のさらに細かい部分を指定するときに使用される部分。[URI](#uri)中で `#` 以降に記載され、[HTML](#html)のid[属性](../../../web_development/html/_/chapters/html.md#属性)に紐付けられる。
 
 ### リソース
 
@@ -230,7 +230,7 @@ URIで表されるパスには[ASCII](../../../basics/information_theory/_/chapt
 
 ### リダイレクト
 
-**リダイレクト**(Redirect)は、古い[URI](#uri)を新しい[URI](#uri)に転送する[HTTP](./application_layer.md#http)の仕組み。[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)にリダイレクトを要求する際には、300番台の[ステータスコード](#ステータスコード)とLocation[ヘッダ](#httpヘッダ)が含まれる[レスポンスメッセージ](#レスポンスメッセージ)を送信し、[ブラウザ](#webブラウザ)はLocationに指定された新しい[URL](#uri)に再度[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を行う。
+**リダイレクト**(Redirect)は、古い[URI](#uri)を新しい[URI](#uri)に転送する[HTTP](./application_layer.md#http)の仕組み。[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)にリダイレクトを要求する際には、300番台の[ステータスコード](#ステータスコード)とLocation[ヘッダ](#httpヘッダ)が含まれる[レスポンスメッセージ](#レスポンスメッセージ)を送信し、[ブラウザ](#webブラウザ)はLocationに指定された新しい[URL](#url)に再度[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)を行う。
 
 [URI](#uri)を変更したい場合はリダイレクトにより古い[URI](#uri)が完全に使えなくなることを防ぐとよい。
 
