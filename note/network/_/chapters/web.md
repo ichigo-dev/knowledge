@@ -56,9 +56,13 @@
 1. [HTTPメソッド](#httpメソッド)
 1. [ステータスコード](#ステータスコード)
 	1. [頻出のステータスコード](#頻出のステータスコード)
+1. [フォーム](#フォーム)
+	1. [マルチパートフォーム](#マルチパートフォーム)
+1. [コンテントネゴシエーション](#コンテントネゴシエーション)
 1. [セッション](#セッション)
 	1. [Cookie](#cookie)
 	1. [ローカルストレージ](#ローカルストレージ)
+	1. [オリジン](#オリジン)
 1. [FastCGI](#fastcgi)
 
 
@@ -346,6 +350,31 @@ Content-Type: application/xhtml+xml; charset=utf-8
 | 503 Service Unavailable   | サーバがメンテナンスなどで一時的にアクセスできないことを示す。                                                         |
 
 
+## フォーム
+
+**フォーム**は、[HTTP](./application_layer.md#http)において、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)から[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に対してデータを送信するための技術。
+
+[HTML](#html)では `form` [タグ](../../../web_development/html/_/chapters/html.md#タグ)を用いることでフォームを作成でき、 `action` [属性](../../../web_development/html/_/chapters/html.md#属性)に指定された[URL](#url)にデータが送信される。また、使用する[HTTPメソッド](#httpメソッド)を `method` [属性](../../../web_development/html/_/chapters/html.md#属性)で指定することもできる。
+
+### マルチパートフォーム
+
+**マルチパートフォーム**は、[HTTP](./application_layer.md#http)の[フォーム](#フォーム)におけるエンコードタイプの形式で、通常は単一のコンテンツしか持つことのできない[HTTPメッセージ](#httpメッセージ)に複数のコンテンツ（[ファイル](../../../computer/software/_/chapters/file_system.md#ファイル)）を持たせるためのオプション。マルチパートフォームの[HTTPボディ](#httpボディ)は、[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)ごとに異なる境界文字列で複数のコンテンツを区切った形式となっており、区切られた各コンテンツはそれぞれが[ヘッダ](#httpヘッダ)を持つことができる。境界文字列は `Content-Type` [ヘッダ](#httpヘッダ)に付与された `boundary` に記載される。
+
+[HTML](#html)の `form` では、 `enctype="multipart/form-data"` を指定することでマルチパートフォームを作成することができる。
+
+
+## コンテントネゴシエーション
+
+**コンテントネゴシエーション**は、[HTTP](./application_layer.md#http)において、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が期待している形式や設定を[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)に伝えることで、最適なコンテンツを[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)するための仕組み。以下のネゴシエーション用の[リクエスト](../../../system/_/chapters/system_processing_model.md#リクエスト)の[ヘッダ](#httpヘッダ)と、それに対応する[レスポンス](../../../system/_/chapters/system_processing_model.md#レスポンス)の[ヘッダ](#httpヘッダ)に示したように、[MIME](./application_layer.md#mime)タイプや言語、文字セットなどをネゴシエーションできる。
+
+| リクエストヘッダ  | レスポンスヘッダ              | ネゴシエーション対象 |
+| ----------------- | ----------------------------- | -------------------- |
+| `Accept`          | `Content-Type`                | MIMEタイプ           |
+| `Accept-Language` | `Content-Language` / HTMLタグ | 表示言語             |
+| `Accept-Charset`  | `Content-Type`                | 文字セット           |
+| `Accept-Encoding` | `Content-Encoding`            | ボディの圧縮形式     |
+
+
 ## セッション
 
 **セッション**は、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)がある[Web](#web)サイトに訪問してから離脱するまでの通信。各[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)ごとのセッション情報は[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)が利用する[ストレージ](../../../computer/hardware/_/chapters/hardware.md#記憶装置)に格納されており、[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)は自分のセッション情報を参照するためのキーを[Cookie](#cookie)などで保持する。
@@ -354,11 +383,17 @@ Content-Type: application/xhtml+xml; charset=utf-8
 
 ### Cookie
 
-**Cookie**は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[セッション](#セッション)情報を参照するためのキーの管理などに用いられる。Cookieの情報をどれだけの期間保持しておくかは、[ブラウザ](#webブラウザ)の設定や[HTTPメッセージ](#httpメッセージ)内のメタ情報により制御する。
+**Cookie**は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[JavaScript](../../../web_development/javascript/_/chapters/javascript.md#javascript)や[HTTPヘッダ](#httpヘッダ)によって制御される。Cookieの情報をどれだけの期間保持しておくかは、[ブラウザ](#webブラウザ)の設定や[HTTPメッセージ](#httpメッセージ)内のメタ情報により制御する。
+
+[セッション](#セッション)情報を参照するためのキーや、一時的なデータの保存などに用いられる。
 
 ### ローカルストレージ
 
 **ローカルストレージ**(Local Storage)は、[ブラウザ](#webブラウザ)に情報を保存するための機能で、[Cookie](#cookie)よりも情報の保存期間が長く、格納できるデータ量も大きい。[Cookie](#cookie)の情報は[HTTPメッセージ](#httpメッセージ)を介して[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)にも送信されるが、ローカルストレージの情報はブラウザのみで使用されるため、[サーバ](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)側の[セッション](#セッション)の管理には向いていない。
+
+### オリジン
+
+**オリジン**は、[HTTP](./application_layer.md#http)における、[スキーム](#スキーム)、[ホスト名](./internet_layer.md#ホスト名)、[ポート](./address_on_network.md#ポート)の組み合わせ。[クライアント](../../../system/_/chapters/system_processing_model.md#クライアントサーバシステム)はこれら全てが一致した場合のみ同一オリジンであると判定する。[Cookie](#cookie)や[ローカルストレージ](#ローカルストレージ)は、オリジンごとにアクセス権限を分離している。
 
 
 ## FastCGI

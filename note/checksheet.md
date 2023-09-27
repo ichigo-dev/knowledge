@@ -2386,9 +2386,13 @@
 	- [ ] [TRACE](./network/_/chapters/web.md#httpメソッド)
 	- [ ] [CONNECT](./network/_/chapters/web.md#httpメソッド)
 - [ ] [ステータスコード](./network/_/chapters/web.md#ステータスコード)
+- [ ] [フォーム](./network/_/chapters/web.md#フォーム)
+	- [ ] [マルチパートフォーム](./network/_/chapters/web.md#マルチパートフォーム)
+- [ ] [コンテントネゴシエーション](./network/_/chapters/web.md#コンテントネゴシエーション)
 - [ ] [セッション](./network/_/chapters/web.md#セッション)
 	- [ ] [Cookie](./network/_/chapters/web.md#cookie)
-	- [ ] [ローカルストレージ](./network/_/chapters/web.md#ローカルストレージ)
+	- [ ] [ローカルストレージ(Local Storage)](./network/_/chapters/web.md#ローカルストレージ)
+	- [ ] [オリジン](./network/_/chapters/web.md#オリジン)
 - [ ] [FastCGI](./network/_/chapters/web.md#fastcgi)
 
 ### ルーティングプロトコル
