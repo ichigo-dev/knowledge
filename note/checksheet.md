@@ -3870,6 +3870,10 @@
 
 - [ ] [Active Objectパターン（Actorパターン）](./development/design_pattern/multi_thread/_/chapters/active_object.md#active-objectパターン)
 
+### ソフトウェアアーキテクチャ
+
+- [ ] [ソフトウェアアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#ソフトウェアアーキテクチャ)
+
 ### マネジメント
 
 #### マネジメント
@@ -3928,7 +3932,9 @@
 - [ ] [DevOps](./development/management/_/chapters/development_method.md#devops)
 - [ ] [テスト駆動開発(TDD: Test-Drive Development)](./development/management/_/chapters/development_method.md#テスト駆動開発)
 - [ ] [ドメイン駆動開発(DDD: Domain-Drive Development)](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
-	- [ ] [ユキビタス言語](./development/management/_/chapters/development_method.md#ドメイン駆動開発)
+	- [ ] [ドメイン](./development/management/_/chapters/development_method.md#ドメイン)
+	- [ ] [ユキビタス言語](./development/management/_/chapters/development_method.md#ユキビタス言語)
+	- [ ] [パターン](./development/management/_/chapters/development_method.md#パターン)
 - [ ] [CI（継続的インテグレーション: Continuous Integration）](./development/management/_/chapters/development_method.md#ci)
 - [ ] [CD（継続的デプロイメント: Continuous Deployment、継続的デリバリー: Continuous Delivery）](./development/management/_/chapters/development_method.md#cd)
 - [ ] [ペアプログラミング](./development/management/_/chapters/development_method.md#ペアプログラミング)
