@@ -3873,6 +3873,8 @@
 ### ソフトウェアアーキテクチャ
 
 - [ ] [ソフトウェアアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#ソフトウェアアーキテクチャ)
+- [ ] [レイヤードアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#レイヤードアーキテクチャ)
+- [ ] [ヘキサゴナルアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#ヘキサゴナルアーキテクチャ)
 
 ### マネジメント
 
