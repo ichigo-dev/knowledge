@@ -1,6 +1,6 @@
 # 『コンピュータと数』ノート
 
-（最終更新： 2023-08-31）
+（最終更新： 2023-09-29）
 
 
 ## 目次
@@ -22,13 +22,13 @@
 
 ### バイナリ
 
-**バイナリ**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱うデータの一種で、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現されたデータ（[ビット](#ビット)列）を指す。
+**バイナリ**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が扱うデータの一種で、[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)で表現されたデータ（[ビット](#ビット)列）を指す。バイナリは[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)が理解できる唯一のデータ形式で、人間が直接解釈するのは難しい。
 
-[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)において[プログラム](../../../programming/_/chapters/programming.md#プログラム)やデータは、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)内にバイナリ形式で格納されている。[プログラム](../../../programming/_/chapters/programming.md#プログラム)を実行するには、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)がバイナリを解釈して命令を処理する必要がある。同様に、データもバイナリ形式で格納され、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)がその内容を解釈して利用する。
+[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)は[プログラム](../../../programming/_/chapters/programming.md#プログラム)を実行する際、その命令や[プログラム](../../../programming/_/chapters/programming.md#プログラム)中で使用されるデータを[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)内にバイナリ形式で格納しており、これらのバイナリを解釈しながら処理を行う。
 
 ### ビット
 
-**ビット**(bit)は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの最小単位で、 $0$ か $1$ のどちらかの値を持つ。ビットという言葉は"Binary digit"からきており、情報を格納するための最小単位となる。[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内のすべての情報はビット列（[バイナリ](#バイナリ)）で表現されており、ビット単位の[論理演算](../../discrete_mathematics/_/chapters/logical_operation.md#論理演算)の組み合わせにより様々な処理を行っている。
+**ビット**(bit)は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの最小単位で、 $0$ か $1$ のどちらかの値を持つ。ビットという言葉は"Binary digit"からきており、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内のすべての情報はビット列（[バイナリ](#バイナリ)）で表現される。[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)は、このビット単位の[論理演算](../../discrete_mathematics/_/chapters/logical_operation.md#論理演算)の組み合わせにより様々な処理を行っている。
 
 ### バイト
 
@@ -36,7 +36,7 @@
 
 ### ワード
 
-**ワード**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの単位のひとつで、通常は16[ビット](#ビット)（2[バイト](#バイト)）か32[ビット](#ビット)（4[バイト](#バイト)）、あるいは64[ビット](#ビット)（8[バイト](#バイト)）の長さを持つ。[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[レジスタ](../../../computer/hardware/_/chapters/processor.md#レジスタ)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)などでデータを扱う際の基本単位となる。
+**ワード**は、[コンピュータ](../../../computer/_/chapters/computer.md#コンピュータ)内部で扱われるデータの単位のひとつで、[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)や[レジスタ](../../../computer/hardware/_/chapters/processor.md#レジスタ)、[メモリ](../../../computer/hardware/_/chapters/memory.md#メモリ)などでデータを扱う際の基本単位となる。通常は16[ビット](#ビット)（2[バイト](#バイト)）か32[ビット](#ビット)（4[バイト](#バイト)）、あるいは64[ビット](#ビット)（8[バイト](#バイト)）の長さを持つ。
 
 ワードの長さ（**ワードサイズ**）は、[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)の[アーキテクチャ](../../../computer/hardware/_/chapters/processor.md#cpuアーキテクチャ)や設計によって異なる。16[ビット](#ビット)のワードを使用する[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)は16ビットCPU、32[ビット](#ビット)のワードを使用する[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)は32ビットCPUのように呼ばれ、現在では64[ビット](#ビット)の[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)が主流となっている。ワードサイズが大きい[CPU](../../../computer/hardware/_/chapters/processor.md#cpu)ほど一度に扱えるデータ量が大きくなるため、より高速な処理が可能となる。
 
@@ -44,17 +44,17 @@
 
 ### MSB
 
-**MSB**（**最上位ビット**: Most Significant Bit）は、[ビット](#ビット)列において一番左の[ビット](#ビット)。
+**MSB**（**最上位ビット**: Most Significant Bit）は、[ビット](#ビット)列において一番左の[ビット](#ビット)を指す用語。
 
-[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の正負の数の表現においては、MSBが $0$ の場合その数は正の数として、 $1$ の場合は負の数として扱われる。
+[2進数](../../discrete_mathematics/_/chapters/radix.md#2進数)の正負の数の表現においては、MSBが $0$ の場合はその数は正の数として、 $1$ の場合は負の数として扱われる。
 
-また、[ビッグエンディアン方式](../../information_theory/_/chapters/coding_theory.md#ビッグエンディアン)のデータ表現においては、MSBがデータの先頭となる。
+[ビッグエンディアン](../../information_theory/_/chapters/coding_theory.md#ビッグエンディアン)方式のデータ表現においては、MSBがデータの先頭となる。
 
 ### LSB
 
-**LSB**（**最下位ビット**: Least Significant Bit）は、[ビット](#ビット)列において一番右の[ビット](#ビット)。
+**LSB**（**最下位ビット**: Least Significant Bit）は、[ビット](#ビット)列において一番右の[ビット](#ビット)を指す用語。
 
-[リトルエンディアン方式](../../information_theory/_/chapters/coding_theory.md#リトルエンディアン)のデータ表現においては、LSBがデータの先頭となる。
+[リトルエンディアン](../../information_theory/_/chapters/coding_theory.md#リトルエンディアン)方式のデータ表現においては、LSBがデータの先頭となる。
 
 
 ## 参考文献
