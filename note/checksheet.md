@@ -3873,8 +3873,12 @@
 ### ソフトウェアアーキテクチャ
 
 - [ ] [ソフトウェアアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#ソフトウェアアーキテクチャ)
+- [ ] [モノリシックアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#モノリシックアーキテクチャ)
 - [ ] [レイヤードアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#レイヤードアーキテクチャ)
 - [ ] [ヘキサゴナルアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#ヘキサゴナルアーキテクチャ)
+	- [ ] [ポート](./development/software_architecture/_/chapters/software_architecture.md#ポート)
+- [ ] [オニオンアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#オニオンアーキテクチャ)
+- [ ] [クリーンアーキテクチャ](./development/software_architecture/_/chapters/software_architecture.md#クリーンアーキテクチャ)
 
 ### マネジメント
 
