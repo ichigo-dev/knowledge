@@ -69,9 +69,9 @@
 - [ ] [集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#集合)
 	- [ ] [要素](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#要素)
 - [ ] [ベン図](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#ベン図)
+- [ ] [全体集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#補集合)
 - [ ] [部分集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#部分集合)
 - [ ] [真部分集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#部分集合)
-- [ ] [全体集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#補集合)
 - [ ] [補集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#補集合)
 - [ ] [和集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#和集合)
 - [ ] [積集合](./basics/discrete_mathematics/_/chapters/set_and_proposition.md#積集合)
@@ -83,16 +83,18 @@
 #### 論理演算
 
 - [ ] [論理演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#論理演算)
+	- [ ] [真理値表](./basics/discrete_mathematics/_/chapters/logical_operation.md#真理値表)
 	- [ ] [OR演算（論理和）](./basics/discrete_mathematics/_/chapters/logical_operation.md#or演算)
 	- [ ] [AND演算（論理積）](./basics/discrete_mathematics/_/chapters/logical_operation.md#and演算)
 	- [ ] [NOT演算（論理否定）](./basics/discrete_mathematics/_/chapters/logical_operation.md#not演算)
 	- [ ] [NOR演算（否定論理和）](./basics/discrete_mathematics/_/chapters/logical_operation.md#nor演算)
 	- [ ] [NAND演算（否定論理積）](./basics/discrete_mathematics/_/chapters/logical_operation.md#nand演算)
 	- [ ] [XOR演算（排他的論理和）](./basics/discrete_mathematics/_/chapters/logical_operation.md#xor演算)
-- [ ] [真理値表](./basics/discrete_mathematics/_/chapters/logical_operation.md#真理値表)
 - [ ] [ド・モルガンの法則](./basics/discrete_mathematics/_/chapters/logical_operation.md#ドモルガンの法則)
 - [ ] [マスクビット](./basics/discrete_mathematics/_/chapters/logical_operation.md#マスクビット)
 - [ ] [ビットマスク演算](./basics/discrete_mathematics/_/chapters/logical_operation.md#ビットマスク演算)
+
+### 応用数学
 
 #### 確率と統計
 
