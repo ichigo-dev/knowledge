@@ -211,7 +211,7 @@
 
 - [ ] [因数分解](./basics/applied_mathematics/_/chapters/formal_processing.md#因数分解)
 	- [ ] [因数](./basics/applied_mathematics/_/chapters/formal_processing.md#因数分解)
-	- [ ] [乗法定理](./basics/applied_mathematics/_/chapters/formal_processing.md#乗法定理)
+	- [ ] [乗法公式](./basics/applied_mathematics/_/chapters/formal_processing.md#乗法公式)
 	- [ ] [素因数分解](./basics/applied_mathematics/_/chapters/formal_processing.md#素因数分解)
 	- [ ] [素数](./basics/applied_mathematics/_/chapters/formal_processing.md#素数)
 	- [ ] [合成数](./basics/applied_mathematics/_/chapters/formal_processing.md#素数)
