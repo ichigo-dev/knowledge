@@ -626,6 +626,8 @@
 		- [ ] [メンバ](./programming/_/chapters/object_oriented.md#メンバ)
 		- [ ] [プロパティ（属性、メンバ変数、フィールド変数）](./programming/_/chapters/object_oriented.md#プロパティ)
 		- [ ] [メソッド（操作、メンバ関数）](./programming/_/chapters/object_oriented.md#メソッド)
+		- [ ] [プロパティチェーン](./programming/_/chapters/object_oriented.md#プロパティチェーン)
+		- [ ] [メソッドチェーン](./programming/_/chapters/object_oriented.md#メソッドチェーン)
 	- [ ] [クラス](./programming/_/chapters/object_oriented.md#クラス)
 	- [ ] [インスタンス](./programming/_/chapters/object_oriented.md#インスタンス)
 		- [ ] [インスタンス化](./programming/_/chapters/object_oriented.md#インスタンス)
@@ -651,10 +653,14 @@
 	- [ ] [インタフェース](./programming/_/chapters/object_oriented.md#インタフェース)
 - [ ] [this](./programming/_/chapters/object_oriented.md#this)
 - [ ] [コンストラクタ](./programming/_/chapters/object_oriented.md#コンストラクタ)
+	- [ ] [完全コンストラクタ](./programming/_/chapters/object_oriented.md#完全コンストラクタ)
 - [ ] [デストラクタ](./programming/_/chapters/object_oriented.md#デストラクタ)
 - [ ] [静的メンバ](./programming/_/chapters/object_oriented.md#静的メンバ)
 	- [ ] [staticプロパティ（静的プロパティ）](./programming/_/chapters/object_oriented.md#staticプロパティ)
 	- [ ] [staticメソッド（静的メソッド）](./programming/_/chapters/object_oriented.md#staticメソッド)
+- [ ] [生焼けオブジェクト](./programming/_/chapters/object_oriented.md#生焼けオブジェクト)
+- [ ] [値オブジェクト](./programming/_/chapters/object_oriented.md#値オブジェクト)
+- [ ] [デメテルの法則](./programming/_/chapters/object_oriented.md#デメテルの法則)
 
 ### コーディングルール
 
@@ -666,6 +672,8 @@
 	- [ ] [アッパーケース](./programming/_/chapters/coding_rule.md#アッパーケース)
 	- [ ] [ケバブケース](./programming/_/chapters/coding_rule.md#ケバブケース)
 	- [ ] [ハンガリアン記法](./programming/_/chapters/coding_rule.md#ハンガリアン記法)
+	- [ ] [技術駆動命名](./programming/_/chapters/coding_rule.md#技術駆動命名)
+	- [ ] [連番命名](./programming/_/chapters/coding_rule.md#連番命名)
 - [ ] [コーディングスタイル](./programming/_/chapters/coding_rule.md#コーディングスタイル)
 	- [ ] [インデント](./programming/_/chapters/coding_rule.md#インデント)
 	- [ ] [オールマン](./programming/_/chapters/coding_rule.md#中括弧)
@@ -1337,6 +1345,7 @@
 	- [ ] [サードパーティ製ライブラリ](./computer/software/_/chapters/package.md#サードパーティ製ライブラリ)
 - [ ] [プラグイン](./computer/software/_/chapters/package.md#プラグイン)
 - [ ] [フレームワーク](./computer/software/_/chapters/package.md#フレームワーク)
+- [ ] [凝集度（モジュール強度）](./computer/software/_/chapters/package.md#凝集度)
 
 #### オープンソースソフトウェア
 
