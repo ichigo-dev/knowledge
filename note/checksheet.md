@@ -194,10 +194,10 @@
 	- [ ] [項](./basics/applied_mathematics/_/chapters/numerical_calculation.md#数列)
 	- [ ] [初項](./basics/applied_mathematics/_/chapters/numerical_calculation.md#数列)
 	- [ ] [等差数列](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等差数列)
-	- [ ] [公差](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等差数列)
+		- [ ] [公差](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等差数列)
 	- [ ] [等比数列](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等比数列)
-	- [ ] [公比](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等比数列)
-	- [ ] [フィボナッチ数列](./basics/applied_mathematics/_/chapters/numerical_calculation.md#フィボナッチ数)
+		- [ ] [公比](./basics/applied_mathematics/_/chapters/numerical_calculation.md#等比数列)
+	- [ ] [フィボナッチ数列](./basics/applied_mathematics/_/chapters/numerical_calculation.md#フィボナッチ数列)
 
 #### 数値解析
 
