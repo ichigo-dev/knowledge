@@ -29,14 +29,23 @@
 	1. [Android（※）](./app_development/android/README.md)
 	1. [iOS（※）](./app_development/ios/README.md)
 1. [開発全般](./development/README.md)
-	1. [Git](./development/git/README.md)
 	1. [データベース](./development/database/README.md)
+	1. [GraphQL](./development/graphql/README.md)
+	1. [Git](./development/git/README.md)
 	1. [Docker](./development/docker/README.md)
 	1. [デザインパターン](./development/design_pattern/README.md)
 		1. [マルチスレッドデザインパターン](./development/design_pattern/multi_thread/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
 	1. [マネジメント](./development/management/README.md)
 1. [チェックシート](./checksheet.md)
+
+
+
+## メモ
+
+- 「良いコード/悪いコードで学ぶ設計入門」 -> ./programming/_/chapters/techniques.md を中心にまとめ中
+- 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
+- 全体見直し -> 「応用数学」の「数式処理」まで見直し完了
 
 
 ## タスク
