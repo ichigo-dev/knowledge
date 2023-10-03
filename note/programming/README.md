@@ -14,6 +14,7 @@
 1. [プログラミング言語の種類](./_/chapters/programming_language.md)
 1. [アルゴリズム](./_/chapters/algorithm.md)
 1. [メモリ管理](./_/chapters/memory_management.md)
+1. [テクニック](./_/chapters/techniques.md)
 
 
 ## カテゴリ

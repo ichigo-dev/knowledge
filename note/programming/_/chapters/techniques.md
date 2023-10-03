@@ -1,0 +1,53 @@
+# 『テクニック』ノート
+
+（最終更新： 2023-10-03）
+
+
+## 目次
+
+1. [リファクタリング](#リファクタリング)
+1. [ガード節](#ガード節)
+
+
+## リファクタリング
+
+**リファクタリング**は、[プログラム](./programming.md#プログラム)の動作や振る舞いを変えることなく、内部の設計や構造を見直すことで、[コード](./programming.md#ソースコード)を理解や修正がしやすいように整える作業。[システム](../../../system/_/chapters/system.md#システム)を長期的に運用したり、仕様変更に強くしたりするために重要な工程。
+
+
+## ガード節
+
+**ガード節**（**アーリーリターン**、**早期リターン**）は、[プログラミング](./programming.md#プログラミング)のテクニックのひとつで、ある条件が満たされていない場合に[コード](./programming.md#ソースコード)の実行を中断し、特定の制御を行う仕組み。主に[反復処理](./control_flow.md#反復)や[関数](./function.md#関数)の中で使用される。
+
+例えば、条件を満たしている場合にポイントを付与する、以下のような[関数](./function.md#関数)を考える。
+
+```js
+function give_family_point( member_, point_ = 100 )
+{
+    if( member_.is_gold_rank() )
+    {
+        if( member_.has_children() )
+        {
+            if( member_.with_family() )
+            {
+                member_.give_point(point_);
+            }
+        }
+    }
+}
+```
+
+これは[条件分岐](./control_flow.md#条件分岐)の[ネスト](./control_flow.md#ネスト)が深く、非常に読みづらい[コード](./programming.md#ソースコード)となっている。そこで、ガード節を用いてこの[関数](./function.md#関数)を[リファクタリング](#リファクタリング)すると、以下のようになる。
+
+```js
+function give_family_point( member_, point_ = 100 )
+{
+    // ガード節によるアーリーリターン
+    if( member_.is_gold_rank() === false ) return;
+    if( member_.has_children() === false ) return;
+    if( member_.with_family() === false ) return;
+
+    member_.give_point(point_);
+}
+```
+
+ガード節を用いると、可読性が向上する他に、条件ブロックと処理ブロックを分離できるというメリットがある。また、 `return` だけではなく、 `break` や `continue` を用いても同様の[リファクタリング](#リファクタリング)が可能。

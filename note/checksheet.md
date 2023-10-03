@@ -720,6 +720,11 @@
 	- [ ] [ガベージコレクション(GC)](./programming/_/chapters/memory_management.md#ガベージコレクション)
 	- [ ] [アロケート（アロケーション）](./programming/_/chapters/memory_management.md#アロケート)
 
+### テクニック
+
+- [ ] [リファクタリング](./programming/_/chapters/techniques.md#リファクタリング)
+- [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques.md#ガード節)
+
 ### Rust
 
 #### Rust
