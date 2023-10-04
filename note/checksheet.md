@@ -3405,7 +3405,26 @@
 
 ### GraphQL
 
+#### GraphQL
+
 - [ ] [GraphQL](./development/_/chapters/graphql.md#graphql)
+- [ ] [スキーマ定義言語(SDL: Schema Definition Language)](./development/_/chapters/graphql.md#スキーマ定義言語)
+	- [ ] [Schema](./development/_/chapters/graphql.md#schema)
+	- [ ] [Type](./development/_/chapters/graphql.md#type)
+	- [ ] [ルート型](./development/_/chapters/graphql.md#ルート型)
+	- [ ] [スカラー型](./development/_/chapters/graphql.md#スカラー型)
+	- [ ] [オブジェクト型](./development/_/chapters/graphql.md#オブジェクト型)
+	- [ ] [Field](./development/_/chapters/graphql.md#field)
+	- [ ] [Interface](./development/_/chapters/graphql.md#interface)
+	- [ ] [Union](./development/_/chapters/graphql.md#union)
+	- [ ] [Enum](./development/_/chapters/graphql.md#enum)
+	- [ ] [Directive](./development/_/chapters/graphql.md#directive)
+	- [ ] [リゾルバ](./development/_/chapters/graphql.md#リゾルバ)
+- [ ] [クエリ言語](./development/_/chapters/graphql.md#クエリ言語)
+	- [ ] [Query](./development/_/chapters/graphql.md#query)
+	- [ ] [Mutation](./development/_/chapters/graphql.md#mutation)
+	- [ ] [Subscription](./development/_/chapters/graphql.md#subscription)
+	- [ ] [Fragment](./development/_/chapters/graphql.md#fragment)
 
 ### Git
 
