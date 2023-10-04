@@ -36,7 +36,12 @@ Policyパターンは、[Context](#context)、[PolicyInterface](#policyinterface
 
 ### Java
 
+ユーザのランクに応じて処理を切り換えるような[システム](../../../../system/_/chapters/system.md#システム)において、ランクの条件判定を[Policyパターン](#policyパターン)により行う場合を考える。
+
 ```java
+import java.util.Set;
+import java.util.HashSet;
+
 //------------------------------------------------------------------------------
 // Client
 //------------------------------------------------------------------------------
@@ -45,7 +50,29 @@ public class Client
     public static void main( String[] args )
     {
         User goldUser = new User(10000, 0.1);
+        User silverUser = new User(10000, 0.5);
         User normalUser = new User(400, 0.2);
+
+        // ゴールド会員の条件
+        RankPolicy goldRankPolicy = new RankPolicy();
+        goldRankPolicy.add(new purchaseAmountRule());
+        goldRankPolicy.add(new returnRateRule());
+
+        //  シルバー会員の条件
+        RankPolicy silverRankPolicy = new RankPolicy();
+        silverRankPolicy.add(new purchaseAmountRule());
+
+        System.out.println("==========");
+        System.out.println("Gold Rank:");
+        System.out.println(goldRankPolicy.comply_with_all(goldUser));
+        System.out.println(goldRankPolicy.comply_with_all(silverUser));
+        System.out.println(goldRankPolicy.comply_with_all(normalUser));
+        System.out.println("==========");
+        System.out.println("Silver Rank:");
+        System.out.println(silverRankPolicy.comply_with_all(goldUser));
+        System.out.println(silverRankPolicy.comply_with_all(silverUser));
+        System.out.println(silverRankPolicy.comply_with_all(normalUser));
+        System.out.println("==========");
     }
 }
 
@@ -60,7 +87,7 @@ class User
     //--------------------------------------------------------------------------
     // コンストラクタ
     //--------------------------------------------------------------------------
-    User( int purchaseAmount, double returnRate )
+    public User( int purchaseAmount, double returnRate )
     {
         this.purchaseAmount = purchaseAmount < 0 ? 0 : purchaseAmount;
         this.returnRate = ( returnRate < 0 || returnRate > 1 ) ? 0 : returnRate;
@@ -69,7 +96,7 @@ class User
     //--------------------------------------------------------------------------
     // 購入額の取得
     //--------------------------------------------------------------------------
-    int getPurchaseAmount()
+    public int getPurchaseAmount()
     {
         return this.purchaseAmount;
     }
@@ -77,7 +104,7 @@ class User
     //--------------------------------------------------------------------------
     // 返品率の取得
     //--------------------------------------------------------------------------
-    double getReturnRate()
+    public double getReturnRate()
     {
         return this.returnRate;
     }
@@ -88,7 +115,7 @@ class User
 //------------------------------------------------------------------------------
 interface UserRankRule
 {
-    boolean ok( User user );
+    public boolean ok( User user );
 }
 
 //------------------------------------------------------------------------------
@@ -99,7 +126,7 @@ class purchaseAmountRule implements UserRankRule
     //--------------------------------------------------------------------------
     // 条件判定
     //--------------------------------------------------------------------------
-    boolean ok( User user )
+    public boolean ok( User user )
     {
         return user.getPurchaseAmount() > 1000;
     }
@@ -110,7 +137,7 @@ class returnRateRule implements UserRankRule
     //--------------------------------------------------------------------------
     // 条件判定
     //--------------------------------------------------------------------------
-    boolean ok( User user )
+    public boolean ok( User user )
     {
         return user.getReturnRate() < 0.3;
     }
@@ -119,16 +146,39 @@ class returnRateRule implements UserRankRule
 //------------------------------------------------------------------------------
 // Context
 //------------------------------------------------------------------------------
-class GoldRankPolicy
+class RankPolicy
 {
     private Set<UserRankRule> rules;
 
     //--------------------------------------------------------------------------
     // コンストラクタ
     //--------------------------------------------------------------------------
-    GoldRankPolicy()
+    public RankPolicy()
     {
-        this.rules = new HashSet();
+        this.rules = new HashSet<UserRankRule>();
+    }
+
+    //--------------------------------------------------------------------------
+    // Policyの追加
+    //--------------------------------------------------------------------------
+    public void add( UserRankRule rule )
+    {
+        this.rules.add(rule);
+    }
+
+    //--------------------------------------------------------------------------
+    // 全ての条件を判定
+    //--------------------------------------------------------------------------
+    public boolean comply_with_all( User user )
+    {
+        for( UserRankRule rule : this.rules )
+        {
+            if( rule.ok(user) == false )
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
 ```
