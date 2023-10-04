@@ -659,7 +659,6 @@
 	- [ ] [staticプロパティ（静的プロパティ）](./programming/_/chapters/object_oriented.md#staticプロパティ)
 	- [ ] [staticメソッド（静的メソッド）](./programming/_/chapters/object_oriented.md#staticメソッド)
 - [ ] [生焼けオブジェクト](./programming/_/chapters/object_oriented.md#生焼けオブジェクト)
-- [ ] [値オブジェクト](./programming/_/chapters/object_oriented.md#値オブジェクト)
 - [ ] [デメテルの法則](./programming/_/chapters/object_oriented.md#デメテルの法則)
 
 ### コーディングルール

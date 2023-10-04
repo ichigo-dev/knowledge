@@ -27,6 +27,8 @@
 1. [Proxy](./_/chapters/proxy.md)
 1. [Command](./_/chapters/command.md)
 1. [Interpreter](./_/chapters/interpreter.md)
+1. [Value Object](./_/chapters/value_object.md)
+1. [Policy](./_/chapters/policy.md)
 
 
 ## カテゴリ

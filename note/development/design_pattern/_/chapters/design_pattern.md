@@ -1,6 +1,6 @@
 # 『デザインパターン』ノート
 
-（最終更新： 2023-08-05）
+（最終更新： 2023-10-04）
 
 
 ## 目次
@@ -15,4 +15,30 @@
 
 ### GoFデザインパターン
 
-**GoFデザインパターン**(Gang of Four Design Patterns)は、「オブジェクト指向における再利用のためのデザインパターン」の著者である4人が提唱した23種類の[デザインパターン](#デザインパターン)。これらのパターンはあまりに有名であり、単に[デザインパターン](#デザインパターン)といったときにGoFデザインパターンを指す場合も多い。特に有用性の高いものは、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング言語)の仕様自体に取り込まれているものもある。
+**GoFデザインパターン**(Gang of Four Design Patterns)は、「オブジェクト指向における再利用のためのデザインパターン」の著者である4人が提唱した23種類の[デザインパターン](#デザインパターン)。これらのパターンはあまりに有名であり、単に[デザインパターン](#デザインパターン)といったときにGoFデザインパターンを指す場合も多い。特に有用性の高いものは、[プログラミング言語](../../../../programming/_/chapters/programming.md#プログラミング言語)の仕様自体に取り込まれているものもある。ただし、[デザインパターン](#デザインパターン)は必ずしもGoFデザインパターンであるとは限らず、それ以外にも多く存在する。
+
+GoFデザインパターンには以下のものがある。
+
+- [Iterator](./iterator.md)
+- [Adapter](./adapter.md)
+- [Template Method](./template_method.md)
+- [Factory Method](./factory_method.md)
+- [Singleton](./singleton.md)
+- [Prototype](./prototype.md)
+- [Builder](./builder.md)
+- [Abstract Factory](./abstract_factory.md)
+- [Bridge](./bridge.md)
+- [Strategy](./strategy.md)
+- [Composite](./composite.md)
+- [Decorator](./decorator.md)
+- [Visitor](./visitor.md)
+- [Chain of Responsibility](./chain_of_responsibility.md)
+- [Facade](./facade.md)
+- [Mediator](./mediator.md)
+- [Observer](./observer.md)
+- [Memento](./memento.md)
+- [State](./state.md)
+- [Flyweight](./flyweight.md)
+- [Proxy](./proxy.md)
+- [Command](./command.md)
+- [Interpreter](./interpreter.md)
