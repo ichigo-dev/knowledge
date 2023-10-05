@@ -3845,6 +3845,23 @@
 	- [ ] [NonterminalExpression](./development/design_pattern/_/chapters/interpreter.md#nonterminalexpression)
 	- [ ] [Context](./development/design_pattern/_/chapters/interpreter.md#context)
 
+#### Value Object
+
+- [ ] [Value Objectパターン](./development/design_pattern/_/chapters/value_object.md#value-objectパターン)
+	- [ ] [ValueObject](./development/design_pattern/_/chapters/value_object.md#valueobject)
+
+#### Policy
+
+- [ ] [Policyパターン](./development/design_pattern/_/chapters/policy.md#policyパターン)
+	- [ ] [Context](./development/design_pattern/_/chapters/policy.md#context)
+	- [ ] [PolicyInterface](./development/design_pattern/_/chapters/policy.md#policyinterface)
+	- [ ] [Policy](./development/design_pattern/_/chapters/policy.md#policy)
+
+#### First Class Collection
+
+- [ ] [First Class Collectionパターン](./development/design_pattern/_/chapters/first_class_collection.md#first-class-collectionパターン)
+	- [ ] [FirstClassCollection](./development/design_pattern/_/chapters/first_class_collection.md#firstclasscollection)
+
 #### マルチスレッドデザインパターン
 
 ##### Single Thread Execution

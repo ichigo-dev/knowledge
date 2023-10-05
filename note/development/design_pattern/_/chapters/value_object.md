@@ -1,12 +1,12 @@
 # 『Value Object』ノート
 
-（最終更新： 2023-10-04）
+（最終更新： 2023-10-05）
 
 
 ## 目次
 
 1. [Value Objectパターン](#value-objectパターン)
-	1. [Value Object](#value-object)
+	1. [ValueObject](#valueobject)
 1. [サンプルプログラム](#サンプルプログラム)
 	1. [Java](#java)
 
@@ -15,9 +15,9 @@
 
 **Value Objectパターン**は、通常は単なる値（[プリミティブ](../../../../programming/_/chapters/data_type.md#プリミティブ型)）として表されるものの役割を明確にし、[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)として実装する[デザインパターン](./design_pattern.md#デザインパターン)。Value Objectは[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)同士を比較することができ、内部に持つ値は不変であることが望ましい。
 
-Value Objectパターンは[Value Object](#value-object)の役のみで構成される。
+Value Objectパターンは[ValueObject](#valueobject)の役のみで構成される。
 
-### Value Object
+### ValueObject
 
 **Value Object**は、[Value Objectパターン](#value-objectパターン)において、値そのものを表す[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)。[メンバ変数](../../../../programming/_/chapters/object_oriented.md#プロパティ)として値そのものを持っており、この値は不変となるようにする場合が多い。値を変更するようなの[メソッド](../../../../programming/_/chapters/object_oriented.md#メソッド)を必要とする場合には、自身の新しい[インスタンス](../../../../programming/_/chapters/object_oriented.md#インスタンス)を生成して返却するように設計する。
 
