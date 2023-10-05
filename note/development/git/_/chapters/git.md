@@ -1,6 +1,6 @@
 # 『Git』ノート
 
-（最終更新： 2023-08-20）
+（最終更新： 2023-10-05）
 
 
 ## 目次
@@ -59,7 +59,7 @@
 
 ```sh
 $ git --version
-git version 2.40.1
+git version 2.42.0
 ```
 
 上の例のように、[Git](#git)の[バージョン](../../../../computer/software/_/chapters/package.md#バージョン)情報が表示されれば、[Git](#git)は既に使用できる状態となっている。[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)が存在しない旨のエラーが表示される場合は、[Git](#git)をインストールする必要がある。
