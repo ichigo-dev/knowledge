@@ -10,6 +10,7 @@
 	1. [Block](#block)
 1. [モジュール](#モジュール)
 	1. [ルートモジュール](#ルートモジュール)
+1. [resource](#resource)
 
 
 ## 設定言語
@@ -73,11 +74,21 @@ resource "aws_instance" "example" {
 
 ## resource
 
-**resource**は、[Terraform](./terraform.md#terraform)において、仮想ネットワークやコンピューティングインスタンスなどの1つ以上のインフラストラクチャオブジェクトを記述するための[Block](#block)。
+**resource**は、[Terraform](./terraform.md#terraform)において、仮想ネットワークやコンピューティングインスタンスなどの1つ以上のインフラストラクチャオブジェクトを記述するための[Block](#block)。このブロックには2つのラベルが必要で、1つ目はリソースの種類を表す文字列、2つ目はリソースを一意に識別するための名前として扱われる。リソースの種類を表すラベルには、クラウドプロバイダごとに提供されている識別子、もしくはカスタムリソースの種類を指定する。また、このブロックに含めることのできる[Argument](#argument)は、そのリソースに固有のものとなる。
 
 ```terraform
+# 例
 resource "aws_instance" "web" {
     ami           = "abc123"
     instance_type = "t2.micro"
 }
+
+# 構成
+resource "<RESOURCE TYPE>" "<NAME>" {
+    <ARGUMENT>
+}
 ```
+
+- [クラウドプロバイダごとのリソースタイプのドキュメント](https://registry.terraform.io/browse/providers)
+
+リソースの[Argument](#argument)にアクセスするには、 `<RESOURCE TYPE>.<NAME>.<ARGUMENT>` のように記述する。
