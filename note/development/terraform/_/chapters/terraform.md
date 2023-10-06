@@ -1,6 +1,6 @@
 # 『Terraform』ノート
 
-（最終更新： 2023-10-05）
+（最終更新： 2023-10-06）
 
 
 ## 目次
@@ -20,6 +20,8 @@
 ## Terraform
 
 **Terraform**は、[AWS](../../../../network/aws/_/chapters/aws.md#aws)やGCP、Azureなどの様々なクラウドプロバイダに対応した[オープンソース](../../../../computer/software/_/chapters/open_source_software.md#オープンソースソフトウェア)の[IaC](#iac)ツール。Terraformでは、Terraformが提供する[API](../../../../network/_/chapters/web.md#web-api)を通じてインフラリソースを作成・管理する。
+
+Terraformは、インフラストラクチャオブジェクトを表すリソースを宣言する[設定言語](./configuration_language.md)や、それらをもとに自動でリソースをプロビジョニングする[CLI](./cli.md)、Terraformを共同管理するために役立つ[Terraform Cloud](./terraform_cloud.md)などのツール群から構成される。
 
 
 ## Terraformのインストール
