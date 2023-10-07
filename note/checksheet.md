@@ -721,8 +721,8 @@
 
 ### テクニック
 
-- [ ] [リファクタリング](./programming/_/chapters/techniques.md#リファクタリング)
-- [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques.md#ガード節)
+- [ ] [リファクタリング](./programming/_/chapters/techniques_and_anti_patterns.md#リファクタリング)
+- [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques_and_anti_patterns.md#ガード節)
 
 ### Rust
 
