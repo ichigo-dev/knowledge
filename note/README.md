@@ -44,7 +44,7 @@
 
 ## メモ
 
-- 「良いコード/悪いコードで学ぶ設計入門」 -> ./programming/_/chapters/techniques.md を中心にまとめ中
+- 「良いコード/悪いコードで学ぶ設計入門」 -> ./programming/_/chapters/techniques.md 、 anti_pattern.md を中心にまとめ中
 - 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
 - 全体見直し -> 「応用数学」の「数式処理」まで見直し完了
 
