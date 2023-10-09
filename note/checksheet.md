@@ -671,6 +671,7 @@
 	- [ ] [アッパーケース](./programming/_/chapters/coding_rule.md#アッパーケース)
 	- [ ] [ケバブケース](./programming/_/chapters/coding_rule.md#ケバブケース)
 	- [ ] [ハンガリアン記法](./programming/_/chapters/coding_rule.md#ハンガリアン記法)
+	- [ ] [目的駆動命名](./programming/_/chapters/coding_rule.md#目的駆動命名)
 	- [ ] [技術駆動命名](./programming/_/chapters/coding_rule.md#技術駆動命名)
 	- [ ] [連番命名](./programming/_/chapters/coding_rule.md#連番命名)
 - [ ] [コーディングスタイル](./programming/_/chapters/coding_rule.md#コーディングスタイル)
@@ -723,6 +724,17 @@
 
 - [ ] [リファクタリング](./programming/_/chapters/techniques.md#リファクタリング)
 - [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques.md#ガード節)
+- [ ] [DRY原則](./programming/_/chapters/techniques.md#dry原則)
+- [ ] [YAGNI原則](./programming/_/chapters/techniques.md#yagni原則)
+
+### アンチパターン
+
+- [ ] [アンチパターン](./programming/_/chapters/anti_patterns.md#アンチパターン)
+- [ ] [ハードコーディング](./programming/_/chapters/anti_patterns.md#ハードコーディング)
+	- [ ] [マジックナンバー](./programming/_/chapters/anti_patterns.md#マジックナンバー)
+- [ ] [スマートUI](./programming/_/chapters/anti_patterns.md#スマートui)
+- [ ] [デッドコード（到達不能コード）](./programming/_/chapters/anti_patterns.md#到達不能コード)
+- [ ] [例外の握り潰し](./programming/_/chapters/anti_patterns.md#例外の握り潰し)
 
 ### Rust
 
