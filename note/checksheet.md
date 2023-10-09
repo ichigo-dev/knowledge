@@ -726,6 +726,8 @@
 - [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques.md#ガード節)
 - [ ] [DRY原則](./programming/_/chapters/techniques.md#dry原則)
 - [ ] [YAGNI原則](./programming/_/chapters/techniques.md#yagni原則)
+- [ ] [驚き最小の原則](./programming/_/chapters/techniques.md#驚き最小の原則)
+- [ ] [ラバーダッキング](./programming/_/chapters/techniques.md#ラバーダッキング)
 
 ### アンチパターン
 
