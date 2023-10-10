@@ -13,11 +13,11 @@ pub(crate) trait ConvertStrategy
 }
 
 //------------------------------------------------------------------------------
-/// MarkDown strategy for converting data sources to dictionary.
+/// Markdown strategy for converting data sources to dictionary.
 //------------------------------------------------------------------------------
-pub(crate) struct MarkDownConvertStrategy;
+pub(crate) struct MarkdownConvertStrategy;
 
-impl MarkDownConvertStrategy
+impl MarkdownConvertStrategy
 {
     //--------------------------------------------------------------------------
     /// Gets the depth of the section.
@@ -72,25 +72,28 @@ impl MarkDownConvertStrategy
     }
 
     //--------------------------------------------------------------------------
+    /// Parses a section of the data source.
+    //--------------------------------------------------------------------------
+    fn parse_section( &self, section_str: &str ) -> MarkdownSection
+    {
+        let mut lines = section_str.lines();
+        let heading_line = lines.next().unwrap();
+        let depth = self.get_section_depth(heading_line);
+        let name = self.get_section_name(heading_line);
+        let mut content = lines.collect::<Vec<&str>>().join("\n");
+        MarkdownSection::new(depth, &name, &content.trim())
+    }
+
+    //--------------------------------------------------------------------------
     /// Parses the sections of the data source.
     //--------------------------------------------------------------------------
-    fn parse_sections( &self, data_source: DataSource ) -> Vec<MarkDownSection>
+    fn parse_sections( &self, data_source: DataSource ) -> Option<MarkdownSection>
     {
-        let mut sections = Vec::new();
-        for section in self.split_sections(data_source)
-        {
-            let mut lines = section.lines();
-            let heading_line = lines.next().unwrap();
-            let depth = self.get_section_depth(heading_line);
-            let name = self.get_section_name(heading_line);
-            let mut content = lines.collect::<Vec<&str>>().join("\n");
-            sections.push(MarkDownSection::new(depth, &name, &content.trim()));
-        }
-        sections
+        unimplemented!();
     }
 }
 
-impl ConvertStrategy for MarkDownConvertStrategy
+impl ConvertStrategy for MarkdownConvertStrategy
 {
     fn convert( &self, data_source: DataSource ) -> Dictionary
     {
@@ -101,28 +104,38 @@ impl ConvertStrategy for MarkDownConvertStrategy
 }
 
 //------------------------------------------------------------------------------
-/// Structure representing a section of a MarkDown file.
+/// Structure representing a section of a Markdown file.
 //------------------------------------------------------------------------------
 #[derive(Debug, Clone)]
-pub(crate) struct MarkDownSection
+pub(crate) struct MarkdownSection
 {
+    children: Vec<MarkdownSection>,
     depth: usize,
     name: String,
     content: String,
 }
 
-impl MarkDownSection
+impl MarkdownSection
 {
     //--------------------------------------------------------------------------
-    /// Creates a new MarkDown section.
+    /// Creates a new Markdown section.
     //--------------------------------------------------------------------------
     pub(crate) fn new( depth: usize, name: &str, content: &str ) -> Self
     {
         Self
         {
+            children: Vec::new(),
             depth: depth,
             name: name.to_string(),
             content: content.to_string(),
         }
+    }
+
+    //--------------------------------------------------------------------------
+    /// Adds a child section.
+    //--------------------------------------------------------------------------
+    pub(crate) fn add_child( &mut self, child: MarkdownSection )
+    {
+        self.children.push(child);
     }
 }

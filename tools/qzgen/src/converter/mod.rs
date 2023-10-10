@@ -1,6 +1,6 @@
 mod strategy;
 
-use strategy::{ ConvertStrategy, MarkDownConvertStrategy };
+use strategy::{ ConvertStrategy, MarkdownConvertStrategy };
 use crate::data_source::DataSource;
 use crate::term::Dictionary;
 
@@ -35,6 +35,6 @@ impl Default for Converter
 {
     fn default() -> Self
     {
-        Self::new(Box::new(MarkDownConvertStrategy))
+        Self::new(Box::new(MarkdownConvertStrategy))
     }
 }
