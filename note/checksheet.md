@@ -724,10 +724,12 @@
 
 - [ ] [リファクタリング](./programming/_/chapters/techniques.md#リファクタリング)
 - [ ] [ガード節（アーリーリターン、早期リターン）](./programming/_/chapters/techniques.md#ガード節)
-- [ ] [DRY原則](./programming/_/chapters/techniques.md#dry原則)
-- [ ] [YAGNI原則](./programming/_/chapters/techniques.md#yagni原則)
+- [ ] [DRY原則(Don't Repeat Yourself)](./programming/_/chapters/techniques.md#dry原則)
+- [ ] [YAGNI原則(You aren't going to need it)](./programming/_/chapters/techniques.md#yagni原則)
 - [ ] [驚き最小の原則](./programming/_/chapters/techniques.md#驚き最小の原則)
 - [ ] [ラバーダッキング](./programming/_/chapters/techniques.md#ラバーダッキング)
+- [ ] [CQS(Command Query Separation)](./programming/_/chapters/techniques.md#cqs)
+	- [ ] [CQRS(Command Query Responsibility Segregation)](./programming/_/chapters/techniques.md#cqrs)
 
 ### アンチパターン
 
