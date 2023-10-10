@@ -44,9 +44,10 @@
 
 ## メモ
 
-- 「良いコード/悪いコードで学ぶ設計入門」 -> ./programming/_/chapters/techniques.md 、 anti_pattern.md を中心にまとめ中
 - 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
+- 「失敗から学ぶRDBの正しい歩き方」 → ./development/database にまとめ中
 - 全体見直し -> 「応用数学」の「数式処理」まで見直し完了
+- 本の概要を書く場所をつくる
 
 
 ## タスク

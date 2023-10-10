@@ -3332,6 +3332,7 @@
 	- [ ] [UNIQUE KEY](./development/database/_/chapters/rdb.md#unique-key)
 	- [ ] [FOREIGN KEY](./development/database/_/chapters/rdb.md#foreign-key)
 	- [ ] [CHECK](./development/database/_/chapters/rdb.md#check)
+- [ ] [トリガー](./development/database/_/chapters/rdb.md#トリガー)
 
 #### SQL
 
