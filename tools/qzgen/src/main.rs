@@ -1,26 +1,34 @@
-/*
+mod data_source;
+mod converter;
+mod term;
 
-    Application endpoint.
+use data_source::DataSource;
+use converter::Converter;
+use term::Dictionary;
 
-*/
+use glob::glob;
 
-mod component;
-mod page;
-mod app;
-mod theme;
-mod data;
-mod functions;
-
-pub use data::*;
-pub use app::*;
-
-const API_URL: &str = "https://y31vtnaik7.execute-api.ap-northeast-1.amazonaws.com";
-const NOTE_URL: &str = "https://github.com/ichigo-dev/knowledge/blob/main";
-const NOTE_PATH_PREFIX: &str = "./knowledge-main";
-const MAX_TRY_CNT: usize = 3;
-
+//------------------------------------------------------------------------------
+// main
+//------------------------------------------------------------------------------
 fn main()
 {
-    console_log::init_with_level(log::Level::Info).unwrap();
-    sycamore::render(App);
+    let glob = glob("../../note/**/*.md")
+        .expect("Failed to read glob pattern");
+    let converter = Converter::default();
+    let mut dictionary = Dictionary::new();
+
+    for entry in glob
+    {
+        match entry
+        {
+            Ok(path) =>
+            {
+                let data_source = DataSource::new(&path);
+                let sub_dictinary = converter.convert(data_source);
+                dictionary.merge(sub_dictinary);
+            },
+            Err(e) => println!("{:?}", e),
+        }
+    }
 }
