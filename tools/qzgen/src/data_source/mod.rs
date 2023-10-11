@@ -1,40 +1,49 @@
-use std::fs::File;
+//------------------------------------------------------------------------------
+//! Data sources stored in files, databases, etc.
+//!
+//! # Example
+//!
+//! ```
+//! use std::path::Path;
+//! use crate::data_source::{ DataSource, FileDataSource };
+//!
+//! let path = Path::new("note.md");
+//! let data_source = DataSource::File(FileDataSource::new(path));
+//! ```
+//------------------------------------------------------------------------------
+
+mod file;
+
+pub(crate) use file::FileDataSource;
+
 use std::path::Path;
-use std::io::Read;
 
 //------------------------------------------------------------------------------
-/// Structure representing the data source for retrieving a list of terms.
+/// Data source to convert to dictionary.
 //------------------------------------------------------------------------------
-pub(crate) struct DataSource
+pub(crate) enum DataSource
 {
-    file: File,
-    file_path: String,
-    content: String,
+    File(FileDataSource),
 }
 
 impl DataSource
 {
     //--------------------------------------------------------------------------
-    /// Creates a new data source.
-    //--------------------------------------------------------------------------
-    pub(crate) fn new( path: &Path ) -> Self
-    {
-        let mut file = File::open(path).expect("Failed to open file.");
-        let mut content = String::new();
-        file.read_to_string(&mut content).expect("Failed to read file.");
-        Self
-        {
-            file,
-            file_path: path.to_str().unwrap().to_string(),
-            content,
-        }
-    }
-
-    //--------------------------------------------------------------------------
     /// Gets the content of the data source.
     //--------------------------------------------------------------------------
     pub(crate) fn get_content( &self ) -> &str
     {
-        &self.content
+        match self
+        {
+            Self::File(file_data_source) => file_data_source.get_content(),
+        }
+    }
+}
+
+impl Default for DataSource
+{
+    fn default() -> Self
+    {
+        Self::File(FileDataSource::default())
     }
 }

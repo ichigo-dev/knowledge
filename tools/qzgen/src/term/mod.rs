@@ -7,7 +7,8 @@ pub(crate) use dictionary::Dictionary;
 //------------------------------------------------------------------------------
 pub(crate) struct Term
 {
-    file_path: String,
     word: String,
-    count: usize,
+    description: String,
+    source: String,
+    children: Vec<Term>,
 }

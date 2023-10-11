@@ -1,8 +1,12 @@
+//------------------------------------------------------------------------------
+//! Read data source and generate quiz.
+//------------------------------------------------------------------------------
+
 mod data_source;
 mod converter;
 mod term;
 
-use data_source::DataSource;
+use data_source::{ DataSource, FileDataSource };
 use converter::Converter;
 use term::Dictionary;
 
@@ -24,7 +28,7 @@ fn main()
         {
             Ok(path) =>
             {
-                let data_source = DataSource::new(&path);
+                let data_source = DataSource::File(FileDataSource::new(&path));
                 let sub_dictinary = converter.convert(data_source);
                 dictionary.merge(sub_dictinary);
             },
