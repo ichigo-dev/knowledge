@@ -28,7 +28,7 @@ use crate::term::Dictionary;
 //------------------------------------------------------------------------------
 pub(crate) struct Converter
 {
-    strategy: Box<dyn ConvertStrategy>,
+    strategy: ConvertStrategy,
 }
 
 impl Converter
@@ -36,7 +36,7 @@ impl Converter
     //--------------------------------------------------------------------------
     /// Creates a new converter.
     //--------------------------------------------------------------------------
-    pub(crate) fn new( strategy: Box<dyn ConvertStrategy> ) -> Self
+    pub(crate) fn new( strategy: ConvertStrategy ) -> Self
     {
         Self { strategy }
     }
@@ -54,6 +54,6 @@ impl Default for Converter
 {
     fn default() -> Self
     {
-        Self::new(Box::new(MarkdownConvertStrategy))
+        Self::new(ConvertStrategy::Markdown(MarkdownConvertStrategy))
     }
 }

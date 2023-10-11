@@ -14,13 +14,12 @@
 /// Structure representing a section of a Markdown file.
 //------------------------------------------------------------------------------
 #[derive(Debug, Clone)]
-pub(crate) struct MarkdownSection
+pub(super) struct MarkdownSection
 {
     raw_content: String,
     name: String,
     content: String,
     depth: usize,
-    children: Vec<MarkdownSection>,
 }
 
 impl MarkdownSection
@@ -28,7 +27,7 @@ impl MarkdownSection
     //--------------------------------------------------------------------------
     /// Creates a new Markdown section.
     //--------------------------------------------------------------------------
-    pub(crate) fn new( raw_content: &str ) -> Self
+    pub(super) fn new( raw_content: &str ) -> Self
     {
         let mut section = Self::default();
         section.raw_content = raw_content.to_string();
@@ -45,15 +44,15 @@ impl MarkdownSection
         let heading_line = lines.next().unwrap();
         let mut content = lines.collect::<Vec<&str>>().join("\n");
 
-        self.depth = self.get_section_depth(heading_line);
-        self.name = self.get_section_name(heading_line);
+        self.depth = self.parse_section_depth(heading_line);
+        self.name = heading_line.trim_start_matches('#').trim().to_string();
         self.content = content.trim().to_string();
     }
 
     //--------------------------------------------------------------------------
     /// Gets the depth of the section.
     //--------------------------------------------------------------------------
-    fn get_section_depth( &self, line: &str ) -> usize
+    fn parse_section_depth( &self, line: &str ) -> usize
     {
         let mut depth = 0;
         for c in line.chars()
@@ -71,19 +70,11 @@ impl MarkdownSection
     }
 
     //--------------------------------------------------------------------------
-    /// Gets the name of the section.
+    /// Gets the depth of the section.
     //--------------------------------------------------------------------------
-    fn get_section_name( &self, line: &str ) -> String
+    pub(super) fn depth( &self ) -> usize
     {
-        line.trim_start_matches('#').trim().to_string()
-    }
-
-    //--------------------------------------------------------------------------
-    /// Adds a child section.
-    //--------------------------------------------------------------------------
-    pub(crate) fn add_child( &mut self, child: MarkdownSection )
-    {
-        self.children.push(child);
+        self.depth
     }
 }
 
@@ -97,7 +88,6 @@ impl Default for MarkdownSection
             name: String::new(),
             content: String::new(),
             depth: 0,
-            children: Vec::new(),
         }
     }
 }

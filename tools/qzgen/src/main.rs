@@ -31,6 +31,7 @@ fn main()
                 let data_source = DataSource::File(FileDataSource::new(&path));
                 let sub_dictinary = converter.convert(data_source);
                 dictionary.merge(sub_dictinary);
+                return;
             },
             Err(e) => println!("{:?}", e),
         }

@@ -18,18 +18,19 @@ use crate::converter::ConvertStrategy;
 //------------------------------------------------------------------------------
 pub(crate) struct MarkdownConvertStrategy;
 
-impl ConvertStrategy for MarkdownConvertStrategy
-{
-    fn convert( &self, data_source: DataSource ) -> Dictionary
-    {
-        let mut dictionary = Dictionary::new();
-        println!("{:#?}", self.parse_sections(data_source));
-        dictionary
-    }
-}
-
 impl MarkdownConvertStrategy
 {
+    //--------------------------------------------------------------------------
+    /// Convert data source to word list.
+    //--------------------------------------------------------------------------
+    pub(super) fn convert( &self, data_source: DataSource ) -> Dictionary
+    {
+        let mut dictionary = Dictionary::new();
+        let sections = self.parse_sections(data_source);
+        //println!("{:#?}", sections);
+        dictionary
+    }
+
     //--------------------------------------------------------------------------
     /// Parses the sections of the data source.
     //--------------------------------------------------------------------------
@@ -37,16 +38,10 @@ impl MarkdownConvertStrategy
     (
         &self,
         data_source: DataSource,
-    ) -> Option<MarkdownSection>
+    ) -> Vec<MarkdownSection>
     {
-        let sections = self.split_sections(data_source)
-            .into_iter()
-            .map(|s| MarkdownSection::new(&s))
-            .collect::<Vec<MarkdownSection>>();
-
-        for section in sections
-        {
-        }
+        let mut sections = self.split_sections(data_source);
+        println!("{:#?}", sections);
 
         unimplemented!();
     }
@@ -54,23 +49,24 @@ impl MarkdownConvertStrategy
     //--------------------------------------------------------------------------
     /// Splits the data source into sections.
     //--------------------------------------------------------------------------
-    fn split_sections( &self, data_source: DataSource ) -> Vec<String>
+    fn split_sections( &self, data_source: DataSource ) -> Vec<MarkdownSection>
     {
         let mut sections = Vec::new();
-        let mut section = String::new();
+        let mut raw_section = String::new();
         for line in data_source.get_content().lines()
         {
             if line.starts_with("#")
             {
-                if !section.is_empty()
+                if !raw_section.is_empty()
                 {
-                    sections.push(section);
-                    section = String::new();
+                    sections.push(MarkdownSection::new(&raw_section));
+                    raw_section = String::new();
                 }
             }
-            section.push_str(line);
-            section.push('\n');
+            raw_section.push_str(line);
+            raw_section.push('\n');
         }
+        let section = MarkdownSection::new(&raw_section);
         sections.push(section);
         sections
     }
