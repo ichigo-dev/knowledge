@@ -10,8 +10,7 @@ mod section;
 
 use section::MarkdownSection;
 use crate::data_source::DataSource;
-use crate::term::Dictionary;
-use crate::converter::ConvertStrategy;
+use crate::term::{ Term, Dictionary };
 
 //------------------------------------------------------------------------------
 /// Markdown strategy for converting data sources to dictionary.
@@ -21,39 +20,38 @@ pub(crate) struct MarkdownConvertStrategy;
 impl MarkdownConvertStrategy
 {
     //--------------------------------------------------------------------------
-    /// Convert data source to word list.
+    /// Convert data source to term list.
     //--------------------------------------------------------------------------
     pub(super) fn convert( &self, data_source: DataSource ) -> Dictionary
     {
         let mut dictionary = Dictionary::new();
-        let sections = self.parse_sections(data_source);
-        //println!("{:#?}", sections);
+        let content = data_source.get_content();
+        let sections = self.split_sections(&content);
+        for section in sections
+        {
+            let terms = section.get_terms();
+            for term in terms
+            {
+                let term = Term::new
+                (
+                    &term,
+                    &section.get_content(),
+                    &data_source.get_source(),
+                );
+                dictionary.add(term);
+            }
+        }
         dictionary
-    }
-
-    //--------------------------------------------------------------------------
-    /// Parses the sections of the data source.
-    //--------------------------------------------------------------------------
-    fn parse_sections
-    (
-        &self,
-        data_source: DataSource,
-    ) -> Vec<MarkdownSection>
-    {
-        let mut sections = self.split_sections(data_source);
-        println!("{:#?}", sections);
-
-        unimplemented!();
     }
 
     //--------------------------------------------------------------------------
     /// Splits the data source into sections.
     //--------------------------------------------------------------------------
-    fn split_sections( &self, data_source: DataSource ) -> Vec<MarkdownSection>
+    fn split_sections( &self, content: &str ) -> Vec<MarkdownSection>
     {
         let mut sections = Vec::new();
         let mut raw_section = String::new();
-        for line in data_source.get_content().lines()
+        for line in content.lines()
         {
             if line.starts_with("#")
             {

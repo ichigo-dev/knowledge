@@ -31,7 +31,7 @@ impl FileDataSource
     //--------------------------------------------------------------------------
     /// Reads the data source from a file.
     //--------------------------------------------------------------------------
-    pub(crate) fn read( &mut self, path: &Path )
+    pub(super) fn read( &mut self, path: &Path )
     {
         let mut file = File::open(path).expect("Failed to open file.");
         let mut content = String::new();
@@ -45,9 +45,17 @@ impl FileDataSource
     //--------------------------------------------------------------------------
     /// Gets the content of the data source.
     //--------------------------------------------------------------------------
-    pub(crate) fn get_content( &self ) -> &str
+    pub(super) fn get_content( &self ) -> String
     {
-        &self.content
+        self.content.clone()
+    }
+
+    //--------------------------------------------------------------------------
+    /// Gets the source of the data source.
+    //--------------------------------------------------------------------------
+    pub(super) fn get_source( &self ) -> String
+    {
+        self.file_path.clone()
     }
 }
 

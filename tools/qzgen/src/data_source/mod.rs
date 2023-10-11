@@ -16,8 +16,6 @@ mod file;
 
 pub(crate) use file::FileDataSource;
 
-use std::path::Path;
-
 //------------------------------------------------------------------------------
 /// Data source to convert to dictionary.
 //------------------------------------------------------------------------------
@@ -31,11 +29,22 @@ impl DataSource
     //--------------------------------------------------------------------------
     /// Gets the content of the data source.
     //--------------------------------------------------------------------------
-    pub(crate) fn get_content( &self ) -> &str
+    pub(crate) fn get_content( &self ) -> String
     {
         match self
         {
             Self::File(file_data_source) => file_data_source.get_content(),
+        }
+    }
+
+    //--------------------------------------------------------------------------
+    /// Gets the source of the data source.
+    //--------------------------------------------------------------------------
+    pub(crate) fn get_source( &self ) -> String
+    {
+        match self
+        {
+            Self::File(file_data_source) => file_data_source.get_source(),
         }
     }
 }
