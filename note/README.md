@@ -41,7 +41,6 @@
 1. [チェックシート](./checksheet.md)
 
 
-
 ## メモ
 
 - 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中

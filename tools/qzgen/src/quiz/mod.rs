@@ -4,6 +4,8 @@ mod judge;
 pub(crate) use score::Score;
 pub(crate) use judge::Judge;
 
+use markdown_to_text;
+
 //------------------------------------------------------------------------------
 /// Quiz.
 //------------------------------------------------------------------------------
@@ -22,7 +24,15 @@ impl Quiz
     //--------------------------------------------------------------------------
     pub(crate) fn new( answer: &str, content: &str, source: &str ) -> Self
     {
-        let mask = "_".repeat(answer.chars().count());
+        let content = markdown_to_text::convert(&content);
+        let mut mask = String::new();
+        mask.push(' ');
+        for _ in 0..answer.chars().count()
+        {
+            mask.push('*');
+        }
+        mask.push(' ');
+
         let content = content.replace(answer, &mask);
         Self
         {
@@ -54,5 +64,13 @@ impl Quiz
     pub(crate) fn challenge_answer( &self, answer: &str ) -> bool
     {
         self.answer == answer
+    }
+
+    //--------------------------------------------------------------------------
+    /// Gets the source of the quiz.
+    //--------------------------------------------------------------------------
+    pub(crate) fn get_source( &self ) -> String
+    {
+        self.source.clone()
     }
 }

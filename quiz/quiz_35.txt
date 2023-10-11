@@ -1,0 +1,948 @@
+====================
+
+ISMS（ ****************** : Information Security Management System）は、組織の情報セキュリティを管理するための仕組み。自社内の情報資産やリスクを適切に管理することで、利害関係者に信頼を与える。
+
+Answer: 情報セキュリティマネジメントシステム
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ *** (Confidentiality)は、情報に対するアクセス権限がないエンティティに、情報を使用させない特性。不正アクセスなどにより情報が漏洩しないように、情報にアクセスできるエンティティを最小限にしたり、パスワードを定期的に更新したりすることで、 *** を維持することができる。
+
+Answer: 機密性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ *** (Integrity)は、情報の正確さ（鮮度）や完全さといった特性。情報に間違いがなく、欠損がないことが保証できなければ、情報は何の価値も持たない。手順書やマニュアルによって入力規則を規定したり、誤入力を防ぐための対策を取ることで、 *** を維持することができる。
+
+Answer: 完全性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ *** (Availability)は、情報に対するアクセス権限があるエンティティが要求したときに、情報が使用できるという特性。自然災害やセキュリティインシデントなどでサーバが停止してしまい、情報が使えなくなったときに、バックアップサイトなどを用いてデータへのアクセスがすぐに復旧できるような設計を行うことで、 *** を維持することができる。
+
+Answer: 可用性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ *** (Authenticity)は、あるデータが本物であることを確実にしたり証明できるという性質。ある識別名を名乗り出た人が、なりすました他人ではない事を証明するため、デジタル署名や二段階認証、生体認証などの対策を行うことで、 *** を維持することができる。
+
+Answer: 真正性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ ***** (Accountability)は、組織や個人が行った動作を追跡できる性質。インシデントが発生したときに、アクセスログなどのログを残しておくことで、操作内容を特定することができ、 ***** を維持することができる。
+
+Answer: 責任追跡性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ **** (Non-Repudiation)は、主張された事象や処置の発生、及びそれを引き起こしたエンティティを証明する能力。インシデントが発生した際に、その原因となった人物や対象から該当の行動を否定されないように証拠を残すことで、 **** が可能となる。
+
+Answer: 否認防止
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ *** (Reliability)は、意図する行動と結果が一貫しているという特性。プログラムの例外処理を記述したり、バリデーションを設けたり、SQLインジェクション対策を行うことで、 *** を維持することができる。
+
+Answer: 信頼性
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ ****** は、重大な事件や事故に発展する可能性のある出来事。ITサービスにおいてはシステムの利用者が本来できるはずの業務や操作を正常に遂行できない状態や事象を指し、情報セキュリティにおいては情報管理やシステム運用に関して保安上の驚異となる人為的な事象を指す。
+
+Answer: インシデント
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ **** は、企業やサービスの運用者が持つ、業務に必要な価値のある情報。顧客情報や技術情報といったものが該当し、これらの **** にとっての驚異を洗い出したり、脆弱性を考慮することによって、最適なセキュリティ対策を考える必要がある。
+
+Answer: 情報資産
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ ************ は、アメリカの犯罪学者D.R.クレッシーが提唱している、機会・動機・正当化の3つの要素が揃うことで不正行為が起こるという考え方。
+
+Answer: 不正のトライアングル理論
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ ******** は、不正のトライアングル理論を考慮して、不正を起こしにくい状況を作ることで犯罪を抑制するという考え方。
+
+Answer: 状況的犯罪予防論
+
+Source: ../../note/system/security/_/chapters/security.md
+
+====================
+
+ ******** は、ネットワークトラフィックの監視と制御を行い、不正なアクセスや悪意のあるトラフィックを遮断することで、ネットワークのセキュリティを強化するデバイスやソフトウェア。ネットワーク上を流れるパケットを監視し、特定の条件に基づいてフィルタリングを行う（パケットフィルタリング）。
+
+Answer: ファイアウォール
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ファイアウォールは、ネットワークトラフィックの監視と制御を行い、不正なアクセスや悪意のあるトラフィックを遮断することで、ネットワークのセキュリティを強化するデバイスやソフトウェア。ネットワーク上を流れるパケットを監視し、特定の条件に基づいてフィルタリングを行う（ *********** ）。
+
+Answer: パケットフィルタリング
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ *** (Web Application Firewall)は、Webアプリケーションのセキュリティを向上させるために使用される技術のひとつで、Webトラフィックを監視し、悪意のある攻撃や不正なアクセスを検出および防御する。XSSやSQLインジェクション、CSRFなどの攻撃を検知して防御したり、トラフィックの異常な挙動を検知してブロックしたり、ログ記録を行うといった役割を持つ。
+
+Answer: WAF
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ *** （侵入検知システム: Intrusion Detectino System）は、ネットワークやシステムにおける侵入や攻撃を検知するためのセキュリティシステム。ネットワークトラフィックやシステムのログを監視し、異常なアクティビティや攻撃パターンを特定することで、潜在的なセキュリティ侵害を検知する。
+
+Answer: IDS
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+IDS（ ******** : Intrusion Detectino System）は、ネットワークやシステムにおける侵入や攻撃を検知するためのセキュリティシステム。ネットワークトラフィックやシステムのログを監視し、異常なアクティビティや攻撃パターンを特定することで、潜在的なセキュリティ侵害を検知する。
+
+Answer: 侵入検知システム
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ *** （侵入防御システム: Intrusion Prevention System）は、IDSの機能に加えて、攻撃を防止するためのアクションを実行するためのセキュリティシステム。ネットワークトラフィックやシステムのログを監視し、悪意のある侵入や攻撃を検知して即座に対応を講じることで、セキュリティの強化を図る。
+
+Answer: IPS
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ **** (Proxy)は、ネットワーク通信を仲介する中間サーバで、クライアントとサーバとの間に配置され、通信制御やフィルタリング、アクセス制限などの機能を提供する。インターネット上での匿名性を確保したり、フィルタリングやログの記録を行うといったセキュリティ上の役割の他、キャッシュの提供などを行う場合もある。社内ネットワークなどクライアント側に設置されるものと、サーバ側に設置されるリバース **** がある。
+
+Answer: プロキシ
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ******** (Reverse Proxy)は、システム運用者などによってサーバ側に設置されるプロキシ。不特定多数のクライアントに対するアクセス制御や、サーバの負荷分散、静的コンテンツのキャッシュなどのために使用される。
+
+Answer: リバースプロキシ
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ******** は、分散型のデータベース技術であり、複数のコンピュータ間で共有されるデータの連鎖（チェーン）を指す用語。オンライン取引の記録やデータの透明性・信頼性・セキュリティを確保するために使用される。
+
+ ******** は複数のノード（コンピュータ）で分散されたデータベースで、各ノードはネットワークに参加し、取引やデータの承認を行う。この分散構造により、信頼性や可用性が高まり、単一障害点のリスクが低減される。新しいデータは前のブロックに追加される形で連続的に追跡され、一度追加されたデータは改ざんや削除ができないため不変性が保たれる。また、 ******** は公開型であり、ネットワーク上のすべての参加者が同じ情報を共有するため、透明性が確保される。
+
+Answer: ブロックチェーン
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ *** (Content Security Policy)は、Webアプリケーションのセキュリティを向上させるメカニズムで、XSSやデータの盗聴などの攻撃を軽減するために使用される。レスポンスヘッダーにポリシーを設定することで、特定のリソースの読み込みや実行を制御する。特定のドメインからのリソース（JavaScriptやCSS、画像など）のみ読み込みを許可したり、インラインスクリプトの実行を制限したりすることができる。
+
+Answer: CSP
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ **** (Cross-Origin Resource Sharing)は、Webブラウザのセキュリティメカニズムの一部で、異なるオリジン（ドメイン、プロトコル、ポート番号）間でのリソース共有を制御するための仕組み。同一オリジンポリシーによって、異なるオリジン間での直接的なアクセスは制御されているが、 **** を使用することでオリジン間のリソース共有を明示的に許可することができる。
+
+ **** はクロスドメインのAPI呼び出しやAjaxリクエストを制御するために広く使用されている。
+
+Answer: CORS
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ** は、ユーザが正当な権限を持っていることを確認するための手段。パスワードや多要素 ** 、生体 ** などにより、ユーザの身元を確認する。
+
+Answer: 認証
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ***** (MFA: Multi-Factor Authentication)は、ユーザのなりすましなどを防ぐため、複数の要素を組み合わせて認証を行う方法。パスワードや所有物に基づく認証（スマートフォンやワンタイムパスワード、USBキーなど）、生体認証を組み合わせることで、不正アクセスのリスクを軽減できる。
+
+Answer: 多要素認証
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+多要素認証( *** : Multi-Factor Authentication)は、ユーザのなりすましなどを防ぐため、複数の要素を組み合わせて認証を行う方法。パスワードや所有物に基づく認証（スマートフォンやワンタイムパスワード、USBキーなど）、生体認証を組み合わせることで、不正アクセスのリスクを軽減できる。
+
+Answer: MFA
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ **** (Biometric Authentication)は、個人の生態的な特徴を使用して認証を行う技術。指紋認証や顔認証、虹彩認証、声紋認証などが一般的。パスワードやピンコードといった従来の認証手法と比べて高いセキュリティと利便性を提供し、なりすましや不正アクセスのリスクを軽減できる。一方で、 **** 技術の実装には適切なセンサやアルゴリズムが必要であり、使用者の状態や環境条件に左右されるというデメリットもある。
+
+Answer: 生体認証
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ******* (Completely AUtomated Public Turing test to tell Computers and Humans Apart)は、Webサイトやオンラインサービスなどで使用されるセキュリティ技術で、コンピュータと人間を区別するための自動化されたテスト。
+
+一般的には、画像や音声を使用してユーザが人間であることを検証するための課題を提供する。例えば、画像中の文字や数字を認識して入力する、歪んだ文字を読み取る、音声を聞いて特定の言葉を入力するなどの課題が含まれる。これにより、自動化されたプログラムやボットが不正なアクセスやスパム行為を行うことを防ぐ。
+
+Answer: CAPTCHA
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ *********** は、サイバーセキュリティにおけるインシデント対応を含めた、被害及び加害システムの調査全般を指す用語。サイバー犯罪の捜査や企業の内部調査、セキュリティインシデント調査といった分野で活用される。
+
+Answer: デジタルフォレンジック
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ****** は、攻撃者を誘い込み、行動や目的などを観測するためのシステム。セキュリティ研究やインシデント対応の一環として使用されることが多く、対話型 ****** や仮想 ****** 、分散型 ****** などの種類がある。ただし、攻撃者の攻撃を受けることを前提としているため、十分なセキュリティ知識を持ち、慎重な計画や設計を行う必要がある。
+
+Answer: ハニーポット
+
+Source: ../../note/system/security/_/chapters/security_technology.md
+
+====================
+
+ ***** は、あらかじめ作成されたHTMLやCSS、JavaScriptなどのファイルから構成されるWebサイト。コンテンツは固定されており、ユーザが何度アクセスしても表示される内容は変わらない。サーバ側の処理やデータベースを使用しないため、ホスティングやメンテナンスが容易である。
+
+Answer: 静的サイト
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ ***** は、ユーザの操作やデータベースの内容に基づいてコンテンツが生成されるWebサイト。ユーザがアクセスする度に異なるコンテンツが表示される場合がある。サーバ側の処理やデータベースを使用しており、ユーザごとに個別の体験を提供することが可能となる。
+
+Answer: 動的サイト
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ *** (Contents Management System)は、動的サイトを効率的に管理し、作成・編集・公開するためのソフトウェア。特別な技術知識がなくても、視覚的なエディタなどを利用してコンテンツを作成することができたり、様々なテンプレートが用意されていたりする。代表的な *** としては、WordPressがある。
+
+Answer: CMS
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ ********* は、PHPで開発されたオープンソースのCMS。世界中で広く利用されており、Webサイトの40%以上が ********* を使用して作られている。
+
+代表的な機能として、カテゴリの管理やテーマによるデザインの切り替え、プラグインによる機能拡張などがある。
+
+Answer: WordPress
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ *** （検索エンジン最適化: Search Engine Optimization）は、Webサイトが検索エンジンの検索結果で上位に表示されるように最適化するための取り組みやプロセス。つまり、特定のキーワードやフレーズに関連する検索結果で、自分のWebサイトをより高い順位で表示させるための戦略や手法のこと。
+
+自分のWebサイトに関連するキーワードやフレーズの調査、コンテンツの最適化、メタデータ最適化、サイトの速度とパフォーマンス向上、レスポンシブ対応などの手法がある。
+
+Answer: SEO
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+SEO（ ********* : Search Engine Optimization）は、Webサイトが検索エンジンの検索結果で上位に表示されるように最適化するための取り組みやプロセス。つまり、特定のキーワードやフレーズに関連する検索結果で、自分のWebサイトをより高い順位で表示させるための戦略や手法のこと。
+
+自分のWebサイトに関連するキーワードやフレーズの調査、コンテンツの最適化、メタデータ最適化、サイトの速度とパフォーマンス向上、レスポンシブ対応などの手法がある。
+
+Answer: 検索エンジン最適化
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ ***** (Favicon: Favorites Icon)は、Webサイトのタブやブックマークバーなど、Webブラウジングの様々な場所で表示される小さなアイコン。Webサイトのブランディングや識別、UXの向上などを目的としている。
+
+Answer: ファビコン
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ *** (Open Graph Protocol)は、WebサイトがSNSで適切に表示されるようにするためのメタデータセット。SNSでWebサイトがシェアされた際に、リンク先のプレビュー情報を制御する。
+
+Answer: OGP
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ *** （プログレッシブWebアプリケーション）は、Webサイトをネイティブアプリと同じ感覚で使えるようにするための仕組み。ダウンロードやアップデートの必要がない点や、プッシュ通知ができる点で有用。
+
+Answer: PWA
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+PWA（ ****************** ）は、Webサイトをネイティブアプリと同じ感覚で使えるようにするための仕組み。ダウンロードやアップデートの必要がない点や、プッシュ通知ができる点で有用。
+
+Answer: プログレッシブWebアプリケーション
+
+Source: ../../note/web_development/_/chapters/web_development.md
+
+====================
+
+ ********* は、CSSにおいて、要素を回転、拡大縮小、傾斜、移動するためのプロパティ。 translate （移動）、 scale （拡大縮小）、 rotate （回転）、 skew （傾斜）などを適用することができる。
+
+Answer: transform
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+ ********** は、CSSにおいて、プロパティの変更を検知し、その変化の仕方を制御するためのプロパティ。変化にかかる時間、変化を検知する対象のプロパティ、変化の仕方、変化が始まるまでの遅延を一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、変化にかかる時間を指定する ********** -duration、変化を検知する対象のプロパティを指定する ********** -property、変化の仕方を指定する ********** -timing-function、変化が始まるまでの遅延を指定する ********** -delayが使用できる。  ********** -timing-function には、 linear （等速で変化）、 ease-in （徐々に加速）、 ease-out （徐々に減速）、 ease-in-out （加速してから減速）といったキーワードが指定できる。
+
+Answer: transition
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+transitionは、CSSにおいて、プロパティの変更を検知し、その変化の仕方を制御するためのプロパティ。変化にかかる時間、変化を検知する対象のプロパティ、変化の仕方、変化が始まるまでの遅延を一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、変化にかかる時間を指定する ******************* 、変化を検知する対象のプロパティを指定するtransition-property、変化の仕方を指定するtransition-timing-function、変化が始まるまでの遅延を指定するtransition-delayが使用できる。 transition-timing-function には、 linear （等速で変化）、 ease-in （徐々に加速）、 ease-out （徐々に減速）、 ease-in-out （加速してから減速）といったキーワードが指定できる。
+
+Answer: transition-duration
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+transitionは、CSSにおいて、プロパティの変更を検知し、その変化の仕方を制御するためのプロパティ。変化にかかる時間、変化を検知する対象のプロパティ、変化の仕方、変化が始まるまでの遅延を一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、変化にかかる時間を指定するtransition-duration、変化を検知する対象のプロパティを指定する ******************* 、変化の仕方を指定するtransition-timing-function、変化が始まるまでの遅延を指定するtransition-delayが使用できる。 transition-timing-function には、 linear （等速で変化）、 ease-in （徐々に加速）、 ease-out （徐々に減速）、 ease-in-out （加速してから減速）といったキーワードが指定できる。
+
+Answer: transition-property
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+transitionは、CSSにおいて、プロパティの変更を検知し、その変化の仕方を制御するためのプロパティ。変化にかかる時間、変化を検知する対象のプロパティ、変化の仕方、変化が始まるまでの遅延を一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、変化にかかる時間を指定するtransition-duration、変化を検知する対象のプロパティを指定するtransition-property、変化の仕方を指定する ************************** 、変化が始まるまでの遅延を指定するtransition-delayが使用できる。  **************************  には、 linear （等速で変化）、 ease-in （徐々に加速）、 ease-out （徐々に減速）、 ease-in-out （加速してから減速）といったキーワードが指定できる。
+
+Answer: transition-timing-function
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+transitionは、CSSにおいて、プロパティの変更を検知し、その変化の仕方を制御するためのプロパティ。変化にかかる時間、変化を検知する対象のプロパティ、変化の仕方、変化が始まるまでの遅延を一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、変化にかかる時間を指定するtransition-duration、変化を検知する対象のプロパティを指定するtransition-property、変化の仕方を指定するtransition-timing-function、変化が始まるまでの遅延を指定する **************** が使用できる。 transition-timing-function には、 linear （等速で変化）、 ease-in （徐々に加速）、 ease-out （徐々に減速）、 ease-in-out （加速してから減速）といったキーワードが指定できる。
+
+Answer: transition-delay
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+ ********* は、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定する ********* -name、繰り返し回数を指定する ********* -iteration-count（無限に実行したい場合は infinite を指定）、再生方向を指定する ********* -direction、開始前と終了時の状態を指定する ********* -fill-mode、実行状態を指定する ********* -play-stateが使用できる。  ********* -direction には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。  ********* -fill-mode には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。  ********* -play-state には、 running か paused のどちらかが指定できる。
+
+Answer: animation
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+animationは、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定する ************** 、繰り返し回数を指定するanimation-iteration-count（無限に実行したい場合は infinite を指定）、再生方向を指定するanimation-direction、開始前と終了時の状態を指定するanimation-fill-mode、実行状態を指定するanimation-play-stateが使用できる。 animation-direction には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。 animation-fill-mode には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。 animation-play-state には、 running か paused のどちらかが指定できる。
+
+Answer: animation-name
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+animationは、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定するanimation-name、繰り返し回数を指定する ************************* （無限に実行したい場合は infinite を指定）、再生方向を指定するanimation-direction、開始前と終了時の状態を指定するanimation-fill-mode、実行状態を指定するanimation-play-stateが使用できる。 animation-direction には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。 animation-fill-mode には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。 animation-play-state には、 running か paused のどちらかが指定できる。
+
+Answer: animation-iteration-count
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+animationは、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定するanimation-name、繰り返し回数を指定するanimation-iteration-count（無限に実行したい場合は infinite を指定）、再生方向を指定する ******************* 、開始前と終了時の状態を指定するanimation-fill-mode、実行状態を指定するanimation-play-stateが使用できる。  *******************  には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。 animation-fill-mode には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。 animation-play-state には、 running か paused のどちらかが指定できる。
+
+Answer: animation-direction
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+animationは、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定するanimation-name、繰り返し回数を指定するanimation-iteration-count（無限に実行したい場合は infinite を指定）、再生方向を指定するanimation-direction、開始前と終了時の状態を指定する ******************* 、実行状態を指定するanimation-play-stateが使用できる。 animation-direction には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。  *******************  には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。 animation-play-state には、 running か paused のどちらかが指定できる。
+
+Answer: animation-fill-mode
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+animationは、CSSにおいて、アニメーションを適用するためのプロパティ。 keyframes アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できるショートハンドプロパティ。
+
+各スタイルを個別に設定するプロパティも存在し、アニメーション名を指定するanimation-name、繰り返し回数を指定するanimation-iteration-count（無限に実行したい場合は infinite を指定）、再生方向を指定するanimation-direction、開始前と終了時の状態を指定するanimation-fill-mode、実行状態を指定する ******************** が使用できる。 animation-direction には、 normal （毎回順方向）、 reverse （毎回逆方向）、 alternate （順方向から始まり、交互）、 alternate-reverse （逆方向から始まり、交互）と行ったキーワードが指定できる。 animation-fill-mode には、 none （適用しない）、 forwards （終了後は終了時のスタイルを適用）、 backwards （開始前に開始時のスタイルを適用）、 both （ forwards と backwards の両方を適用）といったキーワードが指定できる。  ********************  には、 running か paused のどちらかが指定できる。
+
+Answer: animation-play-state
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+ ********* は、CSSにおいて、アニメーションの流れに沿ったキーフレーム（中間地点）のスタイルを定義することによって、アニメーションを制御する機能。キーフレームの使用例は以下の通り。
+
+@ *********  slidein
+{
+    from
+    {
+        transform: translateX(0%);
+    }
+
+    to
+    {
+        transform: translateX(100%);
+    }
+}
+
+@ *********  box_move
+{
+    0%
+    {
+        top: 0;
+        left: 0;
+    }
+
+    25%
+    {
+        top: 50px;
+    }
+
+    50%
+    {
+        left: 50px;
+    }
+
+    75%
+    {
+        top: 0;
+    }
+
+    100%
+    {
+        left: 0;
+    }
+}
+
+Answer: keyframes
+
+Source: ../../note/web_development/css/_/chapters/animation.md
+
+====================
+
+ ***** は、CSSにおいて、要素のコンテンツ領域の幅を指定するためのプロパティ。要素の最小幅を指定するためのmin- ***** や、最大幅を指定するためのmax- ***** もある。
+
+Answer: width
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+widthは、CSSにおいて、要素のコンテンツ領域の幅を指定するためのプロパティ。要素の最小幅を指定するための ********* や、最大幅を指定するためのmax-widthもある。
+
+Answer: min-width
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+widthは、CSSにおいて、要素のコンテンツ領域の幅を指定するためのプロパティ。要素の最小幅を指定するためのmin-widthや、最大幅を指定するための ********* もある。
+
+Answer: max-width
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ****** は、CSSにおいて、要素のコンテンツ領域の高さを指定するためのプロパティ。要素の最小高さを指定するためのmin- ****** や、最大高さを指定するためのmax- ****** もある。
+
+Answer: height
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+heightは、CSSにおいて、要素のコンテンツ領域の高さを指定するためのプロパティ。要素の最小高さを指定するための ********** や、最大高さを指定するためのmax-heightもある。
+
+Answer: min-height
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+heightは、CSSにおいて、要素のコンテンツ領域の高さを指定するためのプロパティ。要素の最小高さを指定するためのmin-heightや、最大高さを指定するための ********** もある。
+
+Answer: max-height
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ****** は、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。  ******  は上下の要素で畳み込み（両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定する ****** -top、 ****** -right、 ****** -botom、 ****** -leftといったプロパティも存在する。
+
+Answer: margin
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+marginは、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 margin は上下の要素で **** （両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定するmargin-top、margin-right、margin-botom、margin-leftといったプロパティも存在する。
+
+Answer: 畳み込み
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+marginは、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 margin は上下の要素で畳み込み（両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定する ********** 、margin-right、margin-botom、margin-leftといったプロパティも存在する。
+
+Answer: margin-top
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+marginは、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 margin は上下の要素で畳み込み（両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定するmargin-top、 ************ 、margin-botom、margin-leftといったプロパティも存在する。
+
+Answer: margin-right
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+marginは、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 margin は上下の要素で畳み込み（両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定するmargin-top、margin-right、 ************ 、margin-leftといったプロパティも存在する。
+
+Answer: margin-botom
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+marginは、CSSにおいて、要素の外側余白（マージン領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 margin は上下の要素で畳み込み（両方のマージン領域が重なり、大きほうが採用されたように見える）が発生するので注意が必要。
+
+各方向の余白を設定するmargin-top、margin-right、margin-botom、 *********** といったプロパティも存在する。
+
+Answer: margin-left
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ****** は、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定する ****** -top、 ****** -right、 ****** -botom、 ****** -leftといったプロパティや、太さ、線種、色を個別に設定する ****** -width、 ****** -style、 ****** -colorといったプロパティも存在する。
+
+Answer: border
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定する ********** 、border-right、border-botom、border-leftといったプロパティや、太さ、線種、色を個別に設定するborder-width、border-style、border-colorといったプロパティも存在する。
+
+Answer: border-top
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、 ************ 、border-botom、border-leftといったプロパティや、太さ、線種、色を個別に設定するborder-width、border-style、border-colorといったプロパティも存在する。
+
+Answer: border-right
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、border-right、 ************ 、border-leftといったプロパティや、太さ、線種、色を個別に設定するborder-width、border-style、border-colorといったプロパティも存在する。
+
+Answer: border-botom
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、border-right、border-botom、 *********** といったプロパティや、太さ、線種、色を個別に設定するborder-width、border-style、border-colorといったプロパティも存在する。
+
+Answer: border-left
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、border-right、border-botom、border-leftといったプロパティや、太さ、線種、色を個別に設定する ************ 、border-style、border-colorといったプロパティも存在する。
+
+Answer: border-width
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、border-right、border-botom、border-leftといったプロパティや、太さ、線種、色を個別に設定するborder-width、 ************ 、border-colorといったプロパティも存在する。
+
+Answer: border-style
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+borderは、CSSにおいて、要素の枠線（ボーダー領域）のスタイルを指定するためのプロパティ。太さ、線種、色の3つの値によってスタイルを決定する。
+
+各方向の枠線を設定するborder-top、border-right、border-botom、border-leftといったプロパティや、太さ、線種、色を個別に設定するborder-width、border-style、 ************ といったプロパティも存在する。
+
+Answer: border-color
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ************* は、CSSにおいて、要素の枠線（ボーダー領域）の角丸の半径を指定するためのプロパティ。
+
+Answer: border-radius
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ******* は、CSSにおいて、要素の内側余白（パディング領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。
+
+各方向の余白を設定する ******* -top、 ******* -right、 ******* -botom、 ******* -leftといったプロパティも存在する。
+
+Answer: padding
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+paddingは、CSSにおいて、要素の内側余白（パディング領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。
+
+各方向の余白を設定する *********** 、padding-right、padding-botom、padding-leftといったプロパティも存在する。
+
+Answer: padding-top
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+paddingは、CSSにおいて、要素の内側余白（パディング領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。
+
+各方向の余白を設定するpadding-top、 ************* 、padding-botom、padding-leftといったプロパティも存在する。
+
+Answer: padding-right
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+paddingは、CSSにおいて、要素の内側余白（パディング領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。
+
+各方向の余白を設定するpadding-top、padding-right、 ************* 、padding-leftといったプロパティも存在する。
+
+Answer: padding-botom
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+paddingは、CSSにおいて、要素の内側余白（パディング領域）の大きさを指定するためのプロパティ。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。
+
+各方向の余白を設定するpadding-top、padding-right、padding-botom、 ************ といったプロパティも存在する。
+
+Answer: padding-left
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ********** は、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定する ********** -color、背景画像やグラデーションを指定する ********** -image、背景画像の位置を指定する ********** -position、背景画像のサイズを指定する ********** -size、背景画像の繰り返しパターンを指定する ********** -repeat、背景画像のスクロールに関する挙動を指定する ********** -attachmentが使用できる。
+
+Answer: background
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定する **************** 、背景画像やグラデーションを指定するbackground-image、背景画像の位置を指定するbackground-position、背景画像のサイズを指定するbackground-size、背景画像の繰り返しパターンを指定するbackground-repeat、背景画像のスクロールに関する挙動を指定するbackground-attachmentが使用できる。
+
+Answer: background-color
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定するbackground-color、背景画像やグラデーションを指定する **************** 、背景画像の位置を指定するbackground-position、背景画像のサイズを指定するbackground-size、背景画像の繰り返しパターンを指定するbackground-repeat、背景画像のスクロールに関する挙動を指定するbackground-attachmentが使用できる。
+
+Answer: background-image
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定するbackground-color、背景画像やグラデーションを指定するbackground-image、背景画像の位置を指定する ******************* 、背景画像のサイズを指定するbackground-size、背景画像の繰り返しパターンを指定するbackground-repeat、背景画像のスクロールに関する挙動を指定するbackground-attachmentが使用できる。
+
+Answer: background-position
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定するbackground-color、背景画像やグラデーションを指定するbackground-image、背景画像の位置を指定するbackground-position、背景画像のサイズを指定する *************** 、背景画像の繰り返しパターンを指定するbackground-repeat、背景画像のスクロールに関する挙動を指定するbackground-attachmentが使用できる。
+
+Answer: background-size
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定するbackground-color、背景画像やグラデーションを指定するbackground-image、背景画像の位置を指定するbackground-position、背景画像のサイズを指定するbackground-size、背景画像の繰り返しパターンを指定する ***************** 、背景画像のスクロールに関する挙動を指定するbackground-attachmentが使用できる。
+
+Answer: background-repeat
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+backgroundは、CSSにおいて、要素の背景スタイルを指定するためのプロパティ。背景画像や色、位置、サイズ、繰り返しパターンなどの背景に関する様々なスタイルを一度に適用することができるショートハンドプロパティ。
+
+各スタイルを個別に指定するプロパティも存在し、背景色を指定するbackground-color、背景画像やグラデーションを指定するbackground-image、背景画像の位置を指定するbackground-position、背景画像のサイズを指定するbackground-size、背景画像の繰り返しパターンを指定するbackground-repeat、背景画像のスクロールに関する挙動を指定する ********************* が使用できる。
+
+Answer: background-attachment
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ******** は、CSSにおいて、子要素のコンテンツが親要素に収まりきらなかった場合の表示方法を指定するためのプロパティ。 hidden （隠す）、 scroll （スクロール表示）、 visible （はみ出して表示）などのキーワードで指定する。
+
+各方向の表示方法を個別に設定する ******** -x、 ******** -yといったプロパティも存在する。
+
+Answer: overflow
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+overflowは、CSSにおいて、子要素のコンテンツが親要素に収まりきらなかった場合の表示方法を指定するためのプロパティ。 hidden （隠す）、 scroll （スクロール表示）、 visible （はみ出して表示）などのキーワードで指定する。
+
+各方向の表示方法を個別に設定する ********** 、overflow-yといったプロパティも存在する。
+
+Answer: overflow-x
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+overflowは、CSSにおいて、子要素のコンテンツが親要素に収まりきらなかった場合の表示方法を指定するためのプロパティ。 hidden （隠す）、 scroll （スクロール表示）、 visible （はみ出して表示）などのキーワードで指定する。
+
+各方向の表示方法を個別に設定するoverflow-x、 ********** といったプロパティも存在する。
+
+Answer: overflow-y
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ************** は、CSSにおいて、子となるインラインボックスの縦方向の位置を指定するためのプロパティ。
+
+Answer: vertical-align
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ******* は、CSSにおいて、要素の透明度を指定するためのプロパティ。0を透明、1を不透明として、0〜1の数値で指定する。
+
+Answer: opacity
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ ********** は、CSSにおいて、要素の影（ドロップシャドウ）を指定するためのプロパティ。横方向のずれ、縦方向のずれ、ぼかし量、拡張量（スプレッド）、色の値を指定する。また、要素の内側に影をつけたい場合は、 inset キーワードを値の最初に指定する。
+
+Answer: box-shadow
+
+Source: ../../note/web_development/css/_/chapters/box.md
+
+====================
+
+ *** (Cascading Style Sheet)は、HTMLで書かれたWebサイトのレイアウトやデザインを調整するためのスタイルシート言語。要素の色やサイズ、配置、余白、文字の太さや大きさなどを変更したり、簡単なアニメーションを適用したりできる。
+
+ *** の標準仕様はW3Cが定めており、現在広く使われているブラウザ（Google Chrome、Mozilla Firefox、Microsoft Edge、Safariなど）はこれらの仕様を満たすように開発が進められている。
+
+ *** はセレクタで指定した要素に対してプロパティを記述することで、要素のスタイルを変更する。 *** は一度設定されたプロパティの値が、後から出てきた、もしくは詳細度の硬いプロパティの値に次々と上書きされる性質を持つ（カスケード）。
+
+Answer: CSS
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+ **** は、CSSにおいてスタイルを適用する要素を選択するための記法。ある種類の要素を指定してデザインを適用したり、 class や id あるいはそれ以外の任意の属性を持つ要素を指定したりすることができる。
+
+主要な **** の指定方法は以下の通り。
+
+|  ****              | 表記                 | 意味                                                               | 詳細度 | | -------------------- | -------------------- | ------------------------------------------------------------------ | ------ | | ユニバーサル ****  | *                  | すべての要素                                                       | 0.0.0  | | 要素 ****          | E                  | タグ名がEの要素                                                    | 0.0.1  | | 属性 ****          | [属性]             | 指定の属性を持つ要素                                               | 0.1.0  | | 属性 ****          | [属性="値"]        | 指定の属性の属性値を持つ要素                                       | 0.1.0  | | 属性 ****          | [属性~="値"]       | 指定の属性の属性値を含む要素                                       | 0.1.0  | | 属性 ****          | [属性^="値"]       | 指定の属性の属性値と前方一致する属性値を持つ要素                   | 0.1.0  | | 属性 ****          | [属性$="値"]       | 指定の属性の属性値と後方一致する属性値を持つ要素                   | 0.1.0  | | 属性 ****          | [属性*="値"]       | 指定の属性の属性値と部分一致する属性値を持つ要素                   | 0.1.0  | | 擬似クラス           | :nth-child(n)      | 親要素から見てn番目の要素                                          | 0.1.0  | | 擬似クラス           | :nth-last-child(n) | 親要素から見て最後から数えてn番目の要素                            | 0.1.0  | | 擬似クラス           | :first-child       | 親要素から見て最初の要素                                           | 0.1.0  | | 擬似クラス           | :last-child        | 親要素から見て最後の要素                                           | 0.1.0  | | 擬似クラス           | :link              | リンク先が指定されている a タグ                                  | 0.1.0  | | 擬似クラス           | :visited           | リンク先に訪問済みの a タグ                                      | 0.1.0  | | 擬似クラス           | :active            | リンクをクリックした状態                                           | 0.1.0  | | 擬似クラス           | :hover             | 要素にホバーした状態                                               | 0.1.0  | | 擬似クラス           | :focus             | 要素にフォーカスした状態（フォーム要素に入力可能な状態）           | 0.1.0  | | 擬似クラス           | :enabled           | 要素が入力可能な状態                                               | 0.1.0  | | 擬似クラス           | :disabled          | 要素が入力不可能な状態（ disabled 属性が付与されている）         | 0.1.0  | | 擬似クラス           | :checked           | 要素（チェックボックスかラジオボタン）がチェックされている状態     | 0.1.0  | | 擬似クラス           | :invalid           | フォーム要素で正しくない値が入力された状態                         | 0.1.0  | | 擬似クラス           | :valid             | フォーム要素で正しい値が入力された状態                             | 0.1.0  | | 擬似クラス           | :required          | フォーム要素で入力が必須の状態（ required 属性が付与されている） | 0.1.0  | | 擬似クラス           | :not(s)            |  **** sに適合しない要素                                          | 0.1.0  | | 擬似要素             | :first-line        | 要素に含まれるテキストの1行目                                      | 0.0.1  | | 擬似要素             | :first-letter      | 要素に含まれるテキストの1文字目                                    | 0.0.1  | | 擬似要素             | :before            | 要素のコンテンツの前                                               | 0.0.1  | | 擬似要素             | :after             | 要素のコンテンツの後                                               | 0.0.1  | | クラス ****        | .クラス名          | 指定のクラス名を持つ要素                                           | 0.1.0  | | ID ****            | #ID名              | 指定のID名を持つ要素                                               | 1.0.0  | | 子孫 ****          | E F                | Eの子孫要素F                                                       | -      | | 子 ****            | E > F              | Eの子要素F                                                         | -      | | 隣接 ****          | E + F              | Eの直後のF                                                         | -      | | 兄弟 ****          | E ~ F              | Eの兄弟要素F                                                       | -      |
+
+Answer: セレクタ
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+ ***** は、特定の状態にあるHTML要素を指定するためのCSSセレクタ。例えば、要素マウスホバーされている状態や、親要素から見て指定の位置にある要素などを指し示すことができる。
+
+Answer: 擬似クラス
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+ **** は、HTML要素の特定の部分に対してスタイルを適用するためのCSSセレクタ。通常の要素とは異なり、 **** は実際に要素として存在するわけではなく、あくまでコンテンツの一部にスタイルを適用するための仮想的な手段として使用される。
+
+Answer: 擬似要素
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+ ***** は、CSSにおいて、要素のスタイルをコントロールするための記法。セレクタで指定した要素に対して、文字の大きさを変更する、要素の余白を調整する、といった様々なレイアウトやデザインに関する制御を行う。 ***** に指定する値とは、 : で区切られる。
+
+ ***** の値としては、サイズや色、その ***** に固有のキーワードなどが使用される。
+
+Answer: プロパティ
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+ ************ は、CSSにおいて、複数のプロパティをまとめて適用することができるプロパティ。 background や margin 、 transition などは ************ である。
+
+Answer: ショートハンドプロパティ
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+CSSのプロパティの値を設定する際に使用される単位には、次のような種類がある。
+
+| 単位     | 説明                                                           | | -------- | -------------------------------------------------------------- | |  **    | 1 **  = 親要素に設定されているフォントサイズ                     | | r **   | 1r **  = <html> に設定されているフォントサイズ（標準は16px）   | | vw   | 1vw = ビューポートの幅の1/100                                  | | vh   | 1vh = ビューポートの高さの1/100                                | | vmin | 1vmin = ビューポートの幅か高さ、どちらか短い方の1/100          | | vmax | 1vmax = ビューポートの幅か高さ、どちらか長い方の1/100          | | px   | 1px = 1ピクセル（ディスプレイを構成する最小単位）の大きさ      | | pt   | 1pt = 1ポイント（1/72インチ、約0.035cm）                       | | %    | 基準となる長さや大きさ（プロパティによって異なる）に対する割合 | | deg  | 1deg = 1°                                                      | | rad  | 1rad = 1ラジアン                                               | | s    | 1s = 1秒                                                       | | ms   | 1ms = 1ミリ秒（1/1000秒）                                      |
+
+Answer: em
+
+Source: ../../note/web_development/css/_/chapters/css.md
+
+====================
+
+CSSのプロパティの値を設定する際に使用される単位には、次のような種類がある。
+
+| 単位     | 説明                                                           | | -------- | -------------------------------------------------------------- | | em   | 1em = 親要素に設定されているフォントサイズ                     | |  ***   | 1 ***  = <html> に設定されているフォントサイズ（標準は16px）   | | vw   | 1vw = ビューポートの幅の1/100                                  | | vh   | 1vh = ビューポートの高さの1/100                                | | vmin | 1vmin = ビューポートの幅か高さ、どちらか短い方の1/100          | | vmax | 1vmax = ビューポートの幅か高さ、どちらか長い方の1/100          | | px   | 1px = 1ピクセル（ディスプレイを構成する最小単位）の大きさ      | | pt   | 1pt = 1ポイント（1/72インチ、約0.035cm）                       | | %    | 基準となる長さや大きさ（プロパティによって異なる）に対する割合 | | deg  | 1deg = 1°                                                      | | rad  | 1rad = 1ラジアン                                               | | s    | 1s = 1秒                                                       | | ms   | 1ms = 1ミリ秒（1/1000秒）                                      |
+
+Answer: rem
+
+Source: ../../note/web_development/css/_/chapters/css.md
+

@@ -1,0 +1,828 @@
+====================
+
+ **** (AI: Artificial Intelligence)は、人間と同じような知的処理を行うことのできる技術や機械。
+
+Answer: 人工知能
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+人工知能( ** : Artificial Intelligence)は、人間と同じような知的処理を行うことのできる技術や機械。
+
+Answer: AI
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ****** は、人間と同じような認知的状態を持った機械のことで、知能そのものを模倣することができる。
+
+Answer: 強い人工知能
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ****** は、人間の行動を模倣することで、人間の能力の一部を代替できる機械。このような人工知能は知的に振る舞っているように見えるが、あくまで人工知能自体が自己の存在意義についての何かしらの認知を持っているわけではない。
+
+Answer: 弱い人工知能
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ****** は、様々な用途に対して利用することができ、設計時に想定していないようなタスクにも対応できるような人工知能。
+
+Answer: 汎用人工知能
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ******* は、限定的な状況や目的においてのみ知的な振る舞いを見せる人工知能。現在実現している人工知能のほとんどは ******* で、特定のタスクのみに特化している。
+
+Answer: 特化型人工知能
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ **** は、人間の思考の対象はすべて記号化することができ、その記号を論理的に操作することで知能を再現できるという考え方。
+
+Answer: 記号主義
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ********** は、記号主義に基づいて、すべてを記号化して論理で操作するような人工知能。あらかじめ専門家の膨大な知識をコンピュータにインプットしておき、現状の状況を表すデータを元に推論結果を導く。コンピュータは自力で知識を獲得することができないため、人間が大量の知識を教え込む必要があり、知識が増えれば増えるほど計算量が爆発的に増大するという問題がある。
+
+Answer: エキスパートシステム
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ************** （記号接地問題）は、コンピュータに対して知識をインプットしても、その知識が指し示す実体験を理解させることができないという問題。
+
+Answer: シンボルグラウンディング問題
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+シンボルグラウンディング問題（ ****** ）は、コンピュータに対して知識をインプットしても、その知識が指し示す実体験を理解させることができないという問題。
+
+Answer: 記号接地問題
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ******** は、人間の脳の仕組みを模倣することで知能を再現できるという考え方。ニューラルネットワークを用いて人工知能を実現する。
+
+Answer: コネクショニズム
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ ****** は、大量のデータを蓄積したもの。
+
+Answer: ビッグデータ
+
+Source: ../../note/artificial_intelligence/_/chapters/artificial_intelligence.md
+
+====================
+
+ **** (ML: Machine Learning)は、入力されたデータを元に、最も正しい振る舞いをするパラメータを自動的に学習する人工知能。 **** 以前の人工知能は、データを丸暗記するような学習が主流であったが、パラメータを用いて認識をする **** では、未知のデータに対しても対応できる。
+
+Answer: 機械学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+機械学習( ** : Machine Learning)は、入力されたデータを元に、最も正しい振る舞いをするパラメータを自動的に学習する人工知能。機械学習以前の人工知能は、データを丸暗記するような学習が主流であったが、パラメータを用いて認識をする機械学習では、未知のデータに対しても対応できる。
+
+Answer: ML
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** （モデル）は、機械学習を行う際の学習機の構成や、学習を行いパラメータを調整した後の学習機の状態を指す用語。データの特徴量を入力することで、何かしらの出力を行う。
+
+Answer: 学習モデル
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+学習 *** （ *** ）は、機械学習を行う際の学習機の構成や、学習を行いパラメータを調整した後の学習機の状態を指す用語。データの特徴量を入力することで、何かしらの出力を行う。
+
+Answer: モデル
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** は、機械学習においてモデルの振る舞いを決める基準となる値。
+
+Answer: パラメータ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、パラメータをより良い値へと更新することによって、モデルの性能を向上させる処理。
+
+Answer: チューニング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、モデルに入力されるデータの性質を表現する値。分析する対象の見た目や匂い、触感などの様々な性質を表す情報を数値化したもので、説明変数として用いられる。
+
+Answer: 特徴量
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、モデルに対して学習の結果をどれほど反映させるか（パラメータをどれほど更新するか）という割合。 *** が高いと、新しいデータを学習しようとしたときに適応しやすくなる一方、古いデータの情報が失われやすくなる。
+
+Answer: 学習率
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、モデルの未知データに対する予測・分析性能。モデルが学習データに対してどれだけ高い性能を持っていても、実際にモデルを使用したい実場面において入力されるのは未知データであるため、 **** の高さが重要となる。
+
+Answer: 汎化性能
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ** は、説明変数が目的変数にどれほど影響しているかを表す係数。
+
+Answer: 重み
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、説明変数に関係なく目的変数に影響を与える項。
+
+Answer: バイアス
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ** は、データが複数のグループのうちどれに属するかを判断するモデル、あるいはそのような問題。入力されるデータがいくつかのグループに ** できることを前提として、グループ内でのデータの細かな違いは無視する。 ** 問題では、モデルの出力は ** されるグループを表す離散値となる。
+
+Answer: 分類
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ** は、データの傾向を見るためのモデル、あるいはそのような問題。入力されるデータを1つのグループとして見て、そのグループ内での違いを分析する。 ** では、モデルの出力は連続値となる。
+
+Answer: 回帰
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、分類問題において、データが分類されるカテゴリやグループ。
+
+Answer: クラス
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、解決したいタスクの答えが含まれたデータを用いて、モデルを学習させる機械学習の手法。この方法では、モデルが出力する予測値と、ラベル付きデータのラベルとの誤差を小さくするようにパラメータを調整していくことで学習を進める。
+
+Answer: 教師あり学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、教師あり学習における学習データの答え。
+
+Answer: ラベル
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******** は、教師あり学習に用いられる、ラベルが付与された学習データ。
+
+Answer: ラベル付きデータ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** （アノテーション）は、学習に用いたいデータにラベル付けを行うことで、ラベル付きデータを作成する処理や作業。
+
+Answer: ラベリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ラベリング（ ******* ）は、学習に用いたいデータにラベル付けを行うことで、ラベル付きデータを作成する処理や作業。
+
+Answer: アノテーション
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、与えられたデータの本質的な構造や法則を抽出する方法。データの特徴を捉えることを目的としている。
+
+Answer: 教師なし学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* は、データ群の中から特徴の似ているデータをグループ（クラスタ）ごとに分類するタスク。
+
+Answer: クラスタリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********** は、特徴の似ているクラスタ同士を1つずつ結合させていき、最終的に1つの大きなクラスタになるまで繰り返す方法。
+
+Answer: 階層的クラスタリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *********** は、あらかじめ最終的なクラスタ数を決めておき、そのクラスタ数で最もよくデータを分類できるようにクラスタリングする方法。
+
+Answer: 非階層的クラスタリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、データから重要な情報だけを抜き出して、重要度の低い情報を削減するタスク。ここで次元とは、特徴量の数を指す。4次元以上のデータを2次元や3次元に **** することによって、データの特徴を可視化することができるようになる。
+
+Answer: 次元削減
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** は、データの特徴量が多すぎることで、どの特徴量が重要であるかが判断できなくなり、モデルの性能が悪くなる現象。
+
+Answer: 次元の呪い
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、学習モデルに試行を繰り返させて、最適な行動を学習させる方法。教師あり学習のように明示的な正解があるわけではなく、モデルがとった行動に対して報酬を与えることで、その報酬が高くなるような行動をするように仕向ける。
+
+Answer: 強化学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、強化学習においてタスクに取り組む行動主体（プレイヤー）。
+
+Answer: エージェント
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、教師データを闇雲に作って学習を行うのではなく、教師データの数を絞って学習を行う方法。あきらかに区別がつくデータではなく、紛らわしいデータに絞ってラベリングを行うことで、ラベル付けのコストを抑えることができる。
+
+Answer: 能動学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、データを機械学習モデルに入力する前に、データを加工したり整形したりする処理。
+
+Answer: 前処理
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* は、そのデータのカテゴリを表すもの。コンピュータが扱いやすいように数値として表されるが、割り振られた番号は意味を持たず、大小を比較するといった数学的処理はできない。
+
+Answer: カテゴリデータ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *********** は、各カテゴリにひとつの数字を割り当てる方法。
+
+| ID | 都市   | |----|--------| | 1  | 東京   | | 2  | 大阪   | | 3  | 名古屋 | | 4  | 大阪   |
+
+| ID | 都市 | |----|------| | 1  | 1    | | 2  | 2    | | 3  | 3    | | 4  | 2    |
+
+Answer: ラベルエンコーディング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ************ は、そのカテゴリデータが出現した回数を割り当てる方法。
+
+| ID | 都市   | |----|--------| | 1  | 東京   | | 2  | 大阪   | | 3  | 名古屋 | | 4  | 大阪   |
+
+| ID | 都市 | |----|------| | 1  | 1    | | 2  | 2    | | 3  | 1    | | 4  | 2    |
+
+Answer: カウントエンコーディング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *************** は、列の名前をカテゴリ名にして、一致した列には1、それ以外の列には0を割り当てる方法。カテゴリの数だけ列の数が増える。
+
+| ID | 都市   | |----|--------| | 1  | 東京   | | 2  | 大阪   | | 3  | 名古屋 | | 4  | 大阪   |
+
+| ID | 東京 | 大阪 | 名古屋 | |----|------|------|--------| | 1  | 1    | 0    | 0      | | 2  | 0    | 1    | 0      | | 3  | 0    | 0    | 1      | | 4  | 0    | 1    | 0      |
+
+Answer: One-Hotエンコーディング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、連続した値をある区分に分類する操作。データの持つ細かな性質の違いを吸収し、データを扱いやすくしたり、より意味のあるデータに変換したりする。
+
+Answer: 離散化
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、データの対数を取ることで、大きい値を持つデータを圧縮し、小さい値を持つデータを拡大することができる。
+
+Answer: 対数変換
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、データのとり得る範囲を変換する操作。Min-Max ****** では、データの最小値が0、最大値が1となるように、データのとり得る範囲を変換する。標準化では、値の平均が $0$ 、分散が $1$ となるように、データのとり得る範囲を変換する。
+
+Answer: スケーリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+スケーリングは、データのとり得る範囲を変換する操作。 ************* では、データの最小値が0、最大値が1となるように、データのとり得る範囲を変換する。標準化では、値の平均が $0$ 、分散が $1$ となるように、データのとり得る範囲を変換する。
+
+Answer: Min-Maxスケーリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+スケーリングは、データのとり得る範囲を変換する操作。Min-Maxスケーリングでは、データの最小値が0、最大値が1となるように、データのとり得る範囲を変換する。 *** では、値の平均が $0$ 、分散が $1$ となるように、データのとり得る範囲を変換する。
+
+Answer: 標準化
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* は、モデルに学習データを繰り返し学習させることで、徐々に正しい出力ができるように調整していく処理。
+
+Answer: イテレーション
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** （オフライン学習）は、1回の学習ですべての学習データを読み込む方法。一度に多くのデータを扱う必要があるため必要なメモリサイズが増加するが、すべてのデータを均等に扱える。
+
+ ***** では、新しいデータをモデルに適用したい場合に、新旧データすべてを用いてモデルを学習し直さなければならず、リアルタイムでモデルを更新することが難しい。
+
+Answer: バッチ学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+バッチ学習（ ******* ）は、1回の学習ですべての学習データを読み込む方法。一度に多くのデータを扱う必要があるため必要なメモリサイズが増加するが、すべてのデータを均等に扱える。
+
+バッチ学習では、新しいデータをモデルに適用したい場合に、新旧データすべてを用いてモデルを学習し直さなければならず、リアルタイムでモデルを更新することが難しい。
+
+Answer: オフライン学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* （オンライン学習）は、1回の学習であらかじめ決めておいたバッチサイズ分、またはひとつの学習データを読み込む方法。最後の方に読み込んだデータの影響を受けやすいため、分割したデータを読み込む順序によってモデルの性能が変わる場合がある。また、バッチ学習に比べて計算回数が増加する。
+
+ ******* は、学習サイクルが速く、新しいデータを学習したい場合にも既存のモデルに対してすぐに適用できる。
+
+Answer: ミニバッチ学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ミニバッチ学習（ ******* ）は、1回の学習であらかじめ決めておいたバッチサイズ分、またはひとつの学習データを読み込む方法。最後の方に読み込んだデータの影響を受けやすいため、分割したデータを読み込む順序によってモデルの性能が変わる場合がある。また、バッチ学習に比べて計算回数が増加する。
+
+ミニバッチ学習は、学習サイクルが速く、新しいデータを学習したい場合にも既存のモデルに対してすぐに適用できる。
+
+Answer: オンライン学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********* は、データが大きすぎてバッチ学習が行えない場合に、データを小さな単位に分割した上で、オンライン学習のアルゴリズムを用いて学習を行う方法。
+
+Answer: アウトオブコア学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** は、モデルのパラメータを調整するための学習用データ。
+
+Answer: 訓練データ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** は、ハイパーパラメータのチューニングのためのデータで、学習には用いない。学習の途中で ***** による性能の評価とハイパーパラメータの調整を繰り返していく。
+
+Answer: 検証データ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、モデルの汎化性能を測るために、学習が終了した後に用いる評価用データ。
+
+Answer: テストデータ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********* は、データを訓練データとテストデータにある割合で分割する方法。学習データが膨大な場合に用いられることが多い。
+
+Answer: ホールドアウト検証
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********** （K分割交差検証）は、訓練データとテストデータを入れ替えた複数の組み合わせを用意し、それらすべてで学習を行う方法。テストデータの偏りをなくしたり、不足している学習データ量を補ったりする目的で利用される。
+
+Answer: クロスバリデーション
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+クロスバリデーション（ ******* ）は、訓練データとテストデータを入れ替えた複数の組み合わせを用意し、それらすべてで学習を行う方法。テストデータの偏りをなくしたり、不足している学習データ量を補ったりする目的で利用される。
+
+Answer: K分割交差検証
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *************** は、全データから1つをテストデータとして抜き出し、残りのすべてを訓練データとするような複数の組み合わせを用意して学習を行う方法。データ数に比例して計算量が増大するため、データ数が少ない場合にのみ利用される。
+
+Answer: Leave-one-out交差
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** （コスト関数、誤差関数）は、モデルを最適化するための指標となる関数。モデルが出力する予測値と、ラベル付きデータのラベルとの誤差を **** とする場合が多い。
+
+Answer: 損失関数
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+損失関数（ ***** 、誤差関数）は、モデルを最適化するための指標となる関数。モデルが出力する予測値と、ラベル付きデータのラベルとの誤差を損失関数とする場合が多い。
+
+Answer: コスト関数
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+損失関数（コスト関数、 **** ）は、モデルを最適化するための指標となる関数。モデルが出力する予測値と、ラベル付きデータのラベルとの誤差を損失関数とする場合が多い。
+
+Answer: 誤差関数
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** ( $R^2$ )は、予測誤差を正規化することで得られる指標で、全く予測できていない場合を $0$ 、すべて予測できている場合を $1$ として、大きいほどよい性能であることを表す。回帰問題の損失関数として用いられる。
+
+Answer: 決定係数
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** (RMSE)は、予測誤差を二乗して平均した後に平方を取る指標。正規分布の誤差に対して正確な評価ができるため、多くのケースで用いられる。回帰問題の損失関数として用いられる。
+
+Answer: 平方二乗誤差
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+平方二乗誤差( **** )は、予測誤差を二乗して平均した後に平方を取る指標。正規分布の誤差に対して正確な評価ができるため、多くのケースで用いられる。回帰問題の損失関数として用いられる。
+
+Answer: RMSE
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** (MAE)は、予測誤差の絶対値を二乗して平均した後に集計する指標。平方二乗誤差に比べて外れ値に強い。回帰問題の損失関数として用いられる。
+
+Answer: 平均絶対誤差
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+平均絶対誤差( *** )は、予測誤差の絶対値を二乗して平均した後に集計する指標。平方二乗誤差に比べて外れ値に強い。回帰問題の損失関数として用いられる。
+
+Answer: MAE
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *********** （交差エントロピー誤差）は、モデルの出力したカテゴリの確率分布を元に、正解ラベルとの誤差を評価するための指標。分類問題の損失関数として用いられる。
+
+Answer: クロスエントロピー誤差
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+クロスエントロピー誤差（ ********** ）は、モデルの出力したカテゴリの確率分布を元に、正解ラベルとの誤差を評価するための指標。分類問題の損失関数として用いられる。
+
+Answer: 交差エントロピー誤差
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ **** は、2値の分類問題において、モデルの出力と正解ラベルとの関係をまとめたマトリクス。データがとり得る値は真か偽の2値である。
+
+Answer: 混合行列
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (TP: True Positive)は、混合行列において、正解が真であるデータに対してモデルの出力も真となった回数。
+
+Answer: 真陽性
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+真陽性( ** : True Positive)は、混合行列において、正解が真であるデータに対してモデルの出力も真となった回数。
+
+Answer: TP
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (FN: False Negative)は、混合行列において、正解が真であるデータに対してモデルの出力が偽となった回数。
+
+Answer: 偽陰性
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+偽陰性( ** : False Negative)は、混合行列において、正解が真であるデータに対してモデルの出力が偽となった回数。
+
+Answer: FN
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (FP: False Positive)は、混合行列において、正解が偽であるデータに対してモデルの出力が真となった回数。
+
+Answer: 偽陽性
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+偽陽性( ** : False Positive)は、混合行列において、正解が偽であるデータに対してモデルの出力が真となった回数。
+
+Answer: FP
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (TN: True Negative)は、混合行列において、正解が偽であるデータに対してモデルの出力も偽となった回数。
+
+Answer: 真陰性
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+真陰性( ** : True Negative)は、混合行列において、正解が偽であるデータに対してモデルの出力も偽となった回数。
+
+Answer: TN
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (Accuracy)は、全体のデータ数のうち正しく分類できたデータ数の割合。 $Accuracy = \frac{TP+TN}{TP+FP+FN+TN}$ で求められる。
+
+Answer: 正解率
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (Recall)は、実際に真であったデータのうち、正しく真と分類できたデータ数の割合。 $Recall = \frac{TP}{TP+FN}$ で求められる。病気の診断のように、偽陽性の数が増えることよりも、偽陰性の数が増えることが問題となるケースで用いられる。
+
+Answer: 再現率
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** (Precision)は、真として分類したデータのうち、正しく分類できたデータ数の割合。 $Precision = \frac{TP}{TP+FP}$ で求められる。インターネットの検索エンジンのように、不要な情報を確実に取り除きたいケースで用いられる。
+
+Answer: 適合率
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ** (f-score)は、再現率と適合率のトレードオフの関係にある値。 $f-score = \frac{2 \times Recall \times Precision}{Recall + Precision}$ で求められる。すべてのデータを真と判断すれば再現率は100%となるが、これは実用的であるとはいえない。 ** は、一方が大きくなるともう一方が小さくなるため、より良い指標として用いられる。
+
+Answer: F値
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********* は、モデルの持つパラメータの中で、学習によって調整されるものではなく、手動で決める必要があるもの。ただし、通常は人間が判断して決定することは非常に難しい。
+
+Answer: ハイパーパラメータ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** は、十分に学習が行われていないことで、モデルの性能が低い状態。学習データに対する予測や分類の精度が十分に高くない場合は *** であると言える。
+
+Answer: 未学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** （オーバフィッティング）は、学習を過度に行いすぎることで、学習データに対しての精度は高いものの汎化性能が低くなってしまう状態。
+
+Answer: 過学習
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+過学習（ ********** ）は、学習を過度に行いすぎることで、学習データに対しての精度は高いものの汎化性能が低くなってしまう状態。
+
+Answer: オーバフィッティング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********* は、ハイパーパラメータのチューニングを自動化するメカニズム。
+
+Answer: オートチューニング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* は、すべてのハイパーパラメータの組み合わせの中で最も良いものを選択するオートチューニングの手法。ただし、候補の数が多くなると計算量が増大するため、モデルが複雑である場合には現実的ではない。
+
+Answer: グリッドサーチ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ******* は、ハイパーパラメータの組み合わせをランダムに試行するオートチューニングの手法。
+
+Answer: ランダムサーチ
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** （擬似アニーリング、SA）は、最初は様々なハイパーパラメータの組み合わせを広く試行し、徐々に探す範囲を狭くしながらよい組み合わせを探索する方法。
+
+Answer: 焼きなまし法
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+焼きなまし法（ ******** 、SA）は、最初は様々なハイパーパラメータの組み合わせを広く試行し、徐々に探す範囲を狭くしながらよい組み合わせを探索する方法。
+
+Answer: 擬似アニーリング
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+焼きなまし法（擬似アニーリング、 ** ）は、最初は様々なハイパーパラメータの組み合わせを広く試行し、徐々に探す範囲を狭くしながらよい組み合わせを探索する方法。
+
+Answer: SA
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ****** は、ガウス過程という回帰モデルを利用したオートチューニングの手法。試しにいくつかの組み合わせで精度を計算し、その結果を元に、更に精度が高くなりそうなパラメータの候補を推定することで効率的に探索を行う。
+
+Answer: ベイズ最適化
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ********* は、ハイパーパラメータの組み合わせを遺伝子とみなし、淘汰・交叉・突然変異などの処理を繰り返し行う（世代交代）ことで良い組み合わせを探索する手法。
+
+Answer: 遺伝的アルゴリズム
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ ***** （最適化）は、目的関数が最小化あるいは最大化するような説明変数の組み合わせを求める問題。通常は目的関数の形がわかっていないため、説明変数に適当な値を入れてみてより良い値を探したり、これらの情報から目的関数の形を予測する。
+
+説明変数の数が増えると、試行する組み合わせの数が爆発的に増加する（組み合わせ爆発）ため、 ***** を解くための工夫を加えた最適化アルゴリズムが研究されている。
+
+機械学習において最適なパラメータを求めることは、損失関数に関する ***** を解くことで、誤差を最小化するということである。損失関数は目的関数を予想して定義したものが用いられる。
+
+Answer: 最適化問題
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+
+====================
+
+ *** 問題（ *** ）は、目的関数が最小化あるいは最大化するような説明変数の組み合わせを求める問題。通常は目的関数の形がわかっていないため、説明変数に適当な値を入れてみてより良い値を探したり、これらの情報から目的関数の形を予測する。
+
+説明変数の数が増えると、試行する組み合わせの数が爆発的に増加する（組み合わせ爆発）ため、 *** 問題を解くための工夫を加えた *** アルゴリズムが研究されている。
+
+機械学習において最適なパラメータを求めることは、損失関数に関する *** 問題を解くことで、誤差を最小化するということである。損失関数は目的関数を予想して定義したものが用いられる。
+
+Answer: 最適化
+
+Source: ../../note/artificial_intelligence/_/chapters/machine_learning.md
+

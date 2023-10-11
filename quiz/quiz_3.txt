@@ -1,0 +1,892 @@
+====================
+
+ ****** は、SGDに慣性の概念を加えたアルゴリズムで、直前の勾配を考慮した項を加えることで収束までの時間を短縮することができる。
+
+Answer: モーメンタム
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ******* は、SGDにおいて学習が進むにつれて学習率を自動的に小さくしていくアルゴリズムで、パラメータが発散することを防ぐ。
+
+Answer: Adagrad
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ******* は、Adagradを改良したアルゴリズムで、勾配の合計を指数移動平均することで、より最近の勾配を重視することができる。
+
+Answer: RMSprop
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、RMSpropとモーメンタムを組み合わせたアルゴリズムで、それぞれの恩恵を受けることができる。
+
+Answer: Adam
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、誤差逆伝搬法によってパラメータを更新する際に、レイヤを通過するたびに勾配が小さくなっていき、前段の層のパラメータの収束に時間がかかる問題。勾配は各ノードにおける活性化関数の微分により算出できるが、この値が $1$ よりも小さい場合は徐々に勾配が小さくなっていく。
+
+シグモイド関数を微分した関数は最大値が $0.25$ と小さく、 ****** が発生しやすいため、隠れ層の活性化関数としてはReLU関数がよく用いられている。
+
+Answer: 勾配消失問題
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、誤差逆伝搬法によってパラメータを更新する際に、レイヤを通過するたびに勾配が大きくなっていき、前段の層のパラメータの更新時に発散してしまう問題。
+
+Answer: 勾配爆発問題
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ***** は、入力を重み付けした和を別の値に変形させる関数のことで、非線形関数が用いられる。 ***** を用いないパーセプトロンやニューラルネットワークは、出力が各層の重みづけを行った入力の線形関数で表現されるため、線形分離可能な問題にしか対応できない。
+
+Answer: 活性化関数
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、入力が $0$ より大きければ $1$ 、 $0$ 以下であれば $0$ を出力するような関数。初期のパーセプトロンの活性化関数として用いられていた。
+
+Answer: ステップ関数
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ******* は、最小値が $0$ で最大値が $1$ となるようなS字曲線の関数で、最終的な確率を出力するような場合に有用。ただし、勾配が $0$ に近い値となることが多く、学習がうまく進まないという問題（勾配消失問題）がある。
+
+Answer: シグモイド関数
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** （ハイパボリックタンジェント関数）は、最小値が $-1$ で最大値が $1$ となるようなS字曲線の関数。シグモイド関数に比べて勾配消失問題が軽減される。
+
+Answer: tanh関数
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** (Rectified Linear Unit)は、負の入力は $0$ として、それ以外の入力はそのまま出力する関数。勾配消失問題が起きにくいため、よく用いられている。
+
+Answer: ReLU関数
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ******* は、一定の確率で中間層の一部を無視して学習を行うことで、過学習を防止する手法。
+
+Answer: ドロップアウト
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、あるタスクに最適化されているニューラルネットワークモデルを、類似した別のタスクに応用するために調整する学習方法。 **** がうまくいけば、学習に必要な時間が大幅に削減できる。
+
+Answer: 転移学習
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ********** は、既に学習済みのニューラルネットワークモデルの後段の層のパラメータのみを学習し直し、タスクに最適化させる手法。
+
+Answer: ファインチューニング
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、転移学習において、元のモデルが解決しようとしていたタスクと転移先のタスクがそれほど似ていなかった場合に、通常より性能の悪いモデルが完成してしまう現象。
+
+Answer: 負の転移
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、ニューラルネットワークにおいて本来特化させたいタスクとは別の出力を設けることで、モデルがあるタスクにフィッティングしすぎることを防ぐ手法。これにより、モデルを転移学習に利用しやすくする。
+
+Answer: ドメイン混合
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ******** は、複数のタスクに関する学習を同時に行う手法。
+
+Answer: マルチタスク学習
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ********** は、分類問題において、あるラベルの訓練データがひとつ（あるいは小数）しかなくても正しく分類ができるような学習方法。
+
+Answer: One-shot学習
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ *********** は、分類問題において、あるラベルの訓練データがひとつもなくても正しく分類ができるような学習方法。
+
+Answer: Zero-shot学習
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、あるデータの特徴量から、情報量の少ない特徴量を削除したり、いくつかの特徴量からそれらを複合した新しい特徴量を合成したりする方法。ニューラルネットワークの出力層をそのほかのモデル（SVMなど）につなげることで、 **** 器としても用いることができる。
+
+Answer: 特徴抽出
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、画像認識や音声認識といった、学習データから一定のパターンを見つけ出すことによって未知データを解析する方法。
+
+Answer: パターン認識
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ ****** は、人が用いる言語をテキストとしてコンピュータに処理させるタスク。
+
+Answer: 自然言語処理
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、ひとつの単語を低次元のベクトルとして表現することで、コンピュータで処理できるようにする手法。
+
+Answer: 分散表現
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network.md
+
+====================
+
+ **** は、ニューラルネットワークに用いられるレイヤのひとつで、前の層の出力全てと結合するようなノードからなる。
+
+Answer: 全結合層
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** （畳み込みニューラルネットワーク）は、平面・空間上で隣り合う特徴量を考慮して学習を行う機構を持ったニューラルネットワーク。
+
+Answer: CNN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+CNN（ *************** ）は、平面・空間上で隣り合う特徴量を考慮して学習を行う機構を持ったニューラルネットワーク。
+
+Answer: 畳み込みニューラルネットワーク
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ***** は、畳み込みフィルタによって平面・空間上のある範囲に反応するフィルタを用いて新しい特徴マップを作るレイヤ。データの特徴量の端の部分からフィルタを適用し、フィルタをずらしていくことで特徴マップを作成する。
+
+Answer: 畳み込み層
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+畳み込み層は、畳み込みフィルタによって平面・空間上のある範囲に反応するフィルタを用いて新しい ***** を作るレイヤ。データの特徴量の端の部分からフィルタを適用し、フィルタをずらしていくことで ***** を作成する。
+
+Answer: 特徴マップ
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ****** は、平面・空間上のある範囲（ウィンドウ）のうち値を1つだけ抽出することで特徴量を削減するレイヤ。マックスプーリングでは、ウィンドウ上で最大の値だけを抽出する。
+
+Answer: プーリング層
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+プーリング層は、平面・空間上のある範囲（ウィンドウ）のうち値を1つだけ抽出することで特徴量を削減するレイヤ。 ********* では、ウィンドウ上で最大の値だけを抽出する。
+
+Answer: マックスプーリング
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** （再帰型ニューラルネットワーク）は、時系列データを再帰的に処理する機構を持ったニューラルネットワーク。ニューラルネットワークがループ状に接続されるような構造となっており、古いデータを処理したときの情報を次のデータを処理する際に引き継ぐ。
+
+Answer: RNN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+RNN（ ************** ）は、時系列データを再帰的に処理する機構を持ったニューラルネットワーク。ニューラルネットワークがループ状に接続されるような構造となっており、古いデータを処理したときの情報を次のデータを処理する際に引き継ぐ。
+
+Answer: 再帰型ニューラルネットワーク
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** は、RNNのモデル中でループで繋がれているレイヤ。
+
+Answer: 再帰セル
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** （隠れ状態）は、再帰セルが保持する情報。
+
+Answer: 内部状態
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** (Long Short Term Memory)は、再帰セルの構造のひとつで、古い情報の記憶が薄れていく（内部情報には直近のデータの状態が反映されやすく、最初のデータの情報は徐々に消えていく）という再帰セルの弱点を軽減している。また、時間方向の勾配消失問題を軽減し、学習が効率よく進む。 **** には情報の伝わり方を調整するための3つのゲートが設けられている。
+
+忘却ゲートでは前の情報をどれだけ切り捨てるかを調整し、入力ゲートでは新しい情報をどれだけ取り込むかを調整し、出力ゲートでは情報をどれだけ出力するかを調整する。
+
+Answer: LSTM
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+LSTM(Long Short Term Memory)は、再帰セルの構造のひとつで、古い情報の記憶が薄れていく（内部情報には直近のデータの状態が反映されやすく、最初のデータの情報は徐々に消えていく）という再帰セルの弱点を軽減している。また、時間方向の勾配消失問題を軽減し、学習が効率よく進む。LSTMには情報の伝わり方を調整するための3つの *** が設けられている。
+
+忘却 *** では前の情報をどれだけ切り捨てるかを調整し、入力 *** では新しい情報をどれだけ取り込むかを調整し、出力 *** では情報をどれだけ出力するかを調整する。
+
+Answer: ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+LSTM(Long Short Term Memory)は、再帰セルの構造のひとつで、古い情報の記憶が薄れていく（内部情報には直近のデータの状態が反映されやすく、最初のデータの情報は徐々に消えていく）という再帰セルの弱点を軽減している。また、時間方向の勾配消失問題を軽減し、学習が効率よく進む。LSTMには情報の伝わり方を調整するための3つのゲートが設けられている。
+
+ ***** では前の情報をどれだけ切り捨てるかを調整し、入力ゲートでは新しい情報をどれだけ取り込むかを調整し、出力ゲートでは情報をどれだけ出力するかを調整する。
+
+Answer: 忘却ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+LSTM(Long Short Term Memory)は、再帰セルの構造のひとつで、古い情報の記憶が薄れていく（内部情報には直近のデータの状態が反映されやすく、最初のデータの情報は徐々に消えていく）という再帰セルの弱点を軽減している。また、時間方向の勾配消失問題を軽減し、学習が効率よく進む。LSTMには情報の伝わり方を調整するための3つのゲートが設けられている。
+
+忘却ゲートでは前の情報をどれだけ切り捨てるかを調整し、 ***** では新しい情報をどれだけ取り込むかを調整し、出力ゲートでは情報をどれだけ出力するかを調整する。
+
+Answer: 入力ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+LSTM(Long Short Term Memory)は、再帰セルの構造のひとつで、古い情報の記憶が薄れていく（内部情報には直近のデータの状態が反映されやすく、最初のデータの情報は徐々に消えていく）という再帰セルの弱点を軽減している。また、時間方向の勾配消失問題を軽減し、学習が効率よく進む。LSTMには情報の伝わり方を調整するための3つのゲートが設けられている。
+
+忘却ゲートでは前の情報をどれだけ切り捨てるかを調整し、入力ゲートでは新しい情報をどれだけ取り込むかを調整し、 ***** では情報をどれだけ出力するかを調整する。
+
+Answer: 出力ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** (Gated Recurrent Unit)は、再帰セルの構造のひとつで、LSTMの構造を単純化している。 *** には情報の伝わり方を調整するための2つのゲートが設けられている。
+
+リセットゲートでは情報をどれだけ切り捨てるかを調整し、更新ゲートでは情報をどれだけ取り込むかを調整する。
+
+Answer: GRU
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+GRU(Gated Recurrent Unit)は、再帰セルの構造のひとつで、LSTMの構造を単純化している。GRUには情報の伝わり方を調整するための2つの *** が設けられている。
+
+リセット *** では情報をどれだけ切り捨てるかを調整し、更新 *** では情報をどれだけ取り込むかを調整する。
+
+Answer: ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+GRU(Gated Recurrent Unit)は、再帰セルの構造のひとつで、LSTMの構造を単純化している。GRUには情報の伝わり方を調整するための2つのゲートが設けられている。
+
+ ******* では情報をどれだけ切り捨てるかを調整し、更新ゲートでは情報をどれだけ取り込むかを調整する。
+
+Answer: リセットゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+GRU(Gated Recurrent Unit)は、再帰セルの構造のひとつで、LSTMの構造を単純化している。GRUには情報の伝わり方を調整するための2つのゲートが設けられている。
+
+リセットゲートでは情報をどれだけ切り捨てるかを調整し、 ***** では情報をどれだけ取り込むかを調整する。
+
+Answer: 更新ゲート
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ****** は、前のデータの情報だけでなく、後ろのデータの情報も用いることで予測精度を向上させたRNN。
+
+Answer: 双方向RNN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ******* (sequence-to-sequence)は、自然言語処理に特化した双方向RNNモデル。
+
+ある単語系列をRNN(Encoder)に入力し、Encoderの最終的な内部状態を別のRNN(Decoder)に入力として渡すことで、新しい単語系列を出力させる。これにより機械翻訳などを実現している。
+
+Answer: Seq2Seq
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+Seq2Seq(sequence-to-sequence)は、自然言語処理に特化した双方向RNNモデル。
+
+ある単語系列をRNN( ******* )に入力し、 ******* の最終的な内部状態を別のRNN(Decoder)に入力として渡すことで、新しい単語系列を出力させる。これにより機械翻訳などを実現している。
+
+Answer: Encoder
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+Seq2Seq(sequence-to-sequence)は、自然言語処理に特化した双方向RNNモデル。
+
+ある単語系列をRNN(Encoder)に入力し、Encoderの最終的な内部状態を別のRNN( ******* )に入力として渡すことで、新しい単語系列を出力させる。これにより機械翻訳などを実現している。
+
+Answer: Decoder
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** (Embeddings from Language Models)は、双方向LSTMを用いた自然言語処理のモデルで、ある単語をその前後の文脈を考慮してベクトルに変換する。純粋な分散表現では、ひとつの単語をそのままベクトルとして表現するため、文脈の違いや多義語に対する認識性能が低いという欠点があった。
+
+Answer: ELMo
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ********* （注意機構）は、入力された時系列データのすべての内部状態を参照し、それらに重みをつけて着目すべき部分を変化させる機構。Seq2Seqでは、最終的な内部状態だけをEncoderからDecoderに渡していたため、情報のボトルネックが生じてしまっていた。 ********* はこのような弱点を克服し、翻訳精度を上げることに成功している。
+
+また、RNNのような前の出力をモデルに再帰的に入力するような方法では、学習を並列化させることができないため最適化に時間がかかるという欠点があったが、 ********* を用いることでこれも解決できる。
+
+Answer: Attention
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+Attention（ **** ）は、入力された時系列データのすべての内部状態を参照し、それらに重みをつけて着目すべき部分を変化させる機構。Seq2Seqでは、最終的な内部状態だけをEncoderからDecoderに渡していたため、情報のボトルネックが生じてしまっていた。Attentionはこのような弱点を克服し、翻訳精度を上げることに成功している。
+
+また、RNNのような前の出力をモデルに再帰的に入力するような方法では、学習を並列化させることができないため最適化に時間がかかるという欠点があったが、Attentionを用いることでこれも解決できる。
+
+Answer: 注意機構
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *********** は、Attentionを応用したSelf-Attention機構を持つニューラルネットワークのモデル。Self-Attentionは自然言語処理のタスクにおいて、ある単語がその文章中のどの単語と結びつきが強いのか、という情報を明らかにするレイヤ。基本形はSeq2Seqと同様Encoder-Decoderのモデルであるが、Encoderのみを取り出したものもある。
+
+Answer: Transformer
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+Transformerは、Attentionを応用した ************** 機構を持つニューラルネットワークのモデル。 ************** は自然言語処理のタスクにおいて、ある単語がその文章中のどの単語と結びつきが強いのか、という情報を明らかにするレイヤ。基本形はSeq2Seqと同様Encoder-Decoderのモデルであるが、Encoderのみを取り出したものもある。
+
+Answer: Self-Attention
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** (Bidirectional Encoder Representations from Transformers)は、Googleが開発した自然言語処理のモデルで、Transformerを用いて双方向に単語をエンコードする。双方向RNNやELMoと同様、前後の文脈から単語の意味を推測することができる。
+
+Answer: BERT
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ******** （自己符号化器）は、教師なし学習の手法のひとつで、ニューラルネットワークの入力と同じ出力を行うようにモデルを学習する方法。中間層のサイズを入力層よりも小さくしておくことで、学習後のモデルの中間層には入力された特徴量を圧縮した情報が存在する状態となる。最終的に出力層（あるいは後段の層）を取り除くことで、ニューラルネットワークを特徴抽出器として利用することができる。
+
+Answer: オートエンコーダ
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+オートエンコーダ（ ****** ）は、教師なし学習の手法のひとつで、ニューラルネットワークの入力と同じ出力を行うようにモデルを学習する方法。中間層のサイズを入力層よりも小さくしておくことで、学習後のモデルの中間層には入力された特徴量を圧縮した情報が存在する状態となる。最終的に出力層（あるいは後段の層）を取り除くことで、ニューラルネットワークを特徴抽出器として利用することができる。
+
+Answer: 自己符号化器
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** （変分自己符号化器: Variational Autoencoder）は、オートエンコーダにおいて中間層の潜在変数に確率分布を用いることで、未知のデータに対しても確率的に応用できる。オートエンコーダは入力データと同じデータを出力することしかできないが、 *** は確率的に様々なデータを生成することができる。
+
+Answer: VAE
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+VAE（ ******** : Variational Autoencoder）は、オートエンコーダにおいて中間層の潜在変数に確率分布を用いることで、未知のデータに対しても確率的に応用できる。オートエンコーダは入力データと同じデータを出力することしかできないが、VAEは確率的に様々なデータを生成することができる。
+
+Answer: 変分自己符号化器
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** （敵対的生成ネットワーク: Generative Adversarial Network）は、データから特徴を学ぶことで実在しない偽造データを生成するGeneratorと、データが本物であるか偽造データであるかを識別するDiscriminatorからなるネットワーク。
+
+学習の方向性によっては、生成されるデータに偏りができるモード崩壊を起こす可能性がある。そういった場合は、ハイパーパラメータのチューニングなどを見直す必要がある。
+
+Answer: GAN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+GAN（ *********** : Generative Adversarial Network）は、データから特徴を学ぶことで実在しない偽造データを生成するGeneratorと、データが本物であるか偽造データであるかを識別するDiscriminatorからなるネットワーク。
+
+学習の方向性によっては、生成されるデータに偏りができるモード崩壊を起こす可能性がある。そういった場合は、ハイパーパラメータのチューニングなどを見直す必要がある。
+
+Answer: 敵対的生成ネットワーク
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+GAN（敵対的生成ネットワーク: Generative Adversarial Network）は、データから特徴を学ぶことで実在しない偽造データを生成するGeneratorと、データが本物であるか偽造データであるかを識別するDiscriminatorからなるネットワーク。
+
+学習の方向性によっては、生成されるデータに偏りができる ***** を起こす可能性がある。そういった場合は、ハイパーパラメータのチューニングなどを見直す必要がある。
+
+Answer: モード崩壊
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+強化学習のアルゴリズムは大きく ****** とモデルフリーに大別できる。さらに ****** の学習は、方策ベースと価値ベースのアルゴリズムに分類できる。
+
+Answer: モデルベース
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+強化学習のアルゴリズムは大きくモデルベースと ****** に大別できる。さらにモデルベースの学習は、方策ベースと価値ベースのアルゴリズムに分類できる。
+
+Answer: モデルフリー
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+強化学習のアルゴリズムは大きくモデルベースとモデルフリーに大別できる。さらにモデルベースの学習は、 ***** と価値ベースのアルゴリズムに分類できる。
+
+Answer: 方策ベース
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+強化学習のアルゴリズムは大きくモデルベースとモデルフリーに大別できる。さらにモデルベースの学習は、方策ベースと ***** のアルゴリズムに分類できる。
+
+Answer: 価値ベース
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** は、価値ベースの強化学習手法で、対応表（Qテーブル）を用いてある状態においてある行動をとることがどれほど価値があるかを学習する。状態と行動の選択肢が増えると、Qテーブルが膨大になってしまうという欠点がある。
+
+Answer: Q学習
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ *** (Deep Q-Network)は、Q学習のテーブルをニューラルネットワークに置き替えたもの。状態を入力すると、それに対して各行動をとったときの価値が出力される。
+
+Answer: DQN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **************** は、DQNにおいて、行動や行動前後の状態、報酬を記録しておき、その記録を何度も学習に生かせる機能。
+
+Answer: Experience Reply
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ******** は、価値ベースの強化学習におけるエージェントの行動選択のアルゴリズムのひとつで、最適行動価値関数がわかっていると仮定したときに、現在の状態に対して最適行動価値関数が最大となるような行動を選択する方法。
+
+学習中は最適行動価値関数が確定していないため、 $\epsilon$ の確率でランダムな行動を選択し、 $1 - \epsilon$ の確率で最適な行動を選択するε- ******** が用いられる。
+
+Answer: greedy方策
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+greedy方策は、価値ベースの強化学習におけるエージェントの行動選択のアルゴリズムのひとつで、最適行動価値関数がわかっていると仮定したときに、現在の状態に対して最適行動価値関数が最大となるような行動を選択する方法。
+
+学習中は最適行動価値関数が確定していないため、 $\epsilon$ の確率でランダムな行動を選択し、 $1 - \epsilon$ の確率で最適な行動を選択する ********** が用いられる。
+
+Answer: ε-greedy方策
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ***** は、方策ベースの強化学習におけるエージェントの行動選択のアルゴリズムのひとつで、方策をパラメータで表された関数として、パラメータを最適化することで方策を学習する方法。
+
+Answer: 方策勾配法
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ********* は、方策勾配法の代表的なアルゴリズムで、最初に行動を繰り返して状態・行動・報酬のデータを収集し、高い報酬を得ることのつながった行動の確率を高くする手法。
+
+Answer: REINFORCE
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ************ は、方策ベースのモデルであるActor（状態を入力として各行動の確率を出力する）と、価値ベースのモデルであるCritic（状態を入力として状態価値を出力する）を組み合わせて学習を進める。
+
+Answer: Actor-Critic
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** は、画像の中に何が写っている物体を認識する技術。バウンディングボックスという矩形の範囲を生成し、その中に含まれる物体のラベルを出力する、というタスクを行う。
+
+ **** は、注目領域の決定と物体のラベル推測という2つのタスクを解決する必要がある。sliding window methodやregion proposal methodは注目領域決定のためのアルゴリズムで、end-to-endは注目領域決定と物体のラベル推測をまとめて行うアルゴリズム。
+
+Answer: 物体検出
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+物体検出は、画像の中に何が写っている物体を認識する技術。 *********** という矩形の範囲を生成し、その中に含まれる物体のラベルを出力する、というタスクを行う。
+
+物体検出は、注目領域の決定と物体のラベル推測という2つのタスクを解決する必要がある。sliding window methodやregion proposal methodは注目領域決定のためのアルゴリズムで、end-to-endは注目領域決定と物体のラベル推測をまとめて行うアルゴリズム。
+
+Answer: バウンディングボックス
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ********************* は、いくつかの大きさのウィンドウをスライドさせながら、画像の全領域を網羅するように切り抜き、それらすべてのラベルを推測する手法。物体の切り抜き漏れはないが、膨大な計算量がかかる。
+
+Answer: sliding window method
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ********************** は、画像中で物体がありそうな領域を提案するアルゴリズムを用いて、その部分についてラベルを推測する手法。sliding window methodに比べて大幅に計算量を削減できる。
+
+Answer: region proposal method
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ ********** は、注目領域決定とラベル推測のタスクをひとつのニューラルネットワークで行う手法。代表的なアルゴリズムとして、Faster R-CNN、SSD、Yoloといったものがある。
+
+| アルゴリズム | 識別精度 | 処理速度 | |--------------|----------|----------| | Faster R-CNN | 高       | 低       | | SSD          | 中       | 中       | | Yolo         | 低       | 高       |
+
+Answer: end-to-end
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+end-to-endは、注目領域決定とラベル推測のタスクをひとつのニューラルネットワークで行う手法。代表的なアルゴリズムとして、 ************ 、SSD、Yoloといったものがある。
+
+| アルゴリズム | 識別精度 | 処理速度 | |--------------|----------|----------| |  ************  | 高       | 低       | | SSD          | 中       | 中       | | Yolo         | 低       | 高       |
+
+Answer: Faster R-CNN
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+end-to-endは、注目領域決定とラベル推測のタスクをひとつのニューラルネットワークで行う手法。代表的なアルゴリズムとして、Faster R-CNN、 *** 、Yoloといったものがある。
+
+| アルゴリズム | 識別精度 | 処理速度 | |--------------|----------|----------| | Faster R-CNN | 高       | 低       | |  ***           | 中       | 中       | | Yolo         | 低       | 高       |
+
+Answer: SSD
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+end-to-endは、注目領域決定とラベル推測のタスクをひとつのニューラルネットワークで行う手法。代表的なアルゴリズムとして、Faster R-CNN、SSD、 **** といったものがある。
+
+| アルゴリズム | 識別精度 | 処理速度 | |--------------|----------|----------| | Faster R-CNN | 高       | 低       | | SSD          | 中       | 中       | |  ****          | 低       | 高       |
+
+Answer: Yolo
+
+Source: ../../note/artificial_intelligence/_/chapters/neural_network_algorithm.md
+
+====================
+
+ **** は、コンピュータが扱うデータの一種で、2進数で表現されたデータ（ビット列）を指す。 **** はコンピュータが理解できる唯一のデータ形式で、人間が直接解釈するのは難しい。
+
+コンピュータはプログラムを実行する際、その命令やプログラム中で使用されるデータをメモリ内に **** 形式で格納しており、これらの **** を解釈しながら処理を行う。
+
+Answer: バイナリ
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ *** (bit)は、コンピュータ内部で扱われるデータの最小単位で、 $0$ か $1$ のどちらかの値を持つ。 *** という言葉は"Binary digit"からきており、コンピュータ内のすべての情報は *** 列（バイナリ）で表現される。コンピュータは、この *** 単位の論理演算の組み合わせにより様々な処理を行っている。
+
+Answer: ビット
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ *** (byte)は、コンピュータ内部で扱われるデータの単位のひとつで、8ビットを1つにまとめたもの。1 *** （=8ビット）は256通りの情報を表現することができる。コンピュータが扱うファイルのサイズは一般的に *** 単位で表現される。
+
+Answer: バイト
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ *** は、コンピュータ内部で扱われるデータの単位のひとつで、CPUやレジスタ、メモリなどでデータを扱う際の基本単位となる。通常は16ビット（2バイト）か32ビット（4バイト）、あるいは64ビット（8バイト）の長さを持つ。
+
+ *** の長さ（ *** サイズ）は、CPUのアーキテクチャや設計によって異なる。16ビットの *** を使用するCPUは16ビットCPU、32ビットの *** を使用するCPUは32ビットCPUのように呼ばれ、現在では64ビットのCPUが主流となっている。 *** サイズが大きいCPUほど一度に扱えるデータ量が大きくなるため、より高速な処理が可能となる。
+
+プログラミングにおける基本データ型も、一般的にはコンピュータの *** サイズに合わせた大きさとなっている。例えば、C言語では int 型は32ビット、 short 型は16ビットの情報を格納するための型となっている。
+
+Answer: ワード
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ワードは、コンピュータ内部で扱われるデータの単位のひとつで、CPUやレジスタ、メモリなどでデータを扱う際の基本単位となる。通常は16ビット（2バイト）か32ビット（4バイト）、あるいは64ビット（8バイト）の長さを持つ。
+
+ワードの長さ（ ****** ）は、CPUのアーキテクチャや設計によって異なる。16ビットのワードを使用するCPUは16ビットCPU、32ビットのワードを使用するCPUは32ビットCPUのように呼ばれ、現在では64ビットのCPUが主流となっている。 ****** が大きいCPUほど一度に扱えるデータ量が大きくなるため、より高速な処理が可能となる。
+
+プログラミングにおける基本データ型も、一般的にはコンピュータの ****** に合わせた大きさとなっている。例えば、C言語では int 型は32ビット、 short 型は16ビットの情報を格納するための型となっている。
+
+Answer: ワードサイズ
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ *** （最上位ビット: Most Significant Bit）は、ビット列において一番左のビットを指す用語。
+
+2進数の正負の数の表現においては、 *** が $0$ の場合はその数は正の数として、 $1$ の場合は負の数として扱われる。
+
+ビッグエンディアン方式のデータ表現においては、 *** がデータの先頭となる。
+
+Answer: MSB
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+MSB（ ****** : Most Significant Bit）は、ビット列において一番左のビットを指す用語。
+
+2進数の正負の数の表現においては、MSBが $0$ の場合はその数は正の数として、 $1$ の場合は負の数として扱われる。
+
+ビッグエンディアン方式のデータ表現においては、MSBがデータの先頭となる。
+
+Answer: 最上位ビット
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ *** （最下位ビット: Least Significant Bit）は、ビット列において一番右のビットを指す用語。
+
+リトルエンディアン方式のデータ表現においては、 *** がデータの先頭となる。
+
+Answer: LSB
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+LSB（ ****** : Least Significant Bit）は、ビット列において一番右のビットを指す用語。
+
+リトルエンディアン方式のデータ表現においては、LSBがデータの先頭となる。
+
+Answer: 最下位ビット
+
+Source: ../../note/basics/_/chapters/computer_and_number.md
+
+====================
+
+ **** は、未知変数を含む方程式を因数の積として表現することで、複雑な式を簡易化する方法。因数は約数のことで、ある数を割り切ることができる数。 **** では、数式を共通因数でくくりだしたり、乗法公式を用いたりする。
+
+Answer: 因数分解
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ ** 分解は、未知変数を含む方程式を ** の積として表現することで、複雑な式を簡易化する方法。 ** は約数のことで、ある数を割り切ることができる数。 ** 分解では、数式を共通 ** でくくりだしたり、乗法公式を用いたりする。
+
+Answer: 因数
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ **** は、積の形の式と和や差の形の式を変換する公式。 **** を用いることで、式を展開したり、因数分解を行ったりできる。
+
+$$ \begin{eqnarray} x^2 + (a + b)x + ab     & = & (x + a)(x + b) x^2 + 2ax + a^2         & = & (x + a)^2 x^2 - 2ax + a^2         & = & (x - a)^2 x^2 - a^2               & = & (x + a)(x - a) acx^2 + (ad + bc)x + bd & = & (ax + b)(cx + d) \end{eqnarray} $$
+
+Answer: 乗法公式
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ ***** は、ある正の整数を素数の積の形で表す方法。対象の数を割り切れる最小の素数で割り、その商をさらに割り切れる最小の素数で割る、といった操作を繰り返す。そして、商が素数になった時点で、対象の数をそれまで割ってきた素数の積で表す。
+
+例えば、 $180$ を ***** すると次のようになる。
+
+$$ 180 = 2 \times 2 \times 3 \times 3 \times 5 = 2^2 \times 3^2 \times 5 $$
+
+Answer: 素因数分解
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ ** は、 $2$ 以上の自然数のうち、 正の約数が $1$ と自分自身のみのもの。 ** でない数のことを合成数という。 ** は $2$ を初項とした次のような無限数列である。
+
+$$ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, \cdots $$
+
+Answer: 素数
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+素数は、 $2$ 以上の自然数のうち、 正の約数が $1$ と自分自身のみのもの。素数でない数のことを *** という。素数は $2$ を初項とした次のような無限数列である。
+
+$$ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, \cdots $$
+
+Answer: 合成数
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ ** は、ある関数 $f(x)$ の導関数 $f'(x)$ を求める演算。関数 $y = f(x)$ を $x$ について ** することを次のように表す。
+
+$$ f'(x) = \frac{dy}{dx} = \frac{d}{dx}f(x) $$
+
+Answer: 微分
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ *** は、関数 $y = f(x)$ のある点における瞬間の変化率（接線の傾き）を求める関数。 *** は次のような定義で表される。
+
+$$ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+
+Answer: 導関数
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ **** は、関数 $y = f(x)$ の導関数 $f'(x)$ の、 $x = a$ における値。
+
+$$ f'(a) = \lim_{b \to a} \frac{f(b) - f(a)}{b - a} $$
+
+Answer: 微分係数
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ ** は、微分と対をなす演算で、微分するとある関数 $f'(x)$ となるような関数 $f(x)$ を求める演算。 ** を用いることで、ある関数が描く面積を求めることができる。ある関数 $f(x)$ を $x$ で ** することを次のように表す。
+
+$$ \int f(x) dx $$
+
+Answer: 積分
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+
+====================
+
+ **** は、微分したら $f(x)$ となるような関数 $F(x) = \int f(x) dx$ を求める演算。定数項は微分されると $0$ になり、どのような値となるかが定まらないため、 積分定数 $C$ として記す。
+
+Answer: 不定積分
+
+Source: ../../note/basics/applied_mathematics/_/chapters/formal_processing.md
+

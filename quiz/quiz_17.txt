@@ -1,0 +1,902 @@
+====================
+
+ ******************* （具体的な実装者）は、Bridgeパターンの実装のクラス階層において、Implementorのメソッドの具体的な実装を持つクラス。 ******************* のインスタンスはAbstractionのフィールドとして保持される。
+
+Answer: ConcreteImplementor
+
+Source: ../../note/development/design_pattern/_/chapters/bridge.md
+
+====================
+
+ *********** は、コンストラクタに対して数多くのパラメータをセットする必要がある場合や、多くのオプションを持つ場合に、段階を踏んでインスタンスを組み上げていくデザインパターン。パラメータが多い場合、その順番を正確に覚えることが難しくなったり、複数のオプションのうち限られたもののみを利用したい場合に冗長になったりするが、 *********** を用いることで簡潔な記述ができるようになる。また、このパターンの適用によりコンストラクタの肥大化や複雑化を軽減することができる。
+
+ *********** は、Builder、ConcreteBuilder、Directorから構成される。
+
+Answer: Builderパターン
+
+Source: ../../note/development/design_pattern/_/chapters/builder.md
+
+====================
+
+ ******* （建築者）は、 ******* パターンにおいて、インスタンスを生成するためのインタフェースを定める役。 ******* には、インスタンスの各部分を作るためのメソッドが用意される。
+
+Answer: Builder
+
+Source: ../../note/development/design_pattern/_/chapters/builder.md
+
+====================
+
+ *************** （具体的建築者）は、Builderパターンにおいて、Builderが定義するインタフェースの具体的な実装を持つクラス。実際のインスタンス生成で呼び出されるメソッドがここで定義される。また、最終的に構築された結果を得るためのメソッドも必要となる。
+
+Answer: ConcreteBuilder
+
+Source: ../../note/development/design_pattern/_/chapters/builder.md
+
+====================
+
+ ******** （監督者）は、Builderパターンにおいて、Builderのインタフェースを使ってインスタンスを生成する役。ConcreteBuilderに依存した実装は行わず、Builderのメソッドのみを使用する。このパターンを利用するプログラムが直接この役を担ったり、頻出するBuilderの構築ステップをまとめたクラスとして実現したりする。
+
+Answer: Director
+
+Source: ../../note/development/design_pattern/_/chapters/builder.md
+
+====================
+
+ *************************** は、ある要求の受け取り対象となる複数のオブジェクトを鎖のように繋ぎ、要求が発生した際に各オブジェクトを渡り歩いて、いずれかの段階で処理されることを表現するデザインパターン。このパターンを利用するプログラムは、要求を処理するオブジェクトの存在を意識することなく、連鎖関係の一番最初にいる（受付となる）オブジェクトに対して要求を投げればよくなるため、役割の分離がしやすくなる。
+
+ *************************** は、Handler、ConcreteHandlerから構成される。
+
+Answer: Chain of Responsibilityパターン
+
+Source: ../../note/development/design_pattern/_/chapters/chain_of_responsibility.md
+
+====================
+
+ ******* は、Chain of Responsibilityパターンにおいて、要求を処理するメソッドを定義したインタフェースや抽象クラス。自身で処理できない要求の場合に受け流す先（Concrete ******* ）をフィールドとして持つ。
+
+Answer: Handler
+
+Source: ../../note/development/design_pattern/_/chapters/chain_of_responsibility.md
+
+====================
+
+ *************** は、Chain of Responsibilityパターンにおいて、Handlerが定義するインタフェースの具体的な実装を持つクラス。実際に要求を自身で処理するか、次のオブジェクトに要求を渡す。
+
+Answer: ConcreteHandler
+
+Source: ../../note/development/design_pattern/_/chapters/chain_of_responsibility.md
+
+====================
+
+ *********** （Eventパターン）は、命令をひとつのオブジェクトとして表現することにより、命令の集まりから履歴の管理や、複数の命令をまとめた新しい命令の作成をできるようにしたデザインパターン。さらに、命令自体を関数の引数として渡したり、実行の遅延や待ち行列の利用、取り消し操作などを実現することができる。
+
+ *********** は、Command、ConcreteCommand、Receiver、Invokerから構成される。
+
+Answer: Commandパターン
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+Commandパターン（ ********* ）は、命令をひとつのオブジェクトとして表現することにより、命令の集まりから履歴の管理や、複数の命令をまとめた新しい命令の作成をできるようにしたデザインパターン。さらに、命令自体を関数の引数として渡したり、実行の遅延や待ち行列の利用、取り消し操作などを実現することができる。
+
+Commandパターンは、Command、ConcreteCommand、Receiver、Invokerから構成される。
+
+Answer: Eventパターン
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+ ******* （命令）は、 ******* パターンにおいて、命令が持つメソッドを定義するインタフェース。
+
+Answer: Command
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+ *************** （具体的命令）は、Commandパターンにおいて、Commandが定義するインタフェースの具体的な実装を持つクラス。フィールドに別のオブジェクトを持っておき、具体的な処理を任せることもできる。
+
+Answer: ConcreteCommand
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+ ******** （受信者）は、Commandパターンにおいて、Commandが命令を実行するときの処理対象となるオブジェクト。
+
+Answer: Receiver
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+ ******* （起動者）は、Commandパターンにおいて、Commandが定義するインタフェースを呼び出し、実際に命令を実行する役。Commandのオブジェクトを組み合わせたり、履歴を管理するためのメソッドを提供したりする。
+
+Answer: Invoker
+
+Source: ../../note/development/design_pattern/_/chapters/command.md
+
+====================
+
+ ************* は、木構造を持つデータに対して再帰的な処理を行うために、容器と中身を同一視するデザインパターン。例えば、ファイルシステムにおいて、ファイルとディレクトリは、どちらもディレクトリの中に入ることができるもの（ディレクトリエントリ）としてまとめることができる。このとき、ディレクトリはディレクトリエントリを入れるための容器でもあり、ディレクトリエントリ自身であることもできるため、容器と中身が同一視されている。
+
+ ************* は、Component、Leaf、Compositeから構成される。
+
+Answer: Compositeパターン
+
+Source: ../../note/development/design_pattern/_/chapters/composite.md
+
+====================
+
+ ********* は、Compositeパターンにおいて、LeafとCompositeの役を同一視するための抽象化構造。LeafとCompositeの共通のスーパークラスやインタフェースとして実現する。
+
+Answer: Component
+
+Source: ../../note/development/design_pattern/_/chapters/composite.md
+
+====================
+
+ **** （葉）は、Compositeパターンにおいて、中身のものを表す役で、中に他のものを入れることはできない。ファイルシステムにおけるファイルはこの役の実装と言える。 **** は終端となるComponentであるため、実際の処理はほとんどの場合ここで実行される。
+
+Answer: Leaf
+
+Source: ../../note/development/design_pattern/_/chapters/composite.md
+
+====================
+
+ ********* （複合体、コンテナ）は、 ********* パターンにおいて、容器を表す役で、中にはLeafや他の ********* を入れることができる。ファイルシステムにおけるディレクトリはこの役の実装と言える。 ********* は処理の要求を受けると、Componentのインタフェースを介して子に処理を委任する。
+
+Answer: Composite
+
+Source: ../../note/development/design_pattern/_/chapters/composite.md
+
+====================
+
+ ************* は、中心となるオブジェクトに対して次々と機能をかぶせていき、より目的にあったオブジェクトに仕上げていくデザインパターン。
+
+ ************* は、Component、ConcreteComponent、Decorator、ConcreteDecoratorから構成される。
+
+Answer: Decoratorパターン
+
+Source: ../../note/development/design_pattern/_/chapters/decorator.md
+
+====================
+
+ ********* は、Decoratorパターンにおいて、デコレーションを施すためのコアとなる部分のインタフェース。Concrete ********* やDecoratorはこのインタフェースの実装を持つ。
+
+Answer: Component
+
+Source: ../../note/development/design_pattern/_/chapters/decorator.md
+
+====================
+
+ ***************** は、Decoratorパターンにおいて、デコレーションを施すためのコアとなる部分で、Componentを実装しているクラス。Decoratorによって変更できる基本的なメソッドを定義する。
+
+Answer: ConcreteComponent
+
+Source: ../../note/development/design_pattern/_/chapters/decorator.md
+
+====================
+
+ ********* （装飾者）は、 ********* パターンにおいて、Componentと同じインタフェースを持ち、デコレーションする対象となるComponentのインスタンスをフィールドに含んでいる役。
+
+Answer: Decorator
+
+Source: ../../note/development/design_pattern/_/chapters/decorator.md
+
+====================
+
+ ***************** （具体的な装飾者）は、Decoratorパターンにおいて、Decoratorのメソッドの具体的な実装を持つクラス。
+
+Answer: ConcreteDecorator
+
+Source: ../../note/development/design_pattern/_/chapters/decorator.md
+
+====================
+
+ ******** は、ソフトウェア開発において、ソフトウェア開発において頻繁に直面する典型的な問題の解決方法。過去の開発者が編み出した設計ノウハウを蓄積し、名前をつけて再利用しやすいように特定の規則に従ってカタログ化されている。 ******** はオブジェクト指向の特性を利用したものが多い。
+
+Answer: デザインパターン
+
+Source: ../../note/development/design_pattern/_/chapters/design_pattern.md
+
+====================
+
+ *********** (Gang of Four Design Patterns)は、「オブジェクト指向における再利用のためのデザインパターン」の著者である4人が提唱した23種類のデザインパターン。これらのパターンはあまりに有名であり、単にデザインパターンといったときに *********** を指す場合も多い。特に有用性の高いものは、プログラミング言語の仕様自体に取り込まれているものもある。ただし、デザインパターンは必ずしも *********** であるとは限らず、それ以外にも多く存在する。
+
+ *********** には以下のものがある。
+
+• Iterator
+• Adapter
+• Template Method
+• Factory Method
+• Singleton
+• Prototype
+• Builder
+• Abstract Factory
+• Bridge
+• Strategy
+• Composite
+• Decorator
+• Visitor
+• Chain of Responsibility
+• Facade
+• Mediator
+• Observer
+• Memento
+• State
+• Flyweight
+• Proxy
+• Command
+• Interpreter
+
+Answer: GoFデザインパターン
+
+Source: ../../note/development/design_pattern/_/chapters/design_pattern.md
+
+====================
+
+ ********** は、複雑な内部処理を隠蔽し、利用者にシンプルなインタフェースを提供するデザインパターン。複雑なAPI呼び出しの適切な実行順を利用者に意識させないという目的もある。また、複雑だがよく使われる処理に対してエイリアスとして使うことも可能。ただし、神オブジェクト（複雑すぎるオブジェクト）になってしまう可能性があるので、注意が必要。
+
+ ********** は、Facade、Classから構成される。
+
+Answer: Facadeパターン
+
+Source: ../../note/development/design_pattern/_/chapters/facade.md
+
+====================
+
+Facadeパターンは、複雑な内部処理を隠蔽し、利用者にシンプルなインタフェースを提供するデザインパターン。複雑なAPI呼び出しの適切な実行順を利用者に意識させないという目的もある。また、複雑だがよく使われる処理に対してエイリアスとして使うことも可能。ただし、 ******* （複雑すぎるオブジェクト）になってしまう可能性があるので、注意が必要。
+
+Facadeパターンは、Facade、Classから構成される。
+
+Answer: 神オブジェクト
+
+Source: ../../note/development/design_pattern/_/chapters/facade.md
+
+====================
+
+ ****** （正面）は、 ****** パターンにおいて、複雑な処理を構成しているClassをシンプルなインタフェースで提供する役割を持つクラス。各オブジェクトのメソッドを適切な順番、使い方で呼び出す。
+
+Answer: Facade
+
+Source: ../../note/development/design_pattern/_/chapters/facade.md
+
+====================
+
+ ***** （各処理）は、Facadeパターンにおいて、Facadeから呼び出されて処理を行うクラス。Facadeを意識せず、Facadeを呼び出すこともない。
+
+Answer: Class
+
+Source: ../../note/development/design_pattern/_/chapters/facade.md
+
+====================
+
+ ****************** は、インスタンス生成のための枠組みをあらかじめスーパークラスに定めておき、その具体的な実装をサブクラスに任せるデザインパターン。Template Methodパターンをインスタンス生成の場面に適応させたパターン。
+
+コンストラクタの呼び出しを抽象化することにより、生成される可能性のある複数種類のオブジェクトに適合したプログラムを作成することが可能になる。また、コンストラクタの代わりとなるインタフェースを用意することで、毎回新しいインスタンスを生成するだけでなく、キャッシュやプールを利用することも容易となる。
+
+ ****************** は大きく分けて、スーパークラス側（抽象的な骨組み、フレームワーク）のCreatorおよびProductと、サブクラス側（具体的な肉付け）のConcreteCreatorおよびConcreteProductから構成される。
+
+Answer: Factory Methodパターン
+
+Source: ../../note/development/design_pattern/_/chapters/factory_method.md
+
+====================
+
+ ******* （製品）は、Factory Methodパターンのフレームワーク側で、Creatorによって生成されるオブジェクトに共通するAPIを定める抽象クラスやインタフェース。
+
+Answer: Product
+
+Source: ../../note/development/design_pattern/_/chapters/factory_method.md
+
+====================
+
+ ******* （作成者）は、Factory Methodパターンのフレームワーク側で、Product役を生成するメソッドを持つ抽象クラスやインタフェース。
+
+ ******* は実際に生成されるConcreteProductについては何も知らず、インスタンス生成のメソッドを呼び出せばProductが生成されることのみ知っている。 new による実際のインスタンス生成を、インスタンス生成のためのメソッド呼び出しで代替することで、具体的なクラス名による束縛からスーパークラスを解放することができる。
+
+Answer: Creator
+
+Source: ../../note/development/design_pattern/_/chapters/factory_method.md
+
+====================
+
+ *************** （具体的製品）は、Factory Methodパターンの具体的な肉付けをする側で、Productが定義するインタフェースの具体的な実装を持つクラス。
+
+Answer: ConcreteProduct
+
+Source: ../../note/development/design_pattern/_/chapters/factory_method.md
+
+====================
+
+ *************** （具体的作成者）は、Factory Methodパターンの具体的な肉付けをする側で、Creatorが定義するインタフェースの具体的な実装を持つクラス。 *************** が生成するインスタンス(ConcreteProduct)は、Productを継承もしくは実装している必要がある。
+
+Answer: ConcreteCreator
+
+Source: ../../note/development/design_pattern/_/chapters/factory_method.md
+
+====================
+
+ ************************** は、プログラミング言語で提供されている、組み込みのリストやハッシュテーブルなどのコンテナ型をプリミティブとみなし、それをラップしたクラスを実装するデザインパターン。ソースコードのあちこちにコンテナ型に関する操作が散らばることを防いだり、許可する操作を限定することで、不具合の発生を防止する目的で利用される。
+
+ ************************** はFirstClassCollectionの役のみで構成される。
+
+Answer: First Class Collectionパターン
+
+Source: ../../note/development/design_pattern/_/chapters/first_class_collection.md
+
+====================
+
+ ******************** は、First Class Collectionパターンにおいて、既存のコンテナ型を包み込んだクラス。
+
+Answer: FirstClassCollection
+
+Source: ../../note/development/design_pattern/_/chapters/first_class_collection.md
+
+====================
+
+ ************* は、生成済みのオブジェクトをできるだけ再利用（共有）し、無駄なオブジェクトの生成（メモリ使用）を防止する仕組みを提供するデザインパターン。基本的にはイミュータブルなクラスに対してのみ適用できるパターン。
+
+ ************* は、Flyweight、FlyweightFactoryから構成される。
+
+Answer: Flyweightパターン
+
+Source: ../../note/development/design_pattern/_/chapters/flyweight.md
+
+====================
+
+ ********* （フライ級）は、 ********* パターンにおいて、軽量化対象となる（通常の利用方法だと無駄なオブジェクトが生成される可能性のある）クラス。元のオブジェクトの状態のうち、複数のオブジェクトで共有できる内因的な状態のみを含むような設計となる。
+
+Answer: Flyweight
+
+Source: ../../note/development/design_pattern/_/chapters/flyweight.md
+
+====================
+
+ **************** （フライ級の工場）は、Flyweightパターンにおいて、Flyweightを生成・管理するクラス。Flyweightのオブジェクトが必要な場合は、この **************** 経由で取得する。 **************** は生成したオブジェクトをプールし、共有可能なオブジェクトが要求された場合はプールからオブジェクトを返却する。Flyweightを管理するクラスが複数存在すると、再利用できるオブジェクトを別個に管理してしまうため、Singletonパターンを適用する。
+
+Answer: FlyweightFactory
+
+Source: ../../note/development/design_pattern/_/chapters/flyweight.md
+
+====================
+
+ *************** は、何らかの文法規則を持った文書（プログラム）を解析し、その結果得られた手順（命令）に基づいて処理を実行していくデザインパターン。実行中のプログラムとは別に、任意の形式によって処理ができる言語を考え、それを実行するためのパターン。
+
+ *************** は、AbstractExpression、TerminalExpression、NonterminalExpression、Contextから構成される。
+
+Answer: Interpreterパターン
+
+Source: ../../note/development/design_pattern/_/chapters/interpreter.md
+
+====================
+
+ ****************** （抽象的な表現）は、Interpreterパターンにおいて、構文木のノード（TerminalExpressionとNonterminalExpression）に共通のインタフェースを定める役。
+
+Answer: AbstractExpression
+
+Source: ../../note/development/design_pattern/_/chapters/interpreter.md
+
+====================
+
+ ****************** （終端となる表現）は、Interpreterパターンにおいて、BNFの終端を表現するクラス。AbstractExpressionが定義するインタフェースの具体的な実装を持つ。
+
+Answer: TerminalExpression
+
+Source: ../../note/development/design_pattern/_/chapters/interpreter.md
+
+====================
+
+ ********************* （非終端となる表現）は、Interpreterパターンにおいて、BNFの非終端を表現するクラス。AbstractExpressionが定義するインタフェースの具体的な実装を持つ。
+
+Answer: NonterminalExpression
+
+Source: ../../note/development/design_pattern/_/chapters/interpreter.md
+
+====================
+
+ ******* （文脈、前後関係）は、Interpreterパターンにおいて、インタプリタが構文解析を行うための情報を提供する役。
+
+Answer: Context
+
+Source: ../../note/development/design_pattern/_/chapters/interpreter.md
+
+====================
+
+ ************ は、集合体の要素に順番にアクセスし、全体をスキャンしていくような処理を行うためのデザインパターン。iterateという英単語には何かを「繰り返す」という意味があり、Iteratorは日本語で反復子とも呼ばれる。
+
+ ************ は、集合体とアクセス方法を分離することで、集合体の内部構造（リストやスタック、ツリーなど）に依存せずに要素にアクセスすることができるようにすることを目的としている。このパターンを利用することで得られるメリットとして、次のようなものが考えられる。
+
+• 集合体の内部構造を知る必要がなく、簡潔にコードを記述することができる
+• 要素を順番に取り出すことができるため、検索や並び替えなど、要素に対する様々な操作が行いやすくなる
+• 複数の集合体で同じIteratorを使用することができ、コードの再利用性が高まる
+• 複数のIteratorが同じコレクションを互いに独立して探索することができる
+
+ ************ は、Aggregate、ConcreteAggregate、Iterator、ConcreteIteratorから構成される。このパターンを利用するプログラムは、ConcreteAggregateやConcreteIteratorに依存することがなくなり、具体的な反復処理のアルゴリズムを置き換えることができる。
+
+Answer: Iteratorパターン
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+Iteratorパターンは、集合体の要素に順番にアクセスし、全体をスキャンしていくような処理を行うためのデザインパターン。iterateという英単語には何かを「繰り返す」という意味があり、Iteratorは日本語で *** とも呼ばれる。
+
+Iteratorパターンは、集合体とアクセス方法を分離することで、集合体の内部構造（リストやスタック、ツリーなど）に依存せずに要素にアクセスすることができるようにすることを目的としている。このパターンを利用することで得られるメリットとして、次のようなものが考えられる。
+
+• 集合体の内部構造を知る必要がなく、簡潔にコードを記述することができる
+• 要素を順番に取り出すことができるため、検索や並び替えなど、要素に対する様々な操作が行いやすくなる
+• 複数の集合体で同じIteratorを使用することができ、コードの再利用性が高まる
+• 複数のIteratorが同じコレクションを互いに独立して探索することができる
+
+Iteratorパターンは、Aggregate、ConcreteAggregate、Iterator、ConcreteIteratorから構成される。このパターンを利用するプログラムは、ConcreteAggregateやConcreteIteratorに依存することがなくなり、具体的な反復処理のアルゴリズムを置き換えることができる。
+
+Answer: 反復子
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+ ********* （集合体）は、Iteratorパターンにおいて、Iteratorインスタンスを生成する役割を持つインタフェース。 ********* は集合体そのものの役割を持っており、Iteratorインスタンスを生成するようなメソッドを持つ。
+
+Answer: Aggregate
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+ ******** （反復子）は、 ******** パターンにおいて、集合体に含まれる要素を順番に取り出す責任を持つインタフェース。次の要素や前の要素にアクセスするためのメソッドや、要素の存在チェックを行うメソッド、要素を削除するメソッドなどを持つ。
+
+Answer: Iterator
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+ ***************** （具体的な集合体）は、Iteratorパターンにおいて、Aggregateを実装した具体的なクラス。このパターンを利用するプログラムからの要求があるたびに、新しいConcreteIteratorのインスタンスを返す。
+
+Answer: ConcreteAggregate
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+ **************** （具体的な反復子）は、Iteratorパターンにおいて、Iteratorを実装した具体的なクラス。Aggregateを探索するための特定のアルゴリズムを実装し、探索の進行状況を把握している。
+
+Answer: ConcreteIterator
+
+Source: ../../note/development/design_pattern/_/chapters/iterator.md
+
+====================
+
+ ************ は、複雑に関連し合う複数のオブジェクト間の関係に仲介者を設け、その仲介者を介して処理を行うようにすることで、単純かつ明快なインタフェースを提供するデザインパターン。仲介者は、管轄下にある複数のオブジェクトからの問い合わせを受けて、適宜判断を行い、管轄下にあるオブジェクト全体、または一部に指示を出す。
+
+ ************ は、Mediator、ConcreteMediator、Colleague、ConcreteColleagueから構成される。
+
+Answer: Mediatorパターン
+
+Source: ../../note/development/design_pattern/_/chapters/mediator.md
+
+====================
+
+ ******** は、 ******** パターンにおいて、Colleagueからの問い合わせを引き受けて、それをもとに判断を下し、Colleagueへ指示を出す役割を持つインタフェース。各Colleagueからの相談受付の窓口となるメソッドや、管轄下に置くColleagueを格納するためのメソッドなどを定義する。
+
+Answer: Mediator
+
+Source: ../../note/development/design_pattern/_/chapters/mediator.md
+
+====================
+
+ **************** は、Mediatorパターンにおいて、Mediatorが定義するインタフェースの具体的な実装を持つクラス。実際にColleagueからの相談を受けて判断を下し、それらに指示を出す。
+
+Answer: ConcreteMediator
+
+Source: ../../note/development/design_pattern/_/chapters/mediator.md
+
+====================
+
+ ********* は、Mediatorパターンにおいて、他の ********* と関連性のあるオブジェクトを定義するためのインタフェース。他のCollegueを制御したい場合は、Mediatorに相談し、Mediatorからの指示を受けるためのメソッドや、自身が相談するMediatorを格納するためのメソッドなどを定義する。
+
+Answer: Colleague
+
+Source: ../../note/development/design_pattern/_/chapters/mediator.md
+
+====================
+
+ ***************** は、Mediatorパターンにおいて、Colleagueが定義するインタフェースの具体的な実装を持つクラス。
+
+Answer: ConcreteColleague
+
+Source: ../../note/development/design_pattern/_/chapters/mediator.md
+
+====================
+
+ *********** は、オブジェクトの任意の時点の状態を覚えておき、後でその状態にオブジェクトを戻すための工夫を提供するデザインパターン。テキストエディタや画像・動画の編集ソフトなどに実装されている、アンドゥ機能を提供することができる。
+
+ *********** は、Originator、Memento、Caretakerから構成される。
+
+Answer: Mementoパターン
+
+Source: ../../note/development/design_pattern/_/chapters/memento.md
+
+====================
+
+ ********** （作成者）は、Mementoパターンにおいて、自分の状態を保存したMementoを作成したり、要求されたMementoに状態を戻したりする役割を持つクラス。
+
+Answer: Originator
+
+Source: ../../note/development/design_pattern/_/chapters/memento.md
+
+====================
+
+ ******* （形見）は、 ******* パターンにおいて、Originatorの内部情報（フィールド）をスナップショットとして保持するクラス。 ******* のオブジェクトは変更不可とし、コンストラクタを用いて一度だけデータを渡せるようにすることが多い。
+
+Answer: Memento
+
+Source: ../../note/development/design_pattern/_/chapters/memento.md
+
+====================
+
+ ********* （世話人）は、Mementoパターンにおいて、Mementoの履歴を保持し、Originatorの状態を保存したり、ある時点の状態に戻したりするためタイミングを管理するクラス。どのタイミングでOriginatorの状態を獲得するべきか、また復元すべきかを知っており、Mementoパターンを利用するプログラムは ********* のメソッドを利用するだけで、状態管理のタイミングを意識する必要はない。
+
+Answer: Caretaker
+
+Source: ../../note/development/design_pattern/_/chapters/memento.md
+
+====================
+
+ ************ は、観察者となるオブジェクトが、観察対象となるオブジェクトからの状態変化の通知を受けて、それに対する処理を行うデザインパターン。通知を発行するオブジェクトと、それを受け取るオブジェクトからなり、発行者は通知したいオブジェクトを登録（サブスクライブ）する必要がある。
+
+ ************ は、Subject、ConcreteSubject、Observer、ConcreteObserverから構成される。
+
+Answer: Observerパターン
+
+Source: ../../note/development/design_pattern/_/chapters/observer.md
+
+====================
+
+ ******* （観察対象者）は、Observerパターンにおいて、Observerの観察対象となるオブジェクトのインタフェース。Observerを保持するメソッド、Observerへの通知メソッドなどを定義する。Observerは複数保持していても良い。
+
+Answer: Subject
+
+Source: ../../note/development/design_pattern/_/chapters/observer.md
+
+====================
+
+ *************** （具体的な観察対象者）は、Observerパターンにおいて、Subjectが定義するインタフェースの具体的な実装を持つクラス。Observerへの通知は、自身に保持しているObserverオブジェクトを介して行う。
+
+Answer: ConcreteSubject
+
+Source: ../../note/development/design_pattern/_/chapters/observer.md
+
+====================
+
+ ******** （観察者）は、 ******** パターンにおいて、Subjectの状態変化を監視するためのインタフェース。Subjectからの通知を受信するためのメソッドを定義する。
+
+Answer: Observer
+
+Source: ../../note/development/design_pattern/_/chapters/observer.md
+
+====================
+
+ **************** （具体的な観察者）は、Observerパターンにおいて、Observerが定義するインタフェースの具体的な実装を持つクラス。Subjectからの状態受信用のメソッドが呼ばれると、その呼び出し元の状態をもとに処理を行う。
+
+Answer: ConcreteObserver
+
+Source: ../../note/development/design_pattern/_/chapters/observer.md
+
+====================
+
+ ********** は、条件分岐を部品化し、これらの部品を組み合わせることで条件をカスタマイズすることができるようにするデザインパターン。
+
+ ********** は、Context、PolicyInterface、Policyから構成される。
+
+Answer: Policyパターン
+
+Source: ../../note/development/design_pattern/_/chapters/policy.md
+
+====================
+
+ ******* は、Policyパターンにおいて、PolicyInterfaceを実装するPolicyを組み合わせることで、新しい条件を構築したり、構築された条件を判定に利用する役割。
+
+Answer: Context
+
+Source: ../../note/development/design_pattern/_/chapters/policy.md
+
+====================
+
+ *************** は、Policyパターンにおいて、Policyが実装するべきメソッドを定めたインタフェース。条件式を包み込むメソッドを定義する。
+
+Answer: PolicyInterface
+
+Source: ../../note/development/design_pattern/_/chapters/policy.md
+
+====================
+
+ ****** は、 ****** パターンにおいて、 ****** Interfaceを実装した、条件そのものを表すクラス。
+
+Answer: Policy
+
+Source: ../../note/development/design_pattern/_/chapters/policy.md
+
+====================
+
+( ************* は、クラスからインスタンスを生成するのではなく、インスタンスから別のインスタンスを複製して生成するデザインパターン。このパターンを使用することで、プログラムが余分な依存関係を含まずにオブジェクトを複製できたり（そのクラスの持つフィールドを直接記述しなくてもよいため）、同じインタフェースを持つ異なるオブジェクトに対しても同じような複製処理を記述できたりするようになる。
+
+ ************* は、Prototype、ConcretePrototypeから構成される。
+
+Answer: Prototypeパターン
+
+Source: ../../note/development/design_pattern/_/chapters/prototype.md
+
+====================
+
+ ********* （原型）は、 ********* パターンにおいて、インスタンスを複製して新しいインスタンスを作るためのメソッドを定めるインタフェース。このメソッドは多くの場合、既存のインスタンスのフィールドをすべてコピーした新しいインスタンスを返す。
+
+Answer: Prototype
+
+Source: ../../note/development/design_pattern/_/chapters/prototype.md
+
+====================
+
+ ***************** （具体的な原型）は、Prototypeパターンにおいて、Prototypeが定義するインタフェースを実装して、実際にインスタンスを複製する処理を持つクラス。
+
+Answer: ConcretePrototype
+
+Source: ../../note/development/design_pattern/_/chapters/prototype.md
+
+====================
+
+ ********* は、本人の代理人となるオブジェクトが本人でもなくともできる処理を受け持ち、本人にしかできない場合にだけ処理を任せるデザインパターン。負荷の高いオブジェクトの代わりに一部の処理を代理人が行うことで、負荷を軽減することができる。
+
+ ********* は、Subject、Proxy、RealSubjectから構成される。
+
+Answer: Proxyパターン
+
+Source: ../../note/development/design_pattern/_/chapters/proxy.md
+
+====================
+
+ ******* （主体）は、Proxyパターンにおいて、ProxyとReal ******* を同一視するためのインタフェース。これにより、Proxyパターンを利用するプログラムは、ProxyとReal ******* の使い分けを意識する必要がなくなる。
+
+Answer: Subject
+
+Source: ../../note/development/design_pattern/_/chapters/proxy.md
+
+====================
+
+ *********** （実際の主体）は、Proxyパターンにおいて、Proxyでは手に負えない処理を要求された際に、Proxyからの依頼を受けて処理を行うクラス。Proxyと同じくSubjectが定義するインタフェースを実装する。
+
+Answer: RealSubject
+
+Source: ../../note/development/design_pattern/_/chapters/proxy.md
+
+====================
+
+ ***** （代理人）は、 ***** パターンにおいて、このパターンを利用するプログラムからの要求をできる限り処理するクラス。自身が処理できない処理に関しては、RealSubjectに依頼する。 ***** は、Subjectが定義するインタフェースを実装する。
+
+Answer: Proxy
+
+Source: ../../note/development/design_pattern/_/chapters/proxy.md
+
+====================
+
+ ************* は、あるクラスのインスタンスが絶対に1つしか存在しないことを保証するデザインパターン。システム中で1つしか存在しないものをプログラムで表現したい場合に用いられる。
+
+ ************* では、クラスのコンストラクタをprivateに隠蔽し、インスタンスの生成および取得のためのstaticメソッドを用意しておく。 ************* はSingletonの役のみで構成される。
+
+ ************* を使用する際は、Singletonがグローバルな状態であり、テストが難しくなることや、マルチスレッド環境において同時アクセスされることを想定したスレッドセーフな設計が必要となることに注意しなければいけない。 ************* は非常に多くの問題を解決することができる一方で、依存関係を隠蔽してしまい発見が困難な不具合を生じる可能性があるなど、アンチパターンと見られる場合も多い。
+
+Answer: Singletonパターン
+
+Source: ../../note/development/design_pattern/_/chapters/singleton.md
+
+====================
+
+ ********* は、 ********* パターンにおいて、唯一のインスタンスを生成・管理・取得するためのインタフェースを持つクラス。コンストラクタはprivateに隠蔽されており、呼び出されることはない。代わりに唯一のインスタンスを取得するためのメソッドを提供する。
+
+Answer: Singleton
+
+Source: ../../note/development/design_pattern/_/chapters/singleton.md
+
+====================
+
+ ********* は、ある者についての各状態をクラスで表現するデザインパターン。通常は条件（状態）に一致するか否かの処理は単純な条件分岐により実装可能であるが、それが複雑な条件となる場合や、同じ条件分岐を複数個所で繰り返し利用するような場合、メンテナンス性を向上させるためにこのパターンが用いられる。ただし、状態の数が少ない、あるいは状態の更新頻度が低い場合にはこのパターンの適用は過剰な可能性がある。
+
+ ********* は、State、ConcreteState、Contextから構成される。
+
+Answer: Stateパターン
+
+Source: ../../note/development/design_pattern/_/chapters/state.md
+
+====================
+
+ ***** （状態）は、 ***** パターンにおいて、状態そのものを表すインタフェース。状態ごとに振る舞いが異なるようなメソッドを定義する。
+
+Answer: State
+
+Source: ../../note/development/design_pattern/_/chapters/state.md
+
+====================
+
+ ************* （具体的な状態）は、Stateパターンにおいて、Stateが定義するインタフェースの具体的な実装を持つクラス。具体的な状態を1クラスにつき1状態で表し、1つの状態を表すのに複数のインスタンスは必要ないため、Singletonパターンを適用する。
+
+Answer: ConcreteState
+
+Source: ../../note/development/design_pattern/_/chapters/state.md
+
+====================
+
+ ******* （状況判断）は、Stateパターンにおいて、現在の状態を保持し、このパターンを利用するプログラムへのインタフェースを定義する。状態を変更するメソッドを持ち、その状態に固有のメソッドは全て ******* を介して呼び出される。
+
+Answer: Context
+
+Source: ../../note/development/design_pattern/_/chapters/state.md
+
+====================
+
+ ************ は、同じインタフェースを実装する交換可能なアルゴリズムを複数用意しておき、プログラム実行時に適切なものを選択できるようにするデザインパターン。条件分岐などによってメソッドに溶け込むような形でアルゴリズムを実装しがちであるが、 ************ を利用すればより柔軟でメンテナンスのしやすい設計にすることができる。
+
+ ************ は、Strategy、ConcreteStrategy、Contextから構成される。
+
+Answer: Strategyパターン
+
+Source: ../../note/development/design_pattern/_/chapters/strategy.md
+
+====================
+
+ ******** （戦略）は、 ******** パターンにおいて、アルゴリズムを実装するメソッドを定めるインタフェース。すべてのConcrete ******** に共通のインタフェースであり、Contextが戦略を実行するために使用するメソッドを宣言する。
+
+Answer: Strategy
+
+Source: ../../note/development/design_pattern/_/chapters/strategy.md
+
+====================
+
+ **************** （具体的戦略）は、Strategyパターンにおいて、Strategyが定義するインタフェースを実装し、実際のアルゴリズムを持ったクラス。Strategyパターンでは **************** が複数用意され、プログラムは用いる戦略をContextを通じて容易に切り替えることができる。
+
+Answer: ConcreteStrategy
+
+Source: ../../note/development/design_pattern/_/chapters/strategy.md
+
+====================
+
+ ******* （文脈）は、Strategyパターンにおいて、ConcreteStrategyのインスタンスを持ち、必要に応じてそのインスタンスが持つアルゴリズムを利用する役。 ******* が呼び出すのは、Strategyのインタフェースに定義されたメソッドのみであり、それぞれのConcreteStrategyに依存した実装にはなっていない。
+
+Answer: Context
+
+Source: ../../note/development/design_pattern/_/chapters/strategy.md
+
+====================
+
+ ******************* は、ある処理の大まかなアルゴリズムをあらかじめスーパークラスに定めておき、その具体的な設計をサブクラスに任せるデザインパターン。スーパークラスは、処理の流れを定義したテンプレートメソッドを持ち、このメソッドの中で抽象メソッドの呼び出しを行う。
+
+ ******************* は、AbstractClass、ConcreteClassから構成される。
+
+Answer: Template Methodパターン
+
+Source: ../../note/development/design_pattern/_/chapters/template_method.md
+
+====================
+
+Template Methodパターンは、ある処理の大まかなアルゴリズムをあらかじめスーパークラスに定めておき、その具体的な設計をサブクラスに任せるデザインパターン。スーパークラスは、処理の流れを定義した ********** を持ち、このメソッドの中で抽象メソッドの呼び出しを行う。
+
+Template Methodパターンは、AbstractClass、ConcreteClassから構成される。
+
+Answer: テンプレートメソッド
+
+Source: ../../note/development/design_pattern/_/chapters/template_method.md
+
+====================
+
+ ************* （抽象クラス）は、Template Methodパターンにおいて、処理の流れを決定する役割を持つクラス。アルゴリズムの各ステップに対応するメソッドと、これらのメソッドを特定の順序で呼び出すテンプレートメソッドを宣言する。
+
+Answer: AbstractClass
+
+Source: ../../note/development/design_pattern/_/chapters/template_method.md
+
+====================
+
+ ************* （具象クラス）は、Template Methodパターンにおいて、抽象メソッドを具体的に実装するクラス。 ************* に実装されたメソッドはテンプレートメソッドを介して呼び出される。
+
+Answer: ConcreteClass
+
+Source: ../../note/development/design_pattern/_/chapters/template_method.md
+
+====================
+
+ **************** は、通常は単なる値（プリミティブ）として表されるものの役割を明確にし、オブジェクトとして実装するデザインパターン。Value Objectはインスタンス同士を比較することができ、内部に持つ値は不変であることが望ましい。
+
+ **************** はValueObjectの役のみで構成される。
+
+Answer: Value Objectパターン
+
+Source: ../../note/development/design_pattern/_/chapters/value_object.md
+
+====================
+
+ ************ は、 ************ パターンにおいて、値そのものを表すオブジェクト。メンバ変数として値そのものを持っており、この値は不変となるようにする場合が多い。値を変更するようなのメソッドを必要とする場合には、自身の新しいインスタンスを生成して返却するように設計する。
+
+Answer: Value Object
+
+Source: ../../note/development/design_pattern/_/chapters/value_object.md
+
+====================
+
+ *********** は、データ構造とそれに対する処理を分離することを目的としたデザインパターン。訪問者となるオブジェクトが、データ構造の個々の要素を訪問し、その訪問先で公開されている資源を利用して処理を実行して回る。
+
+ *********** は、Visitor、ConcreteVisitor、Acceptor、ConcreteAcceptorから構成される。
+
+Answer: Visitorパターン
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+ ******* （訪問者）は、 ******* パターンにおいて、具体的なデータ構造の要素であるConcreteAcceptorを訪問して処理を行うインタフェース。オブジェクト構造の具象要素を引数として取る一連の訪問メソッドを宣言する。
+
+Answer: Visitor
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+ *************** （具体的訪問者）は、Visitorパターンにおいて、Visitorが定義するインタフェースの具体的な実装を持つクラス。
+
+Answer: ConcreteVisitor
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+ ******** （データ構造）は、Visitorパターンにおいて、Visitorの訪問先であるデータ構造要素に対する受入れ口となるインタフェースや抽象クラス。Visitorパターンを利用するプログラムは、 ******** の受入れ用のメソッドを介してVisitorの訪問用のメソッドを呼び出す（ダブルディスパッチ）。
+
+Answer: Acceptor
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+Acceptor（データ構造）は、Visitorパターンにおいて、Visitorの訪問先であるデータ構造要素に対する受入れ口となるインタフェースや抽象クラス。Visitorパターンを利用するプログラムは、Acceptorの受入れ用のメソッドを介してVisitorの訪問用のメソッドを呼び出す（ ********* ）。
+
+Answer: ダブルディスパッチ
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+ **************** （具体的データ構造）は、Visitorパターンにおいて、Acceptorが定義するインタフェースの具体的な実装を持つクラス。
+
+Answer: ConcreteAcceptor
+
+Source: ../../note/development/design_pattern/_/chapters/visitor.md
+
+====================
+
+ ***************** （Actorパターン）は、処理をアクティブなオブジェクト（アクター）にカプセル化し、メソッドの呼び出しと実行を非同期に行うデザインパターン。
+
+Answer: Active Objectパターン
+
+Source: ../../note/development/design_pattern/multi_thread/_/chapters/active_object.md
+
+====================
+
+Active Objectパターン（ ********* ）は、処理をアクティブなオブジェクト（アクター）にカプセル化し、メソッドの呼び出しと実行を非同期に行うデザインパターン。
+
+Answer: Actorパターン
+
+Source: ../../note/development/design_pattern/multi_thread/_/chapters/active_object.md
+
+====================
+
+ *********** は、処理を要求したときに、ある条件が満たされている場合にのみ処理を行うデザインパターン。類似の *********** では、ガード条件が満たされていない場合に処理をスキップするが、このパターンではスキップする。
+
+ *********** はGuardedObjectの役のみからなる。
+
+Answer: Balkingパターン
+
+Source: ../../note/development/design_pattern/multi_thread/_/chapters/balking.md
+
