@@ -1,6 +1,6 @@
 # 『ユーザと権限』ノート
 
-（最終更新： 2023-08-20）
+（最終更新： 2023-10-12）
 
 
 ## 目次
@@ -35,7 +35,7 @@
 
 **ユーザ**は、[Linux](./linux.md#linux)システムにログインしてシステムを使用するためのアカウント。各ユーザには一意のユーザ名が割り当てられており、各ユーザはそれぞれの[ホームディレクトリ](../../../software/_/chapters/file_system.md#ホームディレクトリ)を持つ。ユーザはシステム上で一意の**UID**によって識別される。
 
-ユーザが作成した[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の所有者は、そのユーザ自身となる。
+ユーザが作成した[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)の[所有者](#所有者)は、そのユーザ自身となる。
 
 [Linux](./linux.md#linux)では、[ファイル](../../../software/_/chapters/file_system.md#ファイル)や[ディレクトリ](../../../software/_/chapters/file_system.md#ディレクトリ)に対する[アクセス権](#権限)を、ユーザごとにコントロールできる。
 

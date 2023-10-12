@@ -1,6 +1,6 @@
 # 『Mediator』ノート
 
-（最終更新： 2023-08-09）
+（最終更新： 2023-10-12）
 
 
 ## 目次
@@ -16,7 +16,7 @@
 
 ## Mediatorパターン
 
-**Mediatorパターン**は、複雑に関連し合う複数の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)間の関係に仲介者を設け、その仲介者を介して処理を行うようにすることで、単純かつ明快なインタフェースを提供する[デザインパターン](./design_pattern.md#デザインパターン)。仲介者は、管轄下にある複数の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)からの問い合わせを受けて、適宜判断を行い、管轄下にあるオブジェクト全体、または一部に指示を出す。
+**Mediatorパターン**は、複雑に関連し合う複数の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)間の関係に仲介者を設け、その仲介者を介して処理を行うようにすることで、単純かつ明快なインタフェースを提供する[デザインパターン](./design_pattern.md#デザインパターン)。仲介者は、管轄下にある複数の[オブジェクト](../../../../programming/_/chapters/object_oriented.md#オブジェクト)からの問い合わせを受けて、適宜判断を行い、管轄下にあるオブジェクト全体または一部に指示を出す。
 
 Mediatorパターンは、[Mediator](#mediator)、[ConcreteMediator](#concretemediator)、[Colleague](#colleague)、[ConcreteColleague](#concretecolleague)から構成される。
 
