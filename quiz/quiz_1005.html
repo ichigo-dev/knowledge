@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">mv</span></strong>は、<a href="./linux.md#linux">Linux</a>および<a href="../../../software/_/chapters/operating_system.md#unix">UNIX系</a><a href="../../../software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">オペレーティングシステム</a>で使用される、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>を移動するための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。また、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>の名前を変更するためにも用いられる。 <code><span class="mask">mv</span></code> は“move“の略語。</p>
+<p><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">mv</span> [OPTION]... [-T] SOURCE DEST
+<span class="mask">mv</span> [OPTION]... SOURCE... DIRECTORY
+<span class="mask">mv</span> [OPTION]... -t DIRECTORY SOURCE...
+</code></pre>
+<p><code><span class="mask">mv</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>に移動元<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>または<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>の<a href="../../../software/_/chapters/file_system.md#%E3%83%91%E3%82%B9">パス</a>と移動先の<a href="../../../software/_/chapters/file_system.md#%E3%83%91%E3%82%B9">パス</a>を指定することで、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>を移動することができる。例えば次の<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>は、 <code>/home/user/src/test.txt</code> という<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を <code>/home/user/dest/test.txt</code> という<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>に移動する。</p>
+<pre><code class="language-sh">$ <span class="mask">mv</span> /home/user/src/test.txt /home/user/dest/test.txt
+</code></pre>
+<p>また、 <code><span class="mask">mv</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を使用して<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>をリネームすることもできる。例えば次の<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>は、 <code>/home/user/src/test.txt</code> という<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を <code>/home/user/src/test2.txt</code> という名前に変更する。</p>
+<pre><code class="language-sh">$ <span class="mask">mv</span> /home/user/src/test.txt /home/user/src/test2.txt
+</code></pre>
+<p><code><span class="mask">mv</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>に <code>-i</code> <a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を指定すると、移動先に同じ名前の<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>があった場合に上書き確認を行う。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

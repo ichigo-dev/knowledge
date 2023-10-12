@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>文法</strong>（<strong><span class="mask">シンタックス</span></strong>）は、各<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>が規定している<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>の書き方。文法が誤っていると、<a href="#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9">コンパイラ</a>が<a href="#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>を正しく解析できず、<a href="#%E3%82%A8%E3%83%A9%E3%83%BC">エラー</a>となる。<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>の文法は、<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">自然言語</a>の文法に比べて非常に厳密であるため、<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">プログラミング</a>を行うときには常に正しい文法を心掛けなくてはならない。</p>
+<p>文法は<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>ごとに様々であるが、例として次のようなものがある。</p>
+<ul>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>は半角アルファベットと数字、各種記号によって記述する</li>
+<li><code>{</code> と <code>}</code> は対応しており、 <code>{}</code> で囲まれた部分は処理のひとつのまとまりを表す</li>
+<li>ひとつの文は <code>;</code> で終わらなければならない</li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>は上から下へと順次実行される</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

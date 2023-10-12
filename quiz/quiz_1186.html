@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ユーザ</strong>は、<a href="./linux.md#linux">Linux</a>システムにログインしてシステムを使用するためのアカウント。各ユーザには一意のユーザ名が割り当てられており、各ユーザはそれぞれの<a href="../../../software/_/chapters/file_system.md#%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ホームディレクトリ</a>を持つ。ユーザはシステム上で一意の<strong><span class="mask">UID</span></strong>によって識別される。</p>
+<p>ユーザが作成した<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>の所有者は、そのユーザ自身となる。</p>
+<p><a href="./linux.md#linux">Linux</a>では、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>に対する<a href="#%E6%A8%A9%E9%99%90">アクセス権</a>を、ユーザごとにコントロールできる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

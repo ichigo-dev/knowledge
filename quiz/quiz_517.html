@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">位取り記数法</span></strong>(Positional notation)は、数値を表現する方法のひとつで、あらかじめ決められた $n$ 種類の記号により数を表現する。一般的には、記号としてアラビア数字やアルファベットを使用するが、それ以外のもの（漢数字など）を用いてもよい。</p>
+<p>位取り基数法のなかでも一般的に利用されているのは<a href="#10%E9%80%B2%E6%95%B0">10進法</a>で、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>の世界では<a href="#2%E9%80%B2%E6%95%B0">2進法</a>や<a href="#8%E9%80%B2%E6%95%B0">8進法</a>、<a href="#16%E9%80%B2%E6%95%B0">16進法</a>もよく利用される。</p>
+<blockquote>
+<p><a href="#%E5%9F%BA%E6%95%B0">基数</a>となる自然数 $n$ に対して、</p>
+<p>$$
+0, 1, \cdots, n-1
+$$</p>
+<p>の数字に任意の記号を対応させる。これを、</p>
+<p>$$
+a_m a_{m-1} \cdots a_0.b_1 b_2 \cdots b_k
+$$</p>
+<p>という数値列で表現すると、この<a href="#%E5%9F%BA%E6%95%B0">基数</a>で表される数字列は、<a href="#%E5%9F%BA%E6%95%B0">n進数</a>で次の数字を表す。</p>
+<p>$$
+a_m \times n^m + a_{m-1} \times n^{m-1} + \cdots a_1 \times n + a_0 + \frac{b_1}{n} + \frac{b_2}{n^2} +\cdots + \frac{b_k}{n^k}
+$$</p>
+</blockquote>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

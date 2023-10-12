@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>論理回路</strong>は、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97">論理演算</a>を行う電気回路のことで、論理回路を組み合わせることで複雑な回路を構成することができる。論理回路は<strong>MIL記号</strong>により表記される。</p>
+<p>代表的な論理回路には、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#or%E6%BC%94%E7%AE%97">OR演算</a>を行う<strong>OR回路</strong>、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#and%E6%BC%94%E7%AE%97">AND演算</a>を行う<strong>AND回路</strong>、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#not%E6%BC%94%E7%AE%97">NOT演算</a>を行う<strong>NOT回路</strong>、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#nor%E6%BC%94%E7%AE%97">NOR演算</a>を行う<strong>NOR回路</strong>、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#nand%E6%BC%94%E7%AE%97">NAND演算</a>を行う<strong>NAND回路</strong>、<a href="../../../../basics/discrete_mathematics/_/chapters/logical_operation.md#xor%E6%BC%94%E7%AE%97">XOR演算</a>を行う<strong><span class="mask">XOR回路</span></strong>がある。中でもNAND回路は他の回路に比べて回路構成が簡単で作りやすいという特徴があり、他の論理回路もすべてNAND回路のみを組み合わせて作ることができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">SEO</span></strong>（<strong>検索エンジン最適化</strong>: Search Engine Optimization）は、<a href="../../../network/_/chapters/web.md#web">Webサイト</a>が<a href="../../../network/_/chapters/web.md#%E6%A4%9C%E7%B4%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%B3">検索エンジン</a>の検索結果で上位に表示されるように最適化するための取り組みやプロセス。つまり、特定のキーワードやフレーズに関連する検索結果で、自分の<a href="../../../network/_/chapters/web.md#web">Webサイト</a>をより高い順位で表示させるための戦略や手法のこと。</p>
+<p>自分の<a href="../../../network/_/chapters/web.md#web">Webサイト</a>に関連するキーワードやフレーズの調査、コンテンツの最適化、メタデータ最適化、サイトの速度とパフォーマンス向上、レスポンシブ対応などの手法がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

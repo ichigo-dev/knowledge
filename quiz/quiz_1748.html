@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">docker exec</span></strong>は、<a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>内で<a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行するための<a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。<a href="../../../../computer/linux/_/chapters/shell_and_terminal.md#%E3%82%B7%E3%82%A7%E3%83%AB">シェル</a>を起動して<a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>に接続する際に用いる場合が多い。</p>
+<pre><code class="language-sh"></code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">locate</span></strong>は、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">ファイルシステム</a>内で指定した文字列にマッチする<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を高速に検索するための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。 <code>find</code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>よりも効率的で、パターンマッチングにも対応している。</p>
+<p><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">locate</span> [OPTION]... PATTERN
+</code></pre>
+<p>例えば以下の<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行すると、 <code>/etc</code> <a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>以下の <code>ssh</code> という名前を含む<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を検索する。</p>
+<pre><code class="language-sh">$ <span class="mask">locate</span> /etc/*ssh*
+</code></pre>
+<p><code><span class="mask">locate</span></code> は、<a href="../../../hardware/_/chapters/auxiliary_memory_unit.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF">ディスク</a>をスキャンすることなく、専用の<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>を利用するため、高速に動作する。ただし、<a href="../../../software/_/chapters/file_system.md#%E3%83%91%E3%82%B9">ファイルパス</a>の<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>が更新されていない可能性があるため、既に存在しない<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>が表示されたり、存在する<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>が表示されない可能性がある。最新の情報を手動で更新するには、 <code>updatedb</code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行する。主要な<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-i</code></td><td style="text-align: left">大文字と小文字を区別しない</td></tr>
+<tr><td><code>-l [NUM]</code></td><td style="text-align: left">最大の検索結果数を指定する</td></tr>
+<tr><td><code>-c</code></td><td style="text-align: left">該当するファイルの数を表示する</td></tr>
+</tbody></table>
+<p>パターンに複数のパターンを指定するとOR検索になり、 <code>-A | --alll</code> <a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を指定するとAND検索になる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

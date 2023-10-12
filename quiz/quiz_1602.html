@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Builderパターン</span></strong>は、<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF">コンストラクタ</a>に対して数多くの<a href="../../../../programming/_/chapters/function.md#%E5%BC%95%E6%95%B0">パラメータ</a>をセットする必要がある場合や、多くのオプションを持つ場合に、段階を踏んで<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>を組み上げていく<a href="./design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。<a href="../../../../programming/_/chapters/function.md#%E5%BC%95%E6%95%B0">パラメータ</a>が多い場合、その順番を正確に覚えることが難しくなったり、複数のオプションのうち限られたもののみを利用したい場合に冗長になったりするが、<span class="mask">Builderパターン</span>を用いることで簡潔な記述ができるようになる。また、このパターンの適用により<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%B3%E3%83%B3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%BF">コンストラクタ</a>の肥大化や複雑化を軽減することができる。</p>
+<p><span class="mask">Builderパターン</span>は、<a href="#builder">Builder</a>、<a href="#concretebuilder">ConcreteBuilder</a>、<a href="#director">Director</a>から構成される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

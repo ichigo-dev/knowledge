@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="#css">CSS</a>の<a href="#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>の値を設定する際に使用される単位には、次のような種類がある。</p>
+<table><thead><tr><th>単位</th><th>説明</th></tr></thead><tbody>
+<tr><td><strong>em</strong></td><td>1em = 親要素に設定されているフォントサイズ</td></tr>
+<tr><td><strong>rem</strong></td><td>1rem = <code>&lt;html&gt;</code> に設定されているフォントサイズ（標準は16px）</td></tr>
+<tr><td><strong>vw</strong></td><td>1vw = ビューポートの幅の1/100</td></tr>
+<tr><td><strong>vh</strong></td><td>1vh = ビューポートの高さの1/100</td></tr>
+<tr><td><strong>vmin</strong></td><td>1vmin = ビューポートの幅か高さ、どちらか短い方の1/100</td></tr>
+<tr><td><strong>vmax</strong></td><td>1vmax = ビューポートの幅か高さ、どちらか長い方の1/100</td></tr>
+<tr><td><strong>px</strong></td><td>1px = 1ピクセル（ディスプレイを構成する最小単位）の大きさ</td></tr>
+<tr><td><strong>pt</strong></td><td>1pt = 1ポイント（1/72インチ、約0.035cm）</td></tr>
+<tr><td><strong>%</strong></td><td>基準となる長さや大きさ（プロパティによって異なる）に対する割合</td></tr>
+<tr><td><strong>deg</strong></td><td>1deg = 1°</td></tr>
+<tr><td><strong><span class="mask">rad</span></strong></td><td>1<span class="mask">rad</span> = 1ラジアン</td></tr>
+<tr><td><strong>s</strong></td><td>1s = 1秒</td></tr>
+<tr><td><strong>ms</strong></td><td>1ms = 1ミリ秒（1/1000秒）</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

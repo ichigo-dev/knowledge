@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">shutdown</span></strong>は、<a href="./linux.md#linux">Linux</a>システムをシャットダウンするための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。システムをシャットダウンする前に<a href="./user_and_permission.md#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>に通知を行い、デフォルトではシャットダウンまで1分間の待ち時間が設定されている。</p>
+<p>また、<strong>poweroff</strong>もシャットダウンのための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。ただし、 <code><span class="mask">shutdown</span></code> とは異なり、システムを直ちに停止するため、<a href="../../../software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>が意図せず停止されてしまう恐れがある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Strategyパターン</span></strong>は、同じ<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9">インタフェース</a>を実装する交換可能な<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>を複数用意しておき、<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>実行時に適切なものを選択できるようにする<a href="./design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。<a href="../../../../programming/_/chapters/control_flow.md#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>などによって<a href="../../../../programming/_/chapters/object_oriented.md#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">メソッド</a>に溶け込むような形で<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>を実装しがちであるが、<span class="mask">Strategyパターン</span>を利用すればより柔軟でメンテナンスのしやすい設計にすることができる。</p>
+<p><span class="mask">Strategyパターン</span>は、<a href="#strategy">Strategy</a>、<a href="#concretestrategy">ConcreteStrategy</a>、<a href="#context">Context</a>から構成される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

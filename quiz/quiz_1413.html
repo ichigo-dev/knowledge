@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">標準ライブラリ</span></strong>は、各<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>の仕様としてあらかじめ用意されている<a href="#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">ライブラリ</a>。<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>の更新に合わせて<span class="mask">標準ライブラリ</span>自体も更新される場合が多いため、<a href="#%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E8%A3%BD%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">サードパーティ製ライブラリ</a>に比べて信頼性が高い。一方で、汎用的な機能のみを提供していることが一般的であるため、要件によっては<span class="mask">標準ライブラリ</span>だけでは機能の実現が難しい場合もある。また、<span class="mask">標準ライブラリ</span>の変更は影響範囲が大きいため、より性能の高い<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>への置き換えや新しい機能の導入が遅くなり、<a href="#%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E8%A3%BD%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">サードパーティ製ライブラリ</a>に比べてパフォーマンスが下がることもある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

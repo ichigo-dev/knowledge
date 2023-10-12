@@ -5,6 +5,6 @@ edition = "2021"
 
 [dependencies]
 glob = "0.3.1"
-markdown_to_text = "1.0.0"
+pulldown-cmark = "0.9.3"
 rand = "0.8.5"
 regex = "1.10.0"

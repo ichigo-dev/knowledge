@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>正規表現</strong>は、文字列のパターンを表現するための方法。正規表現を用いれば、文字列がパターンに一致するかを確認したり、共通のパターンに一致するテキストを検索、置換することができる。</p>
+<p>正規表現は、文字列そのものを表す<strong>リテラル</strong>と、特別なパターンを表現するための<strong><span class="mask">メタ文字</span></strong>の組み合わせからなる。</p>
+<p>基本的な<span class="mask">メタ文字</span>は以下の通り。</p>
+<ol>
+<li>基本的な<span class="mask">メタ文字</span></li>
+</ol>
+<table><thead><tr><th><span class="mask">メタ文字</span></th><th style="text-align: left">意味</th></tr></thead><tbody>
+<tr><td><code>.</code></td><td style="text-align: left">任意の1文字にマッチする</td></tr>
+<tr><td><code>*</code></td><td style="text-align: left">直前のパターンの0回以上の繰り返しにマッチする</td></tr>
+<tr><td><code>+</code></td><td style="text-align: left">直前のパターンの1回以上の繰り返しにマッチする</td></tr>
+<tr><td><code>?</code></td><td style="text-align: left">直前のパターンの0回もしくは1回の繰り返しにマッチする</td></tr>
+<tr><td><code>{N}</code></td><td style="text-align: left">直前のパターンのN回の繰り返しにマッチする</td></tr>
+<tr><td><code>{N,}</code></td><td style="text-align: left">直前のパターンのN回以上の繰り返しにマッチする</td></tr>
+<tr><td><code>{,M}</code></td><td style="text-align: left">直前のパターンのM回以下の繰り返しにマッチする</td></tr>
+<tr><td><code>{N,M}</code></td><td style="text-align: left">直前のパターンのN回以上M回以下の繰り返しにマッチする</td></tr>
+<tr><td><code>\|</code></td><td style="text-align: left">左右の文字列のいずれかにマッチする</td></tr>
+<tr><td><code>\</code></td><td style="text-align: left">直後の<span class="mask">メタ文字</span>のエスケープする</td></tr>
+<tr><td><code>[]</code></td><td style="text-align: left"><code>[</code> と <code>]</code> の中のいずれか1文字にマッチする</td></tr>
+<tr><td><code>[^]</code></td><td style="text-align: left"><code>[^</code> と <code>]</code> の中に含まれない1文字にマッチする</td></tr>
+<tr><td><code>()</code></td><td style="text-align: left">正規表現のグルーピング（マッチした文字列をキャプチャ）</td></tr>
+</tbody></table>
+<ol start="2">
+<li>アンカー</li>
+</ol>
+<table><thead><tr><th><span class="mask">メタ文字</span></th><th style="text-align: left">意味</th></tr></thead><tbody>
+<tr><td><code>^</code></td><td style="text-align: left">行頭にマッチする</td></tr>
+<tr><td><code>$</code></td><td style="text-align: left">行末にマッチする</td></tr>
+</tbody></table>
+<ol start="3">
+<li>エスケープシーケンス</li>
+</ol>
+<table><thead><tr><th><span class="mask">メタ文字</span></th><th style="text-align: left">意味</th></tr></thead><tbody>
+<tr><td><code>\n</code></td><td style="text-align: left">改行文字にマッチする(LF)</td></tr>
+<tr><td><code>\r</code></td><td style="text-align: left">改行文字にマッチする(CR)</td></tr>
+<tr><td><code>\f</code></td><td style="text-align: left">改ページ文字にマッチする</td></tr>
+<tr><td><code>\R</code></td><td style="text-align: left">すべての改行文字にマッチする（ <code>\n\|\r\|\r\n</code> と同義）</td></tr>
+<tr><td><code>\t</code></td><td style="text-align: left">タブ文字にマッチする</td></tr>
+<tr><td><code>\s</code></td><td style="text-align: left">空白文字にマッチする（ <code> \|\t\|\n\|\r\|\f</code> と同義）</td></tr>
+<tr><td><code>\S</code></td><td style="text-align: left">空白文字以外のすべての文字にマッチする</td></tr>
+<tr><td><code>\d</code></td><td style="text-align: left">数字にマッチする（ <code>[0-9]</code> と同義）</td></tr>
+<tr><td><code>\D</code></td><td style="text-align: left">数字以外のすべての文字にマッチする（ <code>[^0-9]</code> と同義）</td></tr>
+<tr><td><code>\w</code></td><td style="text-align: left">アルファベットと数字とアンダースコアにマッチする（ <code>[a-zA-Z0-9_]</code> と同義）</td></tr>
+<tr><td><code>\W</code></td><td style="text-align: left">アルファベットと数字とアンダースコア以外にマッチする（ <code>[^a-zA-Z0-9_]</code> と同義）</td></tr>
+<tr><td><code>\l</code></td><td style="text-align: left">半角英小文字にマッチする（ <code>[a-z]</code> と同義）</td></tr>
+<tr><td><code>\L</code></td><td style="text-align: left">半角英小文字以外にマッチする（ <code>[^a-z]</code> と同義）</td></tr>
+<tr><td><code>\u</code></td><td style="text-align: left">半角英大文字にマッチする（ <code>[A-Z]</code> と同義）</td></tr>
+<tr><td><code>\U</code></td><td style="text-align: left">半角英大文字以外にマッチする（ <code>[^A-Z]</code> と同義）</td></tr>
+<tr><td><code>\v</code></td><td style="text-align: left">垂直タブ文字にマッチする</td></tr>
+<tr><td><code>\a</code></td><td style="text-align: left">ベル文字にマッチする</td></tr>
+<tr><td><code>\0</code></td><td style="text-align: left">NULL文字にマッチする</td></tr>
+</tbody></table>
+<ol start="4">
+<li>位置マッチ</li>
+</ol>
+<table><thead><tr><th><span class="mask">メタ文字</span></th><th style="text-align: left">意味</th></tr></thead><tbody>
+<tr><td><code>(?=)</code></td><td style="text-align: left">肯定先読み（ <code>(?=</code> と <code>)</code> の間のパターンにマッチした部分文字列の先頭の位置にマッチする）</td></tr>
+<tr><td><code>(?!)</code></td><td style="text-align: left">否定先読み（ <code>(?!</code> と <code>)</code> の間のパターンにマッチしない部分文字列の先頭の位置にマッチする）</td></tr>
+<tr><td><code>(?&lt;=)</code></td><td style="text-align: left">肯定後読み（ <code>(?&lt;=</code> と <code>)</code> の間のパターンにマッチした部分文字列の末尾の位置にマッチする）</td></tr>
+<tr><td><code>(?&lt;!)</code></td><td style="text-align: left">否定後読み（ <code>(?&lt;!</code> と <code>)</code> の間のパターンにマッチしない部分文字列の末尾の位置にマッチする）</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

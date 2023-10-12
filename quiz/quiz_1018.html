@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">grep</span></strong>は、指定したパターンに一致する行を<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>から検索し、マッチする行を出力するための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。</p>
+<p><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code class="language-sh"><span class="mask">grep</span> [OPTION]... PATTERNS [FILE]...
+<span class="mask">grep</span> [OPTION]... -e PATTERNS ... [FILE]...
+<span class="mask">grep</span> [OPTION]... -f PATTERN_FILE ... [FILE]...
+</code></pre>
+<p>例えば以下の<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行すると、 <code>test.txt</code> <a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>内から <code>hello</code> という文字列を検索し、それが含まれる行を表示する。</p>
+<pre><code class="language-sh"><span class="mask">grep</span> &quot;hello&quot; test.txt
+</code></pre>
+<p>また以下の例では、現在の<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>内の全ての<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ファイル</a>から、<a href="./text_processing_and_regex.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE">正規表現</a>を用いて該当箇所を検索する。</p>
+<pre><code class="language-sh"><span class="mask">grep</span> &quot;*.png&quot; *
+</code></pre>
+<p>主要な<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-i</code></td><td style="text-align: left">大文字小文字を区別せずに検索する</td></tr>
+<tr><td><code>-v</code></td><td style="text-align: left">パターンと一致しない行を検索する</td></tr>
+<tr><td><code>-c</code></td><td style="text-align: left">パターンと一致する行の数を表示する</td></tr>
+<tr><td><code>-n</code></td><td style="text-align: left">パターンと一致する行の行番号を表示する</td></tr>
+<tr><td><code>-r</code></td><td style="text-align: left">ディレクトリを再帰的に検索する</td></tr>
+<tr><td><code>-l</code></td><td style="text-align: left">ファイル名のみを表示する</td></tr>
+<tr><td><code>-w</code></td><td style="text-align: left">パターンと完全一致する行のみを検索する</td></tr>
+<tr><td><code>-E</code></td><td style="text-align: left">拡張正規表現を使用する</td></tr>
+<tr><td><code>-F</code></td><td style="text-align: left">パターンを正規表現ではなく、固定文字列として扱う</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

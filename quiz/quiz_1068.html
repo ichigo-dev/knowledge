@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">free</span></strong>は、<a href="../../../hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>の使用状況を表示するための<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。主に以下の情報を表示する。</p>
+<table><thead><tr><th>ラベル</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>total</code></td><td style="text-align: left">システム全体の物理メモリ量</td></tr>
+<tr><td><code>useed</code></td><td style="text-align: left">使用中の物理メモリ量</td></tr>
+<tr><td><code><span class="mask">free</span></code></td><td style="text-align: left">空き物理メモリ量</td></tr>
+<tr><td><code>shared</code></td><td style="text-align: left">共有メモリ量</td></tr>
+<tr><td><code>buff/cache</code></td><td style="text-align: left">バッファやキャッシュに使われている物理メモリ量</td></tr>
+<tr><td><code>available</code></td><td style="text-align: left">アプリケーションに使用可能な物理メモリ量</td></tr>
+</tbody></table>
+<p><a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">free</span> [OPTION]...
+</code></pre>
+<p><code><span class="mask">free</span></code> の主要な<a href="./basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-b</code> <code>--bytes</code></td><td style="text-align: left">結果をバイト単位で表示する</td></tr>
+<tr><td><code>-k</code> <code>--kilo</code></td><td style="text-align: left">結果をキロバイト単位で表示する（デフォルト）</td></tr>
+<tr><td><code>-m</code> <code>--mega</code></td><td style="text-align: left">結果をメガバイト単位で表示する</td></tr>
+<tr><td><code>-g</code> <code>--giga</code></td><td style="text-align: left">結果をギガバイト単位で表示する</td></tr>
+<tr><td><code>-h</code> <code>--human</code></td><td style="text-align: left">より読みやすい形式で表示する</td></tr>
+<tr><td><code>-t</code> <code>--total</code></td><td style="text-align: left">全体のメモリ使用量のみを表示する</td></tr>
+<tr><td><code>-s</code> <code>--seconds</code></td><td style="text-align: left">指定した秒数ごとに繰り返し表示する</td></tr>
+<tr><td><code>-c</code> <code>--count</code></td><td style="text-align: left">指定した回数繰り返し表示する</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

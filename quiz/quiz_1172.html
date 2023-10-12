@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Emacs</span></strong>は、<a href="./linux.md#linux">Linux</a>で一般的に利用されるテキストエディタの一種で、GNUプロジェクトの一部として開発されたフリー<a href="../../../software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>。拡張性やカスタマイズ性が高いのが特徴で、<a href="../../../software/_/chapters/software.md#gui">GUI</a><a href="../../../_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>に慣れたユーザにとっては扱いにくい場合もある。<span class="mask">Emacs</span>における基本操作は以下の通り。</p>
+<table><thead><tr><th>キー</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>Ctrl + p</code></td><td style="text-align: left">カーソルを上に移動する</td></tr>
+<tr><td><code>Ctrl + n</code></td><td style="text-align: left">カーソルを下に移動する</td></tr>
+<tr><td><code>Ctrl + f</code></td><td style="text-align: left">カーソルを右に移動する</td></tr>
+<tr><td><code>Ctrl + b</code></td><td style="text-align: left">カーソルを左に移動する</td></tr>
+<tr><td><code>Ctrl + a</code></td><td style="text-align: left">カーソルを行頭に移動する</td></tr>
+<tr><td><code>Ctrl + e</code></td><td style="text-align: left">カーソルを行末に移動する</td></tr>
+<tr><td><code>Ctrl + s</code></td><td style="text-align: left">前方検索を行う</td></tr>
+<tr><td><code>Ctrl + r</code></td><td style="text-align: left">後方検索を行う</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

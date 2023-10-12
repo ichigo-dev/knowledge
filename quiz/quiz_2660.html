@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">S3</span></strong>(<strong>Amazon Simple Storage Service</strong>)は、高い耐久性を持つ容量無制限のオブジェクトストレージサービス。<span class="mask">S3</span>の各<a href="#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">オブジェクト</a>には、<a href="../../../_/chapters/web.md#rest">REST</a>や<a href="../../../_/chapters/web.md#soap">SOAP</a>といった<a href="../../../_/chapters/application_layer.md#http">HTTP</a>ベースの<a href="../../../_/chapters/web.md#web-api">Web API</a>を使ってアクセスする。柔軟性に優れており、アイデア次第で様々な利用方法がある。</p>
+<ul>
+<li>データバックアップ</li>
+<li>ビックデータ解析用のデータレイク</li>
+<li>ETL(Extract/Transform/Load)の中間ファイル保存</li>
+<li><a href="./computing.md#auto-scaling">Auto Scaling</a>構成された<a href="./computing.md#ec2">EC2インスタンス</a>やコンテナからのログ転送先</li>
+<li>静的コンテンツのホスティング</li>
+<li>Key-Value型の<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a></li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -35,7 +35,7 @@ impl MarkdownConvertStrategy
                 let term = Term::new
                 (
                     &term,
-                    &section.get_content(),
+                    &section.get_html(),
                     &data_source.get_source(),
                 );
                 dictionary.add(term);

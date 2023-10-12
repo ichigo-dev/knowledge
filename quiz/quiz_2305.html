@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">データセンタ</span></strong>は、<a href="../../../computer/_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>や<a href="../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>、高速な通信回線などを備えた施設。また、大規模な<span class="mask">データセンタ</span>は直接<a href="#%E3%83%90%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%B3">バックボーン</a>に接続されている。</p>
+<p>SNSサイトなどにおいては世界中の大量のトラフィックを瞬時に処理する必要があるため、多くの<a href="../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>機器や<a href="../../../computer/_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>を複数個所の<span class="mask">データセンタ</span>に設置し、高速な<a href="#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>で接続する必要がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

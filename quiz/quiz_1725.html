@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Thread-Specific Storageパターン</span></strong>（<strong>Thread Local Storageパターン</strong>）は、複数の<a href="../../../../../computer/software/_/chapters/operating_system.md#%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89">スレッド</a>を用いる<a href="../../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>において、各<a href="../../../../../computer/software/_/chapters/operating_system.md#%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89">スレッド</a>が個別のデータ領域を持つことで、<a href="../../../../../programming/parallel_programming/_/chapters/synchronous_processing.md#%E6%8E%92%E4%BB%96%E5%87%A6%E7%90%86">排他処理</a>を行わずに並列実行を可能にする<a href="../../../_/chapters/design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。</p>
+<p><a href="../../../../../computer/software/_/chapters/operating_system.md#%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89">スレッド</a>ごとに個別のログファイルを管理するといった、<a href="../../../../../computer/software/_/chapters/operating_system.md#%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89">スレッド</a>固有のデータの隔離に利用される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

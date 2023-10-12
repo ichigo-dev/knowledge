@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">アセンブリ言語</span></strong>は、ニーモニックという命令を組み合わせて記述する<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>。<strong>ニーモニック</strong>は、<a href="#%E6%A9%9F%E6%A2%B0%E8%AA%9E">機械語</a>の命令に1対1で対応する、英単語や記号で表記した命令。<a href="../../../computer/hardware/_/chapters/processor.md#%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5">プロセッサ</a>ごとに対応する<span class="mask">アセンブリ言語</span>も異なるので注意が必要。</p>
+<p><span class="mask">アセンブリ言語</span>の一種である<strong>Netwide Assembler</strong>を用いて <code>Hello, world</code> を出力する<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>を以下に示す。</p>
+<pre><code class="language-asm">section .data
+    msg db      &quot;Hello, world&quot;      ; データセクションで文字列を宣言
+
+section .text
+    global _start                   ; プログラムのエントリポイントとして_startを呼び出し
+
+_start:
+    mov     rax, 1                  ; sys_writeシステムコール(1)をraxレジスタにセット
+    mov     rdi, 1                  ; 第一引数（ファイルディスクリプタ、1は標準出力）をrdiレジスタにセット
+    mov     rsi, msg                ; 第二引数（出力したい文字列）をrsiレジスタにセット
+    mov     rdx, 12                 ; 第三引数（データのサイズ）をrdxレジスタにセット
+    syscall                         ; システムコールを発行
+    mov     rax, 60                 ; exitシステムコール(60)をraxレジスタにセット
+    mov     rdi, 0                  ; 第一引数（終了コード、0は正常終了）をrdiレジスタにセット
+    syscall                         ; システムコールを発行
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

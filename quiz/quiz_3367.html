@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">RSA</span></strong>(Rivest Shamir Adleman)は、<a href="#%E5%85%AC%E9%96%8B%E9%8D%B5%E6%9A%97%E5%8F%B7%E6%96%B9%E5%BC%8F">公開鍵暗号方式</a>の<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>のひとつで、大きい数に対する素因数分解の困難さを安全性の根拠とした方式となっている。</p>
+<p>鍵を生成する手順は以下の通り。</p>
+<ul>
+<li>異なる2つの大きな素数 $p, q$ を生成する</li>
+<li>$n = pq$ とする</li>
+<li>$(p - 1)(q - 1)$ と互いに素な整数 $k_1$ をとる</li>
+<li>$k_1 k_2 \equiv 1 (mod (p - 1)(q - 1))$ となる $k_2$ をとる</li>
+<li>$n$ と $k_1$ を公開鍵として公開して、 $k_2$ は秘密鍵として公開しない</li>
+</ul>
+<p>また、これらの鍵を用いて暗号化および復号化する手順は以下の通り。</p>
+<ul>
+<li>送りたいメッセージを $m$ とする</li>
+<li>公開鍵を用いて $m$ を $k_1$ 乗した後に、割った余りを $C$ （暗号文）とする</li>
+<li>受信者は $C$ を $k_2$ 乗した後に、 $n$ で割ることで $m$ を復号できる</li>
+</ul>
+<p>このような仕組みにより、送信者のメッセージは受信者にしか復号できない。</p>
+<p>また、秘密鍵を用いて暗号化したメッセージを公開鍵で復号するということもできる。この場合、公開鍵は公開されている前提のため、機密性の確保はできないが、発信元の完全性・真正性は証明できるため、<a href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D">デジタル署名</a>などに用いられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

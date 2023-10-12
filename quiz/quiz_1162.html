@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">パイプライン</span></strong>は、複数の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を連携させるための仕組みで、<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の<a href="#%E6%A8%99%E6%BA%96%E5%87%BA%E5%8A%9B">標準出力</a>を別の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の<a href="#%E6%A8%99%E6%BA%96%E5%85%A5%E5%8A%9B">標準入力</a>に接続することができる。</p>
+<p>以下は、 <code>ls</code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の出力を <code>less</code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>に入力する例。</p>
+<pre><code class="language-sh">$ ls -la | less
+</code></pre>
+<p>また、<span class="mask">パイプライン</span>は3つ以上の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>をつなげることもできる。以下は、 <code>ls</code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の出力を <code>cat</code> に入力して <code>cat</code> で行番号を付け、 <code>less</code> に入力する例。</p>
+<pre><code class="language-sh">$ ls -la | cat -n | less
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

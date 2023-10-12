@@ -11,6 +11,7 @@
 //------------------------------------------------------------------------------
 
 use regex::Regex;
+use pulldown_cmark::{ html, Options, Parser };
 
 //------------------------------------------------------------------------------
 /// Structure representing a section of a Markdown file.
@@ -77,6 +78,19 @@ impl MarkdownSection
     pub(super) fn get_content( &self ) -> String
     {
         self.content.clone()
+    }
+
+    //--------------------------------------------------------------------------
+    /// Gets the HTML for the section.
+    //--------------------------------------------------------------------------
+    pub(super) fn get_html( &self ) -> String
+    {
+        let mut options = Options::empty();
+        options.insert(Options::all());
+        let parser = Parser::new_ext(&self.content, options);
+        let mut html_buf = String::new();
+        html::push_html(&mut html_buf, parser);
+        html_buf
     }
 
     //--------------------------------------------------------------------------

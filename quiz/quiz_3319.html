@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ルートキット</span></strong>は、標的<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>に侵入して攻撃の手助けをするツールを<a href="../../../../computer/software/_/chapters/package.md#%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8">パッケージ</a>化したものの総称。直接的な被害を加えるのではなく、他の<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>がウイルス対策ソフトに検知されることを防止するといった機能がある。</p>
+<p><span class="mask">ルートキット</span>は最初に、<a href="../../../../computer/software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">OS</a>と<a href="../../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>の間に介入し、<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>に関する情報を削除することで存在を隠蔽する。そして、<strong>DKOM</strong>(Direct kernel Object Modification)と呼ばれる手法で、<a href="../../../../computer/software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">OS</a>が管理する内部情報そのものを削除するなどして、<a href="../../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>に情報を渡さないように細工する。</p>
+<p>また、<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>の権限を不正に昇格する、<a href="../../../../computer/linux/_/chapters/process_and_job.md#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>を隠蔽する、追加の<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>をインストールする、といった機能を備えているものもある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

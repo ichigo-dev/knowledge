@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">systemctl</span></strong>は、<a href="#systemd">systemd</a>を制御するために使用される<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>の起動や停止、有効化、無効化などを行う<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>マネージャであり、システムの管理に必要な<a href="./basic_command.md#%E3%82%B5%E3%83%96%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">サブコマンド</a>が用意されている。</p>
+<p><a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">systemctl</span> [OPTIONS...] COMMAND [UNIT...]
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

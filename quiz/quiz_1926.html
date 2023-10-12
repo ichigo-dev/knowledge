@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Type</span></strong>は、<a href="#graphql">GraphQL</a>において、<a href="#schema">Schema</a>で定義されるデータ型。データ型を表す<span class="mask">Type</span>には、<a href="#%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E5%9E%8B">スカラー型</a>と<a href="#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%9E%8B">オブジェクト型</a>がある。</p>
+<p>以下は、独自の<a href="#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E5%9E%8B">オブジェクト型</a>の<span class="mask">Type</span>を定義する<a href="#schema">Schema</a>の例。型名に <code>!</code> を付けた場合は必須となる。また、 <code>[<span class="mask">Type</span>]</code> のように記述することで、配列として扱うことができる。</p>
+<pre><code class="language-graphql">type Person
+{
+    name: String!
+    age: Int
+    favoirtes: [String]
+}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

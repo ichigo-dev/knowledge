@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>マルバタイジング</strong>（<strong><span class="mask">不正広告</span></strong>）は、オンライン広告を介して<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>配布や不正<a href="../../../../network/_/chapters/web.md#web">Web</a>サイトへの誘導などを行う攻撃手口。<a href="../../../../network/_/chapters/web.md#web">Web</a>広告に悪性コード（<a href="../../../../programming/_/chapters/programming_language.md#javascript">JavaScript</a>など）を混入し、ユーザが広告をクリックしたときに悪意のあるサイトに<a href="../../../../network/_/chapters/web.md#%E3%83%AA%E3%83%80%E3%82%A4%E3%83%AC%E3%82%AF%E3%83%88">リダイレクト</a>させたり、<a href="#%E3%83%9E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2">マルウェア</a>がインストールさせたりする。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

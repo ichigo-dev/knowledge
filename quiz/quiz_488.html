@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>NOT演算</strong>（<strong><span class="mask">論理否定</span></strong>）は、1つの<a href="./set_and_proposition.md#%E7%9C%9F%E5%81%BD%E5%80%A4">真偽値</a>の入力値を反転した値を出力する演算で、数学的には<a href="./set_and_proposition.md#%E8%A3%9C%E9%9B%86%E5%90%88">補集合</a>に対応する。</p>
+<p>入力変数を $x$ 、出力を $z$ とすると、<a href="#%E7%9C%9F%E7%90%86%E5%80%A4%E8%A1%A8">真理値表</a>と<a href="./set_and_proposition.md#%E3%83%99%E3%83%B3%E5%9B%B3">ベン図</a>は次のようになる。</p>
+<table><thead><tr><th>$x$</th><th>$z$</th></tr></thead><tbody>
+<tr><td>$0$</td><td>$1$</td></tr>
+<tr><td>$1$</td><td>$0$</td></tr>
+</tbody></table>
+<p><img src="../assets/images/venn_diagram_not.png" alt="NOT演算のベン図" /></p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

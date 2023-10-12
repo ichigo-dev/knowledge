@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">docker swarm join</span></strong>は、<a href="#docker-swarm">Docker Swarm</a>の<a href="../../../../system/_/chapters/system_architecture.md#%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">クラスタ</a>に参加するための<a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。<a href="#docker-swarm">Swarm Manager</a>が管理する各ワーカノードとなる<a href="../../../../network/_/chapters/network.md#%E3%83%9B%E3%82%B9%E3%83%88">ホスト</a>で実行する。トークンには、<a href="#docker-swarm">Docker Swarm</a>の起動時に生成されたものを指定する。</p>
+<pre><code class="language-sh">$ <span class="mask">docker swarm join</span> &lt;master node ip&gt;:&lt;master node port&gt; --token &lt;token&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

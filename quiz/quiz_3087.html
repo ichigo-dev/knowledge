@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">オーバフロー演算</span></strong>は、<a href="#%E3%83%A9%E3%83%83%E3%83%97%E6%BC%94%E7%AE%97">ラップ演算</a>の結果（ <code>result</code> ）と、<a href="../../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E3%82%AA%E3%83%BC%E3%83%90%E3%83%95%E3%83%AD%E3%83%BC">オーバフロー</a>が発生したか否かの<a href="#%E7%9C%9F%E5%81%BD%E5%80%A4%E5%9E%8B">真偽値</a>（ <code>overflowed</code> ）を、 <code>(result, overflowed)</code> という形式の<a href="#%E3%82%BF%E3%83%97%E3%83%AB%E5%9E%8B">タプル</a>で返却する。</p>
+<p><a href="../../../_/chapters/operation.md#%E6%BC%94%E7%AE%97">演算子</a>名に接頭辞 <code>overflowing_</code> をつけることで利用できる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

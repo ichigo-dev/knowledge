@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">可用性</span></strong>(Availability)は、<a href="./system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>やサービスが継続して稼働できる能力。<a href="./system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の停止時間が少ないほど<span class="mask">可用性</span>が高く、ユーザが利用したい時に利用できる確率が高い。<a href="#%E4%BF%A1%E9%A0%BC%E6%80%A7">信頼性</a>や<a href="./reliability_design.md#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%AB%E3%83%88%E3%83%88%E3%83%AC%E3%83%A9%E3%83%B3%E3%82%B9">耐障害性</a>が高い<a href="./system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>は<span class="mask">可用性</span>が高いといえる。<span class="mask">可用性</span>は<a href="#%E7%A8%BC%E5%83%8D%E7%8E%87">稼働率</a>で表される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

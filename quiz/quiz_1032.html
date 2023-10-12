@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Linux</span></strong>は、Linus Torvaldsによって実装された<a href="../../../software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">OS</a>であり、<a href="../../../_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>用から組み込み機器用、学習用、デスクトップ用など、幅広い用途で利用されている。設計は<a href="../../../software/_/chapters/operating_system.md#unix">UNIX</a>に非常に似ているものの、<a href="../../../software/_/chapters/operating_system.md#unix">System V</a>の流れも<a href="../../../software/_/chapters/operating_system.md#unix">BSD</a>の流れも汲まない独自の<a href="../../../software/_/chapters/operating_system.md#unix">UNIX互換OS</a>として開発された。</p>
+<p><a href="../../../software/_/chapters/operating_system.md#unix">UNIX</a>は高いライセンス使用料が必要であり、個人用として利用するには敷居が高いが、<span class="mask">Linux</span>は<a href="../../../software/_/chapters/open_source_software.md#gpl">GPLライセンス</a>であり誰でも無償で利用することができる。さらに、<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>の改変や再配布も自由に行えたため多くの<a href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%BF">ディストリビュータ</a>により改良され、一般に広まることとなった。</p>
+<p>また、<span class="mask">Linux</span>には高品質の<a href="../../../software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>が多く揃っているため、大変使いやすい<a href="../../../software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">OS</a>となっている。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

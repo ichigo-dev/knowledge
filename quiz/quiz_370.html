@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>加法定理</strong>は、ある2つの<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A, B$ のいずれかが起こるという<a href="#%E4%BA%8B%E8%B1%A1">事象</a>（<strong><span class="mask">和事象</span></strong>）の<a href="#%E7%A2%BA%E7%8E%87">確率</a>を求めるための定理。</p>
+<p>2つの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が互いに<a href="#%E6%8E%92%E5%8F%8D">排反</a>である場合、<span class="mask">和事象</span>の確率 $P(A \cup B)$ は、それぞれの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>の<a href="#%E7%A2%BA%E7%8E%87">確率</a>の和で求められる。</p>
+<p>$$
+P(A \cup B) = P(A) + P(B)
+$$</p>
+<p>2つの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が互いに<a href="#%E6%8E%92%E5%8F%8D">排反</a>でない場合、<span class="mask">和事象</span>の<a href="#%E7%A2%BA%E7%8E%87">確率</a> $P(A \cup B)$ は、それぞれの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>の<a href="#%E7%A2%BA%E7%8E%87">確率</a>の和から重複する部分（両方が同時に起こる<a href="#%E7%A2%BA%E7%8E%87">確率</a>）の<a href="#%E7%A2%BA%E7%8E%87">確率</a>を引くことで求められる。</p>
+<p>$$
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

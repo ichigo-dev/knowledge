@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">プロジェクトライフサイクル</span></strong>は、プロジェクトのフェーズの集合。プロジェクトの規模や複雑さは様々であるが、ライフサイクルはプロジェクト開始、組織編成と準備、作業実施、プロジェクト終結の4段階で表現することができる。また、<span class="mask">プロジェクトライフサイクル</span>における典型的なコストと要員数は、プロジェクト開始時は少なく、作業を実行するにつれて頂点に達し、プロジェクトが終了に近づくと急激に落ち込む、という推移になる。ステークホルダの影響力、リスク、不確実性はプロジェクトの開始時に最大であり、プロジェクトが進むにつれて徐々に低下する。変更コストはプロジェクトが終了に近づくにつれて大幅に増加していく。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

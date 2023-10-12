@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">第1正規化形</span></strong>は、同じ<a href="#%E3%82%AB%E3%83%A9%E3%83%A0">カラム</a>に格納するべき<a href="#%E3%82%A2%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88">アトリビュート</a>を複数持つ<a href="#%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89">レコード</a>については、<a href="#%E3%82%A2%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%83%88">アトリビュート</a>の数だけ独立した<a href="#%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89">レコード</a>を用意した形。同じ候補キー（<a href="#%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89">レコード</a>を一意に特定するための属性）を持つ<a href="#%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89">レコード</a>が複数存在する状態のため、候補キーを<a href="#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%9E%E3%83%AA%E3%82%AD%E3%83%BC">プライマリキー</a>として扱うことはできない。また、候補キーとなる<a href="#%E3%82%AB%E3%83%A9%E3%83%A0">カラム</a>が複数存在する可能性がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

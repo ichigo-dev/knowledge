@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">生体認証</span></strong>(Biometric Authentication)は、個人の生態的な特徴を使用して<a href="#%E8%AA%8D%E8%A8%BC">認証</a>を行う技術。指紋認証や顔認証、虹彩認証、声紋認証などが一般的。パスワードやピンコードといった従来の<a href="#%E8%AA%8D%E8%A8%BC">認証</a>手法と比べて高い<a href="./security.md#%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3">セキュリティ</a>と利便性を提供し、なりすましや不正アクセスのリスクを軽減できる。一方で、<span class="mask">生体認証</span>技術の実装には適切な<a href="../../../../basics/measurement_and_control/_/chapters/control_theory.md#%E3%82%BB%E3%83%B3%E3%82%B5">センサ</a>や<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>が必要であり、使用者の状態や環境条件に左右されるというデメリットもある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

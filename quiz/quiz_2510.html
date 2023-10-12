@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>MQ</strong>(<strong><span class="mask">Amazon Messaging Queue</span></strong>)は、<a href="./aws.md#aws">AWS</a>の代表的なメッセージングキューイングサービス。<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>間でデータをやり取りする際に、一時的にデータを溜め込む仕組みを提供することで、<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の非同期化をサポートする。Apache ActiveMQおよびRabbitMQとよばれる、<a href="../../../../computer/software/_/chapters/open_source_software.md#%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">オープンソース</a>のメッセージキューイングソフトをベースに構築されている。MQの<a href="../../../../system/_/chapters/system_performance_evaluation.md#%E3%82%B9%E3%83%AB%E3%83%BC%E3%83%97%E3%83%83%E3%83%88">スループット</a>は、インスタンスタイプによって異なる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

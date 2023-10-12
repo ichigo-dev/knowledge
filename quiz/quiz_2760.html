@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>リスト</strong>（<strong>連結リスト</strong>、<strong>リンクリスト</strong>）は、各ノードが任意のデータと他のノードへの<a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E5%9E%8B">ポインタ</a>を持つようなデータ構造。ノードが別のノードの<a href="../../../computer/hardware/_/chapters/memory.md#%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">アドレス</a>情報を持つことによって、データの集まりを表現している。</p>
+<ul>
+<li><strong>単方向リスト</strong> : 各ノードが次のノードへのポインタを持つリスト</li>
+<li><strong>双方向リスト</strong> : 各ノードが次のノードと前のノードへのポインタを持つリスト</li>
+<li><strong><span class="mask">循環リスト</span></strong> : 末尾のノードが先頭のノードへのポインタを持つリスト（単方向と双方向がある）</li>
+</ul>
+<p>リストは、前後のノードと<a href="../../../computer/hardware/_/chapters/memory.md#%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">アドレス</a>上で隣り合っている必要がないため、データ数が増えても<a href="./programming.md#%E3%82%A2%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%88">アロケート</a>が発生しないという利点がある。</p>
+<p>リストの任意の場所へのデータの挿入・削除にかかる<a href="../../../basics/information_theory/_/chapters/computational_complexity.md#%E8%A8%88%E7%AE%97%E9%87%8F">計算量</a>は $O(1)$ と高速である。一方で、要素へのアクセスにかかる<a href="../../../basics/information_theory/_/chapters/computational_complexity.md#%E8%A8%88%E7%AE%97%E9%87%8F">計算量</a>は $O(N)$ であり、<a href="#%E9%85%8D%E5%88%97">配列</a>に比べると遅い。これは、リストの要素へアクセスするには、先頭の要素から順番に<a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E5%9E%8B">ポインタ</a>をたどっていく必要があるためである（<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>上での配置が隣り合っているとは限らないため）。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>機械語</strong>（<strong>マシン語</strong>、<strong>オブジェクトコード</strong>、<strong><span class="mask">ネイティブコード</span></strong>）は、<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が直接解釈できる<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>で、<a href="../../../basics/discrete_mathematics/_/chapters/radix.md#2%E9%80%B2%E6%95%B0">2進数</a>の羅列からなる。機械語は次の例のような<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>となっており、人間が記述したり内容を理解するのには適していない。そのため、人間が理解しやすいように<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>を用いて<a href="#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>を作成し、専用の<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>によって<a href="#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>を機械語に変換するのが一般的。<a href="../../../computer/hardware/_/chapters/processor.md#%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5">プロセッサ</a>ごとに対応する機械語も異なるので注意が必要。</p>
+<pre><code>0111 1111 0100 0101 0100 1100 0100 0101 0000 0010 0000 0001 0000 0001 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+0000 0010 0000 0000 0011 1110 0000 0000 0000 0001 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0100 0100 0000 0000 0000 0000 0000 0000 0000 0000 0000
+
+...(以下略)
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

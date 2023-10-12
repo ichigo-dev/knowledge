@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">余事象</span></strong>は、ある<a href="#%E4%BA%8B%E8%B1%A1">事象</a>の<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A3%9C%E9%9B%86%E5%90%88">補集合</a>を表す言葉で、その<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が起こらないという<a href="#%E4%BA%8B%E8%B1%A1">事象</a>。ある<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A$ が起こらない<a href="#%E7%A2%BA%E7%8E%87">確率</a> $P(\bar{A})$ （<span class="mask">余事象</span>の<a href="#%E7%A2%BA%E7%8E%87">確率</a>）は次のように求められる。</p>
+<p>$$
+P(\bar{A}) = 1 - P(A)
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">変数</span></strong>は、<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>中で用いるデータに固有の名前をつけたもの。物理的にはデータは<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>に格納されており、<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>上のデータには<a href="../../../computer/hardware/_/chapters/memory.md#%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">アドレス</a>を使ってアクセスすることができる。しかし、<a href="../../../computer/hardware/_/chapters/memory.md#%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">メモリアドレス</a>はただの数値の羅列であり、人間にはわかりずらいため、<a href="./programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>中では格納しているデータの性質や役割を表す<a href="./programming.md#%E8%AD%98%E5%88%A5%E5%AD%90">識別子</a>をつけた<span class="mask">変数</span>を用いる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

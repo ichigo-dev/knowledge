@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>移動</strong>(<strong><span class="mask">move</span></strong>)は、<a href="./rust.md#rust">Rust</a>が持つ<a href="../../../_/chapters/memory_management.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%AE%E3%83%A1%E3%83%A2%E3%83%AA%E7%AE%A1%E7%90%86">メモリ管理</a>のための機能で、ある所有者によって所有されている値を、別の所有者に渡す操作。<a href="./rust.md#rust">Rust</a>ではほとんどの<a href="../../../_/chapters/data_type.md#%E5%9E%8B">型</a>が、<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a>への値の代入、<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>への<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a>の受け渡し、<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>からの<a href="../../../_/chapters/function.md#%E8%BF%94%E3%82%8A%E5%80%A4">返り値</a>の返却の際に、データは<a href="../../../_/chapters/data_type.md#%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%82%B3%E3%83%94%E3%83%BC">ディープコピー</a>されずに移動が発生する。<a href="../../../_/chapters/data_type.md#%E3%83%87%E3%82%A3%E3%83%BC%E3%83%97%E3%82%B3%E3%83%94%E3%83%BC">ディープコピー</a>が必要な場合は明示的に変数に対して <code>clone()</code> メソッドを呼ぶ。</p>
+<p><a href="./rust.md#rust">Rust</a>の<a href="../../../../basics/information_theory/_/chapters/compiler_theory.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9">コンパイラ</a>はこれらの移動を推測することができ、<a href="../../../_/chapters/programming.md#%E6%A9%9F%E6%A2%B0%E8%AA%9E">機械語</a>レベルで見たときに最終的に値が移動される場所にはじめから<a href="../../../_/chapters/object_oriented.md#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">オブジェクト</a>が作られることも多い。</p>
+<p><a href="./data_type.md#%E3%83%99%E3%82%AF%E3%82%BF">ベクタ</a>のようにインデックスにより参照される値については、インデックスを指定してその要素だけを移動するということができない。このような操作を実現したい場合は、次のような3つの方法がある。</p>
+<pre><code class="language-rust">let mut v = Vec::new();
+for i in 1..100
+{
+    v.push(i.to_string());
+}
+
+// 1. ベクタの最後の要素をポップして取り出す
+let x = v.pop().expect(&quot;vector empty&quot;);
+
+// 2. ベクタの指定したインデックスの場所から要素を取り出し、代わりに最後の要素をそこに入れる
+let index = 8;
+let y = v.swap_re<span class="mask">move</span>(index);
+
+// 3. 取り出した値の代わりに別の値を入れる
+let index = 10;
+let z = std::mem::replace(&amp;mut v[index], &quot;substitute&quot;.to_string());
+</code></pre>
+<p>特に <code>Option&lt;T&gt;</code> を要素として持つ<a href="./data_type.md#%E3%83%99%E3%82%AF%E3%82%BF">ベクタ</a>から値を取り出したい場合には、値を移動して代わりに <code>None</code> を入れるという使い方が多い。これを実現するための <code>take()</code> メソッドも用意されている。</p>
+<p><a href="../../../_/chapters/data_type.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B">コレクション型</a>は一般に、すべての要素をループで消費するための<a href="../../../_/chapters/object_oriented.md#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">メソッド</a>を用意している。次のようにしてループに<a href="./data_type.md#%E3%83%99%E3%82%AF%E3%82%BF">ベクタ</a>を直接渡すと、<a href="./data_type.md#%E3%83%99%E3%82%AF%E3%82%BF">ベクタ</a>は <code>v</code> から移動されて <code>v</code> は<a href="../../../_/chapters/variable.md#%E5%8F%82%E7%85%A7">未初期化状態</a>となり、繰り返しごとにループは次の要素を<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a> <code>s</code> に移動する。</p>
+<pre><code class="language-rust">let v = vec![&quot;hello&quot;.to_string(), &quot;world&quot;.to_string(), &quot;rust&quot;.to_string()];
+
+for mut s in v
+{
+    s.push('!');
+    println!(&quot;{}&quot;, s);
+}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

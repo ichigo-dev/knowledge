@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>が持つ誤り検出や訂正の方法としては、<a href="../../../../basics/communication_theory/_/chapters/transmission_theory.md#%E3%83%91%E3%83%AA%E3%83%86%E3%82%A3">パリティ</a>や<strong><span class="mask">ECC</span></strong>(Error Correcting Code)（<a href="../../../../basics/communication_theory/_/chapters/transmission_theory.md#%E3%83%8F%E3%83%9F%E3%83%B3%E3%82%B0%E7%AC%A6%E5%8F%B7">ハミング符号</a>を用いた信頼性の高いエラー訂正機構）、<a href="../../../../basics/communication_theory/_/chapters/transmission_theory.md#crc">CRC</a>などが用いられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

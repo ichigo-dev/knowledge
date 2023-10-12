@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ブロックチェーン</span></strong>は、分散型の<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>技術であり、複数の<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>間で共有されるデータの連鎖（チェーン）を指す用語。オンライン取引の記録やデータの透明性・信頼性・<a href="./security.md#%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3">セキュリティ</a>を確保するために使用される。</p>
+<p><span class="mask">ブロックチェーン</span>は複数のノード（<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>）で分散された<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>で、各ノードは<a href="../../../../network/_/chapters/network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>に参加し、取引やデータの承認を行う。この分散構造により、信頼性や<a href="../../../_/chapters/system_performance_evaluation.md#%E5%8F%AF%E7%94%A8%E6%80%A7">可用性</a>が高まり、<a href="../../../_/chapters/system_architecture.md#%E5%8D%98%E4%B8%80%E9%9A%9C%E5%AE%B3%E7%82%B9">単一障害点</a>のリスクが低減される。新しいデータは前のブロックに追加される形で連続的に追跡され、一度追加されたデータは改ざんや削除ができないため不変性が保たれる。また、<span class="mask">ブロックチェーン</span>は公開型であり、<a href="../../../../network/_/chapters/network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>上のすべての参加者が同じ情報を共有するため、透明性が確保される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

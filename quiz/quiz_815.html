@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ポインティングデバイス</strong>は、装置を操作することで画面に表示されたカーソルを動かし、画面上の特定の位置を指し示す入力装置。</p>
+<ul>
+<li><strong>マウス</strong> : 一般的な光学式マウスでは、マウスから出る光の反射を読み取って座標一の検知を行う</li>
+<li><strong>ジョイスティック</strong> : ゲームソフトの操作用などに利用される装置で、スティックを倒すことで位置情報の変化を入力する</li>
+<li><strong>トラックボール</strong> : ボールを回転させることで位置情報を入力する装置</li>
+<li><strong>タッチパネル</strong>（<strong>タッチスクリーン</strong>） : 表示されている画面に触れることで位置情報を入力する装置</li>
+<li><strong><span class="mask">デジタイザ</span></strong>（<strong>ペンタブレット</strong>） : パネルの上で専用のペンやマウス上のカーソルを移動させることで座標情報を入力する</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

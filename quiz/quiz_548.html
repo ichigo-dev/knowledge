@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">マルチバイト文字</span></strong>は、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>上で1文字を複数<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%88">バイト</a>で表現するような体系。アルファベットや数字、一部の記号は、<a href="#ascii%E3%82%B3%E3%83%BC%E3%83%89">ASCIIコード</a>により1<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%88">バイト</a>で表現することができるが、全角カナや漢字などは1<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%88">バイト</a>では表現しきれないため<span class="mask">マルチバイト文字</span>を用いる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

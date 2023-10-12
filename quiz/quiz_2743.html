@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ブーリアン型</span></strong>( <code>bool, boolean</code> )は、<a href="../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#%E7%9C%9F%E5%81%BD%E5%80%A4">真偽値</a>を扱うための<a href="#%E5%9E%8B">型</a>で、 <code>true</code> か <code>false</code> のどちらかの値が格納される。この<a href="#%E5%9E%8B">型</a>に対しては、<a href="../../../basics/discrete_mathematics/_/chapters/logical_operation.md#and%E6%BC%94%E7%AE%97">論理積</a>( <code>AND</code> )、<a href="../../../basics/discrete_mathematics/_/chapters/logical_operation.md#or%E6%BC%94%E7%AE%97">論理和</a>( <code>OR</code> )、<a href="../../../basics/discrete_mathematics/_/chapters/logical_operation.md#xor%E6%BC%94%E7%AE%97">排他的論理和</a>( <code>XOR</code> )、同値、非同値、<a href="../../../basics/discrete_mathematics/_/chapters/logical_operation.md#not%E6%BC%94%E7%AE%97">否定</a>といった<a href="../../../basics/discrete_mathematics/_/chapters/logical_operation.md#%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97">論理演算</a>が可能。<a href="./control_flow.md#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>において評価結果としても用いられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>損失関数</strong>（<strong><span class="mask">コスト関数</span></strong>、<strong>誤差関数</strong>）は、<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>を最適化するための指標となる関数。<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>が出力する予測値と、<a href="#%E3%83%A9%E3%83%99%E3%83%AB%E4%BB%98%E3%81%8D%E3%83%87%E3%83%BC%E3%82%BF">ラベル付きデータ</a>の<a href="#%E3%83%A9%E3%83%99%E3%83%AB">ラベル</a>との<a href="../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E8%AA%A4%E5%B7%AE">誤差</a>を損失関数とする場合が多い。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

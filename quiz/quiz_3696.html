@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">長整数</span></strong>(bigint)は、<a href="./javascript.md#javascipt">JavaScript</a>において、整数を表す型。<a href="#%E6%95%B0%E5%80%A4">number</a>とは異なり、表現できる数が整数に限定される代わりに任意の大きさの値を<a href="../../../../programming/_/chapters/variable.md#%E4%BB%A3%E5%85%A5">代入</a>することができる。<span class="mask">長整数</span>の<a href="#%E3%83%AA%E3%83%86%E3%83%A9%E3%83%AB">リテラル</a>は数値の末尾に <code>n</code> をつけて表現される。<span class="mask">長整数</span>と<a href="#%E6%95%B0%E5%80%A4">number</a>との<a href="../../../../programming/_/chapters/operation.md#%E7%AE%97%E8%A1%93%E6%BC%94%E7%AE%97">算術演算</a>（例えば、 <code>3n + 20</code> など）は<a href="../../../../programming/_/chapters/programming.md#%E3%82%A8%E3%83%A9%E3%83%BC">エラー</a>となる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

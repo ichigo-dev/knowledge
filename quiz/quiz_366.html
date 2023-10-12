@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">独立</span></strong>は、ある2つの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>について、それぞれが無関係に起こったり起こらなかったりするという性質。一方の<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が起こっても、他方の<a href="#%E4%BA%8B%E8%B1%A1">事象</a>に影響を与えず、逆もまた同様であるような<a href="#%E4%BA%8B%E8%B1%A1">事象</a>の組み合わせ。言い換えると、<a href="#%E5%BE%93%E5%B1%9E">従属</a>ではないこと。</p>
+<p>例えば、コインを2回投げた場合、1回目の表裏がどうであろうと2回目の表裏には影響を与えることはなく、2回目に表が出る<a href="#%E7%A2%BA%E7%8E%87">確率</a>と裏が出る<a href="#%E7%A2%BA%E7%8E%87">確率</a>はそれぞれ $\frac{1}{2}$ であるため、これらの事象は<span class="mask">独立</span>である。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

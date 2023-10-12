@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">QUIC</span></strong>(Quick UDP Internet Connection)は、Googleによって提案され、<a href="./communication_protocol.md#%E6%A8%99%E6%BA%96%E5%8C%96%E3%81%AE%E6%B5%81%E3%82%8C">標準化</a>が進められている<a href="./network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>。<a href="#tcp">TCP</a>には暗号化の機能はないが、<span class="mask">QUIC</span>はそれ自体で暗号化通信を可能にする。</p>
+<p><span class="mask">QUIC</span>は<a href="#udp">UDP</a>を使用するため、<a href="#udp">UDP</a>と<span class="mask">QUIC</span>を合わせてトランスポートプロトコルの役割を果たす。<span class="mask">QUIC</span>の特徴は次の通り。</p>
+<ul>
+<li>認証、暗号化</li>
+<li>低遅延の<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>管理</li>
+<li>多重化（1<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>で複数の<a href="#%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0">ストリーム</a>を同時に扱う）</li>
+<li>高精度な再送処理</li>
+<li><a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>のマイグレーション（<a href="./address_on_network.md#ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">IPアドレス</a>が変わっても<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>を維持する）</li>
+</ul>
+<p><a href="#tcp">TCP</a>では<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>の確立だけで3回（<a href="#%E3%82%B9%E3%83%AA%E3%83%BC%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%8F%E3%83%B3%E3%83%89%E3%82%B7%E3%82%A7%E3%82%A4%E3%82%AF">スリーウェイハンドシェイク</a>）、TLSによる通信の暗号化を行う場合は7回の<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>のやり取りが必要であったが、<span class="mask">QUIC</span>では1回の<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>のやり取りで実現できる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

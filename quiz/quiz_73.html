@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>クロスエントロピー誤差</strong>（<strong><span class="mask">交差エントロピー誤差</span></strong>）は、<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>の出力したカテゴリの<a href="../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83">確率分布</a>を元に、正解<a href="#%E3%83%A9%E3%83%99%E3%83%AB">ラベル</a>との<a href="../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E8%AA%A4%E5%B7%AE">誤差</a>を評価するための指標。<a href="#%E5%88%86%E9%A1%9E">分類</a>問題の<a href="#%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0">損失関数</a>として用いられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="#efs">EFS</a>には、<strong>汎用パフォーマンスモード</strong>と<strong>最大I/Oパフォーマンスモード</strong>がある。通常は汎用パフォーマンスモード、数百～数千台といったクライアントから同時に<a href="#efs">EFS</a>にアクセスするようなユースケースでは最大I/Oパフォーマンスモードを用いる。</p>
+<p>どちらのモードを用いるかの指標として、<a href="./management_and_governance.md#cloudwatch">CloudWatch</a>の<strong><span class="mask">PercentIOLimit</span></strong>というメトリクスが参考になる。汎用パフォーマンスモードで<span class="mask">PercentIOLimit</span>が長時間高い状態であれば、最大I/Oパフォーマンスモードに変更することを検討するとよい。</p>
+<p>パフォーマンスモードは後から変更できないので注意する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

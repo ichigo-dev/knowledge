@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">NAT</span></strong>(Network Address Translator)は、<a href="./address_on_network.md#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%ABip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">グローバルIPアドレス</a>と<a href="./address_on_network.md#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">プライベートIPアドレス</a>を一対一で変換する機能。ローカルな<a href="./network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>で<a href="./address_on_network.md#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">プライベートIPアドレス</a>を使用している機器が<a href="./network.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>へ接続するときに、<a href="./address_on_network.md#%E3%83%97%E3%83%A9%E3%82%A4%E3%83%99%E3%83%BC%E3%83%88ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">プライベートIPアドレス</a>を<a href="./address_on_network.md#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%ABip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">グローバルIPアドレス</a>に変換する。<a href="./network.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>に同時に接続できる台数は、割り当てられている<a href="./address_on_network.md#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%ABip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">グローバルIPアドレス</a>の個数までとなる。</p>
+<p><span class="mask">NAT</span>には、次のような問題点がある。</p>
+<ul>
+<li><span class="mask">NAT</span>の外側から内側の<a href="../../../computer/_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>に接続することはできない</li>
+<li>変換テーブルの作成や変換処理に<a href="../../../system/_/chapters/system_performance_evaluation.md#%E3%82%AA%E3%83%BC%E3%83%90%E3%83%98%E3%83%83%E3%83%89">オーバヘッド</a>が生じる</li>
+<li>通信中に<span class="mask">NAT</span>が異常動作して再起動した場合、すべての<a href="./transport_layer.md#tcp">TCP</a><a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>がリセットされる</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

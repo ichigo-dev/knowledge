@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">タプル型</span></strong>は、様々な<a href="../../../_/chapters/data_type.md#%E5%9E%8B">型</a>の組み合わせを表現するための<a href="../../../_/chapters/data_type.md#%E5%9E%8B">型</a>。要素へのアクセスには定数のインデックスを用いる。</p>
+<pre><code class="language-rust">let profile: (&amp;str, usize, usize, usize) = (&quot;ichigo&quot;, 2001, 8, 21);
+println!(&quot;Birth year: {}&quot;, profile.1);
+</code></pre>
+<p>タプルは<a href="#%E9%85%8D%E5%88%97">配列</a>とよく似ているが、<a href="#%E9%85%8D%E5%88%97">配列</a>は同じ型の要素を複数格納する<a href="../../../_/chapters/data_type.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B">コンテナ</a>であるのに対し、タプルは異なる<a href="../../../_/chapters/data_type.md#%E5%9E%8B">型</a>の要素をまとめることができる。また、<a href="#%E9%85%8D%E5%88%97">配列</a>は<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a>インデックスによる要素へのアクセス( <code>array[i]</code> )ができるのに対して、タプルは定数インデックスしか用いることができない。</p>
+<p>タプルは<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>の<a href="../../../_/chapters/function.md#%E8%BF%94%E3%82%8A%E5%80%A4">返り値</a>などに頻繁に用いられる。<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>は1つしか値を返却することができないので、複数の値をまとめて返却したい場合はタプルを利用する。</p>
+<p>また、構造体にするほどでもない自明な値をまとめるときにもタプルが用いられる。例えば、 <code>(height, width)</code> や <code>(latitude, longitude)</code> などである。</p>
+<p>0要素のタプルもタプルの典型的な活用例で、 <code>()</code> のように記述され、<strong>ユニット型</strong>と呼ばれる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

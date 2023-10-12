@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">順列</span></strong>は、複数の異なる<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A6%81%E7%B4%A0">要素</a>を持つ<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E9%9B%86%E5%90%88">集合</a>から<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A6%81%E7%B4%A0">要素</a>を取り出し、それらを並べる際の<a href="#%E5%A0%B4%E5%90%88%E3%81%AE%E6%95%B0">場合の数</a>を求める方法。</p>
+<p><a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A6%81%E7%B4%A0">要素</a>数が $n$ 個の場合、それを並べる場合の数は以下の式で表される。</p>
+<p>$$
+1 \times 2 \times \cdots (n - 1) \times n = n!
+$$</p>
+<p>また、 $n$ 個の<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A6%81%E7%B4%A0">要素</a>の中から $r$ 個の<a href="../../../discrete_mathematics/_/chapters/set_and_proposition.md#%E8%A6%81%E7%B4%A0">要素</a>を取り出して、それを並べる並べ方は以下の式で表される。</p>
+<p>$$
+\begin{array}{cc}
+{}_n P_r = \frac{n!}{(n - r)!} &amp; (0 \leq r \leq n)
+\end{array}
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

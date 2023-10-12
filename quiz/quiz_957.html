@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>パイプライン</strong>は、命令<a href="#%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB">ステージ</a>を独立して動作させることによって、複数の命令を並行して実行する方式。パイプラインにおいて最も効果を発揮するのは、各<a href="#%E3%83%9E%E3%82%B7%E3%83%B3%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB">ステージ</a>の処理時間が同じ場合。そのため、パイプラインに向いているは<a href="#risc">RISC</a>アーキテクチャである。</p>
+<p>分岐命令などによって順番が変化すると、<strong>パイプラインハザード</strong>が発生する。パイプラインハザードとは、複数の命令を実行する場合に、命令の処理を中断しなければいけない状況のこと。</p>
+<ul>
+<li><strong><span class="mask">制御ハザード</span></strong> : 分岐処理などで処理の順番が変わる</li>
+<li><strong>データハザード</strong> : 複数の処理で同じデータを扱うことにより不具合が生じる</li>
+<li><strong>構造ハザード</strong> : 同じ<a href="./hardware.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%82%A6%E3%82%A7%E3%82%A2">ハードウェア</a>を同時に使用することによる競合が原因</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

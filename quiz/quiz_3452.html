@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>animation</strong>は、<a href="./css.md#css">CSS</a>において、アニメーションを適用するための<a href="./css.md#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>。 <code>keyframes</code> アニメーション名を指定して、繰り返し回数、再生方向、開始前と終了後の状態、実行状態を一度に適用できる<a href="./css.md#%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%83%8F%E3%83%B3%E3%83%89%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">ショートハンドプロパティ</a>。</p>
+<p>各スタイルを個別に設定する<a href="./css.md#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>も存在し、アニメーション名を指定する<strong>animation-name</strong>、繰り返し回数を指定する<strong>animation-iteration-count</strong>（無限に実行したい場合は <code>infinite</code> を指定）、再生方向を指定する<strong>animation-direction</strong>、開始前と終了時の状態を指定する<strong>animation-fill-mode</strong>、実行状態を指定する<strong><span class="mask">animation-play-state</span></strong>が使用できる。 <code>animation-direction</code> には、 <code>normal</code> （毎回順方向）、 <code>reverse</code> （毎回逆方向）、 <code>alternate</code> （順方向から始まり、交互）、 <code>alternate-reverse</code> （逆方向から始まり、交互）と行ったキーワードが指定できる。 <code>animation-fill-mode</code> には、 <code>none</code> （適用しない）、 <code>forwards</code> （終了後は終了時のスタイルを適用）、 <code>backwards</code> （開始前に開始時のスタイルを適用）、 <code>both</code> （ <code>forwards</code> と <code>backwards</code> の両方を適用）といったキーワードが指定できる。 <code><span class="mask">animation-play-state</span></code> には、 <code>running</code> か <code>paused</code> のどちらかが指定できる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

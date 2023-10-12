@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>BNF</strong>（<strong>バッカス・ナウア記法</strong>）は、<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>の文法を厳密に表現するための<a href="#%E5%BD%A2%E5%BC%8F%E8%A8%80%E8%AA%9E">形式言語</a>。表現方法には、<span class="mask">順次</span>、選択、反復がある。</p>
+<ul>
+<li><strong><span class="mask">順次</span></strong><br> <code>&lt;x&gt;::=&lt;a&gt;&lt;b&gt;</code> : ここで、 <code>x</code> という構文は <code>a</code> と <code>b</code> という文字の並びであるという意味</li>
+<li><strong>選択</strong><br> <code>&lt;x&gt;::=&lt;a | b&gt;</code> : ここで、 <code>x</code> という構文は <code>a</code> もしくは <code>b</code> のどちらかという意味<br> <code>&lt;x&gt;::=[&lt;a&gt;]</code> : ここで、 <code>x</code> という構文は <code>a</code> もしくは空という意味</li>
+<li><strong>反復</strong><br> <code>&lt;x&gt;::=&lt;a&gt;...</code> : ここで、 <code>x</code> という構文は <code>a</code> という文字の繰り返しという意味</li>
+</ul>
+<p>例えば、数字と数字列はBNFでそれぞれ次のように表すことができる。</p>
+<pre><code class="language-ebnf">&lt;数字&gt;::=&quot;0&quot;|&quot;1&quot;|&quot;2&quot;|&quot;3&quot;|&quot;4&quot;|&quot;5&quot;|&quot;6&quot;|&quot;7&quot;|&quot;8&quot;|&quot;9&quot;
+&lt;数字列&gt;::=&lt;数字&gt;|&lt;数字列&gt;&lt;数字&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

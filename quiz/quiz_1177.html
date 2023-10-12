@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">cut</span></strong>は、入力行の一部分を切り出して出力する<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。</p>
+<p><a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">cut</span> OPTION... [FILE]...
+</code></pre>
+<p>例えば、CSV<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>（カンマ区切りの<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>）の3番目のフィールドだけを出力したい場合は、以下の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行する。</p>
+<pre><code class="language-sh">$ <span class="mask">cut</span> -d , -f 3 test.csv
+</code></pre>
+<p><code>-d</code> <a href="./basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は入力行を分割するための区切り文字の指定に、 <code>-f</code> は取り出すフィールド番号の指定に用いる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

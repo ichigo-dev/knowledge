@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="./network.md#%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88">イーサネット</a>の<a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0">フレーム</a>の先頭には、<a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0">フレーム</a>本体の開始位置を表すために、 <code>1</code> と <code>0</code> を交互に並べた<strong>プリアンブル</strong>と呼ばれるフィールドが付けられる。IEEE仕様の<a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0">フレーム</a>では、プリアンブルの末尾は<strong><span class="mask">SFD</span></strong>(Start Frame Delimiter)という <code>11</code> のフィールドで終わり、それ以降が<a href="./network.md#%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88">イーサネット</a><a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0">フレーム</a>本体として扱われる。</p>
+<p>最後の<strong>FCS</strong>(Frame Check Sequence)は、<a href="#%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0">フレーム</a>が壊れていないかを確かめるためのフィールド。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

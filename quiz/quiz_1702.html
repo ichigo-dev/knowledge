@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Futureパターン</span></strong>は、<a href="../../../../../programming/parallel_programming/_/chapters/asynchronous_processing.md#%E9%9D%9E%E5%90%8C%E6%9C%9F%E5%87%A6%E7%90%86">非同期プログラミング</a>において、将来のある時点で結果が利用可能になる処理を表現して扱うための<a href="../../../_/chapters/design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。準備に時間のかかるデータを別<a href="../../../../../computer/software/_/chapters/operating_system.md#%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89">スレッド</a>で処理しつつ、そのデータが実際に必要になった段階で準備が完了するのを待機することで、効率よくリソースを利用することを目的としている。</p>
+<p><span class="mask">Futureパターン</span>は、<a href="#host">Host</a>、<a href="#virtualdata">VirtualData</a>、<a href="#realdata">RealData</a>、<a href="#future">Future</a>から構成される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

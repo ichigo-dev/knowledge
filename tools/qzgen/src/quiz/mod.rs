@@ -4,7 +4,6 @@ mod judge;
 pub(crate) use score::Score;
 pub(crate) use judge::Judge;
 
-use markdown_to_text;
 
 //------------------------------------------------------------------------------
 /// Quiz.
@@ -24,14 +23,10 @@ impl Quiz
     //--------------------------------------------------------------------------
     pub(crate) fn new( answer: &str, content: &str, source: &str ) -> Self
     {
-        let content = markdown_to_text::convert(&content);
         let mut mask = String::new();
-        mask.push(' ');
-        for _ in 0..answer.chars().count()
-        {
-            mask.push('*');
-        }
-        mask.push(' ');
+        mask.push_str("<span class=\"mask\">");
+        mask.push_str(answer);
+        mask.push_str("</span>");
 
         let content = content.replace(answer, &mask);
         Self

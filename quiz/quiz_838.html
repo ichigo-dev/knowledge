@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>VRAM</strong>(Video RAM)は、<a href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E8%A3%85%E7%BD%AE">ディスプレイ装置</a>に表示されている内容を記録する<a href="./memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>で、画面表示の品質（解像度、色数）を左右する。16色表示であれば画面1<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>あたりに4<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>が、256色表示であれば画面1<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>あたりに8<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>が、65536色表示であれば画面1<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>あたりに16<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>が必要になる。<a href="#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%97%E3%83%AC%E3%82%A4%E8%A3%85%E7%BD%AE">ディスプレイ</a>への情報の表示に必要なデータの処理は、<a href="./processor.md#cpu">CPU</a>負荷を軽減するために<strong>ビデオボード</strong>（<strong><span class="mask">ビデオカード</span></strong>）が行う。</p>
+<pre><code class="language-math">画像データの容量 = 画像の総ドット数 \times 色情報
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

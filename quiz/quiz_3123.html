@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>RAID0+1</strong>や<strong><span class="mask">RAID1+0</span></strong>は、4台の<a href="../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF">ディスク</a>を用いて<a href="#raid0">RAID0</a>と<a href="#raid1">RAID1</a>を組み合わせることで性能と<a href="./system_performance_evaluation.md#%E4%BF%A1%E9%A0%BC%E6%80%A7">信頼性</a>の両方を向上させる<a href="#raid">RAID</a>の方式。RAID0+1は<a href="#raid0">ストライピング</a>された<a href="../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF">ディスク</a>を<a href="#raid1">ミラーリング</a>し、<span class="mask">RAID1+0</span>は<a href="#raid1">ミラーリング</a>された<a href="../../../computer/hardware/_/chapters/auxiliary_memory_unit.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF">ディスク</a>を<a href="#raid0">ストライピング</a>する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

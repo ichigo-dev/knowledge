@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>指数分布</strong>は、ある<a href="#%E4%BA%8B%E8%B1%A1">事象</a>の発生から次の発生までの期間を表す<a href="#%E7%A2%BA%E7%8E%87%E5%88%86%E5%B8%83">確率分布</a>。<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が発生する<a href="#%E7%A2%BA%E7%8E%87">確率</a>は一定として考える。指数分布は単位時間あたりの平均事象数 $\lambda$ をパラメータとして持つ。</p>
+<p>指数分布は生存関数やハザード関数、<span class="mask">密度関数</span>などの様々な関数形を持つ。</p>
+<p><strong>生存関数</strong>は、ある時間 $t$ までに<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が起こる<a href="#%E7%A2%BA%E7%8E%87">確率</a>を表し、次の式で与えられる。</p>
+<p>$$
+S(t) = \exp^{- \lambda t}
+$$</p>
+<p><strong>ハザード関数</strong>は、ある時間 $t$ に<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が起こる<a href="#%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E7%A2%BA%E7%8E%87">条件付き確率</a>を表し、次の式で与えられる。</p>
+<p>$$
+h(t) = \lambda
+$$</p>
+<p><strong><span class="mask">密度関数</span></strong>は、ある時間 $t$ で<a href="#%E4%BA%8B%E8%B1%A1">事象</a>が起こる確率密度を表し、次の式で与えられる。</p>
+<p>$$
+f(t) = \lambda \exp^{- \lambda t}
+$$</p>
+<p><img src="../assets/images/exponential_distribution.png" alt="指数分布のグラフ" /></p>
+<p>指数分布は、<a href="./waiting_queue_theory.md#%E5%BE%85%E3%81%A1%E8%A1%8C%E5%88%97">待ち行列</a>や<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の<a href="../../../../system/_/chapters/reliability_design.md">信頼性解析</a>などにおいてよく用いられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

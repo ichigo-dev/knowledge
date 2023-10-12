@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">git reflog</span></strong>は、<a href="./git.md#git">Git</a>の操作履歴を確認するための<a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。<a href="./git.md#git">Git</a>では操作履歴に対してもハッシュがついており、 <code>git reset</code> <a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>にハッシュあるいは <code>HEAD@{0}</code> のようなエイリアスを指定することで、その操作を取り消すとこができる。誤って必要な<a href="./branch.md#%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81">ブランチ</a>を消してしまったり、<a href="./record_history.md#%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%84%E3%83%AA%E3%83%BC">ワークツリー</a>の変更内容を破棄してしまった場合などに、その操作を取り消すことで復旧できる。</p>
+<pre><code class="language-sh">$ <span class="mask">git reflog</span>
+xxxxxxx (HEAD -&gt; main, origin/main, origin/HEAD) HEAD@{0}: commit: example commit
+xxxxxxx HEAD@{1}: pull origin main: Fast-forward
+xxxxxxx HEAD@{2}: checkout: moving from exampole to main
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

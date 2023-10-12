@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Block</span></strong>は、<a href="./terraform.md#terraform">Terraform</a>において、他のコンテンツを包み込むコンテナを宣言する構文。<span class="mask">Block</span>には、そのを表すタイプと、0個以上のラベルが定義される。また、<span class="mask">Block</span>はネストすることもできる。</p>
+<pre><code class="language-terraform">resource &quot;aws_instance&quot; &quot;example&quot; {
+    ami = &quot;abc123&quot;
+
+    network_interface {
+        # ...
+    }
+}
+</code></pre>
+<p><a href="./terraform.md#terraform">Terraform</a>にはいくつかの決められた<span class="mask">Block</span>タイプがあり、これらを組み合わせて様々な機能を実装することができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

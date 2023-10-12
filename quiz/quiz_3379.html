@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">PKI</span></strong>（公開鍵基盤: Public Key Infrastructure）は、<a href="#%E5%85%AC%E9%96%8B%E9%8D%B5%E6%9A%97%E5%8F%B7%E6%96%B9%E5%BC%8F">公開鍵暗号方式</a>において、公開鍵が送信者の正当なものであることを、第三者機関（<a href="#%E8%AA%8D%E8%A8%BC%E5%B1%80">認証局</a>）が保証する仕組み。</p>
+<p>公開鍵の正当性を保証するための流れは以下の通り。</p>
+<ul>
+<li>送信者は公開鍵と身分証明書を<a href="#%E7%99%BB%E9%8C%B2%E5%B1%80">登録局</a>に登録する</li>
+<li><a href="#%E7%99%BB%E9%8C%B2%E5%B1%80">登録局</a>は<a href="#%E7%99%BA%E8%A1%8C%E5%B1%80">発行局</a>にデジタル証明書の発行を依頼する</li>
+<li><a href="#%E8%AA%8D%E8%A8%BC%E5%B1%80">認証局</a>は、<a href="#%E7%99%BB%E9%8C%B2%E5%B1%80">登録局</a>と<a href="#%E7%99%BA%E8%A1%8C%E5%B1%80">発行局</a>を経て、デジタル証明書を<a href="#%E8%AA%8D%E8%A8%BC%E5%B1%80">認証局</a>が発行した秘密鍵を用いて暗号化し、<a href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D">デジタル署名</a>を作成する</li>
+<li>送信者は<a href="#%E8%AA%8D%E8%A8%BC%E5%B1%80">認証局</a>が作成した<a href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D">デジタル署名</a>を受け取り、これを受信者に送る</li>
+<li>受信者は<a href="#%E8%AA%8D%E8%A8%BC%E5%B1%80">認証局</a>から公開鍵を受け取る</li>
+<li>受信者は送信者から受け取った<a href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D">デジタル署名</a>を公開鍵で復号する</li>
+<li><a href="#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E7%BD%B2%E5%90%8D">デジタル署名</a>に含まれている送信者が発行した公開鍵と送信者の情報により、これが正当な公開鍵であることが確認できる</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

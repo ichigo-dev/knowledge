@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>Amazon Redshift</strong>は、<a href="./aws.md#aws">AWS</a>が提供するデータウェアハウス（データの分析に最適化された<a href="../../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>）向けの<a href="../../../../development/database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>サービス。大量のデータから意思決定に役立つ情報を見つけ出すために必要な環境を安価で準備できる。</p>
+<p>Redshiftは、複数ノードによる分散並列実行が大きな特徴として挙げられる。1つのRedshiftを構成する複数のノードのまとまりをRedshiftクラスタと呼び、クラスタは1つの<span class="mask">リーダノード</span>と複数のコンピュートノードから構成される。いかにコンピュートノードをまたがずに処理を完結させることができるのかがRedshift利用のポイントとなる。</p>
+<p><strong><span class="mask">リーダノード</span></strong>では、<a href="../../../../development/database/_/chapters/sql.md#sql">SQL</a>クライアントやBI(Business Intelligence)ツールからの実行<a href="../../../../development/database/_/chapters/sql.md#%E3%82%AF%E3%82%A8%E3%83%AA">クエリ</a>を受け付けて、<a href="../../../../development/database/_/chapters/sql.md#%E3%82%AF%E3%82%A8%E3%83%AA">クエリ</a>の解析や実行プランの作成を行う。</p>
+<p><strong>コンピュートノード</strong>では、<span class="mask">リーダノード</span>からの実行<a href="../../../../development/database/_/chapters/sql.md#%E3%82%AF%E3%82%A8%E3%83%AA">クエリ</a>を処理する。各コンピュートノードは<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>とセットになっている。</p>
+<p><strong>ノードスライス</strong>は、Redshiftが分散並列処理をする最小の単位で、コンピュートノードの中でさらにリソースを分割してスライスという単位を構成する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

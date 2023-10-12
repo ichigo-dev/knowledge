@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">キュー</span></strong>は、データを<strong>FIFO</strong>（First In First Out: 先入れ先出し）の構造で保持する<a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B">コンテナ</a>。<span class="mask">キュー</span>に対してデータを追加する操作を<strong>エン<span class="mask">キュー</span></strong>、<span class="mask">キュー</span>からデータを取り出す操作を<strong>デ<span class="mask">キュー</span></strong>といい、これを基本操作とするデータ<a href="#%E5%9E%8B">型</a>となる。最初にエン<span class="mask">キュー</span>したデータから取り出したいような場合に用いる（<a href="../../../basics/applied_mathematics/_/chapters/waiting_queue_theory.md#%E5%BE%85%E3%81%A1%E8%A1%8C%E5%88%97">待ち行列</a>）。</p>
+<p><span class="mask">キュー</span>に追加する要素に優先度をつけ、優先度に基づいてデータをソートし、取り出し順を制御するような<span class="mask">キュー</span>のことを<strong>優先度つき<span class="mask">キュー</span></strong>という。</p>
+<p>先頭、末尾の両方からデータの追加・取り出しを行うことができるようにした<span class="mask">キュー</span>のことを<strong>両端<span class="mask">キュー</span></strong>（デック）という。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

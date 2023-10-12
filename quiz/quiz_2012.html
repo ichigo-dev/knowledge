@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">総合テスト</span></strong>（<strong>システムテスト</strong>）は、<a href="../../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>開発において<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>全体をテストするための手法。<a href="../../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>が要求仕様を満たし、全体的な機能や性能が期待通りに動作するかを確認スルために行われる。<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>が他の<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>や外部環境と連携して動作する場合のテストも含まれ、ユーザの視点から実際のシナリオを想定したテストが実施される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

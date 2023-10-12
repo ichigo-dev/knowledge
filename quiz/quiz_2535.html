@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">インスタンスファミリー</span></strong>は、その<a href="#ec2">インスタンス</a>が何に最適化された<a href="#ec2">インスタンス</a>であるかという分類を表し、<a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%97">インスタンスタイプ</a>の先頭に付与される。</p>
+<table><thead><tr><th>種類</th><th>特徴</th><th>ファミリー</th></tr></thead><tbody>
+<tr><td>汎用</td><td>バランスの取れた汎用タイプで、比較的安価</td><td><code>T/M/A/Mac</code></td></tr>
+<tr><td>コンピューティング最適化</td><td>高い計算能力</td><td><code>C</code></td></tr>
+<tr><td>メモリ最適化</td><td>メモリを多く搭載</td><td><code>R/X/z</code></td></tr>
+<tr><td>高速コンピューティング</td><td>グラフィック演算や推論処理などに最適化</td><td><code>P/DL/G/F/V/Inf</code></td></tr>
+<tr><td>ストレージ最適化</td><td>I/Oパフォーマンスが高く、大容量</td><td><code>I/D/H</code></td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

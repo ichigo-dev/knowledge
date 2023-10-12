@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>アーキテクチャ決定</strong>は、<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>をどのように構築すべきかのルールを定めるもの。例えば、<a href="#%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%89%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">レイヤードアーキテクチャ</a>上のどの<a href="#%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%89%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">レイヤ</a>が<a href="../../../database/_/chapters/database.md#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">データベース</a>にアクセスできるか、といったルールはアーキテクチャ決定にあたる。アーキテクチャ決定は<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の制約であり、何が許されて何が許されないかに関する開発チームの指針となる。</p>
+<p>アーキテクチャ決定は<strong><span class="mask">特例</span></strong>によって破られる場合があり、これはアーキテクチャ審査委員会(ARB: Architecture Review Board)やチーフアーキテクトが使用する<span class="mask">特例</span>モデルによって定められる場合が多い。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

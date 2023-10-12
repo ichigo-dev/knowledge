@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ブルートフォース攻撃</strong>（<strong>総当たり攻撃</strong>）は、すべての可能な組み合わせを試行することによって、パスワードや暗号鍵を推測する攻撃手法。攻撃者は自動化されたツールやスクリプトを使用して、連続的にパスワードや鍵を試し続ける。正しい組み合わせを推測するのには非常に多くの時間がかかる可能性があるため、よく用いられるパスワードや単語を使用する<strong><span class="mask">辞書攻撃</span></strong>や、予め計算された<a href="./encryption_technology.md#%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5">ハッシュ値</a>を用いて元のパスワードを逆引きする<strong>レインボーテーブル</strong>などで、攻撃を効率化する。</p>
+<p>強力なパスワードを設定する、ログイン試行回数に制限を設ける、<a href="./security_technology.md#%E5%A4%9A%E8%A6%81%E7%B4%A0%E8%AA%8D%E8%A8%BC">二要素認証</a>を使用する、といった対策方法がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

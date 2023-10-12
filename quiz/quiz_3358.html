@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">パスザハッシュ</span></strong>は、主に<a href="../../../../computer/software/_/chapters/operating_system.md#windows">Windows</a>の<a href="./security_technology.md#%E8%AA%8D%E8%A8%BC">認証</a><a href="../../../_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>に対して行われる攻撃で、攻撃者はパスワードハッシュを窃取することで標的ユーザのパスワードを推測することなく認証をバイパスする。<a href="../../../../computer/software/_/chapters/operating_system.md#windows">Windows</a>はNTLM認証を用いており、入力されたパスワードを<a href="./encryption_technology.md#%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5">ハッシュ</a>化して<a href="../../../_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の特定領域に保存している。攻撃者はこの<a href="./encryption_technology.md#%E3%83%8F%E3%83%83%E3%82%B7%E3%83%A5">ハッシュ値</a>を摂取することで、<a href="../../../_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の認証を突破する。</p>
+<p>また、<a href="../../../../computer/software/_/chapters/operating_system.md#windows">Windows</a>のよりセキュアな認証方式であるKerberos認証を採用しているが、<span class="mask">パスザハッシュ</span>で得た権限をもとにKerberos認証を破る手法として<strong>パスザチケット</strong>攻撃も生み出されている。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

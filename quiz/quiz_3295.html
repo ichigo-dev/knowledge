@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ロードバランサ</span></strong>は、<a href="#%E5%88%86%E6%95%A3%E5%87%A6%E7%90%86">分散処理</a>の<a href="./system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>において、<a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">リクエスト</a>を複数の<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>に均等に分散するための装置や<a href="../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>。主な役割は、<a href="../../../network/_/chapters/network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>上でトラフィックを分散して<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>への負荷の分散、<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>が障害などにより応答できなくなった場合の<a href="./reliability_design.md#%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90">フェールオーバ</a>、新しい<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>を追加することによるスケーラビリティの確保などがある。</p>
+<p><a href="../../../network/_/chapters/internet_layer.md#%E3%83%A9%E3%82%A6%E3%83%B3%E3%83%89%E3%83%AD%E3%83%93%E3%83%B3dns">ラウンドロビンDNS</a>を用いた<a href="#%E8%B2%A0%E8%8D%B7%E5%88%86%E6%95%A3">負荷分散</a>とは異なり、<span class="mask">ロードバランサ</span>は自身が<a href="../../../network/_/chapters/address_on_network.md#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%ABip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">グローバルIPアドレス</a>を持って<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">Webサーバ</a>のように振る舞うため、各<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>に個別の<a href="../../../network/_/chapters/address_on_network.md#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%ABip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">グローバルIPアドレス</a>を割り当てる必要がない。また、<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>からの<a href="#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">リクエスト</a>を毎回受け取って本物の<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>へ中継することで、リアルタイムに<a href="./reliability_design.md#%E3%83%98%E3%83%AB%E3%82%B9%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF">ヘルスチェック</a>の結果を反映することができる。</p>
+<p><span class="mask">ロードバランサ</span>には、<a href="../../../network/_/chapters/network_architecture.md#%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E5%B1%A4">トランスポート層</a>で<a href="#%E8%B2%A0%E8%8D%B7%E5%88%86%E6%95%A3">負荷分散</a>を行うものと、<a href="../../../network/_/chapters/network_architecture.md#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4">アプリケーション層</a>で<a href="#%E8%B2%A0%E8%8D%B7%E5%88%86%E6%95%A3">負荷分散</a>を行うものがある。前者は<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>と実<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>の間で<a href="../../../network/_/chapters/transport_layer.md#tcp">TCP</a>の<a href="../../../network/_/chapters/network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>が確立されるが、後者は<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>と<span class="mask">ロードバランサ</span>、<span class="mask">ロードバランサ</span>と実<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>の両方で<a href="../../../network/_/chapters/transport_layer.md#tcp">TCP</a><a href="../../../network/_/chapters/network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>が発生する。ただし、<a href="../../../network/_/chapters/network_architecture.md#%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E5%B1%A4">アプリケーション層</a>の<span class="mask">ロードバランサ</span>はアクセスされた<a href="../../../network/_/chapters/web.md#url">URL</a>を見て接続先の<a href="#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>を切り替えるといった柔軟な処理が可能となる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>Load-Link/Store-Conditional</strong>(<strong><span class="mask">LL/SC</span></strong>)は、<a href="#%E3%82%A2%E3%83%88%E3%83%9F%E3%83%83%E3%82%AF%E5%87%A6%E7%90%86">アトミック処理</a>のひとつで、<a href="../../../../computer/linux/_/chapters/process_and_job.md#%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA">共有メモリ</a>へのアクセス制御やロックフリーな構造の実装に利用される。この操作は次のようなステップで構成される。</p>
+<ol>
+<li><strong>Load-Link</strong>: <a href="../../../../computer/linux/_/chapters/process_and_job.md#%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA">共有メモリ</a>の値を読み込み、リンクを設定する</li>
+<li>読み込んだ値に対して任意の操作を行う（この間、他の<a href="./concurrency_and_parallelism.md#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>も値にアクセスすることができる）</li>
+<li><strong>Store-Conditional</strong>: <a href="../../../../computer/linux/_/chapters/process_and_job.md#%E5%85%B1%E6%9C%89%E3%83%A1%E3%83%A2%E3%83%AA">共有メモリ</a>の値を更新する前に、リンクが変化していないかを確認し、変化していなければ更新を行う</li>
+</ol>
+<p>Store-Conditionalにおいて、書き込みが失敗した場合にのみ、再度Load-Linkしてから書き込みを試みれば、見かけ上<a href="#%E3%82%A2%E3%83%88%E3%83%9F%E3%83%83%E3%82%AF%E5%87%A6%E7%90%86">アトミック</a>な処理を実現できる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

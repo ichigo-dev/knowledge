@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ボリュームゲートウェイ</strong>は、各<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を<a href="#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">オブジェクト</a>として管理するのではなく、<a href="#s3">S3</a>のデータ保存領域全体を1つのボリュームとして管理する。クライアントサーバからの<a href="../../../_/chapters/network_architecture.md#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">ゲートウェイ</a>への接続方式は、<a href="../../../../computer/hardware/_/chapters/bus.md#scsi">iSCSI</a>接続になる。</p>
+<ul>
+<li><strong>キャッシュ型ボリューム</strong> : 頻繁に利用するデータは<a href="#storage-gateway">Storage Gateway</a>内のキャッシュディスク（<a href="../../../../system/_/chapters/system_architecture.md#%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9">オンプレミス</a>）に保存して、すべてのデータを保存する<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>（プライマリストレージ）として<a href="#s3">S3</a>を利用する。<a href="../../../../system/_/chapters/system_architecture.md#%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9">オンプレミス</a>のキャッシュボリュームに頻繁に使用するデータを、アップロードバッファボリュームに<a href="#s3">S3</a>にアップロードするデータを保管しておく。</li>
+<li><strong><span class="mask">保管型ボリューム</span></strong> : すべてのデータを保存する<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>としてローカルストレージを利用し、データを定期的にスナップショット形式で<a href="#s3">S3</a>へ転送する。<a href="../../../../system/_/chapters/system_architecture.md#%E3%82%AA%E3%83%B3%E3%83%97%E3%83%AC%E3%83%9F%E3%82%B9">オンプレミス</a>のデータを定期的にバックアップする用途に適している。</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

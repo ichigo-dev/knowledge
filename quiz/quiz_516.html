@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">パック10進数</span></strong>は、<a href="./radix.md#10%E9%80%B2%E6%95%B0">10進数</a>1桁を<a href="#bcd%E3%82%B3%E3%83%BC%E3%83%89">BCDコード</a>で表現し、最下位の4<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>に符号を付加する。<span class="mask">パック10進数</span>は必ず<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%88">バイト</a>単位で扱われ、偶数桁の場合は符号部を含めて8<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>の倍数にならないため、先頭に $0000$ を追加する。</p>
+<pre><code></code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

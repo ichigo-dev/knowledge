@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>木</strong>は、<strong><span class="mask">ノード</span></strong>と<span class="mask">ノード</span>間を結ぶ<strong>エッジ</strong>からなる木構造のデータ。1つの<span class="mask">ノード</span>が複数の子<span class="mask">ノード</span>を持ち、親<span class="mask">ノード</span>を持たない<span class="mask">ノード</span>を<strong>ルート<span class="mask">ノード</span></strong>（<strong>根<span class="mask">ノード</span></strong>）、子<span class="mask">ノード</span>を持つ<span class="mask">ノード</span>を<strong>ブランチ<span class="mask">ノード</span></strong>（<strong>枝<span class="mask">ノード</span></strong>）、子<span class="mask">ノード</span>を持たない<span class="mask">ノード</span>を<strong>リーフ<span class="mask">ノード</span></strong>（<strong>葉<span class="mask">ノード</span></strong>）という。</p>
+<p>各<span class="mask">ノード</span>が持つ子<span class="mask">ノード</span>の数が2つに制限された木を<strong>二分木</strong>、リーフの深さがなるべくそろうように構築された木を<strong>平衡木</strong>という。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

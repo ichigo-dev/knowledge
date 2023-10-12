@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ベイズの定理</strong>（<strong><span class="mask">原因の確率</span></strong>）は、2つの<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A, B$ が互いに<a href="#%E6%8E%92%E5%8F%8D">排反</a>であり、そのいずれかの<a href="#%E4%BA%8B%E8%B1%A1">事象</a>によって<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ が発生したとき、その<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ が発生した原因が<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A$ または $B$ である<a href="#%E7%A2%BA%E7%8E%87">確率</a>を求めるための定理。</p>
+<p><a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ の発生する<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $P(E)$ 、<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A$ の発生する<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $P(A)$ 、<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $A$ が原因で<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ が起こる<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $P(E|A)$ 、<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $B$ の発生する<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $P(B)$ 、<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $B$ が原因で<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ が起こる<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $P(E|B)$ とすると、<a href="#%E4%BA%8B%E8%B1%A1">事象</a> $E$ が起こる原因が $A$ である<a href="#%E7%A2%BA%E7%8E%87">確率</a> $P(A|E)$ は以下の式で表される。</p>
+<p>$$
+P(A|E) = \frac{P(A) \times P(E|A)}{P(E)} = \frac{P(A) \times P(E|A)}{P(A) \times P(E|A) + P(B) \times P(E|B)}
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

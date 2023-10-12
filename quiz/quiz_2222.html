@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>VRRP</strong>(Virtual Router Redundancy Protocol)は、デフォルト<a href="./network_architecture.md#%E3%83%AB%E3%83%BC%E3%82%BF">ルータ</a>の故障やメンテナンス時にも<a href="./network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>が利用できるように、複数の<a href="./network_architecture.md#%E3%83%AB%E3%83%BC%E3%82%BF">ルータ</a>による<a href="../../../system/_/chapters/system_architecture.md#%E5%86%97%E9%95%B7%E5%8C%96">冗長化</a>を行う仕組み。スマートフォンや<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>は、デフォルト<a href="./network_architecture.md#%E3%83%AB%E3%83%BC%E3%82%BF">ルータ</a>（デフォルト<a href="./network_architecture.md#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">ゲートウェイ</a>）を経由して社内<a href="./network.md#lan">LAN</a>や<a href="./network.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>を利用する環境が一般的なので、VRRPによる<a href="../../../system/_/chapters/system_architecture.md#%E5%86%97%E9%95%B7%E5%8C%96">冗長化</a>が重要となる。</p>
+<p>VRRPでは複数の<a href="./network_architecture.md#%E3%83%AB%E3%83%BC%E3%82%BF">ルータ</a>をまとめて運用し、その中の1つをマスタールータ、別の<a href="./network_architecture.md#%E3%83%AB%E3%83%BC%E3%82%BF">ルータ</a>をバックアップルータとして扱う。マスタールータは定期的に<strong>VRRPパケット</strong>を<a href="./network.md#%E3%83%9E%E3%83%AB%E3%83%81%E3%82%AD%E3%83%A3%E3%82%B9%E3%83%88">マルチキャスト</a>を使って送信する。バックアップルータがこのVRRPパケットを一定期間受け取れなかったとき、マスタールータが故障したと判断してマスタールータを切り替える。</p>
+<p>複数台のバックアップルータを使用する場合は、各バックアップルータに<strong><span class="mask">プライオリティ</span></strong>という数値を設定しておき、障害時はこの値が大きいものが優先してマスタールータに昇格する。<strong>プリエンプティブモード</strong>が有効である場合、既存のマスタールータよりも高い<span class="mask">プライオリティ</span>を持ったバックアップルータが起動すると<a href="../../../system/_/chapters/reliability_design.md#%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90">フェールオーバ</a>が発生する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

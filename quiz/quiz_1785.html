@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">docker service create</span></strong>は、<a href="#docker-swarm">Docker Swarm</a>が扱う<a href="#docker-swarm%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>を作成する<a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。 <code>--name</code> <a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>にはサービス名を、 <code>--hostname</code> には<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>の<a href="../../../../network/_/chapters/network.md#%E3%83%9B%E3%82%B9%E3%83%88">ホスト</a>名を、 <code>--network</code> には使用する<a href="./network.md#overlay">overlay</a><a href="../../../../network/_/chapters/network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>を、 <code>--replicas</code> には起動時の<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>の複製の数を指定する。また、 <code>--update-delay</code> <a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を指定すると、ローリングアップデート時にすべてのレプリカが同時に停止してまわないように遅延時間を設けることができる。</p>
+<pre><code class="language-sh">$ <span class="mask">docker service create</span> &lt;image&gt;:&lt;tag&gt; \
+&gt; --name &lt;service&gt; \
+&gt; --hostname &lt;hostname&gt; \
+&gt; --network &lt;network&gt; \
+&gt; --replicas &lt;replica num&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

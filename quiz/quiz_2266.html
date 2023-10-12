@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">CSMA/CD方式</span></strong>(CSMA with Collision Detection)は、<a href="#csma%E6%96%B9%E5%BC%8F">CSMA方式</a>を改良したもので、<a href="#%E3%82%A4%E3%83%BC%E3%82%B5%E3%83%8D%E3%83%83%E3%83%88">イーサネット</a><a href="#lan">LAN</a>で採用されている。データを送信する際は伝送路に、他に送信中の端末がないことを確認する。<a href="#%E8%A1%9D%E7%AA%81">衝突</a>が起こるとすぐにデータの送信を停止し、再度<a href="#%E8%A1%9D%E7%AA%81">衝突</a>が発生しないように乱数時間待ってからデータを再送する。回線が混雑すると、<a href="#%E8%A1%9D%E7%AA%81">衝突</a>と待ちが繰り返され、<a href="../../../system/_/chapters/system_performance_evaluation.md#%E3%82%B9%E3%83%AB%E3%83%BC%E3%83%97%E3%83%83%E3%83%88">スループット</a>が急激に低下する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

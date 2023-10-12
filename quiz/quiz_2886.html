@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">デストラクタ</span></strong>は、<a href="#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88">オブジェクト</a>の終了処理を行うための特別な<a href="#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">メソッド</a>で、<a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>が破棄されるときに自動的に実行される。<a href="./programming.md#%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">ガベージコレクション</a>を用いる<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>では、<span class="mask">デストラクタ</span>が実行されるタイミングが予測できないため、複雑な処理を行おうとすると<a href="./programming.md#%E3%83%90%E3%82%B0">バグ</a>の発生原因となってしまう場合がある。一方で、<a href="./programming_language.md#c%E8%A8%80%E8%AA%9E">C言語</a>のように<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E">プログラマ</a>が<a href="./variable.md#%E5%A4%89%E6%95%B0">変数</a>の生存期間を管理する言語においては、<a href="#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>が管理する<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%92%E3%83%BC%E3%83%97%E9%A0%98%E5%9F%9F">ヒープ領域</a>の解放を行うなど重要な役割を持っている。</p>
+<pre><code class="language-cpp">// C++</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

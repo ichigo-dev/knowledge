@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">勾配ブースティング</span></strong>は、<a href="#%E3%83%96%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">ブースティング</a>を行う際に、前の<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>の予測値と正解データの誤差を最小化するために<a href="./neural_network.md#%E5%8B%BE%E9%85%8D%E9%99%8D%E4%B8%8B%E6%B3%95">勾配降下法</a>を用いる手法。新しい<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>は古い<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>の欠点を穴埋めするように学習されていく。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

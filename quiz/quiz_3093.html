@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">文字列リテラル</span></strong>は、<a href="../../../_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>中でダブルクォーテーションで囲まれた文字列。<span class="mask">文字列リテラル</span>には改行を含めることができ、文字列の行の最後にバックスラッシュをつけた場合は、改行文字と次の行の空白文字が無視される。</p>
+<pre><code class="language-rust">&quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aenean commodo ligula eget dolor.
+Aenean massa.
+Cum sociis natoque penatibus et magnis dis parturient montes, \
+nascetur ridiculus mus.&quot;
+</code></pre>
+<p>文字列中の意味のある文字をエスケープするのが面倒なケース（<a href="../../../../computer/software/_/chapters/operating_system.md#windows">Windows</a>のパスを記述するときなど）は、<strong>生文字列</strong>(raw string)を用いることができる。</p>
+<pre><code class="language-rust">r&quot;C:\Program Files\App&quot;
+</code></pre>
+<p>さらに、ダブルクォーテーションのエスケープすらも省略したい場合には、開始と終了のダブルクォーテーションを任意の数のハッシュ文字で挟む（ハッシュ文字の数は、わかりやすいように決めればよい）。</p>
+<pre><code class="language-rust">r###&quot;She said &quot;Hello&quot;.&quot;###
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

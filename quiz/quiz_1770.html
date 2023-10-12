@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Docker Compose</span></strong>は、複数の<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>を一括で管理、構築、連携することができるツール。複数の<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>が連携して動作するような<a href="../../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>において、それぞれの<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>の<a href="./dockerfile.md#dockerfile">Dockerfile</a>や<a href="./volume_and_mount.md#volume">Volume</a>、<a href="./network.md#docker%E3%81%AE%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>といったものの管理をまとめて行いたい場合などに有用。<span class="mask">Docker Compose</span>を利用するには、<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>の設定を記述したYAMLファイル（ <code>docker-compose.yml</code> という名前にするのが一般的）を用意する必要がある。</p>
+<pre><code class="language-yaml">version: '3'
+
+services:
+
+    # nginxコンテナ
+    nginx:
+        image: 'nginx:latest'
+        ports:
+            - 80:80
+        volumes:
+            - ./src:/var/www
+            - ./nginx/app.conf:/etc/nginx/conf.d/app.conf
+
+    # phpコンテナ
+    php:
+        image: 'php-fpm:latest'
+        ports:
+            - 9000:9000
+        volumes:
+            - ./src:/var/www
+            - ./php/php.ini:/etc/php/php.ini
+        depends_on: mysql
+
+    # mysqlコンテナ
+    mysq:
+        image: 'mysql:latest'
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: 'password'
+            MYSQL_DATABASE: 'my_app'
+            MYSQL_USER: 'my_app'
+            MYSQL_PASSWORD: 'password'
+            TZ: 'Asia/Tokyo'
+        command:
+            mysqld --default-authentication-plugin=mysql_native_password
+        volumes:
+            - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+            - my_app_data:/var/lib/mysql
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

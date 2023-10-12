@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">機械語</span></strong>は、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が直接処理することができる、<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA">バイナリ</a>で記述された命令の集まり。<span class="mask">機械語</span>の命令パターン1つのことを<strong>オペコード</strong>という。</p>
+<p><a href="../../../discrete_mathematics/_/chapters/radix.md#2%E9%80%B2%E6%95%B0">2進数</a>は人間にとっては直接記述するのに向いていないので、<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">プログラミング言語</a>の<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>を作成し、それを<a href="#%E8%A8%80%E8%AA%9E%E3%83%97%E3%83%AD%E3%82%BB%E3%83%83%E3%82%B5">言語プロセッサ</a>によって<span class="mask">機械語</span>に変換するのが一般的。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Compare and Swap</span></strong>(<strong>CAS</strong>)は、<a href="#%E3%82%A2%E3%83%88%E3%83%9F%E3%83%83%E3%82%AF%E5%87%A6%E7%90%86">アトミック処理</a>のひとつで、共有変数の値を比較して条件が成立する場合に新しい値を設定するという操作。この操作は次のようなステップで構成される。</p>
+<ol>
+<li>共有変数の現在の値を読み込む</li>
+<li>読み込んだ値と目的の値を比較する</li>
+<li>もし読み込んだ値と目的の値が一致する場合、新しい値を共有変数に設定する</li>
+</ol>
+<p>CASの意味を示した<a href="../../../_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>は以下の通りとなる（ただしこの<a href="../../../_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>は一般的に<a href="#%E3%82%A2%E3%83%88%E3%83%9F%E3%83%83%E3%82%AF%E5%87%A6%E7%90%86">アトミック</a>ではない）。</p>
+<pre><code class="language-c">bool compare_and_swap( uint64_t* p, uint64_t val, uint64_t newval )
+{
+    if( *p != val )
+    {
+        return false;
+    }
+    *p = newval;
+    return true;
+}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

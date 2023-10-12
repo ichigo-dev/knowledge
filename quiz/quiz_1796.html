@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Dockerfile</span></strong>は、<a href="./image.md#%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">イメージ</a>を作成するための手順を示した定義書。<a href="./image.md#%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">イメージ</a>がどのような<a href="../../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>で構成されているのか、どのような手順で構築されるのかといった情報を含んでおり、<a href="./image.md#%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8">イメージ</a>のメンテナンス性を向上させる。</p>
+<pre><code class="language-dockerfile">FROM python:3.6
+
+WORKDIR /app
+ADD . /app
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+EXPOSE 80
+ENV DISTRIBUTION dev
+CMD [&quot;python&quot;, &quot;app.py&quot;]
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

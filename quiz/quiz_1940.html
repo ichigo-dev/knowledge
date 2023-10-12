@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Fragment</span></strong>は、複数の<a href="#query">Query</a>や<a href="#mutation">Mutation</a>などで利用される共通部分をまとめることができる機能。</p>
+<p>例えば、<a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E5%AE%9A%E7%BE%A9%E8%A8%80%E8%AA%9E">スキーマ定義言語</a>側が以下のように定義されている場合を考える。</p>
+<pre><code class="language-graphql">type Person
+{
+    name: String!
+    age: Int
+    weight: Int
+    height: Int
+    country: String
+}
+
+type Query
+{
+    persons: [Person]
+}
+</code></pre>
+<p>このとき、複数の<a href="#query">Query</a>で利用する<a href="#field">Field</a>が共通している場合、以下のような<span class="mask">Fragment</span>を用意するとよい。</p>
+<pre><code class="language-graphql">fragment Person<span class="mask">Fragment</span> on Person
+{
+    name
+    country
+}
+</code></pre>
+<p><a href="#query">Query</a>でこの<span class="mask">Fragment</span>を利用する場合、次のように記述する。</p>
+<pre><code class="language-graphql">query
+{
+    persons
+    {
+        ...Person<span class="mask">Fragment</span>
+    }
+}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

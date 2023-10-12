@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>外部結合</strong>は、結合する<a href="./rdb.md#%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">テーブル</a>のデータのうち、片方の<a href="./rdb.md#%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">テーブル</a>のデータをすべて取り出し、条件に指定した<a href="./rdb.md#%E3%82%AB%E3%83%A9%E3%83%A0">カラム</a>の値が一致するデータに関してのみ結合される。外部結合を行うには、<strong><span class="mask">OUTER JOIN</span></strong><a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を使用する。</p>
+<pre><code class="language-sql">-- 左外部結合
+SELECT
+    [column1],
+    [column2],
+    ...
+FROM
+    [table1]
+LEFT <span class="mask">OUTER JOIN</span>
+    [table2]
+ON
+    [condition];
+
+-- 右外部結合
+SELECT
+    [column1],
+    [column2],
+    ...
+FROM
+    [table1]
+RIGHT <span class="mask">OUTER JOIN</span>
+    [table2]
+ON
+    [condition];
+
+-- 完全外部結合
+SELECT
+    [column1],
+    [column2],
+    ...
+FROM
+    [table1]
+FULL <span class="mask">OUTER JOIN</span>
+    [table2]
+ON
+    [condition];
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

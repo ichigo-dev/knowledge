@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">桁落ち</span></strong>は、値がほぼ等しい2つの数値の差を求めたときに、元の数より有効桁数が減ってしまうことで生じる<a href="#%E8%AA%A4%E5%B7%AE">誤差</a>。次の例では、元の数の有効桁数は10桁であるが、計算後の有効桁数は2桁になっている。</p>
+<p>$$
+\begin{eqnarray}
+0.00123456789_{10} - 0.001234567_{10} &amp; = &amp; 0.00000000089_{10} <br />
+1.23456789_{10} \times 10^{-3} - 1.234567_{10} \times 10^{-3} &amp; = &amp; 8.9_{10} \times 10^{-10}
+\end{eqnarray}
+$$</p>
+<p><a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が扱う<a href="./numeric_representation.md#%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">浮動小数点数</a>は、<a href="./numeric_representation.md#%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">基数部</a>が<a href="./numeric_representation.md#%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">正規化</a>されるため、数の右側にある $0$ が正しい値であるか<a href="./numeric_representation.md#%E6%B5%AE%E5%8B%95%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">正規化</a>によって付与された値であるかが保証できない。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

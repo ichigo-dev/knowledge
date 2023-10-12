@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">table</span></strong>は、<a href="./html.md#html">HTML</a>文書において、テーブル（表）を<a href="./html.md#%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97">マークアップ</a>する目的で使用される<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>。この<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>でテーブル全体を囲み、 <code>tr</code> や <code>td</code> によって行やセルを表現する。原則として、テーブルの各行には同じ数のセルを作る（セルを結合する場合は例外）。</p>
+<pre><code class="language-html">&lt;!-- シンプルなテーブル --&gt;
+&lt;<span class="mask">table</span>&gt;
+ &lt;tr&gt;
+  &lt;td&gt;ケーキ&lt;/td&gt;
+  &lt;td&gt;モンブラン&lt;/td&gt;
+  &lt;td&gt;400円&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;td&gt;ケーキ&lt;/td&gt;
+  &lt;td&gt;ショートケーキ&lt;/td&gt;
+  &lt;td&gt;350円&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/<span class="mask">table</span>&gt;
+
+&lt;!-- 複雑なテーブル --&gt;
+&lt;<span class="mask">table</span>&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th colspan=&quot;2&quot;&gt;品名&lt;/th&gt;
+   &lt;th&gt;金額&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td rowspan=&quot;2&quot;&gt;ケーキ&lt;/td&gt;
+   &lt;td&gt;モンブラン&lt;/td&gt;
+   &lt;td&gt;400円&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td&gt;ショートケーキ&lt;/td&gt;
+   &lt;td&gt;350円&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+
+ &lt;tfoot&gt;
+  &lt;tr&gt;
+   &lt;th colspan=&quot;2&quot;&gt;合計金額&lt;/th&gt;
+   &lt;td&gt;750円&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tfoot&gt;
+&lt;/<span class="mask">table</span>&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

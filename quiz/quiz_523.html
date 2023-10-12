@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">2進数</span></strong>は、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>内部のデータを表現するために使用されてる<a href="#%E4%BD%8D%E5%8F%96%E3%82%8A%E8%A8%98%E6%95%B0%E6%B3%95">位取り記数法</a>で、 $0$ と $1$ の2つの数字を用いて数を表現する。1つの桁は $2$ になると位が上がる。ある桁の1つ上の桁は<a href="#%E5%9F%BA%E6%95%B0">重み</a>が $2$ 倍になり、1つ下の桁は<a href="#%E5%9F%BA%E6%95%B0">重み</a>が $\frac{1}{2}$ 倍になる。</p>
+<p><span class="mask">2進数</span> $n$ 桁で表現できる数は、1桁なら2通り、2桁なら4通り、3桁なら8通り、8桁なら256通りといった具合に、 $2^n$ 通りとなる。</p>
+<p>例えば、 $101.001_2$ は<a href="#10%E9%80%B2%E6%95%B0">10進数</a>で次の数を表している。</p>
+<p>$$
+1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 + 0 \times 2^{-1} + 0 \times 2^{-2} + 1 \times 2^{-3} = 5.125
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ConcreteCreator</span></strong>（具体的作成者）は、<a href="#factory-method%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">Factory Methodパターン</a>の具体的な肉付けをする側で、<a href="#creator">Creator</a>が定義する<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9">インタフェース</a>の具体的な実装を持つ<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>。<span class="mask">ConcreteCreator</span>が生成する<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>(<a href="#concreteproduct">ConcreteProduct</a>)は、<a href="#product">Product</a>を<a href="../../../../programming/_/chapters/object_oriented.md#%E7%B6%99%E6%89%BF">継承</a>もしくは実装している必要がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

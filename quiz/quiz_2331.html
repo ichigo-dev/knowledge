@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">プレゼンテーション層</span></strong>は、<a href="#osi%E5%9F%BA%E6%9C%AC%E5%8F%82%E7%85%A7%E3%83%A2%E3%83%87%E3%83%AB">OSI基本参照モデル</a>において、<a href="../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>が扱う情報を通信に適したデータ形式に変換したり、下位層から来たデータを上位層が処理できるデータ形式にしたりと、データフォーマットに関する責任を負う<a href="#%E3%83%AC%E3%82%A4%E3%83%A4">レイヤ</a>。</p>
+<p>例として、<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>内部でデータを<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>上に配置する際の方式に、<a href="../../../basics/information_theory/_/chapters/coding_theory.md#%E3%83%93%E3%83%83%E3%82%B0%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3">ビッグエンディアン</a>方式と<a href="../../../basics/information_theory/_/chapters/coding_theory.md#%E3%83%AA%E3%83%88%E3%83%AB%E3%82%A8%E3%83%B3%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3">リトルエンディアン</a>方式という異なる表現方式がある。このような<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>内部での表現と、<a href="./network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>全体での共通表現を変換するのは、<span class="mask">プレゼンテーション層</span>の役割。</p>
+<p>また、文字コードも同様で、<a href="../../../basics/information_theory/_/chapters/character_representation.md#unicode">UTF-8</a>や<a href="../../../basics/information_theory/_/chapters/character_representation.md#%E3%82%B7%E3%83%95%E3%83%88jis%E3%82%B3%E3%83%BC%E3%83%89">Shift_JIS</a>、EUP-JPなど多くの符号化形式がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

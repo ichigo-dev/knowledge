@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">MEME</span></strong>(Multipurpose Internet Mail Extensions)は、<a href="#%E9%9B%BB%E5%AD%90%E3%83%A1%E3%83%BC%E3%83%AB">電子メール</a>でテキスト以外のデータ形式を送信できるようにした拡張形式。MIMEを利用することで、画像や音声、動画などの<a href="../../../computer/software/_/chapters/multimedia.md#%E3%83%9E%E3%83%AB%E3%83%81%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2">マルチメディア</a>データが添付できる。もともとは<a href="#%E9%9B%BB%E5%AD%90%E3%83%A1%E3%83%BC%E3%83%AB">電子メール</a>用の規格であったが、現在は<a href="#httml">HTTP</a>などの他の<a href="./network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>でも利用されている。代表的なMIMEタイプとしては以下のようなものがある。</p>
+<table><thead><tr><th>MIMEタイプ</th><th>概要</th></tr></thead><tbody>
+<tr><td><code>text/plain</code></td><td>プレーンテキスト</td></tr>
+<tr><td><code>text/html</code></td><td>HTML</td></tr>
+<tr><td><code>text/css</code></td><td>CSS</td></tr>
+<tr><td><code>text/javascript</code></td><td>JavaScript</td></tr>
+<tr><td><code>image/jpeg</code></td><td>JPEG画像</td></tr>
+<tr><td><code>image/png</code></td><td>PNG画像</td></tr>
+<tr><td><code>image/gif</code></td><td>GIF画像</td></tr>
+<tr><td><code>image/svg+xml</code></td><td>SVG画像</td></tr>
+<tr><td><code>audio/mpeg</code></td><td>MP3</td></tr>
+<tr><td><code>audio/wav</code></td><td>WAV</td></tr>
+<tr><td><code>video/mpeg</code></td><td>MPEG</td></tr>
+<tr><td><code>video/mp4</code></td><td>MP4</td></tr>
+<tr><td><code>application/pdf</code></td><td>PDF</td></tr>
+<tr><td><code>application/zip</code></td><td>ZIP</td></tr>
+<tr><td><code>application/json</code></td><td>JSON</td></tr>
+<tr><td><code>application/xml</code></td><td>XML</td></tr>
+<tr><td><code>application/octet-stream</code></td><td>バイト列</td></tr>
+</tbody></table>
+<p><a href="#http">HTTP</a>においては、Content-TypeヘッダにMIMEタイプを指定することでコンテンツの形式を特定することができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">汎化性能</span></strong>は、<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>の未知データに対する予測・分析性能。<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>が学習データに対してどれだけ高い性能を持っていても、実際に<a href="#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>を使用したい実場面において入力されるのは未知データであるため、<span class="mask">汎化性能</span>の高さが重要となる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

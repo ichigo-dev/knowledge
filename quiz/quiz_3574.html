@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">DOCTYPE宣言</span></strong>は、<a href="./html.md#html">HTML</a>文書の先頭に配置される特殊な<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>で、<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">ブラウザ</a>に対してどの<a href="../../../../computer/software/_/chapters/package.md#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">バージョン</a>の<a href="./html.md#html">HTML</a>を使用しているかを伝える役割を持つ。文書がどの<a href="../../../../computer/software/_/chapters/package.md#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">バージョン</a>の<a href="./html.md#html">HTML</a>仕様に準拠しているかを<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">ブラウザ</a>に伝えることで、正しく内容を解釈してもらうために重要となる。</p>
+<p>最新のHTML5の標準モードで文書を解釈するように<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">ブラウザ</a>に指示をする場合は、 <code>&lt;!DOCTYPE html&gt;</code> と記述し、基本的に新しいサイトを作成する際はこれを覚えておくだけで十分。</p>
+<p>過去<a href="../../../../computer/software/_/chapters/package.md#%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">バージョン</a>の<a href="./html.md#html">HTML</a>仕様を使用する場合、次のように記述する。</p>
+<pre><code class="language-html">&lt;!-- HTML 4.01 Strict --&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+
+&lt;!-- XHTML 1.0 Strict --&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

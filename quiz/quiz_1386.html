@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ページング方式</strong>は、<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>を固定長の<strong>ページ</strong>という単位に分けて、ページごとに<a href="../../../hardware/_/chapters/auxiliary_memory_unit.md#%E8%A3%9C%E5%8A%A9%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">補助記憶装置</a>の<a href="#%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6">仮想記憶</a>領域に取り出す方式。<a href="../../../hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>から<a href="#%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6">仮想記憶</a>に取り出すことを<strong>ページアウト</strong>、<a href="#%E4%BB%AE%E6%83%B3%E8%A8%98%E6%86%B6">仮想記憶</a>から<a href="../../../hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>に戻すことを<strong><span class="mask">ページイン</span></strong>という。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

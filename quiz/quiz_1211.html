@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">sudo</span></strong>は、<a href="./linux.md#linux">Linux</a>で別の<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>として<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行するために利用される<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>名を指定しなかった場合は<a href="#root%E3%83%A6%E3%83%BC%E3%82%B6">rootユーザ</a>として<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行する。</p>
+<p>一般的には<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>名を省略して、<a href="#root%E3%83%A6%E3%83%BC%E3%82%B6">rootユーザ</a>に切り替える目的で用いられることが多い。<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行すると、<a href="./shell_and_terminal.md#%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88">プロンプト</a>で、ログイン中の<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>のパスワード入力を求められる。例えば、<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>名が <code>foo</code> の<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>としてログイン中、<a href="#root%E3%83%A6%E3%83%BC%E3%82%B6">rootユーザ</a>として <code>cat</code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を使用し <code>test.txt</code> を閲覧したい場合、以下の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行する。</p>
+<pre><code class="language-sh">$ <span class="mask">sudo</span> cat test.txt
+</code></pre>
+<p><span class="mask">sudo</span>の設定を変更するには、以下の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>で設定ファイルを開いて編集する（通常の<a href="./text_editor.md">テキストエディタ</a>で開いて編集して、書き方を誤ると、 <code><span class="mask">sudo</span></code> が使えなくなる可能性があるため）。</p>
+<pre><code class="language-sh">$ vi<span class="mask">sudo</span>
+</code></pre>
+<p><code><span class="mask">sudo</span></code> の許可設定は次のように記述される。</p>
+<pre><code>%wheel ALL=(ALL) NOPASSWD: ALL
+</code></pre>
+<p>これは、 <code>wheel</code> <a href="#%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97">グループ</a>に所属する<a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>が、パスワードの入力無しで <code><span class="mask">sudo</span></code> が利用できることを意味する。</p>
+<pre><code>foo ALL=(ALL) ALL
+</code></pre>
+<p>これは、 <code>foo</code> <a href="#%E3%83%A6%E3%83%BC%E3%82%B6">ユーザ</a>が <code><span class="mask">sudo</span></code> を利用できることを意味する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Docker Swarm</span></strong>は、<a href="./docker.md#docker">Docker</a>が開発している<a href="../../../../computer/software/_/chapters/open_source_software.md#%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">オープンソース</a>の<a href="./kubernetes.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%82%AA%E3%83%BC%E3%82%B1%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">コンテナオーケストレーション</a>ツール。<span class="mask">Docker Swarm</span>がインストールされたホストOSは、<a href="./docker.md#docker">Docker</a><a href="../../../../system/_/chapters/system_architecture.md#%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">クラスタ</a>構成のマスタノード（<strong>Swarm Manager</strong>）となり、他の<a href="./docker.md#docker">Docker</a>がインストールされたワーカノードをまとめる役割を持つ。<span class="mask">Docker Swarm</span>のインタフェースは通常の<a href="./docker.md#docker">Docker</a><a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>とほぼ同じで、<a href="../../../../computer/software/_/chapters/operating_system.md#api">API</a>を通じて各<a href="../../../../network/_/chapters/network.md#%E3%83%8E%E3%83%BC%E3%83%89">ノード</a>の<a href="./docker.md#docker">Docker</a>を操作することができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

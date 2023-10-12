@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">レイヤードアーキテクチャ</span></strong>は、<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>をいくつかの層（レイヤ）に分割し、各層に特定の役割を持たせる<a href="#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3">ソフトウェアアーキテクチャ</a>。このアーキテクチャでは、上下のレイヤに跨る依存関係の方向性を一方向にすることで、<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>の複雑化を防ぐ場合が多い。</p>
+<p>一般的によく利用される3層<span class="mask">レイヤードアーキテクチャ</span>では、次の3つのレイヤを用いて<a href="../../../../system/_/chapters/system.md#%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">システム</a>を構築する。</p>
+<table><thead><tr><th>名称</th><th>役割</th></tr></thead><tbody>
+<tr><td>プレゼンテーション層</td><td>ユーザがシステムとのやり取りを行うためのインタフェースを担う。アプリケーションのUIやAPIのリクエスト/レスポンスモデルなどがこれにあたる。</td></tr>
+<tr><td>ビジネスロジック層</td><td>システムで業務を表現する処理やモデル。</td></tr>
+<tr><td>データアクセス層</td><td>データアクセスに対する技術的な手段を提供する。主にデータベースや外部サービスを直接的に利用する部分。</td></tr>
+</tbody></table>
+<p><span class="mask">レイヤードアーキテクチャ</span>では、複数のレイヤで同様の機能が実装されてしまい変更に弱くなる、レイヤ間の結合が強くなるとテストが行いにくくなる、といった問題もある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

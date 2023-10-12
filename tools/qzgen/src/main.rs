@@ -45,31 +45,82 @@ fn main()
         }
     }
 
-    let step = 100;
-    let chunks = (0..dictionary.len()).step_by(step);
-    for (chunk_id, chunk) in chunks.enumerate()
+    for index in 0..dictionary.len()
     {
-        let file_name = format!("quiz_{}.txt", chunk_id + 1);
-        let mut file = File::create(&file_name).unwrap();
-        for index in chunk..chunk + step
-        {
-            if index >= dictionary.len()
-            {
-                break;
-            }
+        let term = dictionary.get(index).unwrap();
+        let quiz = term.to_quiz();
 
-            let term = dictionary.get(index).unwrap();
-            let quiz = term.to_quiz();
-            let _ = file.write(b"====================\n\n").unwrap();
-            let _ = file.write(quiz.get_content().as_bytes()).unwrap();
-            let _ = file.write(b"\n\nAnswer: ");
-            let _ = file.write(quiz.get_answer().as_bytes()).unwrap();
-            let _ = file.write(b"\n\nSource: ");
-            let _ = file.write(quiz.get_source().as_bytes()).unwrap();
-            let _ = file.write(b"\n\n");
-        }
+        let html = format!(r#"
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {{
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }}
+
+   .quiz_container
+   {{
+       line-height: 2;
+   }}
+
+   .mask
+   {{
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }}
+
+   .mask.active
+   {{
+       color: #000;
+   }}
+
+   .btn_answer_container
+   {{
+       text-align: center;
+   }}
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p>{body}</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {{
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {{
+           item.classList.toggle("active");
+       }});
+   }});
+  </script>
+ </body>
+</html>
+            "#,
+            body = quiz.get_content(),
+        );
+
+        let file_name = format!("../../quiz/quiz_{}.html", index + 1);
+        let mut file = File::create(&file_name).unwrap();
+        let _ = file.write(html.as_bytes());
     }
 
+    /*
     let mut score = Score::new(max_try_count);
     for _ in 0..10
     {
@@ -88,4 +139,5 @@ fn main()
         }
         score.apply_judge(&judge);
     }
+    */
 }

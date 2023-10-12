@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Iteratorパターン</span></strong>は、集合体の要素に順番にアクセスし、全体をスキャンしていくような処理を行うための<a href="./design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。iterateという英単語には何かを「繰り返す」という意味があり、Iteratorは日本語で<strong>反復子</strong>とも呼ばれる。</p>
+<p><span class="mask">Iteratorパターン</span>は、集合体とアクセス方法を分離することで、集合体の内部構造（<a href="../../../../programming/_/chapters/data_type.md#%E3%83%AA%E3%82%B9%E3%83%88">リスト</a>や<a href="../../../../programming/_/chapters/data_type.md#%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF">スタック</a>、<a href="../../../../programming/_/chapters/data_type.md#%E6%9C%A8">ツリー</a>など）に依存せずに要素にアクセスすることができるようにすることを目的としている。このパターンを利用することで得られるメリットとして、次のようなものが考えられる。</p>
+<ul>
+<li>集合体の内部構造を知る必要がなく、簡潔に<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">コード</a>を記述することができる</li>
+<li>要素を順番に取り出すことができるため、検索や並び替えなど、要素に対する様々な操作が行いやすくなる</li>
+<li>複数の集合体で同じ<a href="#iterator">Iterator</a>を使用することができ、<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">コード</a>の再利用性が高まる</li>
+<li>複数の<a href="#iterator">Iterator</a>が同じ<a href="../../../../programming/_/chapters/data_type.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B">コレクション</a>を互いに独立して探索することができる</li>
+</ul>
+<p><span class="mask">Iteratorパターン</span>は、<a href="#aggregate">Aggregate</a>、<a href="#concreteaggregate">ConcreteAggregate</a>、<a href="#iterator">Iterator</a>、<a href="#concreteiterator">ConcreteIterator</a>から構成される。このパターンを利用する<a href="../../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>は、<a href="#concreteaggregate">ConcreteAggregate</a>や<a href="#concreteiterator">ConcreteIterator</a>に依存することがなくなり、具体的な<a href="../../../../programming/_/chapters/control_flow.md#%E5%8F%8D%E5%BE%A9">反復処理</a>の<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>を置き換えることができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

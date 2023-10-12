@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>浮動小数点数</strong>は、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>上で小数を表現する方法のひとつで、桁の並びを表す仮数部と、小数点の位置を表す指数部を用いて数を表現する。限られた<a href="../../../_/chapters/computer_and_number.md#%E3%83%90%E3%82%A4%E3%83%88">バイト</a>数の中で効率よく小数を表現するための方法で、<a href="#%E5%9B%BA%E5%AE%9A%E5%B0%8F%E6%95%B0%E7%82%B9%E6%95%B0">固定小数点数</a>に比べて同じ<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>数でも広い範囲の数を表すことができる。</p>
+<p>浮動小数点数では数を $\rm{数値} = (\rm{<span class="mask">符号部</span>}) \rm{仮数部} \times \rm{基数部}^{\rm{指数部}}$ の形式で考える。</p>
+<ul>
+<li><strong>基数部</strong>は<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>であれば必ず $2$ となる（<a href="./radix.md#%E5%9F%BA%E6%95%B0">n進数</a>では $n$ となる）</li>
+<li><strong><span class="mask">符号部</span></strong>は<a href="#%E6%95%B0%E3%81%AE%E6%AD%A3%E8%B2%A0">数の正負</a>を表す</li>
+<li><strong>指数部</strong>には<a href="./radix.md#%E5%9F%BA%E6%95%B0">基数</a>に対する指数部分を<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>で表記したものを格納する</li>
+<li><strong>仮数部</strong>には正規化した小数点数以下の値を格納する</li>
+</ul>
+<p>小数点数の演算では精度が重要になるため、仮数部で有効桁数を確保して指数部で大きさを表現する。仮数部の<a href="../../../_/chapters/computer_and_number.md#msb">最上位ビット</a>が $0$ にならないように仮数部と指数部を調整することで有効桁数を最大にすることを、<strong>正規化</strong>という。</p>
+<p><a href="https://ja.wikipedia.org/wiki/IEEE_754">IEEE754</a>によって規定された浮動小数点数には単精度形式と倍精度形式があり、<strong>単精度形式</strong>では32<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>（<span class="mask">符号部</span>1<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>、指数部8<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>、仮数部23<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>）、<strong>倍精度形式</strong>では64<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>（<span class="mask">符号部</span>1<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>、指数部11<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>、仮数部52<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>）で表現する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

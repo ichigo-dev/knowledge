@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>td</strong>(table data)は、<a href="./html.md#html">HTML</a>文書において、テーブル（表）のデータ（セル）を<a href="./html.md#%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97">マークアップ</a>する目的で、 <code>table</code> <a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>内の <code>tr</code> <a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>の中で使用される<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>。</p>
+<p><strong>rowspan</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>を指定することでセルを列方向に、<strong><span class="mask">colspan</span></strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>を指定することでセルを行方向に結合することができる。値としては結合する行数や列数を指定する。また、結合した分はセルの数を減らさなければテーブルが崩れてしまうので注意。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

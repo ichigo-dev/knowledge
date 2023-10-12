@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>SGD</strong>（<strong><span class="mask">確率的勾配降下法</span></strong>）は、<a href="./machine_learning.md#%E6%90%8D%E5%A4%B1%E9%96%A2%E6%95%B0">誤差関数</a>に用いるデータをランダムに選択することで目的関数の形を微妙に変化させ、<a href="#%E5%B1%80%E6%89%80%E6%9C%80%E9%81%A9%E8%A7%A3">局所最適解</a>に陥ることを防ぐ手法。<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E7%8E%87">学習率</a>の設定が難しく、収束が遅い。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

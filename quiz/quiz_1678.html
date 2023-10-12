@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Stateパターン</span></strong>は、ある者についての各状態を<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>で表現する<a href="./design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。通常は条件（状態）に一致するか否かの処理は単純な<a href="../../../../programming/_/chapters/control_flow.md#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>により実装可能であるが、それが複雑な条件となる場合や、同じ<a href="../../../../programming/_/chapters/control_flow.md#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>を複数個所で繰り返し利用するような場合、メンテナンス性を向上させるためにこのパターンが用いられる。ただし、状態の数が少ない、あるいは状態の更新頻度が低い場合にはこのパターンの適用は過剰な可能性がある。</p>
+<p><span class="mask">Stateパターン</span>は、<a href="#state">State</a>、<a href="#concretestate">ConcreteState</a>、<a href="#context">Context</a>から構成される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

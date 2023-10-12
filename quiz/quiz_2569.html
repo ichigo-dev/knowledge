@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="#rds">RDS</a>は<a href="./networking_and_content_delivery.md#vpc">VPC</a>に対応しているため、<a href="../../../_/chapters/network.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>に接続せずとも<a href="./networking_and_content_delivery.md#vpc">VPC</a>内のサービスから利用できる。<a href="./networking_and_content_delivery.md#%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97">セキュリティグループ</a>による通信要件の制限も可能で、<a href="./computing.md#ec2">EC2</a>やほかの<a href="./aws.md#aws">AWS</a>サービスから<a href="#rds">RDS</a>までの通信もデータベースエンジンが提供するSSLを使った暗号化に対応している。</p>
+<p>また、<a href="#rds">RDS</a>の<strong><span class="mask">暗号化オプション</span></strong>を有効にすることで、データが保存される<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>やスナップショット、ログなどの<a href="#rds">RDS</a>に関連するすべてのデータが暗号化された状態で保持される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

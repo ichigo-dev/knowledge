@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">擬似クラス</span></strong>は、特定の状態にある<a href="../../../html/_/chapters/html.md#html">HTML</a><a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>を指定するための<a href="#css">CSS</a><a href="#%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF">セレクタ</a>。例えば、<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>マウスホバーされている状態や、親要素から見て指定の位置にある<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>などを指し示すことができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

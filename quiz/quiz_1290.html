@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">オープンソースソフトウェア</span></strong>(<strong>OSS</strong>: Open Source Software)は、<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>が<a href="../../../../network/_/chapters/network.md#%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88">インターネット</a>などで一般に公開されている<a href="./software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>。<span class="mask">オープンソースソフトウェア</span>であるためには次の基準を満たす必要がある。</p>
+<blockquote>
+<ul>
+<li>再頒布の自由</li>
+<li>ソースコードが入手可能</li>
+<li>変更及び派生ソフトウェアを作成可能で、同じライセンス下での頒布を許可</li>
+<li>作者のソースコードの完全性を保証</li>
+<li>個人やグループに対する差別の禁止</li>
+<li>利用する分野に対する差別の禁止（商用も可）</li>
+<li>再頒布において追加ライセンスを必要としない</li>
+<li>特定製品でのみ有効なライセンスの禁止</li>
+<li>他のソフトウェアを制限するライセンスの禁止</li>
+<li>技術的に中立でなければならない</li>
+</ul>
+</blockquote>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

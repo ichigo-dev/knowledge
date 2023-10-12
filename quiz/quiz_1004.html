@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">cp</span></strong>は、<a href="./linux.md#linux">Linux</a>および<a href="../../../software/_/chapters/operating_system.md#unix">UNIX系</a><a href="../../../software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">オペレーティングシステム</a>で使用される、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>をコピーするための<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。 <code><span class="mask">cp</span></code> は“copy“の略語。</p>
+<p><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">cp</span> [OPTION]... [-T] SOURCE DEST
+<span class="mask">cp</span> [OPTION]... SOURCE... DIRECTORY
+<span class="mask">cp</span> [OPTION]... -t DIRECTORY SOURCE...
+</code></pre>
+<p><code><span class="mask">cp</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>にコピー元<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>とコピー先<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>の<a href="../../../software/_/chapters/file_system.md#%E3%83%91%E3%82%B9">パス</a>を指定することで、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>をコピーすることができる。例えば次の<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>は、 <code>/home/user/src/test.txt</code> という<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を <code>/home/user/dest/test.txt</code> という<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>にコピーする。</p>
+<pre><code class="language-sh"><span class="mask">cp</span> /home/user/src/test.txt /home/user/dest/test.txt
+</code></pre>
+<p><code><span class="mask">cp</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の代表的な<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-r</code></td><td style="text-align: left">指定したディレクトリの中身を再帰的にコピーする</td></tr>
+<tr><td><code>-p</code></td><td style="text-align: left">コピー元ファイルの属性やパーミッションを維持する</td></tr>
+<tr><td><code>-i</code></td><td style="text-align: left">上書き確認を求める</td></tr>
+</tbody></table>
+<p><code><span class="mask">cp</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>は<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>を簡単にコピーすることができるが、コピー先に同名の<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>が存在する場合には、内容が上書きされるため注意が必要。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

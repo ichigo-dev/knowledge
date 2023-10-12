@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">man</span></strong>は、<a href="./linux.md#linux">Linux</a>のマニュアルページを表示するために使用される<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。マニュアルページには、<a href="./linux.md#linux">Linux</a>システムや<a href="../../../software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>の機能、<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>、使用例などが記載されている。 <code><span class="mask">man</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を使うことで、<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>、システムの概要を調べることができる。</p>
+<p><code><span class="mask">man</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">man</span> [OPTION]... [COMMAND/FILE]
+</code></pre>
+<p>例えば、 <code>ls</code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>のマニュアルページを表示したい場合は、次のように実行する。</p>
+<pre><code class="language-sh">$ <span class="mask">man</span> ls
+</code></pre>
+<p>マニュアルページを開いている間は、矢印キーや <code>Enter/BackSpace</code> 、 <code>j/k</code> でページ内を移動することができ、 <code>q</code> キーでマニュアルを閉じてインタラクティブシェルに復帰できる。また、操作がわからなくなった場合には <code>h</code> キーを入力することでヘルプを参照することができる。これらの操作が有効なのは、ページャとしてデフォルトの <code>less</code> を用いている場合に限られる。</p>
+<p><code>OPTION</code> に指定することができる主要な<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-f</code> <code>-k</code> <code>-i</code></td><td style="text-align: left">指定したキーワードに該当するコマンドを検索し、見つかったマニュアルページの一覧を出力する</td></tr>
+<tr><td><code>-a</code></td><td style="text-align: left">すべてのマニュアルページを表示する</td></tr>
+<tr><td><code>-P</code> <code>--pager</code></td><td style="text-align: left">マニュアルページの閲覧に用いるページャを指定する（デフォルトでは <code>less</code> ）</td></tr>
+</tbody></table>
+<p>また、マニュアルは種類ごとに以下のようなセクション番号が割り振られており、番号を指定してマニュアルを調べることもできる。</p>
+<table><thead><tr><th>セクション番号</th><th style="text-align: left">内容</th></tr></thead><tbody>
+<tr><td><code>1</code></td><td style="text-align: left">Linuxコマンド</td></tr>
+<tr><td><code>2</code></td><td style="text-align: left">システムコール（カーネル関数）</td></tr>
+<tr><td><code>3</code></td><td style="text-align: left">ライブラリコール（Cライブラリの関数）</td></tr>
+<tr><td><code>4</code></td><td style="text-align: left">スペシャルファイル（デバイスファイル）</td></tr>
+<tr><td><code>5</code></td><td style="text-align: left">ファイルのフォーマット</td></tr>
+<tr><td><code>6</code></td><td style="text-align: left">ゲームやデモ</td></tr>
+<tr><td><code>7</code></td><td style="text-align: left">マクロ</td></tr>
+<tr><td><code>8</code></td><td style="text-align: left">その他</td></tr>
+<tr><td><code>9</code></td><td style="text-align: left">システムコマンドとデーモン</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">2の補数</span></strong>は、<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>において負の数を表現する際に用いられる表現方法。<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>では、<a href="#%E7%AC%A6%E5%8F%B7%E3%83%93%E3%83%83%E3%83%88">符号ビット</a>を含めた全ての<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>を反転したものが<strong>1の補数</strong>（ある数に対して足し合わせても桁が上がらない最大の数）となるので、それに1を加算することで求めることができる。</p>
+<p><span class="mask">2の補数</span>を使用する理由は、1の補数を用いるよりも表現できる数の範囲が $1$ 広いためである。n<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>の<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>が表現できる数の範囲は、1の補数を用いた場合は $-(2^{n-1} - 1) \sim (2^{n-1} - 1)$ 、<span class="mask">2の補数</span>を用いた場合は $-2^{n-1} \sim (2^{n-1} - 1)$ となる。これは1の補数では $0$ が正と負の2種類存在してしまうためであり、通常はこれらを区別する必要はないため、<span class="mask">2の補数</span>が利用される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

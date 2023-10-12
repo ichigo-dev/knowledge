@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>DRAM</strong>(Dynamic RAM)は、一定時間たつとデータが消失してしまうという性質を持っており、低速で高消費電力である代わりに、安価で大容量である<a href="#ram">RAM</a>。1<a href="../../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>の情報を記憶するメモリセルが、コンデンサとトランジスタで構成されている。また、放置しておくと自然に放電してしまうため、一定時間間隔でコンデンサを再充電する<strong>リフレッシュ動作</strong>が必要となる。現在ではほとんどの場合、システムの<a href="./bus.md#%E3%83%90%E3%82%B9">バス</a>と同期して動作する<strong><span class="mask">SDRAM</span></strong>(Synchronous DRAM)となっている。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

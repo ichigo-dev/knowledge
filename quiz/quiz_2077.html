@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>TELNET</strong>は、<a href="./transport_layer.md#tcp">TCP</a>の<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>を1つ利用して、通信相手の<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>に<a href="../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を文字列として送信し実行する<a href="./network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>。相手の<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>内部で動作している<a href="../../../computer/linux/_/chapters/shell_and_terminal.md#%E3%82%B7%E3%82%A7%E3%83%AB">シェル</a>に接続しているような状態となる。</p>
+<p>TELNETでは、ユーザが入力した文字以外にもオプションをやり取りすることができる。<strong>NVT</strong>(Network Virtual Terminal)を実現するための画面制御情報はこのオプション機能を利用して送信される。</p>
+<p>またTELNETには、改行キーが入力されるごとに1行分のデータをまとめて送る<strong>行モード</strong>と、入力された文字を1文字ごとに送る<strong><span class="mask">透過モード</span></strong>がある。</p>
+<p>TELNET<a href="./network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>を利用する<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a><a href="../../../programming/_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>を<strong>TELNETクライアント</strong>といい、TELNETクライアントは基本的に23番<a href="./address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート</a>に接続することでtelnetdとやり取りをする。しかし、それ以外の<a href="./address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート</a>に接続することで、キーボードから各<a href="./network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>の<a href="../../../computer/linux/_/chapters/basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を直接入力することもできる。これを利用して、<a href="./communication_protocol.md#tcpip">TCP/IP</a><a href="../../../computer/software/_/chapters/software.md#%E5%BF%9C%E7%94%A8%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">アプリケーション</a>開発時のデバッグに利用されることもある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">部分集合</span></strong>は、ある<a href="#%E9%9B%86%E5%90%88">集合</a>から取り出され、その<a href="#%E8%A6%81%E7%B4%A0">要素</a>全てが元の<a href="#%E9%9B%86%E5%90%88">集合</a>の一部であるような<a href="#%E9%9B%86%E5%90%88">集合</a>。2つの<a href="#%E9%9B%86%E5%90%88">集合</a> $A, B$ の<a href="#%E9%9B%86%E5%90%88">要素</a>が全て同じであるとき、 $A$ は $B$ の<span class="mask">部分集合</span>であると同時に、 $B$ も $A$ の<span class="mask">部分集合</span>となる。</p>
+<p>$A$ が $B$ の<span class="mask">部分集合</span>で、 $A$ と $B$ が同じ<a href="#%E9%9B%86%E5%90%88">集合</a>ではない時、 $A$ は $B$ の<strong>真<span class="mask">部分集合</span></strong>であるという。</p>
+<p><img src="../assets/images/subset.png" alt="<span class="mask">部分集合</span>のベン図" /></p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

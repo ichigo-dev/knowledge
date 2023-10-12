@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p>第3.5世代の<a href="#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>は、<a href="../../hardware/_/chapters/ic.md#ic">IC</a>回路の進歩により生まれた<a href="../../hardware/_/chapters/ic.md#lsi">LSI</a>を使用している。<a href="../../hardware/_/chapters/ic.md#lsi">LSI</a>は<a href="../../hardware/_/chapters/ic.md#ic">IC</a>と同じ意味で使われることもあるが、もともとは<a href="../../hardware/_/chapters/ic.md#ic">IC</a>よりも集積度が高いものを指す用語。</p>
+<p>インテルが演算回路や制御回路を1<a href="#%E7%AC%AC3%E4%B8%96%E4%BB%A3">チップ</a>に集積した<strong><span class="mask">マイクロプロセッサ</span></strong>を開発したことで、さらに<a href="#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>の小型化、高速化が進んだ。また、<a href="#%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">スーパーコンピュータ</a>の登場により科学技術計算などの高速演算も可能となった。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

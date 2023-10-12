@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">コンテントネゴシエーション</span></strong>は、<a href="./application_layer.md#http">HTTP</a>において、<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>が期待している形式や設定を<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>に伝えることで、最適なコンテンツを<a href="../../../system/_/chapters/system_processing_model.md#%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9">レスポンス</a>するための仕組み。以下のネゴシエーション用の<a href="../../../system/_/chapters/system_processing_model.md#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">リクエスト</a>の<a href="#http%E3%83%98%E3%83%83%E3%83%80">ヘッダ</a>と、それに対応する<a href="../../../system/_/chapters/system_processing_model.md#%E3%83%AC%E3%82%B9%E3%83%9D%E3%83%B3%E3%82%B9">レスポンス</a>の<a href="#http%E3%83%98%E3%83%83%E3%83%80">ヘッダ</a>に示したように、<a href="./application_layer.md#mime">MIME</a>タイプや言語、文字セットなどをネゴシエーションできる。</p>
+<table><thead><tr><th>リクエストヘッダ</th><th>レスポンスヘッダ</th><th>ネゴシエーション対象</th></tr></thead><tbody>
+<tr><td><code>Accept</code></td><td><code>Content-Type</code></td><td>MIMEタイプ</td></tr>
+<tr><td><code>Accept-Language</code></td><td><code>Content-Language</code> / HTMLタグ</td><td>表示言語</td></tr>
+<tr><td><code>Accept-Charset</code></td><td><code>Content-Type</code></td><td>文字セット</td></tr>
+<tr><td><code>Accept-Encoding</code></td><td><code>Content-Encoding</code></td><td>ボディの圧縮形式</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

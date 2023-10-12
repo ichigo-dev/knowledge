@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">パーセプトロン</span></strong>は、単一の<a href="#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%AD%E3%83%B3">ニューロン</a>を<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>化したもの。<span class="mask">パーセプトロン</span>では、複数の入力に対してそれぞれ<a href="#%E9%87%8D%E3%81%BF">重み</a>をかけたものの和をとる。また、この時<a href="#%E3%83%90%E3%82%A4%E3%82%A2%E3%82%B9">バイアス</a>を足し合わせる場合もある。こうして求められた和に対して、<a href="#%E6%B4%BB%E6%80%A7%E5%8C%96%E9%96%A2%E6%95%B0">活性化関数</a>と呼ばれる非線形関数を適用し、最終的な出力を求める。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">プロセスグループ</span></strong>は、プロジェクトマネジメントにおける活動やタスクを特定のカテゴリに分類するためのグループ。<a href="#pmbok">PMBOK</a>において、プロジェクトの<a href="#%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB">ライフサイクル</a>を管理するために5つの<span class="mask">プロセスグループ</span>が定義されている。</p>
+<ul>
+<li><strong>立上げプロセス群</strong>: プロジェクトの認可を得て、新しいフェーズを明確に定める</li>
+<li><strong>計画プロセス群</strong>: プロジェクトのスコープを定義し、目標を洗い出し、一連の行動を規定する</li>
+<li><strong>実行プロセス群</strong>: プロジェクトの作業を実行する</li>
+<li><strong>監視コントロール・プロセス群</strong>: プロジェクトの進捗やパフォーマンスを追跡し、統制し、変更を開始する</li>
+<li><strong>終結プロセス群</strong>: プロジェクトを公式に完結し、すべてのアクティビティを終了する</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

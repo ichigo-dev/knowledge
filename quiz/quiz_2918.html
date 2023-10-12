@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">プログラミング</span></strong>は、<a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>を記述して<a href="../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>へ命令を行い、目的とするタスクを解決すること。</p>
+<p><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9E">プログラマ</a>には、世の中の様々なタスクや問題を<span class="mask">プログラミング</span>によって解決するという役割がある。毎日の単純作業のくり返しを減らしたり（表計算<a href="../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフト</a>など）、ミスが許されない場面で正確に動作することが保証されたシステムを利用したり（銀行のシステムや信号機など）、さらに人間には難しいタスクの解決を行ったり（<a href="../../../artificial_intelligence/_/chapters/artificial_intelligence.md#%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD">AI</a>による異常検知など）と、<span class="mask">プログラミング</span>スキルの応用範囲は多岐にわたる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">逆行列</span></strong>は、任意の<a href="#%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97">正方行列</a> $A$ に対して $AA^{-1} = A^{-1}A = E$ が成り立つような<a href="#%E8%A1%8C%E5%88%97">行列</a> $A^{-1}$ 。ただし、 $E$ は<a href="#%E5%8D%98%E4%BD%8D%E8%A1%8C%E5%88%97">単位行列</a>とする。全ての<a href="#%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97">正方行列</a>が必ずしも<span class="mask">逆行列</span>を持つとは限らないため、注意が必要。</p>
+<p>2行2列の<a href="#%E6%AD%A3%E6%96%B9%E8%A1%8C%E5%88%97">正方行列</a> $A$ を</p>
+<p>$$
+A =
+\left[
+\begin{array}{cc}
+a &amp; b \
+c &amp; d
+\end{array}
+\right]
+$$</p>
+<p>とすると、 $A$ の<span class="mask">逆行列</span> $A^{-1}$ は</p>
+<p>$$
+A^{-1} = \frac{1}{ad - bc}
+\left[
+\begin{array}{cc}
+d  &amp; -b \
+-c &amp; a
+\end{array}
+\right]
+$$</p>
+<p>となる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

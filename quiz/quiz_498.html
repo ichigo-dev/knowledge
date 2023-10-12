@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ビットマスク</span>演算</strong>（<strong><span class="mask">ビットマスク</span></strong>）は、<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>列のうち特定の部分だけを取り出すために使用される演算。取り出したい<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>に対する<a href="#%E3%83%9E%E3%82%B9%E3%82%AF%E3%83%93%E3%83%83%E3%83%88">マスクビット</a>との<a href="#and%E6%BC%94%E7%AE%97">AND演算</a>を行うことで得られる。対象としなかった部分は $0$ で埋められる。</p>
+<p>次の例では、対象となる<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>列 $10011011$ に対して末尾の4<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>を取り出す操作を行っている。</p>
+<p>$$
+\begin{array}{rr}
+&amp; 10011011 \
+\lor &amp; 00001111 \
+\hline
+&amp; 00001011
+\end{array}
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

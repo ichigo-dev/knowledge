@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Bridgeパターン</span></strong>は、機能の<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>階層と実装の<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>階層を分離して<a href="../../../../programming/_/chapters/object_oriented.md#%E7%B6%99%E6%89%BF">継承</a>させ、それぞれを独立して管理することで、拡張性を高める<a href="./design_pattern.md#%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3">デザインパターン</a>。</p>
+<p><a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>階層を分離しないアンチパターンとして、ある<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>を実装した<a href="../../../../programming/_/chapters/object_oriented.md#%E5%85%B7%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">具象クラス</a>がすでに存在するとする。その<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>に機能を追加する目的で、その<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>を<a href="../../../../programming/_/chapters/object_oriented.md#%E7%B6%99%E6%89%BF">継承</a>した別の<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>を新しく実装したとき、元の<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>の<a href="../../../../programming/_/chapters/object_oriented.md#%E5%85%B7%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">具象クラス</a>の実装と同じものを再度作らなければならなくなる（新しく作った<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>から、<a href="../../../../programming/_/chapters/object_oriented.md#%E7%B6%99%E6%89%BF">継承</a>元の<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>を実装した<a href="../../../../programming/_/chapters/object_oriented.md#%E5%85%B7%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">具象クラス</a>は見えない）。そのため、機能を追加するたびに<a href="../../../../programming/_/chapters/object_oriented.md#%E5%85%B7%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">具象クラス</a>の数が増えてしまう。</p>
+<p><span class="mask">Bridgeパターン</span>では、<a href="../../../../programming/_/chapters/object_oriented.md#%E6%8A%BD%E8%B1%A1%E3%82%AF%E3%83%A9%E3%82%B9">抽象クラス</a>を用いずに、<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>の移譲を利用することでこのような問題を解決している。</p>
+<p><span class="mask">Bridgeパターン</span>は、<a href="#abstraction">Abstraction</a>、<a href="#refinedabstraction">RefinedAbstraction</a>、<a href="#implementor">Implementor</a>、<a href="#concreteimplementor">ConcreteImplementor</a>から構成される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

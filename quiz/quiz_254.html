@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">オートエンコーダ</span></strong>（<strong>自己符号化器</strong>）は、<a href="./machine_learning.md#%E6%95%99%E5%B8%AB%E3%81%AA%E3%81%97%E5%AD%A6%E7%BF%92">教師なし学習</a>の手法のひとつで、<a href="./neural_network.md#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ニューラルネットワーク</a>の入力と同じ出力を行うように<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>を学習する方法。<a href="./neural_network.md#%E4%B8%AD%E9%96%93%E5%B1%A4">中間層</a>のサイズを<a href="./neural_network.md#%E5%85%A5%E5%8A%9B%E5%B1%A4">入力層</a>よりも小さくしておくことで、学習後の<a href="./machine_learning.md#%E5%AD%A6%E7%BF%92%E3%83%A2%E3%83%87%E3%83%AB">モデル</a>の<a href="./neural_network.md#%E4%B8%AD%E9%96%93%E5%B1%A4">中間層</a>には入力された<a href="./machine_learning.md#%E7%89%B9%E5%BE%B4%E9%87%8F">特徴量</a>を圧縮した情報が存在する状態となる。最終的に<a href="./neural_network.md#%E5%87%BA%E5%8A%9B%E5%B1%A4">出力層</a>（あるいは後段の層）を取り除くことで、<a href="./neural_network.md#%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A9%E3%83%AB%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ニューラルネットワーク</a>を<a href="./neural_network.md#%E7%89%B9%E5%BE%B4%E6%8A%BD%E5%87%BA">特徴抽出</a>器として利用することができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

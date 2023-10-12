@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ベルヌーイ試行</span></strong>は、とりうる結果が2種類（成功と失敗など）で、繰り返し行った各<a href="#%E8%A9%A6%E8%A1%8C">試行</a>が<a href="#%E7%8B%AC%E7%AB%8B">独立</a>となるような<a href="#%E8%A9%A6%E8%A1%8C">試行</a>。</p>
+<p>例えば、コインを投げる<a href="#%E8%A9%A6%E8%A1%8C">試行</a>は<span class="mask">ベルヌーイ試行</span>である。</p>
+<p><span class="mask">ベルヌーイ試行</span>では、<a href="#%E7%A2%BA%E7%8E%87%E5%A4%89%E6%95%B0">確率変数</a> $X$ がとりうる値の一方を $1$ 、もう一方を $0$ とする。<a href="#%E8%A9%A6%E8%A1%8C">試行</a>が成功となる<a href="#%E7%A2%BA%E7%8E%87">確率</a>を $p$ とすると、成功と失敗の<a href="#%E7%A2%BA%E7%8E%87">確率</a>はそれぞれ次のように表される。</p>
+<p>$$
+\begin{eqnarray}
+P(X=1) &amp; = &amp; p \
+P(X=0) &amp; = &amp; 1 - p
+\end{eqnarray}
+$$</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

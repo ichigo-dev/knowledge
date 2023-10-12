@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">VPC</span></strong>(Amazon Virtual Private Cloud)は、<a href="./aws.md#aws">AWS</a>のネットワーキングサービスの中心であり、プライベートな仮想ネットワークを<a href="./aws.md#aws">AWS</a>内に作成することができるサービス。自由な<a href="../../../_/chapters/address_on_network.md#ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">IPアドレス</a>のアサインや、<a href="../../../_/chapters/address_on_network.md#%E3%82%B5%E3%83%96%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">サブネット</a>の作成、<a href="../../../_/chapters/internet_layer.md#%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB">ルーティングテーブル</a>や<a href="../../../_/chapters/network_architecture.md#%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4">ゲートウェイ</a>の設定など、仮想ネットワークを完全に制御することができる。</p>
+<p><a href="./storage.md#s3">S3</a>や<a href="./management_and_governance.md#cloudwatch">CloudWatch</a>、<a href="./database.md#dynamodb">DynamoDB</a>など、<span class="mask">VPC</span>に入れることができないサービスも多数あるので注意。</p>
+<p><a href="../../../_/chapters/internet_layer.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AFacl">ネットワークACL</a>により、1つ以上の<a href="../../../_/chapters/address_on_network.md#%E3%82%B5%E3%83%96%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">サブネット</a>に出入りするトラフィックを制御するファイアウォールを設定することができる。<a href="../../../_/chapters/address_on_network.md#%E3%82%B5%E3%83%96%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">サブネット</a>単位で<a href="#%E3%82%A4%E3%83%B3%E3%83%90%E3%82%A6%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB">インバウンドルール</a>と<a href="#%E3%82%A2%E3%82%A6%E3%83%88%E3%83%90%E3%82%A6%E3%83%B3%E3%83%89%E3%83%AB%E3%83%BC%E3%83%AB">アウトバウンドルール</a>の許可・拒否設定をすることができる。ステートレスで、1つの通信で受信と送信のそれぞれに対して設定が必要。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

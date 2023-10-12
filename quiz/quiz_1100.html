@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ソケット</strong>(Socket)は、<a href="../../../../network/_/chapters/network.md#%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF">ネットワーク</a>を介して<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E9%96%93%E9%80%9A%E4%BF%A1">プロセス間通信</a>を行うための<a href="../../../software/_/chapters/operating_system.md#api">API</a>。ソケットには、<a href="../../../../network/_/chapters/transport_layer.md#tcp">TCP</a>や<a href="../../../../network/_/chapters/transport_layer.md#udp">UDP</a>などの<a href="../../../../network/_/chapters/network_architecture.md#%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB">プロトコル</a>に対応した種類がある。</p>
+<p><a href="../../../_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>は以下のような手順で通信を行う。</p>
+<ol>
+<li><strong><span class="mask">socket</span></strong>: 待ち受け用のソケットを作成する</li>
+<li><strong>bind</strong>: 待ち受ける<a href="../../../../network/_/chapters/address_on_network.md#ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">IPアドレス</a>や<a href="../../../../network/_/chapters/address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート番号</a>といった情報をソケットに紐づける</li>
+<li><strong>listen</strong>: クライアントからの通信を待ち受ける</li>
+<li><strong>accept</strong>: 接続要求を受け入れ、通信用に新しいソケットを作成する</li>
+<li><strong>read/write</strong>: acceptで作成したソケットを用いて、クライアントとのデータのやり取りを行う</li>
+</ol>
+<p>クライアントは以下のような手順で通信を行う。</p>
+<ol>
+<li><span class="mask">socket</span>: <a href="../../../_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>との通信用のソケットを作成する</li>
+<li><strong>connect</strong>: <a href="../../../_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>が待ち受けている<a href="../../../../network/_/chapters/address_on_network.md#ip%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9">IPアドレス</a>の<a href="../../../../network/_/chapters/address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート</a>に対して接続を試みる</li>
+<li>read/write: 接続が確立したら、ソケットを介して<a href="../../../_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>とのデータのやり取りを行う</li>
+</ol>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

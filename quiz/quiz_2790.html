@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>木</strong>は、<strong>ノード</strong>とノード間を結ぶ<strong>エッジ</strong>からなる木構造のデータ。1つのノードが複数の子ノードを持ち、親ノードを持たないノードを<strong>ルートノード</strong>（<strong>根ノード</strong>）、子ノードを持つノードを<strong>ブランチノード</strong>（<strong><span class="mask">枝ノード</span></strong>）、子ノードを持たないノードを<strong>リーフノード</strong>（<strong>葉ノード</strong>）という。</p>
+<p>各ノードが持つ子ノードの数が2つに制限された木を<strong>二分木</strong>、リーフの深さがなるべくそろうように構築された木を<strong>平衡木</strong>という。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

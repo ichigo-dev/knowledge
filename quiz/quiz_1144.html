@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">PATH</span></strong>は、<a href="#%E3%82%B7%E3%82%A7%E3%83%AB">シェル</a>が<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行する際に検索する<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>のリストを含む<a href="#%E7%92%B0%E5%A2%83%E5%A4%89%E6%95%B0">環境変数</a>。 <code><span class="mask">PATH</span></code> には、<a href="#%E3%82%B7%E3%82%A7%E3%83%AB">シェル</a>が<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を検索する順序で、コロンで区切られた<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>のリストが格納される。</p>
+<p>例えば、 <code><span class="mask">PATH</span></code> が <code>/usr/local/bin:/usr/bin:/bin</code> に設定されている場合、<a href="#%E3%82%B7%E3%82%A7%E3%83%AB">シェル</a>はまず <code>/usr/local/bin</code> を検索し、次に <code>/usr/bin</code> を検索し、最後に <code>/bin</code> を検索する。</p>
+<p><code><span class="mask">PATH</span></code> 環境変数を修正することで、独自定義の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>をどこからでも実行できるようにしたりすることができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">論理演算</span></strong>は、<a href="./set_and_proposition.md#%E5%91%BD%E9%A1%8C">命題</a>や<a href="./set_and_proposition.md#%E7%9C%9F%E5%81%BD%E5%80%A4">真偽値</a>を対象として行う演算。<a href="./set_and_proposition.md#%E5%91%BD%E9%A1%8C">命題</a>の評価や条件文の制御、データのフィルタリング等、様々な分野で使用される。</p>
+<p>基本な<span class="mask">論理演算</span>には、<a href="#or%E6%BC%94%E7%AE%97">OR演算</a>、<a href="#and%E6%BC%94%E7%AE%97">AND演算</a>、<a href="#not%E6%BC%94%E7%AE%97">NOT演算</a>があり、これらは<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が行う演算の最小単位となる。<a href="./set_and_proposition.md#%E7%9C%9F%E5%81%BD%E5%80%A4">真偽値</a>は<a href="./radix.md#2%E9%80%B2%E6%95%B0">2進数</a>1桁で表現することができ、これは<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が扱う情報の最小単位であるため、<a href="../../../../computer/_/chapters/computer.md#%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">コンピュータ</a>が行う演算は全てこれらの<span class="mask">論理演算</span>の組み合わせにより成り立っている。</p>
+<p>また、基本<span class="mask">論理演算</span>を組み合わせた複合的な<span class="mask">論理演算</span>として、<a href="#nor%E6%BC%94%E7%AE%97">NOR演算</a>、<a href="#nand%E6%BC%94%E7%AE%97">NAND演算</a>、<a href="#xor%E6%BC%94%E7%AE%97">XOR演算</a>などがある。</p>
+<p><span class="mask">論理演算</span>の入出力関係は<a href="#%E7%9C%9F%E7%90%86%E5%80%A4%E8%A1%A8">真理値表</a>や<a href="./set_and_proposition.md#%E3%83%99%E3%83%B3%E5%9B%B3">ベン図</a>を用いて表されることが多い。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

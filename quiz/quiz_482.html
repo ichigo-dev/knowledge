@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">真理値表</span></strong>は、<a href="#%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97">論理演算</a>の入力の組み合わせと出力を表で表現したもの。例えば、入力を $x$ 、出力を $z$ とし、 $x$ を反転した値を出力するような<a href="#%E8%AB%96%E7%90%86%E6%BC%94%E7%AE%97">論理演算</a>についての<span class="mask">真理値表</span>は以下のように表される。</p>
+<table><thead><tr><th>$x$</th><th>$z$</th></tr></thead><tbody>
+<tr><td>$0$</td><td>$1$</td></tr>
+<tr><td>$1$</td><td>$0$</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

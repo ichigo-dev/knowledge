@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>USB</strong>(Universal Serial Bus)は、<a href="./io_unit.md#%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89">キーボード</a>や<a href="./io_unit.md#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9">マウス</a>、<a href="./io_unit.md#%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF">プリンタ</a>などの接続に用いられる。<a href="#%E3%83%90%E3%82%B9%E3%83%91%E3%83%AF%E3%83%BC%E6%96%B9%E5%BC%8F">バスパワー方式</a>や<a href="#%E3%83%9B%E3%83%83%E3%83%88%E3%83%97%E3%83%A9%E3%82%B0%E6%A9%9F%E8%83%BD">ホットプラグ機能</a>にも対応している。</p>
+<p>転送速度は、USB1.0では12Mbps、USB2.0では480Mbpsとなっている。USB3.0は、<a href="../../../../network/_/chapters/network.md#%E5%85%A8%E4%BA%8C%E9%87%8D%E9%80%9A%E4%BF%A1">全二重通信</a>を行う高速シリアルインタフェース規格で、転送速度は5Gbpsとなっている。さらにUSB3.1では転送速度が10Gbpsとなっている。</p>
+<p>USBには<strong>Type-A</strong>、<strong><span class="mask">Type-B</span></strong>、<strong>Type-C</strong>、<strong>Mini-B</strong>、<strong>Micro-B</strong>など様々な形状がある。</p>
+<p>USBの転送モードは以下の4種類。</p>
+<ul>
+<li><strong>アイソクロナス転送</strong> : 動画や音声などのリアルタイム性が必要となるデータの転送に適した転送方式で、エラーが発生しても再送が行われない</li>
+<li><strong>インタラプト転送</strong> : 少量のデータの転送に用いられる転送方式で、<a href="./io_unit.md#%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89">キーボード</a>や<a href="./io_unit.md#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9">マウス</a>などの入力データの転送に利用される</li>
+<li><strong>コントロール転送</strong> : 機器の初期化や設定用に用いられる転送方式で、標準リクエストやクラスリクエスト、ベンダリクエストといった様々なコマンドのやり取りに利用される</li>
+<li><strong>バルク転送</strong> : <a href="./auxiliary_memory_unit.md#%E3%83%8F%E3%83%BC%E3%83%89%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF">磁気ディスク</a>やスキャナなどの大容量のデータ転送に用いられる転送方式で、エラー検知や再送が行われる</li>
+</ul>
+<p>USBの接続形態にはスター接続とツリー接続がある。<strong>スター接続</strong>は、1台のUSB<a href="#%E3%83%8F%E3%83%96">ハブ</a>を使って最大127台の装置を接続可能。<strong>ツリー接続</strong>は、複数の<a href="#%E3%83%8F%E3%83%96">ハブ</a>を階層的に配置することで最大6階層（<a href="#%E3%83%8F%E3%83%96">ハブ</a>5台まで）まで接続可能。このような階層的な接続を<strong>カスケード接続</strong>という。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

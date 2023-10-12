@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">スリーウェイハンドシェイク</span></strong>は、<a href="#tcp">TCP</a>における<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>の確立方法で、合計で3回の<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>をやり取りすることからこのような名前となっている。この方法では、<a href="#tcp">TCP</a>ヘッダに含まれる、Flagsという6<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>のコントロールビットのフィールドを用いて接続を確立する。</p>
+<ol>
+<li>最初に接続を要求する<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>は、<a href="#%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E7%95%AA%E5%8F%B7">SYN</a>フラグを立てた<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を送信する。</li>
+<li><a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>はそれを受けて、<a href="#%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E7%95%AA%E5%8F%B7">SYN</a>フラグと<a href="#%E7%A2%BA%E8%AA%8D%E5%BF%9C%E7%AD%94">ACK</a>フラグを立てた<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を送信する。</li>
+<li><a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>は<a href="#%E3%82%B7%E3%83%BC%E3%82%B1%E3%83%B3%E3%82%B9%E7%95%AA%E5%8F%B7">SYN</a>フラグを落とし、<a href="#%E7%A2%BA%E8%AA%8D%E5%BF%9C%E7%AD%94">ACK</a>フラグのみを立てた<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を送信し、<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>がその<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を受け取ると<a href="./network.md#%E3%82%B3%E3%83%8D%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3">コネクション</a>が確立する。</li>
+</ol>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

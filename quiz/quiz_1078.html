@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">systemd</span></strong>は、<a href="./linux.md#linux">Linux</a>システムが起動された時に最初に実行される<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>で、システムのブートプロセスや<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>管理を行うシステム管理<a href="#%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3">デーモン</a>。従来の<a href="#init%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">initプロセス</a>の代替として設計されており、<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>の開始、監視、制御、終了等を行うことができる。<span class="mask">systemd</span>では、<a href="#%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3">デーモン</a>や<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>の依存関係や起動順序、停止順序などを管理することができる。<span class="mask">systemd</span>の<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">PID</a>は必ず1となる。</p>
+<p><span class="mask">systemd</span>では各<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>がユニットファイルとして定義され、<span class="mask">systemd</span>によって自動的に管理される。また、 <code>systemctl</code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を利用して<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>のステータス確認や起動、停止、再起動、有効化、無効化などを行うことができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

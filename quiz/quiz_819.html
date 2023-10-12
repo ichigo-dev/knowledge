@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><ul>
+<li><strong>スキャナ</strong> : 絵や写真などに光を当て、その反射の強弱を電気信号に変えてイメージ画像として読み取る装置</li>
+<li><strong>OCR</strong>（光学式文字読取装置）、<strong><span class="mask">OMR</span></strong>（光学式マーク読取装置） : OCRは手書きの文字を文字データとして読み取る装置で、<span class="mask">OMR</span>はマークシートを読み取る装置</li>
+<li><strong>バーコードリーダ</strong> : 光学的にバーコードを読み取る装置で、バーコードの規格としては日本ではJANコードが使われている（そのほか、ITFコードやISBNコード、2次元バーコード（QRコード）などがある）</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

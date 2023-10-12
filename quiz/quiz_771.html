@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">チャネル制御方式</span></strong>は、<a href="./processor.md#cpu">CPU</a>の指示を受けて独立して入出力の制御を行う<strong>チャネル</strong>という装置を用いるデータ転送の制御方式。この方式では、<a href="./hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">記憶装置</a>と<a href="./io_unit.md">入出力装置</a>の間にチャネルを設置してデータ転送を制御する。1つの装置の制御を行う<strong>セレクタチャネル</strong>と、低速な<a href="./io_unit.md">入出力装置</a>の制御を時分割により並行的に行う<strong>マルチプレクサチャネル</strong>がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

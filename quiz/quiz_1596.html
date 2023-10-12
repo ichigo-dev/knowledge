@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Adapter</span></strong>は、<a href="#adapter%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3"><span class="mask">Adapter</span>パターン</a>において、<a href="#adaptee">Adaptee</a>の提供する<a href="../../../../programming/_/chapters/object_oriented.md#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">メソッド</a>を利用して<a href="#target">Target</a>の要件を満たす役割を持つ。<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>を用いた<a href="#adapter%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3"><span class="mask">Adapter</span>パターン</a>の場合には、<a href="../../../../programming/_/chapters/object_oriented.md#%E7%B6%99%E6%89%BF">継承</a>を使って<a href="#adaptee">Adaptee</a>を利用する。<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>を用いた<a href="#adapter%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3"><span class="mask">Adapter</span>パターン</a>の場合には、<a href="#adaptee">Adaptee</a>の<a href="../../../../programming/_/chapters/object_oriented.md#%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9">インスタンス</a>を<a href="../../../../programming/_/chapters/object_oriented.md#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">メンバ変数</a>として保持し、それを介して<a href="#adaptee">Adaptee</a>の機能を利用する（委譲）。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">テンペスト</span></strong>は、電子機器から発生する電磁波を盗聴する攻撃手法、あるいはこれを防ぐために電磁波の放射を制御する手法。電子機器が発する電磁波は周囲に漏れ出しており、他の電磁波受信機によって機密情報などが傍受される可能性がある。特に軍事や政府機関、重要な機密情報を扱う組織などで重要視され、対策が行われている。</p>
+<p>電磁波を吸収する材料や導電性の材料で作られたシールドを用いたり、電磁波の発生や伝搬を制御するためのフィルター（電磁波を特定の周波数帯域で遮断・減衰するなど）を使用するといった対策が行われる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

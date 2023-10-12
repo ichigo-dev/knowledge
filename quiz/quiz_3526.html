@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">詳細度</span></strong>は、<a href="#css">CSS</a>において、同じ<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>の同じ<a href="#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>に対して複数の値が設定されていた場合に、どの値を優先的に適用するかを判断するための<a href="../../../../programming/_/chapters/algorithm.md#%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム</a>。基本的には、<a href="#%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF">セレクタ</a>の指定方法によって<span class="mask">詳細度</span>が計算される。</p>
+<p><span class="mask">詳細度</span>の計算は以下の3段階に分けられ、上位の<span class="mask">詳細度</span>から優先的に評価される。</p>
+<ol>
+<li>IDセレクタの<span class="mask">詳細度</span></li>
+<li>クラスセレクタや属性セレクタ、擬似クラスの<span class="mask">詳細度</span></li>
+<li>要素型セレクタ、擬似要素の<span class="mask">詳細度</span></li>
+</ol>
+<p>例えば、 <code>#container .box div</code> は <code>1.1.1</code> の<span class="mask">詳細度</span>、 <code>#container .box div:first-child</code> は <code>1.2.1</code> の<span class="mask">詳細度</span>となり、後者のスタイルが優先的に適用される。また、<span class="mask">詳細度</span>が等しいスタイルについては、<a href="#css">CSS</a>ファイルの後に記述されたものが適用される。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">initプロセス</span></strong>は、<a href="./linux.md#linux">Linux</a>システムが起動された時に最初に実行され、システムの全ての<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>の親<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>として機能する<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>。システムのランレベルの設定や各種<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>、<a href="#%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3">デーモン</a>の起動などを行う。<span class="mask">initプロセス</span>の<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">PID</a>は必ず1となる。</p>
+<p><span class="mask">initプロセス</span>は <code>/sbin/init</code> <a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>から起動され、起動時に設定されたランレベルに応じて必要な<a href="#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9">サービス</a>や<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>を開始する。通常は、ランレベルは <code>０</code> から <code>6</code> までの7段階があり、ランレベル <code>0</code> はシャットダウン、ランレベル <code>6</code> は再起動を表す。管理者はそれぞれのランレベルに合わせた<a href="./shell_script.md#%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88">スクリプト</a>を用意して、必要な<a href="#%E3%83%87%E3%83%BC%E3%83%A2%E3%83%B3">デーモン</a>の起動処理などを記述する。</p>
+<p>新しい<a href="./linux.md#%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">Linuxディストリビューション</a>の多くでは、<span class="mask">initプロセス</span>に代わって<a href="#systemd">systemd</a>が利用される場合が多い。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

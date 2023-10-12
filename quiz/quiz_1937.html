@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Query</span></strong>は、<a href="#graphql">GraphQL</a>におけるデータ取得系の<a href="#%E3%82%AF%E3%82%A8%E3%83%AA%E8%A8%80%E8%AA%9E">クエリ</a>で、対応する<a href="#%E3%83%AB%E3%83%BC%E3%83%88%E5%9E%8B">ルート型</a>は <code><span class="mask">Query</span></code> となる。<a href="#%E3%82%AF%E3%82%A8%E3%83%AA%E8%A8%80%E8%AA%9E">クエリ</a>を受けてどのようなデータを取得するかは、<a href="#%E3%83%AA%E3%82%BE%E3%83%AB%E3%83%90">リゾルバ</a>の実装次第となる。</p>
+<p>例えば、<a href="#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E5%AE%9A%E7%BE%A9%E8%A8%80%E8%AA%9E">スキーマ定義言語</a>側で以下のような<span class="mask">Query</span>が定義されている場合を考える。</p>
+<pre><code class="language-graphql">type Person
+{
+    name: String!
+    age: Int
+}
+
+type Company
+{
+    name: String!
+    office: String
+}
+
+type <span class="mask">Query</span>
+{
+    persons: [Person]
+    company( name: String! ): [Company]
+}
+</code></pre>
+<p>この時、 <code>persons</code> を実行する<span class="mask">Query</span>は以下のようになる。<span class="mask">Query</span>に取得したい対象のデータだけでなく、その中の<a href="#field">Field</a>を指定する必要があり、これは<a href="#%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E5%9E%8B">スカラー型</a>か<a href="#enum">Enum</a>に解決されなければならない。</p>
+<pre><code class="language-graphql">query
+{
+    persons
+    {
+        name
+    }
+}
+</code></pre>
+<p>また、次の例のようにして、複数の<span class="mask">Query</span>を1つの<a href="../../../../system/_/chapters/system_processing_model.md#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">リクエスト</a>で同時に実行することもできる。</p>
+<pre><code class="language-graphql">query
+{
+    persons
+    {
+        name
+    }
+
+    company( name: &quot;Example Company&quot; )
+    {
+        office
+    }
+}
+</code></pre>
+<p><span class="mask">Query</span>にはオペレーション名を付けることで、解析や再利用を容易にすることができる。</p>
+<pre><code class="language-graphql">query getPersonList
+{
+    persons
+    {
+        name
+        age
+    }
+}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

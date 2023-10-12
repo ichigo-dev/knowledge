@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">CSS</span></strong>(Cascading Style Sheet)は、<a href="../../../html/_/chapters/html.md#html">HTML</a>で書かれた<a href="../../../../network/_/chapters/web.md#web">Webサイト</a>のレイアウトやデザインを調整するためのスタイルシート言語。<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>の色やサイズ、配置、余白、文字の太さや大きさなどを変更したり、簡単なアニメーションを適用したりできる。</p>
+<p><span class="mask">CSS</span>の<a href="../../../../network/_/chapters/communication_protocol.md#%E6%A8%99%E6%BA%96%E5%8C%96%E3%81%AE%E6%B5%81%E3%82%8C">標準</a>仕様は<a href="../../../../network/_/chapters/web.md#w3c">W3C</a>が定めており、現在広く使われている<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">ブラウザ</a>（<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">Google Chrome</a>、<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">Mozilla Firefox</a>、<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">Microsoft Edge</a>、<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">Safari</a>など）はこれらの仕様を満たすように開発が進められている。</p>
+<p><span class="mask">CSS</span>は<a href="#%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%BF">セレクタ</a>で指定した<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>に対して<a href="#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>を記述することで、<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>のスタイルを変更する。<span class="mask">CSS</span>は一度設定されたプロパティの値が、後から出てきた、もしくは<a href="#%E8%A9%B3%E7%B4%B0%E5%BA%A6">詳細度</a>の硬いプロパティの値に次々と上書きされる性質を持つ（カスケード）。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

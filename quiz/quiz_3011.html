@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">CQS</span></strong>(Command Query Separation)は、<a href="./object_oriented.md#%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E6%8C%87%E5%90%91">オブジェクト指向</a>の<a href="./object_oriented.md#%E3%82%AF%E3%83%A9%E3%82%B9">クラス</a>設計において、コマンド（変更操作）とクエリ（取得操作）を明確に分離するアプローチ。コマンドはデータの変更を行い、<a href="./function.md#%E5%89%AF%E4%BD%9C%E7%94%A8">副作用</a>を持つことがあるが、<a href="./function.md#%E6%88%BB%E3%82%8A%E5%80%A4">戻り値</a>を返さない。クエリはデータの取得を行い、<a href="./function.md#%E5%89%AF%E4%BD%9C%E7%94%A8">副作用</a>を持たず、<a href="./function.md#%E6%88%BB%E3%82%8A%E5%80%A4">戻り値</a>を返す。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

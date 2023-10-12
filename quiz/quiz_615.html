@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>自己エントロピー</strong>（<strong><span class="mask">選択情報量</span></strong>）は、ある<a href="../../../applied_mathematics/_/chapters/probability_and_statistics.md#%E4%BA%8B%E8%B1%A1">事象</a>が起こるときの<a href="#%E6%83%85%E5%A0%B1%E9%87%8F">情報量</a>。<a href="../../../applied_mathematics/_/chapters/numerical_calculation.md#%E5%AF%BE%E6%95%B0">対数</a>の底を $2$ とする（<a href="../../../discrete_mathematics/_/chapters/radix.md#2%E9%80%B2%E6%95%B0">2進数</a>で情報を表現することを考えた場合）と、自己エントロピーとはその情報を何<a href="../../../_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>で表現できるのかを表す。</p>
+<p>ある<a href="../../../applied_mathematics/_/chapters/probability_and_statistics.md#%E4%BA%8B%E8%B1%A1">事象</a> $E$ の<a href="#%E7%94%9F%E8%B5%B7%E7%A2%BA%E7%8E%87">生起確率</a>を $P(E)$ とすると、自己エントロピー $I(E)$ は以下の式で求められる。</p>
+<pre><code class="language-math">I(E) = \log_2{\frac{1}{P(E)}} = - \log_2{P(E)}
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

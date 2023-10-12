@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>head</strong>は、<a href="./html.md#html">HTML</a>文書の<span class="mask">ヘッド部</span>を記述するための<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>。<strong><span class="mask">ヘッド部</span></strong>*は、<a href="#html">HTML</a>文書のうち、ページが読み込まれても<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">Webブラウザ</a>に表示されない部分。 <code>title</code> や<a href="../../../css/_/chapters/css.md#css">CSS</a>および<a href="../../../javascript/_/chapters/javascript.md#javascript">JavaScript</a>へのリンク、独自のファビコンへのリンク、その他のメタデータの情報などを含む。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ハンガリアン記法</span></strong>は、<a href="#%E5%91%BD%E5%90%8D%E8%A6%8F%E5%89%87">命名規則</a>の一種で、<a href="./programming.md#%E8%AD%98%E5%88%A5%E5%AD%90">識別子</a>の先頭や末尾に決まった意味のプレフィックス（接頭辞）やサフィックス（接尾辞）を付与するスタイル。流行していた時代もあったが、現代ではアンチパターンとされることもある。ただし、全ての<a href="./programming.md#%E8%AD%98%E5%88%A5%E5%AD%90">識別子</a>に対してではなく、一部の決まった<a href="./programming.md#%E8%AD%98%E5%88%A5%E5%AD%90">識別子</a>に対して<span class="mask">ハンガリアン記法</span>を適用するのが有効な場合もあるため、適切に利用するとよい。</p>
+<pre><code class="language-js">// メンバ変数にプレフィックスとしてm_をつける
+m_name
+m_type
+
+// グローバル変数にプレフィックスとしてg_をつける
+g_counter
+g_error_code
+
+// 変数の型を表すプレフィックスをつける
+i_number    // int型
+c_alphabet  // char型
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

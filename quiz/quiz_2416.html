@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>スロースタート</strong>は、<a href="#tcp">TCP</a>において、通信開始時は送信量を抑えておき、徐々に増やしていく方式。送信側でデータの送信量を調整するための<strong><span class="mask">ふくそうウィンドウ</span></strong>を定義しておき、最初はこの<a href="#%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6">ウィンドウ</a>の大きさを1<a href="./datalink_layer.md#%E3%82%BB%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88">セグメント</a>に設定しておく。<a href="#%E7%A2%BA%E8%AA%8D%E5%BF%9C%E7%AD%94">確認応答</a>されるたびに1<a href="./datalink_layer.md#%E3%82%BB%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88">セグメント</a>ずつ<a href="#%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6">ウィンドウ</a>を大きくしていき、<a href="#%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88">タイムアウト</a>が発生した際には、<span class="mask">ふくそうウィンドウ</span>を1にして再度スロースタートをやり直す。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

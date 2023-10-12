@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">勾配消失問題</span></strong>は、<a href="#%E8%AA%A4%E5%B7%AE%E9%80%86%E4%BC%9D%E6%90%AC%E6%B3%95">誤差逆伝搬法</a>によって<a href="./machine_learning.md#%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">パラメータ</a>を更新する際に、レイヤを通過するたびに勾配が小さくなっていき、前段の層の<a href="./machine_learning.md#%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF">パラメータ</a>の収束に時間がかかる問題。勾配は各<a href="#%E3%83%8E%E3%83%BC%E3%83%89">ノード</a>における<a href="#%E6%B4%BB%E6%80%A7%E5%8C%96%E9%96%A2%E6%95%B0">活性化関数</a>の<a href="../../../basics/applied_mathematics/_/chapters/formal_processing.md#%E5%BE%AE%E5%88%86">微分</a>により算出できるが、この値が $1$ よりも小さい場合は徐々に勾配が小さくなっていく。</p>
+<p><a href="#%E3%82%B7%E3%82%B0%E3%83%A2%E3%82%A4%E3%83%89%E9%96%A2%E6%95%B0">シグモイド関数</a>を<a href="../../../basics/applied_mathematics/_/chapters/formal_processing.md#%E5%BE%AE%E5%88%86">微分</a>した関数は最大値が $0.25$ と小さく、<span class="mask">勾配消失問題</span>が発生しやすいため、<a href="#%E4%B8%AD%E9%96%93%E5%B1%A4">隠れ層</a>の<a href="#%E6%B4%BB%E6%80%A7%E5%8C%96%E9%96%A2%E6%95%B0">活性化関数</a>としては<a href="#relu%E9%96%A2%E6%95%B0">ReLU関数</a>がよく用いられている。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

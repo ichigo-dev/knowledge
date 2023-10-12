@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>タイムクォンタム</strong>（<strong><span class="mask">タイムスライス</span></strong>）は、ひとつの<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>が<a href="../../../hardware/_/chapters/processor.md#cpu">CPU</a>を利用できる時間単位。<a href="#%E5%AE%9F%E8%A1%8C%E7%8A%B6%E6%85%8B">実行状態</a>の<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>が与えられたタイムクォンタムを使い切ると、<a href="#%E5%AE%9F%E8%A1%8C%E5%8F%AF%E8%83%BD%E7%8A%B6%E6%85%8B">実行可能状態</a>に遷移する。繰り返しタイムクォンタムに達した<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>は実行の優先度を下げられる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

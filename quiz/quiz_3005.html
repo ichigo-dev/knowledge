@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ガード節</strong>（<strong><span class="mask">アーリーリターン</span></strong>、<strong>早期リターン</strong>）は、<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">プログラミング</a>のテクニックのひとつで、ある条件が満たされていない場合に<a href="./programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">コード</a>の実行を中断し、特定の制御を行う仕組み。主に<a href="./control_flow.md#%E5%8F%8D%E5%BE%A9">反復処理</a>や<a href="./function.md#%E9%96%A2%E6%95%B0">関数</a>の中で使用される。</p>
+<p>例えば、条件を満たしている場合にポイントを付与する、以下のような<a href="./function.md#%E9%96%A2%E6%95%B0">関数</a>を考える。</p>
+<pre><code class="language-js">function give_family_point( member_, point_ = 100 )
+{
+    if( member_.is_gold_rank() )
+    {
+        if( member_.has_children() )
+        {
+            if( member_.with_family() )
+            {
+                member_.give_point(point_);
+            }
+        }
+    }
+}
+</code></pre>
+<p>これは<a href="./control_flow.md#%E6%9D%A1%E4%BB%B6%E5%88%86%E5%B2%90">条件分岐</a>の<a href="./control_flow.md#%E3%83%8D%E3%82%B9%E3%83%88">ネスト</a>が深く、非常に読みづらい<a href="./programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">コード</a>となっている。そこで、ガード節を用いてこの<a href="./function.md#%E9%96%A2%E6%95%B0">関数</a>を<a href="#%E3%83%AA%E3%83%95%E3%82%A1%E3%82%AF%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0">リファクタリング</a>すると、以下のようになる。</p>
+<pre><code class="language-js">function give_family_point( member_, point_ = 100 )
+{
+    // ガード節による<span class="mask">アーリーリターン</span>
+    if( member_.is_gold_rank() === false ) return;
+    if( member_.has_children() === false ) return;
+    if( member_.with_family() === false ) return;
+
+    member_.give_point(point_);
+}
+</code></pre>
+<p>ガード節を用いると、可読性が向上する他に、条件ブロックと処理ブロックを分離できるというメリットがある。また、 <code>return</code> だけではなく、 <code>break</code> や <code>continue</code> を用いても同様の<a href="#%E3%83%AA%E3%83%95%E3%82%A1%E3%82%AF%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0">リファクタリング</a>が可能。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

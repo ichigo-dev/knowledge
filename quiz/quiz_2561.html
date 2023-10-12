@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">Amazon Aurora</span></strong>は、<a href="./aws.md#aws">AWS</a>が開発したデータベースエンジンで、<a href="#rds">RDS</a>の利用時に選択することができる。DBインスタンスを作成すると同時にDBクラスタが作成される。DBクラスタは、1つ以上のDBインスタンスと、各DBインスタンスから参照するデータ<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>（クラスタボリューム）で構成される。クラスタボリュームは単一の<a href="./aws.md#%E3%83%AA%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3">リージョン</a>内の3つの<a href="./aws.md#az">AZ</a>にそれぞれ2つのデータコピーで構成され、各<a href="../../../../computer/hardware/_/chapters/hardware.md#%E8%A8%98%E6%86%B6%E8%A3%85%E7%BD%AE">ストレージ</a>間のデータは自動的に同期される。</p>
+<p><strong>Auroraレプリカ</strong>は通常の<a href="#%E3%83%AA%E3%83%BC%E3%83%89%E3%83%AC%E3%83%97%E3%83%AA%E3%82%AB">リードレプリカ</a>と違い、Auroraのプライマリインスタンスに障害が発生した場合にレプリカインスタンスがプライマリインスタンスに昇格することで<a href="../../../../system/_/chapters/reliability_design.md#%E3%83%95%E3%82%A7%E3%83%BC%E3%83%AB%E3%82%AA%E3%83%BC%E3%83%90">フェールオーバ</a>を実現する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

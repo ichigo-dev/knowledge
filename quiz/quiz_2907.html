@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>ビット演算</strong>は、<a href="#%E6%BC%94%E7%AE%97">オペランド</a>を<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>列とみなして、<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>単位での<a href="#%E6%BC%94%E7%AE%97">演算</a>を行う。</p>
+<table><thead><tr><th>演算</th><th>演算子</th><th>概要</th></tr></thead><tbody>
+<tr><td>ビットAND</td><td><code>&amp;</code></td><td>左右のオペランドをビット列として比較し、両方1のビットのみを1にしたビット列を返す</td></tr>
+<tr><td>ビットOR</td><td>`</td><td>`</td></tr>
+<tr><td>ビットXOR</td><td><code>^</code></td><td>左右のオペランドをビット列として比較して、異なる値を持つビットのみを1にしたビット列を返す</td></tr>
+<tr><td>ビットNOT</td><td><code>~</code></td><td>オペランドをビット列として識別し、全てのビットを反転させたビット列を返す</td></tr>
+<tr><td><span class="mask">右ビットシフト</span></td><td><code>&gt;&gt;</code></td><td>オペランドをビット列として識別し、全てのビットを右に1ビットずらしたビット列を返す</td></tr>
+<tr><td>左ビットシフト</td><td><code>&lt;&lt;</code></td><td>オペランドをビット列として識別し、全てのビットを左に1ビットずらしたビット列を返す</td></tr>
+</tbody></table>
+<p><strong><span class="mask">右ビットシフト</span></strong>は1<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a><a href="../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E3%82%B7%E3%83%95%E3%83%88%E6%BC%94%E7%AE%97">シフト</a>するごとに値が元の $1/2$ 倍になり、<strong>左ビットシフト</strong>は1<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a><a href="../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E3%82%B7%E3%83%95%E3%83%88%E6%BC%94%E7%AE%97">シフト</a>するごとに値が元の $2$ 倍になる。</p>
+<p><strong>論理ビットシフト</strong>では、<a href="../../../basics/discrete_mathematics/_/chapters/arithmetic_operation_and_precision.md#%E3%82%B7%E3%83%95%E3%83%88%E6%BC%94%E7%AE%97">シフト</a>演算後の空き<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>を常に <code>0</code> で初期化する。<strong>算術ビットシフト</strong>では、右<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">シフト</a>を行った後の空き<a href="../../../basics/_/chapters/computer_and_number.md#%E3%83%93%E3%83%83%E3%83%88">ビット</a>を<a href="../../../basics/discrete_mathematics/_/chapters/numeric_representation.md#%E7%AC%A6%E5%8F%B7%E3%83%93%E3%83%83%E3%83%88">符号ビット</a>で初期化する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

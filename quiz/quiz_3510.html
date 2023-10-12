@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="#c<span class="mask">s</span><span class="mask">s</span>">CSS</a>の<a href="#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>の値を設定する際に使用される単位には、次のような種類がある。</p>
+<table><thead><tr><th>単位</th><th>説明</th></tr></thead><tbody>
+<tr><td><<span class="mask">s</span>trong>em</<span class="mask">s</span>trong></td><td>1em = 親要素に設定されているフォントサイズ</td></tr>
+<tr><td><<span class="mask">s</span>trong>rem</<span class="mask">s</span>trong></td><td>1rem = <code>&lt;html&gt;</code> に設定されているフォントサイズ（標準は16px）</td></tr>
+<tr><td><<span class="mask">s</span>trong>vw</<span class="mask">s</span>trong></td><td>1vw = ビューポートの幅の1/100</td></tr>
+<tr><td><<span class="mask">s</span>trong>vh</<span class="mask">s</span>trong></td><td>1vh = ビューポートの高さの1/100</td></tr>
+<tr><td><<span class="mask">s</span>trong>vmin</<span class="mask">s</span>trong></td><td>1vmin = ビューポートの幅か高さ、どちらか短い方の1/100</td></tr>
+<tr><td><<span class="mask">s</span>trong>vmax</<span class="mask">s</span>trong></td><td>1vmax = ビューポートの幅か高さ、どちらか長い方の1/100</td></tr>
+<tr><td><<span class="mask">s</span>trong>px</<span class="mask">s</span>trong></td><td>1px = 1ピクセル（ディスプレイを構成する最小単位）の大きさ</td></tr>
+<tr><td><<span class="mask">s</span>trong>pt</<span class="mask">s</span>trong></td><td>1pt = 1ポイント（1/72インチ、約0.035cm）</td></tr>
+<tr><td><<span class="mask">s</span>trong>%</<span class="mask">s</span>trong></td><td>基準となる長さや大きさ（プロパティによって異なる）に対する割合</td></tr>
+<tr><td><<span class="mask">s</span>trong>deg</<span class="mask">s</span>trong></td><td>1deg = 1°</td></tr>
+<tr><td><<span class="mask">s</span>trong>rad</<span class="mask">s</span>trong></td><td>1rad = 1ラジアン</td></tr>
+<tr><td><<span class="mask">s</span>trong><span class="mask">s</span></<span class="mask">s</span>trong></td><td>1<span class="mask">s</span> = 1秒</td></tr>
+<tr><td><<span class="mask">s</span>trong>m<span class="mask">s</span></<span class="mask">s</span>trong></td><td>1m<span class="mask">s</span> = 1ミリ秒（1/1000秒）</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>配列</strong>は、同じ<a href="#%E5%9E%8B">型</a>のデータの集合を格納するためのデータ<a href="#%E5%9E%8B">型</a>で、要素が<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>上で隣り合うように並べられる。要素には<strong><span class="mask">インデックス</span></strong>（添え字）を使ってアクセスすることができる。<span class="mask">インデックス</span>は配列の最初の要素を <code>0</code> とした整数値となっている。</p>
+<pre><code class="language-c">// C言語
+
+char str[] = &quot;Hello, world&quot;;
+
+str[5] = &quot;!&quot;;
+printf(&quot;%s\n&quot;, str);     // &quot;Hello! world&quot;が出力される
+</code></pre>
+<p>配列には、<a href="./programming.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%AB">コンパイル</a>時に要素数が決まる<strong>固定長配列</strong>と、実行時に要素数を動的に追加したり削除したりできる<strong>可変長配列</strong>がある。通常、固定長配列は<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>上の<a href="../../../computer/hardware/_/chapters/memory.md#%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF%E9%A0%98%E5%9F%9F">スタック領域</a>に、可変長配列は<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%92%E3%83%BC%E3%83%97%E9%A0%98%E5%9F%9F">ヒープ領域</a>に格納される。可変長配列において、<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%92%E3%83%BC%E3%83%97%E9%A0%98%E5%9F%9F">ヒープ領域</a>に確保したサイズが不足した場合、<a href="../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>領域の再確保（<a href="./programming.md#%E3%82%A2%E3%83%AD%E3%82%B1%E3%83%BC%E3%83%88">アロケート</a>）が発生するため、あらかじめ十分な領域を用意しておくとよい。</p>
+<p>可変長配列の末尾に対するデータの追加・削除にかかる<a href="../../../basics/information_theory/_/chapters/computational_complexity.md#%E8%A8%88%E7%AE%97%E9%87%8F">計算量</a>は $O(1)$ と非常に高速である。一方、任意の<span class="mask">インデックス</span>に対するデータの追加・削除の際には、その<span class="mask">インデックス</span>より後ろのデータ全てを移動する必要があるため、 $O(N)$ と低速となる。任意の<span class="mask">インデックス</span>の要素にアクセスするのにかかる<a href="../../../basics/information_theory/_/chapters/computational_complexity.md#%E8%A8%88%E7%AE%97%E9%87%8F">計算量</a>は常に $O(1)$ で高速である。データの探索にかかる<a href="../../../basics/information_theory/_/chapters/computational_complexity.md#%E8%A8%88%E7%AE%97%E9%87%8F">計算量</a>は基本的に $O(N)$ であるが、配列がソート済みである場合は<a href="./algorithm.md#%E4%BA%8C%E5%88%86%E6%8E%A2%E7%B4%A2">二分探索</a>を用いて $O(\log{N})$ に抑えることもできる。</p>
+<p>基本的には使い勝手の良い<a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E5%9E%8B">コンテナ型</a>の構造となっているが、中間位置へのデータの挿入が頻繁に行われたり、要素数が非常に大きくなるようなデータに対しては<a href="#%E3%83%AA%E3%82%B9%E3%83%88">リスト</a>を用いた方が良い場合もある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

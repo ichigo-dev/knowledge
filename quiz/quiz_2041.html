@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">モジュール</span></strong>は、<a href="./terraform.md#terraform">Terraform</a>において、ひとつの<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>に含まれる<a href="./terraform.md#terraform">Terraform</a>構成<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>の集まり。<a href="./terraform.md#terraform">Terraform</a>の構成<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>は、<a href="#%E8%A8%AD%E5%AE%9A%E8%A8%80%E8%AA%9E">設定言語</a>を用いて記述し、拡張子を <code>.tf</code> として作成する。</p>
+<p><a href="./terraform.md#terraform">Terraform</a>では、<span class="mask">モジュール</span>内の構成<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>の読み込み順を意識する必要はなく、<span class="mask">モジュール</span>全体が単一のドキュメントとして扱われるようになっている。また、<span class="mask">モジュール</span>内に<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>を含めた場合、それは無視されて完全に別の<span class="mask">モジュール</span>として扱われる。これを含めたい場合は明示的に<span class="mask">モジュール</span>呼び出しを使用する必要がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

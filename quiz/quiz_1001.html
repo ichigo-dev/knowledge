@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ls</span></strong>は、<a href="./linux.md#linux">Linux</a>及び<a href="../../../software/_/chapters/operating_system.md#unix">UNIX系</a><a href="../../../software/_/chapters/operating_system.md#%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">オペレーティングシステム</a>で使用される、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>の一覧表示を行う<a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。 <code><span class="mask">ls</span></code> は“list“の略語。<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>名や<a href="./user_and_permission.md#%E3%83%91%E3%83%BC%E3%83%9F%E3%83%83%E3%82%B7%E3%83%A7%E3%83%B3">パーミッション</a>、<a href="./user_and_permission.md#%E6%89%80%E6%9C%89%E8%80%85">所有者</a>、更新日時、ファイルサイズなどの情報を表示することができる。</p>
+<p><a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">ls</span> [OPTION]... [FILE]...
+</code></pre>
+<p><code><span class="mask">ls</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を単体で使用すると、<a href="../../../software/_/chapters/file_system.md#%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%88%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">カレントディレクトリ</a>の<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>や<a href="../../../software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>を一覧表示する。また、 <code><span class="mask">ls</span></code> <a href="#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の主要な<a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-l</code></td><td style="text-align: left">パーミッションや所有者、グループ、ファイルサイズ、更新日時など、詳細な情報を表示する</td></tr>
+<tr><td><code>-a</code></td><td style="text-align: left">隠しファイルも含めたすべてのファイルを表示する</td></tr>
+<tr><td><code>-h</code></td><td style="text-align: left">ファイルサイズを人間が読みやすい形式で表示する</td></tr>
+<tr><td><code>-t</code></td><td style="text-align: left">更新日時の新しい順に並べ替えて表示する</td></tr>
+<tr><td><code>-r</code></td><td style="text-align: left">結果を逆順で表示する</td></tr>
+<tr><td><code>-R</code></td><td style="text-align: left">サブディレクトリ以下のファイルやディレクトリを再帰的に表示する</td></tr>
+<tr><td><code>-F</code></td><td style="text-align: left">ファイル名の後ろにファイルの種類を表す記号を追加して表示する</td></tr>
+</tbody></table>
+<p><code>-F</code> <a href="#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を指定した場合、ファイル名の後ろに次のような記号が追加で表示される。</p>
+<table><thead><tr><th>種別</th><th>記号</th></tr></thead><tbody>
+<tr><td>通常ファイル</td><td>なし</td></tr>
+<tr><td>ディレクトリ</td><td><code>/</code></td></tr>
+<tr><td>実行可能ファイル</td><td><code>*</code></td></tr>
+<tr><td>シンボリックリンク</td><td><code>@</code></td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

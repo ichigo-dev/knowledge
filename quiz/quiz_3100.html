@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><a href="./data_type.md#%E5%8F%82%E7%85%A7">参照</a>は、<a href="./rust.md#rust">Rust</a>が<a href="./ownership_and_move.md#%E6%89%80%E6%9C%89%E6%A8%A9">所有権</a>を持たない<a href="../../../_/chapters/data_type.md#%E3%83%9D%E3%82%A4%E3%83%B3%E3%82%BF%E5%9E%8B">ポインタ型</a>。<a href="./data_type.md#%E5%8F%82%E7%85%A7">参照</a>は<a href="./data_type.md#%E5%8F%82%E7%85%A7">参照</a>先よりも長生きしてはいけないので、これを強調するために<a href="./rust.md#rust">Rust</a>ではある<a href="./data_type.md#%E5%8F%82%E7%85%A7">参照</a>を作ることを<strong><span class="mask">借用</span></strong>と呼ぶ。</p>
+<p><a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>に<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a>を渡す時に<a href="./ownership_and_move.md#%E6%89%80%E6%9C%89%E6%A8%A9">所有権</a>を<a href="./ownership_and_move.md#%E7%A7%BB%E5%8B%95">移動</a>してしまうと、それ以降は<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a>に使った値が使えなくなってしまう（<strong>値渡し</strong>）。そのため、<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>の<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a>として<a href="./data_type.md#%E5%8F%82%E7%85%A7">参照</a>を用いるのが適切な場合も多い（<strong>参照渡し</strong>）。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

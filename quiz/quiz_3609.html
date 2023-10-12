@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>input</strong>は、<a href="./html.md#html">HTML</a>文書において、フォーム内の入力項目を<a href="./html.md#%E3%83%9E%E3%83%BC%E3%82%AF%E3%82%A2%E3%83%83%E3%83%97">マークアップ</a>する目的で使用される<a href="./html.md#%E3%82%BF%E3%82%B0">タグ</a>。</p>
+<p><strong>type</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>のキーワードに応じて様々な種類のフォーム部品を表示することができる。フォーム送信時はそのデータを特定するために<strong>name</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>の値がキーとして使用され、送信される値は<strong>value</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>となる。 <code>type</code> に指定できるキーワードには次のようなものがある。</p>
+<ul>
+<li><strong>text</strong>: テキスト入力のためのフィールド（改行は除去される）。</li>
+<li><strong>password</strong>: 主にパスワード入力に用いられる、入力値を隠すテキストフィールド。</li>
+<li><strong>email</strong>: 電子メールアドレスを入力するための入力欄。</li>
+<li><strong>tel</strong>: 電話番号を入力するための入力欄。</li>
+<li><strong>url</strong>: URLを入力するための入力欄。</li>
+<li><strong><span class="mask">number</span></strong>: 数値を入力するためのコントロールで、スピナーを表示する。</li>
+<li><strong>range</strong>: 厳密な値であることが重要ではない数値を入力するためのコントロールで、範囲のウィジェットを表示する。</li>
+<li><strong>checkbox</strong>: 選択または未選択のうちどちらかの値を取ることができるチェックボックス。</li>
+<li><strong>radio</strong>: 複数の選択肢から1つの値を選択することができるラジオボタン。</li>
+<li><strong>date</strong>: 日付指定のための日付ピッカーのコントロール。</li>
+<li><strong>time</strong>: 時間指定のためのコントロール。</li>
+<li><strong>file</strong>: <a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>選択のためのコントロール。</li>
+<li><strong>color</strong>: 色指定のためのカラーピッカーのコントロール。</li>
+<li><strong>button</strong>: 規定の動作は持たず、 <code>value</code> 属性の値を表示するボタン。</li>
+<li><strong>submit</strong>: フォームの入力内容を<a href="../../../../network/_/chapters/web.md#web%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>に送信するボタン。</li>
+<li><strong>hidden</strong>: 画面に表示されないコントロールで、隠し値を<a href="../../../../network/_/chapters/web.md#web%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>に送信する目的で使用される。</li>
+</ul>
+<p><strong>placeholder</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>に値を指定することで、フィールドがどのような情報を期待しているかについてユーザにヒントを示すことができる。また、<strong>required</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>を付与することで入力項目を必須に、<strong>readonly</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>を付与することで入力項目を読み取り専用に、<strong>autofocus</strong><a href="./html.md#%E5%B1%9E%E6%80%A7">属性</a>を付与することでページ表示時に最初に入力項目にフォーカスするようにできる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

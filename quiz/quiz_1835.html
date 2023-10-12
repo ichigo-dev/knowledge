@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">bind mount</span></strong>は、ホストOS上の<a href="../../../../computer/linux/_/chapters/file.md#%E3%83%87%E3%83%90%E3%82%A4%E3%82%B9%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">デバイスファイル</a>や<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA">ディレクトリ</a>などを<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>から参照するための機能。<span class="mask">bind mount</span>を行うには、<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>起動時に <code>--mount</code> <a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を付与し、 <code>type=bind</code> を指定する。また、 <code>readonly</code> を指定することで、読み取り専用で<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88">マウント</a>することができる。 <code>--mount</code> の代わりに <code>-v</code> <a href="../../../../computer/linux/_/chapters/basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>を利用することもできる。</p>
+<p><span class="mask">bind mount</span>を使用すると、ホストOS上の<a href="../../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">ファイルシステム</a>に<a href="./container.md#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A">コンテナ</a>が干渉できるようになるので、操作には注意が必要。</p>
+<pre><code class="language-sh"></code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

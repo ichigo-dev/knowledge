@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>コンピュータ</strong>は、与えられた手順に従って計算やデータ処理を自動的に行う装置全般のことで、特に電子回路を用いて<a href="../../../basics/information_theory/_/chapters/coding_theory.md#%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB">デジタル</a>データの入出力や演算、変換などを連続的に行うことができる電気機械を指す。</p>
+<p><a href="#%E3%83%91%E3%83%BC%E3%82%BD%E3%83%8A%E3%83%AB%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF">パソコン</a>やゲーム機、スマートフォンやタブレットといった機器は全てコンピュータであり、最近では家電製品や自動車などにコンピュータが組み込まれることも珍しくない。</p>
+<p>コンピュータについて正しく理解して使いこなす能力を持っていることを<strong><span class="mask">コンピュータリテラシ</span></strong>と呼ぶ。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

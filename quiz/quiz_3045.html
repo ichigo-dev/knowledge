@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">プロセス</span></strong>は、何らかの計算を行う抽象的な計算実行体（<a href="../../../../computer/software/_/chapters/operating_system.md#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">OS<span class="mask">プロセス</span></a>とは別）であり、計算を完了させるためにいくつかのステップを経た後に、最終的に計算を停止する。<span class="mask">プロセス</span>は<a href="#%E5%AE%9F%E8%A1%8C%E5%89%8D%E7%8A%B6%E6%85%8B">実行前状態</a>から開始し、<a href="#%E5%AE%9F%E8%A1%8C%E7%8A%B6%E6%85%8B">実行状態</a>と<a href="#%E5%BE%85%E6%A9%9F%E7%8A%B6%E6%85%8B">待機状態</a>を経て<a href="#%E7%B5%82%E4%BA%86%E7%8A%B6%E6%85%8B">終了状態</a>へと遷移する。<span class="mask">プロセス</span>が<a href="#%E5%BE%85%E6%A9%9F%E7%8A%B6%E6%85%8B">待機状態</a>になる理由としては以下のようなものが挙げられる。</p>
+<ul>
+<li>演算対象となるデータが存在しない、もしくは到着していない</li>
+<li>計算リソース（<a href="../../../../computer/hardware/_/chapters/processor.md#cpu">CPU</a>や<a href="../../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>など）の空きがない</li>
+<li>自発的に<a href="#%E5%BE%85%E6%A9%9F%E7%8A%B6%E6%85%8B">待機状態</a>となる（タイマを使った処理など）</li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

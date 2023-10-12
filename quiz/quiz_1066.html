@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">top</span></strong>は、<a href="./linux.md#linux">Linux</a>システムで実行されている<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>をリアルタイムで監視するための<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。 <code><span class="mask">top</span></code> <a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>で確認できる情報は以下の通り。</p>
+<table><thead><tr><th>ラベル</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td>PID</td><td style="text-align: left">各プロセスのPID</td></tr>
+<tr><td>USER</td><td style="text-align: left">各プロセスを発行しているユーザ</td></tr>
+<tr><td>PR</td><td style="text-align: left">プロセスの優先度</td></tr>
+<tr><td>NI</td><td style="text-align: left">プロセスの優先度を調整するために使用されるニース値</td></tr>
+<tr><td>VIRT</td><td style="text-align: left">プロセスが使用している仮想メモリサイズ</td></tr>
+<tr><td>RES</td><td style="text-align: left">プロセスが使用している物理メモリサイズ</td></tr>
+<tr><td>SHR</td><td style="text-align: left">プロセスが使用している共有メモリサイズ</td></tr>
+<tr><td>S</td><td style="text-align: left">プロセスの現在の状態（D: 割込み不能、R: 実行中、S: スリープ、T: 停止中、Z: ゾンビプロセス）</td></tr>
+<tr><td>%CPU</td><td style="text-align: left">プロセスが使用しているCPUの割合</td></tr>
+<tr><td>%MEM</td><td style="text-align: left">プロセスが使用している物理メモリの割合</td></tr>
+<tr><td>TIME+</td><td style="text-align: left">プロセスが起動している時間</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

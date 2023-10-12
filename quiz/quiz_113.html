@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ロバスト回帰</span></strong>は、外れ値の影響を小さくするような<a href="./machine_learning.md#%E5%9B%9E%E5%B8%B0">回帰</a>モデル。最小二乗法の外れ値に弱いという欠点を克服することを目的としている。</p>
+<p><strong>RANSAC</strong>(Random Sample Consensus)は<span class="mask">ロバスト回帰</span>の代表的な方法で、データをランダムに抽出して<a href="./machine_learning.md#%E5%9B%9E%E5%B8%B0">回帰</a>を行い、正常値に当たるデータの割合を求める。これを繰り返して最も正常値の割合が高い直線を回帰直線とする。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

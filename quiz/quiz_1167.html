@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>Vim</strong>は、<a href="./linux.md#linux">Linux</a>の中でも非常に一般的なテキストエディタで、<a href="#vi">vi</a>を拡張したもの。Vimは標準で多くの機能を持っており、拡張性も高いため多数のプラグインが存在する。</p>
+<p>以下の<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>を実行することで、Vimを起動することができる。</p>
+<pre><code class="language-sh">$ vim
+</code></pre>
+<p>Vimには次のようなモードがある。</p>
+<p><strong>ノーマルモード</strong>は、Vim上でコマンドを入力するモードで、Vimエディタを起動したときのデフォルトのモード。テキスト<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>を編集するための各種コマンドを実行することができる。テキストの移動やコピー、貼り付け、削除、検索などのコマンドがある。ノーマルモードでの基本的な操作方法は以下の通り。</p>
+<table><thead><tr><th>キー</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>:</code></td><td style="text-align: left">コマンドラインモードに移行する</td></tr>
+<tr><td><code>k</code> <code>j</code> <code>h</code> <code>l</code></td><td style="text-align: left">カーソルを上下左右にひとつ移動する</td></tr>
+<tr><td><code>i</code></td><td style="text-align: left">カーソルの後方から<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>a</code></td><td style="text-align: left">カーソルの前方から<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>I</code></td><td style="text-align: left">カーソルを行頭に移動して<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>A</code></td><td style="text-align: left">カーソルを行末に移動して<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>o</code></td><td style="text-align: left">カーソルのある行の下に新しい行を追加して<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>O</code></td><td style="text-align: left">カーソルのある行の上に新しい行を追加して<span class="mask">インサートモード</span>に移行する</td></tr>
+<tr><td><code>v</code></td><td style="text-align: left">ビジュアルモードに移行する</td></tr>
+<tr><td><code>Ctrl + v</code></td><td style="text-align: left">セレクションモードに移行する</td></tr>
+<tr><td><code>gg</code></td><td style="text-align: left">最初の行に移動する</td></tr>
+<tr><td><code>G</code></td><td style="text-align: left">最後の行に移動する</td></tr>
+<tr><td><code>w</code></td><td style="text-align: left">次の単語の先頭に移動する</td></tr>
+<tr><td><code>W</code></td><td style="text-align: left">次の単語の末尾に移動する</td></tr>
+<tr><td><code>b</code></td><td style="text-align: left">前の単語の先頭に移動する</td></tr>
+<tr><td><code>B</code></td><td style="text-align: left">前の単語の末尾に移動する</td></tr>
+<tr><td><code>f + (文字)</code></td><td style="text-align: left">カーソルの後方の文字を行内検索し、見つかった場所に移動する</td></tr>
+<tr><td><code>F + (文字)</code></td><td style="text-align: left">カーソルの前方の文字を行内検索し、見つかった場所に移動する</td></tr>
+<tr><td><code>0</code> <code>^</code></td><td style="text-align: left">行頭に移動する（ <code>0</code> はインデントを無視する）</td></tr>
+<tr><td><code>$</code></td><td style="text-align: left">行末に移動する</td></tr>
+<tr><td><code>Ctrl + u</code> <code>Ctrl + d</code></td><td style="text-align: left">半画面スクロールアップ、スクロールダウンする</td></tr>
+<tr><td><code>Ctrl + b</code> <code>Ctrl + f</code></td><td style="text-align: left">全画面スクロールアップ、スクロールダウンする</td></tr>
+<tr><td><code>/ + (検索パターン)</code></td><td style="text-align: left">順方向にファイル内検索する（ <code>n</code> で次の候補、 <code>N</code> 出前の候補に移動）</td></tr>
+<tr><td><code>u</code></td><td style="text-align: left">Undo（直前の変更を取り消す）</td></tr>
+<tr><td><code>Ctrl + r</code></td><td style="text-align: left">Redo（直前の変更の取り消しを戻す）</td></tr>
+<tr><td><code>&gt;&gt;</code></td><td style="text-align: left">インデントを追加する</td></tr>
+<tr><td><code>&gt;&gt;</code></td><td style="text-align: left">インデントを削除する</td></tr>
+<tr><td><code>r + (文字)</code></td><td style="text-align: left">カーソルの下の文字を置換する</td></tr>
+<tr><td><code>x</code></td><td style="text-align: left">カーソルの下の文字を削除する</td></tr>
+<tr><td><code>dd</code></td><td style="text-align: left">カーソルのある行を削除する</td></tr>
+<tr><td><code>y</code></td><td style="text-align: left">カーソルの下の文字をヤンク（コピー）</td></tr>
+<tr><td><code>yy</code></td><td style="text-align: left">カーソルのある行をヤンク（コピー）</td></tr>
+<tr><td><code>p</code></td><td style="text-align: left">クリップボードの中身をペースト</td></tr>
+</tbody></table>
+<p><strong><span class="mask">インサートモード</span></strong>は、テキストを入力するモード。ノーマルモードから<span class="mask">インサートモード</span>に移行するには、 <code>i</code> キーか <code>a</code> キーを入力する。<span class="mask">インサートモード</span>からノーマルモードに復帰するには、 <code>Esc</code> キーを入力する。</p>
+<p><strong>ビジュアルモード</strong>は、テキストを選択するモード。ノーマルモードからビジュアルモードに移行するには、 <code>v</code> キーを入力する。ビジュアルモードでは、テキストを選択して、コピーや削除、置換などの操作を実行することができる。ビジュアルモードからノーマルモードに復帰するには、 <code>Esc</code> キーを入力する。</p>
+<p><strong>セレクションモード</strong>（<strong>矩形選択モード</strong>）は、テキストの矩形選択を行うモード。ノーマルモードからセレクションモードに移行するには、 <code>Ctrl + v</code> キーを入力する。セレクションモードでは、テキストの矩形領域を選択して、コピーや削除、置換などの操作を実行することができる。セレクションモードからノーマルモードに復帰するには、 <code>Esc</code> キーを入力する。</p>
+<p><strong>コマンドラインモード</strong>は、<a href="../../../software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>の保存や終了、設定変更などのコマンドを入力するモード。ノーマルモードからコマンドラインモードに移行するには、 <code>:</code> キーを入力する。コマンドを入力して実行するには、 <code>Enter</code> キーを入力する。コマンド実行後は自動でノーマルモードに移行する。基本的なコマンドは以下の通り。</p>
+<table><thead><tr><th>コマンド</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>w</code></td><td style="text-align: left">内容を保存</td></tr>
+<tr><td><code>q</code></td><td style="text-align: left">Vimを終了する</td></tr>
+<tr><td><code>q!</code></td><td style="text-align: left">Vimを強制終了する</td></tr>
+<tr><td><code>wq</code></td><td style="text-align: left">内容を保存して、Vimを終了する</td></tr>
+<tr><td><code>e + (ファイル名)</code></td><td style="text-align: left">ファイルを開く</td></tr>
+<tr><td><code>nohlsearch</code></td><td style="text-align: left">検索ハイライトを解除する</td></tr>
+<tr><td><code>set number</code></td><td style="text-align: left">行数表示を有効にする</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

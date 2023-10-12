@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">マルチパートフォーム</span></strong>は、<a href="./application_layer.md#http">HTTP</a>の<a href="#%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0">フォーム</a>におけるエンコードタイプの形式で、通常は単一のコンテンツしか持つことのできない<a href="#http%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8">HTTPメッセージ</a>に複数のコンテンツ（<a href="../../../computer/software/_/chapters/file_system.md#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB">ファイル</a>）を持たせるためのオプション。<span class="mask">マルチパートフォーム</span>の<a href="#http%E3%83%9C%E3%83%87%E3%82%A3">HTTPボディ</a>は、<a href="../../../system/_/chapters/system_processing_model.md#%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88">リクエスト</a>ごとに異なる境界文字列で複数のコンテンツを区切った形式となっており、区切られた各コンテンツはそれぞれが<a href="#http%E3%83%98%E3%83%83%E3%83%80">ヘッダ</a>を持つことができる。境界文字列は <code>Content-Type</code> <a href="#http%E3%83%98%E3%83%83%E3%83%80">ヘッダ</a>に付与された <code>boundary</code> に記載される。</p>
+<p><a href="#html">HTML</a>の <code>form</code> では、 <code>enctype=&quot;multipart/form-data&quot;</code> を指定することで<span class="mask">マルチパートフォーム</span>を作成することができる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

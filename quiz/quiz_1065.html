@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">pstree</span></strong>は、<a href="#%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9">プロセス</a>の親子関係をツリー形式で表示するための<a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>。</p>
+<p><a href="./basic_command.md#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">コマンド</a>の書式は以下の通り。</p>
+<pre><code><span class="mask">pstree</span> [OPTION]...
+</code></pre>
+<p><code><span class="mask">pstree</span></code> の主要な<a href="./basic_command.md#%E3%82%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">オプション</a>は以下の通り。</p>
+<table><thead><tr><th>オプション</th><th style="text-align: left">概要</th></tr></thead><tbody>
+<tr><td><code>-p</code></td><td style="text-align: left">各プロセスのPIDを表示する</td></tr>
+<tr><td><code>-u</code></td><td style="text-align: left">各プロセスの実行ユーザ名を表示する</td></tr>
+<tr><td><code>-h</code></td><td style="text-align: left">ルートプロセスを表示しない</td></tr>
+<tr><td><code>-a</code></td><td style="text-align: left">各プロセスのコマンドライン引数も表示する</td></tr>
+<tr><td><code>-n</code></td><td style="text-align: left">各プロセスの名前をソートせず、PIDの順に表示する</td></tr>
+<tr><td><code>-c</code></td><td style="text-align: left">同じ名前のプロセスをまとめて表示する</td></tr>
+<tr><td><code>-G</code></td><td style="text-align: left">指定したグループIDを持つプロセスのみ表示する</td></tr>
+<tr><td><code>-U</code></td><td style="text-align: left">指定したユーザIDを持つプロセスのみ表示する</td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

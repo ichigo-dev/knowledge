@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">インラインボックス</span></strong>は、<a href="../../../html/_/chapters/html.md#html">HTML</a><a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>のうち、テキスト業に紛れ込むことができるタイプの<a href="#%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB">ボックス</a>。<span class="mask">インラインボックス</span>の隣には、別のテキストや<span class="mask">インラインボックス</span>が並ぶことができる。基本的には、<a href="#css">CSS</a>で<a href="#%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E9%A0%98%E5%9F%9F">コンテンツ</a>の幅や高さ、上下<a href="#%E3%83%9E%E3%83%BC%E3%82%B8%E3%83%B3%E9%A0%98%E5%9F%9F">マージン</a>を指定することができない。</p>
+<p><code>span</code> 、 <code>strong</code> 、 <code>br</code> 、 <code>img</code> 、 <code>input</code> といった<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>はデフォルトで<span class="mask">インラインボックス</span>となっている。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

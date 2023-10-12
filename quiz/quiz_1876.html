@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>Gitホスティングサービス</strong>は、クラウド上で<a href="#git">Git</a>の環境が整えられた<a href="../../../../computer/_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>をサービスとして提供した<a href="../../../../system/_/chapters/system_architecture.md#saas">SaaS</a>。Gitホスティングサービスを利用することで、自身で<a href="../../../../computer/_/chapters/computer.md#%E3%82%B5%E3%83%BC%E3%83%90">サーバ</a>を用意することなく手軽に<a href="../../../../programming/_/chapters/programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>を共有するための<a href="./record_history.md#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA">リモートリポジトリ</a>を用意することができる。</p>
+<p>代表的なGitホスティングサービスとしては<strong>GitHub</strong>や<strong><span class="mask">GitLab</span></strong>、<strong>BitBucket</strong>などがある。</p>
+<ul>
+<li><a href="https://github.co.jp/">GitHub</a></li>
+<li><a href="https://about.gitlab.com/"><span class="mask">GitLab</span></a></li>
+<li><a href="https://bitbucket.org/">BitBucket</a></li>
+</ul>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

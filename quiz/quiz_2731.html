@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">リテラル</span></strong>は、<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>の<a href="./programming.md#%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89">ソースコード</a>中で使用される、数値や文字列などの直接示された値やデータ。一般的な<a href="./programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%A8%80%E8%AA%9E">プログラミング言語</a>の多くでサポートされている<span class="mask">リテラル</span>は以下の通り。</p>
+<table><thead><tr><th><span class="mask">リテラル</span></th><th>データ型</th><th>例</th></tr></thead><tbody>
+<tr><td>Null<span class="mask">リテラル</span></td><td>Null</td><td><code>null</code></td></tr>
+<tr><td>真偽値<span class="mask">リテラル</span></td><td>ブーリアン型</td><td><code>true</code> 、 <code>false</code></td></tr>
+<tr><td>数値<span class="mask">リテラル</span></td><td>整数型</td><td><code>10</code> 、 <code>100</code></td></tr>
+<tr><td>文字<span class="mask">リテラル</span></td><td>文字型</td><td><code>'a'</code> 、 <code>'1'</code></td></tr>
+<tr><td>文字列<span class="mask">リテラル</span></td><td>文字列型</td><td><code>&quot;a&quot;</code> 、 <code>&quot;こんにちは&quot;</code></td></tr>
+</tbody></table>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

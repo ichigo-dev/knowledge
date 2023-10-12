@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ウォーターフォールモデル</span></strong>は、伝統的な<a href="../../../../computer/software/_/chapters/software.md#%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2">ソフトウェア</a>開発手法で、開発プロジェクトを時系列にいくつかの作業工程に分割し、それを順番に進めていく。<a href="./development_process.md#%E8%A6%81%E4%BB%B6%E5%AE%9A%E7%BE%A9">要件定義</a>、設計、開発、テストという具合に階層的に工程が分けられ、1つの工程が完了すると次の工程に進む。一度進んだ工程は基本的に戻ることはないため、各工程の最後に<a href="./development_process.md#%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC">レビュー</a>を行うなどして信頼性を上げる。この開発手法は、事前に要件が明確に定義されていることを前提として行われ、計画の正確さとスケジュールの厳守が鍵となる。そのため、要件の変更や修正が頻繁に起きるプロジェクトには向いていない。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

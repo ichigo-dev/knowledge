@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">実体参照</span></strong>は、<a href="#html">HTML</a>文書内で、特別な意味として扱われる文字や特定の記号を表示するための記法。 <code>&lt;</code> 、 <code>&gt;</code> 、 <code>&quot;</code> 、 <code>'</code> 、 <code>&amp;</code> といった文字はHTMLの構文の一部であり、テキストにこれらの文字を含めようとしても<a href="#html">HTML</a>のコードとして解釈されてしまう。</p>
+<table><thead><tr><th>実際の文字</th><th>等価な文字参照</th></tr></thead><tbody>
+<tr><td>&lt;</td><td><code>&amp;lt;</code></td></tr>
+<tr><td>&gt;</td><td><code>&amp;gt;</code></td></tr>
+<tr><td>“</td><td><code>&amp;quot;</code></td></tr>
+<tr><td>’</td><td><code>&amp;apos;</code></td></tr>
+<tr><td>&amp;</td><td><code>&amp;amp;</code></td></tr>
+</tbody></table>
+<p>これらの記号以外に対して<span class="mask">実体参照</span>を使用する必要はない（現代の<a href="../../../../network/_/chapters/web.md#web%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6">ブラウザ</a>は、文字エンコーディングが<a href="../../../../basics/information_theory/_/chapters/character_representation.md#unicode">UTF-8</a>であれば、実際の記号を正しく扱うことができるため）。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

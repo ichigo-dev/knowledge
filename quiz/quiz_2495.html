@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">フォーム</span></strong>は、<a href="./application_layer.md#http">HTTP</a>において、<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">クライアント</a>から<a href="../../../system/_/chapters/system_processing_model.md#%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%88%E3%82%B5%E3%83%BC%E3%83%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0">サーバ</a>に対してデータを送信するための技術。</p>
+<p><a href="#html">HTML</a>では <code>form</code> <a href="../../../web_development/html/_/chapters/html.md#%E3%82%BF%E3%82%B0">タグ</a>を用いることで<span class="mask">フォーム</span>を作成でき、 <code>action</code> <a href="../../../web_development/html/_/chapters/html.md#%E5%B1%9E%E6%80%A7">属性</a>に指定された<a href="#url">URL</a>にデータが送信される。また、使用する<a href="#http%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">HTTPメソッド</a>を <code>method</code> <a href="../../../web_development/html/_/chapters/html.md#%E5%B1%9E%E6%80%A7">属性</a>で指定することもできる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

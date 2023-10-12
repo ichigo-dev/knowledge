@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><code>for</code> 文は、<a href="#%E5%8F%8D%E5%BE%A9">ループ</a>の回数を数える<strong>カウンタ変数</strong>を用いて、カウンタ変数に関する条件式を評価しながら<a href="#%E5%8F%8D%E5%BE%A9">反復</a>処理を行う。<a href="#%E5%8F%8D%E5%BE%A9">ループ</a>開始前のカウンタ変数の初期化式、カウンタ変数に関する条件式、1回のループ終了時のカウンタ変数の<span class="mask">更新式</span>を与えることで、ループの回数が決定される。 <code>while</code> 文を用いても同様の処理は実現できるが、 <code>for</code> 文を用いるとより簡潔に記述することができる。一般的な <code>for</code> 文の書式は以下の通り。</p>
+<pre><code>for( 初期化式; 条件式; <span class="mask">更新式</span> )
+{
+    // 実行する処理ブロック
+}
+</code></pre>
+<p><strong>初期化式</strong>には、カウンタ変数の初期化を行う処理を記述する。<strong>条件式</strong>には、 <a href="#%E5%8F%8D%E5%BE%A9">ループ</a>を<a href="#%E5%8F%8D%E5%BE%A9">反復</a>する条件を記述し、結果が <code>true</code> となる間処理を繰り返す。<strong><span class="mask">更新式</span></strong>には、<a href="#%E5%8F%8D%E5%BE%A9">ループ</a>が1回終わったときの更新処理を記述する。</p>
+<pre><code class="language-c">// C言語
+
+int main()
+{
+    for( int i=0; i&lt;20; i++ )
+    {
+        printf(&quot;%d\n&quot;, i);
+    }
+
+    return 0;
+}
+</code></pre>
+<pre><code class="language-php">&lt;?php
+
+// PHP
+
+for( $i=0; $i&lt;20; $i++ )
+{
+    echo($i);
+}
+
+?&gt;
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

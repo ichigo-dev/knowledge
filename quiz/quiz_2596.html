@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">データイベント</span></strong>は、<a href="./storage.md#s3">S3</a><a href="./storage.md#%E3%83%90%E3%82%B1%E3%83%83%E3%83%88">バケット</a>上のデータの操作、<a href="./computing.md#lambda">Lambda関数</a>の実行などといったイベント。<a href="#cloudtrail">CloudTrail</a>において、<a href="#%E7%AE%A1%E7%90%86%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88">管理イベント</a>の取得はデフォルトで有効であるが、<span class="mask">データイベント</span>の取得はデフォルトで無効となっているので注意。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

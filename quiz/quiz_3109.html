@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>’staticライフタイム</strong>は、<a href="../../../_/chapters/programming.md#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0">プログラム</a>の開始から終了まで存在する<a href="../../../../computer/hardware/_/chapters/memory.md#%E3%83%A1%E3%83%A2%E3%83%AA">メモリ</a>リソースに割り当てられる<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>。</p>
+<p>ある <code>static</code> な<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a>を更新する以下のような<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>を考える。</p>
+<pre><code class="language-rust">static mut STASH: &amp;i32 = &amp;128;
+
+fn update( p: &amp;i32 )
+{
+    unsafe
+    {
+        STASH = p;
+    }
+}
+</code></pre>
+<p>このとき、<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>の<a href="../../../_/chapters/function.md#%E3%82%B7%E3%82%B0%E3%83%8D%E3%83%81%E3%83%A3">シグネチャ</a>は<strong><span class="mask">ライフタイムパラメータ</span></strong>を省略している（実際は<a href="./rust.md#rust">Rust</a>の<a href="../../../../basics/information_theory/_/chapters/compiler_theory.md#%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9">コンパイラ</a>が自動的に補完してくれるので省略可能）。これを明示的に記述すると以下のようになる。</p>
+<pre><code class="language-rust">fn update&lt;'a&gt;( p: &amp;'a i32 ) { /* ... */ }
+</code></pre>
+<p><code>'a</code> は任意の<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>であり、<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a> <code>p</code> が任意の<span class="mask">ライフタイムパラメータ</span>を持っていることを示す。しかし、static変数である <code>STASH</code> に対して任意の<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>を持つ<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a> <code>p</code> を<a href="../../../_/chapters/variable.md#%E4%BB%A3%E5%85%A5">代入</a>するのは、<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>のルールに反している（<a href="../../../_/chapters/variable.md#%E5%A4%89%E6%95%B0">変数</a> <code>p</code> は少なくとも <code>STASH</code> と同じだけの<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>を持たなければならない）。そこで、<a href="../../../_/chapters/function.md#%E9%96%A2%E6%95%B0">関数</a>の<a href="../../../_/chapters/function.md#%E5%BC%95%E6%95%B0">引数</a>として取りうる値の<a href="#%E3%83%A9%E3%82%A4%E3%83%95%E3%82%BF%E3%82%A4%E3%83%A0">ライフタイム</a>を’staticライフタイムにすることでこの問題を解決できる。</p>
+<pre><code class="language-rust">fn update( p: &amp;'static i32 ) { /* ... */ }
+</code></pre>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

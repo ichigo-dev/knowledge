@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">margin</span></strong>は、<a href="./css.md#css">CSS</a>において、<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>の外側余白（<a href="./css.md#%E3%83%9E%E3%83%BC%E3%82%B8%E3%83%B3%E9%A0%98%E5%9F%9F">マージン領域</a>）の大きさを指定するための<a href="./css.md#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>。上・右・下・左の順番の4つの値、上下・左右の順番の2つの値、全方向に共通の1つの値、といった様々な値の指定方法がある。 <code><span class="mask">margin</span></code> は上下の<a href="../../../html/_/chapters/html.md#%E8%A6%81%E7%B4%A0">要素</a>で<strong>畳み込み</strong>（両方の<a href="./css.md#%E3%83%9E%E3%83%BC%E3%82%B8%E3%83%B3%E9%A0%98%E5%9F%9F">マージン領域</a>が重なり、大きほうが採用されたように見える）が発生するので注意が必要。</p>
+<p>各方向の余白を設定する<strong><span class="mask">margin</span>-top</strong>、<strong><span class="mask">margin</span>-right</strong>、<strong><span class="mask">margin</span>-botom</strong>、<strong><span class="mask">margin</span>-left</strong>といった<a href="./css.md#%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3">プロパティ</a>も存在する。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

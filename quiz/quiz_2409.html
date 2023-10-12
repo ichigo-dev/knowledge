@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong><span class="mask">ウィンドウ制御</span></strong>は、<a href="#tcp">TCP</a>において効率よく<a href="./network.md#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を伝送するための仕組み。複数の<a href="./datalink_layer.md#%E3%82%BB%E3%82%B0%E3%83%A1%E3%83%B3%E3%83%88">セグメント</a>をまとめた<a href="#%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6">ウィンドウ</a>を送信することで、毎回<a href="#%E7%A2%BA%E8%AA%8D%E5%BF%9C%E7%AD%94">確認応答</a>を待たずに連続したデータを送信できる。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            

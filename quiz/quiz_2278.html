@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+   body
+   {
+       display: flex;
+       justify-content: center;
+       min-height: 100vh;
+       background-color: #444;
+       color: #fff;
+   }
+
+   .quiz_container
+   {
+       line-height: 2;
+   }
+
+   .mask
+   {
+       background-color: #fff;
+       color: #fff;
+       padding: 2px 8px;
+       margin: 0 4px;
+   }
+
+   .mask.active
+   {
+       color: #000;
+   }
+
+   .btn_answer_container
+   {
+       text-align: center;
+   }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/dark.min.css">
+ </head>
+ <body>
+  <div class="quiz_container">
+   <p><p><strong>スパニングツリー方式</strong>は、各<a href="./network_architecture.md#%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8">ブリッジ</a>が定期的に<strong><span class="mask">BPDU</span></strong>(Bridge Protocol Data Unit)と呼ばれる<a href="#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>を交換し、使用する<a href="./address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート</a>と使用しない<a href="./address_on_network.md#%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7">ポート</a>を切り替える方式。これにより、通信路が自動的に切り替わり、ループの発生を防ぐことができる。また、<span class="mask">BPDU</span><a href="#%E3%83%91%E3%82%B1%E3%83%83%E3%83%88">パケット</a>が途切れたことを検知した場合、<a href="./network_architecture.md#%E3%83%96%E3%83%AA%E3%83%83%E3%82%B8">ブリッジ</a>は故障が発生したと判断して、代替経路に切り替える。</p>
+<p>スパニングツリー方式を改良したものとして、<strong>RSTP</strong>(Rapid Spanning Tree Protocol)や、<strong>リンクアグリゲーション</strong>、<strong>LLDP</strong>(Link Layer Discovery Protocol)といった方式がある。</p>
+</p>
+   <div class="btn_answer_container">
+    <button id="btn_answer" class="btn_answer">Show answer</button>
+   </div>
+  </div>
+
+  <script>
+   const btn_answer = document.getElementById("btn_answer");
+   btn_answer.addEventListener("click", function()
+   {
+       const mask = document.querySelectorAll(".mask");
+       mask.forEach(function(item)
+       {
+           item.classList.toggle("active");
+       });
+   });
+  </script>
+ </body>
+</html>
+            
