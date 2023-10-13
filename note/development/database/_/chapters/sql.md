@@ -1,6 +1,6 @@
 # 『SQL』ノート
 
-（最終更新： 2023-08-20）
+（最終更新： 2023-10-13）
 
 
 ## 目次
@@ -472,7 +472,7 @@ GROUP BY
 
 ### 内部結合
 
-**内部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータのみを結合する。内部結合を行うには、**INNER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
+[テーブル](./rdb.md#テーブル)同士の[内部結合](./join.md#内部結合)を行うには、**INNER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT
@@ -500,7 +500,7 @@ WHERE
 
 ### 外部結合
 
-**外部結合**は、結合する[テーブル](./rdb.md#テーブル)のデータのうち、片方の[テーブル](./rdb.md#テーブル)のデータをすべて取り出し、条件に指定した[カラム](./rdb.md#カラム)の値が一致するデータに関してのみ結合される。外部結合を行うには、**OUTER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
+[外部結合](./join.md#外部結合)を行うには、**OUTER JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 -- 左外部結合
@@ -542,7 +542,7 @@ ON
 
 ### 交差結合
 
-**交差結合**（**直積結合**）は、結合する[テーブル](./rdb.md#テーブル)のデータのすべての組み合わせを取り出す。交差結合を行うには、**CROSS JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
+[交差結合](./join.md#交差結合)を行うには、**CROSS JOIN**[コマンド](../../../../computer/linux/_/chapters/basic_command.md#コマンド)を使用する。
 
 ```sql
 SELECT

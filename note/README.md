@@ -38,15 +38,14 @@
 		1. [マルチスレッドデザインパターン](./development/design_pattern/multi_thread/README.md)
 	1. [ソフトウェアアーキテクチャ](./development/software_architecture/README.md)
 	1. [マネジメント](./development/management/README.md)
-1. [チェックシート](./checksheet.md)
 
 
 ## メモ
 
 - 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
 - 「失敗から学ぶRDBの正しい歩き方」 → ./development/database にまとめ中
-- 全体見直し -> 「応用数学」の「数式処理」まで見直し完了
-- 本の概要を書く場所をつくる
+- Obsidianのランダムノート機能を使って復習＆見直し
+- チェックシートは廃止
 
 
 ## タスク
@@ -58,3 +57,4 @@
 - SOLID
 - 依存関係逆転の原則
 - バリデーション
+- 本の概要を書く場所をつくる
