@@ -1,14 +1,21 @@
 # 『JOIN』ノート
 
-（最終更新： 2023-10-13）
+（最終更新： 2023-10-15）
 
 
 ## 目次
 
 1. [結合](#結合)
-	1. [内部結合](#内部結合)
+	1. [外部表](#外部表)
+	1. [内部表](#内部表)
+	1. [結合キー](#結合キー)
 	1. [外部結合](#外部結合)
+	1. [内部結合](#内部結合)
 	1. [交差結合](#交差結合)
+1. [結合アルゴリズム](#結合アルゴリズム)
+	1. [NLJ](#nlj)
+	1. [Hash Join](#hash-join)
+	1. [Sort Merge Join](#sort-merge-join)
 
 
 ## 結合
@@ -17,16 +24,45 @@
 
 結合は[RDB](./rdb.md#rdb)の中でも最も遅い操作のひとつで、[テーブルスキャン](./index.md#テーブルスキャン)の場合、1,000[レコード](./rdb.md#レコード)のある[テーブル](./rdb.md#テーブル)と1,000[レコード](./rdb.md#レコード)のある[テーブル](./rdb.md#テーブル)の結合では、1,000,000行をスキャンする必要がある。複数の[テーブル](./rdb.md#テーブル)を結合するとスキャンの回数がさらに増え、指数関数的に処理時間が大きくなる。
 
+結合の基準および対象となる[テーブル](./rdb.md#テーブル)を指す[外部表](#外部表)・[内部表](#内部表)という用語と、結合の種類を表す[内部結合](#内部結合)・[外部結合](#外部結合)という用語について、「内部」や「外部」は異なる意味を持つので注意。
+
+### 外部表
+
+**外部表**（**駆動表**）は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)において、結合の基準となる（[FROM](./sql.md#データの取得)句に指定された）[テーブル](./rdb.md#テーブル)。
+
+### 内部表
+
+**内部表**は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)において、結合対象となる（[JOIN](./sql.md#テーブルの結合)句に指定された）[テーブル](./rdb.md#テーブル)。
+
 ### 内部結合
 
-**内部結合**(**INNER JOIN**)は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)のひとつで、指定した結合条件が両方の[テーブル](./rdb.md#テーブル)でマッチする[レコード](./rdb.md#レコード)のみを取得する。これは、[集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#集合)で表すと[積集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#積集合)を意味する。
+**内部結合**(**INNER JOIN**)は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)のひとつで、指定した結合条件が[内部表](#内部表)と[外部表](#外部表)の両方でマッチする[レコード](./rdb.md#レコード)のみを取得する。これは、[集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#集合)で表すと[積集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#積集合)を意味する。
 
 ### 外部結合
 
 **外部結合**(**OUTER JOIN**)は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)のひとつで、基準となる方の[テーブル](./rdb.md#テーブル)の[レコード](./rdb.md#レコード)全てと、結合条件にマッチするもう一方の[テーブル](./rdb.md#テーブル)の[レコード](./rdb.md#レコード)を取得する。マッチする[レコード](./rdb.md#レコード)がない場合は、[null](./rdb.md#null)が[結合](#結合)される。
 
-外部結合には、**左外部結合**(**LEFT OUTER JOIN**)、**右外部結合**(**RIGHT OUTER JOIN**)、**完全外部結合**(**FULL OUTER JOIN**)の3種類がある。左外部結合では、[結合](#結合)元となる方の（[FROM](./sql.md#データの取得)句に指定された）[テーブル](./rdb.md#テーブル)を基準とする。右外部結合では、[結合](#結合)先となる方の（[JOIN](./sql.md#外部結合)句に指定された）[テーブル](./rdb.md#テーブル)を基準とする。完全外部結合では、両方の[テーブル](./rdb.md#テーブル)の[レコード](./rdb.md#レコード)を全て取得するように[結合](#結合)される。これは、[集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#集合)で表すと[和集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#和集合)を意味する。
+外部結合には、**左外部結合**(**LEFT OUTER JOIN**)、**右外部結合**(**RIGHT OUTER JOIN**)、**完全外部結合**(**FULL OUTER JOIN**)の3種類がある。左外部結合では[外部表](#外部表)を、右外部結合では[内部表](#内部表)を基準とする。完全外部結合では、両方の[テーブル](./rdb.md#テーブル)の[レコード](./rdb.md#レコード)を全て取得するように[結合](#結合)される。これは、[集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#集合)で表すと[和集合](../../../../basics/discrete_mathematics/_/chapters/set_and_proposition.md#和集合)を意味する。
 
 ### 交差結合
 
 **交差結合**（**直積結合**、**CROSS JOIN**）は、[RDB](./rdb.md#rdb)の[テーブル](./rdb.md#テーブル)の[結合](#結合)のひとつで、2つの[テーブル](./rdb.md#テーブル)の[組合せ](../../../../basics/applied_mathematics/_/chapters/probability_and_statistics.md#組合せ)全てを取得する。[内部結合](#内部結合)や[外部結合](#外部結合)は、交差結合の結果から必要なものを抜き出した結果と言える。
+
+
+## 結合アルゴリズム
+
+[テーブル](./rdb.md#テーブル)を[結合](#結合)する[アルゴリズム](../../../../programming/_/chapters/algorithm.md#アルゴリズム)にはいくつかの種類があり、[DBMS](./database.md#dbms)によってもそのサポート状況は異なる。例えば、[PostgreSQL](./database.md#dbms)は[NLJ](#nlj)と[Hash Join](#hash-join)、[Sort Merge Join](#sort-merge-join)をサポートしているが、[MySQL](./database.md#dbms)は[NLJ](#nlj)のみをサポートしている。
+
+### NLJ
+
+**NLJ**(Nested Loop Join)は、[RDB](./rdb.md#rdb)の[結合アルゴリズム](#結合アルゴリズム)のひとつで、[外部表](#外部表)にある全[レコード](./rdb.md#レコード)に対して、[内部表](#内部表)から結合条件にマッチするものを探して[結合](#結合)する方法。[外部表](#外部表)にある[レコード](./rdb.md#レコード)が少ない場合や、[内部表](#内部表)の結合条件に[インデックス](./index.md#インデックス)が利用できる場合に、処理が高速になる。条件によっては[Hash Join](#hash-join)や[Sort Merge Join](#sort-merge-join)の方が全体の[結合](#結合)は高速な場合があるが、最初の[フェッチ](./rdb.md#フェッチ)が可能になるまでの時間はNLJが一番短い。
+
+### Hash Join
+
+**Hash Join**は、[RDB](./rdb.md#rdb)の[結合アルゴリズム](#結合アルゴリズム)のひとつで、[内部表](#内部表)の結合キーで[ハッシュ](../../../../system/security/_/chapters/encryption_technology.md#ハッシュ)を作成し、その[ハッシュ](../../../../system/security/_/chapters/encryption_technology.md#ハッシュ)と[外部表](#外部表)の[レコード](./rdb.md#レコード)を突き合わせて[結合](#結合)する方法。比較的小さい[テーブル](./rdb.md#テーブル)と大きい[テーブル](./rdb.md#テーブル)の[結合](#結合)に有利。
+
+[ハッシュ](../../../../system/security/_/chapters/encryption_technology.md#ハッシュ)を[メモリ](../../../../computer/hardware/_/chapters/memory.md#メモリ)上に作成するため、その分の容量が必要となる。また、[ハッシュ](../../../../system/security/_/chapters/encryption_technology.md#ハッシュ)を利用するため、[インデックス](./index.md#インデックス)がなくても高速に動作するが、等号の場合にのみ使用できる。
+
+### Sort Merge Join
+
+**Sort Merge Join**は、[RDB](./rdb.md#rdb)の[結合アルゴリズム](#結合アルゴリズム)のひとつで、[外部表](#外部表)と[内部表](#内部表)を結合キーでソートした後、順番に突き合わせて[結合](#結合)する方。大きな[テーブル](#テーブル)同士の[結合](#結合)に有利。結合キーが[プライマリキー](./rdb.md#プライマリキー)であったり[インデックス](./index.md#インデックス)がはられている場合、はじめからソート済みの状態を参照できるため、高速に[結合](#結合)できる。
