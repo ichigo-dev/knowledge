@@ -7,6 +7,12 @@
 
 1. [リファクタリング](#リファクタリング)
 1. [ガード節](#ガード節)
+1. [SOLID](#solid)
+	1. [単一責任の原則](#単一責任の原則)
+	1. [開放閉鎖の原則](#開放閉鎖の原則)
+	1. [リスコフの置換原則](#リスコフの置換原則)
+	1. [インタフェース分離の原則](#インタフェース分離の原則)
+	1. [依存性逆転の原則](#依存性逆転の原則)
 1. [DRY原則](#dry原則)
 1. [YAGNI原則](#yagni原則)
 1. [驚き最小の原則](#驚き最小の原則)
@@ -57,6 +63,31 @@ function give_family_point( member_, point_ = 100 )
 ```
 
 ガード節を用いると、可読性が向上する他に、条件ブロックと処理ブロックを分離できるというメリットがある。また、 `return` だけではなく、 `break` や `continue` を用いても同様の[リファクタリング](#リファクタリング)が可能。
+
+
+## SOLID
+
+**SOLID**(Single Responsibility Principle, Open-Closed Principle, Liskov Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle)は、[オブジェクト指向](./object_oriented.md#オブジェクト指向)を用いた開発において、[ソフトウェア](../../../computer/software/_/chapters/software.md#ソフトウェア)をより柔軟にして保守をしやすくするための原則5つ（[単一責任の原則](#単一責任の原則)、[開放閉鎖の原則](#開放閉鎖の原則)、[リスコフの置換原則](#リスコフの置換原則)、[インタフェース分離の原則](#インタフェース分離の原則)、[依存性逆転の原則](#依存性逆転の原則)）をまとめた用語。
+
+### 単一責任の原則
+
+**単一責任の原則**(**SRP**: Single Responsibility Principle)は、1つの[クラス](./object_oriented.md#クラス)や[モジュール](../../../computer/software/_/chapters/package.md#モジュール)、[関数](./function.md#関数)などは単一の機能についての責任を持つべきである、という[SOLID](#solid)の原則のひとつ。複数の責務を持つ[クラス](./object_oriented.md#クラス)が存在すると、それらの責務が密接に関連してしまい、1つの責務を変更した際に他の責務にも影響を及ぼす可能性がある。
+
+### 開放閉鎖の原則
+
+**開放閉鎖の原則**(**OCP**: Open-Closed Principle)は、[クラス](./object_oriented.md#クラス)や[モジュール](../../../computer/software/_/chapters/package.md#モジュール)、[関数](./function.md#関数)などは、拡張のために開いていて、修正のために閉じているべきである、という[SOLID](#solid)の原則のひとつ。機能の追加が発生した場合に、既存の[コード](./programming.md#ソースコード)や[クラス](./object_oriented.md#クラス)には手を加える必要がなく（修正のために閉じており）、新しい[コード](./programming.md#ソースコード)の追加によって対応できる（拡張のために開いている）ことが望ましい。
+
+### リスコフの置換原則
+
+**リスコフの置換原則**(**LSP**: Liskov Substitution Principle)は、[親クラス](./object_oriented.md#親クラス)の[インスタンス](./object_oriented.md#インスタンス)が適用される[コード](./programming.md#ソースコード)に対して、[子クラス](./object_oriented.md#子クラス)の[インスタンス](./object_oriented.md#インスタンス)で置き換えても、問題なく動作するべきである、という[SOLID](#solid)の原則のひとつ。これは、[親クラス](./object_oriented.md#親クラス)の振る舞いを[子クラス](./object_oriented.md#子クラス)が壊してはいけない、ということと同義。
+
+### インタフェース分離の原則
+
+**インタフェース分離の原則**(**ISP**: Interface Segregation Principle)は、[インタフェース](./object_oriented.md#インタフェース)の利用者にとって不要な[メソッド](./object_oriented.md#メソッド)への依存を強制してはいけない、という[SOLID](#solid)の原則のひとつ。[インタフェース](./object_oriented.md#インタフェース)の実装先の[クラス](./object_oriented.md#クラス)が不要な[メソッド](./object_oriented.md#メソッド)を持たなければいけないような場合は、さらに[インタフェース](./object_oriented.md#インタフェース)を分割することを検討するのが望ましい。
+
+### 依存性逆転の原則
+
+**依存性逆転の原則**(**DIP**: Dependency Inversion Principle)は、[プログラム](./programming.md#プログラム)の重要な部分が、重要ではない部分に依存しないように設計するべきである、とする[SOLID](#solid)の原則のひとつ。上位の[モジュール](../../../computer/software/_/chapters/package.md#モジュール)はいかなるものも下位の[モジュール](../../../computer/software/_/chapters/package.md#モジュール)から持ち込まず、常に具象が抽象に依存するという関係性を保つことが望ましい。
 
 
 ## DRY原則
