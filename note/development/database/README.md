@@ -9,3 +9,4 @@
 1. [JOIN](./_/chapters/join.md)
 1. [インデックス](./_/chapters/index.md)
 1. [トランザクション](./_/chapters/transaction.md)
+1. [アンチパターン](./_/chapters/anti_pattern.md)
