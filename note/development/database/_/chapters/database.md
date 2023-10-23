@@ -1,12 +1,15 @@
 # 『データベース』ノート
 
-（最終更新： 2023-09-24）
+（最終更新： 2023-10-23）
 
 
 ## 目次
 
 1. [データベース](#データベース)
 	1. [リレーショナルデータベース](#リレーショナルデータベース)
+	1. [OLTP](#oltp)
+	1. [DWH](#dwh)
+	1. [Hadoop](#hadoop)
 	1. [階層型データベース](#階層型データベース)
 	1. [ネットワーク型データベース](#ネットワーク型データベース)
 	1. [オブジェクト指向データベース](#オブジェクト指向データベース)
@@ -34,6 +37,20 @@
 ### リレーショナルデータベース
 
 **リレーショナルデータベース**（関係データベース）は、2次元の表形式でデータを管理する[データベース](#データベース)で、データを扱う[アプリケーション](../../../../computer/software/_/chapters/software.md#応用ソフトウェア)では最も一般的に用いられている。リレーショナルデータベースのことを単に[データベース](#データベース)と言う場合も多い。
+
+### OLTP
+
+**OLTP**(Online Transaction Processing)は、[リレーショナルデータベース](#リレーショナルデータベース)において、[オンライントランザクション](../../../../system/_/chapters/system_processing_model.md#トランザクション処理)としてCRUD処理を行うことを想定して作られた製品。最も一般的な[リレーショナルデータベース](#リレーショナルデータベース)の利用方法であり、MySQLやPostgreSQL、SQL Serverなどの[DBMS](#dbms)はOLTPに分類される。OLTPはデータの一部を高速に処理できる一方で、データ全体の集計には時間がかかる。
+
+### DWH
+
+**DWH**(Data Ware House)は、[リレーショナルデータベース](#リレーショナルデータベース)において、[バッチ処理](../../../../system/_/chapters/system_processing_model.md#バッチ処理)のような、一括でロードされたデータに対する集計・抽出に特化した製品。この種類の[DBMS](#dbms)には、TeradataやSAP HANA、IBM Netezza、HP Verticaといったものがある。DWHは列指向の性質を持っているものが多く、[レコード](./rdb.md#レコード)全体の取得は低速であるものの、[カラム](./rdb.md#カラム)の集計は高速に行えるといった特徴がある。
+
+### Hadoop
+
+**Hadoop**は、[DWH](#dwh)のような集計向けの[リレーショナルデータベース](#リレーショナルデータベース)でも処理しきれないような[ビッグデータ](../../../../artificial_intelligence/_/chapters/artificial_intelligence.md#ビッグデータ)を扱うために、[スケールアウト](../../../../system/_/chapters/system_performance_evaluation.md#スケールアウト)による[分散](../../../../system/_/chapters/system_processing_model.md#分散処理)集計を可能にした、[分散処理](../../../../system/_/chapters/system_processing_model.md#分散処理)基盤[フレームワーク](../../../../computer/software/_/chapters/package.md#フレームワーク)。扱うデータは[リレーショナルモデル](./rdb.md#リレーショナルモデル)ではなく、[ファイル](../../../../computer/software/_/chapters/file_system.md#ファイル)である。
+
+[分散](../../../../system/_/chapters/system_processing_model.md#分散処理)[ファイルシステム](../../../../computer/software/_/chapters/file_system.md#ファイルシステム)である**HDFS**と、その上で動作する**MapReduce**や**Spark**をといった[ソフトウェア](../../../../computer/software/_/chapters/software.md#ソフトウェア)を使用して集計を行う。
 
 ### 階層型データベース
 
