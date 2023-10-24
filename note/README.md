@@ -43,7 +43,6 @@
 ## メモ
 
 - 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
-- 「失敗から学ぶRDBの正しい歩き方」 → ./development/database にまとめ中
 - Obsidianのランダムノート機能を使って復習＆見直し
 
 
