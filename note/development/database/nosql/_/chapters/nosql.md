@@ -1,6 +1,6 @@
 # 『NoSQL』ノート
 
-（最終更新： 2023-10-24）
+（最終更新： 2023-10-25）
 
 
 ## 目次
@@ -10,8 +10,12 @@
 	1. [スキーマレス](#スキーマレス)
 1. [CAP定理](#capの定理)
 1. [KVS](#kvs)
+	1. [キーバリューモデル](#キーバリューモデル)
+	1. [ワイドカラムモデル](#ワイドカラムモデル)
 1. [ドキュメントDB](#ドキュメントdb)
+	1. [ドキュメントモデル](#ドキュメントモデル)
 1. [グラフDB](#グラフdb)
+	1. [グラフモデル](#グラフモデル)
 
 
 ## NoSQL
@@ -52,14 +56,38 @@ APを満たす[データベース](../../../_/chapters/database.md#データベ�
 
 ## KVS
 
-**KVS**(Key-Value Store)は、[NoSQL](#nosql)のひとつで、キーに対して何かしらの値が保存されており、それぞれのデータが疎結合で[分散](../../../../../system/_/chapters/system_processing_model.md#分散処理)して格納することができるという特徴をもった[データベース](../../../_/chapters/database.md#データベース)。キーに対してひとつの値を格納するキーバリューモデルと、キーに対して複数の[カラム](../../../_/chapters/rdb.md#カラム)を格納するワイドカラムモデルがある。[スケールアウト](../../../../../system/_/chapters/system_performance_evaluation.md#スケールアウト)が容易なため、大量データに対する[クエリ](../../../_/chapters/sql.md#クエリ)に高速に応答することができる。KVSの製品としては、CassandraやRedis、HBaseなどがある。
+**KVS**(Key-Value Store)は、[NoSQL](#nosql)のひとつで、キーに対して何かしらの値が保存されており、それぞれのデータが疎結合で[分散](../../../../../system/_/chapters/system_processing_model.md#分散処理)して格納することができるという特徴をもった[データベース](../../../_/chapters/database.md#データベース)。キーに対してひとつの値を格納する[キーバリューモデル](#キーバリューモデル)と、キーに対して複数の[カラム](../../../_/chapters/rdb.md#カラム)を格納する[ワイドカラムモデル](#ワイドカラムモデル)がある。[スケールアウト](../../../../../system/_/chapters/system_performance_evaluation.md#スケールアウト)が容易なため、大量データに対する[クエリ](../../../_/chapters/sql.md#クエリ)に高速に応答することができる。KVSの製品としては、CassandraやRedis、HBaseなどがある。
+
+### キーバリューモデル
+
+**キーバリューモデル**は、[NoSQL](#nosql)の[KVS](#kvs)におけるデータモデルのひとつで、ひとつのキーに対してひとつの値を取る。値の方は定義されていないため、値としては様々な[型](../../../../../programming/_/chapters/data_type.md#データ型)を取ることができる。プロダクトによっては、値として[バイナリ](../../../../../basics/_/chapters/computer_and_number.md#バイナリ)しか格納できないものや、[配列](../../../../../programming/_/chapters/data_type.md#配列)のような複雑なデータ構造を格納することができるものがある。値に[バイナリ](../../../../../basics/_/chapters/computer_and_number.md#バイナリ)しか取ることができないプロダクトは、見方によってはどんなデータでも格納できる。
+
+このモデルを採用するプロダクトとして、RedisやMemcached、Riakなどがある。
+
+### ワイドカラムモデル
+
+**ワイドカラムモデル**は、[NoSQL](#nosql)の[KVS](#kvs)におけるデータモデルのひとつで、ひとつのキーに対して複数のカラムを取る。カラムは[型](../../../../../programming/_/chapters/data_type.md#データ型)が固定されておらず、数も自由。
+
+このモデルを採用するプロダクトとして、CassandraやHBase、[Amazon DynamoDB](../../../../../network/aws/_/chapters/database.md#dynamodb)などがある。
 
 
 ## ドキュメントDB
 
 **ドキュメントDB**は、[NoSQL](#nosql)のひとつで、[KVS](#kvs)において格納する値をJSONとして、そのJSONを操作するのに特化した機能を持った[データベース](../../../_/chapters/database.md#データベース)。JSONの中身に対して検索を書けたり、検索を高速化するための[インデックス](../../../_/chapters/index.md#インデックス)を貼ったりといったことが可能となる。JSONは様々な[プログラミング言語](../../../../../programming/_/chapters/programming.md#プログラミング言語)で扱いやすい他、[Web API](../../../../../network/_/chapters/web.md#web-api)のデータ形式として標準的であるなど、開発生産性を高めるのに役立つ。ドキュメントDBの製品としては、MongoDBやCouchbase、CouchDBなどがある。
 
+### ドキュメントモデル
+
+**ドキュメントモデル**は、[NoSQL](#nosql)の[ドキュメントDB](#ドキュメントdb)におけるデータモデルで、JSONなどの階層構造を持ったデータフォーマット。
+
+このモデルを採用するプロダクトとして、MongoDBやCouchbase、CouchDBなどがある。
+
 
 ## グラフDB
 
 **グラフDB**は、[NoSQL](#nosql)のひとつで、[RDB](../../../_/chapters/database.md#リレーショナルデータベース)では表現が困難なデータ同士のつながりを表現し、複雑な[結合](../../../_/chapters/join.md#結合)が必要となるような[クエリ](../../../_/chapters/sql.md#クエリ)を高速に実行できる[データベース](../../../_/chapters/database.md#データベース)。[RDB](../../../_/chapters/database.md#リレーショナルデータベース)よりもデータ間の関連性が強いため、[分散処理](../../../../../system/_/chapters/system_processing_model.md#分散処理)には不向き。グラフDBの製品としては、Neo4jやOrientDBなどがある。
+
+### グラフモデル
+
+**グラフモデル**は、[NoSQL](#nosql)の[グラフDB](#グラフdb)におけるデータモデルで、ノード間がエッジで結ばれた構造。
+
+このモデルを採用するプロダクトとして、Neo4jやOrientDBなどがある。
