@@ -12,6 +12,11 @@
 	1. [Append Only File](#append-only-file)
 1. [クエリ](#クエリ)
 	1. [SET](#set)
+	1. [GET](#get)
+	1. [DEL](#del)
+	1. [INCR](#incr)
+	1. [MSET](#mset)
+	1. [MGET](#mget)
 1. [トランザクション](#トランザクション)
 
 
