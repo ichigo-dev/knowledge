@@ -1,6 +1,6 @@
 # 『Redis』ノート
 
-（最終更新： 2023-10-28）
+（最終更新： 2023-10-30）
 
 
 ## 目次
@@ -17,6 +17,14 @@
 	1. [INCR](#incr)
 	1. [MSET](#mset)
 	1. [MGET](#mget)
+	1. [LPUSH](#lpush)
+	1. [RPUSH](#rpush)
+	1. [LLEN](#llen)
+	1. [LRANGE](#lrange)
+	1. [LPOP](#lpop)
+	1. [RPOP](#rpop)
+	1. [SADD](#sadd)
+	1. [SREM](#srem)
 1. [トランザクション](#トランザクション)
 
 
@@ -69,6 +77,8 @@ AOFは、[RDB](#redis-database)と比べて柔軟な変更が可能な一方で�
 
 ## クエリ
 
+ここで紹介するサンプルは各章ごとに独立しており、データは共有されていないものとする。
+
 ### SET
 
 **SET**は、キーとそれに対するバリューを指定して、それを新規に格納もしくは更新する[Redis](#redis)のクエリ。
@@ -85,6 +95,8 @@ OK
 
 ```sh
 $ redis-cli
+127.0.0.1:6379> SET key value
+OK
 127.0.0.1:6379> GET key
 "value"
 127.0.0.1:6379> GET nil_key
@@ -97,6 +109,8 @@ $ redis-cli
 
 ```sh
 $ redis-cli
+127.0.0.1:6379> SET key value
+OK
 127.0.0.1:6379> GET key
 "value"
 127.0.0.1:6379> DEL key
@@ -148,6 +162,132 @@ OK
 127.0.0.1:6379> MGET name age
 1) "Smith"
 2) "20"
+```
+
+### LPUSH
+
+**LPUSH**は、キーを指定して、リストの先頭にバリューを追加する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> LPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> LRANGE 0 3
+1) "banana"
+2) "orange"
+3) "apple"
+```
+
+### RPUSH
+
+**RPUSH**は、キーを指定して、リストの末尾にバリューを追加する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> RPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> LRANGE 0 3
+1) "apple"
+2) "orange"
+3) "banana"
+```
+
+### LLEN
+
+**LLEN**は、キーを指定して、リストの長さを取得する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> LPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> LLEN fruits
+(integer) 3
+```
+
+### LRANGE
+
+**LRANGE**は、キーと範囲（開始インデックスと終了インデックス）を指定して、リストの要素を取得する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> LPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> LRANGE 0 3
+1) "banana"
+2) "orange"
+3) "apple"
+127.0.0.1:6379> LRANGE 1 1
+1) "orange"
+```
+
+### LPOP
+
+**LPOP**は、キーを指定してリストの先頭要素を抜き出す（抜き出された要素はリストから削除される）[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> LPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> LPOP fruits
+"banana"
+127.0.0.1:6379> LRANGE 0 3
+1) "orange"
+2) "apple"
+```
+
+### RPOP
+
+**RPOP**は、キーを指定してリストの末尾要素を抜き出す（抜き出された要素はリストから削除される）[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> LPUSH fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> RPOP fruits
+"apple"
+127.0.0.1:6379> LRANGE 0 3
+1) "banana"
+2) "orange"
+```
+
+### SADD
+
+**SADD**は、キーと要素を指定して、指定したセットに対して要素を追加する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> SADD fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> SMEMBERS fruits
+1) "apple"
+2) "orange"
+3) "banana"
+127.0.0.1:6379> SADD fruits apple grape
+(integer) 1
+127.0.0.1:6379> SMEMBERS fruits
+1) "apple"
+2) "orange"
+3) "banana"
+4) "grape"
+```
+
+### SREM
+
+**SREM**は、キーと要素を指定して、指定したセットから要素を削除する[Redis](#redis)のクエリ。
+
+```sh
+$ redis-cli
+127.0.0.1:6379> SADD fruits apple orange banana
+(integer) 3
+127.0.0.1:6379> SMEMBERS fruits
+1) "apple"
+2) "orange"
+3) "banana"
+127.0.0.1:6379> SREM fruits apple grape
+(integer) 1
+127.0.0.1:6379> SMEMBERS fruits
+1) "orange"
+2) "banana"
 ```
 
 
