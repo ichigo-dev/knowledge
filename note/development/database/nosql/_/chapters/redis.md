@@ -1,6 +1,6 @@
 # 『Redis』ノート
 
-（最終更新： 2023-10-31）
+（最終更新： 2023-11-01）
 
 
 ## 目次
@@ -38,15 +38,20 @@
 	1. [ZADD](#zadd)
 	1. [ZRANGE](#zrange)
 	1. [HSET](#hset)
-	1. [HGETALL](#hgetall)
-	1. [HMSET](#hmset)
 	1. [HGET](#hget)
+	1. [HMGET](#hmget)
+	1. [HGETALL](#hgetall)
+	1. [HKEYS](#hkeys)
+	1. [HVALS](#hvals)
 	1. [HINCRBY](#hincrby)
 	1. [HDEL](#hdel)
 	1. [EXPIRE](#expire)
 	1. [TTL](#ttl)
 	1. [INFO](#info)
 1. [トランザクション](#トランザクション)
+1. [クラスタ構成](#クラスタ構成)
+1. [シャーディング](#シャーディング)
+1. [レプリケーション](#レプリケーション)
 
 
 ## Redis
@@ -114,9 +119,8 @@ AOFは、[RDB](#redis-database)と比べて柔軟な変更が可能な一方で�
 
 **SET**は、キーとそれに対するバリューを指定して、それを[Strings](#strings)として新規に格納もしくは更新する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SET key value
+```redis
+> SET key value
 OK
 ```
 
@@ -124,13 +128,12 @@ OK
 
 **GET**は、キーを指定して、[Strings](#strings)のバリューを取得する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SET key value
+```redis
+> SET key value
 OK
-127.0.0.1:6379> GET key
+> GET key
 "value"
-127.0.0.1:6379> GET nil_key
+> GET nil_key
 (nil)
 ```
 
@@ -138,15 +141,14 @@ OK
 
 **DEL**は、キーを指定して、そのバリューを削除する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SET key value
+```redis
+> SET key value
 OK
-127.0.0.1:6379> GET key
+> GET key
 "value"
-127.0.0.1:6379> DEL key
+> DEL key
 (integer) 1
-127.0.0.1:6379> GET key
+> GET key
 (nil)
 ```
 
@@ -154,19 +156,18 @@ OK
 
 **INCR**は、キーを指定して、その[Strings](#strings)のバリューに1を加算する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SET name Smith
+```redis
+> SET name Smith
 OK
-127.0.0.1:6379> SET age 20
+> SET age 20
 OK
-127.0.0.1:6379> INCR age
+> INCR age
 (integer) 21
-127.0.0.1:6379> GET age
+> GET age
 "21"
-127.0.0.1:6379> INCR name
+> INCR name
 (integer) 1
-127.0.0.1:6379> GET name
+> GET name
 "1"
 ```
 
@@ -174,11 +175,10 @@ OK
 
 **MSET**は、複数のキーとバリューのペアを指定して、一括で[Strings](#strings)を新規に格納もしくは更新する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> MSET name Smith age 20
+```redis
+> MSET name Smith age 20
 OK
-127.0.0.1:6379> GET name
+> GET name
 "Smith"
 ```
 
@@ -186,11 +186,10 @@ OK
 
 **MGET**は、複数のキーを指定して、一括で[Strings](#strings)のバリューを取得する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> MSET name Smith age 20
+```redis
+> MSET name Smith age 20
 OK
-127.0.0.1:6379> MGET name age
+> MGET name age
 1) "Smith"
 2) "20"
 ```
@@ -199,11 +198,10 @@ OK
 
 **LPUSH**は、キーを指定して、[Lists](#lists)の先頭にバリューを追加する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> LPUSH fruits apple orange banana
+```redis
+> LPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> LRANGE 0 3
+> LRANGE 0 3
 1) "banana"
 2) "orange"
 3) "apple"
@@ -213,11 +211,10 @@ $ redis-cli
 
 **RPUSH**は、キーを指定して、[Lists](#lists)の末尾にバリューを追加する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> RPUSH fruits apple orange banana
+```redis
+> RPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> LRANGE 0 3
+> LRANGE 0 3
 1) "apple"
 2) "orange"
 3) "banana"
@@ -227,11 +224,10 @@ $ redis-cli
 
 **LLEN**は、キーを指定して、[Lists](#lists)の長さを取得する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> LPUSH fruits apple orange banana
+```redis
+> LPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> LLEN fruits
+> LLEN fruits
 (integer) 3
 ```
 
@@ -239,15 +235,14 @@ $ redis-cli
 
 **LRANGE**は、キーと範囲（開始インデックスと終了インデックス）を指定して、[Lists](#lists)の要素を取得する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> LPUSH fruits apple orange banana
+```redis
+> LPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> LRANGE 0 3
+> LRANGE 0 3
 1) "banana"
 2) "orange"
 3) "apple"
-127.0.0.1:6379> LRANGE 1 1
+> LRANGE 1 1
 1) "orange"
 ```
 
@@ -255,13 +250,12 @@ $ redis-cli
 
 **LPOP**は、キーを指定して、[Lists](#lists)の先頭要素を抜き出す（抜き出された要素はリストから削除される）[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> LPUSH fruits apple orange banana
+```redis
+> LPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> LPOP fruits
+> LPOP fruits
 "banana"
-127.0.0.1:6379> LRANGE 0 3
+> LRANGE 0 3
 1) "orange"
 2) "apple"
 ```
@@ -270,13 +264,12 @@ $ redis-cli
 
 **RPOP**は、キーを指定して、[Lists](#lists)の末尾要素を抜き出す（抜き出された要素はリストから削除される）[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> LPUSH fruits apple orange banana
+```redis
+> LPUSH fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> RPOP fruits
+> RPOP fruits
 "apple"
-127.0.0.1:6379> LRANGE 0 3
+> LRANGE 0 3
 1) "banana"
 2) "orange"
 ```
@@ -285,17 +278,16 @@ $ redis-cli
 
 **SADD**は、キーと要素を指定して、指定した[Sets](#sets)に対して要素を追加する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SADD fruits apple orange banana
+```redis
+> SADD fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> SMEMBERS fruits
+> SMEMBERS fruits
 1) "apple"
 2) "orange"
 3) "banana"
-127.0.0.1:6379> SADD fruits apple grape
+> SADD fruits apple grape
 (integer) 1
-127.0.0.1:6379> SMEMBERS fruits
+> SMEMBERS fruits
 1) "apple"
 2) "orange"
 3) "banana"
@@ -306,17 +298,16 @@ $ redis-cli
 
 **SREM**は、キーと要素を指定して、指定した[Sets](#sets)から要素を削除する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SADD fruits apple orange banana
+```redis
+> SADD fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> SMEMBERS fruits
+> SMEMBERS fruits
 1) "apple"
 2) "orange"
 3) "banana"
-127.0.0.1:6379> SREM fruits apple grape
+> SREM fruits apple grape
 (integer) 1
-127.0.0.1:6379> SMEMBERS fruits
+> SMEMBERS fruits
 1) "orange"
 2) "banana"
 ```
@@ -325,13 +316,12 @@ $ redis-cli
 
 **SISMEMBER**は、キーと要素を指定して、指定した要素が[Sets](#sets)に存在するか確認する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SADD fruits apple orange banana
+```redis
+> SADD fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> SISMEMBER fruits apple
+> SISMEMBER fruits apple
 (integer) 1
-127.0.0.1:6379> SISMEMBER fruits grape
+> SISMEMBER fruits grape
 (integer) 0
 ```
 
@@ -339,11 +329,10 @@ $ redis-cli
 
 **SMEMBERS**は、キーを指定して、指定した[Sets](#sets)の要素をすべて取得する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SADD fruits apple orange banana
+```redis
+> SADD fruits apple orange banana
 (integer) 3
-127.0.0.1:6379> SMEMBERS fruits
+> SMEMBERS fruits
 1) "apple"
 2) "orange"
 3) "banana"
@@ -353,13 +342,12 @@ $ redis-cli
 
 **SUNION**は、キーで指定した2つ以上の[Sets](#sets)を結合した結果を返す[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> SADD fruits1 apple orange banana
+```redis
+> SADD fruits1 apple orange banana
 (integer) 3
-127.0.0.1:6379> SADD fruits2 apple grape melon
+> SADD fruits2 apple grape melon
 (integer) 3
-127.0.0.1:6379> SUNION fruits1 fruits2
+> SUNION fruits1 fruits2
 1) "apple"
 2) "orange"
 3) "banana"
@@ -371,23 +359,214 @@ $ redis-cli
 
 **SUNION**は、キーとスコア、バリューを指定して、キーに対応する[Sorted Sets](#sorted-sets)に指定したスコアとバリューのエントリを追加する[Redis](#redis)のクエリ。
 
-```sh
-$ redis-cli
-127.0.0.1:6379> ZADD scores 80 Smith
+```redis
+> ZADD scores 80 Smith
 (integer) 1
-127.0.0.1:6379> ZADD scores 60 Johnson
+> ZADD scores 60 Johnson
 (integer) 1
-127.0.0.1:6379> ZADD scores 95 Williams
+> ZADD scores 95 Williams
 (integer) 1
-127.0.0.1:6379> ZRANGE 0 3
+> ZRANGE scores 0 3
 1) "Johnson"
 2) "Smith"
 3) "Williams"
 ```
+
+### ZRANGE
+
+**ZRANGE**は、キーと範囲（開始インデックスと終了インデックス）を指定して、[Sorted Sets](#sorted-sets)の要素を取得する[Redis](#redis)のクエリ。
+
+```redis
+> ZADD scores 80 Smith
+(integer) 1
+> ZADD scores 60 Johnson
+(integer) 1
+> ZADD scores 95 Williams
+(integer) 1
+> ZRANGE scores 0 3
+1) "Johnson"
+2) "Smith"
+3) "Williams"
+```
+
+### HSET
+
+**HSET**は、キーとフィールド、バリューを指定して、キーに対応する[Hashes](#hashes)に指定したフィールドとバリューのエントリを追加する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HGETALL response
+1) "code"
+2) "200"
+3) "message"
+4) "OK"
+5) "body"
+6) "Hello, world"
+```
+
+### HGET
+
+**HGET**は、キーとフィールドを指定して、指定した[Hashes](#hashes)の対応するフィールドのバリューを取得する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HGET response code
+"200"
+> HGET response title
+(nil)
+```
+
+### HMGET
+
+**HMGET**は、キーと複数のフィールドを指定して、指定した[Hashes](#hashes)の対応するフィールドのバリューをすべて取得する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HMGET response code body title
+1) "200"
+2) "Hello, world"
+3) (nil)
+```
+
+### HGETALL
+
+**HGETALL**は、キーを指定して、指定した[Hashes](#hashes)の要素をすべて取得する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HGETALL response
+1) "code"
+2) "200"
+3) "message"
+4) "OK"
+5) "body"
+6) "Hello, world"
+```
+
+### HKEYS
+
+**HKEYS**は、キーを指定して、指定した[Hashes](#hashes)のフィールド名をすべて取得する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HKEYS response
+1) "code"
+2) "message"
+3) "body"
+```
+
+### HVALS
+
+**HKEYS**は、キーを指定して、指定した[Hashes](#hashes)のフィールドのバリューをすべて取得する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HVALS response
+1) "200"
+2) "OK"
+3) "Hello, world"
+```
+
+### HINCRBY
+
+**HINCRBY**は、キーとフィールド名と数値を指定して、指定した[Hashes](#hashes)の対応するフィールドのバリューを数値分だけ増加させる[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HINCRBY response code 100
+(integer) 300
+```
+
+### HDEL
+
+**HDEL**は、キーとフィールド名を指定して、指定した[Hashes](#hashes)の対応するフィールドのバリューを削除する[Redis](#redis)のクエリ。
+
+```redis
+> HSET response code 200 message OK body "Hello, world"
+(integer) 3
+> HDEL response code body
+(integer) 2
+> HGETALL response
+1) "message"
+2) "OK"
+```
+
+### EXPIRE
+
+**EXPIRE**は、キーと秒数を指定して、キーとそれに対応するバリューの有効期限を設定する[Redis](#redis)のクエリ。
+
+```redis
+> SET key value
+(integer) 1
+> EXPIRE key 5
+(integer) 1
+> GET key
+"value"
+> TTL key
+(integer) 2
+> GET key
+"value"
+> GET key
+(nil)
+```
+
+### TTL
+
+**TTL**は、キーを指定して、そのキーの有効期限の秒数を取得する[Redis](#redis)のクエリ。
+
+```redis
+> SET key value
+OK
+> EXPIRE key 5
+(integer) 1
+> TTL key
+(integer) 4
+> TTL key
+(integer) 3
+```
+
+### INFO
+
+**INFO**は、[Redis](#redis)[サーバ](../../../../../computer/_/chapters/computer.md#サーバ)の状態、統計情報などを取得するクエリ。
 
 
 ## トランザクション
 
 Redisにおけるトランザクションは、複数の[クエリ](#クエリ)をまとめて実行する機能。トランザクションを使用すると、複数の[クエリ](#クエリ)をひとつの単位として実行することで、データの整合性を保つことができる。
 
-`MULTI` によりトランザクションを開始し、 `EXEC` によりトランザクション中にキューに蓄積された[クエリ](#クエリ)をまとめて実行する。 `EXEC` 時には、誤った[クエリ](#クエリ)の呼び出しがあった場合にはトランザクションの実行を拒否し、すべての[クエリ](#クエリ)が正常であった場合にはコミットされる。ただし、トランザクション中の一部の[クエリ](#クエリ)が失敗した場合でも、他の[クエリ](#クエリ)はすべて実行される点に注意。
+`MULTI` によりトランザクションを開始し、 `EXEC` によりトランザクション中にキューに蓄積された[クエリ](#クエリ)をまとめて実行する。 `EXEC` 時には、誤った[クエリ](#クエリ)の呼び出しがあった場合にはトランザクションの実行を拒否し、すべての[クエリ](#クエリ)が正常であった場合にはコミットされる。ただし、トランザクション中の一部の[クエリ](#クエリ)が失敗した場合でも、他の[クエリ](#クエリ)はすべて実行される点に注意。トランザクション中に、キューに蓄積された[クエリ](#クエリ)を破棄したい場合は、 `DISCARD` を実行する。
+
+```redis
+> SET count 1
+OK
+> MULTI
+OK
+(TX)> INCR count
+QUEUED
+(TX)> GET count
+QUEUED
+(TX)> INCR count
+QUEUED
+(TX)> GET count
+QUEUED
+(TX)> EXEC
+1) (integer) 2
+2) "2"
+3) (integer) 3
+4) "3"
+> MULTI
+OK
+(TX)> INCR count
+QUEUED
+(TX)> DISCARD
+OK
+> GET count
+"3"
+```
