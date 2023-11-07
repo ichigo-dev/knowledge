@@ -42,7 +42,6 @@
 
 ## メモ
 
-- 「ソフトウェアアーキテクチャの基礎」 -> ./development/software_architecture にまとめ中
 - Obsidianのランダムノート機能を使って復習＆見直し
 
 
