@@ -773,4 +773,3 @@ eno2             ethernet  接続済み  eno2
 ※"v"つけると詳細を表示(verbose)、"d"をつけるとデバッグで(debug)、"f"をつけると強制実行(force)
 
 # systemctl restart rsyslog
-
